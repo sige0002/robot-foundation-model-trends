@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
+
+### H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space
+
+- ID: `VLA-0127`
+- Published: 2026-09-19
+- Authors: Xiongfeng Peng; Lu Xu; Yandong Wang; Jiaqian Yu; Zirui Zheng; Yamin Mao; Weiming Li; Inseop Chung; Hyun-woong Cho; Jaewook Yoo; Dongwook Lee; Daehyun Ji; Chao Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.22895)
+- Tags: hierarchical, key-action, camera-centric, motion-planning
+- Model size: Prismatic-7B backbone; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+次の操作サブゴールを予測するKey-Action Modelと、そこへ到達する密な行動列を生成するMotion Planning Modelを分離するH-VLA。カメラ中心の共通行動空間で機体・視点の差を吸収する。
+
+**主な貢献**
+
+意味的な3D末端目標と低レベル動作生成を明示的に分け、サブゴール重視の事前学習と動作重視の微調整を採用。SimplerEnvおよびAgilex実機で汎化を評価。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Primary HTML https://arxiv.org/html/2609.22895v1 §3.1/B.2 verifies Prismatic-7B backbone; complete model size unverified. No official project, research implementation/license, or weights found in checked primary links and targeted title/repository search. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
 
 ### π0.5: a Vision-Language-Action Model with Open-World Generalization
 

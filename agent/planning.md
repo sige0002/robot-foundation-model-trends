@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
+
+### Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning
+
+- ID: `AGENT-0115`
+- Published: 2026-09-29
+- Authors: Łukasz Sobczak; Nur Keleşoğlu; Sławomir Piotr Nowak
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.37554) · [Code](https://github.com/iitis/Risk-Aware-Semantic-Grounding)
+- Tags: RA-SGF, TRUST-NAV, semantic-grounding, clarification, risk-gating, navigation
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+指示の曖昧さ、存在しない対象、意味的矛盾を計画前に評価し、実行・確認質問・拒否を選ぶ。高レベルの屋内ナビゲーション計画とそのgroundingを対象にする。
+
+**主な貢献**
+
+リスク評価agentと規則ベースのdecision gateをplannerから分離し、TRUST-NAVで計画正解率とは別に判断の信頼性を評価する。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv初稿・著者とHTML本文3節・4–5節を確認。評価は単一の静的な意味環境で、知覚誤差や動的実機安全性の保証ではない。本文がリンクする公式repoのplanner/decision layer実装を確認。root MITを確認: https://github.com/iitis/Risk-Aware-Semantic-Grounding/blob/master/LICENSE 。学習済み重み提供は未確認。
 
 ### Text2Motion: From Natural Language Instructions to Feasible Plans
 

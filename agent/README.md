@@ -3,12 +3,12 @@
 
 [← データベース](../README.md)
 
-12 records · 正本: [papers.csv](../papers.csv)
+15 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 3 |
-| [code](code.md) | 4 |
+| [planning](planning.md) | 4 |
+| [code](code.md) | 6 |
 | [skill](skill.md) | 1 |
 | [tool](tool.md) | 1 |
 | [memory](memory.md) | 1 |
@@ -16,6 +16,9 @@
 
 ## 論文
 
+- 2026-09-30 · [SimEX: Simulation-Integrated Robotics AutoResearch](code.md) · `AGENT-0114`
+- 2026-09-30 · [ASENA: Self-evolving Agents for Embodied Navigation](code.md) · `AGENT-0113`
+- 2026-09-29 · [Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning](planning.md) · `AGENT-0115`
 - 2023-10-19 · [Eureka: Human-Level Reward Design via Coding Large Language Models](code.md) · `AGENT-0109`
 - 2023-07-12 · [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning](replanning.md) · `AGENT-0112`
 - 2023-07-12 · [VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models](code.md) · `AGENT-0105`

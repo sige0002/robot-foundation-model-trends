@@ -3,21 +3,33 @@
 
 [← データベース](../README.md)
 
-21 records · 正本: [papers.csv](../papers.csv)
+33 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 1 |
-| [reasoning-system2](reasoning-system2.md) | 4 |
-| [action-system1](action-system1.md) | 12 |
-| [memory-temporal](memory-temporal.md) | 1 |
-| [adaptation](adaptation.md) | 3 |
+| [perception-representation](perception-representation.md) | 2 |
+| [reasoning-system2](reasoning-system2.md) | 5 |
+| [action-system1](action-system1.md) | 16 |
+| [memory-temporal](memory-temporal.md) | 3 |
+| [adaptation](adaptation.md) | 7 |
 
 ## 論文
 
+- 2026-09-30 · [Spike-driven Vision-Language-Action Model](action-system1.md) · `VLA-0126`
+- 2026-09-30 · [Toward Real-Time VLAs: Stage-Aware Two-Step Flow Denoising and System-Level Evaluation](action-system1.md) · `VLA-0125`
+- 2026-09-28 · [D²-VLA: Dual-Memory Dual-Frequency Vision-Language-Action Model For Long Dynamic Manipulation](memory-temporal.md) · `VLA-0124`
+- 2026-09-24 · [Self-Adaptive VLA for Robust Robot Deployment](adaptation.md) · `VLA-0123`
 - 2026-09-24 · [Direction-Scale Decomposition in Action Representation: Rethinking What to Tokenize for Vision-Language-Action Models](action-system1.md) · `VLA-0119`
 - 2026-09-24 · [Decoupled Early Exits for Task-Dependent Compute Allocation in Flow-Matching VLAs](action-system1.md) · `VLA-0118`
+- 2026-09-23 · [MemBodied: Recurrent Associative Memory for Vision-Language-Action Models](memory-temporal.md) · `VLA-0130`
+- 2026-09-23 · [Dissecting Advantage-Guided Post-Training for Vision-Language-Action Policies](adaptation.md) · `VLA-0128`
 - 2026-09-21 · [Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation](action-system1.md) · `VLA-0120`
+- 2026-09-20 · [Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models](adaptation.md) · `VLA-0122`
+- 2026-09-19 · [H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space](reasoning-system2.md) · `VLA-0127`
+- 2026-09-18 · [VLA-Scope: Shift-Aware Failure Prediction for Vision-Language-Action Models](adaptation.md) · `VLA-0133`
+- 2026-09-18 · [VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies](action-system1.md) · `VLA-0132`
+- 2026-09-18 · [GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments](perception-representation.md) · `VLA-0131`
+- 2026-09-17 · [SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation](action-system1.md) · `VLA-0129`
 - 2026-09-17 · [Catch Me If You Can: Real-Time Feedback Denoising for Responsive VLAs](action-system1.md) · `VLA-0121`
 - 2025-08-26 · [MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation](memory-temporal.md) · `VLA-0116`
 - 2025-06-02 · [SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics](action-system1.md) · `VLA-0108`

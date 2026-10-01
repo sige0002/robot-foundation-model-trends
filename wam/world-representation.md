@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-24 records · Published date 降順（同日 ID 降順）
+25 records · Published date 降順（同日 ID 降順）
+
+### Anisotropic Representations Improve Planning in JEPA World Models
+
+- ID: `WAM-0055`
+- Published: 2026-09-29
+- Authors: Mingu Kang; Yoori Oh; Sookyung Kim; Joonseok Lee
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.37441) · [Project](https://rkdrn79.github.io/AnisoWM-page/)
+- Tags: AnisoWM, JEPA, LambdaReg, latent-geometry, planning-cost
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+潜在表現の等方的な正則化が、計画時の距離と実際の課題コストをずらし得ることを調べる。AnisoWMは分散の総量と異方性を制約しつつ、表現方向ごとの目標分散を学習する。
+
+**主な貢献**
+
+予測損失・予測器・Euclidean plannerを維持したまま、学習時のGaussian targetだけを変更。予測精度と計画に適した幾何の違いを理論と視覚制御実験で検証する。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXivのv1初稿・著者、HTML本文3–4節・評価条件と公式projectを確認。理論の条件と四環境の比較を一般保証と区別。確認した一次資料では公式研究実装・重み・実装ライセンスの提供先を確認できずunknown。
 
 ### Adaptive Latent Capacity for World Models
 

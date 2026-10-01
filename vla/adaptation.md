@@ -3,7 +3,107 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+7 records · Published date 降順（同日 ID 降順）
+
+### Self-Adaptive VLA for Robust Robot Deployment
+
+- ID: `VLA-0123`
+- Published: 2026-09-24
+- Authors: Hongxin Zhang; Chunru Lin; Tsun-Hsuan Wang; Zhenjia Xu; Chuang Gan
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.30092) · [Project](https://icefoxzhx.github.io/self-adaptive-vla/)
+- Tags: test-time-adaptation, hardware-shift, context, bimanual
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+駆動バイアスや関節エンコーダーのずれに対し、自身の試行履歴を文脈トークンへ圧縮してVLAを補償する事後学習法。複数試行のトークンを統合し、配備先で反復的に補正する。
+
+**主な貢献**
+
+既存の専門家デモを既知の機器ずれに事前補償し、軽量文脈エンコーダーとAdaLNを学習。精密な双腕・器用操作4タスクで性能回復を報告。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Official project videos/method and primary HTML https://arxiv.org/html/2609.30092v1 checked; no research code repository, implementation license, or trained weight download verified. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### Dissecting Advantage-Guided Post-Training for Vision-Language-Action Policies
+
+- ID: `VLA-0128`
+- Published: 2026-09-23
+- Authors: Jiahang Cao; Hanye Zhao; Hang Lai; Shenyu Zhang; Xiaoshen Han; Xinghang Li; Futeng Liu; Wanli Peng; Heyun Wang; Yunhong Wang; Jason Li; Yong Yu; Weinan Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.28161) · [Project](https://dissectvla.github.io/)
+- Tags: post-training, advantage-weighting, offline-diagnostics, bimanual
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAの優位度に基づく事後学習を、優位度構成・尺度校正・方策利用の3段階に分解する制御比較。実機評価の前に候補を選べる段階別オフライン診断を導入する。
+
+**主な貢献**
+
+TD優位度、グループ別校正、連続重み付けの組合せを識別。固定データ・方策・予算による4双腕タスクの比較で診断と実機性能の整合性を調べる。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Primary HTML https://arxiv.org/html/2609.28161v1 directly links verified project https://dissectvla.github.io/. Project contains videos and study details, no verified research code or trained weight release; website template/website CC license is not an implementation license. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models
+
+- ID: `VLA-0122`
+- Published: 2026-09-20
+- Authors: Shuaijun Liu; Feiyang You; Chengyu Wu; Shuyang Hao; Chenglong Zhang; Jingyao Cai; Xingwei Chen; Ningxin Su
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.23650) · [Code](https://github.com/NEBULIS-Lab/Beyond-Appearance-Shifts) · [Project](https://nebulis-lab.com/Beyond-Appearance-Shifts/)
+- Tags: semantic-calibration, frozen-vla, robustness, residual
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+見た目だけが変わる条件と、対象物や制約が変わる条件を区別し、凍結VLAの出力行動を補正するBAS-VLA。意味変更後に旧タスクを続ける失敗を抑え、外観変動への頑健性も評価する。
+
+**主な貢献**
+
+意味変更を中心とした残差キャリブレーターと、意味の一貫性を確認した場合だけ有効化する補助経路を統合。旧タスク抑制と新タスク達成を別指標として評価。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Official project links official GitHub. Actual bas\_vla implementation, training/evaluation scripts and LICENSE are present; GitHub identifies MIT license. Root LICENSE content independently read via GitHub connector and confirmed standard MIT: https://github.com/NEBULIS-Lab/Beyond-Appearance-Shifts/blob/main/LICENSE . README requires separately supplied carrier and adapter weights; public adapter download unverified. Project/repository claim NeurIPS 2026, but organizer acceptance not independently checked. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### VLA-Scope: Shift-Aware Failure Prediction for Vision-Language-Action Models
+
+- ID: `VLA-0133`
+- Published: 2026-09-18
+- Authors: Kaiwen Zhu; Dongfang Liu; Liangkai Liu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.21246)
+- Tags: failure-prediction, ood, execution-history, reliability
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+入力の分布外変化を検出・分類し、行動履歴と実行進捗を組み合わせてVLAの失敗確率を更新するVLA-Scope。OpenVLAのLIBERO-Spatial10タスクで評価する。
+
+**主な貢献**
+
+分布外入力と実行失敗を同一視せず、共有ロジスティック回帰で履歴依存の失敗予測を行う。1400分布外試行で進捗特徴の効果を比較。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Primary HTML https://arxiv.org/html/2609.21246v1 checked for author-owned implementation/license or weight links; none verified. CC Zero shown on arXiv is the paper license, not evidence of released implementation. This is a reliability framework rather than a new generalist action backbone. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
 
 ### OpenVLA: An Open-Source Vision-Language-Action Model
 

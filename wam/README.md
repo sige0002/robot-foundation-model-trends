@@ -3,18 +3,23 @@
 
 [← データベース](../README.md)
 
-48 records · 正本: [papers.csv](../papers.csv)
+53 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 24 |
+| [world-representation](world-representation.md) | 25 |
 | [dynamics](dynamics.md) | 7 |
 | [action-coupling](action-coupling.md) | 4 |
-| [planning](planning.md) | 10 |
+| [planning](planning.md) | 14 |
 | [temporal-modeling](temporal-modeling.md) | 3 |
 
 ## 論文
 
+- 2026-09-30 · [Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models](planning.md) · `WAM-0054`
+- 2026-09-30 · [Social-WM: Safety-Aware Latent World Models for Robot Social Navigation](planning.md) · `WAM-0053`
+- 2026-09-30 · [The Planning Limits of Latent World Models](planning.md) · `WAM-0052`
+- 2026-09-29 · [Anisotropic Representations Improve Planning in JEPA World Models](world-representation.md) · `WAM-0055`
+- 2026-09-26 · [What Must a World Model Distinguish for Planning?](planning.md) · `WAM-0051`
 - 2026-09-26 · [Adaptive Latent Capacity for World Models](world-representation.md) · `WAM-0012`
 - 2026-09-25 · [I Act Therefore I Am: When Is JEPA's Action-Conditioning Enough to Learn Causal Mechanisms?](action-coupling.md) · `WAM-0011`
 - 2026-08-06 · [LAWM-3D: Learning 3D-Aware Latent Actions from Human Videos for Generalizable Robot World Models](dynamics.md) · `WAM-0036`

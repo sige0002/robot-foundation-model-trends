@@ -3,7 +3,7 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+7 records · Published date 降順（同日 ID 降順）
 
 ### V-JEPA Policy: Building Effective World-Action Models on Predictive Visual Latents
 
@@ -29,6 +29,106 @@
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Official implementation and MIT license license checked at https://github.com/breez3young/VJEPA-Policy. Repository contains source only; no policy checkpoint distribution independently verified. Upstream encoders and assets have their own terms.
+
+### SLIP-VLA: Single-Step Latent Imagination for Policy Learning in Vision-Language-Action Models
+
+- ID: `HYBRID-0105`
+- Published: 2026-09-27
+- Authors: Tianfu Li; Haoxuan Xu; Wenbo Chen; Haitian Li; Changchuan Yang; Xinhu Zheng; Jun Ma; Yuan Liu; Lujia Wang; Haoang Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.33575) · [Project](https://haoxuanxu1024.github.io/SLIP_VLA/)
+- Tags: latent-imagination, single-step, future-prediction, manipulation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+1回のノイズ除去で将来の潜在表現を生成し、幾何・意味・行動の整合性を学習してVLAの操作方策に供給する。シミュレーションと実機で将来予測の有効性を評価した。
+
+**主な貢献**
+
+多段の動画生成を用いず、知覚教師・順動力学・逆動力学で制御に有用な潜在未来を整形。未来想像は12msだが、公式ページの全体推論時間は181ms。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv submission history: v1 only. Official project https://haoxuanxu1024.github.io/SLIP\_VLA/ links https://github.com/HaoxuanXU1024/SLIP\_VLA; repository contains website assets and explicitly says code will be released soon, so it is not counted as a released research implementation. Implementation license and weights unverified. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### Towards VLA-Dreamer: Refining VLA Behavior Using World Models
+
+- ID: `HYBRID-0107`
+- Published: 2026-09-25
+- Authors: Parsa Mastouri Kashani; Jan-Gerrit Habekost; Stefan Wermter
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.31313)
+- Tags: concept-paper, latent-world-model, planning, sample-efficiency
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAの視覚埋め込み空間で行動条件付き世界モデルを学習し、データ効率改善や短期計画に利用する構想論文。視覚埋め込みが未来予測と制御に十分かを検証する研究計画を述べる。
+
+**主な貢献**
+
+画素再構成ではなくVLAの視覚埋め込みを予測対象にするVLA-Dreamer構想。提案・仮説であり、実証済み性能改善として扱わない。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Primary HTML https://arxiv.org/html/2609.31313v1 explicitly describes a concept/proposed architecture, not a completed empirical system. No official project, implementation/license, or weights verified. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### CereVLA: Cerebellum-Inspired Consequence-Aware Residual Governance for Efficient Vision-Language-Action Execution
+
+- ID: `HYBRID-0109`
+- Published: 2026-09-23
+- Authors: Shuai Zeng; Yuxuan Liang; Hangmiao Hu; Fobao Zhou; Zixiang Wang; Wenxi Hong; Hang Zhao
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.27468)
+- Tags: residual-control, consequence-model, governor, frozen-vla
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結VLAの行動チャンクを軽量な残差で補正し、予測される結果が不利な補正を抑制するCereVLA。再帰状態空間モデルと履歴分類器で短期・区間単位の結果を評価する。
+
+**主な貢献**
+
+残差生成を参照行動との一致だけで評価せず、予測結果に基づく実行ガバナーを導入。SO-101で成功率57.5%から90%への改善を報告。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Primary HTML https://arxiv.org/html/2609.27468v1 checked for project/code/release evidence; no author-owned release verified. Hybrid vla-wam classification reflects predictive consequence modeling coupled to VLA control, not a separately released general world model. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies
+
+- ID: `HYBRID-0103`
+- Published: 2026-09-21 · Updated: 2026-09-22
+- Authors: Trung Dao; Sankalp Yamsani; Jaden Park; Joohyung Kim; Yong Jae Lee
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.24682) · [Code](https://github.com/trungdt880/THAW-VLA) · [Project](https://thaw-vla.trung-dt.com/)
+- Tags: THAW-VLA, representation-distillation, compact-policy, world-model-teacher, flow-matching
+- Model size: 0.8B student; 4B variants
+- Open-source: unknown
+- Code / weights / license: available / available / unknown
+
+**概要（日本語）**
+
+凍結世界モデルの内部特徴を事前計算し、小型VLAの画像特徴へ蒸留する。推論時には教師と投影器を使わず、行動方策の構造を維持したまま表現学習を補助する。
+
+**主な貢献**
+
+行動模倣損失に特徴整合損失を加え、教師の行動表現への依存を避ける。LIBERO・RoboCasaと実機で同一学生の非蒸留対照を検証する。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: needs-review
+- 初稿2026-09-21、v2改訂2026-09-22をarXivで確認。HTML本文III節と評価条件を確認。公式projectがリンクする実装とHF final\_model.ptを確認: https://huggingface.co/termanteus/THAW-VLA-Qwen3.5-0.8B-LIBERO/tree/main 。重みのモデルカード・ライセンスは未確認。実装LICENSEはMIT表記に加えコミット保持等の条項を含むためOSI承認MITと同一と断定せずopen\_source/license\_statusをunknown: https://github.com/trungdt880/THAW-VLA/blob/main/LICENSE 。
 
 ### Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-Action Model
 

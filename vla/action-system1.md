@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+16 records · Published date 降順（同日 ID 降順）
+
+### Spike-driven Vision-Language-Action Model
+
+- ID: `VLA-0126`
+- Published: 2026-09-30
+- Authors: Shuai Wang; Malu Zhang; Mingquan Liu; Weihui Dai; Dehao Zhang; Jieyuan Zhang; Yimeng Shan; Zijian Zhou; Yang Yang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.39514)
+- Tags: spiking-neural-network, neuromorphic, efficiency, action-chunking
+- Model size: 0.15B
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+スパイキング視覚・言語エンコーダー、疎な多勝者融合、スパイキング行動チャンクTransformerを組み合わせたVLA。LIBEROとMeta-Worldで小規模モデルの操作性能と計算量を評価する。
+
+**主な貢献**
+
+直接エンドツーエンド学習できるスパイク駆動VLAを提案し、0.15Bパラメーターで操作方策を構成。エネルギーは演算ベースの推定値で、実測電力や実機汎化の証拠と区別する。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Primary HTML https://arxiv.org/html/2609.39514v1 Tables 1–2 verify 0.15B and estimated energy; §5 uses simulation benchmarks. No author-owned project/code/license or weights verified. Paper text and Table 3 disagree on LIBERO-Plus aggregate (53.2% versus 54.9%), so that metric is deliberately omitted. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### Toward Real-Time VLAs: Stage-Aware Two-Step Flow Denoising and System-Level Evaluation
+
+- ID: `VLA-0125`
+- Published: 2026-09-30
+- Authors: Di Wu; Rongtian Shen; Ping Liu; Yan Shen; Zhenhan Yin; Shun Zuo; Xuhua Chen; He Zheng; Lingfeng Zhang; Jianglin Zhang; Tao Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.39822) · [Code](https://github.com/MagiclabRobotics/Inference) · [Project](https://embodied.magiclab.top/works/inference/index.html)
+- Tags: real-time, flow-matching, latency, distributed-runtime
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+VLA推論と物理ロボット実行の時間差を端から端まで測定し、流れ場の段階差に基づく2段階ノイズ除去を提案する。推論・行動公開・制御を独立周期で動かす実時間フレームワークを評価。
+
+**主な貢献**
+
+10ステップを非一様な2ステップへ削減し、論文のモデル推論時間を61.557msから21.956msへ短縮。双腕衣服折り畳みで6実行方式を共通条件で比較。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. arXiv comments directly link official project and GitHub. Actual client/server/scripts/tests present; README reports source release 2026-09-30, identifies Apache License 2.0, and GitHub shows Apache-2.0. Root LICENSE content independently read via GitHub connector and confirmed Apache-2.0: https://github.com/MagiclabRobotics/Inference/blob/main/LICENSE . Runtime supports external checkpoints, but paper-specific weights download unverified. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
 
 ### Direction-Scale Decomposition in Action Representation: Rethinking What to Tokenize for Vision-Language-Action Models
 
@@ -79,6 +129,56 @@ flow-matching VLAのVLM深さ、action expert深さ、denoising回数を独立�
 
 - Checked: 2026-10-01 · Review: verified
 - 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。公式projectのCodeボタンは同ページ内placeholderで公開実装先なし。実装の公開・ライセンスは未確認、重みはunknown。
+
+### VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies
+
+- ID: `VLA-0132`
+- Published: 2026-09-18
+- Authors: Meg Wilkinson; Emily Fourney; Joel W. Burdick; Aaron D. Ames
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.22462)
+- Tags: safety-filter, control-barrier-function, full-body, collision-avoidance
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAを再学習せず、知覚から生成するPoisson安全関数とCBF-QPでロボット全身および把持物の衝突回避を制約するVLPSA。複数解像度を組み合わせて実時間実行を目指す。
+
+**主な貢献**
+
+把持物を最終リンクの延長として安全制約へ含め、SafeLIBEROとFranka FR3の動的障害物環境で評価。安全保証は知覚・障害物速度・到達可能性等の仮定付き。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv v1 only. Primary HTML https://arxiv.org/html/2609.22462v1 checked; no official implementation/license or weights verified. §IV-C5 explicitly states sensing/update-delay and robot velocity limitations; reported 91.2% collision avoidance is benchmark evidence, not unconditional real-world safety. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation
+
+- ID: `VLA-0129`
+- Published: 2026-09-17 · Updated: 2026-09-18
+- Authors: Kaivalya Agrawal; Md Ashiqur Rahman; Raymond A. Yeh; Zachary Kingston
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.20648)
+- Tags: classical-motion-planning, hybrid-control, efficiency, frozen-backbone
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+接触を要する操作だけをVLAに任せ、自由空間の移動を古典的な衝突回避プランナーで行うSkipVLA。凍結VLMの特徴からプランナー目標姿勢を予測する。
+
+**主な貢献**
+
+全区間で重い方策推論を繰り返さず、既存VLAの知識から目標予測器を学習。3VLA・13LIBEROタスクとYAM実機で、同程度の成功率のまま最大2.5倍の実行高速化を報告。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv exact v1/v2 submission dates verified; one identity. Primary HTML https://arxiv.org/html/2609.20648v2 checked; no official implementation/license or trained weights verified. Category is vla/action-system1 with hybrid-control tag: a classical planner alone is not inferred to be an LLM agent. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
 
 ### Catch Me If You Can: Real-Time Feedback Denoising for Responsive VLAs
 

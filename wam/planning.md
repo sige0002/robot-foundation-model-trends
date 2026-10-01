@@ -3,7 +3,107 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+14 records · Published date 降順（同日 ID 降順）
+
+### Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models
+
+- ID: `WAM-0054`
+- Published: 2026-09-30
+- Authors: Kowndinya Boyalakuntla; Yuhan Liu; Abdeslam Boularias
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39751) · [Code](https://github.com/Kowndinya2000/pl-mpc) · [Project](https://pl-mpc-humanoid.github.io/)
+- Tags: PL-MPC, TD-MPC, multi-step-TD, critic-uncertainty, actor-distillation, sim-to-real
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+世界モデルを用いるMPCの計画と学習のフィードバックを、価値学習・終端評価・方策蒸留の三つの接点で改善する。世界モデルとMPPIの構成自体は維持する。
+
+**主な貢献**
+
+実観測報酬を多く使うTD目標、critic不一致に応じた終端推定、高リターンの計画行動を重視する蒸留を統合。性能改善は課題・seed依存として報告される。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv初稿とHTML本文IV節・評価の課題依存性を確認。論文の公開予定表現より新しい公式projectリンクで実装を確認。root MIT: https://github.com/Kowndinya2000/pl-mpc/blob/main/LICENSE 。READMEは学習済み研究checkpointを同梱しないと明記するが、外部重み配布は未確認なのでweights\_status=unknown。第三者コード・SDKは別条項。
+
+### Social-WM: Safety-Aware Latent World Models for Robot Social Navigation
+
+- ID: `WAM-0053`
+- Published: 2026-09-30
+- Authors: Zhihao Zheng; Mooi Choo Chuah
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.40177)
+- Tags: social-navigation, action-realizability, inverse-dynamics, safety-aware, latent-planning
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+人や障害物がいる環境で、名目上の指令と実際に実行できる動作の差を潜在世界モデルへ学習させる。候補動作の将来予測と逆動力学を組み合わせ、目標への進行と実行可能性を評価する。
+
+**主な貢献**
+
+指令後に実際に観測された未来と実現動作を教師とし、名目動作との不一致を実行前の安全関連信号に使う。安全性の一般保証ではなくシミュレーション評価。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv初稿・著者とHTML本文III節・評価を確認。ICRA 2027への投稿記載は採択と扱わずvenue=arXiv。確認した一次資料に公式実装・重み・実装ライセンスの根拠なし。PDF未取得。
+
+### The Planning Limits of Latent World Models
+
+- ID: `WAM-0052`
+- Published: 2026-09-30
+- Authors: Ali Alrasheed; Basim Azam; Naveed Akhtar
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39235)
+- Tags: planning-horizon, latent-world-model, VLA-action-selection, Meta-World, BridgeData-V2
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結した視覚表現上の行動条件付き世界モデルが、どの距離の目標まで計画に役立つかを調べる。Meta-Worldと実機由来のオフラインデータを使い、予測誤差と想像区間の短さを切り分ける。
+
+**主な貢献**
+
+実シミュレータによる完全予測との対照で、目標とロールアウト長の不一致を診断。近いサブゴールとVLA候補の選択を、学習済みモデルの利用方法として比較する。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXivのv1初稿日・著者とHTML本文3、5–7節・付録Bを確認。BridgeData V2はオフライン分析であり実機閉ループ成功の主張と区別。実装・重み・ライセンスの公式提供根拠は未確認。PDF未取得。
+
+### What Must a World Model Distinguish for Planning?
+
+- ID: `WAM-0051`
+- Published: 2026-09-26
+- Authors: Rongzhe Wei; Hans Hao-Hsun Hsu; Peizhi Niu; Yifan Li; Pan Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.33030)
+- Tags: planning-sufficiency, query-conditioned, decision-representation, robotics
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+世界モデルが計画に保持すべき情報を、目的、候補行動、探索段階に応じて整理する。衝突系、非線形動力学、ロボット計画で、予測の細かさと意思決定に必要な細かさを比較する。
+
+**主な貢献**
+
+機構・応答・意思決定の十分性を区別し、目的依存の候補生成と再利用可能な行動条件付き予測を分離する設計を提示。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXivのv1初稿日・著者・要旨とHTML本文3–4節、計画実験の該当節を確認。確認した一次資料に公式実装・重み提供先を見つけられず、公開状態と実装ライセンスはunknown。PDFは取得していない。
 
 ### Latent-WAM: Latent World Action Modeling for End-to-End Autonomous Driving
 

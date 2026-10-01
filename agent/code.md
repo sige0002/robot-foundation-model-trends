@@ -3,7 +3,57 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
+
+### SimEX: Simulation-Integrated Robotics AutoResearch
+
+- ID: `AGENT-0114`
+- Published: 2026-09-30
+- Authors: Jiaheng Hu; Roberto Martin-Martin; Peter Stone; Rocky Duan; Zhenyu Jiang; Guanya Shi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.38982) · [Project](https://robo-simex.github.io/)
+- Tags: SimEX, simulation-autoresearch, toolbox-synthesis, few-trial-adaptation, sim-to-real
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+coding agentがシミュレーションの探索・改善を通じて操作用toolboxを作り、少数の実機試行を再現してシミュレータとtoolboxを修正する。修正候補を実機へ戻す前に仮想実験で比較する。
+
+**主な貢献**
+
+開放的な技能探索と、実機証拠に基づく仮説生成・修正案のスクリーニングを二段階で接続。デモ不要の方法を限定した操作タスク群で検証する。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv初稿・著者、HTML本文2.2–2.4節と3節、公式projectを確認。シミュレータ利用自体を学習世界モデルと同一視せずagent/codeに分類。実機5試行の適応条件と独立評価を区別。確認した一次資料に公式研究実装・重み・実装ライセンスの提供根拠なし。
+
+### ASENA: Self-evolving Agents for Embodied Navigation
+
+- ID: `AGENT-0113`
+- Published: 2026-09-30
+- Authors: An-Chieh Cheng; Isabella Liu; Edmund Bu; Johan Bjorck; Hongxu Yin; Zhengyi Luo; Jan Kautz; Linxi "Jim" Fan; Yuke Zhu; Sifei Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39207) · [Project](https://asena-bot.github.io/)
+- Tags: ASENA, navigation, persistent-experience, skill-library, VLA-tool, humanoid
+- Model size: ASENA-VLN: 4B; coding-agent size unspecified
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+coding agentを知覚・実行・記録のロボットインターフェースにつなぎ、失敗修正と再利用可能なコード・経験の蓄積を行う。単眼の言語誘導ナビゲーション方策ASENA-VLNを任意ツールとして組み込む。
+
+**主な貢献**
+
+モデル重みを固定したまま実行証拠からプログラムと永続経験を更新する系を提示。反復する同一課題群での改善と、教師付き実機デモを分けて評価する。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- arXiv初稿・著者、HTML本文3節・4.4節、公式projectを確認。主貢献はプログラム生成と永続経験のためagent/codeに分類し、任意のVLAツールはtagに保持。反復課題の改善は未知課題への一般化保証と区別。確認した公式ページでは研究実装・重み・実装ライセンスの提供先を確認できずunknown。
 
 ### Eureka: Human-Level Reward Design via Coding Large Language Models
 
