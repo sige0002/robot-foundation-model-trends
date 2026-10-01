@@ -1,0 +1,81 @@
+<!-- GENERATED from papers.csv by scripts/build_markdown.py; do not edit directly. -->
+# Agent / planning
+
+[← agent](README.md) · [CSV master](../papers.csv)
+
+3 records · Published date 降順（同日 ID 降順）
+
+### Text2Motion: From Natural Language Instructions to Feasible Plans
+
+- ID: `AGENT-0110`
+- Published: 2023-03-21 · Updated: 2023-11-26
+- Authors: Kevin Lin; Christopher Agia; Toki Migimatsu; Marco Pavone; Jeannette Bohg
+- Venue: Autonomous Robots 2023
+- Links: [Paper](https://arxiv.org/abs/2303.12153) · [PDF](https://arxiv.org/pdf/2303.12153) · [Project](https://sites.google.com/stanford.edu/text2motion)
+- Tags: Text2Motion, task-motion-planning, geometric-feasibility, skill-Q-functions, long-horizon
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+自然言語指示から象徴的な目標を推定し、到達可能なタスク・動作計画を検索する。スキルのQ関数で候補を導き、個々のスキルだけでなく動作列全体の幾何依存を検査して長期操作の実行可能性を高める。
+
+**主な貢献**
+
+LLMのタスク計画と、スキル列にまたがる幾何的実行可能性の探索を結合。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。最終arXiv版コメントが出版先を明記。公式projectで公開実装リンクを確認できず、code/licenseはunknown。
+
+### PaLM-E: An Embodied Multimodal Language Model
+
+- ID: `AGENT-0104`
+- Published: 2023-03-06 · Updated: 2023-03-06
+- Authors: Danny Driess; Fei Xia; Mehdi S. M. Sajjadi; Corey Lynch; Aakanksha Chowdhery; Brian Ichter; Ayzaan Wahid; Jonathan Tompson; Quan Vuong; Tianhe Yu; Wenlong Huang; Yevgen Chebotar; Pierre Sermanet; Daniel Duckworth; Sergey Levine; Vincent Vanhoucke; Karol Hausman; Marc Toussaint; Klaus Greff; Andy Zeng; Igor Mordatch; Pete Florence
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2303.03378) · [PDF](https://arxiv.org/pdf/2303.03378) · [Project](https://palm-e.github.io/)
+- Tags: PaLM-E, embodied-multimodal-LM, sensor-grounding, task-planning, positive-transfer
+- Model size: 562B (largest model)
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+画像、連続的な状態推定、テキストを交互に並べた入力で、身体性のある言語モデルを学習する。ロボットの逐次操作計画、VQA、captioningを共同学習し、異なるタスク・観測・身体間の正の転移を検証した。
+
+**主な貢献**
+
+連続センサーを言語トークン列へ直接組み込み、知覚と高レベル計画をマルチモーダルLMとして共同学習。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。要旨が最大モデル562Bと明記。Agent分類は高レベル操作計画を担うため。公開実装・重み・ライセンスはunknown。
+
+### Do As I Can, Not As I Say: Grounding Language in Robotic Affordances
+
+- ID: `AGENT-0101`
+- Published: 2022-04-04 · Updated: 2022-08-16
+- Authors: Michael Ahn; Anthony Brohan; Noah Brown; Yevgen Chebotar; Omar Cortes; Byron David; Chelsea Finn; Chuyuan Fu; Keerthana Gopalakrishnan; Karol Hausman; Alex Herzog; Daniel Ho; Jasmine Hsu; Julian Ibarz; Brian Ichter; Alex Irpan; Eric Jang; Rosario Jauregui Ruano; Kyle Jeffrey; Sally Jesmonth; Nikhil J Joshi; Ryan Julian; Dmitry Kalashnikov; Yuheng Kuang; Kuang-Huei Lee; Sergey Levine; Yao Lu; Linda Luu; Carolina Parada; Peter Pastor; Jornell Quiambao; Kanishka Rao; Jarek Rettinghouse; Diego Reyes; Pierre Sermanet; Nicolas Sievers; Clayton Tan; Alexander Toshev; Vincent Vanhoucke; Fei Xia; Ted Xiao; Peng Xu; Sichun Xu; Mengyuan Yan; Andy Zeng
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2204.01691) · [PDF](https://arxiv.org/pdf/2204.01691) · [Code](https://github.com/google-research/google-research/tree/master/saycan) · [Project](https://say-can.github.io/)
+- Tags: SayCan, affordance-grounding, skill-composition, language-planning, mobile-manipulation
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+LLMが持つタスク知識を、ロボットの学習済みスキルの実行可能性でgroundingする。言語モデルの有用性スコアとスキルのvalue/affordanceを組み合わせ、長期自然言語指示を実行可能なスキル列へ分解する。
+
+**主な貢献**
+
+「指示に役立つか」と「今の状態でできるか」の確率を掛け合わせる、言語計画とスキル価値の接続。
+
+**確認記録**
+
+- Checked: 2026-10-01 · Review: verified
+- 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。公式projectがリンクするtabletop版コード。Apache-2.0: https://github.com/google-research/google-research/blob/master/LICENSE 。実機の全システム公開とは区別。

@@ -1,0 +1,65 @@
+<!-- GENERATED from papers.csv by scripts/build_markdown.py; do not edit directly. -->
+# WAM · World / Action Models
+
+[← データベース](../README.md)
+
+48 records · 正本: [papers.csv](../papers.csv)
+
+| Subcategory | Papers |
+| --- | ---: |
+| [world-representation](world-representation.md) | 24 |
+| [dynamics](dynamics.md) | 7 |
+| [action-coupling](action-coupling.md) | 4 |
+| [planning](planning.md) | 10 |
+| [temporal-modeling](temporal-modeling.md) | 3 |
+
+## 論文
+
+- 2026-09-26 · [Adaptive Latent Capacity for World Models](world-representation.md) · `WAM-0012`
+- 2026-09-25 · [I Act Therefore I Am: When Is JEPA's Action-Conditioning Enough to Learn Causal Mechanisms?](action-coupling.md) · `WAM-0011`
+- 2026-08-06 · [LAWM-3D: Learning 3D-Aware Latent Actions from Human Videos for Generalizable Robot World Models](dynamics.md) · `WAM-0036`
+- 2026-08-01 · [Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors](temporal-modeling.md) · `WAM-0045`
+- 2026-07-27 · [FeelWorld: Visuo-Tactile World Model for Hierarchical Contact Prediction and Planning](dynamics.md) · `WAM-0038`
+- 2026-07-24 · [On the Identifiability of Controlled World Models](action-coupling.md) · `WAM-0010`
+- 2026-07-02 · [Object-centric LeJEPA](world-representation.md) · `WAM-0031`
+- 2026-06-05 · [Contrast encodes inductive bias: separating slow noise from dynamics in predictive representation learning](temporal-modeling.md) · `WAM-0014`
+- 2026-05-25 · [When Does LeJEPA Learn a World Model?](world-representation.md) · `WAM-0009`
+- 2026-03-25 · [Latent-WAM: Latent World Action Modeling for End-to-End Autonomous Driving](planning.md) · `WAM-0037`
+- 2026-03-15 · [V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning](world-representation.md) · `WAM-0008`
+- 2026-03-13 · [LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels](dynamics.md) · `WAM-0001`
+- 2026-02-20 · [Learning Invariant Visual Representations for Planning with Joint-Embedding Predictive World Models](world-representation.md) · `WAM-0018`
+- 2025-11-11 · [LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics](world-representation.md) · `WAM-0002`
+- 2025-10-13 · [Diffusion Transformers with Representation Autoencoders](world-representation.md) · `WAM-0023`
+- 2025-08-13 · [DINOv3](world-representation.md) · `WAM-0020`
+- 2025-06-11 · [V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning](action-coupling.md) · `WAM-0033`
+- 2024-11-07 · [DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning](planning.md) · `WAM-0032`
+- 2024-10-26 · [OGBench: Benchmarking Offline Goal-Conditioned RL](planning.md) · `WAM-0050`
+- 2024-10-09 · [Representation Alignment for Generation: Training Diffusion Transformers Is Easier Than You Think](world-representation.md) · `WAM-0022`
+- 2024-03-25 · [Learning Action-based Representations Using Invariance](action-coupling.md) · `WAM-0017`
+- 2024-02-15 · [Revisiting Feature Prediction for Learning Visual Representations from Video](world-representation.md) · `WAM-0007`
+- 2023-10-25 · [TD-MPC2: Scalable, Robust World Models for Continuous Control](planning.md) · `WAM-0039`
+- 2023-06-07 · [Object-Centric Learning for Real-World Videos by Predicting Temporal Feature Similarities](world-representation.md) · `WAM-0030`
+- 2023-06-05 · [LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning](planning.md) · `WAM-0049`
+- 2023-04-14 · [DINOv2: Learning Robust Visual Features without Supervision](world-representation.md) · `WAM-0019`
+- 2023-03-31 · [Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?](world-representation.md) · `WAM-0025`
+- 2023-02-24 · [Language-Driven Representation Learning for Robotics](world-representation.md) · `WAM-0027`
+- 2023-01-19 · [Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture](world-representation.md) · `WAM-0006`
+- 2023-01-10 · [Mastering Diverse Domains through World Models](planning.md) · `WAM-0041`
+- 2022-11-20 · [Joint Embedding Predictive Architectures Focus on Slow Features](temporal-modeling.md) · `WAM-0013`
+- 2022-10-06 · [Real-World Robot Learning with Masked Visual Pre-training](world-representation.md) · `WAM-0026`
+- 2022-09-30 · [VIP: Towards Universal Visual Reward and Representation via Value-Implicit Pre-Training](world-representation.md) · `WAM-0028`
+- 2022-06-30 · [Denoised MDPs: Learning World Models Better Than the World Itself](dynamics.md) · `WAM-0016`
+- 2022-03-23 · [R3M: A Universal Visual Representation for Robot Manipulation](world-representation.md) · `WAM-0024`
+- 2021-11-11 · [Masked Autoencoders Are Scalable Vision Learners](world-representation.md) · `WAM-0021`
+- 2021-05-11 · [VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning](world-representation.md) · `WAM-0003`
+- 2021-03-04 · [Barlow Twins: Self-Supervised Learning via Redundancy Reduction](world-representation.md) · `WAM-0004`
+- 2020-11-06 · [The Value Equivalence Principle for Model-Based Reinforcement Learning](planning.md) · `WAM-0043`
+- 2020-06-26 · [Object-Centric Learning with Slot Attention](world-representation.md) · `WAM-0029`
+- 2020-06-18 · [Learning Invariant Representations for Reinforcement Learning without Reconstruction](world-representation.md) · `WAM-0015`
+- 2020-06-13 · [Bootstrap your own latent: A new approach to self-supervised Learning](world-representation.md) · `WAM-0005`
+- 2019-11-27 · [Contrastive Learning of Structured World Models](dynamics.md) · `WAM-0048`
+- 2019-11-19 · [Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model](planning.md) · `WAM-0042`
+- 2019-09-12 · [Hierarchical Foresight: Self-Supervised Learning of Long-Horizon Tasks via Visual Subgoal Generation](planning.md) · `WAM-0047`
+- 2018-11-12 · [Learning Latent Dynamics for Planning from Pixels](dynamics.md) · `WAM-0040`
+- 2018-05-30 · [Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models](dynamics.md) · `WAM-0044`
+- unknown · [Hidden Failure Modes in Latent World-Model Planning from Offline Data](planning.md) · `WAM-0046`

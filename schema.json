@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "encoding": "UTF-8",
+  "multivalue_separator": "|",
+  "required_columns": [
+    "id",
+    "title",
+    "published",
+    "updated",
+    "authors",
+    "venue",
+    "main_category",
+    "subcategory",
+    "tags",
+    "paper_url",
+    "pdf_url",
+    "code_url",
+    "project_url",
+    "summary_ja",
+    "key_contribution",
+    "model_size",
+    "open_source"
+  ],
+  "optional_columns": [
+    "code_status",
+    "weights_status",
+    "license_status",
+    "source_checked",
+    "review_status",
+    "evidence_note"
+  ],
+  "enums": {
+    "open_source": [
+      "true",
+      "false",
+      "unknown"
+    ],
+    "code_status": [
+      "available",
+      "unavailable",
+      "unknown"
+    ],
+    "weights_status": [
+      "available",
+      "unavailable",
+      "unknown"
+    ],
+    "license_status": [
+      "open-source",
+      "non-open-source",
+      "unspecified",
+      "unknown"
+    ],
+    "review_status": [
+      "verified",
+      "needs-review"
+    ]
+  },
+  "categories": {
+    "vla": [
+      "perception-representation",
+      "reasoning-system2",
+      "action-system1",
+      "memory-temporal",
+      "adaptation"
+    ],
+    "wam": [
+      "world-representation",
+      "dynamics",
+      "action-coupling",
+      "planning",
+      "temporal-modeling"
+    ],
+    "agent": [
+      "planning",
+      "code",
+      "skill",
+      "tool",
+      "memory",
+      "replanning"
+    ],
+    "hybrid": [
+      "vla-agent",
+      "vla-wam",
+      "wam-agent",
+      "vla-wam-agent"
+    ]
+  },
+  "id_policy": "Case-sensitive stable ASCII identifier; canonical examples WAM-0001, VLA-0101, AGENT-0101, HYBRID-0101. Never rename for category changes.",
+  "category_display_names": {
+    "vla": "Vision–Language–Action",
+    "wam": "World / Action Models",
+    "agent": "Agent",
+    "hybrid": "Hybrid"
+  },
+  "subcategory_display_names": {
+    "perception-representation": "Perception / Representation",
+    "reasoning-system2": "Reasoning / System 2",
+    "action-system1": "Action / System 1",
+    "memory-temporal": "Memory / Temporal",
+    "adaptation": "Adaptation",
+    "world-representation": "World Representation",
+    "dynamics": "Dynamics",
+    "action-coupling": "Action Coupling",
+    "planning": "Planning",
+    "temporal-modeling": "Temporal Modeling",
+    "code": "Code",
+    "skill": "Skill",
+    "tool": "Tool",
+    "memory": "Memory",
+    "replanning": "Replanning",
+    "vla-agent": "VLA + Agent",
+    "vla-wam": "VLA + WAM",
+    "wam-agent": "WAM + Agent",
+    "vla-wam-agent": "VLA + WAM + Agent"
+  }
+}

@@ -1,0 +1,20 @@
+name: Validate research database
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate CSV
+        run: python scripts/validate_csv.py
+      - name: Check generated Markdown
+        run: python scripts/build_markdown.py --check
+      - name: Offline unit tests
+        run: python -m unittest discover -s tests -v
