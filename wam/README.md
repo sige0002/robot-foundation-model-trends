@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-53 records · 正本: [papers.csv](../papers.csv)
+56 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 25 |
+| [world-representation](world-representation.md) | 26 |
 | [dynamics](dynamics.md) | 7 |
-| [action-coupling](action-coupling.md) | 4 |
+| [action-coupling](action-coupling.md) | 6 |
 | [planning](planning.md) | 14 |
 | [temporal-modeling](temporal-modeling.md) | 3 |
 
 ## 論文
 
+- 2026-10-01 · [Completion Aware Guidance for World Action Models](action-coupling.md) · `WAM-0058`
+- 2026-10-01 · [CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight](action-coupling.md) · `WAM-0057`
+- 2026-09-30 · [CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization](world-representation.md) · `WAM-0056`
 - 2026-09-30 · [Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models](planning.md) · `WAM-0054`
 - 2026-09-30 · [Social-WM: Safety-Aware Latent World Models for Robot Social Navigation](planning.md) · `WAM-0053`
 - 2026-09-30 · [The Planning Limits of Latent World Models](planning.md) · `WAM-0052`

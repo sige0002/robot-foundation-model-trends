@@ -3,12 +3,12 @@
 
 [← データベース](../README.md)
 
-15 records · 正本: [papers.csv](../papers.csv)
+16 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [planning](planning.md) | 4 |
-| [code](code.md) | 6 |
+| [code](code.md) | 7 |
 | [skill](skill.md) | 1 |
 | [tool](tool.md) | 1 |
 | [memory](memory.md) | 1 |
@@ -16,6 +16,7 @@
 
 ## 論文
 
+- 2026-10-01 · [Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens](code.md) · `AGENT-0116`
 - 2026-09-30 · [SimEX: Simulation-Integrated Robotics AutoResearch](code.md) · `AGENT-0114`
 - 2026-09-30 · [ASENA: Self-evolving Agents for Embodied Navigation](code.md) · `AGENT-0113`
 - 2026-09-29 · [Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning](planning.md) · `AGENT-0115`

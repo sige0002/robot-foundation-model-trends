@@ -3,7 +3,82 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+10 records · Published date 降順（同日 ID 降順）
+
+### Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks
+
+- ID: `VLA-0137`
+- Published: 2026-10-01
+- Authors: Sophie Higham; Riccardo Andrea Izzo; Matteo Matteucci; Alessandro Suglia
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01351) · [Project](https://github.com/esgi-research-group/vla-reliability)
+- Tags: supporting-evaluation, behavioural-robustness, input-perturbations, trajectory-metrics, reliability
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+成功したVLA軌跡に限定して、入力摂動による滑らかさ・移動距離・グリッパ挙動とそのばらつきを測る評価手法。成功率だけでは隠れる行動変化をLIBEROとLIBERO-Plusで調べる。
+
+**主な貢献**
+
+軌跡指標の典型値変化とMADによるばらつきを区別し、統計検定とFDR補正を適用。π0.5とVLANeXtは四スイート、OpenVLA-OFTはSpatialだけを評価し、実機での効果と失敗軌跡は検証範囲外。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: needs-review
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.01351v1 のIII–IV節・VI節を確認。本文はfull code availableと記載するが公式repo default branch initial-setupはREADMEのみで、READMEは公開を論文出版後と明記。確認時の研究実装はunavailableとしcode\_urlは空欄、公開状態の不整合をneeds-reviewに保持。重み・実装ライセンスはunknown。新規VLA方策ではなく評価の支援研究。PDF未取得。
+
+### ChunkVLA-AM: Parallel Action Chunking for Vision-Language-Action Robot Control in Additive Manufacturing
+
+- ID: `VLA-0135`
+- Published: 2026-10-01
+- Authors: Zhugang Liu; Kaichuang Zhang; Jinman Zhang; Pu Sun; Martha Asare; Jose Hernandez; Maxim Ermolinsky; Efren Saenz; Qi Lu; Jinghao Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01856)
+- Tags: embodiment-adaptation, action-chunking, manufacturing, LoRA, cloud-edge
+- Model size: OpenVLA-OFT 7B backbone
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+OpenVLA-OFTをFAIRINO FR3の固定製造セルへ適応させるデータ変換・LoRA・実行パイプライン。単眼デモをTFDS/RLDSへ揃え、遠隔推論で得た8ステップの行動チャンクを実行後に再観測する。
+
+**主な貢献**
+
+座標系・行動正規化・チャンク実行の整合を具体化し、実機の対象物移送42試行で39成功を報告。並列ホスト推論は実機評価に使われず、適応とチャンク長の効果は単独で分離されていない。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: verified
+- arXivのv1初稿・著者・arXiv DOIを確認。HTML https://arxiv.org/html/2610.01856v1 のIV節、V節の実機・照明評価を読んだ。固定セルの赤/青ブロック移送は汎用製造能力の実証と区別。実装・専用重み・実装ライセンスの公式提供先は本文リンクとタイトル検索で未確認。PDF未取得、正確なPDF href未抽出のためpdf\_urlは空欄。
+
+### Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models
+
+- ID: `VLA-0138`
+- Published: 2026-09-30
+- Authors: Mingyue Cui; Zheyuan Liu; Yihan Zhu; Zheyuan Zhang; Meng Jiang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39820) · [Code](https://github.com/Mingyuee88/FailBank) · [Project](https://mingyuee88.github.io/FailBank/)
+- Tags: FailBank, self-evolution, failure-bank, observe-only-teacher, guarded-LoRA, safety
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+方策が実行した行動へ観察専用CBF教師の反事実的補正を記録し、結果で選別した失敗バンクと成功行動のアンカーからLoRAを更新するFailBank。検証損失と行動ドリフトのガードを満たす更新だけを採用する。
+
+**主な貢献**
+
+一時的なランタイム制約を永続的な方策学習信号へ変える四段階手順。VLA-Arenaの静的障害物二難度・π0/π0.5で成功率と方策由来接触コストを併記し、平均改善を全課題や動的障害物の安全保証とは扱わない。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2609.39820v1 の4節・5.2節・6.3節を確認。収集教師は特権シミュレータ形状を使い、展開方策には不要。公式project経由のsrc実装・READMEとroot Apache-2.0を確認: https://github.com/Mingyuee88/FailBank/blob/main/LICENSE 。第三者成分は別条項。READMEのVLA-Arena重みは基礎方策でありFailBank専用adapterの提供を確認できずweights\_status=unknown。PDF未取得。
 
 ### Self-Adaptive VLA for Robust Robot Deployment
 

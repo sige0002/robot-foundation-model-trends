@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-25 records · Published date 降順（同日 ID 降順）
+26 records · Published date 降順（同日 ID 降順）
+
+### CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization
+
+- ID: `WAM-0056`
+- Published: 2026-09-30
+- Authors: Morgan Byrd; Robert Wright; Sehoon Ha
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.00727) · [Project](https://morganbyrd03.github.io/cf-jepa/)
+- Tags: JEPA, controllability-factorization, distractor-robustness, latent-MPC
+- Model size: ViT-Tiny encoder; total parameters unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+JEPAの潜在表現を制御可能・制御不能な部分へ分け、背景の外生的な動きと操作に必要な状態を分離する。前向き予測に逆動力学・敵対的な行動予測・SIGRegを組み合わせる。
+
+**主な貢献**
+
+目標画像へのMPCを制御可能な潜在部分だけで行い、四つの制御環境とManiSkill到達課題で視覚妨害への頑健性を評価。通常条件では一部課題の性能低下もあり、遮蔽や操作へ干渉する妨害への一般保証ではない。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: needs-review
+- arXiv v1初稿、HTML https://arxiv.org/html/2610.00727v1 のIII節・IV-A/B節、公式projectの評価を確認。III-Cはbeta=1でalphaを課題別調整、projectはalpha=1でbetaを調整と記載が逆なので係数は断定せずneeds-review。本文・project・著者名つき検索で公式研究実装・重み・ライセンス未確認。同名WDSLab/CF-JEPAは別の時系列論文なので採用しない。PDF未取得。
 
 ### Anisotropic Representations Improve Planning in JEPA World Models
 

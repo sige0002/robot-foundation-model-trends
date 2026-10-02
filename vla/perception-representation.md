@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-2 records · Published date 降順（同日 ID 降順）
+3 records · Published date 降順（同日 ID 降順）
+
+### Continuous Conditioning of VLAs with Augmenting EMG and Visual Task Descriptors
+
+- ID: `VLA-0136`
+- Published: 2026-10-01
+- Authors: Edward W. Staley; Connor O. Pyles; Rahul Hingorani; Frank Camargo; Griffin Milsap; Jared Markowitz; Matthew S. Fifer; Michael Wolmetz
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01794)
+- Tags: multimodal-conditioning, EMG, visual-annotation, human-in-the-loop, clutter
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+筋電の連続信号を固有感覚へ加えるEC-VLAと、対象物・置き場所の画像注釈を使うVA-VLAを比較する。詳細な言語指示を固定の曖昧な指示と追加モダリティへ置き換え、散らかった場面での意図伝達を調べる。
+
+**主な貢献**
+
+SO-101の実機で三参加者別SmolVLAを評価し、RoboCasaの16課題ではπ0.5へ視覚注釈を加えて比較。非言語の課題条件づけの効果を示す予備実証で、未知参加者への転移や汎用性は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.01794v1 のIII–IV節・付録VI-Aを確認。実機筋電条件とシミュレーション視覚注釈を区別。IROS WORLDS Workshop 2026発表はarXivコメントの記載のみなのでvenue=arXiv。本文リンクで専用実装・重み・実装ライセンス未確認。LeRobot/VLAbの利用を本研究の公開状態へ転用しない。PDF未取得。
 
 ### GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments
 

@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
+
+### ATI-VLA: Action-Centric Predictive Vision-Language-Action Models via Actionable Alignment Then Adaptive Injection
+
+- ID: `HYBRID-0111`
+- Published: 2026-10-01
+- Authors: Yijie Zhu; Rui Shao; Jie He; Wei Li; Bo Zhao; Yelin Wang; Xiaochen Yuan; Tao Tan; Miao Zhang; Xiaojiang Peng; Zitong Yu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01741) · [Project](https://jiutian-vl.github.io/ATI-VLA-page/)
+- Tags: predictive-VLA, shared-codebook, actionable-alignment, adaptive-injection, bimanual
+- Model size: OpenVLA-7B backbone; total parameters unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+観測と行動を共有離散コードブックへ揃えて将来を予測し、その潜在表現をVLAの行動デコーダへ適応的に注入する二段階学習。整合モジュールを凍結後、行動目的だけで方策と軽量側路を最適化する。
+
+**主な貢献**
+
+予測表現のモダリティ差と共同最適化の競合を分けて扱う。LIBERO、RoboTwin 2.0と二種類の実機による五つの長期課題で評価し、予測潜在を使うVLA+WAMの例として整理する。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.01741v1 の2節・3.1–3.2節・付録A.1を確認。NeurIPS 2026採択は著者/公式projectの記載で、主催者確認はしていないためvenue=arXiv。projectのCodeリンクはproject内に戻り、研究実装・重み・実装ライセンスを確認できずunknown。hybrid/vla-wamは予測潜在と行動方策の結合による編集上の分類で、独立汎用世界モデルの公開を意味しない。PDF未取得。
 
 ### V-JEPA Policy: Building Effective World-Action Models on Predictive Visual Latents
 

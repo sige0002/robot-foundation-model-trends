@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-6 records · Published date 降順（同日 ID 降順）
+7 records · Published date 降順（同日 ID 降順）
+
+### Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens
+
+- ID: `AGENT-0116`
+- Published: 2026-10-01
+- Authors: Ruiyang Si; Jianxin Bi; Shunyu Yang; Rui Ni; Wenbo Huang; Qiang Wang; Shulong Jiang; Duomin Wang; Xiuyu Li; Haiwen Feng; Zhen Dong; Daquan Zhou
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01939) · [Code](https://github.com/DAGroup-PKU/PyRUA-Lean) · [Project](https://dagroup-pku.github.io/PyRUA-Lean/)
+- Tags: PyRUA-Lean, interactive-code, selective-observation, primitive-composition, VLA-tool
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+ロボットの古典的プリミティブと凍結VLAをPythonオブジェクトへ公開し、分岐・再試行を一つのセルで実行するPyRUA-Lean。エピソード内の変数を保持し、要求した画像や状態だけを計画モデルへ返す。
+
+**主な貢献**
+
+同一の凍結計画モデル・ロボットプリミティブ・呼出予算で700シミュレーション試行を比較し、成功率63.1%から71.7%を報告。入力トークン65%削減は両方式が成功した共通部分での比較で、エピソード間記憶は用いない。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.01939v1 の3節・4節の設定/費用/限界を確認。公式projectがリンクするsrc実装・README・NOTICEとroot Apache-2.0を独立確認: https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/LICENSE 。第三者RPent/VLA/知覚モデルは別配布であり専用学習済み重みの公開は未確認。主貢献は実行インターフェースなのでagent/codeとしVLAはtagに保持。PDF未取得。
 
 ### SimEX: Simulation-Integrated Robotics AutoResearch
 

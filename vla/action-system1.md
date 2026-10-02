@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-16 records · Published date 降順（同日 ID 降順）
+17 records · Published date 降順（同日 ID 降順）
+
+### WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation
+
+- ID: `VLA-0134`
+- Published: 2026-10-01
+- Authors: Samuel Zhen; Siwon Jo; Yanze Zhang; Wenhao Luo
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01083)
+- Tags: safety-filter, whole-body, attached-geometry, control-barrier-function
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+ロボット全身と把持物の形状をまとめた安全集合を構成し、VLAの運動指令をCBF-QPで小さく修正する推論時安全フィルター。把持の有無で保護対象を切り替え、グリッパ指令は維持する。
+
+**主な貢献**
+
+Bernstein多項式距離場による幾何制約を操作空間へ写像。SafeLIBEROの1600シミュレーション試行でScene Safety 97.38%、Safe Success 59.38%を報告するが、理想的な固定把持モードの保証と近似・緩和付き実装は区別される。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: verified
+- arXiv初稿・著者・arXiv DOIを確認。HTML https://arxiv.org/html/2610.01083v1 のIII–IV節、V節、結論の限界を読んだ。評価はシミュレータ由来の対象物役割情報を利用し、実機安全保証ではない。本文の公開リンクと対象タイトル検索で公式実装・重み・実装ライセンスを確認できずunknown。PDF未取得、正確なPDF href未抽出のためpdf\_urlは空欄。
 
 ### Spike-driven Vision-Language-Action Model
 

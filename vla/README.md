@@ -3,18 +3,23 @@
 
 [← データベース](../README.md)
 
-33 records · 正本: [papers.csv](../papers.csv)
+38 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 2 |
+| [perception-representation](perception-representation.md) | 3 |
 | [reasoning-system2](reasoning-system2.md) | 5 |
-| [action-system1](action-system1.md) | 16 |
+| [action-system1](action-system1.md) | 17 |
 | [memory-temporal](memory-temporal.md) | 3 |
-| [adaptation](adaptation.md) | 7 |
+| [adaptation](adaptation.md) | 10 |
 
 ## 論文
 
+- 2026-10-01 · [Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks](adaptation.md) · `VLA-0137`
+- 2026-10-01 · [Continuous Conditioning of VLAs with Augmenting EMG and Visual Task Descriptors](perception-representation.md) · `VLA-0136`
+- 2026-10-01 · [ChunkVLA-AM: Parallel Action Chunking for Vision-Language-Action Robot Control in Additive Manufacturing](adaptation.md) · `VLA-0135`
+- 2026-10-01 · [WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation](action-system1.md) · `VLA-0134`
+- 2026-09-30 · [Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models](adaptation.md) · `VLA-0138`
 - 2026-09-30 · [Spike-driven Vision-Language-Action Model](action-system1.md) · `VLA-0126`
 - 2026-09-30 · [Toward Real-Time VLAs: Stage-Aware Two-Step Flow Denoising and System-Level Evaluation](action-system1.md) · `VLA-0125`
 - 2026-09-28 · [D²-VLA: Dual-Memory Dual-Frequency Vision-Language-Action Model For Long Dynamic Manipulation](memory-temporal.md) · `VLA-0124`

@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
+
+### Completion Aware Guidance for World Action Models
+
+- ID: `WAM-0058`
+- Published: 2026-10-01
+- Authors: Seungyeon Kim; Junhoo Lee; Baekseung Kim; Minkyu Kim; Nojun Kwak
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01559)
+- Tags: completion-guidance, training-free, cross-attention, short-horizon, sampling
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+短い映像・行動チャンクが把持解除などの完了遷移を先送りする失敗を分析し、関連する指示トークンの条件づけをサンプリング中に強めるCompletion Aware Guidanceを提案する。
+
+**主な貢献**
+
+クロスアテンションから得たトークン関連度でキー・値へ有界な介入を行う追加学習不要の方法。Fast-WAMの非飽和9課題で平均成功64.4%から70.0%、DreamZeroの3シミュレーション課題で69%から75%を報告する。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: verified
+- arXiv v1初稿・著者・arXiv DOI、HTML https://arxiv.org/html/2610.01559v1 の3–4節と限界を確認。RoboTwinは成功率90%未満の選択9課題であり全ベンチマーク平均ではない。ワークショップ名は本文記載のみなのでvenue=arXiv。公式実装・重み・実装ライセンスは本文リンクとタイトル検索で未確認。論文CC BYはコード公開の証拠ではない。PDF未取得。
+
+### CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight
+
+- ID: `WAM-0057`
+- Published: 2026-10-01
+- Authors: Chensheng Peng; Wenhao Ding; Ran Tian; Zewei Zhou; Jef Packer; Maximilian Igl; Peter Karkus; Yan Wang; Masayoshi Tomizuka; Boris Ivanovic; Marco Pavone; Yuxiao Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.00859) · [Project](https://ctrl-wam.github.io/)
+- Tags: joint-video-action, aligned-noising, counterfactual-control, multi-agent, driving, bimanual
+- Model size: Cosmos 3-Nano 16B backbone
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+摂動を加えた行動をシミュレータで実行し、その結果の映像と組にして世界行動モデルを学習する。映像と行動のノイズ時刻をずらし、周辺エージェントの将来を予測または指定できる入力へ拡張する。
+
+**主な貢献**
+
+行動意図と予測映像の物理的な対応を学習中から揃える方法を提示。運転の軌跡整合性とRoboTwin由来1000エピソードの映像品質・制御可能性を評価し、生成映像の改善を実機閉ループ成功率と混同しない。
+
+**確認記録**
+
+- Checked: 2026-10-02 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.00859v1 の3節・4.1–4.4節・付録Dを確認。公式projectのCode (under review)は https://github.com/anonymous/ctrlwam にリンクするが確認時404。実装公開・専用重み・実装ライセンスは未確認なのでunknown、code\_urlは空欄。multi-agentは場面内の行動ストリームでありLLM Agentとの結合と推測しない。PDF未取得。
 
 ### I Act Therefore I Am: When Is JEPA's Action-Conditioning Enough to Learn Causal Mechanisms?
 
