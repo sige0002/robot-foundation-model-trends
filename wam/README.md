@@ -3,28 +3,33 @@
 
 [← データベース](../README.md)
 
-56 records · 正本: [papers.csv](../papers.csv)
+62 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 26 |
 | [dynamics](dynamics.md) | 7 |
-| [action-coupling](action-coupling.md) | 6 |
-| [planning](planning.md) | 14 |
-| [temporal-modeling](temporal-modeling.md) | 3 |
+| [action-coupling](action-coupling.md) | 10 |
+| [planning](planning.md) | 15 |
+| [temporal-modeling](temporal-modeling.md) | 4 |
 
 ## 論文
 
+- 2026-10-01 · [FutureWorlds: Learning Robotic World Models from Alternative Futures](temporal-modeling.md) · `WAM-0059`
 - 2026-10-01 · [Completion Aware Guidance for World Action Models](action-coupling.md) · `WAM-0058`
 - 2026-10-01 · [CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight](action-coupling.md) · `WAM-0057`
 - 2026-09-30 · [CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization](world-representation.md) · `WAM-0056`
 - 2026-09-30 · [Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models](planning.md) · `WAM-0054`
 - 2026-09-30 · [Social-WM: Safety-Aware Latent World Models for Robot Social Navigation](planning.md) · `WAM-0053`
 - 2026-09-30 · [The Planning Limits of Latent World Models](planning.md) · `WAM-0052`
+- 2026-09-29 · [One from Infinity: Actualizing Futures from Pretrained World Models into Robot Actions](action-coupling.md) · `WAM-0060`
 - 2026-09-29 · [Anisotropic Representations Improve Planning in JEPA World Models](world-representation.md) · `WAM-0055`
+- 2026-09-28 · [Efficient World Action Model Inference with Adaptive Intermediate States](action-coupling.md) · `WAM-0063`
 - 2026-09-26 · [What Must a World Model Distinguish for Planning?](planning.md) · `WAM-0051`
 - 2026-09-26 · [Adaptive Latent Capacity for World Models](world-representation.md) · `WAM-0012`
+- 2026-09-25 · [InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data](action-coupling.md) · `WAM-0062`
 - 2026-09-25 · [I Act Therefore I Am: When Is JEPA's Action-Conditioning Enough to Learn Causal Mechanisms?](action-coupling.md) · `WAM-0011`
+- 2026-09-22 · [An Action Is Worth One Patch: Unified World-Action Modeling with PatchWAM](action-coupling.md) · `WAM-0064`
 - 2026-08-06 · [LAWM-3D: Learning 3D-Aware Latent Actions from Human Videos for Generalizable Robot World Models](dynamics.md) · `WAM-0036`
 - 2026-08-01 · [Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors](temporal-modeling.md) · `WAM-0045`
 - 2026-07-27 · [FeelWorld: Visuo-Tactile World Model for Hierarchical Contact Prediction and Planning](dynamics.md) · `WAM-0038`
@@ -70,4 +75,5 @@
 - 2019-09-12 · [Hierarchical Foresight: Self-Supervised Learning of Long-Horizon Tasks via Visual Subgoal Generation](planning.md) · `WAM-0047`
 - 2018-11-12 · [Learning Latent Dynamics for Planning from Pixels](dynamics.md) · `WAM-0040`
 - 2018-05-30 · [Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models](dynamics.md) · `WAM-0044`
+- unknown · [Generalizable Robotic Insertion with World Models](planning.md) · `WAM-0061`
 - unknown · [Hidden Failure Modes in Latent World-Model Planning from Offline Data](planning.md) · `WAM-0046`

@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
+
+### Fast Plans, Faithful Actions: Closing the Planning-Execution Gap in Hierarchical Vision-Language-Action Models
+
+- ID: `VLA-0139`
+- Published: 2026-09-25
+- Authors: Chuanliang Xie; Boyu Ma; Gen Li; Yizhou Liu; Houwang Chen; Xinyu Zhou; Jianfei Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.30833)
+- Tags: hierarchical-VLA, Block-AR, normalized-goal-modulation, waypoints, anti-shortcut-training
+- Model size: 3.66B total; 46.4M–49.6M trainable LoRA parameters
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+π0.5由来の階層VLAで、ウェイポイントを一括生成するBlock-ARと、行動層へ目標差分を注入するNormalized Goal Modulationを組み合わせる。計画の遅さと実行器が計画を無視する問題を別々に検査する。
+
+**主な貢献**
+
+同じ学習条件のLIBERO比較でBlock-ARへのNGM追加が平均成功95.85%から98.45%へ改善。双腕実機では計画時間1094msから125msを報告し、計画時間・通信込み遅延・運動時間比率を区別する。
+
+**確認記録**
+
+- Checked: 2026-10-03 · Review: verified
+- arXiv v1初稿・著者・arXiv DOIを確認。HTML https://arxiv.org/html/2609.30833v1 の3節、4.1–4.4節、6.2–6.4節を確認。LIBEROは各suite 500試行、実機は各方式60試行で操作者判定。実機の8.7倍はplan latencyでエンドツーエンドの制御速度ではない。計画は同じ結合VLA内のモジュールで、独立汎用Agentとの統合とは分類しない。本文リンクと題名検索で専用実装・重み・実装ライセンス未確認。PDF未取得。
 
 ### H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space
 

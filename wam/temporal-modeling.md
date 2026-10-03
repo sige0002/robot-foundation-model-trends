@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
+
+### FutureWorlds: Learning Robotic World Models from Alternative Futures
+
+- ID: `WAM-0059`
+- Published: 2026-10-01
+- Authors: Hao Wu; Shengju Qian; Weiyan Wang; Fan Xu; Fan Zhang; Yuanpeng He; Qingsong Wen; Yuxuan Liang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01019) · [Code](https://github.com/Alexander-wu/FutureWorlds)
+- Tags: alternative-futures, candidate-memory, MemSPO, autoregressive-video, RL-post-training
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / unavailable / unspecified
+
+**概要（日本語）**
+
+同じ行動条件から多様な未来映像を探索し、候補ごとに初期状態と直近履歴を保持する自己回帰世界モデル。MemSPOは候補映像の相対的な品質を報酬にし、生成時と学習時の履歴を一致させて事後学習する。
+
+**主な貢献**
+
+三データセット各128軌跡の32フレーム予測で画質・運動・長期整合性を評価。候補履歴を有界に保つ設計と探索誘導学習を結びつけるが、実機制御や閉ループ計画での成功改善は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-03 · Review: verified
+- arXiv v1初稿・著者・arXiv DOIを確認。HTML https://arxiv.org/html/2610.01019v1 の3節、4.1節、5節を確認。公式repoのsrc実装とREADMEを独立確認。READMEは公開checkpoint/data配布と独自コードの最終ライセンスをpendingと明記し、weight manifestのハッシュ一覧を公開重みと扱わない。コードはavailable、重みはunavailable、実装ライセンスunspecified、open\_source=unknown。repoに示されたproject linkは今回取得できずproject\_urlは空欄。PDF未取得、正確なPDF href未抽出のためpdf\_urlは空欄。
 
 ### Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors
 

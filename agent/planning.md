@@ -3,7 +3,7 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
 
 ### Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning
 
@@ -29,6 +29,31 @@
 
 - Checked: 2026-10-01 · Review: verified
 - arXiv初稿・著者とHTML本文3節・4–5節を確認。評価は単一の静的な意味環境で、知覚誤差や動的実機安全性の保証ではない。本文がリンクする公式repoのplanner/decision layer実装を確認。root MITを確認: https://github.com/iitis/Risk-Aware-Semantic-Grounding/blob/master/LICENSE 。学習済み重み提供は未確認。
+
+### Design and Evaluation of LLM Chaining-Based Task Planning for General Purpose Service Robots
+
+- ID: `AGENT-0117`
+- Published: 2026-09-24
+- Authors: Lucas Da Mota Bruno; Jiahao Sim; Yoshinobu Hagiwara
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.29043)
+- Tags: LLM-chaining, GPSR, instruction-classification, task-schema, HSR, planning-execution-gap
+- Model size: Qwen2.5-14B; Cogito-14B; hosted model size unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+生活支援ロボットの自然言語命令を28種類へ分類し、選ばれた課題のスキーマだけを使って行動関数列を生成する二段階LLM計画。巨大な単一promptを分け、観測・一手生成・実行・フィードバックを繰り返す。
+
+**主な貢献**
+
+100 GPSR命令で計画出力の整合性を比較し、HSR実機10試行では6課題が完了。分類の正解ラベルを与えた計画評価であり、上流分類込みの成功率や全課題の総token削減を実証したものではない。
+
+**確認記録**
+
+- Checked: 2026-10-03 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2609.29043v1 のIII節、IV-A/B/C節とV節を確認。約45%削減はStage2の一回あたりprompt長で、分類callと総task tokenは別。三モデルと一命令分布、実機一施設10試行に限定。IEEE GCCE 2026採択はarXivコメントのみなのでvenue=arXiv。専用code・weight・実装licenseは本文リンク/題名検索で未確認。本論文は先行15課題研究の拡張と明記。既存DBとの正規ID・正規化題名照合に一致なし。PDF未取得。
 
 ### Text2Motion: From Natural Language Instructions to Feasible Plans
 

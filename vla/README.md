@@ -3,14 +3,14 @@
 
 [← データベース](../README.md)
 
-38 records · 正本: [papers.csv](../papers.csv)
+40 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [perception-representation](perception-representation.md) | 3 |
-| [reasoning-system2](reasoning-system2.md) | 5 |
+| [reasoning-system2](reasoning-system2.md) | 6 |
 | [action-system1](action-system1.md) | 17 |
-| [memory-temporal](memory-temporal.md) | 3 |
+| [memory-temporal](memory-temporal.md) | 4 |
 | [adaptation](adaptation.md) | 10 |
 
 ## 論文
@@ -22,7 +22,9 @@
 - 2026-09-30 · [Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models](adaptation.md) · `VLA-0138`
 - 2026-09-30 · [Spike-driven Vision-Language-Action Model](action-system1.md) · `VLA-0126`
 - 2026-09-30 · [Toward Real-Time VLAs: Stage-Aware Two-Step Flow Denoising and System-Level Evaluation](action-system1.md) · `VLA-0125`
+- 2026-09-29 · [Vision-Language-Action Autonomous Driving Agent with Language-based Memory](memory-temporal.md) · `VLA-0140`
 - 2026-09-28 · [D²-VLA: Dual-Memory Dual-Frequency Vision-Language-Action Model For Long Dynamic Manipulation](memory-temporal.md) · `VLA-0124`
+- 2026-09-25 · [Fast Plans, Faithful Actions: Closing the Planning-Execution Gap in Hierarchical Vision-Language-Action Models](reasoning-system2.md) · `VLA-0139`
 - 2026-09-24 · [Self-Adaptive VLA for Robust Robot Deployment](adaptation.md) · `VLA-0123`
 - 2026-09-24 · [Direction-Scale Decomposition in Action Representation: Rethinking What to Tokenize for Vision-Language-Action Models](action-system1.md) · `VLA-0119`
 - 2026-09-24 · [Decoupled Early Exits for Task-Dependent Compute Allocation in Flow-Matching VLAs](action-system1.md) · `VLA-0118`

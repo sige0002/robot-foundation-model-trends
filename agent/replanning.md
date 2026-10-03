@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-2 records · Published date 降順（同日 ID 降順）
+3 records · Published date 降順（同日 ID 降順）
+
+### RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement
+
+- ID: `AGENT-0119`
+- Published: 2026-09-23
+- Authors: Kailin Wang; Haoxiang Jie; Yaoyuan Yan; Zhiyou Heng; Zhaosong Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.27612)
+- Tags: evidence-gated-runtime, role-isolated-context, versioned-memory, bounded-recovery, configuration-revision, supporting-system
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+計画提案、skill実行、独立検証、制限付き復旧を分け、証拠と版に結びつく状態更新だけを進捗として受理するロボットAgent runtime。履歴から構成変更候補を作り、固定回帰検査と版管理で採用する手順を定義する。
+
+**主な貢献**
+
+倉庫巡回・画像観察・報告・帰還の実機記録と、出発/経路進捗/帰還が必要な周回例で完了判定を具体化。RSIは構成改訂プロトコルで、統制比較の改善量や再帰的能力向上、オンライン重み更新の実証ではない。
+
+**確認記録**
+
+- Checked: 2026-10-03 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2609.27612v1 の1節、6.2節の実機例、6.5–6.8節、7–8節を確認。HROSは先行runtimeで本稿のharness契約の基盤。6.8はfault injection・ablation・RSI評価手順を規定するが、その比較結果は記載されていない。VLA/world model/TAMPを接続できる契約と実機navigation/inspection実証を区別する。専用code・weight・実装licenseは本文リンク/題名検索で未確認。PDF未取得。
 
 ### SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning
 

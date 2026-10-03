@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-14 records · Published date 降順（同日 ID 降順）
+15 records · Published date 降順（同日 ID 降順）
 
 ### Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models
 
@@ -329,6 +329,31 @@ SimNormで潜在状態を小さな単体の集合へ正規化し、対数空間�
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Official implementation/weights release and license not independently verified.
+
+### Generalizable Robotic Insertion with World Models
+
+- ID: `WAM-0061`
+- Published: unknown / 未確認
+- Authors: Nicklas Hansen; Iretiayo Akinola; Yijie Guo; Jie Xu; Bingjie Tang; Hao Su; Xiaolong Wang; Abhishek Gupta; Dieter Fox; Yashraj Narang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.28258)
+- Tags: InsertionWM, TD-MPC2, contact-rich, depth-proprioception, zero-shot-assembly, earlier-workshop-version
+- Model size: 5M learnable parameters
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+手首深度画像と固有感覚を融合した潜在世界モデルで挿入動作を計画するInsertionWM。TD-MPC2を基に、物体IDを入力せず複数組立形状から一般化するモデルベース強化学習を調べる。
+
+**主な貢献**
+
+90形状で学習し、同分布から保持した10形状のシミュレーションで平均56%のゼロショット成功を報告。視覚遮蔽とsim-to-realが限界であり、実機組立の実証や任意形状への保証ではない。
+
+**確認記録**
+
+- Checked: 2026-10-03 · Review: needs-review
+- arXiv v1初稿は2026-09-23。HTML https://arxiv.org/html/2609.28258v1 のIII–V節、VI-A/B節、VII節を確認。著者の公開CV https://www.nicklashansen.com/files/cv.pdf は同題・同著者のRSS OOD workshop 2025版を記載し、一次OpenReview PDF検索 https://openreview.net/pdf?id=DR3n6IqGKI も題・著者が一致。最初の公開日の正確な年月日は未確認なのでpublishedは空欄、needs-review。OpenReview forumはブラウザ検証が必要で日付未取得。次回は公式workshop投稿履歴で初出日を解決し、このIDを維持する。IROS 2026はarXivコメント/著者ページのみのためvenue=arXiv。専用コード・重み・実装ライセンスは未確認、TD-MPC2本体から推定しない。PDF未取得。
 
 ### Hidden Failure Modes in Latent World-Model Planning from Offline Data
 

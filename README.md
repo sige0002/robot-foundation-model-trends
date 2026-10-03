@@ -3,8 +3,8 @@
 
 ロボット基盤モデルとその周辺技術の研究データベース。CSV を唯一の正本として、分類別の Markdown を自動生成します。VLA / WAM / Agent / Hybrid の技術地図を継続的に育てるための公開リサーチ基盤です。
 
-- 正本: [papers.csv](papers.csv) · 123 records
-- Last updated: 2026-10-02（source_checked の最大値。ビルド日時には依存しません）
+- 正本: [papers.csv](papers.csv) · 134 records
+- Last updated: 2026-10-03（source_checked の最大値。ビルド日時には依存しません）
 - スキーマ: [schema.json](schema.json) · [フィールド定義](SCHEMA.md)
 - 更新手順: [AGENTS.md](AGENTS.md)
 - ソフトウェアのライセンスは未選定です。各論文・コード・PDF の権利は各権利者に帰属します
@@ -13,11 +13,11 @@
 
 | 分類 | 論文数 |
 | --- | ---: |
-| [VLA · Vision–Language–Action](vla/README.md) | 38 |
-| [WAM · World / Action Models](wam/README.md) | 56 |
-| [Agent](agent/README.md) | 16 |
+| [VLA · Vision–Language–Action](vla/README.md) | 40 |
+| [WAM · World / Action Models](wam/README.md) | 62 |
+| [Agent](agent/README.md) | 19 |
 | [Hybrid](hybrid/README.md) | 13 |
-| **合計** | **123** |
+| **合計** | **134** |
 
 件数は実際の CSV 行から計算されます。分類は主な研究貢献に基づく整理で、論文の公式分類や能力保証ではありません。複数分類にまたがる性質は tags と説明に残し、重複登録を避けます。
 
@@ -26,27 +26,27 @@
 ### [VLA · Vision–Language–Action](vla/README.md)
 
 - [perception-representation](vla/perception-representation.md) (3)
-- [reasoning-system2](vla/reasoning-system2.md) (5)
+- [reasoning-system2](vla/reasoning-system2.md) (6)
 - [action-system1](vla/action-system1.md) (17)
-- [memory-temporal](vla/memory-temporal.md) (3)
+- [memory-temporal](vla/memory-temporal.md) (4)
 - [adaptation](vla/adaptation.md) (10)
 
 ### [WAM · World / Action Models](wam/README.md)
 
 - [world-representation](wam/world-representation.md) (26)
 - [dynamics](wam/dynamics.md) (7)
-- [action-coupling](wam/action-coupling.md) (6)
-- [planning](wam/planning.md) (14)
-- [temporal-modeling](wam/temporal-modeling.md) (3)
+- [action-coupling](wam/action-coupling.md) (10)
+- [planning](wam/planning.md) (15)
+- [temporal-modeling](wam/temporal-modeling.md) (4)
 
 ### [Agent](agent/README.md)
 
-- [planning](agent/planning.md) (4)
+- [planning](agent/planning.md) (5)
 - [code](agent/code.md) (7)
 - [skill](agent/skill.md) (1)
-- [tool](agent/tool.md) (1)
+- [tool](agent/tool.md) (2)
 - [memory](agent/memory.md) (1)
-- [replanning](agent/replanning.md) (2)
+- [replanning](agent/replanning.md) (3)
 
 ### [Hybrid](hybrid/README.md)
 

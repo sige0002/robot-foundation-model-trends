@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
+
+### Vision-Language-Action Autonomous Driving Agent with Language-based Memory
+
+- ID: `VLA-0140`
+- Published: 2026-09-29
+- Authors: Kai Yan; Xiangyu Chen; Yulong Cao; Alex Naumann; Peter Karkus; Yan Wang; Jef Packer; Alex Schwing; Yuxiong Wang; Boris Ivanovic; Wenjie Luo; Marco Pavone
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.38641) · [Project](https://kaiyan289.github.io/projects/ad-memo/)
+- Tags: AD-Memo, driving, language-memory, Da-Capo, semi-closed-loop-RL, supporting-foundation
+- Model size: Alpamayo 2 2B VLA backbone; 8B SFT ablation
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+運転に重要な周辺物体を言語メモとして書き、後の軌跡予測と質問応答に再利用するAD-Memo。Da Capoは運転トークンへ時点別、メモへ将来依存の学習信号を割り当てる。
+
+**主な貢献**
+
+四方停止と一般運転の実映像クリップで軌跡品質・記憶質問応答・他モデルへのメモ移植を評価。制御入力は正解履歴を再生し、記憶だけを閉ループ化するため、実車の閉ループ走行成功や安全性能を実証した結果ではない。
+
+**確認記録**
+
+- Checked: 2026-10-03 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2609.38641v1 の3節、4節のbaseline設定、付録D.2/Fと公式projectの評価を確認。主実験は約10秒の言語メモと2B VLA backboneで、Alpamayoのaction expertは含まない。8BはSFT追加評価。本文/公式projectに専用code・weight・実装license提供先を確認できずunknown。運転分野の支援研究として扱い、マニピュレーションへの効果は未検証。PDF未取得。
 
 ### D²-VLA: Dual-Memory Dual-Frequency Vision-Language-Action Model For Long Dynamic Manipulation
 
