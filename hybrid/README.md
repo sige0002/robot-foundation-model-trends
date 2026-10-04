@@ -3,17 +3,19 @@
 
 [← データベース](../README.md)
 
-13 records · 正本: [papers.csv](../papers.csv)
+15 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 3 |
-| [vla-wam](vla-wam.md) | 8 |
+| [vla-agent](vla-agent.md) | 4 |
+| [vla-wam](vla-wam.md) | 9 |
 | [wam-agent](wam-agent.md) | 1 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
 
 ## 論文
 
+- 2026-10-01 · [Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation](vla-agent.md) · `HYBRID-0113`
+- 2026-10-01 · [UniWAM: Unified World-Action Model](vla-wam.md) · `HYBRID-0112`
 - 2026-10-01 · [ATI-VLA: Action-Centric Predictive Vision-Language-Action Models via Actionable Alignment Then Adaptive Injection](vla-wam.md) · `HYBRID-0111`
 - 2026-09-30 · [RoboCoach: World Models as Active Coaches for Compositional Robot Skills](vla-wam-agent.md) · `HYBRID-0104`
 - 2026-09-29 · [V-JEPA Policy: Building Effective World-Action Models on Predictive Visual Latents](vla-wam.md) · `WAM-0034`

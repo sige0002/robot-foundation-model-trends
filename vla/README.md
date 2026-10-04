@@ -3,15 +3,15 @@
 
 [← データベース](../README.md)
 
-40 records · 正本: [papers.csv](../papers.csv)
+43 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [perception-representation](perception-representation.md) | 3 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
 | [action-system1](action-system1.md) | 17 |
-| [memory-temporal](memory-temporal.md) | 4 |
-| [adaptation](adaptation.md) | 10 |
+| [memory-temporal](memory-temporal.md) | 5 |
+| [adaptation](adaptation.md) | 12 |
 
 ## 論文
 
@@ -22,6 +22,7 @@
 - 2026-09-30 · [Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models](adaptation.md) · `VLA-0138`
 - 2026-09-30 · [Spike-driven Vision-Language-Action Model](action-system1.md) · `VLA-0126`
 - 2026-09-30 · [Toward Real-Time VLAs: Stage-Aware Two-Step Flow Denoising and System-Level Evaluation](action-system1.md) · `VLA-0125`
+- 2026-09-29 · [Remember What You Did: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies](memory-temporal.md) · `VLA-0141`
 - 2026-09-29 · [Vision-Language-Action Autonomous Driving Agent with Language-based Memory](memory-temporal.md) · `VLA-0140`
 - 2026-09-28 · [D²-VLA: Dual-Memory Dual-Frequency Vision-Language-Action Model For Long Dynamic Manipulation](memory-temporal.md) · `VLA-0124`
 - 2026-09-25 · [Fast Plans, Faithful Actions: Closing the Planning-Execution Gap in Hierarchical Vision-Language-Action Models](reasoning-system2.md) · `VLA-0139`
@@ -30,6 +31,8 @@
 - 2026-09-24 · [Decoupled Early Exits for Task-Dependent Compute Allocation in Flow-Matching VLAs](action-system1.md) · `VLA-0118`
 - 2026-09-23 · [MemBodied: Recurrent Associative Memory for Vision-Language-Action Models](memory-temporal.md) · `VLA-0130`
 - 2026-09-23 · [Dissecting Advantage-Guided Post-Training for Vision-Language-Action Policies](adaptation.md) · `VLA-0128`
+- 2026-09-22 · [SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation](adaptation.md) · `VLA-0143`
+- 2026-09-22 · [RouteRLT: Learning When and Which RL Specialist Should Control a Vision-Language-Action Policy](adaptation.md) · `VLA-0142`
 - 2026-09-21 · [Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation](action-system1.md) · `VLA-0120`
 - 2026-09-20 · [Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models](adaptation.md) · `VLA-0122`
 - 2026-09-19 · [H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space](reasoning-system2.md) · `VLA-0127`

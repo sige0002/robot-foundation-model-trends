@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
 
 ### Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks
 
@@ -129,6 +129,56 @@ TD優位度、グループ別校正、連続重み付けの組合せを識別。
 
 - Checked: 2026-10-01 · Review: verified
 - arXiv v1 only. Primary HTML https://arxiv.org/html/2609.28161v1 directly links verified project https://dissectvla.github.io/. Project contains videos and study details, no verified research code or trained weight release; website template/website CC license is not an implementation license. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation
+
+- ID: `VLA-0143`
+- Published: 2026-09-22
+- Authors: Zeyu Lou; Tianran Zhang; Xinquan Yue; Ya Jing; Chenyang Si
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.26313) · [Code](https://github.com/Loule0-0/SafeLoop/tree/release/safeloop)
+- Tags: execution-safety, hazard-prediction, rollback, safe-waypoint-memory, frozen-VLA, asymmetric-PPO
+- Model size: Qwen2.5-VL-3B predictor backbone; total parameters unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+凍結VLAへ外付けの危険予測と復帰制御を加える。身体・物体の危険確率と発生までの時間を推定し、低頻度PPO制御器が続行・安全地点記録・関節空間rollbackを選ぶ。
+
+**主な貢献**
+
+24 LIBERO課題×16seed、実機三課題×25試行で安全性と成功率を比較。実機は予測器を適応しdeciderをそのまま移す。安全地点は予測閾値に基づき形式保証ではなく、不可逆な物体変化は戻せない。公開releaseはPi0向けで訓練データは含まれない。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: verified
+- arXiv v1初稿2026-09-22 12:22:44 UTC、改訂なし。arXiv commentsはIROS 2026受理を記載するが、会議側では独立確認していない。HTML §III–V確認: https://arxiv.org/html/2609.26313v1 。公式release/safeloop実装とApache-2.0 LICENSE確認: https://github.com/Loule0-0/SafeLoop/blob/release/safeloop/LICENSE 。HF公開head重み・Apache-2.0カード確認: https://huggingface.co/Jaqen0-0/SafeLoop/tree/main/decision\_heads 。pi0-v1の8ファイルmanifest: https://github.com/Loule0-0/SafeLoop/blob/release/safeloop/configs/release/artifacts\_pi0\_v1.json 。重み未ダウンロードでchecksum自体は未検証。基盤モデルは別ライセンス。PDF未取得。
+
+### RouteRLT: Learning When and Which RL Specialist Should Control a Vision-Language-Action Policy
+
+- ID: `VLA-0142`
+- Published: 2026-09-22
+- Authors: Chongyu Zhu; Jaden Hinds; Hyegang Kim; Juan Sebastian Rojas; Ramy Elmallah; Chi-Guhn Lee
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.26467)
+- Tags: RL-specialist, controller-routing, SmolVLA, action-chunk, precision-control, operator-aligned-handoff
+- Model size: SmolVLA backbone; total router/specialist parameters unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結SmolVLAの潜在表現から担当制御器を推定し、精密段階だけRL専門方策へ切り替える。ヒステリシス等で切替を安定化し、担当変更時に古いaction chunkの未実行部分を破棄する。
+
+**主な貢献**
+
+LIBERO Object三課題・60保持試行・三学習seedで全課題成功85.00%から92.22%。実機挿入は6.7%から35.0%だが、挿入開始前に操作者が位置合わせする。大規模専門方策群・完全自律の多専門方策合成・他の幾何形状は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: verified
+- arXiv v1初稿2026-09-22 14:15:28 UTC、改訂なし。arXiv commentsはIROS 2026 IARL Workshop受理を記載するが、会議側では独立確認していない。HTML §III・IV・Vで手法・評価・制約を確認: https://arxiv.org/html/2609.26467v1 。実機はRouteRLT20試行、対照30試行。phaseラベル・専門方策学習にはprivileged境界を使用し、実行時router入力には使わない。本文と著者/手法名検索で公式公開実装・重み・実装ライセンス・独立project未確認。PDF未取得。
 
 ### Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models
 

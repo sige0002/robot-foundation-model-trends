@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-2 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
+
+### LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation
+
+- ID: `AGENT-0120`
+- Published: 2026-09-30
+- Authors: Zijie Diao; Yitong Chen; Sicheng Xie; Tianyi Lu; Wujian Peng; Guojin Zhong; Houze Xu; Ziyi Ye; Zuxuan Wu; Yu-Gang Jiang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39507) · [PDF](https://arxiv.org/pdf/2609.39507) · [Code](https://github.com/dzj441/Libero-Agent)
+- Tags: LIBERO-Agent, benchmark, agent-native-control, MCP, embodied-manipulation, long-horizon
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+汎用エージェントが観測の選択・処理とネイティブなロボット行動の合成を自ら行う、LIBEROベースのシミュレーション評価系。200タスクを統合し、知覚・短期操作・長期操作を各10タスクに分けた主要30タスクで7種類のモデルと実行環境の組を比較する。
+
+**主な貢献**
+
+高レベル技能を与えないMCPインターフェースと、3回すべての成功または最小段階完了率で測る安定性指標を導入。主要評価では最高スコアが45.0/100でも、難しい短期操作の安定成功率は40%、難しい長期操作の安定段階完了率は22%で、対象識別と確実な実行の隔たりを示した。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: needs-review
+- 書誌と履歴: https://arxiv.org/abs/2609.39507 。v1は2026-09-30 11:10:10 UTC、改訂なし。方法・評価: https://arxiv.org/html/2609.39507v1 の3節・4節・付録B.3。主要30タスクは同一初期状態・seed=100で各3回、1,800秒制限のシミュレーションであり、200タスク全件や実機の検証ではない。HTML冒頭の公式\[Code\]は https://github.com/dzj441/Libero-Agent を指すが、確認時点ではREADME.mdとLICENSEのみでREADMEがコード公開予定と明記。MIT文面と著者の著作権表示を https://github.com/dzj441/Libero-Agent/blob/main/LICENSE で確認したが、未公開の実装に対してopen\_source=trueとはしない。コードリンクと公開実態の差をneeds-reviewに記録。独立した公式project・重みは未確認。PDF URLはabsページのリンクのみ確認し、PDFを取得していない。
 
 ### CognitiveReality: Robot-Agnostic Semantic Gaussian Mapping with an LLM Agent for Immersive Collaborative VR Teleoperation
 
@@ -29,6 +54,31 @@ RGB-Dから作るオンラインGaussian-TSDF地図を、VR操作者と型付き
 
 - Checked: 2026-10-03 · Review: verified
 - arXiv v1初稿・著者、HTML https://arxiv.org/html/2609.31418v1 のIII-A/C/D節、IV-D/E節、V節を確認。制御Agentは外部GPU、移動はNav2等既存backendで操作者確認を要求。sandboxのunsafe proposalなしは実機安全保証ではない。主分類agent/tool、地図は支援的表現で学習済み予測世界モデルとの統合を推定しない。専用実装・重み・実装ライセンスは本文リンク/題名検索で未確認。PDF未取得。
+
+### An Unexpected Robot Policy: Early Evaluations of GPT-6 Astra on RoboDojo and Beyond
+
+- ID: `AGENT-0122`
+- Published: 2026-09-21
+- Authors: Wenbo Zhang; Kaixuan Wang; Yutao Ouyang; Xiaoyu Huang; Liyang Li; Kailun Su; Weiyang Jin; Wenhao Chai; Haotian Liang; Zhiyang Dou; Yue Chen; Tianxing Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.24170) · [Code](https://github.com/RoboProbe/RoboProbe) · [Project](https://robodojo-benchmark.com/report/gpt-6-astra-eval)
+- Tags: LLM-as-policy, direct-control, RoboDojo, supporting-evaluation, safety-limits, closed-weight-backbone
+- Model size: GPT-6 Astra/GPT-5.5/DeepSeek-Flash; parameters unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+凍結LLMがRGB・ロボット状態・履歴から直接エンドエフェクタ目標を選ぶ制御を評価する。学習済み運動方策を介さず、非学習の目標検証・軌道変換を用いる。
+
+**主な貢献**
+
+RoboDojo全42課題でAstraは2,100試行、成功率22.48%。公開方策との入力情報は同一でなく、精密・動的制御は弱い。実機は危険動作と機器損傷で中止され、残る33試行は診断資料で安全性・一般信頼性の証明ではない。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: needs-review
+- arXiv v1初稿2026-09-21 06:39:47 UTC、改訂なし。HTML §3・5・App.H/I確認: https://arxiv.org/html/2609.24170v1 。公式harnessの公開実装・結果と現行Apache-2.0 LICENSEを確認: https://github.com/RoboProbe/RoboProbe/blob/main/LICENSE 。READMEは最終release licenseをTBDとするためneeds-review。open\_sourceはharnessのみで、閉鎖重みAstra等のモデル公開を意味しない。論文固有の公開重みは未確認。PDF未取得。
 
 ### ReAct: Synergizing Reasoning and Acting in Language Models
 

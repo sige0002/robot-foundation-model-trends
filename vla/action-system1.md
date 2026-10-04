@@ -127,8 +127,8 @@ flow-matching VLAのVLM深さ、action expert深さ、denoising回数を独立�
 
 **確認記録**
 
-- Checked: 2026-10-01 · Review: needs-review
-- 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。論文本文はコード・モデル公開を記載するが、リンク先は2026-10-01のweb/公開GitHub API確認で404。公開実装・ライセンス・重みの確認待ち。https://arxiv.org/html/2609.29382v2
+- Checked: 2026-10-04 · Review: needs-review
+- 書誌・初稿2026-09-24・v2改訂2026-09-29・要旨をarXivで再確認。2026-10-04確認時、公式repoは公開閲覧可能だがmain 5b29eec62f67a817ed1543e6c31752b609a9dda7（2026-09-28）はREADMEのみ。source codeとdatasetは論文出版後に公開予定と明記され、実装・重み・実装ライセンスは未確認。以前の404記載を現在の状態へ修正し、論文の公開記載との不整合はneeds-reviewに保持。次回は実装releaseとLICENSEを独立再確認する。Oct3–4 UTCの新commit/releaseなし。 https://arxiv.org/html/2609.29382v2 ; https://github.com/esgi-research-group/ee-vla/blob/main/README.md
 
 ### Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation
 

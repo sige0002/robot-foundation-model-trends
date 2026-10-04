@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### ActiveWAM: Evidence-Aware Active Vision for World-Action Models
+
+- ID: `WAM-0066`
+- Published: 2026-10-01
+- Authors: Renjun Wu; Luzhou Ge; Xuesong Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01698) · [Project](https://icr-lab.github.io/ActiveWAM/)
+- Tags: ActiveWAM, active-vision, pan-tilt, bimanual, training-time-inversion, view-aware-history
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unspecified
+
+**概要（日本語）**
+
+有限履歴の手掛かりを保持する学習と、新しい視点を得る頭部・双腕制御を統合する。動画priorの履歴inversionは訓練だけに使い、実行時は生の観測履歴から行動を生成する。
+
+**主な貢献**
+
+RoboTwin-AVの50課題で観測と操作を共同評価し、複合分布変化で53.3%成功を報告。実機の3料理課題・各20試行は全段階成功50.0%で、第一段階66.7%と区別する。段階切替は事前指定で、連続料理全体の自律性を保証しない。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.01698v1 の3節・4.1/4.2/4.4/4.5節を確認。操作失敗・早期終了・視野外・hardwareの失敗分類は因果分析ではない。公式 https://github.com/Soraruholic/Active-WAM はREADME/assetsのみ、訓練・評価コードとcheckpointsはTODO、ライセンスは初回releaseで指定予定。公開 https://github.com/Soraruholic/RoboTwin-AV の収集・評価実装をActiveWAM方策公開と混同しない。PDF未取得。
+
+### SkeleWAM: Skeleton World-Action Modeling for Efficient Robotic Manipulation
+
+- ID: `WAM-0065`
+- Published: 2026-10-01
+- Authors: Juyi Sheng; Hua Wang; Mengyuan Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.02120) · [Project](https://skelewam-project.github.io/)
+- Tags: SkeleWAM, sparse-3D-skeleton, RGB-D, auxiliary-future-prediction, medoid-action-consensus
+- Model size: 57.1M observation-based; 51.4M privileged sim-state variant
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+RGB-Dと固有感覚から関節・物体中心・接触点の疎な3D骨格を構成し、行動と未来骨格を共同学習する。推論時は未来分岐を省き、MACで複数行動候補の代表軌道を選ぶ。
+
+**主な貢献**
+
+観測入力のLIBERO-Plusで85.9%成功、57.1M規模を報告。特権sim-state版を区別し、配置変化では66.6%に留まる。実機ARX R5の5課題・各20試行では平均89%で、任意の配置への保証ではない。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: verified
+- arXiv v1初稿日・著者、HTML https://arxiv.org/html/2610.02120v1 の3節・4節を確認。公式projectはデモと結果を掲載するが、研究実装・重み・実装ライセンスの提供先は未確認。論文ライセンスを実装へ転用しない。PDF未取得。
 
 ### Completion Aware Guidance for World Action Models
 

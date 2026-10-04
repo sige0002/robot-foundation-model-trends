@@ -3,7 +3,7 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
 
 ### Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens
 
@@ -29,6 +29,31 @@
 
 - Checked: 2026-10-02 · Review: verified
 - arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.01939v1 の3節・4節の設定/費用/限界を確認。公式projectがリンクするsrc実装・README・NOTICEとroot Apache-2.0を独立確認: https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/LICENSE 。第三者RPent/VLA/知覚モデルは別配布であり専用学習済み重みの公開は未確認。主貢献は実行インターフェースなのでagent/codeとしVLAはtagに保持。PDF未取得。
+
+### Make Code as Policy Great Again: Frontier Agents Write, Call, and Evolve Robot Tools
+
+- ID: `AGENT-0121`
+- Published: 2026-09-30
+- Authors: Shijia Ge; Alex Zhou; Jianshu Zeng; Yexing Wan; Di Wu; Zelin Zheng; Yazhe Wang; Zhiqi Jia; Xuan Shangguan; Jay Zhu; Yijun Liu; Lingyu He; Sihang Wu; Xiao He; Hongcheng Gao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39018) · [PDF](https://arxiv.org/pdf/2609.39018)
+- Tags: URAI, Code-as-Policy, tool-synthesis, feedback-driven-selection, persistent-tools, bimanual-manipulation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+URAIは、ロボット用の再利用可能なツールを作成・検証するプログラミングエージェントと、観測からツールを選択・引数指定する実行エージェントを接続する。ツール内部の多段階運動はローカルで実行し、呼び出し間の判断はモデルに戻す。検証済みのコード改訂をエピソード間に保存し、基盤モデルの重みは変更しない。
+
+**主な貢献**
+
+RoboDojoの5タスク・4実行エージェント・各5seedの比較で、直接制御に対する集計成功率を18.0%から53.0%へ改善。同じツールを使う2エージェントの対照では、事前生成プログラムの24%に対し呼び出しごとのモデル判断が56%となり、ツール集合と判断タイミングを分けて評価した。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: verified
+- 書誌と履歴: https://arxiv.org/abs/2609.39018 。v1は2026-09-30 05:23:25 UTC、改訂なし。方法・評価・限界: https://arxiv.org/html/2609.39018v1 の3節・4節・5節・付録C。シミュレーション評価時のツールと実行モデルは固定し、ツール作成と人間の指示に要する時間・tokenは未計測。実機はAgileX双腕の7タスクで、既報比較は別ハードウェア・異なる呼び出し計数規則を含むため、因果的な高速化率とは扱わない。abs/HTMLとタイトル・URAI・著者所属を用いた公開検索では公式コード・project・重みの提供先を確認できず、公開状況と実装ライセンスはunknown。論文のCC BY 4.0を実装ライセンスに流用しない。PDF URLはabsページのリンクのみ確認し、PDFを取得していない。
 
 ### SimEX: Simulation-Integrated Robotics AutoResearch
 

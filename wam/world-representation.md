@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-26 records · Published date 降順（同日 ID 降順）
+27 records · Published date 降順（同日 ID 降順）
+
+### Token-World: World Modeling in Vision-Language Model Token Space for Robot Manipulation
+
+- ID: `WAM-0068`
+- Published: 2026-09-30
+- Authors: Chuyao Fu; Xiaowei Chi; Yuhan Rui; Yu-kai Wang; Zezhong Qian; Xiaojie Zhang; Yunfan Lou; Kevin Zhang; Kuangzhi Ge; Chak Wing Mak; Zhiyang Chen; Athena Zhuoming Zhong; Hongyang Chen; Haoran Li; Yike Guo; Sirui Han; Shanghang Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.00575) · [Project](https://chuyaofu.github.io/Token-World/)
+- Tags: Token-World, VLM-token-state, S-VAE, policy-simulator, action-conditioned, supporting-evaluation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+VLAが使うVLM画像tokenを空間配置を保って圧縮し、行動条件付きの未来token動力学を学ぶ。予測を方策表現へ戻すため、RGB生成・再encoderを介さず方策をシミュレートする。
+
+**主な貢献**
+
+同じQwen3-VL backboneを持つ3方策の評価で、参照成功率との相関0.794を報告。RoboTwin50課題とFranka6課題のデータ上で特徴・行動整合性を測り、実機方策成功の改善とは区別する。異なるbackboneへの汎化は未評価。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: needs-review
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.00575v1 のIII–V節を確認。0.359秒/予測観測はPPU-ZW810E上のsimulation latency、成功はrenderしたrolloutの手動判定。公式projectがリンクする https://github.com/ChuyaoFu/Token-World はmain READMEのみで実装を準備中と明記。重み・実装ライセンス未確認。著者Hongyang ChenはarXiv表記を採用、projectのHongyang Chengとの綴り差は次回著者/改訂で確認。ICRA2027は投稿中のarXivコメントなのでvenue=arXiv。PDF未取得。
 
 ### CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization
 

@@ -3,26 +3,29 @@
 
 [← データベース](../README.md)
 
-19 records · 正本: [papers.csv](../papers.csv)
+22 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [planning](planning.md) | 5 |
-| [code](code.md) | 7 |
+| [code](code.md) | 8 |
 | [skill](skill.md) | 1 |
-| [tool](tool.md) | 2 |
+| [tool](tool.md) | 4 |
 | [memory](memory.md) | 1 |
 | [replanning](replanning.md) | 3 |
 
 ## 論文
 
 - 2026-10-01 · [Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens](code.md) · `AGENT-0116`
+- 2026-09-30 · [Make Code as Policy Great Again: Frontier Agents Write, Call, and Evolve Robot Tools](code.md) · `AGENT-0121`
+- 2026-09-30 · [LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation](tool.md) · `AGENT-0120`
 - 2026-09-30 · [SimEX: Simulation-Integrated Robotics AutoResearch](code.md) · `AGENT-0114`
 - 2026-09-30 · [ASENA: Self-evolving Agents for Embodied Navigation](code.md) · `AGENT-0113`
 - 2026-09-29 · [Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning](planning.md) · `AGENT-0115`
 - 2026-09-25 · [CognitiveReality: Robot-Agnostic Semantic Gaussian Mapping with an LLM Agent for Immersive Collaborative VR Teleoperation](tool.md) · `AGENT-0118`
 - 2026-09-24 · [Design and Evaluation of LLM Chaining-Based Task Planning for General Purpose Service Robots](planning.md) · `AGENT-0117`
 - 2026-09-23 · [RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement](replanning.md) · `AGENT-0119`
+- 2026-09-21 · [An Unexpected Robot Policy: Early Evaluations of GPT-6 Astra on RoboDojo and Beyond](tool.md) · `AGENT-0122`
 - 2023-10-19 · [Eureka: Human-Level Reward Design via Coding Large Language Models](code.md) · `AGENT-0109`
 - 2023-07-12 · [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning](replanning.md) · `AGENT-0112`
 - 2023-07-12 · [VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models](code.md) · `AGENT-0105`

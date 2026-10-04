@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
+
+### Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation
+
+- ID: `HYBRID-0113`
+- Published: 2026-10-01
+- Authors: Isabella Liu; An-Chieh Cheng; Johan Bjorck; Zhiding Yu; Hongxu Yin; Jan Kautz; Linxi Fan; Yuke Zhu; Sifei Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.01178) · [Project](https://www.liuisabella.com/Recova/)
+- Tags: failure-recovery, digital-twin, code-as-policy, DAgger, human-intervention, parallel-workstations
+- Model size: π0.5 task/recovery policies; total parameters unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+エージェントが再構成MuJoCo digital twinで失敗復帰コードと軌跡を開発し、課題方策と復帰方策を別々に学習する。実行時は進捗監視・復帰・場面復元確認を行い、解決できない失敗の人間デモを対応する方策へ追加する。
+
+**主な貢献**
+
+LIBERO-Pro六条件とMolmoSpaces四分類で平均成功78.8%・64.9%。実機四課題各20試行でDAgger後77.5%、復帰追加87.5%。人間介入0%は一課題の第四収集round七episodeの観測で、無人運用や一般安全性を保証しない。対照は既報値で同時再実験ではない。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: verified
+- canonical arXiv IDと正規化/類似タイトルのローカル重複確認後に本文を確認し一致なし。arXiv v1初稿2026-10-01 06:52:05 UTC、改訂なし。HTML §3・4・App.A/C確認: https://arxiv.org/html/2610.01178v1 。twinは再構成MuJoCoシミュレータで学習型WAMとは数えずvla-agentに分類。simulationはMolmoAct2+復帰プログラム、実機はπ0.5課題/復帰方策+Gemini 3.8 Flash監視。復帰は時間上限付きで未登録/失敗時は操作者に交代。公式projectと著者/手法名検索で公開実装・重み・実装ライセンス未確認。PDF未取得。
 
 ### Where Memory Belongs: Ledger, an Object Ledger for Memory-Augmented VLAs
 

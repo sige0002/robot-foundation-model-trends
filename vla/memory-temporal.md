@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
+
+### Remember What You Did: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies
+
+- ID: `VLA-0141`
+- Published: 2026-09-29
+- Authors: Yaxin Zhao; Dianye Huang; Chenwei Wang; Chenguang Yang; Zhongliang Jiang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.37307) · [PDF](https://arxiv.org/pdf/2609.37307)
+- Tags: ActMem-VLA, action-history, Mamba-2, dual-expert-denoising, frozen-base-policy, LIBERO-Mem
+- Model size: 追加パラメータは基盤VLAの3.45%（総パラメータ数は未確認）
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+ActMem-VLAは、実行済み行動の履歴をMamba-2で記憶し、軽量PreAction Expertが高ノイズ側の生成を担当した後、凍結した元のAction Expertへ途中状態を引き継ぐ。調整済み基盤VLAのVLMとAction Expertを固定し、記憶モジュールとPreAction Expertだけを学習して、観測が似る異なる作業段階の混同を抑える。
+
+**主な貢献**
+
+行動履歴による初期デノイジングと凍結方策による後段精密化を分離し、追加パラメータ3.45%で時間的適応を行う。シミュレーションではデモ長に基づくタスク別ステップ制限下のLIBERO-Mem 10タスクで80.8%（π0.5:65.2%、MemoryVLA:49.5%）。DOBOT Novaの4タスク各20試行ではπ0.5の35.0%から63.75%へ改善した。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: needs-review
+- 書誌と履歴: https://arxiv.org/abs/2609.37307 。v1は2026-09-29 11:43:19 UTC、改訂なし。方法・評価: https://arxiv.org/html/2609.37307v1 のIII節・IV-B・IV-C・IV-D。80.8%は標準600step制限の数値ではなく、デモ長95分位から作るタスク別期限での平均。標準条件では循環動作で成功でき、記憶利用を識別しにくい限界を本文が明記。実機の28.8%表記はIV-Dの35.0%→63.75%から28.8 percentage pointsと解釈し、相対改善率にはしない。部品除去の効果はタスク依存。abs/HTMLに公式公開先はない。検索で https://github.com/hit-my/PhaseVLA と https://huggingface.co/HITdongdong/ActMem-VLA を確認したが、論文著者による公式提供との結び付きを検証できないため正式URL/statusには採用せずneeds-review。候補repoの https://github.com/hit-my/PhaseVLA/blob/main/LICENSE はApache-2.0だが、本文との公式関係は未確認。候補の https://github.com/hit-my/PhaseVLA/blob/main/releases/2026-09-28/README.md とモデルカードは、修正前後の履歴勾配・タスク別plugin・探索的checkpoint選択を区別し、matching baseの公開downloadを示していない。論文CC BY-SA 4.0とコード・重みのライセンスは別。PDF URLはabsページのリンクのみ確認し、PDFを取得していない。
 
 ### Vision-Language-Action Autonomous Driving Agent with Language-based Memory
 

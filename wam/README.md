@@ -3,21 +3,25 @@
 
 [← データベース](../README.md)
 
-62 records · 正本: [papers.csv](../papers.csv)
+66 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 26 |
+| [world-representation](world-representation.md) | 27 |
 | [dynamics](dynamics.md) | 7 |
-| [action-coupling](action-coupling.md) | 10 |
+| [action-coupling](action-coupling.md) | 12 |
 | [planning](planning.md) | 15 |
-| [temporal-modeling](temporal-modeling.md) | 4 |
+| [temporal-modeling](temporal-modeling.md) | 5 |
 
 ## 論文
 
+- 2026-10-01 · [ActiveWAM: Evidence-Aware Active Vision for World-Action Models](action-coupling.md) · `WAM-0066`
+- 2026-10-01 · [SkeleWAM: Skeleton World-Action Modeling for Efficient Robotic Manipulation](action-coupling.md) · `WAM-0065`
 - 2026-10-01 · [FutureWorlds: Learning Robotic World Models from Alternative Futures](temporal-modeling.md) · `WAM-0059`
 - 2026-10-01 · [Completion Aware Guidance for World Action Models](action-coupling.md) · `WAM-0058`
 - 2026-10-01 · [CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight](action-coupling.md) · `WAM-0057`
+- 2026-09-30 · [Token-World: World Modeling in Vision-Language Model Token Space for Robot Manipulation](world-representation.md) · `WAM-0068`
+- 2026-09-30 · [Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey](temporal-modeling.md) · `WAM-0067`
 - 2026-09-30 · [CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization](world-representation.md) · `WAM-0056`
 - 2026-09-30 · [Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models](planning.md) · `WAM-0054`
 - 2026-09-30 · [Social-WM: Safety-Aware Latent World Models for Robot Social Navigation](planning.md) · `WAM-0053`

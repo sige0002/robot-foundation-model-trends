@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
+
+### UniWAM: Unified World-Action Model
+
+- ID: `HYBRID-0112`
+- Published: 2026-10-01
+- Authors: Jiayi Chen; Wenxuan Song; Jingbo Wang; Shuai Zhou; Xicheng Gong; Zehua Fan; Ziyang Zhou; Junwu E; Haodong Yan; Fuhao Li; Qize Yu; Xu Huang; Pengwei Wang; Wen Chen; Shunbo Zhou; Haoang Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.02054) · [Code](https://github.com/UniWAM/UniWAM) · [Project](https://uniwam.github.io/)
+- Tags: UniWAM, physical-language-supervision, mixture-of-transformers, human-robot-co-training, history-conditioned-flow
+- Model size: 8B (official README); Qwen3-VL-2B + Wan2.2-TI2V-5B + action predictor
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+VLM物理reasoner・動画世界生成器・行動予測器を共同attentionで統合する。VQA・人間動画・ロボットデータに相補的な教師信号を割り当て、未来画像noiseと行動履歴初期化で後学習を補助する。
+
+**主な貢献**
+
+LIBEROとRoboTwinのID/OOD評価に加え、実機の言語追従と完了成功を分けて測る。4実機課題の平均成功67.5%、指示追従82.5%を報告。長期課題の進捗5.0/6は完了成功率ではなく、学習済み課題・条件下の結果である。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: verified
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.02054v1 の3–5節・Appendix Gを確認。公式repoにmodel/train/inference実装、Apache-2.0 LICENSEとMotus由来NOTICEを確認: https://github.com/UniWAM/UniWAM/blob/main/LICENSE 。READMEはBridge/DROID/Fractalと実機inferenceをrelease対象外と明記。READMEが専用base/robotwin checkpointを示す https://www.modelscope.cn/collections/Kosmos524/UniWAM は取得テキストが空でファイルと重みライセンスを独立確認できずweights=unknown。backboneの重みから推定しない。PDF未取得。
 
 ### ATI-VLA: Action-Centric Predictive Vision-Language-Action Models via Actionable Alignment Then Adaptive Injection
 
@@ -152,8 +177,8 @@ VLAの視覚埋め込み空間で行動条件付き世界モデルを学習し�
 
 **確認記録**
 
-- Checked: 2026-10-01 · Review: needs-review
-- 初稿2026-09-21、v2改訂2026-09-22をarXivで確認。HTML本文III節と評価条件を確認。公式projectがリンクする実装とHF final\_model.ptを確認: https://huggingface.co/termanteus/THAW-VLA-Qwen3.5-0.8B-LIBERO/tree/main 。重みのモデルカード・ライセンスは未確認。実装LICENSEはMIT表記に加えコミット保持等の条項を含むためOSI承認MITと同一と断定せずopen\_source/license\_statusをunknown: https://github.com/trungdt880/THAW-VLA/blob/main/LICENSE 。
+- Checked: 2026-10-04 · Review: needs-review
+- 初稿2026-09-21、v2改訂2026-09-22をarXivで確認。HTML本文III節と評価条件を確認。公式projectがリンクする実装とHF LIBERO/RoboCasa-GR1のfinal\_model.ptを再確認。両モデルカードはMITを宣言する: https://huggingface.co/termanteus/THAW-VLA-Qwen3.5-0.8B-LIBERO ; https://huggingface.co/termanteus/THAW-VLA-Qwen3.5-0.8B-Robocasa-GR1 。カード更新は2026-09-29で今回差分期間の新規releaseではない。実装 https://github.com/trungdt880/THAW-VLA/blob/main/LICENSE はMIT表記に追加のupstream commit保持条項を含むためopen\_source/license\_status=unknownを維持し、重みのMIT宣言と混同しない。次回は実装LICENSEの明確化/変更を確認する。Oct3–4 UTCの新GitHub commit/releaseなし。
 
 ### Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-Action Model
 

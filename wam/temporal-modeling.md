@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
 
 ### FutureWorlds: Learning Robotic World Models from Alternative Futures
 
@@ -29,6 +29,31 @@
 
 - Checked: 2026-10-03 · Review: verified
 - arXiv v1初稿・著者・arXiv DOIを確認。HTML https://arxiv.org/html/2610.01019v1 の3節、4.1節、5節を確認。公式repoのsrc実装とREADMEを独立確認。READMEは公開checkpoint/data配布と独自コードの最終ライセンスをpendingと明記し、weight manifestのハッシュ一覧を公開重みと扱わない。コードはavailable、重みはunavailable、実装ライセンスunspecified、open\_source=unknown。repoに示されたproject linkは今回取得できずproject\_urlは空欄。PDF未取得、正確なPDF href未抽出のためpdf\_urlは空欄。
+
+### Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey
+
+- ID: `WAM-0067`
+- Published: 2026-09-30
+- Authors: F. Olivia Fan; Oliver Obst
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39151) · [Code](https://github.com/unswei/airhockey-distillation)
+- Tags: supporting-policy-distillation, DreamerV3-teacher, linear-recurrence, partial-observability, simulation-only, air-hockey
+- Model size: 12,002 total / 2,304 recurrent-core parameters (linear k=0 student)
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+追跡が一時途切れるシミュレーションのair-hockey守備で、DreamerV3教師を64次元の線形再帰学生へ蒸留する。非線形encoder/headは残し、学生軌跡の教師ラベルで分布ずれを補正する。
+
+**主な貢献**
+
+clean観測・400ms欠測・5seedで線形学生98.3%、GRU97.8%の守備成功を報告するが、差の区間は0を含み同等性の証明ではない。学生全体12,002対28,898 parametersの比較で、実機・長期反復遮蔽は未評価。
+
+**確認記録**
+
+- Checked: 2026-10-04 · Review: needs-review
+- arXiv v1初稿・著者、HTML https://arxiv.org/html/2609.39151v1 の3–6節を確認。要旨はtest splitを将来開くと記載する一方、本文3節とrepo STATUS.mdはgate後の48,600件評価完了を記載し、本文の実測値として限定。次回は改訂で要旨/READMEの未来表現が本文と整合するか確認。CPU p95はブロック平均の分位で個別呼出p95ではなく、実装も異なる。公式repoはsource/config/resultsを提供するが独自実装ライセンスと公開学習済み重みは未確認。上流MITから推定しない。PDF未取得。
 
 ### Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors
 
