@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
+
+### Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models
+
+- ID: `VLA-0148`
+- Published: 2026-10-02
+- Authors: Yukiya Horiba; Koshiro Aoki; Shunsuke Yasuki; Bum Jun Kim; Taiki Miyanishi
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.03498) · [PDF](https://arxiv.org/pdf/2610.03498)
+- Tags: adversarial-defense, sparse-autoencoder, linear-probe, conditional-intervention, robustness
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+Sparse autoencoderで敵対patchの存在と関連するVLA内部特徴を特定し、linear probeが攻撃を検知した時だけその特徴方向を推論中に抑制する。VLAの追加fine-tuningなしで、攻撃への対処と正常時の制御阻害のtrade-offを調べる。
+
+**主な貢献**
+
+LIBERO-10でπ0.5とSmolVLAへの断続的UADA攻撃を評価し、条件付き抑制が全4設定の成功率を改善。π0.5・10回攻撃では26.0%→32.4%。常時抑制の大きな性能低下を示し、介入する時点と強度の制御が重要と検証した。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- identity照合一致なし。v1初稿2026-10-02 15:57:04 UTC: https://arxiv.org/abs/2610.03498 、改訂なし。HTML §3/4/5選読: https://arxiv.org/html/2610.03498v1 。主評価は各条件10task×50初期状態=500rollout、攻撃は各victim用universal UADA patch。未知攻撃と実機は未評価。SmolVLAでは正常時41.4%→36.6%に低下し、ロバスト化が無害とはいえない。論文/手法名github検索で公式実装・重み・project・実装license未確認unknown。PDFファイル未保存。
+
+### SimpleTouch: Can Vision-Language-Action Models Master Contact-Rich Manipulation Without Tactile Policy Pretraining?
+
+- ID: `VLA-0146`
+- Published: 2026-10-02
+- Authors: Chen Yang; Linzhe Shi; Changjie Wu; Hang Zhang; Ronghan Chen; Lingjun Zhang; Xu Hu; Mu Xu; Jiansheng Fan; Chen Wang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.02784) · [Project](https://simpletouch-robot.github.io/)
+- Tags: tactile, contact-rich, future-latent-prediction, task-finetuning
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結したT3触覚encoderの全tokenを独立した触覚expertへ入力し、π0.5の行動expertと層ごとに接続する。行動教師信号と複数時点の将来触覚latent予測から、追加の触覚方策事前学習や別の視触覚整合段階を使わず課題単位に学習する。
+
+**主な貢献**
+
+各課題50デモでUniVTAC6課題の平均成功率77.5%を報告し、FTP-1の66.7%を10.8ポイント上回る。4実機課題では71.3%でFTP-1より8.8ポイント高い。将来触覚は学習用教師信号であり、実行時の未来触覚生成を必須にはしない。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: needs-review
+- identity照合一致なし。v1: https://arxiv.org/abs/2610.02784 (2026-10-02 04:19:13 UTC、改訂なし)。HTML §3/4/App.F選読: https://arxiv.org/html/2610.02784v1 。100simulation/20実機episode per task、各50demo。実機USB挿入は30%でFTP-1と同率。実機対象は視覚型触覚sensor付き平行jawのみで、巧緻手・別sensor・高周波触覚・力制御は未評価。著者リンク https://simpletouch-robot.github.io/ はweb readで2度取得失敗し、直接の公開GETでも2026-10-05時点HTTP 404、実際の公開実装/重み/ライセンスを独立確認できずunknown、project到達性をneeds-review。論文ライセンスと実装を分ける。PDFファイル未保存。
 
 ### Continuous Conditioning of VLAs with Augmenting EMG and Visual Task Descriptors
 

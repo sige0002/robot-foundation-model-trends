@@ -3,29 +3,35 @@
 
 [← データベース](../README.md)
 
-66 records · 正本: [papers.csv](../papers.csv)
+72 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 27 |
+| [world-representation](world-representation.md) | 29 |
 | [dynamics](dynamics.md) | 7 |
-| [action-coupling](action-coupling.md) | 12 |
+| [action-coupling](action-coupling.md) | 15 |
 | [planning](planning.md) | 15 |
-| [temporal-modeling](temporal-modeling.md) | 5 |
+| [temporal-modeling](temporal-modeling.md) | 6 |
 
 ## 論文
 
+- 2026-10-02 · [PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation](action-coupling.md) · `WAM-0074`
+- 2026-10-02 · [XGenAct: Geometry-Enhanced World Action Models through Cross-Task Generation](action-coupling.md) · `WAM-0073`
+- 2026-10-02 · [AVL-JEPA: Preventing Causal Dynamics Information Collapse In Joint Embedding Predictive Architecture World Models](world-representation.md) · `WAM-0072`
+- 2026-10-02 · [World Action Learning via Interaction-Centric Spectral Latent Guidance](temporal-modeling.md) · `WAM-0071`
 - 2026-10-01 · [ActiveWAM: Evidence-Aware Active Vision for World-Action Models](action-coupling.md) · `WAM-0066`
 - 2026-10-01 · [SkeleWAM: Skeleton World-Action Modeling for Efficient Robotic Manipulation](action-coupling.md) · `WAM-0065`
 - 2026-10-01 · [FutureWorlds: Learning Robotic World Models from Alternative Futures](temporal-modeling.md) · `WAM-0059`
 - 2026-10-01 · [Completion Aware Guidance for World Action Models](action-coupling.md) · `WAM-0058`
 - 2026-10-01 · [CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight](action-coupling.md) · `WAM-0057`
+- 2026-09-30 · [Magic-W0: A Structured World-Action Foundation Model for Physical Intelligence](action-coupling.md) · `WAM-0070`
 - 2026-09-30 · [Token-World: World Modeling in Vision-Language Model Token Space for Robot Manipulation](world-representation.md) · `WAM-0068`
 - 2026-09-30 · [Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey](temporal-modeling.md) · `WAM-0067`
 - 2026-09-30 · [CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization](world-representation.md) · `WAM-0056`
 - 2026-09-30 · [Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models](planning.md) · `WAM-0054`
 - 2026-09-30 · [Social-WM: Safety-Aware Latent World Models for Robot Social Navigation](planning.md) · `WAM-0053`
 - 2026-09-30 · [The Planning Limits of Latent World Models](planning.md) · `WAM-0052`
+- 2026-09-29 · [Rethinking Representations for World-Action Modeling](world-representation.md) · `WAM-0069`
 - 2026-09-29 · [One from Infinity: Actualizing Futures from Pretrained World Models into Robot Actions](action-coupling.md) · `WAM-0060`
 - 2026-09-29 · [Anisotropic Representations Improve Planning in JEPA World Models](world-representation.md) · `WAM-0055`
 - 2026-09-28 · [Efficient World Action Model Inference with Adaptive Intermediate States](action-coupling.md) · `WAM-0063`

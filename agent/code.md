@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
+
+### OpenRUA: Robot-Use Agents Are Zero-Shot Visuomotor Policies
+
+- ID: `AGENT-0123`
+- Published: 2026-10-01
+- Authors: Zhaoyang Chu; Earl T. Barr; Claire Le Goues; Peter O'Hearn; Mark Harman; Federica Sarro; He Ye
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.02459) · [Code](https://github.com/terminalworld/OpenRUA)
+- Tags: OpenRUA, ROS2, code-as-policy, workspace-memory, zero-shot, simulation
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+汎用コーディングエージェントにROS 2への端末アクセスと作業ディレクトリを与え、観測の保存・解析と制御コードの作成を自律的に行わせる。専用の技能ライブラリやロボット方策の追加学習を使わず、ファイルと実行結果を再参照して操作を修正する。
+
+**主な貢献**
+
+Claude CodeとOpus 5の組合せでCaP-Bench成功率99.0%、LIBERO-PRO 87.0%、未見RoboCasa365複合タスク28.1%を報告。結果はシミュレーション評価であり、思考中の物理時間停止を含むため実機での遅延・安全性・センサ雑音への頑健性を保証しない。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- 2026-09-22〜2026-10-05のRobot Agent/Hybrid増分調査。本文取得前にscripts/validate\_csv.py --candidateでrevisionなしarXiv ID、DOI表記、正規化/類似タイトルを比較し一致なし。書誌と初稿履歴を https://arxiv.org/abs/2610.02459 で確認: v1 2026-10-01 20:32:41 UTC、改訂なし。HTML https://arxiv.org/html/2610.02459v1 の§3、§4.1/4.2、§4.7、§5を選択読解。CaP-Benchは7タスク各100試行、LIBERO-PROは各10試行、RoboCasa365は50対象タスク各10試行。実機評価は未実施と§5に明記。公式リンク先のREADME、openrua/、tests/等の公開実装と https://github.com/terminalworld/OpenRUA/blob/main/LICENSE のApache-2.0文面を独立確認。学習済み専用重みの配布は未確認、基盤モデルのAPIは実装ライセンスとは別。PDFはリンク表示のみで取得せず、検証済みの完全URLを保持できなかったためpdf\_urlは空欄。 公開実装はconnectorのcontents一覧と https://github.com/terminalworld/OpenRUA/blob/main/openrua/artifacts.py の選択コード読解でも確認。
 
 ### Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens
 

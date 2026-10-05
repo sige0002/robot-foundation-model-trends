@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-27 records · Published date 降順（同日 ID 降順）
+29 records · Published date 降順（同日 ID 降順）
+
+### AVL-JEPA: Preventing Causal Dynamics Information Collapse In Joint Embedding Predictive Architecture World Models
+
+- ID: `WAM-0072`
+- Published: 2026-10-02
+- Authors: Yikang Qiao; Ling Zhang; Ziying Song; Duan Huang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.03587)
+- Tags: jepa, action-anchor, visual-invariance, causal-dynamics, latent-planning
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+JEPAが視覚情報を保持しながら行動の物理的結果を捨てるcausal dynamics information collapseを検討する。実行動を復元する遷移帰属headでclean latentを固定し、そのheadと損失を維持したまま摂動観測の予測をcleanな遷移へ整合するAVLを提案する。
+
+**主な貢献**
+
+TwoRoom・PushT・OGBench Cube・Reacherでclean制御を保ち、視覚摂動時の成功率を改善。物理結果の順位相関、clean/noisy予測整合、遷移subspace除去の介入を併用し、計画に必要な行動効果を表現が保持する証拠を示した。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- identity照合一致なし。Oct5 announcement/v1初稿2026-10-02 16:56:15 UTC: https://arxiv.org/abs/2610.03587 、改訂なし。HTML §3/4/5選読: https://arxiv.org/html/2610.03587v1 。基盤LeWMのSIGRegへの依存を残しsimulationのみ、実機未評価。clean成功率は10seed平均/標準偏差、noise以外のbrightness/saturation移行も確認。reproducibility statementはcode will be released upon publicationと明記、code unavailable。公式重み提供先・実装license未確認でunknown、論文licenseは別。PDFファイル未保存。
 
 ### Token-World: World Modeling in Vision-Language Model Token Space for Robot Manipulation
 
@@ -54,6 +79,31 @@ JEPAの潜在表現を制御可能・制御不能な部分へ分け、背景の�
 
 - Checked: 2026-10-02 · Review: needs-review
 - arXiv v1初稿、HTML https://arxiv.org/html/2610.00727v1 のIII節・IV-A/B節、公式projectの評価を確認。III-Cはbeta=1でalphaを課題別調整、projectはalpha=1でbetaを調整と記載が逆なので係数は断定せずneeds-review。本文・project・著者名つき検索で公式研究実装・重み・ライセンス未確認。同名WDSLab/CF-JEPAは別の時系列論文なので採用しない。PDF未取得。
+
+### Rethinking Representations for World-Action Modeling
+
+- ID: `WAM-0069`
+- Published: 2026-09-29
+- Authors: Haoyi Jiang; Liu Liu; Xinjiang Wang; Zhihao Sun; Zequn Chen; Sen Wang; Xinjie Wang; Xia Chen; Jingfeng Yao; Weiheng Zhao; Shanglin Yuan; Zhizhong Su; Wei Sui; Wenyu Liu; Xinggang Wang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.38163) · [Code](https://github.com/hustvl/ReWAM)
+- Tags: dino, latent-dynamics, representation-bottleneck, gradient-routing, bimanual
+- Model size: 3.58B (world/action DiT branches)
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+DINO特徴を制御向けに較正し、時間表現ボトルネックを通して未来状態とロボット行動を共同学習するReWAM。表現の学習には行動損失だけを流し、世界予測損失による再構成志向との競合を抑える。
+
+**主な貢献**
+
+表現設計を統制比較し、画像再構成品質と制御能力が一致しないことを検証。生成動画の事前学習なしでRoboTwin 2.0のclean/randomとも93.6%。約600時間の実機事前学習後、RoboDojoは平均Score 12.29、SR 8.28%。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- 既存146件とのcanonical arXiv/DOI相当ID・正規化/類似タイトル照合は一致なし。書誌・v1履歴: https://arxiv.org/abs/2609.38163 (2026-09-29 17:59:22 UTC、改訂なし)。HTMLの方法、Experiments、App.A/B/Cを選読: https://arxiv.org/html/2609.38163v1 。世界損失はTRBでstop-gradient。実機はPiperの3課題各20試行。RoboDojoのOpen指示追従では上位手法に大きく劣り、事前学習データ構成差にも注意。公式 https://github.com/hustvl/ReWAM はREADMEのみでsource code/pretrained models coming soonと明記、両者unavailable。実装ライセンスは確認できずunknown。モデル規模約3.58Bは本文のworld/action DiT合計。論文ライセンスを実装に転用しない。PDFファイル未保存。
 
 ### Anisotropic Representations Improve Planning in JEPA World Models
 

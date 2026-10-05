@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
+
+### World Action Learning via Interaction-Centric Spectral Latent Guidance
+
+- ID: `WAM-0071`
+- Published: 2026-10-02
+- Authors: Zhiming Liu; Yikun Miao; Ying Chen; Hongrui Yin; Fangqi Zhu; Xiaoyi Pang; Quanxin Shou; Zhengyang Yan; Haodong Wang; Song Guo
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.03607) · [Project](https://mikuz12.github.io/wing/)
+- Tags: egocentric-video, latent-action, spectral-guidance, cross-embodiment
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+一人称動画の観察者運動と手・物体の相互作用を分離するWING-LAMを作り、人とロボットに共有されやすい低周波latent動作成分をDCTで抽出する。現在の観測・指示からこの高位動作priorを推定し、WAMのロボット固有の行動生成を条件付ける。
+
+**主な貢献**
+
+カメラ変動を抑えたlatent動作と周波数領域の共通構造を制御へ転用。LIBERO平均99.20%、RoboTwin 2.0平均93.80%、RoboCasa-GR1 57.7%を報告し、4実機課題の一般化も評価。直接latent動作を実行目標にする方法との差をablationした。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- identity照合一致なし。Oct5 announcementだがv1初稿は2026-10-02 17:08:12 UTC: https://arxiv.org/abs/2610.03607 、改訂なし。HTML §3/4/5選読: https://arxiv.org/html/2610.03607v1 。外部motion cuesと単一global affine warpに依存し、parallax/深度差/3Dcamera運動で教師noiseが増え得る。latent pretrainingとspectral guidanceは学習費用・pipeline複雑性を追加。公式 https://mikuz12.github.io/wing/ はCode COMING SOON、code unavailable。重みと実装licenseの公開は未確認unknown。PDFファイル未保存。
 
 ### FutureWorlds: Learning Robotic World Models from Alternative Futures
 

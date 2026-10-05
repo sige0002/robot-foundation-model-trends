@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
+
+### CORNAV: Construction-Aware Reasoning for Robot Navigation on Active Worksites
+
+- ID: `AGENT-0125`
+- Published: 2026-10-02
+- Authors: Parastoo Ali Pour; Deepak Prakash Kumar; Tommy Zhou; Pramod Khargonekar; Mohammad Abdullah Al Faruque
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.03622)
+- Tags: CORNAV, CAD, scene-graph, schedule-aware-navigation, LLM-safety-validation, classical-planner
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+2D CADの部屋配置と開放語彙3D scene graphを位置合わせし、施工予定を時間依存の航行制約へ変換する。GPT-4oが安全規則と危険記述を照合して注意領域を必要に応じて通行禁止に格上げし、A\*が制約下の経路を生成する。
+
+**主な貢献**
+
+事務所と施工現場の記録データを用いたオフライン評価で、図面groundingを含む計画のtask success rateは13.0%から72.2%へ改善。89の予定時刻条件のうち実行可能な74経路でhard-zone違反は0件。実機のlive動作は定性的デモであり、数値は現場での継続的な無事故運用を示さない。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- 本文取得前にrevisionなしarXiv ID/DOIと正規化/類似タイトルをローカル比較し一致なし。https://arxiv.org/abs/2610.03622 で正式著者、v1 2026-10-02 17:19:05 UTC、改訂なしを確認。HTML https://arxiv.org/html/2610.03622v1 の§IIIと§IV-A/C/D/Eおよび結論を選択読解。量的評価はGo2で収集したRGB/depth/pose記録上のオフラインplanning。Go2/G1でのfull pipeline live deploymentは定性的実演のみ。89trial中15はstart/goalがhard-zone内のためinfeasible、違反0は74のfeasible経路に限定。hard-zoneの排除はA\* occupancy制約による。LLMはsoft-zoneを0.7閾値で格上げし、学習VLA/WAMではないのでagent/planningとした。soft-zoneには回避不能なら通過を許す。§IV-Eのmislabel safety評価と公開検索を確認、公式実装/project・専用重み・実装ライセンスは未確認のためunknown。PDF未取得。 App/Table VのTSRは対象grounding段階に依存し、schedule/safetyの有無で同値となる設計で、54requestに対するHOV-SG baselineは7.4%。13.0%はw/o Blueprint ablationであり、72.2%をend-to-end live-navigation成功率とは扱わない。LLM安全テストは8case各8callの限られた条件。
 
 ### Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning
 

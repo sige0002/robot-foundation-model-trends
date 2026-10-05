@@ -3,18 +3,25 @@
 
 [← データベース](../README.md)
 
-43 records · 正本: [papers.csv](../papers.csv)
+50 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 3 |
+| [perception-representation](perception-representation.md) | 5 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
-| [action-system1](action-system1.md) | 17 |
+| [action-system1](action-system1.md) | 18 |
 | [memory-temporal](memory-temporal.md) | 5 |
-| [adaptation](adaptation.md) | 12 |
+| [adaptation](adaptation.md) | 16 |
 
 ## 論文
 
+- 2026-10-02 · [ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation](adaptation.md) · `VLA-0150`
+- 2026-10-02 · [Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models](perception-representation.md) · `VLA-0148`
+- 2026-10-02 · [MixVLA: Adaptive Mixing of Non-Invariant Information for Generalizable Vision-Language-Action Models](adaptation.md) · `VLA-0147`
+- 2026-10-02 · [SimpleTouch: Can Vision-Language-Action Models Master Contact-Rich Manipulation Without Tactile Policy Pretraining?](perception-representation.md) · `VLA-0146`
+- 2026-10-02 · [FastOPD: On-Policy Distillation for Lightweight VLA Deployment](adaptation.md) · `VLA-0145`
+- 2026-10-02 · [CHASE-VLA: Post-Training Quantization Framework for Vision-Language-Action Models with Chunk-Aware Scale Estimation](action-system1.md) · `VLA-0144`
+- 2026-10-01 · [eRLT: Efficient VLA Reinforcement Learning via Action-Relevant Token Routing](adaptation.md) · `VLA-0149`
 - 2026-10-01 · [Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks](adaptation.md) · `VLA-0137`
 - 2026-10-01 · [Continuous Conditioning of VLAs with Augmenting EMG and Visual Task Descriptors](perception-representation.md) · `VLA-0136`
 - 2026-10-01 · [ChunkVLA-AM: Parallel Action Chunking for Vision-Language-Action Robot Control in Additive Manufacturing](adaptation.md) · `VLA-0135`

@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-17 records · Published date 降順（同日 ID 降順）
+18 records · Published date 降順（同日 ID 降順）
+
+### CHASE-VLA: Post-Training Quantization Framework for Vision-Language-Action Models with Chunk-Aware Scale Estimation
+
+- ID: `VLA-0144`
+- Published: 2026-10-02
+- Authors: Jin Hyun; Jung Gyu Min; Gyuhyun Jung; Youngjoo Lee
+- Venue: ACCV 2026 (accepted; arXiv comments)
+- Links: [Paper](https://arxiv.org/abs/2610.02666)
+- Tags: quantization, post-training, action-chunk, efficient-inference
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+前回生成した行動chunk全体とdenoising段階群から活性化の量子化scaleを予測するVLA向けPTQ。実行済みprefixに加えて未実行suffixも因果的な行動文脈として使い、繰り返し呼ばれる行動expertのMLP・attention線形層をW4A4化する。
+
+**主な貢献**
+
+π0.5でW4A4後もLIBERO平均97.3%（FP16 97.1%）を維持。対象行動expert線形層の重み保存量を73.4%、chunk単位memory trafficを約71%削減。A100・batch 1で行動expert latencyをπ0.5で21.8%、GR00T N1.6で12.7%削減した。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- identity照合一致なし。v1: https://arxiv.org/abs/2610.02666 (2026-10-02 01:34:55 UTC、改訂なし)。ACCV 2026受理はarXiv commentsの著者申告、会議側未確認。HTML §3/4/5選読: https://arxiv.org/html/2610.02666v1 。3方策をLIBERO4suite各task20episodeで評価。節4.4の73.4%は量子化対象AE線形層の保存量、約71%はsingle-chunk trafficでありVLA全体の削減率ではない。latencyはA100 batch1のAEのみ、実機検証は確認できず。abs/HTMLと手法名code検索で公式実装・重み・project・実装ライセンス未確認、unknownを保持。PDFファイル未保存。
 
 ### WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation
 

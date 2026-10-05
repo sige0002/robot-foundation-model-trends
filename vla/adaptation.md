@@ -3,7 +3,107 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+16 records · Published date 降順（同日 ID 降順）
+
+### ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation
+
+- ID: `VLA-0150`
+- Published: 2026-10-02
+- Authors: Sangwu Park; Yeonjun In; Wonjoong Kim; Sungwon Kim; Sein Kim; Chanyoung Park
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.02802) · [PDF](https://arxiv.org/pdf/2610.02802) · [Code](https://github.com/sangwu99/ManiPhysicsBench_Arxiv)
+- Tags: supporting-evaluation, object-preservation, physics-assessment, gripper-supervision, FEM, simulation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+文献に基づく材料特性と形状をまとめたManiPhysicsZooと、把持位置・接触力から損傷閾値を求める物理solver評価を提案。LIBEROとSimplerEnvの剛体rollout後に、タスク達成と物体保持を分けて評価する。VLAの把持指令分析と連続gripper教師による再学習を通じ、成功しても物体を守れない問題を調べる。
+
+**主な貢献**
+
+3種類の物理応答と3難度の評価を、把持ごとの材料・形状依存損傷判定へ接続。SimplerEnvの高・中難度では公開checkpoint平均の成功48.3%に対しSafe SRは13.5%。連続教師による再学習ではSafe SRが改善する一方でタスク成功が低下し、材質差への一般化は限定的。損傷はシミュレーション後の予測で、実機安全を実証した結果ではない。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- arXiv v1初稿2026-10-02 04:49:46 UTC・著者・履歴を確認。HTML https://arxiv.org/html/2610.02802v1 の3–7節とreproducibility statement、App.F.2を確認。各model/objectは12 episodes、平均数値は3軸のHigh/Mid対象。再学習はBridge-only/LoRAで公開Bridge–RT-1 checkpointと訓練条件が異なり、教師ラベル差の単独因果比較ではない。把持のみのoffline損傷予測で、落下/衝突や変形後feedbackは含まず、実機による直接検証は今後。本文がリンクする公式README、targets.py、pyproject.tomlとmodels.jsonを確認。実装は公開、確認head db717ec0 の414-file treeはtruncated=falseで、見つかったlicenseはthird\_party/vendor用のみ。root LICENSEは404かつpyprojectにlicense指定なし。上流依存のライセンスから推定せず実装license/open\_sourceはunknown、専用再学習重みの公開も未確認。PDF URLはabsリンクのみ確認、PDF未取得。
+
+### MixVLA: Adaptive Mixing of Non-Invariant Information for Generalizable Vision-Language-Action Models
+
+- ID: `VLA-0147`
+- Published: 2026-10-02
+- Authors: Pingrui Zhang; Yu Zhang; Pengyuan Wu; Bin Wang; Haoming Song; Xianqiang Gao; ZhaxiZhuoma; Zhigang Wang; Dong Wang; Bin Zhao; Xuelong Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.02898) · [PDF](https://arxiv.org/pdf/2610.02898)
+- Tags: ood-generalization, invariant-representation, feature-mixing, information-bottleneck
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+情報bottleneckで不変表現を学び、重み差から得た非不変表現を確率的に混合して行動予測へ再統合するモデル非依存の学習法。環境特有の手掛かりを全て捨てず、予測に有用な情報を残しつつ相関への過依存を抑える。
+
+**主な貢献**
+
+OpenVLA-OFTとπ0.5に適用し、追加OOD学習データなしでLIBERO-Plusの全体成功率76.2%（比較OpenVLA-OFT 69.6%）を報告。RoboTwinのclean-to-randomized評価と実機照明変動も検証し、単一学習履歴を再利用するSelf-MixVLAを探索した。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- identity照合一致なし。v1: https://arxiv.org/abs/2610.02898 (2026-10-02 06:44:43 UTC、改訂なし)。HTML §3/4/App.D選読: https://arxiv.org/html/2610.02898v1 。camera変動では49.6%と比較OpenVLA-OFT 56.4%を下回り、全変動で優位ではない。App.Dは大きな幾何変動への限界を明記。実機Frankaの照明変動定量は1課題2条件各5試行で60%対20%、広範な実機一般化と断定しない。abs/HTMLと手法名github検索では公式実装・重み・project・実装ライセンス未確認、unknown。論文CC BY-NC-SAを実装に転用しない。PDFファイル未保存。
+
+### FastOPD: On-Policy Distillation for Lightweight VLA Deployment
+
+- ID: `VLA-0145`
+- Published: 2026-10-02
+- Authors: Yoojin Oh; Jeongsol Kim; Yeonwoo Seo; Jangho Park; Seonghyun Jin; Sunwoo Park; Youngmin Kim; Youngjun Jun; Kyumin Choi; Jong Chul Ye
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.02832) · [Project](https://fastopd.github.io/)
+- Tags: on-policy-distillation, flow-map, few-step, efficient-inference, wam-teacher
+- Model size: 451M (student)
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+大規模VLAから小さなfew-step方策へ知識を移すon-policy蒸留。学生が到達した一つの状態だけで教師の速度場を照会し、自己整合性損失で有限時間のflow mapに伝播する。視覚言語backboneを凍結し行動expertなどを調整する。
+
+**主な貢献**
+
+451M学生がLIBEROで2step・平均81.8%を達成し、π0.5教師97.5%の約84%を保持しながら推論latencyを78.1%短縮。LingBot-VLA教師ではRoboTwin 2.0の1step成功率が初期学生から15.9ポイント改善。WAM教師とMolmoAct2からの実機蒸留も検証。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- identity照合一致なし。v1: https://arxiv.org/abs/2610.02832 (2026-10-02 05:24:20 UTC、改訂なし)。HTML §3/4/5選読: https://arxiv.org/html/2610.02832v1 。教師依存の蒸留で、81.8%は教師と同じ成功率ではない。simulationはLIBERO/RoboTwin各task50試行、実機は1課題。損失重みが小さ過ぎると性能崩壊。公式 https://fastopd.github.io/ はCode (TBA)と表示、code unavailable。論文固有の重み公開・実装ライセンスは未確認でunknown、基盤学生/教師の公開とは分ける。451Mはtime projectionを追加した学生規模。PDFファイル未保存。
+
+### eRLT: Efficient VLA Reinforcement Learning via Action-Relevant Token Routing
+
+- ID: `VLA-0149`
+- Published: 2026-10-01
+- Authors: Dehao Huang; Jianbang Liu; Jianpan Gao; Chao Tang; Zilang Cen; Zedong Dan; Jiaheng Wang; Tingguang Li; Yue Wang; Hong Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.00913) · [PDF](https://arxiv.org/pdf/2610.00913)
+- Tags: frozen-VLA, online-RL, action-relevant-token, layer-routing, sample-efficiency, human-assisted-insertion
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結したVLAの複数層から行動に必要な特徴を学習済みrouting tokenで取り出し、軽量actor/criticへ渡すeRLT。実演の行動予測で初期化し、オンラインRLのcritic損失で表現を更新する。LIBERO・RoboTwinの7課題とRB-Y1実機の2挿入課題で、固定予算内の学習効率を評価した。
+
+**主な貢献**
+
+観測ごとのtoken集約とタスク内で共有する層重みを分離し、VLA本体を変えずにRL状態表現を適応する。7シミュレーション課題の平均正規化学習曲線AUCは0.626で、固定圧縮RLTの0.506、独立encoderの0.585を上回る。これは最終成功率の差ではない。実機のAUC改善は人手支援を含む収集条件に限定され、試行間変動と介入頻度の影響は未解決。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- arXiv v1初稿2026-10-01 01:43:42 UTC・著者・履歴を確認。HTML https://arxiv.org/html/2610.00913v1 の4–6節、App.C.3/C.4/C.6とD.1/D.2を確認。実機は80/90収集軌跡にwarm-upと5連続失敗後の人手支援を含み、支援数は方策成績に依存。USB 108.9%とribbon 46.7%はAUCの相対改善で成功率percentage pointsではない。本文のRLinfリンクは上流であり専用公開実装と扱わない。題名・著者名・code検索と本文で専用実装・重み・実装ライセンス未確認。PDF URLはabsリンクのみ確認、PDF未取得。
 
 ### Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks
 

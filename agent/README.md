@@ -3,19 +3,22 @@
 
 [← データベース](../README.md)
 
-22 records · 正本: [papers.csv](../papers.csv)
+25 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 5 |
-| [code](code.md) | 8 |
-| [skill](skill.md) | 1 |
+| [planning](planning.md) | 6 |
+| [code](code.md) | 9 |
+| [skill](skill.md) | 2 |
 | [tool](tool.md) | 4 |
 | [memory](memory.md) | 1 |
 | [replanning](replanning.md) | 3 |
 
 ## 論文
 
+- 2026-10-02 · [CORNAV: Construction-Aware Reasoning for Robot Navigation on Active Worksites](planning.md) · `AGENT-0125`
+- 2026-10-02 · [Skill2Real: Agentic Skill Learning for Zero-Shot Sim-to-Real Robot Manipulation](skill.md) · `AGENT-0124`
+- 2026-10-01 · [OpenRUA: Robot-Use Agents Are Zero-Shot Visuomotor Policies](code.md) · `AGENT-0123`
 - 2026-10-01 · [Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens](code.md) · `AGENT-0116`
 - 2026-09-30 · [Make Code as Policy Great Again: Frontier Agents Write, Call, and Evolve Robot Tools](code.md) · `AGENT-0121`
 - 2026-09-30 · [LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation](tool.md) · `AGENT-0120`

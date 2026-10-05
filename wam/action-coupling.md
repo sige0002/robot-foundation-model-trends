@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+15 records · Published date 降順（同日 ID 降順）
+
+### PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation
+
+- ID: `WAM-0074`
+- Published: 2026-10-02
+- Authors: Chunghyun Park; Beomjun Kim; Seungcheol Park; Heeseung Kwon; Yashu Shukla; Seunghoon Sim; Jinwoo Shin; Minsu Cho
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.02840) · [Project](https://chrockey.github.io/PointWAM/)
+- Tags: 3d-point-trajectory, dexterous-manipulation, human-video-pretraining, retargeting, scene-hand-factorization
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+場面と手を同じ時空間座標系の3D点軌跡として分離・共同予測し、予測した手の運動をロボット動作へretargetするWAM。物体やkeypointを課題ごとに指定せず、人とロボットに共通する軌跡表現を通じて人動画から事前学習できる。
+
+**主な貢献**
+
+人動画1.15Mepisodeの事前学習でDexJoCo平均成功率を12.1%から69.0%へ改善。場面軌跡の教師信号は手のみの予測より10.9ポイントを追加し、10課題で最強比較方策を11.7ポイント上回る。精密把持simulationとOpenArm実機2課題も評価。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- identity照合一致なし。v1初稿2026-10-02 05:31:01 UTC: https://arxiv.org/abs/2610.02840 、改訂なし。HTML §3/4/5選読: https://arxiv.org/html/2610.02840v1 、公式projectのmethodも照合。DexJoCoは元11課題のうちデモ再生42/100失敗のunlock iPadを除外し10課題、各3seed×50episode。実機2課題各24試行、OOD物体は一部PnP試行。点間隔以下の文字やdepthに映らない透明物体を捉えにくい。公式 https://chrockey.github.io/PointWAM/ はCode soon、code unavailable。公開重み・実装license未確認unknown。PDFファイル未保存。
+
+### XGenAct: Geometry-Enhanced World Action Models through Cross-Task Generation
+
+- ID: `WAM-0073`
+- Published: 2026-10-02
+- Authors: Tingting Du; Ziyao Wang; Guoheng Sun; Ang Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.03516)
+- Tags: geometry, video-diffusion, depth, surface-normal, functional-segmentation, deterministic-codec
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+RGB、ロボット行動、metric depth、surface normal、機能役割segmentationを決定的codecでRGB動画へ変換し、同じ凍結VAE・動画diffusion Transformer・出力head・目的関数を共有するWAM。学習時に知覚空間と条件付けplanを変え、未来予測と行動をcross-taskに学ぶ。
+
+**主な貢献**
+
+保持したRLBench5課題の閉loop比較で52%成功（最強比較方策26%）を報告。構造化知覚の学習がRGBのみより制御を改善し、生成RGBを後処理する凍結expertと比べてdepth・segmentationの直接生成精度を高めた。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: verified
+- identity照合一致なし。v1初稿2026-10-02 16:10:53 UTC: https://arxiv.org/abs/2610.03516 、改訂なし。HTML §3/4/5選読: https://arxiv.org/html/2610.03516v1 。外部比較は5課題各20試行、MolmoActはzero-shotで他手法とは学習条件が異なる。学習源はRLBench/ManiSkill3、検証はRLBench simulation。知覚menuはtask依存で追加modalityが単調に改善しない。将来知覚評価は各生成動作が達したsimulator状態を基準とし、動作乖離による除外規則あり。abs/HTML/手法名code検索で公式実装・重み・project・実装license未確認unknown。PDFファイル未保存。
 
 ### ActiveWAM: Evidence-Aware Active Vision for World-Action Models
 
@@ -104,6 +154,31 @@ RGB-Dと固有感覚から関節・物体中心・接触点の疎な3D骨格を�
 
 - Checked: 2026-10-02 · Review: verified
 - arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.00859v1 の3節・4.1–4.4節・付録Dを確認。公式projectのCode (under review)は https://github.com/anonymous/ctrlwam にリンクするが確認時404。実装公開・専用重み・実装ライセンスは未確認なのでunknown、code\_urlは空欄。multi-agentは場面内の行動ストリームでありLLM Agentとの結合と推測しない。PDF未取得。
+
+### Magic-W0: A Structured World-Action Foundation Model for Physical Intelligence
+
+- ID: `WAM-0070`
+- Published: 2026-09-30
+- Authors: Xuhua Chen; Zhenhan Yin; Yuan Zhang; Lingfeng Zhang; He Zheng; Tong Mu; Shun Zuo; Dian Zhou; Di Wu; Xuan Zhou; Shaojie Wan; Rongtian Shen; Qiulong Xu; Yiduo Li; Yinglong Wang; Yanqian Wang; Kun Wang; Tao Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.39870) · [Code](https://github.com/MagiclabRobotics/Magic-W0) · [Project](https://embodied.magiclab.top/works/wam/magic-w0/index.html)
+- Tags: 3d-geometry, structured-transition, cross-embodiment, flow-matching, future-semantics
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+現在の3D形状、行動が生む3D運動、将来のタスク意味をStructured World Transitionとして表現する基盤WAM。世界表現と連続行動の専門ストリームを複数層の共同attentionで双方向に結合し、人の一人称動画・UMI・実機・simulationを横断して事前学習する。
+
+**主な貢献**
+
+構造化された世界状態遷移と制御を共同学習し、行動置換・接続maskで予測が行動条件に依存することを調べた。v1報告ではRoboDojo-Sim平均Score 27.10/SR 20.84%、LIBERO 99.1%。5実機課題各100試行で94.6%（比較π0.5は91.8%）。
+
+**確認記録**
+
+- Checked: 2026-10-05 · Review: needs-review
+- identity照合一致なし。v1: https://arxiv.org/abs/2609.39870 (2026-09-30 14:49:55 UTC、改訂なし)。HTML §3/6/7選読: https://arxiv.org/html/2609.39870v1 。現行公式project https://embodied.magiclab.top/works/wam/magic-w0/index.html はRoboDojo 36.75/SR 30.36%を表示し、v1の27.10/20.84%と不一致。対応する改訂日を検証できないためv1数値を保持しneeds-review。v1表のOpen-source=Yesは公式releaseと矛盾する。https://github.com/MagiclabRobotics/Magic-W0 はassets/README/設定のみでcode/checkpoints coming soon。https://huggingface.co/Flyfish101/Magic-W0 もweights not yet availableを明記。placeholderのMIT LICENSE https://github.com/MagiclabRobotics/Magic-W0/blob/main/LICENSE は確認したが公開実装はないためopen\_source/実装license\_statusはunknown。未評価の巧緻手・触力覚、VLA比の推論速度差を結論が挙げる。PDFファイル未保存。
 
 ### One from Infinity: Actualizing Futures from Pretrained World Models into Robot Actions
 
