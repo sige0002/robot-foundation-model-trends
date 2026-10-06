@@ -158,7 +158,7 @@ RGB-Dと固有感覚から関節・物体中心・接触点の疎な3D骨格を�
 ### Magic-W0: A Structured World-Action Foundation Model for Physical Intelligence
 
 - ID: `WAM-0070`
-- Published: 2026-09-30
+- Published: 2026-09-30 · Updated: 2026-10-03
 - Authors: Xuhua Chen; Zhenhan Yin; Yuan Zhang; Lingfeng Zhang; He Zheng; Tong Mu; Shun Zuo; Dian Zhou; Di Wu; Xuan Zhou; Shaojie Wan; Rongtian Shen; Qiulong Xu; Yiduo Li; Yinglong Wang; Yanqian Wang; Kun Wang; Tao Zhang
 - Venue: arXiv preprint
 - Links: [Paper](https://arxiv.org/abs/2609.39870) · [Code](https://github.com/MagiclabRobotics/Magic-W0) · [Project](https://embodied.magiclab.top/works/wam/magic-w0/index.html)
@@ -173,12 +173,12 @@ RGB-Dと固有感覚から関節・物体中心・接触点の疎な3D骨格を�
 
 **主な貢献**
 
-構造化された世界状態遷移と制御を共同学習し、行動置換・接続maskで予測が行動条件に依存することを調べた。v1報告ではRoboDojo-Sim平均Score 27.10/SR 20.84%、LIBERO 99.1%。5実機課題各100試行で94.6%（比較π0.5は91.8%）。
+構造化された世界状態遷移と制御を共同学習し、行動置換・接続maskで予測が行動条件に依存することを調べた。v2本文ではRoboDojo-Sim平均Score 36.75/SR 30.36%、LIBERO 99.1%。5実機課題各100試行で94.6%（比較π0.5は91.8%）。
 
 **確認記録**
 
-- Checked: 2026-10-05 · Review: needs-review
-- identity照合一致なし。v1: https://arxiv.org/abs/2609.39870 (2026-09-30 14:49:55 UTC、改訂なし)。HTML §3/6/7選読: https://arxiv.org/html/2609.39870v1 。現行公式project https://embodied.magiclab.top/works/wam/magic-w0/index.html はRoboDojo 36.75/SR 30.36%を表示し、v1の27.10/20.84%と不一致。対応する改訂日を検証できないためv1数値を保持しneeds-review。v1表のOpen-source=Yesは公式releaseと矛盾する。https://github.com/MagiclabRobotics/Magic-W0 はassets/README/設定のみでcode/checkpoints coming soon。https://huggingface.co/Flyfish101/Magic-W0 もweights not yet availableを明記。placeholderのMIT LICENSE https://github.com/MagiclabRobotics/Magic-W0/blob/main/LICENSE は確認したが公開実装はないためopen\_source/実装license\_statusはunknown。未評価の巧緻手・触力覚、VLA比の推論速度差を結論が挙げる。PDFファイル未保存。
+- Checked: 2026-10-06 · Review: needs-review
+- canonical arXiv照合で既存WAM-0070を確認しID/初稿日を維持。https://arxiv.org/abs/2609.39870 のv1は2026-09-30 14:49:55 UTC、v2は2026-10-03 14:49:17 UTC。v2 HTML https://arxiv.org/html/2609.39870v2 の§3、§5.2、§6.1/6.2/6.3、§7を選読し、Table 1の36.75/30.36%が公式projectの現行値と一致するためv1の27.10/20.84%から更新。42課題・公式完走軌跡の集計、ScoreとSRは別指標。ただしabs要旨はv2指定でも27.10を残すため書誌要旨/本文不一致をneeds-reviewに保持。Table 1/projectのOpen-source=Yesもrelease実態と不一致。2026-10-06確認の公式 https://github.com/MagiclabRobotics/Magic-W0 は.gitignore/LICENSE/README/assetsのみ、READMEはcode/checkpoints coming soon。リンク先は https://huggingface.co/XuhuaX/Magic-W0 にredirectしweights not yet availableを明記、code/weights unavailable。placeholder MIT https://github.com/MagiclabRobotics/Magic-W0/blob/main/LICENSE は公開実装の確認に代用せず実装license/open\_source unknown。巧緻手・触力覚は未評価、追加演算とVLA比速度差が課題。PDF未取得。
 
 ### One from Infinity: Actualizing Futures from Pretrained World Models into Robot Actions
 

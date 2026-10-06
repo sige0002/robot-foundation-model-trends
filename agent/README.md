@@ -3,19 +3,22 @@
 
 [← データベース](../README.md)
 
-25 records · 正本: [papers.csv](../papers.csv)
+30 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 6 |
+| [planning](planning.md) | 8 |
 | [code](code.md) | 9 |
 | [skill](skill.md) | 2 |
-| [tool](tool.md) | 4 |
-| [memory](memory.md) | 1 |
-| [replanning](replanning.md) | 3 |
+| [tool](tool.md) | 5 |
+| [memory](memory.md) | 2 |
+| [replanning](replanning.md) | 4 |
 
 ## 論文
 
+- 2026-10-05 · [MarvisNav: Making Memory Visible on Route Choices for Zero-Shot Object Navigation](memory.md) · `AGENT-0128`
+- 2026-10-04 · [RobotUse: Allocating Computation, Context, and Decisions](tool.md) · `AGENT-0130`
+- 2026-10-02 · [Mind the Refinement Gap: When Safe High-Level Robot Plans Produce Unsafe Executions](planning.md) · `AGENT-0129`
 - 2026-10-02 · [CORNAV: Construction-Aware Reasoning for Robot Navigation on Active Worksites](planning.md) · `AGENT-0125`
 - 2026-10-02 · [Skill2Real: Agentic Skill Learning for Zero-Shot Sim-to-Real Robot Manipulation](skill.md) · `AGENT-0124`
 - 2026-10-01 · [OpenRUA: Robot-Use Agents Are Zero-Shot Visuomotor Policies](code.md) · `AGENT-0123`
@@ -24,7 +27,9 @@
 - 2026-09-30 · [LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation](tool.md) · `AGENT-0120`
 - 2026-09-30 · [SimEX: Simulation-Integrated Robotics AutoResearch](code.md) · `AGENT-0114`
 - 2026-09-30 · [ASENA: Self-evolving Agents for Embodied Navigation](code.md) · `AGENT-0113`
+- 2026-09-29 · [Foundation-Model-Guided Topology-Aware Semantic Risk Fields for Manipulation](planning.md) · `AGENT-0127`
 - 2026-09-29 · [Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning](planning.md) · `AGENT-0115`
+- 2026-09-26 · [CAPEX: Efficiently Distilling Foundation Model Behavior into Deployable Robot Policies through Experience-Adaptive Reasoning](replanning.md) · `AGENT-0126`
 - 2026-09-25 · [CognitiveReality: Robot-Agnostic Semantic Gaussian Mapping with an LLM Agent for Immersive Collaborative VR Teleoperation](tool.md) · `AGENT-0118`
 - 2026-09-24 · [Design and Evaluation of LLM Chaining-Based Task Planning for General Purpose Service Robots](planning.md) · `AGENT-0117`
 - 2026-09-23 · [RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement](replanning.md) · `AGENT-0119`

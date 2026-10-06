@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-15 records · Published date 降順（同日 ID 降順）
+16 records · Published date 降順（同日 ID 降順）
+
+### Keeping JEPA World Models Plannable When Little of the Frame Moves
+
+- ID: `WAM-0077`
+- Published: 2026-10-02
+- Authors: Florian Strohm; Patrick Wagner; Jannik Schwab; Marco Huber
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.03137) · [PDF](https://arxiv.org/pdf/2610.03137)
+- Tags: SLIM, JEPA, latent-planning, inverse-dynamics, action-sensitivity, language-goals, simulation
+- Model size: ~18M trainable; 5.5M ViT-Tiny encoder; ~167K training-only inverse-dynamics head
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+小さな複数物体を押す合成2DベンチマークSLIMで、画面の行動応答が弱いとLeWMの潜在表現が物体・操作主体を捨て、計画に失敗する状況を診断。連続する符号化潜在と予測潜在へ共有逆動力学損失を加え、行動に必要な情報を保持する。修復後の潜在へ言語目標を写す小型ヘッドも評価した。
+
+**主な貢献**
+
+訓練時だけ使う逆動力学ヘッドにより、同一plannerでSLIM成功率を0.003から0.348±0.016へ改善。PushTの学習時の2倍の計画horizonでは0.53から0.83へ改善した。対照実験はencoderへの勾配の重要性を示す。一方、very-hard tierは両モデル0%、未知語彙を含む段階指示や大きなencoderへの計画転移には限界が残る。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。arXiv書誌とv1初稿日2026-10-02を確認、後続版なし。HTML https://arxiv.org/html/2610.03137v1 の§3-7、Table 1/4、Appendix C/J/Kを確認。3学習seedの平均±SEMで0.348±0.016、評価は合成2DとPushTで実機展開なし。action-sensitivityは経験的な必要条件で十分条件ではない。概要のscripted controllerが全tierを解く表現に対し、本文Table 1は既定budgetでvery-hard0.28、Appendix Eは60stepで1.00と区別する。§7のReproducibility statementはコードを将来公開予定（will be released）と明記するため、code\_status=unavailable。公開URLは空欄とし、重み・実装ライセンスは未確認でunknown。PDFリンクを確認、ダウンロードなし。
 
 ### Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models
 

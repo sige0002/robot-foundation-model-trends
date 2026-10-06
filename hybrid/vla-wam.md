@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+11 records · Published date 降順（同日 ID 降順）
+
+### World-Calibrated Proposal-to-Action Flow for Vision-Language-Action Models
+
+- ID: `HYBRID-0119`
+- Published: 2026-10-01
+- Authors: Jie He; Wei Li; Junwen Tong; Rui Shao; Wei-Shi Zheng; Liqiang Nie
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.02323) · [Code](https://github.com/JiuTian-VL/ProAct) · [Project](https://github.com/JiuTian-VL/ProAct-page)
+- Tags: ProAct, motion-proposal, prospective-latents, world-calibration, anisotropic-flow-source, pi0.5
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+直近動作をProposal Expertでscene-awareな仮説へ変換し、World Expertが所望の未来latentと仮説との適合を予測する。その適合からproposal中心の異方的生成源の大きさと低rank形状を調整し、Action Expertがflow refinementで行動chunkを生成する。
+
+**主な貢献**
+
+LIBERO平均98.4%でπ0.5より1.5ポイント、RoboTwin 2.0の50課題・hard条件で60.3%と31.7ポイント改善。実機6課題各25試行でも改善し、LIBEROでモデル推論latencyを121.26から89.98msへ削減した。誤proposalの反実仮想結果を直接学習しているわけではない。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2610.02323 のv1は2026-10-01 18:00:11 UTC、改訂なし。 https://arxiv.org/html/2610.02323v1 §2–3、App.C/Fを確認。LIBERO各suite500、RoboTwin各task100 rollout、実機GALAXEA/AgileX計6課題各25trial。World Expertはfactual expert未来で監督され、代替/誤動作の結果とdesired futureを直接比較しない。固定chunk horizonも制約。latencyはA800/RTX5090上のモデル推論で全robot周期ではない。論文project https://github.com/JiuTian-VL/ProAct-page のindexから公式実装を確認。 https://github.com/JiuTian-VL/ProAct/blob/main/src/openpi/models\_pytorch/proact\_pytorch.py と https://github.com/JiuTian-VL/ProAct/blob/main/LICENSE のApache-2.0を確認。GemmaとV-JEPA基盤は別条件、READMEのpi05初期化を調整済みProAct重みと混同しない。専用重みは未確認。Pages URLは取得失敗のため検証済みproject repoを採用。PDF未取得。
 
 ### UniWAM: Unified World-Action Model
 
@@ -79,6 +104,31 @@ LIBEROとRoboTwinのID/OOD評価に加え、実機の言語追従と完了成功
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Official implementation and MIT license license checked at https://github.com/breez3young/VJEPA-Policy. Repository contains source only; no policy checkpoint distribution independently verified. Upstream encoders and assets have their own terms.
+
+### WorldGuide: Learning Success-Failure Boundaries in Latent World Models for Vision-Language-Action Policies
+
+- ID: `HYBRID-0121`
+- Published: 2026-09-28
+- Authors: Lin Liu; Lu Zhang; Ziying Song; Wu Yang; Yuzheng Zhuang; Yunzhi Zhuge; Shuai Tao; Wulong Liu; Huchuan Lu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.34206)
+- Tags: WorldGuide, training-only-world-model, failure-rich-pretraining, matched-contrastive-learning, differentiable-reward, LIBERO
+- Model size: 配備VLA 4B; 学習時world predictor 0.5B
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+成功・失敗の両軌跡でlatent dynamicsを事前学習し、同一課題の進捗を揃えた類似segmentをcontrastive学習で分離する。凍結した予測器を微分可能な報酬としてVLAの視覚/行動部を更新し、配備時は予測器を捨ててVLA単体を動かす。
+
+**主な貢献**
+
+LIBERO-100で96.8%、LIBERO全体98.4%、SimplerEnv Google Robotで72.0%を報告。ARX LIFT2の狭許容度3課題各20試行ではπ0.5の11.7%から18.3%へ改善したが、成功率は依然低く失敗後の同じ動作の反復が残る。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2609.34206 のv1は2026-09-28 03:13:43 UTC、改訂なし。 https://arxiv.org/html/2609.34206v1 §3–4、App.A/B/Cを確認。学習時のVLA/WAM結合としてhybrid/vla-wamで、推論時rollout/agentはない。table1は配備4B＋学習時predictor0.5B、225ms/chunkはWebSocket配備経路。基盤/実行周波数の異なるWAM比較の2.2–19.9倍をWM除去だけの因果効果としない。SimplerEnv72.0%はGoogle平均でWidowX64.8%。実機300demo、3課題各20trialで11/60成功、評価interleaved。失敗時刻はQwen推定に手動sample検証。2026-10-06再確認の現要旨は「Code will be publicly available.」と将来公開を明記（abs最終文／HTML abstract）。著者による公開保留の一次記述に基づきcode\_status=unavailableとした。正式題名/著者検索でも公式配布先は未確認。実装ライセンス・専用重みは公開保留から推測せずunknown。PDF未取得。
 
 ### SLIP-VLA: Single-Step Latent Imagination for Policy Learning in Vision-Language-Action Models
 

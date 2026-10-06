@@ -3,7 +3,82 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-16 records · Published date 降順（同日 ID 降順）
+22 records · Published date 降順（同日 ID 降順）
+
+### Arm-wise Compositional Generalization in Dual-Arm Vision-Language-Action Models
+
+- ID: `VLA-0156`
+- Published: 2026-10-05
+- Authors: Zaibin Zhang; Binghao Ran; Yuhan Wu; Zhongbo Zhang; Yifan Wang; Junwei Jiang; Junlan Xiao; Wangcheng Shi; Li Kang; Yiran Qin; Zhenfei Yin; Lijun Wang; Huchuan Lu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06184)
+- Tags: ACG-Bench, AE-VLA, bimanual, compositional-generalization, SkillLoRA, arm-wise-attention
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+双腕の既知原子スキルを新しい順序・同期・タスクの組合せで再利用するACG-Benchを導入。共通π0.5に腕別token、SkillLoRA、腕別attentionを追加したAE-VLAを、同じデータ・指示で比較する。
+
+**主な貢献**
+
+17未見条件の制約順守成功率はAE-VLAが21.53%、独立Dual π0.5が5.53%。実機SO101の5未見条件では39.00%対10.00%。成功には目標達成に加えて順序・同期・milestoneを満たす必要がある。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-10-05 12:03:04 UTC、改訂なし。本文 https://arxiv.org/html/2610.06184v1 の§3–6とAppendix Bを選択読解。評価は供給されたper-arm原子prompt/skill構造下の実行で、novel-task plannerは提案していない。純同期とin-domain性能は課題。SkillLoRAは追加重みとrouter supervision、AWAは腕間と時間attentionの両方を変える。公式実装・重み・ライセンスは未確認。
+
+### VLA-ZO: Fast Zeroth-Order Adaptation for Vision-Language-Action Models
+
+- ID: `VLA-0154`
+- Published: 2026-10-05
+- Authors: Jaemin Kim; Jiahn Kim; Taesik Gong
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06271)
+- Tags: VLA-ZO, zeroth-order-optimization, one-shot-adaptation, prefix-cache, prefetch, camera-shift
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+forward計算だけのzeroth-order適応を、VLAの計算構造に合わせて高速化する。行動側だけを更新し、凍結した視覚言語prefixの条件状態を摂動query・更新step間で再利用し、prefetchで転送を隠す。
+
+**主な貢献**
+
+π0.5のLIBERO視点変化で、cold cacheを含む適応時間を同じquery数のbaseline ZOに対しq=16で25.59倍、q=64で32.54倍短縮。未適応の48.27%に対し成功率は58.17%・63.58%。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-10-05 13:05:34 UTC、改訂なし。本文 https://arxiv.org/html/2610.06271v1 の§3–5、Appendix Aを選択読解。π0.5とOpenVLA-OFT、LIBERO 40タスク、sceneごとに1デモの計5デモで適応。seed=0、実機検証は未確認。比較のFLA/DARTは著者のZO-SGD置換実装であり元の一階法との同等比較ではない。公式実装・専用重み・ライセンスURLは未確認。
+
+### How (and How Not) to Use Data Augmentation in VLA Post-Training
+
+- ID: `VLA-0152`
+- Published: 2026-10-05
+- Authors: Bram Grooten; Joaquin Vanschoren
+- Venue: NeurIPS 2026 RoboPAD workshop
+- Links: [Paper](https://arxiv.org/abs/2610.05994) · [Code](https://github.com/bramgrooten/vla-augm) · [Project](https://bramgrooten.nl/vla-augm/)
+- Tags: RL-post-training, critic-only-augmentation, visual-OOD, PPO, π0.5, GR00T-N1.5
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+VLAのPPO後学習で、画像拡張をactor・criticのどこへ入れるべきかを比較する。rollout時は元の画像を使い、更新時のcriticだけにoverlayまたはshiftを与える構成が視覚分布外への汎化を改善した。
+
+**主な貢献**
+
+LIBERO-Plusの5視覚軸の非加重平均で、π0.5はoverlayにより73.9%から81.7%、GR00T N1.5はshiftにより66.0%から76.0%へ改善。actorの拡張は両モデルで学習を崩した。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-10-05 08:48:13 UTC、改訂なしをarXivで確認。NeurIPS 2026 RoboPAD workshop採択はarXiv著者commentと公式author projectの記載で確認し、publisher proceedingsは未確認。本文 https://arxiv.org/html/2610.05994v1 の§3–6を選択読解。シミュレーション、LIBERO-Spatial/PPO、各構成1学習seedに限定。公式projectから実装を確認し、augmentation.pyとApache-2.0 LICENSEを別々に確認: https://github.com/bramgrooten/vla-augm/blob/main/LICENSE 。専用重みの配布先は未確認。
 
 ### ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation
 
@@ -180,6 +255,56 @@ OpenVLA-OFTをFAIRINO FR3の固定製造セルへ適応させるデータ変換�
 - Checked: 2026-10-02 · Review: verified
 - arXiv v1初稿・著者、HTML https://arxiv.org/html/2609.39820v1 の4節・5.2節・6.3節を確認。収集教師は特権シミュレータ形状を使い、展開方策には不要。公式project経由のsrc実装・READMEとroot Apache-2.0を確認: https://github.com/Mingyuee88/FailBank/blob/main/LICENSE 。第三者成分は別条項。READMEのVLA-Arena重みは基礎方策でありFailBank専用adapterの提供を確認できずweights\_status=unknown。PDF未取得。
 
+### Cooperative Multi-Agent Vision-Language-Action Models via Reinforced Fine Tuning
+
+- ID: `VLA-0162`
+- Published: 2026-09-29
+- Authors: Ruixiao Xu; Wong Lik Hang Kenny; Zhiqian Liu; Jianing Guo; Hanxiao Li; Kejian Shi; Shuning Zhang; Pu Feng; Yongjia Ma; Yuqing Ma; Kai Chen; Qi Dou; Yaodong Yang; Xianglong Liu; Simin Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.36588) · [Code](https://anonymous.4open.science/r/mavla_rft-2BC0/)
+- Tags: cooperative-MARL, reinforced-finetuning, agent-wise-credit, latent-noise-RL, multi-robot, π0.5
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+失敗する初期配置で人間デモを補う収集、agent別advantageで軌跡を選ぶoffline微調整、凍結VLAのlatent noiseを学ぶonline RLの3段階で協調制御を後学習する。各ロボットは局所画像・状態と共通画像・指示を入力する。
+
+**主な貢献**
+
+π0/π0.5でRoboTwin 4課題、RoboFactory 4課題、実機Franka 3課題を評価。CHORUSのSFTに対する平均成功率増は各群で23.1・16.4・44ポイント。実機online段階は50rolloutのproof-of-concept。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-09-29 03:05:50 UTC、改訂なし。本文 https://arxiv.org/html/2609.36588v1 の§4–6とAppendix Aを選択読解。multi-agentは低レベルMARLの方策主体でLLM plannerではないためvla/adaptation。単調改善の命題は正確なadvantageとデータsupport等の仮定下のみ。公式anonymous repoリンクを開いたがreadable fileが返らず、実装・重み・ライセンスの実体は未確認でunknown。
+
+### VLaRL: Augmenting Vision-Language-Action Models with Simulation-Trained Latent-Conditioned Residual RL
+
+- ID: `VLA-0161`
+- Published: 2026-09-25
+- Authors: Namiko Saito; Kinam Kim; Heecheol Kim; Katsushi Ikeuchi; Yasuyuki Matsushita
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.30868)
+- Tags: VLaRL, residual-RL, sim-to-real, latent-alignment, contact-rich, force-feedback
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+実機デモで微調整したVLAを凍結し、simulation latentを実機latentへ整合するmapperを学習する。mapped latent・VLA行動・固有感覚・力から残差RLをsimulationで学び、実機ではmapperなしで修正行動を出す。
+
+**主な貢献**
+
+Franka Research 3の接触4課題、FlowerとGR00T N1.7の全8組合せで実機成功率が改善。Flowerのbutton pressingは67.5%から100%、block pushingは22.5%から50%。実機でRLやonline適応を行わず転移を評価した。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-09-25 06:18:40 UTC、改訂なし。本文 https://arxiv.org/html/2609.30868v1 の§III–VI-Cを選択読解。実機デモ32件/task、各実機条件40trial。task別digital twinと概ね対応するsim–real軌跡が必要で、実機データ不要ではない。mapperはbackbone別、残差方策はtask別。摩擦・contact dynamics差は直接補正せず、未知物体評価も限定的。検索で見つかったGuanxingLu/vlarlは著者・題名が違う別研究。公式専用実装・重み・ライセンスは未確認。
+
 ### Self-Adaptive VLA for Robust Robot Deployment
 
 - ID: `VLA-0123`
@@ -204,6 +329,31 @@ OpenVLA-OFTをFAIRINO FR3の固定製造セルへ適応させるデータ変換�
 
 - Checked: 2026-10-01 · Review: verified
 - arXiv v1 only. Official project videos/method and primary HTML https://arxiv.org/html/2609.30092v1 checked; no research code repository, implementation license, or trained weight download verified. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### BEE: Intervention-Adaptive Real-World Reinforcement Learning with Vision-Language-Action Models
+
+- ID: `VLA-0160`
+- Published: 2026-09-23
+- Authors: Weihui Zhao; Xiaohan Yan; Zunian Wan; Xuan Du; Zhaozhan Chi; Jianbo Mao; Ruipu Wu; Rushuai Yang; Houlin Li; Shukai Yang; Jing Wu; Yuxiang Yan; Yongcheng Liu; Chuankang Li; Guanghui Ren; Wei Shan; Maoqing Yao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.27450)
+- Tags: BEE, human-intervention, residual-RL, correction-uncertainty, real-robot, π0.5
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結VLAの提案と人間の修正を対で保持し、修正の平均・分散を次元別に学ぶCorrection Modelを導入する。一貫した修正方向では方策を強く拘束し、ばらつく方向は緩めて残差RLを進める。
+
+**主な貢献**
+
+実機3課題とLIBERO-Pro 1課題の固定online-data予算で平均成功率91.2%、RLT 57.5%、DSRL 42.1%。この平均はphone charging・cloth aligningの精密段階の成功率と、残る2課題の全体成功率を混在させた値。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-09-23 07:14:20 UTC、改訂なし。本文 https://arxiv.org/html/2609.27450v1 の§IV–VとAppendix D/Eを選択読解。π0.5をtaskごとにBC微調整後凍結。3評価round各20trial。human intervention率は訓練control-step比率で、評価時介入なし。RLTは著者再実装、from-scratch比較は小予算に限定。学習制約は安全保証とは扱わない。公式実装・専用重み・ライセンスURLは未確認。
 
 ### Dissecting Advantage-Guided Post-Training for Vision-Language-Action Policies
 

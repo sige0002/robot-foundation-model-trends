@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-18 records · Published date 降順（同日 ID 降順）
+22 records · Published date 降順（同日 ID 降順）
+
+### When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models
+
+- ID: `VLA-0153`
+- Published: 2026-10-05
+- Authors: Seonghoon Yu; Dongwon Kim; HyungRok Jung; Yoonjae Baek; Byung-kwan Lee; Suha Kwak; Jeany Son
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.05719) · [Code](https://github.com/Seonghoon-Yu/RACE-VLA)
+- Tags: RACE, action-chunking, transition-timing, flow-matching, inference-efficiency, π0.5
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+長い行動チャンクで増えるサブスキル切替時の誤差に着目する。補助的な1段denoisingで切替時刻のpriorを予測し、そのpriorで本体の行動生成を条件付けるRACEを提案する。
+
+**主な貢献**
+
+VLABench・RoboCasa-H50・LIBEROで同じチャンク長の微調整を上回る。実機の50試行では20行動を実行するRACEが66%、同長の微調整が48%。短い5行動の微調整に対してidle timeは2.11秒から0.41秒へ減った。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-10-05 03:07:36 UTC、改訂なし。本文 https://arxiv.org/html/2610.05719v1 の§3–4.5、Appendix Fを選択読解。実機の時間は成功試行平均で、全体完了時間の改善は小さい。非常に長いopen-loop実行の誤差は残り、H\_exec=40ではbaselineを下回る。要旨のコード公開記述に対し、公式repoはmedia/READMEのみでCode will be released soonと明示。重み・実装ライセンスは未確認。
+
+### Vela: Scaling Vision-Language-Action Models with Adaptive Action Curve Parametrization
+
+- ID: `VLA-0151`
+- Published: 2026-10-04
+- Authors: Yifan Li; Jiaxu Wang; Dongming Wu; Yicheng Jiang; Ryan Ji; Xiangyu Yue; Yanwei Fu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.05230) · [Project](https://clementine24.github.io/Vela/)
+- Tags: Vela, B-spline, adaptive-horizon, trajectory-space, cross-embodiment, flow-matching
+- Model size: 3B VLM + 300M action expert
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+固定12個のB-spline制御点と状況依存の予測期間を同時に生成するVLA。noiseを較正した適合基準で動作ごとの教師期間を選び、26次元の共通動作表現で多様なロボットデータを軌跡空間へ事前学習する。
+
+**主な貢献**
+
+LIBERO-X平均成功45.3%（π0.5は39.3%）、EBench成功49.7%/進捗Score66を報告。実機調理67.5%、千切り87.5%は各4段階の平均成功で、全タスク完遂率ではない。同じπ0.5初期値の軌跡post-training版も比較した。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文前にcanonical arXiv/DOIと正規化/類似タイトルをscripts/validate\_csv.py --candidateで照合し一致なし。書誌/履歴 https://arxiv.org/abs/2610.05230 : v1 2026-10-04 13:50:59 UTC、改訂なし。HTML https://arxiv.org/html/2610.05230v1 の§3/4、App.B/C/D/Eを選読。40,000時間は公開約20,000時間と私有約20,000時間で、π0.5との事前学習条件は同一ではない。LIBERO-X各課題10rollout、EBench510episode。π0.5基準は10step、Vela最大25stepで、同一初期値post-trainingとcap変更ablationも提示。実機各subtask10trial。全ての個別課題で最良ではなく、固定制御点数・大規模backboneへの拡張は未評価。公式projectはCode Coming soon、実装unavailable。重み・実装licenseは未確認unknown、論文CC BY4.0から推定しない。PDF未取得。
 
 ### CHASE-VLA: Post-Training Quantization Framework for Vision-Language-Action Models with Chunk-Aware Scale Estimation
 
@@ -104,6 +154,56 @@ VLA推論と物理ロボット実行の時間差を端から端まで測定し�
 
 - Checked: 2026-10-01 · Review: verified
 - arXiv v1 only. arXiv comments directly link official project and GitHub. Actual client/server/scripts/tests present; README reports source release 2026-09-30, identifies Apache License 2.0, and GitHub shows Apache-2.0. Root LICENSE content independently read via GitHub connector and confirmed Apache-2.0: https://github.com/MagiclabRobotics/Inference/blob/main/LICENSE . Runtime supports external checkpoints, but paper-specific weights download unverified. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### Quantile Head for Vision-Language-Action Models
+
+- ID: `VLA-0159`
+- Published: 2026-09-28
+- Authors: Xuan Wang; Yinan Wu; Haoran Duan; Jungong Han
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.34061) · [Code](https://github.com/xwangrs/Quantile-Head-for-VLA)
+- Tags: Quantile-Head, single-pass, quantile-regression, median-policy, action-distribution, π0.5
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+中央値と正のgapから順序付きの周辺行動quantileを1回のforwardで予測し、masked pinball lossで共同学習する。凍結VLMへlearnable promptを加え、標準では中央値、任意ではquantile samplingで行動を生成する。
+
+**主な貢献**
+
+中央値方策はLIBERO平均99.3%、LIBERO-Pro 60.2%、LIBERO-Plus zero-shot 87.1%、実機2課題平均75.0%を報告。近傍quantileがcalibratedでgap固定などの局所条件下で、中央値更新の分散低下を解析する。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-09-28 00:40:10 UTC、改訂なし。本文 https://arxiv.org/html/2609.34061v1 の§3–5とAppendix Aを選択読解。外部baselineは元の評価protocolを保持。周辺分布のquantileだけでjoint dependenceは特定せず、samplingの改善は課題依存。公式repoのmodeling\_quantile\_head.py実装とApache-2.0 LICENSEを別確認: https://github.com/xwangrs/Quantile-Head-for-VLA/blob/main/LICENSE 。専用学習済み重みの配布先は未確認。
+
+### TAO-DA: Towards Autonomous Operation--A Dual-Arm Vision-Language-Action Model for Coordinated Manipulation
+
+- ID: `VLA-0158`
+- Published: 2026-09-27
+- Authors: Yongsheng Zhao; Han Gao; Baoping Cheng; Jingyao Tang; Dian Zhou; Deng Liang; Ji Ge; Xuanzhang Wen; Lei Zhao; Ye Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.33197)
+- Tags: TAO-DA, dual-arm-expert, intent-routing, bimanual, task-progress, humanoid
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+共有Eagle-2.5-VLの表現に、腕別の独立action towerと動作する腕を決めるroutingを接続する。明示的な腕指定は規則で解析し、曖昧な指示は学習multimodal分類器で補い、進捗予測で切替を安定させる。
+
+**主な貢献**
+
+AGIBOT G1の実機デモ9,080軌跡で学習し、単腕5課題の平均成功率88.4%、双腕茶作業100%、机上整理95%を報告。独立towerはinactive-arm proprioception摂動への予測誤差感度を下げた。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-09-27 04:32:11 UTC、改訂なし。本文 https://arxiv.org/html/2609.33197v1 の§III–IV-Gを選択読解。tower比較はparameter-matchedではなく、routingの成功率への効果は独立ablation未実施。進捗はsemantic completionでなく正規化trajectory時刻で教師付け。腕役割転移は少数定性的試行。6台の統合restaurant成功92.08%は全システムの値で、TAO-DA単体とは区別。公式実装・重み・ライセンスは未確認。
 
 ### Direction-Scale Decomposition in Action Representation: Rethinking What to Tokenize for Vision-Language-Action Models
 

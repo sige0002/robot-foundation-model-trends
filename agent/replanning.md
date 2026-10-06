@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
+
+### CAPEX: Efficiently Distilling Foundation Model Behavior into Deployable Robot Policies through Experience-Adaptive Reasoning
+
+- ID: `AGENT-0126`
+- Published: 2026-09-26
+- Authors: Shivam Aarya; Zhang Xi-Jia; Chengyue Huang; Junhyun Kim; Huishu Xue; Hrishit Leen; Roman Yakunin; Animesh Garg; Zsolt Kira
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.33007) · [Project](https://capex-paper.github.io/)
+- Tags: CAPEX, autonomous-demonstrator, confidence-calibration, bounded-memory, waypoint-planning, supporting-data-generation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結VLMが複数waypointと到達確率を提案し、過去の実行結果で確率を較正して信頼できる先頭部分だけを実行する。少数の成功例と段階別の信頼度を次の収集に渡し、成功軌跡をDiffusion Policy/ACTの教師データにする。
+
+**主な貢献**
+
+RoboCasa18課題360開始状態で収集成功12.5→53.6%、成功demo当たりの論文時点API費用を80%削減。実機YAMは40/42成功。学生方策は人demoに近づくが、20k学習stepの平均は人demo未満で、事前学習DPの差も残る。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: needs-review
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。本文前のcanonical arXiv/DOI・正規化/類似タイトル照合一致なし。初稿 https://arxiv.org/abs/2609.33007 : v1 2026-09-26 23:05:46 UTC、改訂なし。HTML https://arxiv.org/html/2609.33007v1 の§3/4/5を選読。較正は同じ課題の過去waypoint成否、少なくとも1waypointを実行する。後続学生はDP/ACTでVLA/世界モデルの推論時融合ではなくagent/replanningに分類。収集性能は基盤モデル依存、Qwen+CAPEXは5/350。記憶の改善は成功例取得後に集中し、失敗履歴のみでは改善しない。学生simulationは選択6課題、3seed各50rollout、実機Frankaは3課題各方策10trialで絶対成功は低い。実機resetと成功判定は人手、完全無人収集の証拠ではない。費用は2026-09-22のlist-price評価。公式projectリンクはwebで2度取得失敗し到達性未確認のためneeds-review。著者/題名code検索でも公式実装・重み・実装license未確認unknown。PDF未取得。
 
 ### RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement
 

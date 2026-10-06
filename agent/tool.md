@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
+
+### RobotUse: Allocating Computation, Context, and Decisions
+
+- ID: `AGENT-0130`
+- Published: 2026-10-04
+- Authors: Junhoo Lee; Injun Baek; Seungyeon Kim; Suhyun Jeon; Minkyu Kim; Baekseung Kim; Nojun Kwak
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.04929) · [Code](https://github.com/robotuse-team/RobotUse) · [Project](https://robotuse-team.github.io/)
+- Tags: RobotUse, visual-action-interface, context-handoff, subagents, persistent-playbook, motion-planning, RoboLab
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+ロボットの標的・grasp候補・姿勢をエージェントが画像上で選び直し、geometry・motion planning・制御をbackendへ委ねる。subgoalの詳細履歴をsubagent内に保ち、結果を主agentへ返す。実行経験からpersistent playbookを改訂し、方策重みとbackendは固定する。
+
+**主な貢献**
+
+RoboLabの40課題120 episodeで54成功、45.0%となりCaP-Xより6.67ポイント高い。単一contextへの統合では成功率40.8%、token使用量4.9倍だった。実機Pandaの3課題は別の学習段階後にplaybookを凍結し各25試行成功を報告した。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2610.04929 のv1は2026-10-04 04:15:33 UTC、改訂なし。 https://arxiv.org/html/2610.04929v1 §4–5、App.A.6/A.7と公式 https://robotuse-team.github.io/ を確認。language agentは各task3trial、direct-actionは10trialで停止規則も異なるsystem比較。改訂段階の19/40→22/40は別系列。実機3課題の初回成功まで学習後の25trialはzero-shot成功率ではない。RobotUseはCaP-XよりAPI費用/時間を多く使う。公式repoのsrc/agent/prime\_agent.py等と https://github.com/robotuse-team/RobotUse/blob/main/LICENSE のApache-2.0を独立確認。公開releaseはnative RoboLabでPanda adapter未包含、依存assetの非商用条件は別。HFリンクはpaperページであり重み配布ではない。専用重みunknown。PDF未取得。
 
 ### LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation
 

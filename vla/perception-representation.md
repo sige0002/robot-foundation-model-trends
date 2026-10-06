@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
+
+### Encoded but Not in Control: Revealing the Grounding Gap in Vision-Language Robot Policies
+
+- ID: `VLA-0157`
+- Published: 2026-10-05
+- Authors: Shaohan Jiang; Jiahang Cao; Qiduo He; Fengting Deng; Kun Wu; Jingkai Sun; Jiaxu Wang; Qiang Zhang; Qihao Zheng; Chunfeng Song; Ping Luo; Andrew F. Luo
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06235)
+- Tags: instruction-grounding, scene-prior, target-replacement, linear-probe, action-lens, VLA-WAM-evaluation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+同一場面で有効な対象物だけを指示変更し、VLA/WAMが場面から推測した動作に従うか言語意図に従うかを診断する。行動lens・probe・attention・表現分解で、対象情報の符号化と実際の制御を分けて調べる。
+
+**主な貢献**
+
+LIBERO-Objectの変更対象成功率はπ0.5 11.5%、GR00T N1.7 0.5%、FastWAM 0%、LingBot-VA 1.3%。実機2 VLAでも新しい指示対象は5.8%・3.3%に留まり、probeで読める対象情報が選択を制御するとは限らないことを示す。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-10-05 12:37:55 UTC、改訂なし。本文 https://arxiv.org/html/2610.06235v1 の§3–7とAppendix Aを選択読解。4モデルをsimulation、2 VLAを6実機sceneで評価。代替対象が可視・到達可能な設定に限定し、attention/probeは因果機構の証明とは扱わない。WAMも評価するが統合modelを提案しないためvla/perception-representation、横断tagを付与。公式専用実装・重み・ライセンスは未確認。
+
+### What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions
+
+- ID: `VLA-0155`
+- Published: 2026-10-05
+- Authors: Sripad Karne; Arjun Balaji
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.05818)
+- Tags: semantic-safety, implied-harm, text-guard, linear-probe, instruction-evaluation, π0.5
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+ロボットの動作・物体・場面を固定し、指示された理由の有害性と明示度だけを変える安全性評価。text guardと内部表現probeを同じ指示に適用し、有害な目的の検出と実行の関係を調べる。
+
+**主な貢献**
+
+π0.5は有害性の明示度を変えても約95–97%で動作を完遂し、暗示された害を多くのguardが見逃した。2系列のモデルでは、言語/VLMからロボット後学習後に有害意図のprobe識別性能が低下した。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-10-05 05:11:58 UTC、改訂なし。本文 https://arxiv.org/html/2610.05818v1 の§3–6とTable 1を選択読解。1つの模擬kitchen、5タスク、51理由、2 VLAに限定。OpenVLA-OFTは無害理由付きでも失敗し、拒否能力とは解釈しない。probeの語彙依存と少数negativeによる閾値不安定性あり。SPAIS 2026 workshop審査中。公式実装・専用重み・ライセンスは未確認。
 
 ### Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models
 
@@ -55,6 +105,31 @@ LIBERO-10でπ0.5とSmolVLAへの断続的UADA攻撃を評価し、条件付き�
 - Checked: 2026-10-05 · Review: needs-review
 - identity照合一致なし。v1: https://arxiv.org/abs/2610.02784 (2026-10-02 04:19:13 UTC、改訂なし)。HTML §3/4/App.F選読: https://arxiv.org/html/2610.02784v1 。100simulation/20実機episode per task、各50demo。実機USB挿入は30%でFTP-1と同率。実機対象は視覚型触覚sensor付き平行jawのみで、巧緻手・別sensor・高周波触覚・力制御は未評価。著者リンク https://simpletouch-robot.github.io/ はweb readで2度取得失敗し、直接の公開GETでも2026-10-05時点HTTP 404、実際の公開実装/重み/ライセンスを独立確認できずunknown、project到達性をneeds-review。論文ライセンスと実装を分ける。PDFファイル未保存。
 
+### SocialVLA: A Social Perception Gateway for Human-Reaction-Based Failure Detection and Recovery in VLA Manipulation
+
+- ID: `VLA-0164`
+- Published: 2026-10-01
+- Authors: Sofya Konstantinova; Miguel Altamirano Cabrera; Artem Lykov; Dzmitry Tsetserukou
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.02360)
+- Tags: SocialVLA, human-reaction, runtime-intervention, audio-video-fusion, VLA-hold, participant-directed-recovery
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+人間の発声・表情・明示停止語を局所検出し、ロボットへの関連性を加えた非同期first-event融合でVLAを停止する。停止後の訂正発話を記録し、人間の明示要求で継続・再試行・指示変更を行う、方策非依存の社会知覚gatewayを提案する。
+
+**主な貢献**
+
+G1実機の15参加者・238反応episodeの凍結offline replayでrecall 54.6%、precision 69.5%。未見参加者1名では59.5%／91.7%、反応開始から物理holdまで中央値1.021秒。検出対象は人間が感じた介入必要性であり、全物理故障や認証済み安全性を評価したものではない。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2610.02360 のv1は2026-10-01 18:36:35 UTC、改訂なし。 https://arxiv.org/html/2610.02360v1 §III、IV/V、VIIを確認。III-Hで再開は参加者の明示操作、post-stop transcriptはmotion発行不可。自律planner/WAMを持たないためvla/perception-representation。prospectiveは22TP/2FP/15FN、hold latencyは反応検出とgate後の物理遅延を区別し、反応→holdの標本は14。false-stop率は非介入344.18秒に基づき不確実性が大きい。文化・年齢等の一般化は未確立、独立emergency stopを要する。正式題名/著者検索で公式実装、専用重み、実装ライセンスを未確認、unknown。PDF未取得。
+
 ### Continuous Conditioning of VLAs with Augmenting EMG and Visual Task Descriptors
 
 - ID: `VLA-0136`
@@ -79,6 +154,31 @@ SO-101の実機で三参加者別SmolVLAを評価し、RoboCasaの16課題では
 
 - Checked: 2026-10-02 · Review: verified
 - arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.01794v1 のIII–IV節・付録VI-Aを確認。実機筋電条件とシミュレーション視覚注釈を区別。IROS WORLDS Workshop 2026発表はarXivコメントの記載のみなのでvenue=arXiv。本文リンクで専用実装・重み・実装ライセンス未確認。LeRobot/VLAbの利用を本研究の公開状態へ転用しない。PDF未取得。
+
+### Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics
+
+- ID: `VLA-0163`
+- Published: 2026-09-30
+- Authors: Songhua Yang; Ziyu Liu; Yuanwei Liu; Xuetao Li; Xuanye Fei; He Huang; Zheng Wang; Miao Li
+- Venue: ICRA 2026
+- Links: [Paper](https://arxiv.org/abs/2609.39178)
+- Tags: adversarial-robustness, physical-object, security-evaluation, sim-to-real, RoboTwin, Pi0, RDT
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+物理的な視覚攪乱物体に対するVLAの脆弱性をsimulationと実機で評価する。軌跡・タスク遂行・動作制御への影響を測り、複数cameraでの見え方とsim-to-realの効果保持を比較した。
+
+**主な貢献**
+
+Pi0/RDTのRoboTwin 13選択課題で成功率が31.2–39.9ポイント低下。実機Aloha 5課題ではRDTが43.2%から17.6%、Pi0が60.2%から28.4%。実機に保持された攻撃効果比は81.4%・82.2%。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-09-30 07:34:24 UTC、改訂なし。ICRA 2026採択はarXiv著者commentで確認し、publisher proceedingsは未確認。本文 https://arxiv.org/html/2609.39178v1 の§III、IV-A/FとTable I/IVを選択読解。simulationは50中13選択課題、各10seed。81.4–82.2%はsimulationの効果に対する保持率で、成功率の絶対低下ではない。2モデルと指定環境への評価で普遍的な安全性結論とは扱わない。公式実装・重み・実装ライセンスは未確認。
 
 ### GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments
 

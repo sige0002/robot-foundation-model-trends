@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-72 records · 正本: [papers.csv](../papers.csv)
+76 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 29 |
-| [dynamics](dynamics.md) | 7 |
+| [world-representation](world-representation.md) | 31 |
+| [dynamics](dynamics.md) | 8 |
 | [action-coupling](action-coupling.md) | 15 |
-| [planning](planning.md) | 15 |
+| [planning](planning.md) | 16 |
 | [temporal-modeling](temporal-modeling.md) | 6 |
 
 ## 論文
 
+- 2026-10-05 · [SimForcing: Distilling Simulation Motion Priors into Real-Domain Robot World Models](dynamics.md) · `WAM-0076`
+- 2026-10-02 · [What Should World Models Forget? Stratified Retention for Continual Adaptation](world-representation.md) · `WAM-0078`
+- 2026-10-02 · [Keeping JEPA World Models Plannable When Little of the Frame Moves](planning.md) · `WAM-0077`
 - 2026-10-02 · [PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation](action-coupling.md) · `WAM-0074`
 - 2026-10-02 · [XGenAct: Geometry-Enhanced World Action Models through Cross-Task Generation](action-coupling.md) · `WAM-0073`
 - 2026-10-02 · [AVL-JEPA: Preventing Causal Dynamics Information Collapse In Joint Embedding Predictive Architecture World Models](world-representation.md) · `WAM-0072`
@@ -34,6 +37,7 @@
 - 2026-09-29 · [Rethinking Representations for World-Action Modeling](world-representation.md) · `WAM-0069`
 - 2026-09-29 · [One from Infinity: Actualizing Futures from Pretrained World Models into Robot Actions](action-coupling.md) · `WAM-0060`
 - 2026-09-29 · [Anisotropic Representations Improve Planning in JEPA World Models](world-representation.md) · `WAM-0055`
+- 2026-09-28 · [WM-VLM: Probing Internal World Models for Interleaved Visual-Textual Reasoning](world-representation.md) · `WAM-0075`
 - 2026-09-28 · [Efficient World Action Model Inference with Adaptive Intermediate States](action-coupling.md) · `WAM-0063`
 - 2026-09-26 · [What Must a World Model Distinguish for Planning?](planning.md) · `WAM-0051`
 - 2026-09-26 · [Adaptive Latent Capacity for World Models](world-representation.md) · `WAM-0012`

@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-29 records · Published date 降順（同日 ID 降順）
+31 records · Published date 降順（同日 ID 降順）
+
+### What Should World Models Forget? Stratified Retention for Continual Adaptation
+
+- ID: `WAM-0078`
+- Published: 2026-10-02
+- Authors: Nishit Anand; Ramani Duraiswami; Dinesh Manocha
+- Venue: arXiv; NeurIPS 2026 Continual World Models Workshop (author-reported acceptance)
+- Links: [Paper](https://arxiv.org/abs/2610.03713) · [PDF](https://arxiv.org/pdf/2610.03713)
+- Tags: supporting-foundation, position-paper, no-experimental-validation, continual-world-models, stratified-retention, physical-invariants
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+継続適応するロボット世界モデルの表現設計を支える立場論文。物理・幾何・因果の不変知識と、室内配置・物体位置など環境変化で更新すべき事実を区別し、真であり続ける時間尺度で保持を階層化する。古い正解への成績低下だけでは、適切な更新と破局的忘却を区別できないと論じる。
+
+**主な貢献**
+
+不変条件の回帰テストと、変化した事実を反映するまでの改訂遅延を別々に報告するdifferential retentionを提案。ロボットの物理・因果表現を維持しつつ配置を更新する評価観点を与える。新モデル・学習アルゴリズム・実験結果は提示せず、時間尺度の推定や幾何・因果probeの実装は未解決。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。arXiv書誌・v1初稿日2026-10-02を確認、後続版なし。Workshop採択はarXivの著者コメントに基づき、会議公式採択一覧を独立確認したものではない。HTML https://arxiv.org/html/2610.03713v1 の§3、§5、§7を確認。身体モデル・物体永続性・行動効果・幾何一貫性を守りつつ環境配置を更新する論点がロボット世界表現に関連するため、supporting-foundation/position-paperとして収録。著者は実験結果のないposition paperと明記し、厳密なprobeが現時点で揃うのは物理の一部のみと限定。公式コード・重み・実装ライセンス・projectは未確認でunknown。論文のCC BYライセンスは実装ライセンスと区別。PDFリンクを確認、ダウンロードなし。
 
 ### AVL-JEPA: Preventing Causal Dynamics Information Collapse In Joint Embedding Predictive Architecture World Models
 
@@ -33,7 +58,7 @@ TwoRoom・PushT・OGBench Cube・Reacherでclean制御を保ち、視覚摂動�
 ### Token-World: World Modeling in Vision-Language Model Token Space for Robot Manipulation
 
 - ID: `WAM-0068`
-- Published: 2026-09-30
+- Published: 2026-09-30 · Updated: 2026-10-05
 - Authors: Chuyao Fu; Xiaowei Chi; Yuhan Rui; Yu-kai Wang; Zezhong Qian; Xiaojie Zhang; Yunfan Lou; Kevin Zhang; Kuangzhi Ge; Chak Wing Mak; Zhiyang Chen; Athena Zhuoming Zhong; Hongyang Chen; Haoran Li; Yike Guo; Sirui Han; Shanghang Zhang
 - Venue: arXiv
 - Links: [Paper](https://arxiv.org/abs/2610.00575) · [Project](https://chuyaofu.github.io/Token-World/)
@@ -52,8 +77,8 @@ VLAが使うVLM画像tokenを空間配置を保って圧縮し、行動条件付
 
 **確認記録**
 
-- Checked: 2026-10-04 · Review: needs-review
-- arXiv v1初稿・著者、HTML https://arxiv.org/html/2610.00575v1 のIII–V節を確認。0.359秒/予測観測はPPU-ZW810E上のsimulation latency、成功はrenderしたrolloutの手動判定。公式projectがリンクする https://github.com/ChuyaoFu/Token-World はmain READMEのみで実装を準備中と明記。重み・実装ライセンス未確認。著者Hongyang ChenはarXiv表記を採用、projectのHongyang Chengとの綴り差は次回著者/改訂で確認。ICRA2027は投稿中のarXivコメントなのでvenue=arXiv。PDF未取得。
+- Checked: 2026-10-06 · Review: needs-review
+- canonical arXiv照合で既存WAM-0068を確認しID/初稿日を維持。https://arxiv.org/abs/2610.00575 のv1は2026-09-30 18:45:32 UTC、v2は2026-10-05 03:46:29 UTC。HTML https://arxiv.org/html/2610.00575v2 のIII–V節を選読。S-VAEは108個のtoken配置を維持し2560→16channelへ圧縮、凍結codecと因子化時空間attention/GRUで動力学を学ぶ。既存の相関0.794と0.359秒/予測観測はv2でも維持。後者はbatch1のPPU-ZW810E、RGB比較50step対Token-World16stepで、decoder/再encoderを含むsimulation latency。3つのStarVLAは共通Qwen3-VL backbone、成功はrender rolloutの手動判定。公式 https://chuyaofu.github.io/Token-World/ のリンク先 https://github.com/ChuyaoFu/Token-World はmain READMEのみで実装準備中、code unavailable、重み/実装license unknown。absのHongyang Chenとv2本文/projectのHongyang Chengの綴り差が残るためabs表記とneeds-reviewを維持。ICRA2027は投稿中、venue=arXiv。PDF未取得。
 
 ### CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization
 
@@ -129,6 +154,31 @@ DINO特徴を制御向けに較正し、時間表現ボトルネックを通し�
 
 - Checked: 2026-10-01 · Review: verified
 - arXivのv1初稿・著者、HTML本文3–4節・評価条件と公式projectを確認。理論の条件と四環境の比較を一般保証と区別。確認した一次資料では公式研究実装・重み・実装ライセンスの提供先を確認できずunknown。
+
+### WM-VLM: Probing Internal World Models for Interleaved Visual-Textual Reasoning
+
+- ID: `WAM-0075`
+- Published: 2026-09-28
+- Authors: Yuheng Zha; Yilei Wang; Qiyue Gao; Junrong Chen; Yujia Wu; Zhengfeng Lai; Zhengzhong Liu; Eric P. Xing
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.34826) · [PDF](https://arxiv.org/pdf/2609.34826) · [Code](https://github.com/yuh-zha/WM-VLM)
+- Tags: supporting-foundation, internal-world-model, visual-textual-reasoning, mental-rotation, synthetic-spatial-reasoning, no-robot-evaluation
+- Model size: 9.248B total (Qwen2.5-VL-7B-Instruct backbone; 0.959B generation branch)
+- Open-source: unknown
+- Code / weights / license: available / available / unknown
+
+**概要（日本語）**
+
+ロボティクスを支える空間表現・推論の基盤研究。Qwen2.5-VLに浅い生成分岐を加え、言語で記述した心的操作の結果を連続視覚トークンとして予測し、次の推論へ戻す。生成を先に学び、その後に生成状態を使う二段階学習を、合成2D/3D回転課題と迷路で検証した。ロボット制御は評価していない。
+
+**主な貢献**
+
+軽量Mixture-of-Transformersとflow matchingにより、内部世界モデルを交互の視覚・言語推論へ接続。Tetris-2D-IDはSFTの48.25%から87.50%へ39.25ポイント改善し、視覚トークンの除去・破壊で成績が低下した。制御された合成課題での結果であり、実機への転移は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。arXivの書誌・v1初稿日2026-09-28を確認、後続版なし。HTML https://arxiv.org/html/2609.34826v1 の§3、§4、Appendix C/Table 7-8を確認。VSP-Navは50.00%で、SFT43.17%を上回るがLatentUM52.00%を下回る。公式著者リポジトリは同一著者・論文IDを明記し実装を公開。GitHubのルートとREADMEに実装ライセンスの明記を確認できず、open\_source=unknown。著者リンクの重み https://huggingface.co/yzha/WM-VLM-Tetris-2D と https://huggingface.co/yzha/WM-VLM-Tetris-3D は公開・非gatedのAPIメタデータとsafetensorsファイル一覧を別途確認。両Hub model cardのlicenseはMIT、重みの宣言として記録しGitHub実装ライセンスとは区別。PDF URLはabsページのリンク先を確認、PDF・重みはダウンロードしていない。
 
 ### Adaptive Latent Capacity for World Models
 

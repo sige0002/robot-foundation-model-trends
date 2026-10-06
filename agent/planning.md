@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-6 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
+
+### Mind the Refinement Gap: When Safe High-Level Robot Plans Produce Unsafe Executions
+
+- ID: `AGENT-0129`
+- Published: 2026-10-02
+- Authors: Stabak Das; Priyesh Ranjan; Xiangfang Li; Lijun Qian
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.02662)
+- Tags: refinement-gap, semantic-graph, LTL, trace-contract, RoboGuard, SPINE, safety-audit
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+高水準計画が省く中間航行や暗黙的動作効果を、semantic graphと実行意味から展開したtraceで安全monitorへ渡す。RoboGuardで同じLTL仕様のsurface/refined判定を比較し、計画・接地・検証・interfaceの失敗を分離して抽象化境界を監査する。
+
+**主な貢献**
+
+制御監査28例のうち標的12例すべてでsurfaceは安全、refinedは危険となり、対照16例は期待どおりだった。SPINEとの14例ではfalse-safe 2件、明示的阻止2件、control pass 5件、interface error 5件。trace展開で監視の見落としを露出する軽量診断を示した。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2610.02662 のv1は2026-10-02 01:31:57 UTC、改訂なし。 https://arxiv.org/html/2610.02662v1 §1、§3–4を確認。RoboGuard e487f83／SPINE e776a8a、静的graph上のoffline auditで、各E2E例1trial。連続dynamics・知覚誤り・衝突・物理実行は扱わない。平均checker時間0.54→0.69msはplanning/grounding/graph構築を除く。inspect引数の5構文失敗は安全判定分母に混ぜない。正式題名/著者検索で本監査の公式コード・重み・実装ライセンス未確認、既存基盤のライセンスを継承して推定しない。PDF未取得。
 
 ### CORNAV: Construction-Aware Reasoning for Robot Navigation on Active Worksites
 
@@ -29,6 +54,31 @@
 
 - Checked: 2026-10-05 · Review: verified
 - 本文取得前にrevisionなしarXiv ID/DOIと正規化/類似タイトルをローカル比較し一致なし。https://arxiv.org/abs/2610.03622 で正式著者、v1 2026-10-02 17:19:05 UTC、改訂なしを確認。HTML https://arxiv.org/html/2610.03622v1 の§IIIと§IV-A/C/D/Eおよび結論を選択読解。量的評価はGo2で収集したRGB/depth/pose記録上のオフラインplanning。Go2/G1でのfull pipeline live deploymentは定性的実演のみ。89trial中15はstart/goalがhard-zone内のためinfeasible、違反0は74のfeasible経路に限定。hard-zoneの排除はA\* occupancy制約による。LLMはsoft-zoneを0.7閾値で格上げし、学習VLA/WAMではないのでagent/planningとした。soft-zoneには回避不能なら通過を許す。§IV-Eのmislabel safety評価と公開検索を確認、公式実装/project・専用重み・実装ライセンスは未確認のためunknown。PDF未取得。 App/Table VのTSRは対象grounding段階に依存し、schedule/safetyの有無で同値となる設計で、54requestに対するHOV-SG baselineは7.4%。13.0%はw/o Blueprint ablationであり、72.2%をend-to-end live-navigation成功率とは扱わない。LLM安全テストは8case各8callの限られた条件。
+
+### Foundation-Model-Guided Topology-Aware Semantic Risk Fields for Manipulation
+
+- ID: `AGENT-0127`
+- Published: 2026-09-29
+- Authors: Giung Lee; Weihang Guo; Lydia E. Kavraki
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.36640)
+- Tags: semantic-risk, geodesic-field, topology-aware-shielding, LLM-prior, CHOMP, supporting-agent-planning
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+基盤モデルが物体対ごとの6方向risk重みと減衰距離を与え、3D占有形状の障害物を避けるgeodesic距離と遮蔽でrisk場を構成する。衝突制約を維持した従来plannerへ、意味的な曝露を抑える追加costとして組み込む。
+
+**主な貢献**
+
+静的な家庭simulation3場面で、人が定義した参照risk場に対する軌跡曝露を衝突回避のみより減らした。RTX4090の2cm解像度で20物体risk場56.9msを報告。曝露costと実際の損害・事故確率は別で、動的環境/実機安全性は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。本文前のcanonical arXiv/DOI・正規化/類似タイトル照合一致なし。https://arxiv.org/abs/2609.36640 : v1 2026-09-29 03:46:07 UTC、改訂なし。HTML https://arxiv.org/html/2609.36640v1 のIII/IV/V/VI節を選読。WAM/VLA方策ではなく基盤モデルpriorを従来CHOMP型plannerへgroundingする支援研究。表現とplanning比較はsimulator姿勢・手動ラベル・共有oracle risk重みを用いて知覚とprior生成を分離。別のprior比較は135物体対を各モデル1回生成、30対/180方向の人評価参照で検証。risk重みは確率ではなく、near-no-goも有限soft costで数学的禁止領域ではない。56.9msは知覚後のfield構成で知覚・表示・保存を除き、初回LLMfallback中央値2.11秒。静的近接場面・較正・固定frame方向への依存。一次論文/著者題名検索で公式実装・重み・project・実装license未確認unknown。PDF未取得。
 
 ### Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning
 

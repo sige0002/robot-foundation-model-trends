@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
+
+### SimForcing: Distilling Simulation Motion Priors into Real-Domain Robot World Models
+
+- ID: `WAM-0076`
+- Published: 2026-10-05
+- Authors: Xiaodong Wang; Tianle Li; Chuanxin Song; Junliang Xie; Zhanmi Zhong; Suiying Wu; Peixi Peng
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06598) · [PDF](https://arxiv.org/pdf/2610.06598) · [Code](https://github.com/Wang-Xiaodong1899/SimForcing) · [Project](https://wang-xiaodong1899.github.io/SimForcing/)
+- Tags: action-conditioned-video, sim-to-real, latent-motion-distillation, simulation-conditioning, policy-pretraining
+- Model size: Wan2.2-TI2V-5B video backbone + 1B Action DiT
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+シミュレーション教師の隣接潜在状態の差分を実映像の生徒へ蒸留し、行動に応じた運動知識を移すロボット世界モデル。複数ブロックへの条件付けとdropoutで不正確なシミュレーション予測への依存を抑え、推論時は同一の生徒がシミュレーション条件と実領域映像を生成する。Bridge、InternData-A1、下流LIBERO方策学習で検証。
+
+**主な貢献**
+
+外見の差を避ける潜在運動蒸留と、シミュレーション条件のCFGを統合。Bridgeでは身体性事前学習を使わない比較群内でPSNR・SSIM・LPIPS・FVDが最良だがFIDは最良ではない。下流のaction-only学習で平均LIBERO成功率が82.6%から89.2%へ改善。推論時に別の教師モデルは不要だが、運動条件の生成と実映像生成は必要。
+
+**確認記録**
+
+- Checked: 2026-10-06 · Review: verified
+- 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。arXiv書誌とv1初稿日2026-10-05を確認、後続版なし。HTML https://arxiv.org/html/2610.06598v1 の§3-5、Table 1/5、Appendix A.3/A.5を確認。研究の主対象は行動条件付き映像予測で、事前学習中に行動を生成するモデルではないためWAM/dynamics。教師の合成データはロボット運動に集中し、物体相互作用と背景を除く。標準設定は初期腕領域のsegmentationを要し、計測条件による遅延の制約も記載。論文からリンクされた公式実装、projectを確認。実装MIT: https://github.com/Wang-Xiaodong1899/SimForcing/blob/main/LICENSE 。READMEは第三者コードの元ライセンスを保持しWanのApache-2.0も同梱と明記。READMEの重み・学習手順とprojectを別に確認したが、学習済みSimForcing重みの公開配布先は未確認でunknown。コードにはsimulation renderingが含まれないと明記。PDFリンクを確認、ダウンロードなし。
 
 ### LAWM-3D: Learning 3D-Aware Latent Actions from Human Videos for Generalizable Robot World Models
 
