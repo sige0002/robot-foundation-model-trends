@@ -3,7 +3,132 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-15 records · Published date 降順（同日 ID 降順）
+20 records · Published date 降順（同日 ID 降順）
+
+### RealtimeWAM: How Fast Can I Run My World Action Model?
+
+- ID: `WAM-0085`
+- Published: 2026-10-07
+- Authors: Huanan Liu; Ye Li; Kangye Ji; Xiaoyu Chen; Hanyun Cui; Yutian Shen; Yuan Meng; Chenglei Wu; Jingyan Jiang; Bo Li; Zhi Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10079) · [Project](https://anonymous.4open.science/w/realtimewam/)
+- Tags: RealtimeWAM-training-free, dependency-aware-parallelism, token-reuse, motion-adaptive-refinement, inference-acceleration
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+WAMの観測処理と予測を層単位で重ね、視覚的に安定したtokenとTransformer残差を再利用する訓練不要の推論方式。予測された移動量に応じて追加計算を配分し、FastWAMとOpenWAMのシミュレーションおよび5つの実機操作で遅延と成功率を評価した。
+
+**主な貢献**
+
+並列実行とhardware-awareな計算再利用を協調させる。著者の改造48GiB RTX 4090測定で平均24.09/63.09 ms、native比8.90/10.67倍高速化。速度向上は複数最適化の合算で、sensor取得・通信・robot実行等を含まない。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・書誌: https://arxiv.org/abs/2610.10079 。HTML §§3–4、Appendix C.1/E.1–E.2を精読: https://arxiv.org/html/2610.10079v1 。公式projectは動画・結果を掲載するが実装/重み/実装ライセンスは確認できずunknown。2つのWAM backbone、5実機課題の範囲。motion gateはXYZ変位でrotation/gripperを使わず、10F予測との一致は真の行動正しさの保証ではない。2610.06617もRealtimeWAMを名乗るが、著者・arXiv・方式が異なる独立論文。PDFは未取得、URL欄は未検証のため空欄。
+
+### ΔWAM: Distilling Action Tangent Fields into World Action Models
+
+- ID: `WAM-0084`
+- Published: 2026-10-07
+- Authors: Ke Wu; Hanwen Huang; Bo Gu; Kaizhao Zhang; Xiangting Meng; Yupeng Zheng; Zijun Xu; Jieru Zhao; Wenchao Ding
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09734)
+- Tags: DeltaWAM, action-tangent-fields, Residual-VAE, counterfactual-action-probes, robustness, single-pass-world-conditioning
+- Model size: Wan VideoDiT 5B; ActionDiT size unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+観測からの残差として未来VAE latentを保持し、action-conditioned world modelへの局所行動摂動からAction Tangent Fieldsを抽出する。その方向の予測誤差を追加重み付けし、実デモの未来を学習するWAMへ行動依存性を蒸留する。推論は単一world passと行動flow生成を組み合わせる。
+
+**主な貢献**
+
+静的外観を捨てず、局所的な行動変化に応答する予測方向へ教師信号を集中。著者評価でLIBERO-Plus pooled成功87.8%。RoboTwin 2.0-Plusのcamera摂動19.1%が弱点で、局所近傍外の観測変化への限界が残る。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 書誌・初稿: https://arxiv.org/abs/2610.09734 。HTML §§3–4.4、Conclusionを精読: https://arxiv.org/html/2610.09734v1 。§3でWan VideoDiT-5Bを確認。論文・arXivに公式code/project/weightsリンクは確認できず、個別の実装ライセンスもunknown。制約: embodiment別ACWMへの依存、局所Taylor近似、camera/大きいlayout変化に弱い。実機は2platform/5task、task別訓練、各task-condition 3試行のprogress scoreで成功率と区別。HTMLが参照する一部appendixは表示されず未精読。PDFは未取得、URL欄は未検証のため空欄。
+
+### AutodidactWAM: Cross-Modal Self-Distillation from Generated Video to Robot Actions
+
+- ID: `WAM-0081`
+- Published: 2026-10-06
+- Authors: Sergei Kurchev; Iaroslav Kolomiets; Miguel Altamirano Cabrera; Artem Lykov; Dzmitry Tsetserukou
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.08119)
+- Tags: AutodidactWAM, cross-modal-self-distillation, generated-video, RoboHaMeR, inverse-kinematics, Flow-DPO, dexterous-humanoid
+- Model size: Cosmos 3 Nano ~15.8B; 16.9M trainable adaptation parameters
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+embodiment適応済みCosmos 3の生成動画から、凍結hand-pose推定とIKで行動教師を復元し、同じ生成のnative行動と組にしてaction関連層を追加学習する。動画をteacher-forcingし、SFT・Flow-DPO・Cartesian軌道anchorを比較。自己蒸留段階では新しいtask別teleoperationを集めない。
+
+**主な貢献**
+
+生成動画と行動のずれを行動側の自己蒸留で部分修正。著者G1評価ではDPO+SFT+DTWがOreo/未見pink物体でfull-task 20/30%、plain DPOは0%。動画由来教師の直接実行より成功率が低く、preference accuracy 1.0は実機能力を保証しない。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 書誌・初稿: https://arxiv.org/abs/2610.08119 。HTML §§III、V–VIIIを精読: https://arxiv.org/html/2610.08119v1 。arXiv/本文の公式code・project・weights配布先は未確認、実装licenseもunknown。論文license CC BY-NC-NDと実装を混同しない。制約: 1embodiment/3objects、20試行/condition、Oreoのみ自己蒸留、extractor biasと生成artifact。先行G1 LoRA適応corpusは§V-Aで約90%Oreoと記載され、新規デモなしは自己蒸留段階に限る。matching video-side成功スコア未実施。104–137秒/chunkのregeneration latencyでreal-time性能とは区別。PDF未取得・URL未検証のためpdf\_url空欄。
+
+### OpenWAM: An Open Framework for Composable World-Action Models
+
+- ID: `WAM-0080`
+- Published: 2026-10-06
+- Authors: Heng Yu; David D. Yuan; Juze Zhang; Changan Chen; Yao Feng; Michelle Baldonado; Steve Cousins; Li Fei-Fei; Jiajun Wu; Ehsan Adeli
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.07922) · [PDF](https://arxiv.org/pdf/2610.07922) · [Code](https://github.com/OpenWAM/OpenWAM) · [Project](https://openwam.stanford.edu/)
+- Tags: OpenWAM-Stanford, causal-robot-video, configurable-MoT, generation-order, local-context-dynamics, counterfactual-transitions, component-composition
+- Model size: Wan2.2 5B video backbone; action expert size unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+共通の因果的ロボット動画backboneとMoTで、joint・video先行・action先行・decoupled生成を比較するframework。独立した局所contextのinverse/forward dynamicsも学習し、同一初期状態からsimulationで分岐させた反実仮想transitionを、予測器交換と行動条件付き未来識別に使う。
+
+**主な貢献**
+
+backboneと訓練interfaceを揃えたinteraction比較、および局所dynamicsの再利用を検証。著者評価でcounterfactual混合IDMは4target平均84.0%。target動画予測器は適応済みであり全model zero-shot転移とは区別。公開重みは動画事前学習部分。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 書誌・初稿: https://arxiv.org/abs/2610.07922 。HTML §§3–5を精読: https://arxiv.org/html/2610.07922v1 。初preprintは2026-10-06、code/projectの2026-06-04 releaseとは別（論文header明記）。実装AGPL-3.0-only: https://github.com/OpenWAM/OpenWAM/blob/main/LICENSE 。動画重みmodel\_state.pt一覧確認: https://huggingface.co/OpenWAM-Stanford/OpenWAM-Pretraining/tree/main ; 重みlicense表示なしでunknown、policy checkpoints/dataはREADMEで準備中。制約: dynamics再利用は主にsimulation/4targets、target動画model適応あり、短horizon FDM、単一multi-objective checkpointの全mode性能未確立。別研究OpenWAM (2609.07398, Wang et al.)と同名だが独立した著者/ID（§2.2/ref79）。PDF URLは公式README引用で確認、PDF自体未取得。
+
+### RealtimeWAM: One-Step Asynchronous World Action Models
+
+- ID: `WAM-0079`
+- Published: 2026-10-05
+- Authors: Chengtao Lv; Jinyang Du; Shuyi Feng; Yang Yong; Shiqiao Gu; Shunzi Yang; Ruihao Gong; Shen Ren; Tianwei Zhang; Wenya Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06617) · [Code](https://github.com/ModelTC/LightX2V/tree/main/examples/realtimewam)
+- Tags: RealtimeWAM-one-step, teacher-anchored-consistency-distillation, cross-expert-wavefront-pipelining, MoT, inference-acceleration
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+MoT型WAMの行動expertを、局所consistency lossにteacherの多段rollout終端を加えるTACDで1stepへ蒸留する。動画KVをblock単位で共有するCEWPでexpert間待機を減らし、Fast-WAM/Faster-WAMの成功率と推論時間を比較した。
+
+**主な貢献**
+
+teacher終端の固定基準とblock-wise並列実行を組み合わせるpost-training高速化。著者H100測定で12.2/16.1 ms、native比24.55/13.56倍。CUDA Graph・kernel最適化込みで、VAEを含みtext encodingは除外。実機foldingは定性的例。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 書誌・初稿: https://arxiv.org/abs/2610.06617 。HTML §§4–5、Appendix E/F.5–F.6を精読: https://arxiv.org/html/2610.06617v1 。公式READMEにinference/evaluation codeとcheckpoint提供、training code未公開を確認。実装Apache-2.0: https://github.com/ModelTC/LightX2V/blob/main/LICENSE 。checkpoint先 https://huggingface.co/lightx2v/RealtimeWAM はread toolで取得できず、実ファイル・重み条件を独立確認できないためweights unknown。具体的追跡: HF files/model cardを確認しlicense/重みの提供範囲を更新。MoTの独立したvideo KV前提、H100中心のkernel、他GPUのgain差。2610.10079とは著者・ID・手法が異なるので別論文として保持。PDFは未取得、URL欄は未検証のため空欄。
 
 ### PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation
 
@@ -164,8 +289,8 @@ RGB-Dと固有感覚から関節・物体中心・接触点の疎な3D骨格を�
 - Links: [Paper](https://arxiv.org/abs/2609.39870) · [Code](https://github.com/MagiclabRobotics/Magic-W0) · [Project](https://embodied.magiclab.top/works/wam/magic-w0/index.html)
 - Tags: 3d-geometry, structured-transition, cross-embodiment, flow-matching, future-semantics
 - Model size: unknown
-- Open-source: unknown
-- Code / weights / license: unavailable / unavailable / unknown
+- Open-source: true
+- Code / weights / license: available / unavailable / open-source
 
 **概要（日本語）**
 
@@ -177,8 +302,8 @@ RGB-Dと固有感覚から関節・物体中心・接触点の疎な3D骨格を�
 
 **確認記録**
 
-- Checked: 2026-10-06 · Review: needs-review
-- canonical arXiv照合で既存WAM-0070を確認しID/初稿日を維持。https://arxiv.org/abs/2609.39870 のv1は2026-09-30 14:49:55 UTC、v2は2026-10-03 14:49:17 UTC。v2 HTML https://arxiv.org/html/2609.39870v2 の§3、§5.2、§6.1/6.2/6.3、§7を選読し、Table 1の36.75/30.36%が公式projectの現行値と一致するためv1の27.10/20.84%から更新。42課題・公式完走軌跡の集計、ScoreとSRは別指標。ただしabs要旨はv2指定でも27.10を残すため書誌要旨/本文不一致をneeds-reviewに保持。Table 1/projectのOpen-source=Yesもrelease実態と不一致。2026-10-06確認の公式 https://github.com/MagiclabRobotics/Magic-W0 は.gitignore/LICENSE/README/assetsのみ、READMEはcode/checkpoints coming soon。リンク先は https://huggingface.co/XuhuaX/Magic-W0 にredirectしweights not yet availableを明記、code/weights unavailable。placeholder MIT https://github.com/MagiclabRobotics/Magic-W0/blob/main/LICENSE は公開実装の確認に代用せず実装license/open\_source unknown。巧緻手・触力覚は未評価、追加演算とVLA比速度差が課題。PDF未取得。
+- Checked: 2026-10-08 · Review: needs-review
+- canonical arXiv照合で既存WAM-0070を確認しID/初稿日を維持。https://arxiv.org/abs/2609.39870 のv1は2026-09-30 14:49:55 UTC、v2は2026-10-03 14:49:17 UTC、追加改訂なし。既存のv2 HTML https://arxiv.org/html/2609.39870v2 §3/5.2/6/7選読結果とTable 1のRoboDojo Score 36.75/SR 30.36%を維持。42課題・公式完走軌跡の集計でScoreとSRは別指標。abs要旨の27.10との差が残るためneeds-review、次回は改訂で整合するか確認。2026-10-08確認の同日付commit https://github.com/MagiclabRobotics/Magic-W0/commit/870051074695b5d22736223b01dda1d2e6607c5a のREADME、src/magic\_w0/modeling.py、configs/resources.json、docs/robodojo.mdを確認し、実装を伴うinference runtimeとRoboDojo adapterの公開をcode availableへ更新。READMEの更新欄はOct5だが確認したcommit日時はOct8、commit日時を初回公開日時とは同一視しない。学習/finetuning recipesは後日提供で、完全な学習再現releaseではない。同commitのLICENSEで独自実装MIT、NOTICEでrotation helperのApache-2.0と外部依存の別条件を確認しopen\_source=true。公式重みリンクは https://huggingface.co/XuhuaX/Magic-W0 にredirectしmodel cardはweights not yet available、FilesはREADME/.gitattributesのみ、weights unavailableを維持。HubのMIT表示はcheckpoint公開の証拠にしない。ローカル互換policy checkpointが必要なため公開codeだけで論文性能を再現できるとはしない。巧緻手/触力覚と追加演算の既存限界を保持。PDF/重み未取得。
 
 ### One from Infinity: Actualizing Futures from Pretrained World Models into Robot Actions
 

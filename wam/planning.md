@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-16 records · Published date 降順（同日 ID 降順）
+17 records · Published date 降順（同日 ID 降順）
+
+### Predicted Futures Are Not Enough: Learning Executable Goals for Robot Manipulation
+
+- ID: `WAM-0083`
+- Published: 2026-10-07
+- Authors: Tzu-Yu Chuang; Ching-Hsiang Chang; Yi-Hsiu Lee; Yi-Ting Chen; Min Sun; YuanFu Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09309) · [Code](https://github.com/Claire0730/executable-goals) · [Project](https://claire0730.github.io/executable-goals/)
+- Tags: Entity-Level-Goal-Readout, 3D-trace-world-model, SE3-goal, prediction-to-execution, pose-feedback, reproducibility-caveat
+- Model size: Planner 677.6M incl. frozen encoders; executor 0.8M
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+3D trace world modelの表現から、物体中心の回転予測と観測depthに基づく位置readoutでSE(3)の終端目標を明示的に学習する。episode開始時に固定した目標を小型Pose-Native Executorへ渡し、pose feedbackで20Hzの閉ループ操作を行う。
+
+**主な貢献**
+
+未来予測から制御用目標への学習interfaceを分離し、目標誤差・操作・位置摂動を評価。論文報告は5task平均79.69%とFranka転移。ただし公式公開記録は比較間のexecutor差、追加処理、simulation由来pose feedbackを開示しており、純粋なreadout効果としては未確定。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿: https://arxiv.org/abs/2610.09309 。HTML §§III–VIを精読: https://arxiv.org/html/2610.09309v1 。実装Apache-2.0: https://github.com/Claire0730/executable-goals/blob/main/LICENSE 。公式model card https://huggingface.co/Claire0730/executable-goals は縮小planner/student/teacher配布とApache-2.0を説明するが、public tree/APIおよびraw/resolve SHA256SUMSはいずれもread toolで取得できず、実配布ファイル・manifest・重み条件は独立確認できないためweights\_status=unknown。公開repoのevidence/01\_checkpoint\_registry.csvは元private-runのpath/size/hashであり、0.30GB releaseplannerの提供確認には使わない。追跡: public HF file一覧またはrelease SHA256SUMSで縮小plannerとstudent/teacherのfilename・size・SHA256を確認し、配布先の重みlicenseを別途照合する。公式 https://github.com/Claire0730/executable-goals/blob/main/docs/KNOWN\_ISSUES.md items15–19 とREPRODUCTION.mdを確認: Table IIに3executor、PickCube goal診断と実行は別bank/SAM2処理、psi token、simulator correspondence、1.27秒記録未配布。論文のshared-executor/追跡loop記述との不一致。追跡: 同一executor・同一readout/bank・非privileged pose条件の対照結果または著者訂正を照合。固定終端目標は軌道/contact制約やgoal更新を扱えない。PDF未取得・URL未検証のためpdf\_url空欄。
 
 ### Keeping JEPA World Models Plannable When Little of the Frame Moves
 

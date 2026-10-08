@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
+
+### CIRRA: Dual-Level Continual Instruction Reconciliation with Ongoing Execution for Embodied Robot Agents in Interactive Household Tasks
+
+- ID: `AGENT-0133`
+- Published: 2026-10-05
+- Authors: Ci Zhang; Enfu Nan; Arman Akbari; Lin Zhao; Li Wang; Chen Wang; Weiwei Chen; Yanzhi Wang; Geng Yuan
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.08862)
+- Tags: CIRRA, continual-instruction-reconciliation, execution-aligned-planning, interruptibility, CHIRP, humanoid, real-robot
+- Model size: Qwen3-8B compiler/judge; 4B and 32B ablations
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+進行中の家事へ新しい依頼が来た時、元のsubtask順序を維持したまま曖昧な指示をskill・場所へgroundingする。場所が一致する区間だけへ新subtaskを挿入し、LLMが依存関係と衝突を判定して融合・待機・中断・確認を選ぶ。
+
+**主な貢献**
+
+rule制約で既存の実行backboneと安全な中断境界を守り、LLMの自由な全体再計画を局所的なinstruction reconciliationへ限定。CHIRP benchmarkで言語compilerの誤りとschedule統合を分離。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-05、primary arXivはv1のみ。本文§3–5を選択読解: https://arxiv.org/html/2610.08862v1 。CHIRP text120episodeで8B DA74.2%; oracle仕様で100%。実機G1は2table/8 ImageWAM-fine-tuned skills、5combination×25trialでDA95.6%、中断compliance100%; grasp失敗trialは除外。改善は高level指示統合が主貢献なのでAgent/replanning、低level既存ImageWAM使用をHybrid化の根拠にしない。限定環境とcompiler/judge誤りが限界。公式著者homepage https://brankozz.github.io/ のGitHub/HF欄はplaceholderで実装・重みURLの証拠にならず、code/license/weightsはunknown。PDF未取得。
 
 ### CAPEX: Efficiently Distilling Foundation Model Behavior into Deployable Robot Policies through Experience-Adaptive Reasoning
 

@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-11 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### Co-Evolving Robot Orchestrators and Policies through Deployment
+
+- ID: `HYBRID-0125`
+- Published: 2026-10-06
+- Authors: Xilun Zhang; Maggie Wang; Erik Bauer; Hong-Xing Yu; Huang Huang; Jiajun Wu; Marco Pavone
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09228) · [Project](https://robo-cop.pages.dev/)
+- Tags: Robo-COP, deployment-time-learning, VLA-orchestration, skill-demonstration-curation, policy-verification, episodic-memory, real-robot
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLM orchestratorがVLAとscripted skillを組み合わせて実行し、失敗episode内の成功skillも学習例として抽出する。更新を必要と判断した時だけVLAをfine-tuneし、期待skillの改善を検証して採用・巻き戻しを決め、古い方策に依存する記憶を更新する。
+
+**主な貢献**
+
+単に固定VLAへ回復動作を追加するだけでなく、実行データのskill単位選別、訓練開始判断、candidate policyの検証、orchestrator記憶の改訂を連結してVLAとAgentを共進化。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿2026-10-06、v1。本文§3–5を選択読解: https://arxiv.org/html/2610.09228v1 。DROID π0.5＋Gemini 3.8 Flash orchestrator、RoboLab10タスク各100deployment trial後に50held-out初期化へ凍結評価; 平均73.8%対fixed-policy64.8%、実機3タスク38.3→50.0%。単一learning runで、自己実行で部分成功できるskillのみを学習; 実機resetは人手、訓練・curation・検証costが増える。orchestratorの推論・judge・scripted skill自体は固定。VLA呼出とAgent判断が実行時にも中心なのでHybrid/vla-agent。要旨の公式projectはcode提供を宣言するがweb取得失敗; 実装URL/license/checkpointを独立確認できずunknown。Follow-up: 公式projectから公開実装を辿りLICENSEとfine-tuned policy重みを確認する。PDF未取得。
 
 ### Recursive Video In-Context Learning for Agentic Robot
 

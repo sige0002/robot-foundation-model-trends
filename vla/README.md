@@ -3,18 +3,30 @@
 
 [← データベース](../README.md)
 
-64 records · 正本: [papers.csv](../papers.csv)
+76 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 9 |
+| [perception-representation](perception-representation.md) | 13 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
-| [action-system1](action-system1.md) | 22 |
+| [action-system1](action-system1.md) | 25 |
 | [memory-temporal](memory-temporal.md) | 5 |
-| [adaptation](adaptation.md) | 22 |
+| [adaptation](adaptation.md) | 27 |
 
 ## 論文
 
+- 2026-10-07 · [RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input](adaptation.md) · `VLA-0176`
+- 2026-10-07 · [Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models](adaptation.md) · `VLA-0175`
+- 2026-10-07 · [Do Vision-Language-Action Models Understand Instructions? A Mechanistic Interpretability Study on Language Grounding](perception-representation.md) · `VLA-0174`
+- 2026-10-07 · [Many Ways to Succeed: Diversity-Driven RL Fine-Tuning for VLA Generalization](adaptation.md) · `VLA-0173`
+- 2026-10-07 · [YUBI-STAG: Contact and Semantic-Rich Alignment for VLAs via Automated Video-Language Grounding](perception-representation.md) · `VLA-0172`
+- 2026-10-07 · [RoboPace: Contact-Aware Time-Optimal Retiming for Action-Chunk Policies](action-system1.md) · `VLA-0171`
+- 2026-10-07 · [Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models](adaptation.md) · `VLA-0170`
+- 2026-10-07 · [TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks](adaptation.md) · `VLA-0169`
+- 2026-10-07 · [TempoBridge: Language-Guided Tempo Control for Vision-Language-Action Policies](action-system1.md) · `VLA-0168`
+- 2026-10-06 · [DIVA: Dual-Space Intent-Aware Visual Attenuation for Vision-Language-Action Policies](perception-representation.md) · `VLA-0167`
+- 2026-10-06 · [PAIR: Bridging Perception and Action in Vision-Language-Action Models](perception-representation.md) · `VLA-0166`
+- 2026-10-06 · [StairVLA: Stage-Aware Hierarchical Action Generation for Vision-Language-Action Models](action-system1.md) · `VLA-0165`
 - 2026-10-05 · [Encoded but Not in Control: Revealing the Grounding Gap in Vision-Language Robot Policies](perception-representation.md) · `VLA-0157`
 - 2026-10-05 · [Arm-wise Compositional Generalization in Dual-Arm Vision-Language-Action Models](adaptation.md) · `VLA-0156`
 - 2026-10-05 · [What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions](perception-representation.md) · `VLA-0155`

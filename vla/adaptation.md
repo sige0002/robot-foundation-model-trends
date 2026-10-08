@@ -3,7 +3,132 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-22 records · Published date 降順（同日 ID 降順）
+27 records · Published date 降順（同日 ID 降順）
+
+### RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input
+
+- ID: `VLA-0176`
+- Published: 2026-10-07
+- Authors: Yanwen Zou; Chenyang Shi; Guoxuan Xu; Wenye Yu; Wendi Chen; Ye Pan; Cewu Lu; Chuan Wen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10534) · [Code](https://github.com/yanwen-zou/Roboprompt) · [Project](https://yanwen-zou.github.io/Roboprompt-Website/)
+- Tags: human-in-the-loop, policy-steering, sparse-prompt, diffusion, DAgger
+- Model size: 0.77B（Phase I steering model；下流方策は別）
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+人が画像上の点・軌跡や粗い方向を示すと、補助VLAが行動案へ変換し、既存のdiffusion/flow方策がnoise空間で修正する。基盤方策にsteerability訓練を加えず、人の意図と方策priorを調整する。介入付き成功軌跡を時間重み付き最適輸送で選び、DAggerによる方策改善にも使う。
+
+**主な貢献**
+
+同じsteering moduleをDiffusion Policy・π0.5・FastWAMに接続。3課題のπ0.5ではDAgger後の平均課題進捗80.0→95.5%と平均介入2.86→1.60を報告し、自律的zero-shot成功とは区別する。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.10534v1 （III-A〜C補助module訓練・noise制御・TOT、IV実機とDAgger、V限界）。限界: Phase Iは同一robotの500 play-data軌跡で訓練しており、補助モデルまで訓練不要ではない。エンドエフェクタ姿勢のsteering中心で多指handは未対応。人の介入を含む課題進捗指標。 公式projectからrepoを確認。steering/Web UI/Phase I実装が公開、root一覧とpyproject.tomlで新規実装LICENSEは確認できずunspecified。READMEは https://huggingface.co/datasets/ywzou/Roboprompt\_Play\_Data のckpt/evo1\_fullとckpt/pi05\_toasterを示すが、HF本体・tree/APIは本確認でアクセス不能、weight存在と配布条件を独立確認できずunknown。具体的追補: HF checkpoint一覧・model/dataカードと新規steering実装LICENSEを確認する。
+
+### Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models
+
+- ID: `VLA-0175`
+- Published: 2026-10-07
+- Authors: Mikey Watts; Yuchen Cui
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10526) · [Code](https://github.com/sttawm/phrase-rl) · [Project](https://sttawm.github.io/rephrase-before-you-act/)
+- Tags: language-sensitivity, instruction-rephrasing, frozen-policy, SIMPLER, LIBERO
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+指示の単語や表記の小さな変更がVLAの成功率を大きく変える現象を調べ、複数課題の実行結果からLLMで言い換え規則を抽出する。推論前に指示を一度だけ書き換え、方策の重みを変えずに未使用課題へ適用する。SIMPLERの12課題とLIBEROで評価した。
+
+**主な貢献**
+
+実行証拠を10〜20の明示的な言い換え規則に圧縮する訓練不要の入力適応。π0の改善16〜27%は相対値で、π0.5のLIBERO内分布成功率93.6→97.8%とは別の評価。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.10526v1 （IV-B統計と曖昧性除外、V手法、VI-D〜F評価、VII結論）。限界: 2種類のVLA・シミュレーションのみ。単語差の検定には多重比較補正がなく、非実行課題ではgripper誤差を代理指標に使う。開始前の2モデル呼び出し時間も必要。 公式projectがリンクするコードrepoを確認し、src/phrase\_rlとscriptsが公開。root一覧・READMEで実装ライセンス表記を確認できずunspecified、open\_source=unknown。論文がリンクする再利用資料repo https://github.com/sttawm/vla-rephrasing-artifacts とは区別。新規モデル重みは未確認。
+
+### Many Ways to Succeed: Diversity-Driven RL Fine-Tuning for VLA Generalization
+
+- ID: `VLA-0173`
+- Published: 2026-10-07
+- Authors: Haoru Li; Jinmei Liu; Zhiyong Wang; Xiaoming Li; Zhenhong Sun; Daoyi Dong; Chunlin Chen; Zhi Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09943)
+- Tags: DRIVE, reinforcement-learning, behavioral-diversity, OOD-generalization, bimanual
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+RLによるVLA後学習で成功軌跡の多様性を増やすDRIVEを提案する。同じ課題・初期条件の軌跡をVLM特徴と時間整列で比較し、成功した軌跡だけに相対的な多様性報酬を加える。3つのシミュレーション系と双腕実機の2課題で分布外条件を評価した。
+
+**主な貢献**
+
+失敗の多様化を報酬化せず、成功モードの被覆を後学習目的にする。通常RL後学習に対するOOD平均改善はπ0で5.3ポイント、π0.5で2.0ポイント、実機のOOD条件平均は64.1→73.3%。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09943v1 （4.1〜4.3手法、5.1分布分割と比較、5.3実機、6限界）。限界: 組内の軌跡対GAK比較に追加計算が必要で、VLM特徴が意味のある戦略差を捉えることに依存する。実機はClick BellとPress Stapler、各条件20試行。長期課題・多様な身体・実機オンライン学習は未検証。 一次arXiv本文の提供リンクと題名・著者を限定した公開検索では、公式実装・独自checkpoint・実装LICENSEの提供を確認できず、別々にunknownとした。存在しないと断定したものではない。
+
+### Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models
+
+- ID: `VLA-0170`
+- Published: 2026-10-07
+- Authors: Jiho Lee; Jeongeun Park; Heayoun Choi; Taekyung Kim; Eunwoo Kim
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09496)
+- Tags: SOUL, state-hallucination, sparse-autoencoder, policy-unlearning, LoRA
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+掴めていない物体を運ぶなど、未達状態を達成済みとして動くVLAのstate hallucinationを分析する。SAEで視覚領域別の内部特徴を分解し、hallucinationに関連する特徴を抑え、成功に関連する特徴を残すSOULを提案する。OpenVLAとπ0.5、シミュレーションとFranka実機で評価した。
+
+**主な貢献**
+
+失敗分析で得たsparse featureをpolicy unlearningの忘却・保持対象にする。選んだLIBERO-Plus課題のhallucination failure60→38%、overall success26→58%、RoboCasaも改善を報告。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09496v1 （III定義・領域別SAE分析、IV忘却/保持loss、V-A〜C評価・実機・ablation、VI結論）。限界: 選定したpick-and-placeに限定。simulation maskと実機の手動領域注釈、成功/幻覚失敗rollout分類が必要で、長期・多様な操作にそのまま適用できるとは未検証（評価範囲からの留保）。 一次arXiv本文の提供リンクと題名・著者を限定した公開検索では、公式実装・独自checkpoint・実装LICENSEの提供を確認できず、別々にunknownとした。存在しないと断定したものではない。
+
+### TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks
+
+- ID: `VLA-0169`
+- Published: 2026-10-07
+- Authors: Zirun Zhou; Jingfeng Zhang; HaoChuan Xu; Xizhe Zhang; Elliott Wen; Jing Sun; Hong Jia
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09462)
+- Tags: backdoor-defense, runtime-detection, latent-transitions, unseen-tasks, security
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+良性rolloutでinput tokenの分布と隣接層のlatent遷移を学ぶTMTを提案する。既知課題で統計基準により確認したincidentから固定監視遷移を選び、その後の未知課題でbackdoor発動を検出する。3種のbackdoorと既存検出器、WidowX実機で評価し、良性入力の行動を教師とするpolicy自己蒸留も探索した。
+
+**主な貢献**
+
+input分布異常と層間遷移誤差を組み合わせ、detector学習にtrigger例やclean reference policyを使わず、既知課題でのscore-confirmed incidentから監視遷移を選ぶ。その選択後の実機GoBA評価はTDR100%・FRR0%（RNDも同値）、未知DropVLAはTDR73.6%。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09462v1 （3脅威/defender前提、4 detector、5自己蒸留、6.1〜6.5評価・実機・ablation、Appendix F）。段階条件を再確認: https://arxiv.org/html/2610.09462v1\#S4.SS3 と https://arxiv.org/html/2610.09462v1\#A6 。detector predictorはverified benign rolloutで学習するが、訓練/referenceに含まれる既知課題で追加rolloutを実行し、token-manifold scoreとrollout-wide latent-deviation基準で確認したincidentから最大standardized excessの遷移を選ぶ。score-confirmedとは外部のmalicious labelではなく統計基準による確認。選択後にheld-out benign rolloutで監視閾値を較正し、固定遷移を未知課題で監視する。未知課題の結果はincident-driven selection後の評価であり、incident不要の初期cold-start保証ではない。限界: 内部activationと信頼できる良性referenceが必要。実機は4課題中2課題で学習・2課題でGoBA評価。誤検出ゼロは評価標本内の結果で一般保証ではなく、purificationは予備評価。公式project https://zzr42.github.io/tmt/ はHTTP404、project\_urlを空欄とし独自コード・重み・LICENSEはunknown。具体的追補: 著者の公式公開先で移転/公開状況を確認し、正しいproject URL・実装・checkpoint配布条件を補う。
 
 ### Arm-wise Compositional Generalization in Dual-Arm Vision-Language-Action Models
 

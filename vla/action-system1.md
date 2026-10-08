@@ -3,7 +3,82 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-22 records · Published date 降順（同日 ID 降順）
+25 records · Published date 降順（同日 ID 降順）
+
+### RoboPace: Contact-Aware Time-Optimal Retiming for Action-Chunk Policies
+
+- ID: `VLA-0171`
+- Published: 2026-10-07
+- Authors: Mimo Shirasaka; Takehiko Ohkawa; Takuya Okubo; Nicola Scianca; Tatsuya Matsushima; Kei Ota
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09696) · [Project](https://robopace.airoa.io/)
+- Tags: contact-aware-retiming, action-chunking, TOPP-RA, bimanual, real-time
+- Model size: 接触予測器4.69M（VLA本体は未確認）
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAが出す行動チャンクを幾何経路と実行時間に分離し、予測接触付近では減速、自由空間では加速する。TOPP-RAに接触依存速度上限と関節の速度・加速度制約を同時に入れ、方策を再学習せずオンラインで再時刻化する。OpenArm双腕の接触操作で検証した。
+
+**主な貢献**
+
+接触予測を経路上の速度制約としてロボット限界と統合。5命令各10試行で低速一律実行の22/50成功に対し32/50、うち4命令の成功時所要時間は低速条件の45〜59%。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09696v1 （3定式化、4再時刻化・チャンク遷移、5.1〜5.4実機・失敗分析）。限界: 3課題5命令に限定され、命令は訓練時と同じ。物体保持中の接触予測は次の接触を予告できず、机以外の環境形状も一部未モデル化。成功率・速度は接触上限設定に敏感。 論文が公式project URLを明示するが、本確認のweb fetchは2回とも失敗した。具体的な追補: projectの到達性を再確認し、コード・checkpoint配布と実装LICENSEを照合する。各公開状況はunknown。
+
+### TempoBridge: Language-Guided Tempo Control for Vision-Language-Action Policies
+
+- ID: `VLA-0168`
+- Published: 2026-10-07
+- Authors: Yeonseo Lee; Hyosup Shin; Guebin Hwang; Sungho Jo
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09451) · [Project](https://lysees.github.io/tempobridge-page/)
+- Tags: tempo-control, language-steerability, phase-routing, frozen-policy, LIBERO
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+凍結VLA内部の文脈表現から速度を示す言語cueを読み出し、causal phase routerで進行段階へ割り当てる。段階に応じて公称移動コマンドを調整し、速度付きの追加実演や基盤VLAの速度用微調整なしで実行tempoを変える。LIBERO40課題とxArm6実機で検証した。
+
+**主な貢献**
+
+内部言語表現をprototype readoutと単調な段階遷移で物理速度へ接続。LIBEROの条件付きTempo Success Rate52.6→89.7%、全体Task &amp; Tempo成功48.8→82.0%、課題成功93.6→92.9%。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09451v1 （III-A〜D読出し・router・動作調整、IV-A指標定義、IV-B〜F比較・ablation・実機）。限界: Tempo Success Rateは課題成功したrolloutの条件付き比較で、全試行の成功率ではない。2-eventは1度だけ前向きに切り替わる前提。routerは既存実演のphase境界注釈で訓練する。 arXivがリンクする公式projectは旧題名「From Language to Motion: Phase-Aware Tempo Control...」を使うが方法・指標・TempoBridgeが一致。Code (Coming Soon)の表示を確認したため2026-10-08時点code unavailable。重み・実装LICENSE提供は未確認。
+
+### StairVLA: Stage-Aware Hierarchical Action Generation for Vision-Language-Action Models
+
+- ID: `VLA-0165`
+- Published: 2026-10-06
+- Authors: Shangyuan Yuan; Xinda Qi; Yujiang Pu; Wenliang Guo; Xiaobo Tan
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.07756) · [Code](https://github.com/Dicomsky/StairVLA) · [Project](https://dicomsky.github.io/projects/stairvla/)
+- Tags: hierarchical-denoising, multi-rate-control, action-chunking, latency, LIBERO
+- Model size: VLM backbone: Qwen3-VL-4B（simulation）/2B（real robot）；総数未確認
+- Open-source: unknown
+- Code / weights / license: available / unavailable / unknown
+
+**概要（日本語）**
+
+VLAのdenoising初期と後期で条件情報の役割が異なることを利用し、長い部分denoise済み軌跡を低頻度で生成・保持する。小型refinerが最新観測から局所チャンクを高頻度で仕上げ、重いVLA呼び出しを複数制御周期へ償却する。2基盤とシミュレーション・PiperX実機で評価した。
+
+**主な貢献**
+
+部分denoise済み行動を高位生成と低位観測補正のinterfaceにする。GR00T型LIBERO成功率96.5→97.8%、償却推論遅延115.0→44.2ms/チャンク。これは制御端から端の時間とは別。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.07756v1 （3.2〜3.4手法、4.2比較・視覚摂動、4.3分析・実機、5結論、Appendix C）。限界: 画像条件が変わるzero-shot camera摂動に敏感で、LIBERO-Plusの回復にはtarget-distribution微調整を用いる。論文間の遅延は測定範囲・hardwareが異なり絶対値の直接比較は不可。 公式repoの実装とREADME/NOTICEを確認。checkpoint配布・π-base stage2 configはTODO。 https://github.com/Dicomsky/StairVLA/blob/main/LICENSE （blob SHA 5f7f8f5d5a65be5ac50e55eaf7265d039ad49cdf）はMIT標題にrebase/commit維持の追加文、NOTICEにはNVIDIA由来file headerもある。具体的追補: 非標準追加文と各fileの適用ライセンスを確認しOSI承認実装と判断可能か解決する。現時点はlicense\_status/open\_source=unknown。
 
 ### When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models
 

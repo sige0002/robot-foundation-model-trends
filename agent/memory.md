@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-2 records · Published date 降順（同日 ID 降順）
+3 records · Published date 降順（同日 ID 降順）
+
+### COOL: Curiosity-Driven Object Ownership Learning for Personalized Robotic Assistance
+
+- ID: `AGENT-0137`
+- Published: 2026-10-07
+- Authors: Samira Huber; Ruben Hammele; Sören Pirk
+- Venue: CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2610.09358) · [Project](https://samirahuber.github.io/cool)
+- Tags: COOL, ownership-inference, persistent-spatial-memory, curiosity-driven-exploration, personalization, real-robot
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+人・物・場所・時刻と接触履歴を長期記憶へ結び、日常の観測から物の所有関係を推論する。利用者の依頼を解くlanguage agentと、古い観測を更新するため移動先を選ぶcuriosity agentを組み合わせ、所有者を条件にした物探しと移動を行う。
+
+**主な貢献**
+
+明示的な所有ラベルに依存せず、persistent identityと人–物相互作用の証拠を蓄積・検索し、能動的な記憶更新から個人化されたナビゲーションへ接続。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿2026-10-07、v1; arXiv commentsがCoRL 2026採択と明記。本文§3、§4.3–4.4、§5を選択読解: https://arxiv.org/html/2610.09358v1 。単一officeで5navigationタスク各10run、成功条件は目標1m以内で停止し各90–100%。curiosityを15synthetic office logsと4.5時間実機runで評価。曖昧/借用/短い接触で所有推定は不確実; 長期人物観測の同意・最小化・保持期間が課題。本文はcode/prompts/data提供を公式projectへ案内するがweb取得に失敗し、実装URL・実装license・重みを独立確認できずunknown。Follow-up: 公式projectの公開repositoryへのリンクを確認し、実装とLICENSE、fine-tuned re-ID重みの配布を別々に調査する。PDF未取得。
 
 ### MarvisNav: Making Memory Visible on Route Choices for Zero-Shot Object Navigation
 

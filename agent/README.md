@@ -3,19 +3,29 @@
 
 [← データベース](../README.md)
 
-30 records · 正本: [papers.csv](../papers.csv)
+40 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 8 |
-| [code](code.md) | 9 |
+| [planning](planning.md) | 11 |
+| [code](code.md) | 12 |
 | [skill](skill.md) | 2 |
-| [tool](tool.md) | 5 |
-| [memory](memory.md) | 2 |
-| [replanning](replanning.md) | 4 |
+| [tool](tool.md) | 7 |
+| [memory](memory.md) | 3 |
+| [replanning](replanning.md) | 5 |
 
 ## 論文
 
+- 2026-10-07 · [Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded Robot Policies](code.md) · `AGENT-0140`
+- 2026-10-07 · [RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments](tool.md) · `AGENT-0139`
+- 2026-10-07 · [RoboQuest: Generalist Physical Agents that Search, Inspect and Test](planning.md) · `AGENT-0138`
+- 2026-10-07 · [COOL: Curiosity-Driven Object Ownership Learning for Personalized Robotic Assistance](memory.md) · `AGENT-0137`
+- 2026-10-06 · [PhysEvo: Astra Can Act, Let It](code.md) · `AGENT-0136`
+- 2026-10-06 · [HygieneRoboBench: Benchmarking Hygiene-Aware Planning for Household Robots](planning.md) · `AGENT-0135`
+- 2026-10-06 · [OntoPlan: An Ontology-Grounded Scene Representation and Agentic Framework for Scalable Robot Task Planning](planning.md) · `AGENT-0134`
+- 2026-10-05 · [CIRRA: Dual-Level Continual Instruction Reconciliation with Ongoing Execution for Embodied Robot Agents in Interactive Household Tasks](replanning.md) · `AGENT-0133`
+- 2026-10-05 · [ArtifactArena: Evaluating Models by What They Build in the Physical World](code.md) · `AGENT-0132`
+- 2026-10-05 · [Inspect Robots: Evaluating the Capabilities and Safety of Embodied AI](tool.md) · `AGENT-0131`
 - 2026-10-05 · [MarvisNav: Making Memory Visible on Route Choices for Zero-Shot Object Navigation](memory.md) · `AGENT-0128`
 - 2026-10-04 · [RobotUse: Allocating Computation, Context, and Decisions](tool.md) · `AGENT-0130`
 - 2026-10-02 · [Mind the Refinement Gap: When Safe High-Level Robot Plans Produce Unsafe Executions](planning.md) · `AGENT-0129`

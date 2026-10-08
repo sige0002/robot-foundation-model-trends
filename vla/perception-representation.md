@@ -3,7 +3,107 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+13 records · Published date 降順（同日 ID 降順）
+
+### Do Vision-Language-Action Models Understand Instructions? A Mechanistic Interpretability Study on Language Grounding
+
+- ID: `VLA-0174`
+- Published: 2026-10-07
+- Authors: Theodor Wulff; Angelo Cangelosi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10178)
+- Tags: mechanistic-interpretability, language-grounding, activation-patching, CKA, LIBERO
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+π0.5とGR00T N1.7に対し、同義語・上位概念・方向語・不存在物体・空指示による内部変化を調べる。LIBERO-10の1万オフライン試料でattribution patching、activation patching、CKAを組み合わせ、言語が行動計算に影響する層と表現変化を分析した。
+
+**主な貢献**
+
+内部の言語感度と行動への因果寄与を分離し、attribution patchingの近似精度がモデル依存であることを検証。activation patchingとのPearson相関はGR00Tで0.946、π0.5で0.089。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.10178v1 （4摂動とpatching、5実験設計、6.3比較、7議論、8今後の課題）。限界: 合成的で短いLIBERO指示のオフライン評価。意味を変えた指示も元の実演に対する誤差で評価するため、指示を適切に使ったかは閉ループ反実仮想試験が必要。 論文が挙げるHFモデルは分析対象の既存方策で、研究独自の重み公開とは扱わない。研究の実装・独自重み・実装ライセンス提供は未確認。
+
+### YUBI-STAG: Contact and Semantic-Rich Alignment for VLAs via Automated Video-Language Grounding
+
+- ID: `VLA-0172`
+- Published: 2026-10-07
+- Authors: Masatoshi Tateno; Takehiko Ohkawa; Yueh-Hua Wu; Hanlong Li; Tatsuya Matsushima; Yoichi Sato; Kei Ota
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09718) · [Project](https://yubi-stag.airoa.io/)
+- Tags: video-language-grounding, contact-awareness, annotation, bimanual, language-steerability
+- Model size: YUBI-VLM: Qwen3.6-27B backbone（VLA全体は未確認）
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+双腕操作動画の粗い課題ラベルを、接触対象マスク・接触区間・左右グリッパーの行動・物体属性や空間関係を含む注釈へ拡張する。多段処理をYUBI-VLMへ蒸留し、手首動画だけから注釈を生成する。その注釈をVLA後学習に使い、細かな言語指示への追従を調べた。
+
+**主な貢献**
+
+触覚センサーなしで接触を視覚推定し、時間・空間・意味の注釈を統合するデータ中心のVLA整合。実機部品sortingの各条件20試行で、handednessのみのfull success25%をcontact追加で60%へ改善。言語評価では操作完遂と完遂試行内のbin/gripper追従を区別する。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09718v1 （3.1接触対象分割・3.2蒸留、4ベンチマーク・5方策訓練、6.1注釈評価・6.2〜6.4実機・言語追従）。限界: 注釈の色混同や左右反転が方策誤りへ残る。相対位置・順序選択は完全には解けず、未知の長期構成評価はBUSの10試行など限定的。 公式projectを確認。掲載リンク内で実装・重みの配布先や実装ライセンスを確認できず各unknown。27Bは注釈用VLMのbackboneであり下流VLA規模とは区別。 分母再確認: https://arxiv.org/html/2610.09718v1\#S6.SS3 の本文はbin/gripper accuracyにcompleted trials条件を明示する一方、色accuracy82.9%対46.4%の分母は閲覧できた本文・captionでは明示されていないため、その数値はkey\_contributionから除外した。代わりに6.2/Fig.4の全20試行に対するfull successを掲載。
+
+### DIVA: Dual-Space Intent-Aware Visual Attenuation for Vision-Language-Action Policies
+
+- ID: `VLA-0167`
+- Published: 2026-10-06
+- Authors: Kaixi Feng; Guoheng Sun; Ziyao Wang; Yexiao He; Zheyu Shen; Ang Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09144)
+- Tags: visual-grounding, soft-attenuation, intent-aware, OOD-robustness, OpenVLA-OFT
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+指示の意図と局所的な視覚証拠からパッチごとの関連度を推定し、入力の視覚tokenとバックボーン内部の視覚状態の双方を弱めたり保ったりする。tokenを削除せず全体文脈を残す構成で、OpenVLA-OFTの通常操作と視覚摂動下の頑健性を評価した。
+
+**主な貢献**
+
+外部grounding教師なしの関連度推定と、入力・内部状態の二重soft attenuation。LIBERO平均96.6→98.0%、zero-shot LIBERO-Plus69.6→72.6、UF850実機で各課題条件25試行。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09144v1 （MethodのGTP・relevance anchoring・dual-space attenuation、Experiments・実機・ablation、Conclusion限界）。限界: 固定した関連度予算は物体の大きさや散らかり具合、必要な領域の広さに適応できず、観測ごとの最適設定にはならない。検証はOpenVLA-OFT中心。 一次arXiv本文の提供リンクと題名・著者を限定した公開検索では、公式実装・独自checkpoint・実装LICENSEの提供を確認できず、別々にunknownとした。存在しないと断定したものではない。
+
+### PAIR: Bridging Perception and Action in Vision-Language-Action Models
+
+- ID: `VLA-0166`
+- Published: 2026-10-06
+- Authors: Kaixi Feng; Guoheng Sun; Ang li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09016)
+- Tags: perception-action-alignment, action-latents, bridge-tokens, LIBERO, CALVIN
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+観測・指示から行動への中間表現を明示的に学ぶ。実演行動をmasked autoencoderで時系列latentへ変換し、視覚言語特徴から抽出したBridge Tokensをこれに整合する。行動expertの入口へ注入し、推論では行動autoencoderを外す。2つのVLA基盤と実機7課題で評価した。
+
+**主な貢献**
+
+課題意味と実行可能な行動構造を共有する、知覚由来の中間interface。VLA-AdapterのLIBERO-Plus59.1→64.2%、CALVIN平均完遂長4.42→4.53、実機OpenVLA-OFT51.4→65.0%。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09016v1 （3.1〜3.4手法、4.2〜4.5実機・表現probe・ablation、5結論）。限界: 実機はUF850、293実演から課題ごとに別方策を訓練し、各20試行。線形probeが示す行動情報の可読性は一般的な因果説明や未知身体への汎化を証明しない（評価範囲からの留保）。 一次arXiv本文の提供リンクと題名・著者を限定した公開検索では、公式実装・独自checkpoint・実装LICENSEの提供を確認できず、別々にunknownとした。存在しないと断定したものではない。
 
 ### Encoded but Not in Control: Revealing the Grounding Gap in Vision-Language Robot Policies
 

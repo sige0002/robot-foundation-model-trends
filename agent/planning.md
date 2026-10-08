@@ -3,7 +3,82 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+11 records · Published date 降順（同日 ID 降順）
+
+### RoboQuest: Generalist Physical Agents that Search, Inspect and Test
+
+- ID: `AGENT-0138`
+- Published: 2026-10-07
+- Authors: Liu Renhang; Navonil Majumder; Tej Deep Pala; Soujanya Poria
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10388) · [Code](https://github.com/declare-lab/RoboQuest) · [Project](https://declare-lab.github.io/RoboQuest/)
+- Tags: RoboQuest, goal-directed-exploration, active-perception, hidden-information, mobile-manipulation, benchmark, simulation-only
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+探索、操作を伴う観察、道具や機構の試験を必要とする10種類の移動操作タスクを設計する。開始時には必要情報を隠し、ロボットが物理的なSUBMITボタンを押す時点で採点することで、証拠収集と行動選択、いつ確信して終了するかをまとめて評価する。
+
+**主な貢献**
+
+物理動作による情報獲得を不可欠にしたbenchmarkと5,000探索demoを提供し、情報を与えた単独skill試験と失敗帰属を併用して、運動実行以外の探索・判断・状態回復の障害を分離。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-07、v1のみ。本文§3–5、結論を選択読解: https://arxiv.org/html/2610.10388v1 。RoboCasa365/MuJoCoでFranka mobile base、10タスク×50共通instance、5 frontier agents、最大200decision。最良23.2%; 情報を与えた8skillの単独成功72–81%。fine-tuned π0.5はPuzzle Box 2%、他9タスク0%; backboneや訓練条件の一般的優劣は示さない。失敗帰属の「観測済み」はcamera画像への可視性で注意/理解の証明ではなく、各失敗episodeの未達条件に決定的規則を適用する分析。実機評価なし。実装MIT: https://github.com/declare-lab/RoboQuest/blob/main/LICENSE 。公式README/projectにはdatasetとpolicy-server手順があるが、この論文のfine-tuned重みURLは確認できずunknown。PDF・dataset未取得。
+
+### HygieneRoboBench: Benchmarking Hygiene-Aware Planning for Household Robots
+
+- ID: `AGENT-0135`
+- Published: 2026-10-06
+- Authors: Yurun Chen; Josh Qixuan Sun; Jason Qin; Chengtai Li; Tianyi Wang; Mark Crowley; Wentao Zhu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.08642) · [Project](https://euron-zc.github.io/HygieneRoboBench/)
+- Tags: HygieneRoboBench, Hygiene-NSP, contact-history, neuro-symbolic-planning, CP-SAT, user-priorities, symbolic-evaluation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+両gripperや共有物を介した汚染と処置の履歴を持つ624の家事planning instanceを構築する。Hygiene-NSPはLLMで依頼をgroundingし、接触履歴から衛生状態を再構成して、CP-SATで処置・作業・時間・資源を利用者の優先順に共同最適化する。
+
+**主な貢献**
+
+現在の配置だけでは分からない汚染履歴、接触event、資源優先順を制御した比較と独立plan replayで、安全な完了と安全かつcost最適な解決を分けて評価。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-06、v1。本文§III–V、§VIを選択読解: https://arxiv.org/html/2610.08642v1 。134task families/624instance、5LLM＋Rule-SAT＋Hygiene-NSP; NSPのgrounderはGPT-5.6 Sol。safe resolution94.4%/optimal safe resolution90.4%は実行不能の正しい拒否も含む。明示された接触/処置ruleと抽象time-unitに基づくsymbolic plan評価で実機衛生効果の実証ではない; OmniGibson図はstaged illustration。公式repository READMEはcode/dataを準備中と明記しrootは紹介資料のみ: https://github.com/Euron-ZC/HygieneRoboBench\#release-plan 。公開実装は現時点unavailable、実装licenseと重みはunknown。PDF・dataset未取得。
+
+### OntoPlan: An Ontology-Grounded Scene Representation and Agentic Framework for Scalable Robot Task Planning
+
+- ID: `AGENT-0134`
+- Published: 2026-10-06
+- Authors: Hyeongwoo Nam; Woongje Cho; Juwon Kim; Jongeun Choi
+- Venue: NeurIPS 2026
+- Links: [Paper](https://arxiv.org/abs/2610.07649) · [Code](https://github.com/namhyeongwoo/OntoPlan) · [Project](https://namhyeongwoo.github.io/OntoPlan/)
+- Tags: OntoPlan, ontology-PDDL-alignment, symbolic-scene-graph, selective-retrieval, tool-use, long-horizon-planning, fully-observable
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+物・空間・関係・状態を同じontologyとPDDL語彙へ揃え、四つのLLM役割が共有記憶上で依頼解釈・scene検索・目標形式化・計画修正を分担する。scene-query toolで必要な情報だけを取り出し、symbolic plannerが前提・状態遷移・達成済み目標の保持を扱う。
+
+**主な貢献**
+
+構造化sceneへの選択的アクセスと実行可能plan生成を同じ語彙で接続し、LLMへ全sceneのtext化やprimitive動作列の直接生成を課さないAgent planning pipeline。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-06、v1、arXiv commentsがNeurIPS 2026採択と明記。本文§3–6を選択読解: https://arxiv.org/html/2610.07649v1 。5室内環境×3scale/150general task、平均success0.89、18.1k tokens/task。scene-queryなしでtoken scalability悪化、integrated PDDL pathなしでsuccess0.31; 一個の部品だけの因果効果とはしない。world modelは完全観測されたRDF/OWL symbolic factsで学習WAMではなくAgent/planning。raw sensor/partial observability/実機自律性は未評価、新semanticsにはontologyとPDDL双方の改訂が必要。公式実装MIT: https://github.com/namhyeongwoo/OntoPlan/blob/main/LICENSE 。READMEはFast Downward GPLv3、3D Scene Graph由来dataは非商用研究限定と明記し、code licenseと区別。新規モデル重み配布未確認。PDF・data未取得。
 
 ### Mind the Refinement Gap: When Safe High-Level Robot Plans Produce Unsafe Executions
 

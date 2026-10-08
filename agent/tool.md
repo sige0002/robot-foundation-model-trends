@@ -3,7 +3,57 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+7 records · Published date 降順（同日 ID 降順）
+
+### RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments
+
+- ID: `AGENT-0139`
+- Published: 2026-10-07
+- Authors: Zhiqin Yang; Chenxin Li; Xiaomeng Hu; et al.
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10409) · [Code](https://github.com/robotworldai/robotworld) · [Project](https://robotworldai.github.io/)
+- Tags: RobotWorld, robot-use, cross-embodiment, benchmark, tool-use, execution-feedback, simulation-only
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+操作、移動操作、歩行、運転、飛行の84シミュレーションタスクで、汎用multimodal agentのrobot-use能力を評価する。観測と制御ツールを明示的な予算で与え、agent自身の完了宣言とは独立した実行可能checkerで採点し、状態保持・修正・回復の失敗をtraceから調べる。
+
+**主な貢献**
+
+異なる身体・simulatorの観測/動作契約、独立成功判定、interaction予算、実行traceを共通評価loopで結び、部分的な知覚・計算能力が安定したタスク完遂へ結び付かない箇所を可視化。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-07、v1のみ。本文§3–5、§7とAppendix B.6/H.4–5を選択読解: https://arxiv.org/html/2610.10409v1 。5モデル×84タスク各1episode; 最良16/84 (19.0%)。environment-side code controlはoff、推論中physics停止。non-action予算はAstra記録から調整して他モデルにも適用; 21件のretrospective adjudicationがあり後刻成功は境界内成功に含めない。単発・不均一controller支援・有限suite・training contamination・実機未検証が限界。公式公開実装READMEがRobotWorld-owned codeのtop-level license未選択と明記: https://github.com/robotworldai/robotworld\#-validation-and-provenance 。第三者licenseのみを根拠にopen\_source=trueとしない。新規重み配布未確認。PDF・assets未取得。
+
+### Inspect Robots: Evaluating the Capabilities and Safety of Embodied AI
+
+- ID: `AGENT-0131`
+- Published: 2026-10-05
+- Authors: Christopher Leet; Achu Menon; Sravanthi Machcha; Sabrina Zou; Aayushya Patel; Aditya Kumar Singh; Anish Kr Singh; Galaba Vamsi; Javin Ahuja; Sai Asish Yamani; Tushar Anand; Vedang Alle; Zihan Jack Zhang; Tzu Kit Chan; Jay Chooi
+- Venue: arXiv; submitted to SPAIS Workshop at CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2610.06306) · [Code](https://github.com/robocurve/inspect-robots) · [Project](https://docs.inspectrobots.org/)
+- Tags: Inspect-Robots, evaluation-framework, physical-AI-safety, tool-use, action-guards, real-robot
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+ロボット評価のタスク、方策、身体、実行管理、記録・分析を交換可能なインターフェースで結ぶ評価基盤。LLMをロボット制御・終了ツールへ接続し、観測更新による方策再実行と動作guardを共通化する。実機の能力・危険指示拒否を別々の小規模評価で検証した。
+
+**主な貢献**
+
+能力だけでなく拒否・危害軽減も記述できる複数rubricと、動作前guard・再観測・監査可能な記録を評価スタック全体の再利用可能な部品へ分離。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-05、arXiv v1のみを確認。本文§3–4を選択読解: https://arxiv.org/html/2610.06306v1 。I2RT YAM双腕で能力4タスク・安全4タスク、各モデル各タスク20試行。安全評価6方策では3種類の非人型危険指示の拒否は各モデル5%以下。小規模guard付き評価であり一般的安全保証ではない。公式実装MIT: https://github.com/robocurve/inspect-robots/blob/main/LICENSE 。新しいモデル重みの配布は確認できずunknown。PDFは取得していない。
 
 ### RobotUse: Allocating Computation, Context, and Decisions
 
@@ -40,7 +90,7 @@ RoboLabの40課題120 episodeで54成功、45.0%となりCaP-Xより6.67ポイ�
 - Tags: LIBERO-Agent, benchmark, agent-native-control, MCP, embodied-manipulation, long-horizon
 - Model size: unknown
 - Open-source: unknown
-- Code / weights / license: unavailable / unknown / unknown
+- Code / weights / license: available / unknown / unknown
 
 **概要（日本語）**
 
@@ -52,8 +102,8 @@ RoboLabの40課題120 episodeで54成功、45.0%となりCaP-Xより6.67ポイ�
 
 **確認記録**
 
-- Checked: 2026-10-04 · Review: needs-review
-- 書誌と履歴: https://arxiv.org/abs/2609.39507 。v1は2026-09-30 11:10:10 UTC、改訂なし。方法・評価: https://arxiv.org/html/2609.39507v1 の3節・4節・付録B.3。主要30タスクは同一初期状態・seed=100で各3回、1,800秒制限のシミュレーションであり、200タスク全件や実機の検証ではない。HTML冒頭の公式\[Code\]は https://github.com/dzj441/Libero-Agent を指すが、確認時点ではREADME.mdとLICENSEのみでREADMEがコード公開予定と明記。MIT文面と著者の著作権表示を https://github.com/dzj441/Libero-Agent/blob/main/LICENSE で確認したが、未公開の実装に対してopen\_source=trueとはしない。コードリンクと公開実態の差をneeds-reviewに記録。独立した公式project・重みは未確認。PDF URLはabsページのリンクのみ確認し、PDFを取得していない。
+- Checked: 2026-10-08 · Review: needs-review
+- 書誌と履歴 https://arxiv.org/abs/2609.39507 : v1 2026-09-30 11:10:10 UTC、追加改訂なし。既存HTML https://arxiv.org/html/2609.39507v1 の3/4節・付録B.3の選読結果を維持。主要30課題は同一初期状態・seed100で各3回、1800秒制限のsimulationであり200課題全件/実機評価ではない。本文の公式Code先 https://github.com/dzj441/Libero-Agent が2026-10-08 commit https://github.com/dzj441/Libero-Agent/commit/0b9a282ec083f89d9c537dd17bda6a0edc56ec07 で30課題benchmarkを公開。README、CHANGELOG、benchmark manifest、libero/libero/agent\_env/runtime/control.pyとtreeを確認しcode availableへ更新。公開範囲は知覚/短期操作/長期操作各10課題、MCP native7D OSC、evaluator/schedulerで、広いtask catalog・著者実験結果・全開発testは含まれない。READMEはmain30課題90rolloutと操作観測ablation60rollout、同じseed100/no reset/no automatic retryを区別し、公開runtimeのnative Codex隔離と外部harnessの未強制隔離の差も明記する。独自作業のMITは同commit LICENSEとTHIRD\_PARTY\_NOTICES.mdで確認したが、同noticeはvendorしたRoboMemArena revisionにroot licenseがないと明記しMITの再許諾対象外とする。配布実装全体のライセンス範囲が確定していないためopen\_source/license\_status unknownとneeds-reviewを維持。次回はRoboMemArena由来部分の明示許諾/ライセンス整理を確認する。基盤モデル重みは別サービス、独自公開checkpointは未確認でweights unknown。PDF URLはabsリンクの確認のみ、PDF未取得。
 
 ### CognitiveReality: Robot-Agnostic Semantic Gaussian Mapping with an LLM Agent for Immersive Collaborative VR Teleoperation
 

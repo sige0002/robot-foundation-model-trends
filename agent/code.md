@@ -3,7 +3,82 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded Robot Policies
+
+- ID: `AGENT-0140`
+- Published: 2026-10-07
+- Authors: Yihan Li; Yating Feng; Shengjiu Sun; Jianing Chen; Hao Ren; Bowen Yang; Weisheng Xu; Qiwei Wu; Hui Cheng; Renjing Xu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10479)
+- Tags: Agentic-RSR, real-to-sim-to-real, scene-reconstruction, programmatic-policy, execution-feedback, experience-memory, real-robot
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+作業空間の動画と既知のロボット形状から、タスクに必要な接触を再現するシミュレーションを構築する。coding agentは真値利用、画像観測のみ、摂動付き条件へと段階的に方策コードを改良し、実行feedbackと経験記録を実機での再観測・回復へ引き継ぐ。
+
+**主な貢献**
+
+scene再構築と生成方策を同じ操作タスクで結び、実行可能性の検査、段階的な観測制約、実機への方策・経験移送を一つのagentic開発loopへ統合。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-07、v1のみ。本文§3–5を選択読解: https://arxiv.org/html/2610.10479v1 。Piper/Franka計18タスク、主agentはGPT-6 Astra high。Sim成功10/18、実機成功8/18 (44.4%); 80%はsimulation成功タスクからのpaired transferで全実機成功率ではない。baselineのconversionは非pairedで比較は記述的。閉鎖model serviceのinterface/時点による未統制変動を限界として明記。MuJoCoは再構築・試験環境で学習WAMは提案しておらずAgent/code。要旨はcode/scene dataの今後公開を予告するが公式URLを確認できず、コード・重み・実装ライセンスはunknown。論文CC BY 4.0は実装ライセンスと区別。PDF未取得。
+
+### PhysEvo: Astra Can Act, Let It
+
+- ID: `AGENT-0136`
+- Published: 2026-10-06
+- Authors: Wenqing Tian; Zeyu Zhang; Zhaocheng Liu; Fengwei Liu; Qiang Liu; Liang Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.08995)
+- Tags: PhysEvo, physical-recursive-self-improvement, harness-evolution, frozen-model, joint-control, skill-reuse, real-robot
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+同じ凍結multimodal modelを実行agentとmeta-agentの二つの役割で使い、ロボット軌跡から失敗を診断して操作ツール・skill・診断ツール自体を改良する。モデル重みの更新や別学習action policyなしに、検証済み変更を以後の行動と改善に再利用する。
+
+**主な貢献**
+
+実行feedbackを次の動作修正に留めず、関節姿勢の制御、証拠を保つ視点取得、後続改善で使える診断機能という二つの永続harnessの変更へ変換。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-06、v1。本文§3–5、§6を選択読解: https://arxiv.org/html/2610.08995v1 。42 RoboDojoタスク、task固有deployment版を各5held-out layoutで固定評価; five-dimension等重みSR62.00%、task等重み58.57%を区別。実機PiPERの5タスク×5trialはskill改訂を継続する適応過程でSR84%、凍結ゼロショット転移の数字ではない。baselineは公開referenceで広い平均比較は厳密なmatched ablationではない; 関節tool比較は別の限定6episode。追加学習VLA/WAMを導入せずAgent/code。公式論文・検索で当該実装repository・license・重み配布を確認できずunknown。PDF未取得。
+
+### ArtifactArena: Evaluating Models by What They Build in the Physical World
+
+- ID: `AGENT-0132`
+- Published: 2026-10-05
+- Authors: Kushagra Tiwary; David Mayo; Nikhil Behari; Xiangzhou Sun; Abdulrahman Alabdulkareem; Isaac Galatzer-Levy; Boris Katz; Brian Cheung
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06511) · [Code](https://github.com/ArtifactArena/harness-public) · [Project](https://artifactarena.ai)
+- Tags: ArtifactArena, hardware-software-co-design, code-generation, verifier-feedback, MuJoCo, simulation-only, benchmark
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+基盤モデルがMuJoCo用ロボット形状とPython制御器を同時生成し、競技内で動作する成果物を評価する。独立sampling、verifier・試合feedbackによる改良、自由な設計labの3方式を同じAPI呼出予算で比較し、成果物同士の対戦からEloを算出する。
+
+**主な貢献**
+
+固定の答えを採点する代わりに、物理制約・機能検査・対戦を用いてモデルのロボット設計コードを評価する継続拡張型testbed。より自由なagent loopが常に強い成果物を生むわけではないことも検証。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿2026-10-05、arXiv v1のみ。本文§2、§3.1、§3.5と公開harness READMEを選択読解: https://arxiv.org/html/2610.06511v1 。21モデル、各harness10 API呼出×3独立run。整合した予算はAPI呼出数のみでtoken数・wall time・計算量は同一とは限らない。VGHは15/21モデルで最高Elo、自由なDLHはtop-7成果物なし。MuJoCo内の設計・制御評価で実機能力ではない; bootstrap区間は候補内選抜の不確実性を含まず下限。公式SH/VGH実装MIT: https://github.com/ArtifactArena/harness-public/blob/main/LICENSE ; DLHもMIT: https://github.com/ArtifactArena/design-lab-harness/blob/main/LICENSE 。生成XML/制御コードはモデル重みではなくweights\_status=unknown。公式projectリンクは本文から確認したがweb取得は失敗。PDF・dataset未取得。
 
 ### OpenRUA: Robot-Use Agents Are Zero-Shot Visuomotor Policies
 

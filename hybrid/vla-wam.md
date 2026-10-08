@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-11 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### Juno: Taming Predictive Latents for Vision-Language-Action Models
+
+- ID: `HYBRID-0126`
+- Published: 2026-10-07
+- Authors: Yuchen Zhu; Chenyi Xu; Yulin Zhang; Gang Xu; Wentao Zhu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09940) · [Code](https://github.com/ZhuYuChenNO1/Juno) · [Project](https://juno-policy.github.io/)
+- Tags: JEPA, predictive-latents, world-model, test-time-adaptation, failure-data
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / unavailable / unknown
+
+**概要（日本語）**
+
+行動条件付きJEPAを、VLAの表現学習・未来状態の教師・配備後の動力学適応で共用する。局所運動をCLS状態へ移す損失と分離した予測枝を使い、失敗を含む遷移で世界モデルを先に適応させてから成功した実行で方策を再整合する。
+
+**主な貢献**
+
+世界モデルの誤較正と方策誤りを分ける二段階適応。SimplerEnv60.9→68.5%、追加rolloutによるoffline TTT後72.7%。実機の凍結方策は背景・高さ・物体変化で70〜75%；別のnoise/lighting条件のoffline TTT後は65%/70%。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09940v1 （3.2〜3.4手法、4.1〜4.5比較・実機、Appendix C.3/D適応手順）。限界: 実機は右PiPER腕の物体をボウルへ入れる課題で各条件20試行。TTTは実行中の即時更新ではなく、追加40ロールアウト等を収集したオフラインプロトコル。 公式repoはBridge/Fractal方策学習のみ公開と明記し、JEPA訓練・RoboCasa・TTTコードとcheckpoint releaseはTODO。 https://github.com/ZhuYuChenNO1/Juno/blob/main/LICENSE はMIT標題ながらrebaseとupstream commit維持の追加文を含み、標準OSI MITと同一か未確定。具体的追補: 追加条項の位置付け・適用範囲を確認し、full-paper手法と公開実装の差を再確認。実装ライセンスunknown、open\_source=unknown。
 
 ### World-Calibrated Proposal-to-Action Flow for Vision-Language-Action Models
 

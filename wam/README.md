@@ -3,18 +3,27 @@
 
 [← データベース](../README.md)
 
-76 records · 正本: [papers.csv](../papers.csv)
+85 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 31 |
-| [dynamics](dynamics.md) | 8 |
-| [action-coupling](action-coupling.md) | 15 |
-| [planning](planning.md) | 16 |
-| [temporal-modeling](temporal-modeling.md) | 6 |
+| [dynamics](dynamics.md) | 10 |
+| [action-coupling](action-coupling.md) | 20 |
+| [planning](planning.md) | 17 |
+| [temporal-modeling](temporal-modeling.md) | 7 |
 
 ## 論文
 
+- 2026-10-07 · [Long-WAM: Scaling the Context of World-Action Models](temporal-modeling.md) · `WAM-0087`
+- 2026-10-07 · [RoboJEPA: Scaling Robotic Latent World Models](dynamics.md) · `WAM-0086`
+- 2026-10-07 · [RealtimeWAM: How Fast Can I Run My World Action Model?](action-coupling.md) · `WAM-0085`
+- 2026-10-07 · [ΔWAM: Distilling Action Tangent Fields into World Action Models](action-coupling.md) · `WAM-0084`
+- 2026-10-07 · [Predicted Futures Are Not Enough: Learning Executable Goals for Robot Manipulation](planning.md) · `WAM-0083`
+- 2026-10-06 · [World Models Dream of Success: Diagnosing and Repairing Failure Insensitivity in Robot World Models](dynamics.md) · `WAM-0082`
+- 2026-10-06 · [AutodidactWAM: Cross-Modal Self-Distillation from Generated Video to Robot Actions](action-coupling.md) · `WAM-0081`
+- 2026-10-06 · [OpenWAM: An Open Framework for Composable World-Action Models](action-coupling.md) · `WAM-0080`
+- 2026-10-05 · [RealtimeWAM: One-Step Asynchronous World Action Models](action-coupling.md) · `WAM-0079`
 - 2026-10-05 · [SimForcing: Distilling Simulation Motion Priors into Real-Domain Robot World Models](dynamics.md) · `WAM-0076`
 - 2026-10-02 · [What Should World Models Forget? Stratified Retention for Continual Adaptation](world-representation.md) · `WAM-0078`
 - 2026-10-02 · [Keeping JEPA World Models Plannable When Little of the Frame Moves](planning.md) · `WAM-0077`

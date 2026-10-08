@@ -3,17 +3,19 @@
 
 [← データベース](../README.md)
 
-26 records · 正本: [papers.csv](../papers.csv)
+28 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 11 |
-| [vla-wam](vla-wam.md) | 11 |
+| [vla-agent](vla-agent.md) | 12 |
+| [vla-wam](vla-wam.md) | 12 |
 | [wam-agent](wam-agent.md) | 3 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
 
 ## 論文
 
+- 2026-10-07 · [Juno: Taming Predictive Latents for Vision-Language-Action Models](vla-wam.md) · `HYBRID-0126`
+- 2026-10-06 · [Co-Evolving Robot Orchestrators and Policies through Deployment](vla-agent.md) · `HYBRID-0125`
 - 2026-10-05 · [Recursive Video In-Context Learning for Agentic Robot](vla-agent.md) · `HYBRID-0118`
 - 2026-10-05 · [Future Anchored Verification and Online Recovery for World Action Models](wam-agent.md) · `HYBRID-0117`
 - 2026-10-04 · [PreAct-Nav: Agentic Reasoning Before Action for Urban Navigation](wam-agent.md) · `HYBRID-0120`

@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+10 records · Published date 降順（同日 ID 降順）
+
+### RoboJEPA: Scaling Robotic Latent World Models
+
+- ID: `WAM-0086`
+- Published: 2026-10-07
+- Authors: Artem Zholus; Nicolas Beltran-Velez; Jianhao Yuan; Sarath Chandar; Tushar Nagarajan; Daniel Severo; Koustuv Sinha; Michal Drozdzal; Adriana Romero Soriano; Jeannette Bohg; Nicolas Ballas; Mahmoud Assran
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10515) · [Project](https://robojepa.github.io/)
+- Tags: RoboJEPA, JEPA, multi-embodiment, latent-dynamics, scaling-laws, image-goal-CEM, fixed-encoder
+- Model size: 22M–8B predictor; frozen V-JEPA 2.1 encoder
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結V-JEPA 2.1表現上で、行動・状態・複数視点を入力するlatent予測器を22Mから8Bまで拡張する。23公開データセット・12embodimentを統合し、rollout誤差の計算量依存と画像目標CEM計画の性能を、DROID/RoboCasaとFranka操作で調べた。
+
+**主な貢献**
+
+小規模22M–2Bのfitから4B/8Bを外挿する比較で二次power lawが良好。固定表現上の予測誤差と計画能力の関係を実測。encoder共同scaleやテキスト目標は扱わず、大規模CEMは複数GPUで数秒を要する。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿・書誌: https://arxiv.org/abs/2610.10515 。HTML §2、§3.1–3.4、§5、Appendix G.7を選択精読: https://arxiv.org/html/2610.10515v1 。制約: 固定encoder/固定corpusで飽和近傍、image-goalのみ、学習policy proposalなし。VLAとの比較は目標仕様・訓練・controllerが異なる。論文記載release先 https://github.com/facebookresearch/robo\_jepa はGitHub APIで404、projectはcoming soon。code/weights/licenseはunknown、code\_urlは空欄。具体的追跡: 公式repo公開後に実装ファイル・LICENSE・checkpoint配布先とmodel cardを再確認。PDFは未取得、URL欄は未検証のため空欄。
+
+### World Models Dream of Success: Diagnosing and Repairing Failure Insensitivity in Robot World Models
+
+- ID: `WAM-0082`
+- Published: 2026-10-06
+- Authors: Jiuyi Xu; Xiao Hu; Meida Chen; Peng Gao; Yang Ye; Yangming Shi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09134) · [Code](https://github.com/jiuyixu25/CureWM)
+- Tags: CureWM, failure-insensitivity, execution-verified-counterfactuals, world-model-repair, success-failure-discrimination
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unavailable / open-source
+
+**概要（日本語）**
+
+成功デモの行動を重症度別に変え、simulationまたは実機で成否を検証したreplayを既存world modelの追加学習へ使うCureWM。architectureやlossを変えず、失敗への楽観的予測と成功・失敗の識別を、Cosmos PolicyとCtrl-World系列で診断・修復する。
+
+**主な貢献**
+
+検証済み反実仮想replayを、同予算のon-policy失敗と比較。LIBERO-Goalの例で楽観率79.55%→30.17%、AUROC 0.495→0.743だが、成功の誤警報率も31→38%に増加。予測修復を操作性能向上と同一視しない評価を提示。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: verified
+- 初稿・書誌: https://arxiv.org/abs/2610.09134 。HTML §3、§4.1/§5、§6を精読: https://arxiv.org/html/2610.09134v1 。実装MITを本文確認: https://github.com/jiuyixu25/CureWM/blob/main/LICENSE 。公式READMEはmodel weights/fine-tuned checkpoints/datasetsを再配布しないと明記: https://github.com/jiuyixu25/CureWM\#what-is-not-here 。制約: 484 LIBERO failures中未見元デモは53、転移不均一、短い予測horizon、1robot/2objectsの小規模実機。RoboCasaのrepair-control tradeoff、best-of-N制御改善に統計的証拠なし。weights unavailableは著者の積極的な非配布表明に基づく。PDFは未取得、URL欄は未検証のため空欄。
 
 ### SimForcing: Distilling Simulation Motion Priors into Real-Domain Robot World Models
 

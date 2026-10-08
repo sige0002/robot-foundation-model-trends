@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-6 records · Published date 降順（同日 ID 降順）
+7 records · Published date 降順（同日 ID 降順）
+
+### Long-WAM: Scaling the Context of World-Action Models
+
+- ID: `WAM-0087`
+- Published: 2026-10-07
+- Authors: Wei Huang; Bohan Zhang; Chenzhi Liu; Isabella Liu; Shuai Yang; Weian Mao; Luozhou Wang; Yicheng Xiao; Weifeng Lin; Qixin Hu; Bryan Chu; Sifei Liu; Linxi Fan; Xiaojuan Qi; Song Han; Yukang Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10528) · [Code](https://github.com/NVlabs/LongLive/tree/main/Long-WAM) · [Project](https://nvlabs.github.io/LongLive/Long-WAM/)
+- Tags: Long-WAM, autoregressive-video-pretraining, visual-history, streaming-VAE, asynchronous-control, edge-deployment
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+自己回帰のロボット動画事前学習を、因果的な動画・行動expert結合へ引き継ぎ、過去の観測と未来latentから行動chunkを生成する。履歴長を変えた操作評価と、streaming VAE・非同期実行・端末別高速化を検証し、実機の動的把持や長期操作に展開した。
+
+**主な貢献**
+
+履歴の追加効果を動画事前学習方式と合わせて分析。著者評価ではLIBERO-Long 99.5%、Unitree G1の動くカップ積み19/20成功。履歴長ごとに別モデルを訓練しており、可変長履歴の実機一般化は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-08 · Review: needs-review
+- 初稿・著者: https://arxiv.org/abs/2610.10528 。HTML §§3–6、Appendix A/Gを選択精読: https://arxiv.org/html/2610.10528v1 。実装Apache-2.0: https://github.com/NVlabs/LongLive/blob/main/Long-WAM/LICENSE 。重み実ファイル一覧を確認: https://huggingface.co/Efficient-Large-Model/Long-WAM-LIBERO-IDM/tree/main (model.pt); cardはlicense=otherで重み条件の詳細は未確認。制約: 長い履歴はpaddingと計算費増加、38.4秒で性能低下、GPU/実機再現は未実施。要確認: GR-1の短履歴値がabstract=0秒63.3%、Table 4=2.4秒63.3%、§5.3=2.4秒66.3%で不一致。著者修正または評価記録で履歴条件を照合する。公開コードのGPU/benchmark再現も未検証。PDFは未取得、URL欄も未検証のため空欄。
 
 ### World Action Learning via Interaction-Centric Spectral Latent Guidance
 
