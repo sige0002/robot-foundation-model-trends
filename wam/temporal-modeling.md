@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
+
+### WAM-Cache: Staleness-Bounded KV Reuse for Efficient World Action Models
+
+- ID: `WAM-0094`
+- Published: 2026-10-08
+- Authors: Kai Ding; Yang He; Ruijie Quan; Yi Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.11401) · [Code](https://github.com/DingKai0302/wam-cache) · [Project](https://dingkai0302.github.io/wam-cache/)
+- Tags: training-free, kv-cache, staleness-bound, efficient-inference, fast-wam
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+WAMのvideo DiT prefillを毎chunk全再計算せず、KVを再利用する。action expertのcross-attentionと視覚surpriseで再計算tokenを選び、最大ageで古い特徴による誤差蓄積を抑える。
+
+**主な貢献**
+
+単なる視覚変化/KV driftだけでは足りないことを分析し、action-aware refreshとage boundを導入。Fast-WAMのprefill FLOPsを32〜42%削減し、RoboTwin/LIBERO/実機の成功率損失を評価。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- v1初稿・著者・題名、HTML4節/5節/6節を確認: https://arxiv.org/html/2610.11401v1 。公式repoはREADME/docsのみでCode coming soonと明記し実装は確認時点でunavailable、重み・LICENSE各unknown。FLOPs削減はprefill段階でありpipeline全体の同比率高速化ではない。少token条件はGPU/kernel固定overheadで速度改善が小さく、phase移行で継承attentionが遅れる。実機はAIRBOT2課題各20試行。追補は実装公開とruntime計測条件。
 
 ### Long-WAM: Scaling the Context of World-Action Models
 
@@ -29,6 +54,31 @@
 
 - Checked: 2026-10-08 · Review: needs-review
 - 初稿・著者: https://arxiv.org/abs/2610.10528 。HTML §§3–6、Appendix A/Gを選択精読: https://arxiv.org/html/2610.10528v1 。実装Apache-2.0: https://github.com/NVlabs/LongLive/blob/main/Long-WAM/LICENSE 。重み実ファイル一覧を確認: https://huggingface.co/Efficient-Large-Model/Long-WAM-LIBERO-IDM/tree/main (model.pt); cardはlicense=otherで重み条件の詳細は未確認。制約: 長い履歴はpaddingと計算費増加、38.4秒で性能低下、GPU/実機再現は未実施。要確認: GR-1の短履歴値がabstract=0秒63.3%、Table 4=2.4秒63.3%、§5.3=2.4秒66.3%で不一致。著者修正または評価記録で履歴条件を照合する。公開コードのGPU/benchmark再現も未検証。PDFは未取得、URL欄も未検証のため空欄。
+
+### SpectralCache: Accelerating Diffusion-Based World Models via Spectral Feature Caching
+
+- ID: `WAM-0088`
+- Published: 2026-10-02
+- Authors: Zhendong Mi; Pu Zhao; Ziyu Hu; Xiaodong Yu; Yanzhi Wang; Grace Li Zhang; Shaoyi Huang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.02660)
+- Tags: supporting-foundation, diffusion-world-model, spectral-cache, singular-subspace, training-free
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+拡散world modelの近接denoising stepで安定する特異部分空間を再利用し、少数の特異値を外挿/倍率補正するtraining-free高速化。繰り返すTransformer全計算を減らす。
+
+**主な貢献**
+
+SVD空間と特異値の時間構造を利用するcacheを設計し、HunyuanWorld-Voyager-13Bで5.22倍の生成高速化とWorldScoreを比較。rank/最大cache間隔/倍率の品質trade-offも分析。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿2026-10-02・著者・題名、HTML3節/5.3〜5.4/6節を確認: https://arxiv.org/html/2610.02660v1 。Oct9cs.ROへのcross-listで発見した同一v1で、新改訂とは扱わない。13Bは評価対象の既存world generatorで新モデル規模ではない。評価は環境動画生成でrobot閉ループpolicyやaction followingの保証ではない。cache間隔増大は品質を悪化させる。本文リンク/題名著者検索で公式実装・独自重み・LICENSE未確認各unknown。追補は実装releaseとrobot制御評価。
 
 ### World Action Learning via Interaction-Centric Spectral Latent Guidance
 

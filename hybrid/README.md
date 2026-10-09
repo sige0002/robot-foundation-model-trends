@@ -3,17 +3,22 @@
 
 [← データベース](../README.md)
 
-28 records · 正本: [papers.csv](../papers.csv)
+33 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 12 |
-| [vla-wam](vla-wam.md) | 12 |
+| [vla-agent](vla-agent.md) | 15 |
+| [vla-wam](vla-wam.md) | 14 |
 | [wam-agent](wam-agent.md) | 3 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
 
 ## 論文
 
+- 2026-10-08 · [ARC: A Reasoning Recipe for Robot Foundation Models](vla-agent.md) · `HYBRID-0131`
+- 2026-10-08 · [PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies](vla-wam.md) · `HYBRID-0130`
+- 2026-10-08 · [RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes](vla-agent.md) · `HYBRID-0129`
+- 2026-10-08 · [Rewiring Semantics, Dynamics, and Control: A Simple yet Effective Action-Centric Tri-Stream Transformer](vla-wam.md) · `HYBRID-0128`
+- 2026-10-07 · [NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime](vla-agent.md) · `HYBRID-0127`
 - 2026-10-07 · [Juno: Taming Predictive Latents for Vision-Language-Action Models](vla-wam.md) · `HYBRID-0126`
 - 2026-10-06 · [Co-Evolving Robot Orchestrators and Policies through Deployment](vla-agent.md) · `HYBRID-0125`
 - 2026-10-05 · [Recursive Video In-Context Learning for Agentic Robot](vla-agent.md) · `HYBRID-0118`

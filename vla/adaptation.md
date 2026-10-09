@@ -3,7 +3,132 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-27 records · Published date 降順（同日 ID 降順）
+32 records · Published date 降順（同日 ID 降順）
+
+### RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control
+
+- ID: `VLA-0186`
+- Published: 2026-10-08
+- Authors: Yuxin Chen; Senqiao Yang; Zixuan Wang; Jinhui Ye; Changsheng Lu; Pengguang Chen; Shu Liu; Zhuotao Tian; Jiaya Jia
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.12185) · [Code](https://github.com/JIA-Lab-research/RESETTLE)
+- Tags: frozen-policy-recovery, action-disagreement, demonstration-retrieval, v-jepa, agent-compatible
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unspecified
+
+**概要（日本語）**
+
+同じ条件で二つのaction提案が継続して不一致になると復帰を発動するRESETTLE。V-JEPAで同課題デモを検索し、state-servo priorとguarded visual residualで一手補正後に凍結方策へ戻す。
+
+**主な貢献**
+
+6base policyのsimulationと実機2方策で復帰を検査。VLA/Harness併用にも適用するが、補正自体は追加VLM推論やオンライン軌跡最適化を必要としない。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- 初稿・著者: https://arxiv.org/abs/2610.12185 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12185v1 。§4.3/Table5選読。実機各4task×20trialの平均には3taskのbinary SRとUse Spoonのstage completionが混在し、平均78.75/92.92を純成功率として採用しない。QwenPIのtool-call monitoring/recovery latency比較は全task end-to-end速度と同一ではない。https://github.com/JIA-Lab-research/RESETTLE はpublicだがAPI contentsがThis repository is empty、paperのcode availableとは不一致。code unavailable/weights unknown/license unspecified。needs-review: 次回は同repoの実装fileとLICENSE/正式releaseを確認。 PDF未取得。
+
+### CAPABLE: Capability-Aware Policy Adaptation via Behavioral Latent Encoding
+
+- ID: `VLA-0183`
+- Published: 2026-10-08
+- Authors: Mohammad Khoshnazar; Mohammad Dehghani Tezerjani; Deyuan Qu; Zhiyuan Gao; Yanxiang Zhan; Jeroen Schafer; Andrew Melnik; Qing Yang; Michael Beetz
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11971) · [Project](https://capable-vla.github.io/)
+- Tags: capability-inference, joint-fault-recovery, frozen-vla, residual-rl
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+各jointのcommand–response履歴とJacobianから実現可能性のlatentを推定し、凍結OpenVLA-OFTの腕動作へ有界residualを加えるCAPABLE。故障labelや故障joint名を推論入力にしない。
+
+**主な貢献**
+
+28 LIBERO課題の学習から除外したj₂ lockで24.8%→59.3%、同パラメータglobal-history residualより17.4pp高い。実機3task-joint条件各10trialで24/30成功（比較13/30）。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.11971 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11971v1 。v1 HTMLと https://capable-vla.github.io/ のMethod/Results選読。3training seedのtask-balanced評価。実機lockはjoint-reference層のsoftware施行、hardware RLなしのdigital-twin転移。6joint leave-one-out平均67.0%対42.4%は別8課題subset。partial effectiveness/range restrictionでは比較baselineが優位な条件もあり、万能故障復帰ではない。projectのCode表示に実装取得先を確認できずcode/weights/license unknown。 PDF未取得。
+
+### Tell Robot What Not to Do: A Negation Understanding Perspective
+
+- ID: `VLA-0182`
+- Published: 2026-10-08
+- Authors: Fazeng Li; Gan Sun; Hao Cheng; Weihong Ren; Yang Cong
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11952)
+- Tags: negation-understanding, parameter-efficient-adaptation, teacher-guided-alignment, negabench
+- Model size: π0.5構成: 11.6M追加学習パラメータ / 3.7B全体
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結VLAの視覚言語層へNegation Transformation Layersを挿入し、条件を満たす肯定指示をteacherとして視覚表現を整列するNegaAlign。既存デモから作った画像言語教師で除外条件の追従を学ぶ。
+
+**主な貢献**
+
+π0.5のNegaBench否定指示成功2.60%→88.45%、実機5否定指示計250trialで31/250→222/250。肯定指示は229/250→227/250で、除外対象を一律に禁止する方式と区別した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.11952 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11952v1 。§3/4.1–4.3とTable9選読。全既存VLA/action generatorを凍結し挿入層だけ学習、否定行動軌跡の追加収集ではない。NegaBenchは5domain/10scenario。π0.5構成11.6M trainable、full表示3.7Bは同構成。実機結果は250否定trialと別250肯定trial。コード/重み/実装ライセンスの公式releaseは未確認。 PDF未取得。
+
+### PathTime-VLA: Path-Time Decoupling for Factorized Post-Training of Vision-Language-Action Policies
+
+- ID: `VLA-0181`
+- Published: 2026-10-08
+- Authors: Qing Huang; Yifei Yang; Ziqing Zou; Anzhe Chen; Zhenjie Zhu; Yufei Wei; Rong Xiong; Yue Wang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11771)
+- Tags: path-time-factorization, speed-control, dagger, residual-post-training
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+幾何経路と実行タイミングを別々に表すPathTime-VLA。デモとDAggerで経路priorを作り、Speed-DQNで速度倍率を選び、結果に基づくPath-AWRで経路生成だけを改善する。
+
+**主な貢献**
+
+Frankaの3課題各20試行で最終方式58/60成功、BC+DAgger・固定1倍の57/60と比べ成功試行の平均完了時間を約39–52%短縮。経路とタイミングの学習インターフェースを分離した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.11771 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11771v1 。§III/IV-A–D選読。比較は同じ初期条件・60秒上限で、安全停止/timeoutも失敗に含む。30デモをDAggerで60軌跡へ拡張。時間短縮の分母は成功試行だけで、少数成功差の統計的有意性は主張しない。推論時はchunkごとに経路を再予測し、全episode固定経路ではない。コード/重み/実装ライセンス未確認。 PDF未取得。
+
+### SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation
+
+- ID: `VLA-0179`
+- Published: 2026-10-08
+- Authors: Kyoungin Baik; Youngwoon Lee
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11248) · [Code](https://github.com/kyounginbaik/SimVLA) · [Project](https://kyounginbaik.github.io/simvla/)
+- Tags: sim-to-real, mobile-manipulation, synthetic-data, privileged-vqa, simdeploy
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unavailable / open-source
+
+**概要（日本語）**
+
+simulationの技能API合成によるSimAction、特権状態由来のSimVQA、方策rolloutのSimDeployを組み合わせ、移動操作VLAを学習するSimVLA。PaliGemma backboneとflow action expertを使う。
+
+**主な貢献**
+
+35課題の合成データで訓練し、未知の実機台所・pantry・homeへ転移。mock kitchenでは実機50デモのπ0.5より高いtask progressを示すが、実機200デモの比較方策が全課題で上回る条件もある。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.11248 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11248v1 。§1/3、AppendixG/Table13選読。新しいロボット訓練dataは合成で、PaliGemmaの既存事前学習までゼロではない。実機trialはtask progressとbinary successを別に報告。https://github.com/kyounginbaik/SimVLA commit497b74b57c514d3c34778438d4b8918318afe02d のREADME/src/simvla/cli.py、pyprojectのBSD-3-Clause、LICENSE/THIRD\_PARTY\_NOTICESを確認しcode available/open-source。公開範囲は場面/技能/goal/SimAction/SimVQA等でtraining recipe・SimDeploy policy adapter・paper checkpointは含まれずweights unavailable。外部assets/dependenciesは別条件、公開codeだけで論文方策性能を再現できるとしない。 PDF未取得。
 
 ### RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input
 

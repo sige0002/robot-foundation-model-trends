@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
+
+### SuperNav: An Agentic Navigation System for Any Task in Any Scene
+
+- ID: `AGENT-0142`
+- Published: 2026-10-08
+- Authors: Jinkai Zhang; Jingyi Xu; Yuanhong Yu; Jiarui Guo; Ruizhen Hu; Hujun Bao; Xiaowei Zhou; Sida Peng
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12126) · [Code](https://github.com/zju3dv/SuperNav) · [Project](https://zju3dv.github.io/SuperNav/)
+- Tags: navigation, agent-harness, visual-point-interface, context-management, progress-tracking
+- Model size: unknown
+- Open-source: false
+- Code / weights / license: available / unknown / non-open-source
+
+**概要（日本語）**
+
+ナビゲーション専用のMLLM微調整をせず、Navigation Skills・動作tool・進捗/文脈管理を与えるagent harness。画像上の目的地点指定で意味判断と動作実行をつなぎ、実行結果から判断を更新する。
+
+**主な貢献**
+
+視覚point interfaceと幾何/学習executorを共通harnessで扱い、instance・multi-object・demand-driven navigationを比較。専用MLLM学習なしの汎用意思決定を評価し、Go2実機demoも提示。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- v1初稿・著者・題名、HTML3節/4節/限界を確認: https://arxiv.org/html/2610.12126v1 。公式repoのsrc/scripts/testsに実装あり。LICENSEはPRL v1.0で組織/project利用前の登録条件があるcustom license: https://github.com/zju3dv/SuperNav/blob/main/LICENSE 。OSI open-sourceとは扱わずfalse。READMEは https://huggingface.co/the0xka1/SuperNav-Learned-Executor のckpt\_latest125.ptを示すがHF本体/tree取得失敗でweights独立確認はunknown。実機driverと論文tasklist/groundtruthは公開scope外。MLLM誤判断・可変latency・maps/geometry依存、demand評価は行先への移動で活動遂行ではない。追補は重みファイル/条項。
 
 ### RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments
 

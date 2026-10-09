@@ -3,18 +3,30 @@
 
 [← データベース](../README.md)
 
-76 records · 正本: [papers.csv](../papers.csv)
+88 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 13 |
+| [perception-representation](perception-representation.md) | 16 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
-| [action-system1](action-system1.md) | 25 |
-| [memory-temporal](memory-temporal.md) | 5 |
-| [adaptation](adaptation.md) | 27 |
+| [action-system1](action-system1.md) | 27 |
+| [memory-temporal](memory-temporal.md) | 7 |
+| [adaptation](adaptation.md) | 32 |
 
 ## 論文
 
+- 2026-10-08 · [VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation](perception-representation.md) · `VLA-0188`
+- 2026-10-08 · [VioLA: Learning Generalist Humanoid Control Policies from Human Data](action-system1.md) · `VLA-0187`
+- 2026-10-08 · [RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control](adaptation.md) · `VLA-0186`
+- 2026-10-08 · [Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models](memory-temporal.md) · `VLA-0185`
+- 2026-10-08 · [REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models](action-system1.md) · `VLA-0184`
+- 2026-10-08 · [CAPABLE: Capability-Aware Policy Adaptation via Behavioral Latent Encoding](adaptation.md) · `VLA-0183`
+- 2026-10-08 · [Tell Robot What Not to Do: A Negation Understanding Perspective](adaptation.md) · `VLA-0182`
+- 2026-10-08 · [PathTime-VLA: Path-Time Decoupling for Factorized Post-Training of Vision-Language-Action Policies](adaptation.md) · `VLA-0181`
+- 2026-10-08 · [WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models](perception-representation.md) · `VLA-0180`
+- 2026-10-08 · [SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation](adaptation.md) · `VLA-0179`
+- 2026-10-08 · [PMTRM: Pseudo-Memory Temporal Re-encoding Module for Embodied Policy Learning](memory-temporal.md) · `VLA-0178`
+- 2026-10-07 · [When Listening Becomes Easier: Scrubbing Visual Cues for Shortcut-Free VLAs](perception-representation.md) · `VLA-0177`
 - 2026-10-07 · [RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input](adaptation.md) · `VLA-0176`
 - 2026-10-07 · [Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models](adaptation.md) · `VLA-0175`
 - 2026-10-07 · [Do Vision-Language-Action Models Understand Instructions? A Mechanistic Interpretability Study on Language Grounding](perception-representation.md) · `VLA-0174`

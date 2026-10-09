@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training
+
+- ID: `WAM-0102`
+- Published: 2026-10-08
+- Authors: Junyan Li; Ruizhi Li; Yu Liu; Xiangshuo Liu; Mingchao Sun; Hongyu Pan; Mu Xu; Lue Fan; Zhaoxiang Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12468) · [Code](https://github.com/brave-eai/DreamTrue)
+- Tags: cross-embodiment, multi-view, counterfactual-post-training, video-reward, geometric-calibration
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+複数身体・複数視点の行動条件付き動画世界モデル。既存データの幾何校正を直し、反実仮想行動で生成した動画を、人の欠陥注釈から学ぶ報酬モデルで後学習する。
+
+**主な貢献**
+
+行動軌道の画像条件への統一、オフライン校正、相互作用欠陥の報酬学習を組み合わせる。AgiBotの160反実仮想条件で、人評価の相互作用欠陥率をStage Iの48.12%から6.25%へ低減。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- v1初稿・著者・題名、HTML3節/4.1/4.2/5節を確認: https://arxiv.org/html/2610.12468v1 。公式repoのcalibration/wmvideo/rewardに実コードあり。rootと各pyprojectに新規実装ライセンスを確認できずunspecified。READMEの配布先 https://modelscope.cn/datasets/huoxingdawang/DreamTrue はdatasetリンクでありリンク自体はcheckpoint公開の証拠ではない。本確認で配布ファイルにアクセス不能なのでweightsはunknown。project https://brave-eai.github.io/DreamTrue/ も再確認で取得失敗。限界: 画像空間の生成/報酬は遮蔽下で見かけが自然でも物理的に誤った相互作用を許す。追補は配布ファイルと利用条項・実装LICENSE。
+
+### VGGTWorld-VLA: Intent-Conditioned 3D World Evolution for Autonomous Driving
+
+- ID: `WAM-0092`
+- Published: 2026-10-08
+- Authors: Zhaoyang Liu; Kun Jiang; Ziying Song; Diange Yang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11161)
+- Tags: 3d-world-prediction, driving-intent, vla-semantic-features, navsim, supporting-method
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VGGT-Worldの将来3D幾何へ走行maneuver、trajectory/速度、VLA由来の意味tokenを条件付けするVGGTWorld-VLA。同じ場面でも行動による異なる将来形状を表現する。
+
+**主な貢献**
+
+NAVSIMの3,000clip motion subsetで行動をzero/shuffle/wrongに変える介入と、意味token追加ablationを実施。正しい行動条件で予測を改善するが、raw geometry全指標での一律改善ではない。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.11161 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11161v1 。§4.3–5/Tables1–4選読。主評価はfuture geometryでdepthはVGGT pseudo ground truth、閉ループ運転成功や衝突安全性の評価ではない。baselineよりRMSE/thresholdは改善するがAbsRelは悪化する指標trade-offがある。VLA moduleは予測条件の供給で、実行robot policyを共同学習するHybridとは分けた。semantic追加は小幅で追加computeの限界。コード/重み/実装ライセンス未確認。 PDF未取得。
 
 ### RoboJEPA: Scaling Robotic Latent World Models
 

@@ -3,7 +3,57 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+14 records · Published date 降順（同日 ID 降順）
+
+### RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments
+
+- ID: `AGENT-0144`
+- Published: 2026-10-08
+- Authors: Zimo Wen; Yijin Chen; Yuxuan Cao; Wendi Chen; Yanwen Zou; Wenye Yu; Fuhang Kuang; Han Xue; Jun Lv; Chuan Wen; Cewu Lu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12424) · [Code](https://github.com/nssmd/RoboRSI) · [Project](https://lab.noematrix.ai/blog/2-roborsi/)
+- Tags: recursive-self-improvement, skill-tree, multi-agent, mobile-manipulation, human-steering
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+タスクをcompound/atomic/base skillの木へ分解し、失敗を責任枝に戻して局所修正するロボット自己改善システム。Manager/Planner/Engineer/Reviewerが検証と再利用を管理する。
+
+**主な貢献**
+
+Top-Down Skill Refinementの入出力契約・変更範囲・検証済みskill公開を統合。実機清掃の104開発runと複数simulationで評価し、安定した系列を再利用コードへ固める。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿・著者・題名、HTML3.2/3.3/4.1/4.2を確認: https://arxiv.org/html/2610.12424v1 。公式projectリンクのrepoにroborsi/scripts/tests実装、Apache-2.0全文確認: https://github.com/nssmd/RoboRSI/blob/main/LICENSE 。専用学習済み重み配布未確認。公開repoはLIBERO短期評価CLI/Web harnessであり全実機pipeline公開とは区別。実機は固定navigation mapの24時間開発case studyで、選択10runの図から単調改善を主張しない。人の安全監督/環境resetが残る。simulation比較は固定技能baselineとのserial自己改善能力の差。追補は広い実機一般化と配布scope。
+
+### Embodied Turing Machines: Stateful Code for Robot Recursive Self-Improvement
+
+- ID: `AGENT-0143`
+- Published: 2026-10-08
+- Authors: Kairui Hu; Siyuan Hu; Fangzhou Hong; Zhaoxi Chen; Ziwei Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12369)
+- Tags: code-only-policy, explicit-state, recursive-self-improvement, robodojo, shared-skill-library
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+画像と固有受容から状態を明示的に測り、共有コードライブラリだけで判断するCode-Only-as-Policyを提案。coding agentが実行フィードバックからコードを改善し、実行時のVLM/VLA呼び出しを省く。
+
+**主な貢献**
+
+状態測定・回復ロジック・共有技能の拡張をコード上で扱う構成を分析。RoboDojoの42両腕simulation課題で70.24%成功を報告し、実行コストとオフライン開発コストを分ける。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿・著者・題名、HTML3節/4節/5.2〜5.4を確認: https://arxiv.org/html/2610.12369v1 。全結果はsimulationで、公開camera設定・robot mesh・objectサイズへ依存。新課題ごとのコード開発/評価費用が必要で、未見Generalization layoutでは54.1%（standard77.3%）。研究実装・独自重み・LICENSEを本文リンクと題名/著者検索で確認できず各unknown。追補は公式code releaseと実機での状態測定/接触頑健性。
 
 ### Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded Robot Policies
 

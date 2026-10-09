@@ -3,7 +3,82 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-13 records · Published date 降順（同日 ID 降順）
+16 records · Published date 降順（同日 ID 降順）
+
+### VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation
+
+- ID: `VLA-0188`
+- Published: 2026-10-08
+- Authors: Boyao Han; Chen Shi; Jingjing Qian; ZhuoTan Tian; Li Jiang
+- Venue: NeurIPS 2026
+- Links: [Paper](https://arxiv.org/abs/2610.12451) · [Code](https://github.com/BoyaoHan/VersaCamVLA) · [Project](https://boyaohan.github.io/VersaCamVLA.github.io/)
+- Tags: camera-configurable, scene-tokens, wrist-pose-sampling, calibrated-rgb
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+較正済み複数RGB viewを固定サイズscene tokenへ写像し、カメラ数・poseの違いを行動学習から切り離すVersaCamVLA。自然な手首運動を追加pose教師として利用する。
+
+**主な貢献**
+
+training-only多信号view predictionでscene encoderを作り、凍結encoderと軽量spatial encoderから192追加tokenをπ0.5へ供給。RoboTwinの未知pose評価は52.63%（π0.5は32.88%）。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.12451 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12451v1 。v1 HTMLと https://boyaohan.github.io/VersaCamVLA.github.io/ Method/Tables1–3選読。RGB viewのpose/ray較正を要し、raw未較正カメラ対応とはしない。未知pose比較はRoboTwin Clean、nominal学習条件。https://github.com/BoyaoHan/VersaCamVLA READMEはCode coming soon、rootはREADME/demosのみでcode unavailable、weights/license unknown。公開demoを実装releaseと見なさない。 PDF未取得。
+
+### WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models
+
+- ID: `VLA-0180`
+- Published: 2026-10-08
+- Authors: Junmyeong Lee; Dongmin Shin; Min-Gyu Park; Wooseok Jeon; Inho Chang; Hae-Gon Jeon
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11508)
+- Tags: wrist-camera-adaptation, mixture-of-experts, view-robustness, frozen-policy
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+手首カメラの視点差をMoE feature adapterでcanonical表現へ近づけるWARP-VLA。暗黙の視点情報でexpertを混合し、推論時のカメラ外部較正値を不要にする。
+
+**主な貢献**
+
+LIBEROの手首視点摂動でπ0.5の平均成功39.2%→78.3%。simulation学習adapterの実機視点差への転移を評価し、wrist-view benchmarkを提案した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- 初稿・著者: https://arxiv.org/abs/2610.11508 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11508v1 。§I/III選読。canonicalデモの視覚特徴平均をanchorとして使うため、元設定の学習dataから独立した完全無準備適応ではない。absはbenchmark/実装releaseを述べるが選読本文と公式著者名検索では取得先/実装LICENSEを確定できずcode/weights/license unknown。needs-review: 次回は著者が結び付けた公式repoと実装file/LICENSEを確認しrelease主張を解消。外部較正不要は推論adapter入力についての限定。 PDF未取得。
+
+### When Listening Becomes Easier: Scrubbing Visual Cues for Shortcut-Free VLAs
+
+- ID: `VLA-0177`
+- Published: 2026-10-07
+- Authors: Jasper Gerigk; Kenzo Aspuru-Takata; Chin-Hsuan Wu; Mohammad Mohammadi; Shuhong Zheng; Igor Gilitschenski
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.10912)
+- Tags: shortcut-learning, task-scrubbing, language-grounding, representation-diagnostics
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+視点や背景とタスクの偶然の相関にVLAが依存する仕組みを調べ、視覚タスク識別器への勾配反転で言語指示の利用を促すtask scrubbingを提案する。
+
+**主な貢献**
+
+action marginとattention knockoutで視覚shortcutの入り方とモデルごとの差を分析。LIBERO、RoboTwin、実機の対課題設定でOOD頑健性を改善し、視覚情報の完全除去とは区別した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.10912 (v1=2026-10-07、改訂なし)。選択精読: https://arxiv.org/html/2610.10912v1 。§III–VII選読。実験は二つの対課題に限定され、multi-task一般化は未検証。タスクlabelと学習可能な視覚経路が必要、凍結系はadapterを追加。補助損失scaleは1seedでSC/OOD性能を参照して選択し、ID-only較正の確立ではない。ID性能低下やshortcutを残すseedもある。コード/重み/実装ライセンス未確認。 PDF未取得。
 
 ### Do Vision-Language-Action Models Understand Instructions? A Mechanistic Interpretability Study on Language Grounding
 

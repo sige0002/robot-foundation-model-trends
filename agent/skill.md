@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-2 records · Published date 降順（同日 ID 降順）
+3 records · Published date 降順（同日 ID 降順）
+
+### Skill-SLM: Agent Skill-driven Small Language Models for Reliable Robot Operation
+
+- ID: `AGENT-0141`
+- Published: 2026-10-07
+- Authors: Wenhao Wang; Yanyan Li; Jiawei Yuan
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10812)
+- Tags: small-language-model, context-free-grammar, skill-composition, progressive-orchestration, onboard-uav
+- Model size: Llama 3B/8B; Qwen3 4B/8B with LoRA; onboard Q4\_K\_M
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+小型言語モデルのrobot操作を、課題の丸ごと模倣からtask分解/skill合成へ組み替える。robot操作意味を反映するCFGでskillを抽出し、LLM教師から分解と段階的code合成を学ぶ。
+
+**主な貢献**
+
+skill-aware CFG、技能document、分解/合成の別LoRA adapter、progressive orchestrationを統合。Jetson Orin NX搭載UAV/地上車で、既知pattern・新組合せ・新能力の課題群を評価。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿・著者・題名、HTML III-B,C,D/IV-A,Cを確認: https://arxiv.org/html/2610.10812v1 。各skillのrobot APIへのgroundingはhuman expertが行い、300training instruction由来の教師データで学習。3/4/8Bは再利用SLMbackboneで研究独自total規模/公開重みではない。未知能力は準備されたskill/APIとCFG範囲であり自由な新技能獲得と区別。本文リンクと題名/著者検索で実装・独自重み・LICENSE未確認、各unknown。追補は専用release/データとskill外指示評価。
 
 ### Skill2Real: Agentic Skill Learning for Zero-Shot Sim-to-Real Robot Manipulation
 

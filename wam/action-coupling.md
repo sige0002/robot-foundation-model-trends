@@ -3,7 +3,132 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-20 records · Published date 降順（同日 ID 降順）
+26 records · Published date 降順（同日 ID 降順）
+
+### LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC
+
+- ID: `WAM-0101`
+- Published: 2026-10-08
+- Authors: Shashank Hegde; Alexander Popov; Elie Aljalbout; Nikolai Smolyanskiy
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12407)
+- Tags: jepa, bidirectional-dynamics, diffusion-steering, mpc, decoder-free
+- Model size: 41.0M trainable parameters
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+デコーダなしのJEPA潜在表現と共有Transformerで、順/逆時間ダイナミクス、逆ダイナミクス、方策の4モードを同時学習する。計画では生の行動でなく方策の拡散ノイズ空間を探索する。
+
+**主な貢献**
+
+4モード学習で制御に有用な潜在表現を得ることと、ノイズ空間MPCで世界モデルの誤差を突く行動を減らすことを分けて検証。41.0M学習パラメータで同規模方策と閉ループ性能を比較。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿・著者・題名、HTML3〜5節/6節/Appendix C,Dを確認: https://arxiv.org/html/2610.12407v1 。評価はPushT/robomimicのシミュレーション。計画が遅く、推論時のgoalを必要とし、実世界データ/実機への適用は今後の課題。本文リンクとLeWAM/著者を限定した検索で公式実装・独自重み・実装LICENSE未確認。各unknownで不存在とは断定しない。追補はreleaseと実機/速度評価。
+
+### Unifying Policy Learning and State Prediction through Spatial Language Modeling
+
+- ID: `WAM-0098`
+- Published: 2026-10-08
+- Authors: Minye Wu; Zehao Wang; Tinne Tuytelaars
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.12172)
+- Tags: spatial-language-modeling, supporting-method, from-scratch, push-t, state-prediction
+- Model size: 462M
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+場面輪郭、目標、行動座標、将来状態を共通の離散空間語彙で表し、一つの自己回帰Transformerで行動と状態遷移を学習する。raw画像VLAではなく、幾何入力を使うPush-Tの支援的world/action手法。
+
+**主な貢献**
+
+実機20episodeで成功0.80、episode最大coverage平均0.95。共同行動/状態学習とrandom-play事前学習の効果を分けて評価し、与えた行動列に沿う将来場面も予測した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.12172 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12172v1 。§4/5、Table2選読。462M Qwen2構造をfrom scratch学習し、実機入力は較正済AprilTagと既知T字形状。40成功デモと20random-playを使い、比較方策はデモのみ。成功はcoverage≥0.95を300step以内に達成、coverage指標と成功率を区別。方策ごとの履歴/実行chunk差もあるため純粋な同一入力比較ではない。3D・他物体・raw sensor一般化は未検証。コード/重み/実装ライセンス未確認。 PDF未取得。
+
+### UNITAS: A 3D-Native World Action Model for Embodied Manipulation
+
+- ID: `WAM-0097`
+- Published: 2026-10-08
+- Authors: Ruixiang Wang; Yongyi Su; Wenlve Zhou; Bo Yue; Hengyan Liu; Dekun Lu; Yuxin Tian; Yihan Fang; Zerui Wu; Xing Hu; Jietao Chen; Yong Guo; Ziyan He; Junbin Yuan; Guiliang Liu; Xiaofen Xing; Kui Jia
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12099) · [Code](https://github.com/DexForce/UNITAS)
+- Tags: 3d-native, metric-world-frame, scene-flow, action-flow, cross-embodiment
+- Model size: 1.7B
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+観測、手/グリッパの3D点軌道、scene flowを同じmetric世界座標で表す3D-native WAM。身体や視点に依存しにくいmotion interfaceで、直接行動生成と行動条件付きscene予測を統合する。
+
+**主な貢献**
+
+world-aligned3D位置埋め込みとphysical-time trajectory tokenで行動/scene動態を結合。RoboTwinの点軌道予測とLIBERO/実機操作を評価し、RoboTwin Moving ADEは0.427cm（PointWorld0.656cm）。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- v1初稿・著者・題名、HTML3節/4.4/5節/6節を確認: https://arxiv.org/html/2610.12099v1 。公式repoはREADME/assetsのみでinference/checkpoint/training release欄が未完了。要旨のcode availableとは区別し、実装は確認時点でunavailable、重み・LICENSE各unknown。READMEのproject http://unitas-wam.github.io/ は取得失敗でproject\_url空欄。scene-flow定量評価はsimulator groundtruthを用い、video baselineの3D化は初期GT depth校正を用いる。長期相互作用/広い実機deploymentは今後の課題。追補は実装とcheckpoint release。
+
+### Humanoid World Action Model With Joint State--Action Generation
+
+- ID: `WAM-0096`
+- Published: 2026-10-08
+- Authors: Yan Yang; Jikun Rong; Minzhao Zhu; Zheyi Zhao; Qirui Hu; Zihan Lan; Weixin Mao; Yinhao Li; Zhen Fu; Hua Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12026) · [Project](https://hwam.vercel.app/)
+- Tags: humanoid, joint-state-action-generation, execution-gap, forward-inverse-dynamics, whole-body
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+人型のpolicy参照行動と、全身制御後に実現する身体状態のずれを、joint state-action生成で明示的に扱う。Policy/FDM/IDMの3条件経路で実現身体動作と視覚未来を結ぶ。
+
+**主な貢献**
+
+未来の固有受容状態をaction学習の教師targetに加える。LimX OLIの3実機課題を評価し、Candy Picking70.6%（Fast-WAM43.3%）など、action-onlyとの差を制御ablationで調べる。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- v1初稿・著者・題名、HTML3節/4.2〜4.5を確認: https://arxiv.org/html/2610.12026v1 。HTMLのcode/dataset available記載に対し公式projectはCode/Dataset/Video Coming soonで、実装は確認時点でunavailable、重み・LICENSE各unknown。限界: OLI3課題中心のtask別データ/学習で身体間一般化保証ではない。未来video診断は12held-outepisodeで、predicted trajectory条件ではHWAMのPSNR優位なし。joint state-action単独のrecipeは必ず改善するわけではない。追補はreleaseと各試行分母/不確実性。
+
+### Cross-Embodiment Robot Foundation World Models with Latent Actions
+
+- ID: `WAM-0091`
+- Published: 2026-10-07
+- Authors: Huang Huang; Sriram Yenamandra; Arjun Majumdar; Elie Aljalbout; Tushar Nagarajan; Tsung-Yen Yang; Akshara Rai; Michael Rabbat; Li Fei-Fei; Jiajun Wu; Tingfan Wu; Franziska Meier
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10846) · [Project](https://lacwm.github.io/)
+- Tags: latent-actions, cross-embodiment, inverse-forward-dynamics, motion-decoder, vla-proposal-ranking
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+人と複数robotの連続画像から共通の潜在行動を学び、その行動で視覚世界モデルを条件づけるLAC-WM。未知身体の明示actionは新しいprojectorで事前学習済みlatentへ写像する。
+
+**主な貢献**
+
+IDM/FDMにmotion decoderとcross-augmentationを加え、身体ごとに分断したexplicit action表現との転移差を検証。5未見LIBEROvariant/125試行のVLA候補rankingでSR92.0%対EAC-WM82.4%。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿・著者・題名、HTML3節/6節/7節とprojectを確認: https://arxiv.org/html/2610.10846v1 。新身体にはprojector/モデルfine-tuningを行いzero-shot対応としない。事前学習にmotion labelを用い、label-free video学習は将来方向。dexterous絶対成功率は低く実機hardware検証は今後の課題。projectのCodeはbuttonのみで提供先未確認、実装・独自重み・LICENSE各unknown。追補はreleaseと実機評価。
 
 ### RealtimeWAM: How Fast Can I Run My World Action Model?
 
@@ -54,6 +179,31 @@ WAMの観測処理と予測を層単位で重ね、視覚的に安定したtoken
 
 - Checked: 2026-10-08 · Review: verified
 - 書誌・初稿: https://arxiv.org/abs/2610.09734 。HTML §§3–4.4、Conclusionを精読: https://arxiv.org/html/2610.09734v1 。§3でWan VideoDiT-5Bを確認。論文・arXivに公式code/project/weightsリンクは確認できず、個別の実装ライセンスもunknown。制約: embodiment別ACWMへの依存、局所Taylor近似、camera/大きいlayout変化に弱い。実機は2platform/5task、task別訓練、各task-condition 3試行のprogress scoreで成功率と区別。HTMLが参照する一部appendixは表示されず未精読。PDFは未取得、URL欄は未検証のため空欄。
+
+### RIWANav: Recursive World-Action Models with Self-Improvement for Urban Navigation
+
+- ID: `WAM-0089`
+- Published: 2026-10-06
+- Authors: Jing Xie; Shouwei Ruan; Yubin Wang; Yuxiang Zhang; Haitao Yang; Songchang Jin; Dianxi Shi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.08640)
+- Tags: urban-navigation, recursive-self-improvement, grpo, cosmos, offline-training
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+都市ナビゲーション方策と行動条件付き動画世界モデルを交互に後学習する。想像された結果をGRPOの比較報酬に使い、改善した方策から専門家と整合する行動・動画対を選んで世界モデルを更新する。
+
+**主な貢献**
+
+行動の新規性と予測誤差で優先づけるgrounded self-curriculumにより、固定世界モデルとの比較を行う。UrbanNav test-unseenの3seed平均SRは88.25±0.43%、GRPO-WMは80.31±0.94%。実機試験は定量benchmarkと分けた定性的実証。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- arXiv v1初稿2026-10-06・著者・正式題名、HTML III手法/IV-A,C,D,E,Fを確認: https://arxiv.org/html/2610.08640v1 。今回初めて読み取り成功した retained lead。実装・独自重み・実装LICENSEの公式提供は本文リンクとRIWANav/著者を限定した検索で未確認。既存CosmosやUrbanNavの公開とは区別。限界: 固定offline dataset、記録expertに近い行動だけに未来動画を対応づけられ反実仮想探索が制限、4H200学習と大動画モデルの計算/メモリ負担、実機は定性的で都市/身体間一般化は未評価。専用releaseと広範な実機定量評価を追補。PDF未取得、正確なhref未抽出。
 
 ### AutodidactWAM: Cross-Modal Self-Distillation from Generated Video to Robot Actions
 

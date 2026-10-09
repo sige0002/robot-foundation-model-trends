@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+7 records · Published date 降順（同日 ID 降順）
+
+### Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models
+
+- ID: `VLA-0185`
+- Published: 2026-10-08
+- Authors: Hongyu Shi; Sen Zhao; Zuyu Zhang; Lifeng Shen; Ding Zou; Xinyu He; Xu Zhang; Qinghua Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.12090)
+- Tags: latent-reasoning, reasoning-reuse, multi-episode-memory, zero-shot-robustness
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+成功した潜在推論の流れを保存し、現在の状況に合う断片を複数エピソードから再構成・修正して行動expertへ渡すFlowMem。観察の蓄積だけでなく、再利用可能な推論過程を記憶する。
+
+**主な貢献**
+
+RoboMME Full-16で48.0%（記憶なしLaST₀は46.3%）、標準LIBERO学習後のLIBERO-Plusで77.3%（73.2%）。互換性・順序・進捗に関する記憶介入も検査した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.12090 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12090v1 。§3.3–3.6/4.1–4.3とTables1–2選読。RoboMMEは16課題各50固定episodeの課題macro平均、LIBERO-Plusは10,030 instanceのpooled平均。学習・記憶供給・評価episodeは分離。コード/重み/実装ライセンスの公式releaseは未確認でunknown。 PDF未取得。
+
+### PMTRM: Pseudo-Memory Temporal Re-encoding Module for Embodied Policy Learning
+
+- ID: `VLA-0178`
+- Published: 2026-10-08
+- Authors: Changchuan Yang; Haoxuan Xu; Wenbo Chen; Shuai Ren; Jianlong Zheng; Huarui Zhang; Tianfu Li; Guanzhong Tian
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11168)
+- Tags: phase-ambiguity, executed-history, supporting-method, temporal-reencoding
+- Model size: 追加module: 訓練7.61M / 推論3.81M
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+実行済みstate/actionの有界履歴を再encodeし、似た観察でも異なる操作phaseを区別するPMTRM。時間的heterogeneityと再構成教師を使い、既存のACT・DP・VLAのaction headを保つ。
+
+**主な貢献**
+
+訓練用decoderを捨て、推論時は3.81M encoderだけを使う。T=128のACT判断でRTX4090上0.42ms追加という条件付き測定と、反復操作での履歴効果を報告した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.11168 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11168v1 。§III-F–G/IV-A–BとTABLE V選読。総訓練module7.61Mと推論encoder3.81Mを区別。0.42msは6.8ms base ACTに対する6.2%増で、全VLA共通latencyではない。preceding executed actionのみqueueに入れ将来chunkは含めない。実機は各10rolloutでconfidence幅が広く、simulation multi-seedと証拠強度を分ける。MemoryVLAへの追加結果はaligned action stream不足で省略。コード/重み/実装ライセンス未確認。 PDF未取得。
 
 ### Remember What You Did: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies
 

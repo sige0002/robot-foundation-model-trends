@@ -3,7 +3,57 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+14 records · Published date 降順（同日 ID 降順）
+
+### PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies
+
+- ID: `HYBRID-0130`
+- Published: 2026-10-08
+- Authors: Yu Liu; Hetian Guo; Tianlv Huang; Ziyi Cai; Wudi Chen; Hantang Wang; Qiutong Liu; Yingzhi Peng; Wei Han; Peijun Tang; Jianan Wang; Zipei Fan; Zhiyuan Zha; Xuan Song
+- Venue: CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2610.12285)
+- Tags: predictive-latents, v-jepa-2, causal-attention, long-horizon, video-pretraining
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+π0.5系VLAへ、V-JEPA 2表現空間で将来状態を予測する軽量world expertを結合するPLaW-VLA。履歴・タスク意味・予測潜在状態を構造化causal attentionで行動生成へ接続する。
+
+**主な貢献**
+
+LIBERO平均97.4%、標準LIBEROからzero-shot評価するLIBERO-Plusのtask-weighted成功72.7%。RoboTwin Hard Horizon IIIは67.4%→79.2%で、長期実行の予測文脈を評価した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.12285 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12285v1 。§3.2–3.3/4.1–4.3、Tables1–4選読。LIBEROは40課題・各50 rollout・3評価seed、RoboTwinは50課題のhorizon別集計。実機指標は正規化task progressで成功率と混ぜない。72.7%と再構成空間70.93%の差1.77ppは予測空間ablation。コード/重み/実装ライセンスは未確認。要旨の1/19 latencyはハードウェア/工程の追加確認なしに一般化しない。 PDF未取得。
+
+### Rewiring Semantics, Dynamics, and Control: A Simple yet Effective Action-Centric Tri-Stream Transformer
+
+- ID: `HYBRID-0128`
+- Published: 2026-10-08
+- Authors: Shuang Luo; Yilun Kong; Yunpeng Qing; Yihang Jiao; Zhi Hou; Shunyu Liu; Xiaogang Wang; Dacheng Tao
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11416)
+- Tags: tri-stream-transformer, action-centric-attention, cosmos, joint-dynamics-control
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+π0.5の視覚言語streamとCosmos由来の動画world streamを独立に保ち、行動expertの層ごとのqueryだけが両方を読むACT³。意味と予測dynamicsを行動streamで統合する。
+
+**主な貢献**
+
+行動損失で両context backboneまで更新し、将来予測の補助学習を併用する。相互にcontextを読み合う設計との比較で、action-centricな情報経路と制御の効果を検査した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.11416 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11416v1 。§1/3.1–3.3選読。予測潜在contextは学習・推論で同じ生成工程を使い、実演の将来は補助予測教師に限定。VLMとWMを単に同名で併記した分類ではなく実際のVLA/WM結合を確認。評価全表・公開実装・重み・実装ライセンスは未確認で、総合性能順位や汎用速度向上を断定しない。 PDF未取得。
 
 ### Juno: Taming Predictive Latents for Vision-Language-Action Models
 

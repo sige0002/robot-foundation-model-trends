@@ -3,19 +3,23 @@
 
 [← データベース](../README.md)
 
-40 records · 正本: [papers.csv](../papers.csv)
+44 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [planning](planning.md) | 11 |
-| [code](code.md) | 12 |
-| [skill](skill.md) | 2 |
-| [tool](tool.md) | 7 |
+| [code](code.md) | 14 |
+| [skill](skill.md) | 3 |
+| [tool](tool.md) | 8 |
 | [memory](memory.md) | 3 |
 | [replanning](replanning.md) | 5 |
 
 ## 論文
 
+- 2026-10-08 · [RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments](code.md) · `AGENT-0144`
+- 2026-10-08 · [Embodied Turing Machines: Stateful Code for Robot Recursive Self-Improvement](code.md) · `AGENT-0143`
+- 2026-10-08 · [SuperNav: An Agentic Navigation System for Any Task in Any Scene](tool.md) · `AGENT-0142`
+- 2026-10-07 · [Skill-SLM: Agent Skill-driven Small Language Models for Reliable Robot Operation](skill.md) · `AGENT-0141`
 - 2026-10-07 · [Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded Robot Policies](code.md) · `AGENT-0140`
 - 2026-10-07 · [RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments](tool.md) · `AGENT-0139`
 - 2026-10-07 · [RoboQuest: Generalist Physical Agents that Search, Inspect and Test](planning.md) · `AGENT-0138`

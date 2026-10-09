@@ -3,7 +3,82 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+15 records · Published date 降順（同日 ID 降順）
+
+### ARC: A Reasoning Recipe for Robot Foundation Models
+
+- ID: `HYBRID-0131`
+- Published: 2026-10-08
+- Authors: Gokul Puthumanaillam; Tao Sun; Elie Aljalbout; Moritz Reuss; Zhaoshuo Li; Fabio Ramos; Ankit Goyal; Jenai Xuning Yang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.12386) · [Project](https://arc-robot-reasoning.github.io/)
+- Tags: action-grounded-reasoning, external-vlm, causal-traces, wam-compatible, droid
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+既存DROIDデモから行動の理由と効果を示すcausal traceを自動生成し、既存RFMをtrace条件付き制御へ微調整するARC。実行時には外部VLMが観察からtraceを更新する。
+
+**主な貢献**
+
+VLAとWAMへの別々の適応recipeを示し、RoboLab-120のdefault指示でπ0.5は28.0%→45.3%、Cosmos3-Nanoは36.8%→48.8%。追加の新規ロボットデモなしで推論教師を構築した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.12386 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12386v1 。§4.2–5.1選読。約75K DROID episode/1.2M frameを再labelし、既存デモでfine-tuneするためtraining-freeではない。外部reasoner条件付きVLAを主分類vla-agent、WAM variantはtags/説明に保持し三要素同時融合としない。hardwareの91.7%は28再現課題の集計で一般成功保証ではない。https://arc-robot-reasoning.github.io/ はCode/Model/Dataset Coming soonとreview後releaseを明記し、code/weights unavailable、実装ライセンスunknown。 PDF未取得。
+
+### RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes
+
+- ID: `HYBRID-0129`
+- Published: 2026-10-08
+- Authors: Bohan Zhou; Xingbei Chen; Emily Huang; Weilin Ruan; Haojian Huang; Yehang Zhang; Zexi Li; Wenqian Li; Qize Yu; Zetian Song; Leyi Wu; Jinghao Li; Mingxuan Song; Xinrun Xu; Zongyang Qiu; Yangkai Wei; Tianyi Zhang; Kaiwen Zhou; Yinchuan Li; James Cheng
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.11480)
+- Tags: skill-orchestration, counterfactual-branching, policy-family-coordinator, q-learning, mcts
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結coding agentとmodular skill/VLA系policyを組み合わせ、現在状態に適したpolicy familyの責任を学習する。P5段階構造と同一状態からの反実仮想実行で、選ばれなかった枝の結果も収集する。
+
+**主な貢献**
+
+State-Locked Counterfactual BranchingとMCTS/Q-learningでfamily-conditioned価値を学び、推論時は観測文脈だけでfamilyを選ぶ。100simulation課題のsingle-episode評価で77.0%overall成功を報告。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿・著者・題名、HTML3節/SCB-EAL/5節を確認: https://arxiv.org/html/2610.11480v1 。trainではsimulator snapshot復元・oracle mask・GT object poseとreward evaluatorを用い、deploymentでprivileged signal/online searchを使わない主張とは分ける。policy switchingはP5境界に限られ、atomic end-to-end呼出中の一時失敗の細粒度割込は未解決。本文リンク/題名検索で公式実装・独自重み・LICENSE未確認（同名旧IRF repoは別研究）。追補は専用releaseと実機評価。
+
+### NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime
+
+- ID: `HYBRID-0127`
+- Published: 2026-10-07
+- Authors: Gengze Zhou; Yicong Hong; Jiazhao Zhang; Xunyi Zhao; Jian Zhou; Zixing Lei; Zun Wang; Chongyang Zhao; Xionghui Chen; Stephen Gould; Anton van den Hengel; Qi Wu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.10787) · [Code](https://github.com/metacognitionai/NavGPT-3) · [Project](https://metacognitionai.github.io/NavGPT3/)
+- Tags: navigation, hierarchical-runtime, motion-authority, context-allocation, route-repair
+- Model size: NavGPT VLA variants: 4.44B and 8.77B (4B/8B names); Planner size varies
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+言語モデルPlannerとナビゲーションVLAを、状態/文脈管理・空間tool・route修復harnessで結ぶ。上位runtimeが推論、行動、監視のthreadとmotion authorityを管理し、割込後の再検証を行う。
+
+**主な貢献**
+
+harness/runtime/VLAを共同設計し、scene変化に応じたvisual token配分も学習。full-split R2R-CE/RxR-CEで評価し、8B単独のRxR-CE SR78.19%からcomplete harness90.43%へ改善。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿・著者・題名、HTML3節/4.8/5節とprojectを確認: https://arxiv.org/html/2610.10787v1 。公式sourceはVLA inference/harness/simulation evalでApache-2.0全文確認: https://github.com/metacognitionai/NavGPT-3/blob/main/LICENSE 。HF両variantにsafetensors shard/indexを独立確認: https://huggingface.co/Metacognition-AI/NavGPT3-4B/tree/main ; https://huggingface.co/Metacognition-AI/NavGPT3-8B/tree/main 。モデルカードはAGPL-3.0でsourceと別条項。UnitreeのZEOS deployment/thread実装は別repoで後日予定。19.28Mは再利用/augmentationを含むeffective recordでunique trajectory数ではない。human参考値はdiscrete研究でcontinuous RxR-CEと条件が異なる。
 
 ### Co-Evolving Robot Orchestrators and Policies through Deployment
 

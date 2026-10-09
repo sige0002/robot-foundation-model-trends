@@ -3,7 +3,82 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-17 records · Published date 降順（同日 ID 降順）
+20 records · Published date 降順（同日 ID 降順）
+
+### LiteNWM: Efficient Latent World Models for Onboard Visual Navigation in the Wild
+
+- ID: `WAM-0100`
+- Published: 2026-10-08
+- Authors: Linkai Liu; Yuntian Zhang; Zhenshan Bing; Chen Chen; Lingjuan Lyu; Shangguang Wang; Mengwei Xu; Dongqi Cai
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12368)
+- Tags: latent-world-model, visual-navigation, candidate-ranking, shared-encoding, multi-horizon
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結ナビゲーション方策の候補軌道を、共有画像符号化と並列多時点の潜在未来予測で比較する世界モデル。RGB動画再構成を省き、学習した相対scorerで軌道を選択する。
+
+**主な貢献**
+
+候補ごとの画像rolloutを共有符号化と非自己回帰の未来潜在予測へ置き換える。RECON/SCAND/SACSoNと別proposerへの転移を評価。Go2の3scene各10試行ではSR83.3%、NoMaD43.3%。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- v1初稿・著者・題名、HTML III/IV-E,F/Vを確認: https://arxiv.org/html/2610.12368v1 。実装・重み・LICENSEは本文リンクとLiteNWM検索で未確認。限界: image-goalの3scene/30試行、RTX5090上の速度、manipulation転移未検証。速度値に不整合: 要旨/IV-EはNWM-S16.86×/NWM-XL128.00×、結論は18.39×/132.02×。その比率は貢献欄から除外。追補はTable IVのtiming境界/比率訂正と専用release。
+
+### Reliability-Aware Future Conditioning for Temporally Robust Robot Manipulation
+
+- ID: `WAM-0095`
+- Published: 2026-10-08
+- Authors: Mohammad Khoshnazar; Mohammad Dehghani Tezerjani; Zhiyuan Gao; Deyuan Qu; Max Gandyra; Yanxiang Zhan; Mehreen Naeem; Andrew Melnik; Jeroen Schafer; Qing Yang; Michael Beetz
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.11956) · [Project](https://future-condition.github.io/)
+- Tags: future-video-conditioning, temporal-misalignment, reliability-gating, residual-rl, supporting-method
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+一度生成した未来動画の時刻ずれを制御側で扱うRAFC。静的fallbackと近傍phase候補を凍結BCに通し、信頼度gateと有界residualで行動を混合する。
+
+**主な貢献**
+
+8 CALVIN課題のoff-grid shift平均で生成未来51.8%→RAFC73.7%、同じ候補の均等平均66.7%より7.0pp高い。自然な時刻差のFranka3課題各20trialは16/60→34/60成功。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.11956 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11956v1 。§III-D/IVと https://future-condition.github.io/ を選読。GPT-4oのgoal grounding、robot-free digital-twin rollout、CogVideoX/VideoPainter系生成はtask開始時1回で、LLMは閉ループ低レベル行動を生成しない。BCはResNet18+TransformerでVLAとはしない。候補{-2,0,+2}に対し6非zero global shiftを評価、平均はzeroを除外。windowed GenFuture81.3%→54.8%とclipped69.8%→34.2%を混ぜない。codeは今後公開の記載でunavailable、重み/実装licenseはunknown。 PDF未取得。
+
+### PlanWAM: Planning-Shaped Future Representations for End-to-End Autonomous Driving
+
+- ID: `WAM-0093`
+- Published: 2026-10-08
+- Authors: Jinchang Xu; Hongda Yu; Fengwei Dong; Wenhui Huang; Xi Wei; Yongzhi Liu; Sunan Zhang; Jirao Wang; Chen Lv; Bingbing Li; Guodong Yin; Weichao Zhuang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.11382)
+- Tags: autonomous-driving, planning-shaped-latent, privileged-posterior, hindsight-distillation, supporting-foundation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+自動運転の未来潜在表現を、画像再構成の忠実度ではなくtrajectory planning目的で形づくる。未来を見たtraining-only posteriorから、履歴だけを使うpriorへ蒸留する。
+
+**主な貢献**
+
+Temporal Register Pyramidの履歴圧縮とHindsight-to-Foresight Distillationで、計画に役立つ未来情報をtrajectory生成/選択へ渡す。NAVSIM open-loopとHUGSIM zero-shot閉ループsimulationで評価。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- v1初稿・著者・題名、HTML3節/4節を確認: https://arxiv.org/html/2610.11382v1 。posteriorは訓練のみでGT futureを使い、推論priorはhistoryのみ。評価は自動運転benchmarkで、実車安全性やmanipulationへの転移実証ではない（評価範囲からの留保）。本文リンクとPlanWAM検索で公式実装・独自重み・LICENSEを確認できず各unknown。追補はreleaseと実車/ロボット転移の検証。
 
 ### Predicted Futures Are Not Enough: Learning Executable Goals for Robot Manipulation
 

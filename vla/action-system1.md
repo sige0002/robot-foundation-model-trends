@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-25 records · Published date 降順（同日 ID 降順）
+27 records · Published date 降順（同日 ID 降順）
+
+### VioLA: Learning Generalist Humanoid Control Policies from Human Data
+
+- ID: `VLA-0187`
+- Published: 2026-10-08
+- Authors: Mert Albaba; Jens Beißwenger; Anna Manasyan; Daniel Marta; Michael J. Black; Wieland Brendel; Andreas Krause; Georg Martius; Martin Riedmiller
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.12435)
+- Tags: humanoid, human-motion-supervision, body-hand-latents, wam-compatible, zero-shot-instruction
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+人とロボットの動きを共通のbody/hand latentへ変換し、VLAがそのlatentを予測するVioLA。凍結body controllerとhand decoderが実機joint動作へ変換する。
+
+**主な貢献**
+
+Unitree G1の6姿勢/移動課題各5trialは30/30成功。7操作課題は31/35（88.6%）だが別のbottle-carry0/5を含めると31/40（77.5%）。課題別fine-tuningなしの指示追従を検査した。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.12435 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12435v1 。§4.1–4.7/5とAppendixA.1/A.7選読。converted pool140.6M frameの93.2%は人のframe比で、training期待sampling比80%とは別。GR00T/π0.5/DiT4DiTは代替backbone比較で同時融合ではない。robot-onlyは操作33/35で人混合31/35を上回り、人教師の全課題優位は主張しない。主評価は1台・各5trial、hand decoderにcontact-force feedbackなし。absはcode/checkpoints future releaseでcode/weights unavailable、実装license unknown。 PDF未取得。
+
+### REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models
+
+- ID: `VLA-0184`
+- Published: 2026-10-08
+- Authors: Houlong Xiong; Zhenqi Qiu; Zechen Wang; Suohang Zhang; Yiyu Ren; Wanting Xu; Hongfei Niu; Chengyang He; Ge Sun; Ran Cheng; Qian Zhu
+- Venue: CoRL 2026 Spotlight
+- Links: [Paper](https://arxiv.org/abs/2610.12007) · [Project](https://react-vla.github.io/)
+- Tags: rolling-denoising, persistent-action-buffer, asynchronous-control, reactivity
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+行動bufferの異なる部分を異なるflow時刻で逐次denoiseし、実行直前まで新しい観察を反映するREACT。観察、VLM encoding、DiT、実行を分離するdual decouplingを併用する。
+
+**主な貢献**
+
+RoboTwin 2.0と複数実機で反応速度・滑らかさ・成功を検査。実機6platform-task対の平均成功64.8%（π0.5長chunk58.7%）、ターゲット移動への反応は734ms（1505ms）。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- 初稿・著者: https://arxiv.org/abs/2610.12007 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12007v1 。§3/4と https://react-vla.github.io/ の条件を選読。実機の6対は各30trial、RoboTwinは7課題各100trial。3Hz観察/30Hz行動はS=10・M=2・単一RTX4090の条件で、全観察を30Hz推論する主張ではない。反応時間は専用ターゲット移動評価で全タスク共通latencyではない。schedulerは推論変更だがrolling用staircase学習を含む。公式projectに実装/重みの取得先は未確認でunknown。 PDF未取得。
 
 ### RoboPace: Contact-Aware Time-Optimal Retiming for Action-Chunk Policies
 

@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-31 records · Published date 降順（同日 ID 降順）
+33 records · Published date 降順（同日 ID 降順）
+
+### MiniWAM: Learning Compact Future Targets for Efficient World-Action Modeling
+
+- ID: `WAM-0099`
+- Published: 2026-10-08
+- Authors: Jie Chen; Ruofei Bai; Yuxin Cai; Yifeng Zhang; Chengyang He; Jun Li; Wei-Yun Yau; Guillaume Sartoretti
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12194) · [Project](https://j1dan.github.io/MiniWAM/)
+- Tags: compact-predictive-target, inverse-dynamics, prism, efficient-training
+- Model size: 0.25B policy parameters; frozen visual/text encoders excluded
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+現在・未来の視覚遷移からPRISMで圧縮した制御関連表現を学び、凍結後に行動とその未来表現を同時予測する。高次元の視覚backbone本来の特徴を直接予測する学習負担を削減する。
+
+**主な貢献**
+
+逆ダイナミクス監督と特徴再構成でコンパクトな未来targetを作る2段階学習。65倍少ないnative future tokenと最大8倍のworld-action学習高速化を報告し、3simulation benchmarkで評価。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: needs-review
+- v1初稿・著者・題名、HTML3節/4節/5節とprojectを確認: https://arxiv.org/html/2610.12194v1 。projectはcode/config/checkpointを2026年11月前に公開予定と明記し、提供リンクは未公開なのでcode/weightsは確認時点でunavailable、LICENSE/open\_sourceはunknown。0.25Bは凍結visual/text encoderを除いたpolicy規模。PRISMはdownstream設定別に学習し、Stage2で凍結される。実機/身体間共通事前学習は今後の課題。追補は予定release、実装LICENSE、checkpoint tree。
+
+### DSReg: Provably Recovering Individual World Latents without Reconstruction
+
+- ID: `WAM-0090`
+- Published: 2026-10-07
+- Authors: Yujia Zheng; David Klindt; Randall Balestriero; Bernhard Schölkopf
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.09457) · [Code](https://github.com/kunwuz/dsreg) · [Project](https://dsreg.github.io/)
+- Tags: jepa, identifiability, latent-disentanglement, supporting-foundation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+再構成器やラベルを使わないJEPAの混合潜在表現を、観測との依存関係が疎になる回転で個々の世界要因へ分離する基礎研究。既存の線形識別可能な表現へ後付けできる。
+
+**主な貢献**
+
+線形識別可能性・異なる依存footprint・Functional no-cancellationの条件下で、潜在変数を符号と順列の曖昧さまで回復することを証明。合成・描画データと疎な制御/予測probeで評価し、実機ロボットは未検証。
+
+**確認記録**
+
+- Checked: 2026-10-09 · Review: verified
+- arXiv v1初稿2026-10-07・著者・正式題名とHTML3節/4節/5節を確認。 https://arxiv.org/html/2610.09457v1 。公式projectから実装repoを確認し、dsreg/、synthetic実験、Lean形式化が公開。root一覧・README・pyprojectに新規実装のライセンス宣言なし。THIRD\_PARTY\_NOTICESのMITは特定のupstream由来実験ファイルにのみ適用し、全実装のOSIライセンスとは扱わない: https://github.com/kunwuz/dsreg/blob/main/THIRD\_PARTY\_NOTICES.md 。専用重み配布未確認。限界: Gaussian/線形識別可能性の前提、同一footprintを持つ要因の非識別性、推定Jacobianと近傍選択への依存、実機未評価。追補は実装LICENSEの明確化と実機評価。PDF未取得、正確なhref未抽出。
 
 ### What Should World Models Forget? Stratified Retention for Continual Adaptation
 
