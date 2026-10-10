@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-27 records · Published date 降順（同日 ID 降順）
+28 records · Published date 降順（同日 ID 降順）
 
 ### VioLA: Learning Generalist Humanoid Control Policies from Human Data
 
@@ -679,3 +679,28 @@ Action Chunking with Transformersによる動作列予測と時間的アンサ�
 
 - Checked: 2026-10-01 · Review: verified
 - 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。公式READMEのtrained\_checkpointsに3種類のRT-1重み。https://github.com/google-research/robotics\_transformer\#using-trained-checkpoints Code license: Apache-2.0; https://github.com/google-research/robotics\_transformer/blob/master/LICENSE.
+
+### Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation
+
+- ID: `VLA-0190`
+- Published: 2022-09-12 · Updated: 2022-11-11
+- Authors: Mohit Shridhar; Lucas Manuelli; Dieter Fox
+- Venue: CoRL 2022
+- Links: [Paper](https://arxiv.org/abs/2209.05451) · [PDF](https://arxiv.org/pdf/2209.05451) · [Code](https://github.com/peract/peract) · [Project](https://peract.github.io/)
+- Tags: PerAct, supporting-foundation, VLA-predecessor, voxel-action, Perceiver, language-conditioned-policy, behavior-cloning, 6-DoF
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+言語目標とRGB-Dのvoxel観測をPerceiverで符号化し、離散化した6-DoF pose・gripper・collision設定を検出する多タスク模倣学習。18のRLBench課題と7実機課題を評価し、予測した離散行動をmotion plannerで実行する。
+
+**主な貢献**
+
+観測と行動を共通のvoxel空間へ置く構造的priorにより、少数デモから多タスクの6-DoF操作を学習するVLA前史の手法。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv v1 2022-09-12/v2 2022-11-11、PMLR https://proceedings.mlr.press/v205/shridhar23a.html を確認（会議2022、proceedings公開2023）。HTML §§3–5/AppendixLを選読: https://arxiv.org/html/2209.05451v2 。18課題249variants、実機7課題18variantsを評価、広範な事前学習済みロボットfoundation modelではない。動的/器用な連続制御・未知物体汎化・履歴保持に制約、タスク終了にoracleを使用。公式repo実装/Apache-2.0全文とv1.0.0 releaseのuploaded 2048/512latents checkpoint assetsを確認: https://github.com/peract/peract/blob/main/LICENSE ; https://github.com/peract/peract/releases/tag/v1.0.0 。公開重みは18課題100demos/task版で、READMEは最終checkpointと最良task checkpointの違いを明記。重み未ダウンロード、独立した重みライセンスは未確認。

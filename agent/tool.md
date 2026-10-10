@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+10 records · Published date 降順（同日 ID 降順）
+
+### SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation
+
+- ID: `AGENT-0148`
+- Published: 2026-10-08
+- Authors: Jiayu Wang; Yue Yu; Bin Zhu; Zhiyao Yang; Jingjing Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12457) · [Project](https://emilia113.github.io/SpatialHarness/)
+- Tags: SpatialHarness, test-time-harness, spatial-observability, virtual-view, scene-synchronization, fine-manipulation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+凍結したmultimodal policyの細かな操作を助けるtest-time harness。実行と同期したsimulation sceneを維持し、taskで必要な空間関係が見える仮想視点、物体pose、renderingの信頼性を追加する。静止・把持中・接触状態の遷移を区別してsceneを更新し、policyはtool callでrobot actionを生成する。
+
+**主な貢献**
+
+物理cameraを変えず、policyの観測可能性をsimulation由来の空間情報で補う。Franka Research3の4課題・各method各15試行で、同じGPT-6 Astra policyの平均成功率は18.33%から83.33%へ改善。plug挿入26.67%→66.67%、Hanoi0%→100%はこの評価設定内の結果。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- abs history v1 2026-10-08。https://arxiv.org/html/2610.12457v1 の§3–4を選択確認。公式projectのCode Coming soonリンクはhttps://github.com/emilia113/SpatialHarness 、rootはdocs/とREADMEのみで実装公開とは扱わない。code\_urlは空欄、code\_status=unavailable。weights・実装licenseはunknown。物理engineの同期sceneであり学習WAMの提案とは区別、agent/toolを推奨。PDF未取得。
 
 ### SuperNav: An Agentic Navigation System for Any Task in Any Scene
 
@@ -104,6 +129,31 @@ RoboLabの40課題120 episodeで54成功、45.0%となりCaP-Xより6.67ポイ�
 
 - Checked: 2026-10-06 · Review: verified
 - 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2610.04929 のv1は2026-10-04 04:15:33 UTC、改訂なし。 https://arxiv.org/html/2610.04929v1 §4–5、App.A.6/A.7と公式 https://robotuse-team.github.io/ を確認。language agentは各task3trial、direct-actionは10trialで停止規則も異なるsystem比較。改訂段階の19/40→22/40は別系列。実機3課題の初回成功まで学習後の25trialはzero-shot成功率ではない。RobotUseはCaP-XよりAPI費用/時間を多く使う。公式repoのsrc/agent/prime\_agent.py等と https://github.com/robotuse-team/RobotUse/blob/main/LICENSE のApache-2.0を独立確認。公開releaseはnative RoboLabでPanda adapter未包含、依存assetの非商用条件は別。HFリンクはpaperページであり重み配布ではない。専用重みunknown。PDF未取得。
+
+### ROMA: LLM System for Real-World Object-Centric Multi-Sensory Active Perception
+
+- ID: `AGENT-0149`
+- Published: 2026-10-03 · Updated: 2026-10-08
+- Authors: Ruoxuan Feng; Yutong Chen; Ruihua Song; Huan Yang; Zhongyuan Wang; Guocai Yao; Di Hu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06955) · [Code](https://github.com/GeWu-Lab/ROMA) · [Project](https://gewu-lab.github.io/ROMA/)
+- Tags: ROMA, active-perception, multi-sensory, vision-audio-tactile-force, ROMI-2K, perception-chain
+- Model size: 7B（Qwen2.5-Omni backbone）
+- Open-source: unknown
+- Code / weights / license: available / available / unspecified
+
+**概要（日本語）**
+
+視覚・音声・触覚・forceを使い、足りない証拠、対象物、取得するinteractionとmodalityをLLMが選択する能動知覚system。把持interfaceと6種類の既定interactionが実機actionを実行し、戻ったsensory feedbackから十分な証拠があるかを再判断する。約2,000物体のROMI-2Kと知覚chainを評価するROMA Benchを構築する。
+
+**主な貢献**
+
+受動的なsensor統合を、証拠取得を選択するreasoning-interaction-feedback loopへ拡張。ROMA Bench2,100課題でROMA-7B72.9%、GPT-6 Astra72.3%。実機8scene・132課題ではROMA61.4%、Astra63.6%で、offline成績と実機成績を区別。自由な低levelVLA生成ではなく既定interaction選択。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- abs history: v1 2026-10-03、v2 2026-10-08。https://arxiv.org/html/2610.06955v2 の§4、§5.1–5.3を選択確認。公式repoにdemo.pyとmodel modulesあり、training/evaluation/physical interfaceの完全公開とは区別。repo root/READMEに実装licenseの記載を確認できずopen\_source=unknown。weightsはhttps://huggingface.co/datasets/GeWu-Lab/ROMA/tree/main/models/ROMA-Qwen2.5-Omni-7B にROMA-LLM.bin等を確認。そこにあるApache2.0 LICENSEはAlibaba Cloud2025表記で、ROMA独自adapter/codeのlicenseとは混同しない。PDF未取得。
 
 ### LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation
 

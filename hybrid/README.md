@@ -3,11 +3,11 @@
 
 [← データベース](../README.md)
 
-33 records · 正本: [papers.csv](../papers.csv)
+34 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 15 |
+| [vla-agent](vla-agent.md) | 16 |
 | [vla-wam](vla-wam.md) | 14 |
 | [wam-agent](wam-agent.md) | 3 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
@@ -23,6 +23,7 @@
 - 2026-10-06 · [Co-Evolving Robot Orchestrators and Policies through Deployment](vla-agent.md) · `HYBRID-0125`
 - 2026-10-05 · [Recursive Video In-Context Learning for Agentic Robot](vla-agent.md) · `HYBRID-0118`
 - 2026-10-05 · [Future Anchored Verification and Online Recovery for World Action Models](wam-agent.md) · `HYBRID-0117`
+- 2026-10-04 · [ProactiveVLA: Augmenting Embodied Memory through Proactive Environment Exploration](vla-agent.md) · `HYBRID-0132`
 - 2026-10-04 · [PreAct-Nav: Agentic Reasoning Before Action for Urban Navigation](wam-agent.md) · `HYBRID-0120`
 - 2026-10-02 · [RoboBridge: A Self-Evolving Embodied Agent Framework for Sim-to-Real Transfer](vla-agent.md) · `HYBRID-0123`
 - 2026-10-02 · [Bridging Frontier Reasoning and Robot Execution: From Autonomous Demonstration Generation to Dense Language Supervision](vla-agent.md) · `HYBRID-0115`

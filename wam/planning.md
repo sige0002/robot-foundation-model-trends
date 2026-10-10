@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-20 records · Published date 降順（同日 ID 降順）
+22 records · Published date 降順（同日 ID 降順）
 
 ### LiteNWM: Efficient Latent World Models for Onboard Visual Navigation in the Wild
 
@@ -104,6 +104,56 @@ Temporal Register Pyramidの履歴圧縮とHindsight-to-Foresight Distillation�
 
 - Checked: 2026-10-08 · Review: needs-review
 - 初稿: https://arxiv.org/abs/2610.09309 。HTML §§III–VIを精読: https://arxiv.org/html/2610.09309v1 。実装Apache-2.0: https://github.com/Claire0730/executable-goals/blob/main/LICENSE 。公式model card https://huggingface.co/Claire0730/executable-goals は縮小planner/student/teacher配布とApache-2.0を説明するが、public tree/APIおよびraw/resolve SHA256SUMSはいずれもread toolで取得できず、実配布ファイル・manifest・重み条件は独立確認できないためweights\_status=unknown。公開repoのevidence/01\_checkpoint\_registry.csvは元private-runのpath/size/hashであり、0.30GB releaseplannerの提供確認には使わない。追跡: public HF file一覧またはrelease SHA256SUMSで縮小plannerとstudent/teacherのfilename・size・SHA256を確認し、配布先の重みlicenseを別途照合する。公式 https://github.com/Claire0730/executable-goals/blob/main/docs/KNOWN\_ISSUES.md items15–19 とREPRODUCTION.mdを確認: Table IIに3executor、PickCube goal診断と実行は別bank/SAM2処理、psi token、simulator correspondence、1.27秒記録未配布。論文のshared-executor/追跡loop記述との不一致。追跡: 同一executor・同一readout/bank・非privileged pose条件の対照結果または著者訂正を照合。固定終端目標は軌道/contact制約やgoal更新を扱えない。PDF未取得・URL未検証のためpdf\_url空欄。
+
+### EpicWorldModel: Exploration-driven Planning with Latent World Models
+
+- ID: `WAM-0107`
+- Published: 2026-10-05
+- Authors: Bowen Feng; Julian Ost; May Mei; Anirudha Majumdar; Felix Heide
+- Venue: NeurIPS 2026 (author-reported)
+- Links: [Paper](https://arxiv.org/abs/2610.05996)
+- Tags: stochastic-jepa, flow-matching, partial-observability, uncertainty-exploration, image-goal-cem
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+部分観測下で複数の未来があり得る状況を、flow matchingによる確率的JEPAで表現する。潜在予測の分散を探索の手掛かりにし、画像目標への接近と未知領域の探索をCEM計画で両立する。
+
+**主な貢献**
+
+決定論的潜在世界モデルへの不確実性導入と探索付き計画を統合。Visual PointMaze GiantでFMの成功率86.0%に対しLeWMは64.5%。高次元のAntMazeでは同等程度で、利益は環境に依存する。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv履歴v1=2026-10-05、改訂なし、commentsにNeurIPS2026採択。HTML §§3,4.1–4.6,5を選択読解: https://arxiv.org/html/2610.05996v1 。OGBench Visual PointMaze/AntMaze/Scene、Car Racing、LabMaze、RoboCasa NavigateKitchenの部分観測simulationで評価。画像goalは展開時にない特権情報を含む場合があり、言語goal未対応。探索係数/NFEの最適値は環境依存、自動調整は今後。HTML/absリンクと題名限定検索で公式code/専用weights/実装licenseは確認できずunknown、不存在は断定しない。PDFは取得していない。
+
+### H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning
+
+- ID: `WAM-0106`
+- Published: 2026-10-05
+- Authors: Wancong Zhang; Basile Terver; Michael Rabbat; Yann LeCun; Randall Balestriero
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06805) · [Code](https://github.com/kevinghst/H-JEPA) · [Project](https://h-jepa.com/)
+- Tags: hierarchical-jepa, multi-timescale, latent-subgoals, inverse-dynamics, offline-droid
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+時間幅と潜在空間が異なる行動条件付きJEPAを階層化し、上位の未来予測を下位のサブゴールとして使う世界モデル。報酬や画像再構成なしで学び、多様なDROID動画では逆ダイナミクス損失で動作情報の消失を抑える。
+
+**主な貢献**
+
+時間分解と抽象的な目標距離の効果を分けて検証。Visual AntMazeでは3階層が平坦LeWMの18.0%に対し73.3%の成功率を示し、少ない計画計算量で改善した。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv履歴v1=2026-10-05、改訂なし。HTML §§2,3,4.1–4.3,6を選択読解: https://arxiv.org/html/2610.06805v1 。FourRoomDistractors/Visual AntMaze/Push-T/OGBench Cubeで評価、DROIDは実機成功率でなくoffline open-loop Fréchet trajectory fidelity。Push-Tは3階層以上で利用可能clipが減り性能低下、全環境で選択的抽象化が生じるとはしない。実装MIT全文: https://github.com/kevinghst/H-JEPA/blob/main/LICENSE 。独立した重みmodel cardとファイル一覧確認: https://huggingface.co/jepa-world-models/h-jepa/tree/main ; 84simulation+9DROID checkpoints、cardの重みlicenseはMIT。物理ロボット閉ループ検証は今後。PDF/重み/dataは取得していない。
 
 ### Keeping JEPA World Models Plannable When Little of the Frame Moves
 

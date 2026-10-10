@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-16 records · Published date 降順（同日 ID 降順）
+17 records · Published date 降順（同日 ID 降順）
 
 ### VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation
 
@@ -404,3 +404,28 @@ RGBの場面変化と3D末端形状の動きを同時に符号化し、機体を
 
 - Checked: 2026-10-01 · Review: verified
 - 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。公式READMEに公開モデルzoo、訓練コード、7B backboneとRSS 2025。https://github.com/OpenDriveLab/UniVLA\#-model-zoo Code license: Apache-2.0; https://github.com/OpenDriveLab/UniVLA/blob/main/LICENSE.
+
+### CLIPort: What and Where Pathways for Robotic Manipulation
+
+- ID: `VLA-0189`
+- Published: 2021-09-24
+- Authors: Mohit Shridhar; Lucas Manuelli; Dieter Fox
+- Venue: CoRL 2021
+- Links: [Paper](https://arxiv.org/abs/2109.12098) · [PDF](https://arxiv.org/pdf/2109.12098) · [Code](https://github.com/cliport/cliport) · [Project](https://cliport.github.io/)
+- Tags: CLIPort, supporting-foundation, VLA-predecessor, CLIP, TransporterNets, language-conditioned-policy, pick-and-place, SE2
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+CLIPの視覚言語的な意味表現とTransporterの空間的な操作表現を二つのstreamで結ぶ、言語条件付き模倣学習方策。物体認識を明示的に挟まずpick/place affordanceを予測し、10シミュレーション課題と9実機課題の多タスク学習を検証した。
+
+**主な貢献**
+
+Web事前学習の意味的priorを精密な空間行動予測に結合する、後のVLA研究につながる基礎的な知覚・行動接続。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv v1 2021-09-24、PMLR書誌 https://proceedings.mlr.press/v164/shridhar22a.html を確認（会議2021、proceedings公開2022を初稿日へ代用しない）。HTML §§3–4/AppendixIを選読: https://arxiv.org/html/2109.12098v1 。広範なロボット基盤モデル事前学習ではなくVLA前史の言語条件付き方策。SE(2) pick/placeのprimitive実行はopen-loop、主に準静的課題で、実機終了は利用者が指示。CLIPのzero-shot物体認識とzero-shot操作を混同しない。公式repo実装/Apache-2.0全文、v1.0.0 releaseのuploaded cliport\_quickstart.zip checkpoint assetを別々に確認: https://github.com/cliport/cliport/blob/master/LICENSE ; https://github.com/cliport/cliport/releases/tag/v1.0.0 。重み未ダウンロード、重みの独立ライセンスは未確認。

@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
 
 ### Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models
 
@@ -54,6 +54,31 @@ RoboMME Full-16で48.0%（記憶なしLaST₀は46.3%）、標準LIBERO学習後
 
 - Checked: 2026-10-09 · Review: verified
 - 初稿・著者: https://arxiv.org/abs/2610.11168 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.11168v1 。§III-F–G/IV-A–BとTABLE V選読。総訓練module7.61Mと推論encoder3.81Mを区別。0.42msは6.8ms base ACTに対する6.2%増で、全VLA共通latencyではない。preceding executed actionのみqueueに入れ将来chunkは含めない。実機は各10rolloutでconfidence幅が広く、simulation multi-seedと証拠強度を分ける。MemoryVLAへの追加結果はaligned action stream不足で省略。コード/重み/実装ライセンス未確認。 PDF未取得。
+
+### MIKASA-Robo-VLA: Benchmarking Memory in VLA Models for Long-Horizon Manipulation
+
+- ID: `VLA-0192`
+- Published: 2026-09-30
+- Authors: Egor Cherepanov; Nikita Kachaev; Aleksandr I. Panov; Alexey K. Kovalev
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.00604) · [Code](https://github.com/CognitiveAISystems/MIKASA-Robo) · [Project](https://mikasarobo.github.io/)
+- Tags: MIKASA-Robo-VLA, memory-benchmark, language-conditioned, partial-observability, information-gap, ManiSkill, RLDS, LeRobot
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+行動に必要な手掛かりが消えた後の記憶を測る、90言語条件付き操作task・10memory typeのbenchmark。80taskは記憶を必要とし、10taskは手掛かりが見えるreactive control。情報が確実に見えないintervalとepisode horizonを区別し、22,500 oracle trajectoryをRLDS/LeRobot形式で提供する。
+
+**主な貢献**
+
+記憶内容、遅延、観測interface、seed、成功基準を明示してVLA評価を標準化。現時点のpi0.5参照baselineはhistory/明示memoryなしの14task subset・各20episodeで平均成功0.211±0.044。全90taskの代表成績とは扱わず、Long-split低下はopen-loop chunkとmemory type構成が交絡する。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv IDは2610だがsubmission history v1は2026-09-30、改訂なし。https://arxiv.org/html/2610.00604v1 の§3、§5.2、Datasheet Distributionを選択確認。公式docs/repoにVLA suiteと評価code、MIT licenseはhttps://github.com/CognitiveAISystems/MIKASA-Robo/blob/main/LICENSE で確認。weightsは未確認でunknown。dataset releaseとmodel weightsを混同しない。projectのICLR2026引用は前身MIKASA-Robo論文であり、このVLA論文のvenueとは扱わない。PDF未取得。
 
 ### Remember What You Did: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies
 

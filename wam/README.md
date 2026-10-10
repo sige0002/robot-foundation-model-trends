@@ -3,14 +3,14 @@
 
 [← データベース](../README.md)
 
-100 records · 正本: [papers.csv](../papers.csv)
+106 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 33 |
-| [dynamics](dynamics.md) | 12 |
-| [action-coupling](action-coupling.md) | 26 |
-| [planning](planning.md) | 20 |
+| [dynamics](dynamics.md) | 13 |
+| [action-coupling](action-coupling.md) | 29 |
+| [planning](planning.md) | 22 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
@@ -37,6 +37,8 @@
 - 2026-10-06 · [World Models Dream of Success: Diagnosing and Repairing Failure Insensitivity in Robot World Models](dynamics.md) · `WAM-0082`
 - 2026-10-06 · [AutodidactWAM: Cross-Modal Self-Distillation from Generated Video to Robot Actions](action-coupling.md) · `WAM-0081`
 - 2026-10-06 · [OpenWAM: An Open Framework for Composable World-Action Models](action-coupling.md) · `WAM-0080`
+- 2026-10-05 · [EpicWorldModel: Exploration-driven Planning with Latent World Models](planning.md) · `WAM-0107`
+- 2026-10-05 · [H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning](planning.md) · `WAM-0106`
 - 2026-10-05 · [RealtimeWAM: One-Step Asynchronous World Action Models](action-coupling.md) · `WAM-0079`
 - 2026-10-05 · [SimForcing: Distilling Simulation Motion Priors into Real-Domain Robot World Models](dynamics.md) · `WAM-0076`
 - 2026-10-02 · [SpectralCache: Accelerating Diffusion-Based World Models via Spectral Feature Caching](temporal-modeling.md) · `WAM-0088`
@@ -105,13 +107,17 @@
 - 2021-05-11 · [VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning](world-representation.md) · `WAM-0003`
 - 2021-03-04 · [Barlow Twins: Self-Supervised Learning via Redundancy Reduction](world-representation.md) · `WAM-0004`
 - 2020-11-06 · [The Value Equivalence Principle for Model-Based Reinforcement Learning](planning.md) · `WAM-0043`
+- 2020-10-05 · [Mastering Atari with Discrete World Models](action-coupling.md) · `WAM-0105`
 - 2020-06-26 · [Object-Centric Learning with Slot Attention](world-representation.md) · `WAM-0029`
 - 2020-06-18 · [Learning Invariant Representations for Reinforcement Learning without Reconstruction](world-representation.md) · `WAM-0015`
 - 2020-06-13 · [Bootstrap your own latent: A new approach to self-supervised Learning](world-representation.md) · `WAM-0005`
+- 2019-12-03 · [Dream to Control: Learning Behaviors by Latent Imagination](action-coupling.md) · `WAM-0104`
 - 2019-11-27 · [Contrastive Learning of Structured World Models](dynamics.md) · `WAM-0048`
 - 2019-11-19 · [Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model](planning.md) · `WAM-0042`
 - 2019-09-12 · [Hierarchical Foresight: Self-Supervised Learning of Long-Horizon Tasks via Visual Subgoal Generation](planning.md) · `WAM-0047`
 - 2018-11-12 · [Learning Latent Dynamics for Planning from Pixels](dynamics.md) · `WAM-0040`
 - 2018-05-30 · [Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models](dynamics.md) · `WAM-0044`
+- 2018-03-27 · [World Models](dynamics.md) · `WAM-0103`
+- unknown · [Being-M0.7: A Latent World-Action Model for Humanoid Robots](action-coupling.md) · `WAM-0108`
 - unknown · [Generalizable Robotic Insertion with World Models](planning.md) · `WAM-0061`
 - unknown · [Hidden Failure Modes in Latent World-Model Planning from Offline Data](planning.md) · `WAM-0046`

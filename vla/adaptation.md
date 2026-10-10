@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-32 records · Published date 降順（同日 ID 降順）
+33 records · Published date 降順（同日 ID 降順）
 
 ### RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control
 
@@ -479,6 +479,31 @@ OpenVLA-OFTをFAIRINO FR3の固定製造セルへ適応させるデータ変換�
 
 - Checked: 2026-10-02 · Review: verified
 - arXivのv1初稿・著者・arXiv DOIを確認。HTML https://arxiv.org/html/2610.01856v1 のIV節、V節の実機・照明評価を読んだ。固定セルの赤/青ブロック移送は汎用製造能力の実証と区別。実装・専用重み・実装ライセンスの公式提供先は本文リンクとタイトル検索で未確認。PDF未取得、正確なPDF href未抽出のためpdf\_urlは空欄。
+
+### Inline Memory Meets Reusable Skills: Memory-centric Framework for Vision-Language-Action Model
+
+- ID: `VLA-0191`
+- Published: 2026-09-30
+- Authors: Zaijing Li; Rui Shao; Bing Hu; Haoyu Zhang; Dongmei Jiang; Liqiang Nie
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39794)
+- Tags: Optimus-R, inline-memory, query-skill-memory, skill-retrieval, continual-learning, data-efficient-adaptation, pi0.5
+- Model size: 約3.6B total\|7M added\|約0.3B trainable（Table3・丸め値）
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAのprefixへ学習memory tokenを挿入し、controlに結び付いたqueryとskillの表現を作るOptimus-R。query prototypeとskill valueを分けたmemory bankでskillを再利用し、軽量bridgeとprototypeの残差更新によって新しいtask/domainの少量demonstrationへ適応する。
+
+**主な貢献**
+
+繰返しのglobal weight更新に頼る適応を、明示的なquery-skill memory更新へ移す。LIBEROの30%data設定でpi0.5より平均成功率16.5pp向上。RoboTwin2.0からGALAXEA R1 Liteの実機9課題へ各20demonstrationで33.3%成功、比較pi0.5の19.4%を上回る。対象benchmarks内でsample効率と忘却を検証。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- abs history v1 2026-09-30、改訂なし。https://arxiv.org/html/2609.39794v1 の§3、§4.1–4.5、Tables2–3を選択確認。初期backboneはpi0.5、LIBERO/CALVIN/RoboTwin2.0と実機9課題のscopeを区別。memoryはquery-skill適応用であるためvla/adaptationを推奨。確認した論文に公式code/weights/project linkなし、各status unknown。model\_sizeは論文表の丸め値。PDF未取得。
 
 ### Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models
 

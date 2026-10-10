@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
+
+### VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning
+
+- ID: `AGENT-0145`
+- Published: 2026-10-06
+- Authors: Zewei Zhou; Rachel Luo; Yulong Cao; Chaowei Xiao; Chensheng Peng; Boyi Li; Thomas Tian; Zheng Lian; Yan Wang; Jiaqi Ma; Boris Ivanovic; Marco Pavone; Wenhao Ding
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.08761) · [Project](https://veri-fine.github.io/)
+- Tags: agent-harness, co-evolving-judge, adaptive-curriculum, human-calibration, robot-navigation
+- Model size: Qwen3-VL 2B navigation policy and student judge
+- Open-source: unknown
+- Code / weights / license: unknown / unavailable / unknown
+
+**概要（日本語）**
+
+自己改善で変わる失敗パターンに合わせ、方策・訓練カリキュラム・評価judgeを共進化させるagent harness。失敗に基づく方策改善と、検証能力の頭打ちで人の助言を使うjudge改善を交互に実施する。
+
+**主な貢献**
+
+参照解答を要しないrubric judgeを、データ選択・方策学習・人による校正の共通interfaceにした。運転reasoningとロボットnavigationで、judge更新後に方策改善が再開することを比較評価。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv履歴v1=2026-10-06、改訂なし。HTML §§3,4.1,4.4,Appendix A.5を選択読解: https://arxiv.org/html/2610.08761v1 。主評価は社内2million運転clip、navigationはVLNVerseでSFT、reasoning score68.09→77.59を報告（task successとは別）。方策は各round同じbaseから固定訓練budgetで学習し、改善状態はjudge/curriculum側で累積。固定policy評価集合、人の検証済みreasoning、人のcoactive校正への依存が残る。公式projectがModel Coming soonと明示するためweights\_status=unavailable（確認時点）、codeリンク/実装licenseは確認できずunknown。公開後に実装・LICENSE・model cardを再確認。PDFは取得していない。
 
 ### CIRRA: Dual-Level Continual Instruction Reconciliation with Ongoing Execution for Embodied Robot Agents in Interactive Household Tasks
 

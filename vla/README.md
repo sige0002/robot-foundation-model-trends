@@ -3,15 +3,15 @@
 
 [← データベース](../README.md)
 
-88 records · 正本: [papers.csv](../papers.csv)
+92 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 16 |
+| [perception-representation](perception-representation.md) | 17 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
-| [action-system1](action-system1.md) | 27 |
-| [memory-temporal](memory-temporal.md) | 7 |
-| [adaptation](adaptation.md) | 32 |
+| [action-system1](action-system1.md) | 28 |
+| [memory-temporal](memory-temporal.md) | 8 |
+| [adaptation](adaptation.md) | 33 |
 
 ## 論文
 
@@ -58,6 +58,8 @@
 - 2026-10-01 · [Continuous Conditioning of VLAs with Augmenting EMG and Visual Task Descriptors](perception-representation.md) · `VLA-0136`
 - 2026-10-01 · [ChunkVLA-AM: Parallel Action Chunking for Vision-Language-Action Robot Control in Additive Manufacturing](adaptation.md) · `VLA-0135`
 - 2026-10-01 · [WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation](action-system1.md) · `VLA-0134`
+- 2026-09-30 · [MIKASA-Robo-VLA: Benchmarking Memory in VLA Models for Long-Horizon Manipulation](memory-temporal.md) · `VLA-0192`
+- 2026-09-30 · [Inline Memory Meets Reusable Skills: Memory-centric Framework for Vision-Language-Action Model](adaptation.md) · `VLA-0191`
 - 2026-09-30 · [Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics](perception-representation.md) · `VLA-0163`
 - 2026-09-30 · [Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models](adaptation.md) · `VLA-0138`
 - 2026-09-30 · [Spike-driven Vision-Language-Action Model](action-system1.md) · `VLA-0126`
@@ -103,3 +105,5 @@
 - 2023-04-23 · [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](action-system1.md) · `VLA-0110`
 - 2023-03-07 · [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](action-system1.md) · `VLA-0111`
 - 2022-12-13 · [RT-1: Robotics Transformer for Real-World Control at Scale](action-system1.md) · `VLA-0101`
+- 2022-09-12 · [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](action-system1.md) · `VLA-0190`
+- 2021-09-24 · [CLIPort: What and Where Pathways for Robotic Manipulation](perception-representation.md) · `VLA-0189`

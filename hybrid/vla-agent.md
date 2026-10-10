@@ -3,7 +3,7 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-15 records · Published date 降順（同日 ID 降順）
+16 records · Published date 降順（同日 ID 降順）
 
 ### ARC: A Reasoning Recipe for Robot Foundation Models
 
@@ -129,6 +129,31 @@ LIBERO-PROで成功率92.6%から96.5%、LIBERO-Plusの層化抽出120変種で8
 
 - Checked: 2026-10-06 · Review: verified
 - 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2610.06843 のv1は2026-10-05 17:59:11 UTC、改訂なし。Oct 6告知日とは区別。 https://arxiv.org/html/2610.06843v1 §3–5、Limitationsを選択読解。PROは8セル各50試行で既報baseline各100試行と別run、Plusは公式全10,030件ではない。gripper/fixture状態から事象を切り出し、phaseに物体状態も使用する。clip再読込はcontextと費用を増やす。本文リンク先の https://github.com/BWR-hhh/rvicl でpatch/scriptsとscripts/run\_sweep.pyを確認、 https://github.com/BWR-hhh/rvicl/blob/main/LICENSE のApache-2.0を独立確認。デモと外部基盤重みは別ライセンスで、専用重み配布は未確認。PDF未取得。
+
+### ProactiveVLA: Augmenting Embodied Memory through Proactive Environment Exploration
+
+- ID: `HYBRID-0132`
+- Published: 2026-10-04
+- Authors: Shizuo Tian; Haodong Luo; Yutong Li; Yuebing Song; Yunxin Liu; Yuanchun Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06999)
+- Tags: ProactiveVLA, proactive-exploration, deployment-time-adaptation, embodied-memory, frozen-VLA, affordance, LIBERO-Pro
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+高level agentと凍結VLAを組み合わせ、初期task完了後の残りのinteraction budgetを環境の自主探索に使う。物体affordance、状態変更、interactionの組合せを自己提案し、結果の視覚検証と独立した証拠reviewを通して経験をglobal memoryへ統合し、次の計画と制御を助ける。
+
+**主な貢献**
+
+VLA自体の更新をせず、限られた環境経験の取り方と記憶の整理によって適応する。LIBERO-Pro Goal-TのVLA呼出し最多1回の再評価で48%成功、Harness VLA19%。この上限はVLA callだけで、知覚・解析的制御toolは利用可能。実験はLIBERO-ProとRoboCasa365 Composite-Seenのsimulationで単一実行stack。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- abs history v1 2026-10-04、改訂なし。https://arxiv.org/html/2610.06999v1 の§3.1–3.3、§4.1、§5–6を選択確認。Harness VLA上の同じCodex planner比較、評価時のVLAとglobal memoryは凍結。real-world transfer未評価。選択確認した一次資料に当該研究の公式code/weights/実装licenseへのリンクなし、unknown。PDF未取得。
 
 ### RoboBridge: A Self-Evolving Embodied Agent Framework for Sim-to-Real Transfer
 

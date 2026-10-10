@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-11 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### SafeInferCom: Safe Inference-Time Compute via Verifier-Guided Mid-Generation Intervention for Robotic Task Planning
+
+- ID: `AGENT-0147`
+- Published: 2026-10-08
+- Authors: Weizhe Xu; Jialiang Fan; Mengyu Liu; Fanxin Kong
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.11223)
+- Tags: SafeInferCom, formal-verification, inference-time-compute, PDDL, mid-generation-intervention, robot-task-planning
+- Model size: 7B\|14B\|32B（主評価のDeepSeek-R1-Distill-Qwen）
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+推論言語モデルの生成途中から行動計画を取り出し、外部形式検証器で検査するロボットタスク計画framework。元の復号状態を保存する監視器を使い、有効な途中計画の保持、違反への診断feedback、早期終了、持続する違反への再計画を生成中に制御する。
+
+**主な貢献**
+
+完了後の計画検証を生成途中へ移し、計画の上書きと訂正の遅れを抑える。5PDDL domain・各100問題の14B評価ではone-shot54.8%から78.2%へ改善。単独使用でtokenが常に減るわけではなく、形式的有効性は与えた仕様と検証器に相対的。VirtualHomeと実機armの定性的demoも扱う。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- absのsubmission historyでv1 2026-10-08確認、改訂なし。https://arxiv.org/html/2610.11223v1 の§III-A、§IV–V、§VI-A/F、§VIIを選択確認。500PDDL問題での数値、VirtualHomeの追加評価、実機Blocksworldは定性的demoを区別。安全保証はgrounding・知覚・物理実行の誤りを含まない。確認した一次資料に公式code/weights/実装licenseなし、unknown。公式videoはhttps://youtu.be/dbU7WskCNgY。PDF未取得。
 
 ### RoboQuest: Generalist Physical Agents that Search, Inspect and Test
 

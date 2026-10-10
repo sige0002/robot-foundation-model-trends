@@ -3,7 +3,7 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
 
 ### Skill-SLM: Agent Skill-driven Small Language Models for Reliable Robot Operation
 
@@ -29,6 +29,31 @@ skill-aware CFG、技能document、分解/合成の別LoRA adapter、progressive
 
 - Checked: 2026-10-09 · Review: verified
 - v1初稿・著者・題名、HTML III-B,C,D/IV-A,Cを確認: https://arxiv.org/html/2610.10812v1 。各skillのrobot APIへのgroundingはhuman expertが行い、300training instruction由来の教師データで学習。3/4/8Bは再利用SLMbackboneで研究独自total規模/公開重みではない。未知能力は準備されたskill/APIとCFG範囲であり自由な新技能獲得と区別。本文リンクと題名/著者検索で実装・独自重み・LICENSE未確認、各unknown。追補は専用release/データとskill外指示評価。
+
+### SharedKV-BT: Node-Local Typed Decisions for Behavior-Tree Agents
+
+- ID: `AGENT-0146`
+- Published: 2026-10-05
+- Authors: Naoki Wake; Justin Wagle
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.07327)
+- Tags: behavior-tree, typed-decision, shared-kv, node-local-candidates, external-postconditions
+- Model size: Qwen2.5-3B-Instruct; additional Qwen3-4B check
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+事前定義behavior treeの現在ノードに必要な技能・引数候補だけを提示し、共通prefixのKVを再利用して候補を並列採点する。独立した実行系と外部postconditionが動作順序と達成確認を管理する。
+
+**主な貢献**
+
+prefix再利用の速度、ノード局所interfaceの選択精度、実行gateの役割を分離評価。promptを揃えた自己回帰decodeより意思決定が2.36–4.15倍速く、Adaptive PickPlaceの完了率は局所候補で18/30、全候補で0/30。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv履歴v1=2026-10-05、改訂なし（commentsのlast updatedも同日）。HTML §§III,IV-B,IV-C,VIを選択読解: https://arxiv.org/html/2610.07327v1 。Robosuite Stack/PickPlace/NutAssemblySquare/Door、RoboCasa NavigateKitchen、WindowsAgentArena固定3taskで評価。実機/未知taskへの一般化は未検証。手作業structured state/事前BT/候補/技能/一部sim内部postconditionに依存し、候補なし時の信頼できる棄権や任意のfield互換性保証は未解決。18/30は公開candidate順のみ、順序を変えた閉ループ頑健性は未評価。公式実装/専用重み/実装licenseをHTML/absと題名限定検索で確認できずunknown、base modelの公開と区別。PDFは取得していない。
 
 ### Skill2Real: Agentic Skill Learning for Zero-Shot Sim-to-Real Robot Manipulation
 

@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-26 records · Published date 降順（同日 ID 降順）
+29 records · Published date 降順（同日 ID 降順）
 
 ### LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC
 
@@ -654,3 +654,78 @@ RGB-Dと固有感覚から関節・物体中心・接触点の疎な3D骨格を�
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Official implementation/weights release and license not independently verified.
+
+### Mastering Atari with Discrete World Models
+
+- ID: `WAM-0105`
+- Published: 2020-10-05 · Updated: 2022-02-12
+- Authors: Danijar Hafner; Timothy Lillicrap; Mohammad Norouzi; Jimmy Ba
+- Venue: ICLR 2021
+- Links: [Paper](https://arxiv.org/abs/2010.02193) · [PDF](https://arxiv.org/pdf/2010.02193) · [Code](https://github.com/danijar/dreamerv2) · [Project](https://danijar.com/project/dreamerv2/)
+- Tags: DreamerV2, supporting-foundation, categorical-latents, KL-balancing, RSSM, latent-imagination, Atari, simulated-humanoid
+- Model size: 20M world model (actor/critic excluded)
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+Dreamerの世界モデルを離散潜在状態とKL balancingで改良し、想像内でactor-criticを訓練するDreamerV2。55のAtariゲームの単一タスク学習で性能を評価し、画像入力のシミュレーションhumanoid制御にも適用した。
+
+**主な貢献**
+
+離散RSSMとKL balancingの効果を分解し、別訓練の世界モデル内で学習する方策をsticky-action Atariへ拡張。人間基準の集約scoreと世界記録基準の集約を区別する。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv v1 2020-10-05/v4 2022-02-12、ICLR2021出版原稿を確認: https://openreview.net/pdf?id=0oabwyZbOu 。v4 HTML §§2–3/Discussionの関連部分を選読: https://arxiv.org/html/2010.02193v4 。Atari55ゲームは各ゲーム別agent、sticky actions・action repeat4・200M環境steps（repeat4で50M agent inputs、200Mの独立control decisionではない）。Table1 gamer-normalized median2.15で、全ゲームで人間超えという意味ではない。20Mは世界モデルのみ。実機ロボット評価ではない。公式project→公開TF2実装、MIT全文 https://github.com/danijar/dreamerv2/blob/main/LICENSE を確認。repoのscores JSONは学習曲線で重みではない。checkpoint公開を確認できずweights unknown、ダウンロード/実行なし。
+
+### Dream to Control: Learning Behaviors by Latent Imagination
+
+- ID: `WAM-0104`
+- Published: 2019-12-03 · Updated: 2020-03-17
+- Authors: Danijar Hafner; Timothy Lillicrap; Jimmy Ba; Mohammad Norouzi
+- Venue: ICLR 2020 (author/project-reported)
+- Links: [Paper](https://arxiv.org/abs/1912.01603) · [PDF](https://arxiv.org/pdf/1912.01603) · [Code](https://github.com/danijar/dreamer) · [Project](https://danijar.com/project/dreamer/)
+- Tags: Dreamer, supporting-foundation, RSSM, latent-imagination, actor-critic, analytic-gradients, visual-control
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+経験から学ぶ潜在動力学モデル内でactorとvalueを訓練し、想像軌跡の価値勾配を行動生成へ逆伝播するDreamer。画像入力のDeepMind Control Suite 20タスクで、長期報酬を考慮した方策学習とデータ効率を検証した。
+
+**主な貢献**
+
+潜在想像の短いrolloutをvalue推定で長期報酬へ接続し、微分可能な世界モデルを通したactor-critic学習を実現。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: verified
+- arXiv v1 2019-12-03/v3 2020-03-17を確認。v3 HTML §§2–4/6–7を選読: https://arxiv.org/html/1912.01603v3 。20シミュレーション制御タスク、固定action-repeat 2での結果で実機評価ではない。5M環境steps後の平均score 823とD4PGの100M steps後786は訓練予算が異なる比較。公式projectはICLR2020 oralと記載、出版者proceedingsは別途未確認。著者がprojectからリンクする簡略TF2実装とMIT全文を確認: https://github.com/danijar/dreamer/blob/master/LICENSE 。READMEは元のTF1実装を別リンクするため、論文実験とTF2再実装の厳密な同一性は保証しない。公開重みは選択したproject/READMEで確認できずunknown。
+
+### Being-M0.7: A Latent World-Action Model for Humanoid Robots
+
+- ID: `WAM-0108`
+- Published: unknown / 未確認
+- Authors: Junpeng Yue; Boyuan Li; Yuxuan Wang; Zepeng Wang; Yuhui Fu; Feiyang Xie; Yu Zhang; Jing Zhang; Xianqi Zhang; Weibo Li; Xiaofei Zheng; Yuming Fang; Jiangxing Wang; Zongqing Lu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.11283) · [Project](https://research.beingbeyond.com/being-m07)
+- Tags: Being-M0.7, latent-world-action-model, humanoid, loco-manipulation, human-video-motion, future-conditioned-action-expert
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+人間中心の動画のみ・動作のみ・動画と動作のペアを混合し、潜在視覚状態と全身動作の未来を学ぶ人型ロボット向けWAM。ロボット中間学習で予測事前分布を適応させ、凍結した未来表現と現在画像・自己受容情報をgate付きcross-attentionで接続するaction expertを後学習する。
+
+**主な貢献**
+
+対応のない人間動画・動作も利用できるvisual-motion priorと、未来文脈を使う全身command生成を接続。SIMPLEの6課題×3難度・計180試行では128/180で比較対象中最高の合計成功率。Unitree G1の3実機課題・計15試行では13/15でGR00T-N1.6と同率であり、一般的な優越性は主張しない。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: needs-review
+- arXiv v1は2026-10-08。公式projectは2026-07-14表記で同名Technical Reportと10名の著者を掲載し、arXivは14名・中間学習を明示。初稿同一性と最初の公開日を確定できずpublishedは空欄。https://arxiv.org/html/2610.11283v1 の§3、§4 Tables1–3、Appendix7.1–7.2を選択確認。10,000時間超はfilter前のraw corpus。code・weights・実装licenseは未確認。PDF未取得。

@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+13 records · Published date 降順（同日 ID 降順）
 
 ### DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training
 
@@ -61,11 +61,11 @@ NAVSIMの3,000clip motion subsetで行動をzero/shuffle/wrongに変える介入
 - Published: 2026-10-07
 - Authors: Artem Zholus; Nicolas Beltran-Velez; Jianhao Yuan; Sarath Chandar; Tushar Nagarajan; Daniel Severo; Koustuv Sinha; Michal Drozdzal; Adriana Romero Soriano; Jeannette Bohg; Nicolas Ballas; Mahmoud Assran
 - Venue: arXiv
-- Links: [Paper](https://arxiv.org/abs/2610.10515) · [Project](https://robojepa.github.io/)
+- Links: [Paper](https://arxiv.org/abs/2610.10515) · [Code](https://github.com/facebookresearch/robo_jepa) · [Project](https://robojepa.github.io/)
 - Tags: RoboJEPA, JEPA, multi-embodiment, latent-dynamics, scaling-laws, image-goal-CEM, fixed-encoder
 - Model size: 22M–8B predictor; frozen V-JEPA 2.1 encoder
-- Open-source: unknown
-- Code / weights / license: unknown / unknown / unknown
+- Open-source: false
+- Code / weights / license: available / available / non-open-source
 
 **概要（日本語）**
 
@@ -77,8 +77,8 @@ NAVSIMの3,000clip motion subsetで行動をzero/shuffle/wrongに変える介入
 
 **確認記録**
 
-- Checked: 2026-10-08 · Review: needs-review
-- 初稿・書誌: https://arxiv.org/abs/2610.10515 。HTML §2、§3.1–3.4、§5、Appendix G.7を選択精読: https://arxiv.org/html/2610.10515v1 。制約: 固定encoder/固定corpusで飽和近傍、image-goalのみ、学習policy proposalなし。VLAとの比較は目標仕様・訓練・controllerが異なる。論文記載release先 https://github.com/facebookresearch/robo\_jepa はGitHub APIで404、projectはcoming soon。code/weights/licenseはunknown、code\_urlは空欄。具体的追跡: 公式repo公開後に実装ファイル・LICENSE・checkpoint配布先とmodel cardを再確認。PDFは未取得、URL欄は未検証のため空欄。
+- Checked: 2026-10-10 · Review: verified
+- 初稿2026-10-07/v1、改訂なしをabsで再確認: https://arxiv.org/abs/2610.10515 。前回のHTML §2,§3.1–3.4,§5,Appendix G.7確認による制約は継続: 固定encoder/corpus、image-goalのみ、複数GPUの大規模CEM、VLAと目標仕様/訓練/controllerが異なる。2026-10-10に公式project→repoの公開を再確認、Oct8の404/coming soon状態は解消。READMEの訓練/eval/Franka・RoboCasa deployment構成とworld\_model.py実装を確認: https://github.com/facebookresearch/robo\_jepa/blob/main/app/robo\_jepa/world\_model.py 。実装root LICENSE全文はCC BY-NC-SA 4.0で非商用制限、したがってopen\_source=false: https://github.com/facebookresearch/robo\_jepa/blob/main/LICENSE ; upstream codeは個別license。READMEに22M–8B/8B DROID720p checkpointの公式dl.fbaipublicfiles.com配布リンク一覧、例 https://dl.fbaipublicfiles.com/robojepa/wm/wm-50m/cooldown\_50m\_120k.pth.tar 。独立した重み利用条件は未確認、実装licenseと区別。CHANGELOGの初release2026-08-08はpreprint初稿日でなく実際のpublic化日も特定せず。公開dataset converterはDROID/AgiBotのみ、他datasetは今後。PDF/weights/dataは取得していない。
 
 ### World Models Dream of Success: Diagnosing and Repairing Failure Insensitivity in Robot World Models
 
@@ -304,3 +304,28 @@ NAVSIMの3,000clip motion subsetで行動をzero/shuffle/wrongに変える介入
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Official implementation and MIT license license checked at https://github.com/kchua/handful-of-trials.
+
+### World Models
+
+- ID: `WAM-0103`
+- Published: 2018-03-27 · Updated: 2018-05-09
+- Authors: David Ha; Jürgen Schmidhuber
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/1803.10122) · [PDF](https://arxiv.org/pdf/1803.10122) · [Code](https://github.com/hardmaru/WorldModelsExperiments) · [Project](https://worldmodels.github.io/)
+- Tags: World-Models, supporting-foundation, VAE, MDN-RNN, latent-imagination, evolution-strategies, not-physical-robot
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / available / unknown
+
+**概要（日本語）**
+
+画像をVAEで圧縮し、行動条件付きMDN-RNNで潜在状態の推移を学ぶ。小さな線形controllerを進化戦略で最適化し、CarRacingとVizDoomで評価した。VizDoomではモデルが生成した環境内で学んだ方策を元のゲームへ移す。
+
+**主な貢献**
+
+知覚・再帰的世界モデル・制御器を分離し、学習した潜在環境での方策訓練と元環境への転移を実証した世界モデル研究の基礎。
+
+**確認記録**
+
+- Checked: 2026-10-10 · Review: needs-review
+- arXiv書誌/v1 2018-03-27/v4 2018-05-09と公式記事のAgent Model・両ゲーム実験・Discussionを選読。実機ロボットや一般的sim-to-realの実証ではない。CarRacingのcontroller訓練は元環境、VizDoomは夢環境であり区別。モデル誤差の悪用と温度調整の限界も記載。公式記事→著者の実験解説→参照実装を確認: https://blog.otoro.net/2018/06/09/world-models-experiments/ 。公開tf\_modelsのvae/rnn JSONとcontrollerの使用手順を確認、重み未ダウンロード。READMEはMITと宣言するが完全な実装ライセンス本文を未確認のためlicense/open\_sourceはunknown・要再確認。記事のCC-BYと混同しない。公式サイトは後の会議版タイトルRecurrent World Models Facilitate Policy Evolutionを引用するが、本行の正式タイトル/日付はarXiv原稿を維持。
