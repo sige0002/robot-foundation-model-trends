@@ -3,11 +3,11 @@
 
 [← データベース](../README.md)
 
-49 records · 正本: [papers.csv](../papers.csv)
+50 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 12 |
+| [planning](planning.md) | 13 |
 | [code](code.md) | 14 |
 | [skill](skill.md) | 4 |
 | [tool](tool.md) | 10 |
@@ -16,6 +16,7 @@
 
 ## 論文
 
+- 2026-10-08 · [Rendering-Free Lookahead for Question-Guided Active Vision](planning.md) · `AGENT-0150`
 - 2026-10-08 · [SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation](tool.md) · `AGENT-0148`
 - 2026-10-08 · [SafeInferCom: Safe Inference-Time Compute via Verifier-Guided Mid-Generation Intervention for Robotic Task Planning](planning.md) · `AGENT-0147`
 - 2026-10-08 · [RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments](code.md) · `AGENT-0144`

@@ -3,7 +3,7 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-14 records · Published date 降順（同日 ID 降順）
+15 records · Published date 降順（同日 ID 降順）
 
 ### PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies
 
@@ -79,6 +79,31 @@ LIBERO平均97.4%、標準LIBEROからzero-shot評価するLIBERO-Plusのtask-we
 
 - Checked: 2026-10-08 · Review: needs-review
 - 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09940v1 （3.2〜3.4手法、4.1〜4.5比較・実機、Appendix C.3/D適応手順）。限界: 実機は右PiPER腕の物体をボウルへ入れる課題で各条件20試行。TTTは実行中の即時更新ではなく、追加40ロールアウト等を収集したオフラインプロトコル。 公式repoはBridge/Fractal方策学習のみ公開と明記し、JEPA訓練・RoboCasa・TTTコードとcheckpoint releaseはTODO。 https://github.com/ZhuYuChenNO1/Juno/blob/main/LICENSE はMIT標題ながらrebaseとupstream commit維持の追加文を含み、標準OSI MITと同一か未確定。具体的追補: 追加条項の位置付け・適用範囲を確認し、full-paper手法と公開実装の差を再確認。実装ライセンスunknown、open\_source=unknown。
+
+### SUAVE: Unified Video-Action Models via Masked Diffusion
+
+- ID: `HYBRID-0133`
+- Published: 2026-10-02
+- Authors: Rhythm Syed; Jean Mercat; Sedrick Keh; Kushal Arora; Paarth Shah; Aykut Onol; Mengchao Zhang; Tony Dear
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.04009)
+- Tags: SUAVE, shared-discrete-vocabulary, masked-diffusion, video-action, action-free-human-video, prefix-kv-cache
+- Model size: MMaDA-8B backbone; extended action vocabulary
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+言語・動画・行動を共有語彙の離散token列として学ぶ統一モデル。推論時のmask位置で動画世界モデル・方策・動画行動の同時生成を切り替え、行動ラベルのない人間動画も未来映像の損失だけで共同学習する。
+
+**主な貢献**
+
+MMaDAを拡張し、block-causal attentionと同一出力headで未来画像と行動chunkを生成。実機方策はvideo-action modeを使用し、RTX5090・4denoising stepで1秒分の5行動と2視点subgoalを1030msで生成、閉ループ実行は約2.5actions/sと報告。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: needs-review
+- v1日付/著者をabsで確認。https://arxiv.org/html/2610.04009v1 §III–IV-Aと実機評価protocolを選読。各variantは単一training seedで、実機3task・各24初期配置をnominal/shiftで検査。Task Scoreは10構成項目の平均でbinary成功率と混同しない。1030msはchunk生成時間、2.5actions/sは実運用値であり5Hzを達成した意味ではない。本文の公式releaseリンクと題名/著者code検索ではSUAVE専用実装・重み・licenseを確定できずunknown。MMaDAの公開状態を継承しない。追補は専用releaseと利用条項。PDF未取得。
 
 ### World-Calibrated Proposal-to-Action Flow for Vision-Language-Action Models
 

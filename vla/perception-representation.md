@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-17 records · Published date 降順（同日 ID 降順）
+21 records · Published date 降順（同日 ID 降順）
 
 ### VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation
 
@@ -129,6 +129,56 @@ action marginとattention knockoutで視覚shortcutの入り方とモデルご�
 
 - Checked: 2026-10-08 · Review: verified
 - 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09718v1 （3.1接触対象分割・3.2蒸留、4ベンチマーク・5方策訓練、6.1注釈評価・6.2〜6.4実機・言語追従）。限界: 注釈の色混同や左右反転が方策誤りへ残る。相対位置・順序選択は完全には解けず、未知の長期構成評価はBUSの10試行など限定的。 公式projectを確認。掲載リンク内で実装・重みの配布先や実装ライセンスを確認できず各unknown。27Bは注釈用VLMのbackboneであり下流VLA規模とは区別。 分母再確認: https://arxiv.org/html/2610.09718v1\#S6.SS3 の本文はbin/gripper accuracyにcompleted trials条件を明示する一方、色accuracy82.9%対46.4%の分母は閲覧できた本文・captionでは明示されていないため、その数値はkey\_contributionから除外した。代わりに6.2/Fig.4の全20試行に対するfull successを掲載。
+
+### VLA-ACL: Action-Consistent Visual Token Pruning for Efficient Vision-Language-Action Models
+
+- ID: `VLA-0198`
+- Published: 2026-10-06 · Updated: 2026-10-08
+- Authors: Owen Du; Yang Yue; Jie Zhang; Jiaqi Pi; Chi Bene Chen; Gao Huang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.08133) · [Code](https://github.com/du-owen/VLA-ACL)
+- Tags: VLA-ACL, action-consistency, visual-token-pruning, frozen-VLA, soft-top-k, OpenVLA-OFT
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+VLAを凍結したまま、全視覚contextのteacher動作とdemonstration動作への整合性で軽量patch scorerだけを学ぶ。訓練時はsoft Top-K gateを使い、推論時はcameraごとに上位K tokenをlanguage backboneへ渡す。
+
+**主な貢献**
+
+視覚tokenの選択を間接的attention指標から動作出力への影響へ結び付ける。LIBEROでK32は平均成功96.8%→95.4%、LLM遅延63.49→42.30ms、FLOPs4.013→0.991TFLOPs。K64は97.0%で、速度と性能のtrade-offを示す。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: verified
+- abs履歴v1=2026-10-06、v2=2026-10-08。同じ正規ID。https://arxiv.org/html/2610.08133v2 の§III、IV-A–Cを選択確認。速度はA100上のLLM部分、全robot loopの1.5倍とは扱わない。比較baseline成功は各論文から引用、実機4taskは各methodに40/20/20/40試行の計120試行で、73.75%→72.5%はtaskを等重みとした平均でありpooled成功率ではない。公式train\_scorer.pyをGitHub connectorで取得、root LICENSEのApache2.0を確認: https://github.com/du-owen/VLA-ACL/blob/main/LICENSE 。公式https://huggingface.co/owendudu/VLA-ACL のcardは8 scorer checkpointを記載するが、file tree/API/個別fileは読み取り失敗のためweights\_status=unknown。weight license未確認。PDF未取得。
+
+### MIM-VLA: Learning Physical Interaction Representations from Gripper Motor Feedback
+
+- ID: `VLA-0196`
+- Published: 2026-10-06
+- Authors: Jaeyoung Lee; Jiyeon Koo; Taehwa Kim; Yerin Cha; Andrew Jaeyong Choi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.08425)
+- Tags: MIM-VLA, motor-telemetry, contact-phase-pretraining, gripper-conditioning, interaction-memory, SmolVLA
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+gripperの電流・位置・速度・信号有効性の因果履歴を、接触とinteraction phaseの教師で128次元tokenへ符号化する。tokenはSmolVLAのgripper経路へ接続し、物体ごとの記憶をMEM selector VLMの比較・説明にも使う。出力は位置commandを維持する。
+
+**主な貢献**
+
+追加触覚sensorなしで既存motor feedbackを時間的interaction表現へ変換し、制御と物体比較で再利用する。実機13物体pair×各20試行の抵抗が大きい物体の選択は195/260=75.0%、SmolVLAは127/260=48.8%。校正済みの材質硬度測定とは区別する。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: verified
+- abs履歴v1=2026-10-06、改訂なし。https://arxiv.org/html/2610.08425v1 の§III、IV-A/B/C、Vを選択確認。VLM backboneは凍結するが両action expertは後学習するためarm方策全体の凍結とは記さない。優しい把持はarm固定・cameraなしのgripper-only評価。単一gripper、未校正force、mask誤差、未知breakable物体の低成功が制約。論文と題名限定検索で公式code/weights/実装licenseは確認できずunknown。PDF未取得。
 
 ### DIVA: Dual-Space Intent-Aware Visual Attenuation for Vision-Language-Action Policies
 
@@ -280,6 +330,31 @@ LIBERO-10でπ0.5とSmolVLAへの断続的UADA攻撃を評価し、条件付き�
 - Checked: 2026-10-05 · Review: needs-review
 - identity照合一致なし。v1: https://arxiv.org/abs/2610.02784 (2026-10-02 04:19:13 UTC、改訂なし)。HTML §3/4/App.F選読: https://arxiv.org/html/2610.02784v1 。100simulation/20実機episode per task、各50demo。実機USB挿入は30%でFTP-1と同率。実機対象は視覚型触覚sensor付き平行jawのみで、巧緻手・別sensor・高周波触覚・力制御は未評価。著者リンク https://simpletouch-robot.github.io/ はweb readで2度取得失敗し、直接の公開GETでも2026-10-05時点HTTP 404、実際の公開実装/重み/ライセンスを独立確認できずunknown、project到達性をneeds-review。論文ライセンスと実装を分ける。PDFファイル未保存。
 
+### NarrativeFlow: Flow-Based Vision-Language-Action Model Using Robot Velocity Fields
+
+- ID: `VLA-0200`
+- Published: 2026-10-01
+- Authors: Shota Kobayashi; Koki Seno; Daichi Yashima; Komei Sugiura
+- Venue: ACCV 2026 (accepted; arXiv)
+- Links: [Paper](https://arxiv.org/abs/2610.00981) · [PDF](https://arxiv.org/pdf/2610.00981) · [Project](https://shota0520.github.io/NarrativeFlow-project-page/)
+- Tags: NarrativeFlow, robot-flow, velocity-field, flow-matching, Narrative-Delta, cross-embodiment-data, HSR, motion-interface
+- Model size: 487M trainable parameters (paper Sec.4.1)
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+言語と初期画像から連続速度場を積分して2D robot flowを生成する。Fractal・Bridge V2でflow予測を評価し、生成flowを別のflow-conditioned policyへ渡してHSRの移動操作3 taskを検証した。画像平面の運動を言語と制御の中間表現に用いる。
+
+**主な貢献**
+
+初期・goal画像間のtask-relevant変化を複数の文章埋め込みへ変換するNarrative Delta lossで視覚言語表現を補助学習する。flow生成と補助lossに別々のsubtask tokenを設け、goal画像不要の言語条件付きvelocity-field生成へ拡張する。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: verified
+- arXiv v1 2026-10-01書誌・ACCV 2026 accepted表記、Sec.3–5とsupplement implementationを選読。Fractal/Bridge V2 ADE 21.68/30.59はend-effector領域のpoint-tracking errorで全sceneの物理整合性評価ではない。CoTracker3由来targetと一部生成instructionを用いる。HSRは3 task各20 trial、平均成功率55%（Im2Flow2Act 42%）、各task平均30 demonstrationでfine-tuneし一つのhardwareに限定。固定camera・初期end-effector可視を仮定し、2D flowではdepth方向運動を捉えにくい。独立した世界の未来状態予測モデルとは分類しない。公式project pageの全linkとauthor-name限定code検索に公式実装・weights提供先を確認できずunknown、unavailable/closedとは判断しない。website-template CC-BY-SAを実装licenseと混同しない。モデル規模はtrainableのみ、total size未確認。
+
 ### SocialVLA: A Social Perception Gateway for Human-Reaction-Based Failure Detection and Recovery in VLA Manipulation
 
 - ID: `VLA-0164`
@@ -429,3 +504,28 @@ Web事前学習の意味的priorを精密な空間行動予測に結合する、
 
 - Checked: 2026-10-10 · Review: verified
 - arXiv v1 2021-09-24、PMLR書誌 https://proceedings.mlr.press/v164/shridhar22a.html を確認（会議2021、proceedings公開2022を初稿日へ代用しない）。HTML §§3–4/AppendixIを選読: https://arxiv.org/html/2109.12098v1 。広範なロボット基盤モデル事前学習ではなくVLA前史の言語条件付き方策。SE(2) pick/placeのprimitive実行はopen-loop、主に準静的課題で、実機終了は利用者が指示。CLIPのzero-shot物体認識とzero-shot操作を混同しない。公式repo実装/Apache-2.0全文、v1.0.0 releaseのuploaded cliport\_quickstart.zip checkpoint assetを別々に確認: https://github.com/cliport/cliport/blob/master/LICENSE ; https://github.com/cliport/cliport/releases/tag/v1.0.0 。重み未ダウンロード、重みの独立ライセンスは未確認。
+
+### BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning
+
+- ID: `VLA-0195`
+- Published: unknown / 未確認
+- Authors: Eric Jang; Alex Irpan; Mohi Khansari; Daniel Kappler; Frederik Ebert; Corey Lynch; Sergey Levine; Chelsea Finn
+- Venue: CoRL 2021 / PMLR 2022
+- Links: [Paper](https://arxiv.org/abs/2202.02005) · [Code](https://github.com/google-research/tensor2robot/tree/master/research/bcz) · [Project](https://sites.google.com/view/bc-z/home)
+- Tags: BC-Z, supporting-foundation, language-video-task-embedding, FiLM, HG-DAgger, zero-shot-task-generalization
+- Model size: ResNet18 policy; 512-dimensional task embedding
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+自然言語や人間task動画をtask埋め込みへ写し、FiLMで画像ベース方策を条件付ける模倣学習。デモと人の途中介入を集約し、未学習の動詞・物体の組合せに対するロボット操作の一般化を調べる。
+
+**主な貢献**
+
+言語・動画task表現と閉ループ行動学習を接続したVLAの基礎。ResNet18方策、HG-DAggerの反復データ収集、適応的状態差分actionを組み合わせ、課題デモなしでの新しい指示への転移を検査する。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: needs-review
+- arXiv v1は2022-02-04だがCoRL2021/OpenReview版が先行し、最初の公開preprint日を確定できずpublished空欄。OpenReviewの公開日取得はbrowser verification/API取得失敗で未解決。https://arxiv.org/html/2202.02005v1 §3–5を選読。公式projectは未学習21task、arXiv要旨は24taskを示すため44%を統一denominatorの成果として採用しない。公式projectから参照されたTensor2Robot bcz/model.py/config/READMEとroot LICENSEのApache2.0全文、model.pyの同license headerを別確認。READMEの公開TFRecordsはdatasetであり方策重みの証拠ではなくweights unknown。追補は初公開日と評価task数の版差。PDF未取得。

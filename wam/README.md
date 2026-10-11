@@ -3,13 +3,13 @@
 
 [← データベース](../README.md)
 
-106 records · 正本: [papers.csv](../papers.csv)
+108 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 33 |
-| [dynamics](dynamics.md) | 13 |
-| [action-coupling](action-coupling.md) | 29 |
+| [dynamics](dynamics.md) | 14 |
+| [action-coupling](action-coupling.md) | 30 |
 | [planning](planning.md) | 22 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
@@ -33,10 +33,12 @@
 - 2026-10-07 · [RealtimeWAM: How Fast Can I Run My World Action Model?](action-coupling.md) · `WAM-0085`
 - 2026-10-07 · [ΔWAM: Distilling Action Tangent Fields into World Action Models](action-coupling.md) · `WAM-0084`
 - 2026-10-07 · [Predicted Futures Are Not Enough: Learning Executable Goals for Robot Manipulation](planning.md) · `WAM-0083`
+- 2026-10-06 · [DepthWorld: 3D World Model for Robot Manipulation](dynamics.md) · `WAM-0109`
 - 2026-10-06 · [RIWANav: Recursive World-Action Models with Self-Improvement for Urban Navigation](action-coupling.md) · `WAM-0089`
 - 2026-10-06 · [World Models Dream of Success: Diagnosing and Repairing Failure Insensitivity in Robot World Models](dynamics.md) · `WAM-0082`
 - 2026-10-06 · [AutodidactWAM: Cross-Modal Self-Distillation from Generated Video to Robot Actions](action-coupling.md) · `WAM-0081`
 - 2026-10-06 · [OpenWAM: An Open Framework for Composable World-Action Models](action-coupling.md) · `WAM-0080`
+- 2026-10-05 · [KineWorld: Action-Induced Transport Fields for Embodied World Modeling](action-coupling.md) · `WAM-0110`
 - 2026-10-05 · [EpicWorldModel: Exploration-driven Planning with Latent World Models](planning.md) · `WAM-0107`
 - 2026-10-05 · [H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning](planning.md) · `WAM-0106`
 - 2026-10-05 · [RealtimeWAM: One-Step Asynchronous World Action Models](action-coupling.md) · `WAM-0079`

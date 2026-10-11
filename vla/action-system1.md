@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-28 records · Published date 降順（同日 ID 降順）
+30 records · Published date 降順（同日 ID 降順）
 
 ### VioLA: Learning Generalist Humanoid Control Policies from Human Data
 
@@ -229,6 +229,31 @@ Bernstein多項式距離場による幾何制約を操作空間へ写像。SafeL
 
 - Checked: 2026-10-02 · Review: verified
 - arXiv初稿・著者・arXiv DOIを確認。HTML https://arxiv.org/html/2610.01083v1 のIII–IV節、V節、結論の限界を読んだ。評価はシミュレータ由来の対象物役割情報を利用し、実機安全保証ではない。本文の公開リンクと対象タイトル検索で公式実装・重み・実装ライセンスを確認できずunknown。PDF未取得、正確なPDF href未抽出のためpdf\_urlは空欄。
+
+### ChunkTrust: Adapting Execution Horizons for Robot Policies with Action-Expert Evidence
+
+- ID: `VLA-0199`
+- Published: 2026-09-30
+- Authors: Fanding Huang; Jingyan Jiang; Shifeng Bao; Mingkang Pu; Shiwei Li; Jing Xu; Shijia Xu; Guanbo Huang; Chenghao Gu; Yuzhi Huang; Chenxin Li; Faisal Nadeem Khan; Huan Yang; Yan Wang; Cheng Chi; Zhi Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.39754) · [PDF](https://arxiv.org/pdf/2609.39754) · [Code](https://github.com/hf618/ChunkTrust) · [Project](https://hf618.github.io/ChunkTrust.github.io/)
+- Tags: ChunkTrust, adaptive-execution-horizon, AHS, QHA, Beta-memory, frozen-policy, RoboTwin-2.0, RoboCasa, reproduction-gap
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+凍結したロボット方策のaction chunkから何ステップ実行して再観測するかを選ぶ。学習不要のAHSは生成traceの周波数安定性と実行履歴との連続性を組み合わせ、Beta memoryでepisode内のhorizon選好を更新する。任意のQHAはcontext依存の事前分布を学ぶ。
+
+**主な貢献**
+
+生成した行動値を変更せず、現在のaction-expert evidence、忘却付きepisode内記憶、任意の学習済みpriorを統合して実行prefix長を選択する。再計画時のhorizon推定として設計し、基底方策の再学習を必要としない。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: needs-review
+- arXiv v1 2026-09-30書誌、Sec.3–5とAppendix A/D/Gを選読。RoboTwin 50-taskの56.70→63.50% aggregateは公開記録と一致するがfresh rerunではなくpairing fallbackもある。実機4 taskは各method/task 15 rolloutのnormalized process scoreで成功率と区別。生成traceアクセスが必要で選択prefix途中の新たな外乱を検出せず、全task改善やepisode総時間短縮は保証しない。原著MIT LICENSE全文とsrc/chunktrustの公開実装を確認: https://github.com/hf618/ChunkTrust/blob/main/LICENSE 。公式HF https://huggingface.co/Niugan/ChunkTrust のmodel cardと著者catalogが固定revision/SHA256付きQHA-only releaseを宣言することを確認。HF tree・個別immutable file page・公式API metadataを取得できず実ファイルの公開存在は未確認のためweights\_status=unknown。QHA単独はVLAでなく対応base必須、重み条件はMIT実装と別。重み未download/実行。公式audit https://github.com/hf618/ChunkTrust/blob/main/docs/reproducibility.md はRoboCasa pi0.5 Base 42.08（論文40.08）、held-out AHS+QHA 41.25（論文42.75）との未解決差、およびeight-task QHA結果とcheckpoint対応未解決を明記。差のあるheadline数値をsummaryには採用せずneeds-review。
 
 ### Spike-driven Vision-Language-Action Model
 
@@ -704,3 +729,28 @@ Action Chunking with Transformersによる動作列予測と時間的アンサ�
 
 - Checked: 2026-10-10 · Review: verified
 - arXiv v1 2022-09-12/v2 2022-11-11、PMLR https://proceedings.mlr.press/v205/shridhar23a.html を確認（会議2022、proceedings公開2023）。HTML §§3–5/AppendixLを選読: https://arxiv.org/html/2209.05451v2 。18課題249variants、実機7課題18variantsを評価、広範な事前学習済みロボットfoundation modelではない。動的/器用な連続制御・未知物体汎化・履歴保持に制約、タスク終了にoracleを使用。公式repo実装/Apache-2.0全文とv1.0.0 releaseのuploaded 2048/512latents checkpoint assetsを確認: https://github.com/peract/peract/blob/main/LICENSE ; https://github.com/peract/peract/releases/tag/v1.0.0 。公開重みは18課題100demos/task版で、READMEは最終checkpointと最良task checkpointの違いを明記。重み未ダウンロード、独立した重みライセンスは未確認。
+
+### A Generalist Agent
+
+- ID: `VLA-0193`
+- Published: 2022-05-12 · Updated: 2022-11-11
+- Authors: Scott Reed; Konrad Żołna; Emilio Parisotto; Sergio Gómez Colmenarejo; Alexander Novikov; Gabriel Barth-Maron; Mai Giménez; Yury Sulsky; Jackie Kay; Jost Tobias Springenberg; Tom Eccles; Jake Bruce; Ali Razavi; Ashley Edwards; Nicolas Heess; Yutian Chen; Raia Hadsell; Oriol Vinyals; Mahyar Bordbar; Nando de Freitas
+- Venue: TMLR 2022
+- Links: [Paper](https://arxiv.org/abs/2205.06175) · [Project](https://deepmind.google/blog/a-generalist-agent/)
+- Tags: Gato, supporting-foundation, generalist-policy, multimodal-token-sequence, multi-task, multi-embodiment, not-llm-orchestrator
+- Model size: 1.18B main transformer; 79M/364M scaling variants
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+画像・文章・観測・行動をtoken列にそろえ、同じtransformerと重みでゲーム、画像記述、対話、実機ブロック積みを扱うGato。専門家データの教師あり学習から、文脈に応じて文章や身体ごとの行動を出力する。
+
+**主な貢献**
+
+異なるmodalitiesと行動空間を一つの自己回帰方策へ統合したgeneralist robot policyの基礎。実機での評価と少量デモによる新しい積み方への適応を示すが、対話とロボット操作の併存を言語指示の自由な実機groundingと同一視しない。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: verified
+- arXiv v1=2022-05-12/v3=2022-11-11とTMLR書誌を確認。https://arxiv.org/html/2205.06175v3 §1–3、実機適応§5.3–5.4を選読。分類は直接行動を出力する支援的基礎で、LLM tool orchestrationや学習した未来dynamicsを備えたHybridの実証ではない。公式blog/論文と公式組織対象のcode検索で原著実装・checkpoint・実装licenseを確認できずunknown。非公式Gato再実装を公式codeとして登録しない。短いcontextと限定的task分布を踏まえ、一般能力保証やAGIという解釈を加えない。PDF未取得。

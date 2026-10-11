@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-29 records · Published date 降順（同日 ID 降順）
+30 records · Published date 降順（同日 ID 降順）
 
 ### LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC
 
@@ -254,6 +254,31 @@ backboneと訓練interfaceを揃えたinteraction比較、および局所dynamic
 
 - Checked: 2026-10-08 · Review: verified
 - 書誌・初稿: https://arxiv.org/abs/2610.07922 。HTML §§3–5を精読: https://arxiv.org/html/2610.07922v1 。初preprintは2026-10-06、code/projectの2026-06-04 releaseとは別（論文header明記）。実装AGPL-3.0-only: https://github.com/OpenWAM/OpenWAM/blob/main/LICENSE 。動画重みmodel\_state.pt一覧確認: https://huggingface.co/OpenWAM-Stanford/OpenWAM-Pretraining/tree/main ; 重みlicense表示なしでunknown、policy checkpoints/dataはREADMEで準備中。制約: dynamics再利用は主にsimulation/4targets、target動画model適応あり、短horizon FDM、単一multi-objective checkpointの全mode性能未確立。別研究OpenWAM (2609.07398, Wang et al.)と同名だが独立した著者/ID（§2.2/ref79）。PDF URLは公式README引用で確認、PDF自体未取得。
+
+### KineWorld: Action-Induced Transport Fields for Embodied World Modeling
+
+- ID: `WAM-0110`
+- Published: 2026-10-05
+- Authors: Ziying Song; Yuchen Liu; Zhuoran Xu; Ziyang Liu; Jian Jin; Jiangtao Su; Haibao Yu; Lei Yang; Yuanpei Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.06349) · [PDF](https://arxiv.org/pdf/2610.06349) · [Code](https://github.com/modaxiansheng/KineWorld) · [Project](https://modaxiansheng.github.io/KineWorld/)
+- Tags: KineWorld, kinematic-transport, action-conditioned-video, flow-matching, RoboTwin-2.0, Wan2.2, reproduction-gap
+- Model size: 5.001B active denoiser; VAE/text encoder/optional action expert excluded (paper A.6)
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+初期画像・言語・候補行動から未来RGBを生成する世界モデル。KTLがロボットのみのレンダリングとRAFTからカメラ整列transportを作り、TAWDがその領域へ未来RGBの学習損失を配分する。RoboTwin 2.0のALOHA–AgileX双腕データで動画予測を評価した。
+
+**主な貢献**
+
+行動由来の運動情報を生成条件だけでなく学習時の空間的監督配分に利用する。uniformとtransport-focused分布を混合し総token重みを保持するTAWDは、推論時の追加パラメータやdenoising stepを要しない。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: needs-review
+- arXiv v1 2026-10-05の書誌とSec.4–5、Appendix A.3/A.5–A.10を選読。EWMScore-PとTWB-Scoreは別プロトコルの動画集約指標で、実機closed-loop成功率ではない。retained profileと50-update matched continuationを区別。transportはロボット支持領域に限定し物体運動・接触を直接表現せず、FPSはoffline transport準備を除く。公式公開READMEはuniform future-RGB学習でTAWD未提供と明記し、論文再現は未確立: https://github.com/modaxiansheng/KineWorld/blob/main/README.md 。LICENSE全文Apache-2.0とNOTICEをGitHub APIで確認: https://github.com/modaxiansheng/KineWorld/blob/main/LICENSE 。公式HF https://huggingface.co/pumpkin601/KineWorld のmodel cardと公開READMEがstep-500 release、固定revision・SHA256とApache-2.0を宣言することを確認。ただしHF tree・個別immutable file page・公式API metadataを取得できず実ファイルの公開存在は未確認のためweights\_status=unknown。論文結果再現なし、外部Wan等は別条件。重み未download/実行。公開実装と論文の差をneeds-reviewとして保持。
 
 ### RealtimeWAM: One-Step Asynchronous World Action Models
 

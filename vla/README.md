@@ -3,15 +3,15 @@
 
 [← データベース](../README.md)
 
-92 records · 正本: [papers.csv](../papers.csv)
+100 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 17 |
+| [perception-representation](perception-representation.md) | 21 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
-| [action-system1](action-system1.md) | 28 |
+| [action-system1](action-system1.md) | 30 |
 | [memory-temporal](memory-temporal.md) | 8 |
-| [adaptation](adaptation.md) | 33 |
+| [adaptation](adaptation.md) | 35 |
 
 ## 論文
 
@@ -36,6 +36,9 @@
 - 2026-10-07 · [Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models](adaptation.md) · `VLA-0170`
 - 2026-10-07 · [TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks](adaptation.md) · `VLA-0169`
 - 2026-10-07 · [TempoBridge: Language-Guided Tempo Control for Vision-Language-Action Policies](action-system1.md) · `VLA-0168`
+- 2026-10-06 · [VLA-ACL: Action-Consistent Visual Token Pruning for Efficient Vision-Language-Action Models](perception-representation.md) · `VLA-0198`
+- 2026-10-06 · [Adapting Vision-Language-Action Models to Unknown Visual Disruptions During Execution](adaptation.md) · `VLA-0197`
+- 2026-10-06 · [MIM-VLA: Learning Physical Interaction Representations from Gripper Motor Feedback](perception-representation.md) · `VLA-0196`
 - 2026-10-06 · [DIVA: Dual-Space Intent-Aware Visual Attenuation for Vision-Language-Action Policies](perception-representation.md) · `VLA-0167`
 - 2026-10-06 · [PAIR: Bridging Perception and Action in Vision-Language-Action Models](perception-representation.md) · `VLA-0166`
 - 2026-10-06 · [StairVLA: Stage-Aware Hierarchical Action Generation for Vision-Language-Action Models](action-system1.md) · `VLA-0165`
@@ -52,12 +55,14 @@
 - 2026-10-02 · [SimpleTouch: Can Vision-Language-Action Models Master Contact-Rich Manipulation Without Tactile Policy Pretraining?](perception-representation.md) · `VLA-0146`
 - 2026-10-02 · [FastOPD: On-Policy Distillation for Lightweight VLA Deployment](adaptation.md) · `VLA-0145`
 - 2026-10-02 · [CHASE-VLA: Post-Training Quantization Framework for Vision-Language-Action Models with Chunk-Aware Scale Estimation](action-system1.md) · `VLA-0144`
+- 2026-10-01 · [NarrativeFlow: Flow-Based Vision-Language-Action Model Using Robot Velocity Fields](perception-representation.md) · `VLA-0200`
 - 2026-10-01 · [SocialVLA: A Social Perception Gateway for Human-Reaction-Based Failure Detection and Recovery in VLA Manipulation](perception-representation.md) · `VLA-0164`
 - 2026-10-01 · [eRLT: Efficient VLA Reinforcement Learning via Action-Relevant Token Routing](adaptation.md) · `VLA-0149`
 - 2026-10-01 · [Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks](adaptation.md) · `VLA-0137`
 - 2026-10-01 · [Continuous Conditioning of VLAs with Augmenting EMG and Visual Task Descriptors](perception-representation.md) · `VLA-0136`
 - 2026-10-01 · [ChunkVLA-AM: Parallel Action Chunking for Vision-Language-Action Robot Control in Additive Manufacturing](adaptation.md) · `VLA-0135`
 - 2026-10-01 · [WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation](action-system1.md) · `VLA-0134`
+- 2026-09-30 · [ChunkTrust: Adapting Execution Horizons for Robot Policies with Action-Expert Evidence](action-system1.md) · `VLA-0199`
 - 2026-09-30 · [MIKASA-Robo-VLA: Benchmarking Memory in VLA Models for Long-Horizon Manipulation](memory-temporal.md) · `VLA-0192`
 - 2026-09-30 · [Inline Memory Meets Reusable Skills: Memory-centric Framework for Vision-Language-Action Model](adaptation.md) · `VLA-0191`
 - 2026-09-30 · [Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics](perception-representation.md) · `VLA-0163`
@@ -102,8 +107,11 @@
 - 2024-03-04 · [RT-H: Action Hierarchies Using Language](reasoning-system2.md) · `VLA-0113`
 - 2023-10-13 · [Open X-Embodiment: Robotic Learning Datasets and RT-X Models](adaptation.md) · `VLA-0103`
 - 2023-07-28 · [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](reasoning-system2.md) · `VLA-0102`
+- 2023-06-20 · [RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation](adaptation.md) · `VLA-0194`
 - 2023-04-23 · [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](action-system1.md) · `VLA-0110`
 - 2023-03-07 · [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](action-system1.md) · `VLA-0111`
 - 2022-12-13 · [RT-1: Robotics Transformer for Real-World Control at Scale](action-system1.md) · `VLA-0101`
 - 2022-09-12 · [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](action-system1.md) · `VLA-0190`
+- 2022-05-12 · [A Generalist Agent](action-system1.md) · `VLA-0193`
 - 2021-09-24 · [CLIPort: What and Where Pathways for Robotic Manipulation](perception-representation.md) · `VLA-0189`
+- unknown · [BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning](perception-representation.md) · `VLA-0195`

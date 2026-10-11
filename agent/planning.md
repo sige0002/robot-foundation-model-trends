@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+13 records · Published date 降順（同日 ID 降順）
+
+### Rendering-Free Lookahead for Question-Guided Active Vision
+
+- ID: `AGENT-0150`
+- Published: 2026-10-08
+- Authors: Koya Sakamoto; Daichi Azuma; Shuhei Kurita; Naoya Chiba; Yusuke Iwasawa; Yutaka Matsuo; Taiki Miyanishi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.11039) · [Project](https://k0uya.github.io/rfl-proj/)
+- Tags: RFL, active-vision, camera-control, answerability, privileged-value-distillation, E3VS-Bench
+- Model size: Qwen3.6-27B teacher/student; 117M trainable LoRA parameters
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+質問へ回答できる視点を探すため、候補camera motionの将来answerabilityをVLMで採点する。訓練時だけ3DGSで候補の1・2段先を描画し、その価値をLoRA学生へ蒸留することで、展開時は質問・最近の画像・候補動作だけで視点を選ぶ。
+
+**主な貢献**
+
+未実行の候補も含む価値supervisionを、描画不要のcamera制御へ移す。未知21scene・377episodeの平均judge scoreは同じVLMの直接制御2.14から3.05へ改善。これは1–5の回答品質指標で、操作成功率ではない。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: verified
+- abs履歴v1=2026-10-08、改訂なし。検索結果の7日表記より履歴を採用。https://arxiv.org/html/2610.11039v1 の§IV、V-A/B/F/Gを選択確認。実機は3質問×3method×各10試行、計90試行。stopはbase VLMへ委ね、実機では不可能動作を候補から除く。細部知覚・停止・可動範囲が制約。公式projectはCode/Weight Coming soonと明記、実装licenseはunknown。描画teacherを学習WAMとは扱わずagent/planningを提案。PDF未取得。
 
 ### SafeInferCom: Safe Inference-Time Compute via Verifier-Guided Mid-Generation Intervention for Robotic Task Planning
 

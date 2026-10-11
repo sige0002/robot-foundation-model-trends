@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-33 records · Published date 降順（同日 ID 降順）
+35 records · Published date 降順（同日 ID 降順）
 
 ### RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control
 
@@ -254,6 +254,31 @@ input分布異常と層間遷移誤差を組み合わせ、detector学習にtrig
 
 - Checked: 2026-10-08 · Review: needs-review
 - 初稿・著者・正式題名をarXiv v1で確認。選読: https://arxiv.org/html/2610.09462v1 （3脅威/defender前提、4 detector、5自己蒸留、6.1〜6.5評価・実機・ablation、Appendix F）。段階条件を再確認: https://arxiv.org/html/2610.09462v1\#S4.SS3 と https://arxiv.org/html/2610.09462v1\#A6 。detector predictorはverified benign rolloutで学習するが、訓練/referenceに含まれる既知課題で追加rolloutを実行し、token-manifold scoreとrollout-wide latent-deviation基準で確認したincidentから最大standardized excessの遷移を選ぶ。score-confirmedとは外部のmalicious labelではなく統計基準による確認。選択後にheld-out benign rolloutで監視閾値を較正し、固定遷移を未知課題で監視する。未知課題の結果はincident-driven selection後の評価であり、incident不要の初期cold-start保証ではない。限界: 内部activationと信頼できる良性referenceが必要。実機は4課題中2課題で学習・2課題でGoBA評価。誤検出ゼロは評価標本内の結果で一般保証ではなく、purificationは予備評価。公式project https://zzr42.github.io/tmt/ はHTTP404、project\_urlを空欄とし独自コード・重み・LICENSEはunknown。具体的追補: 著者の公式公開先で移転/公開状況を確認し、正しいproject URL・実装・checkpoint配布条件を補う。
+
+### Adapting Vision-Language-Action Models to Unknown Visual Disruptions During Execution
+
+- ID: `VLA-0197`
+- Published: 2026-10-06
+- Authors: Ahin Lee; Jinwoo Seo; Youngsoo Jang; Taesik Gong
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.07946)
+- Tags: SALT, test-time-adaptation, leftover-trajectory, transition-anchoring, sequential-correction, visual-corruption
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+前回のaction chunkの未実行部分を、同じ未来区間に対応する自己教師としてVLAを展開中に適応するSALT。正常軌跡で校正したgateが更新を開始し、更新後chunkを再生成して残りを次の教師へ渡す。外部の破損annotationやexpert動作を要しない。
+
+**主な貢献**
+
+破損前の計画による境界anchorと、その後の局所更新の伝播を分離する。LIBERO-10の5種類の持続的視覚破損でSmolVLA成功43.9%→53.2%、GR00T N1.7は58.7%→66.0%。実機0.49→0.61は平均task progressで、成功率ではない。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: verified
+- abs履歴v1=2026-10-06、改訂なし。https://arxiv.org/html/2610.07946v1 の§4.3、5.1–5.3、Appendix E/F/I/Jを選択確認。主simulationは各task/condition20episode、破損は正常軌跡30–70%から継続。実機3task×4破損×各20試行。最初から破損なら32.5%→32.9%に留まり、物体移動・目標変更は対象外。H200測定でSmolVLAの平均replan遅延は正常1.5倍・破損2.9倍。公式code/weights/licenseは確認できずunknown。PDF未取得。
 
 ### Arm-wise Compositional Generalization in Dual-Arm Vision-Language-Action Models
 
@@ -829,3 +854,28 @@ LIBERO Object三課題・60保持試行・三学習seedで全課題成功85.00%�
 
 - Checked: 2026-10-01 · Review: verified
 - 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。open\_sourceは公開リポジトリの実装に対する判定。RT-1-Xの公開checkpointと非公開RT-2-Xを区別。https://github.com/google-deepmind/open\_x\_embodiment Code license: Apache-2.0; https://github.com/google-deepmind/open\_x\_embodiment/blob/main/LICENSE.
+
+### RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation
+
+- ID: `VLA-0194`
+- Published: 2023-06-20 · Updated: 2023-12-22
+- Authors: Konstantinos Bousmalis; Giulia Vezzani; Dushyant Rao; Coline Devin; Alex X. Lee; Maria Bauza; Todor Davchev; Yuxiang Zhou; et al.
+- Venue: TMLR
+- Links: [Paper](https://arxiv.org/abs/2306.11706) · [Project](https://deepmind.google/blog/robocat-a-self-improving-robotic-agent/)
+- Tags: RoboCat, supporting-foundation, visual-goal-conditioned, multi-embodiment, self-generated-data, decision-transformer, no-language-conditioning
+- Model size: 1.18B decoder-only transformer; 364M ablation variants
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+画像goalで指定した課題を、複数の実機・simulationの視覚と行動経験から学ぶgeneralist方策。新しい身体や課題へデモで適応し、その方策から得たデータを次の訓練へ戻して操作能力を拡張する。
+
+**主な貢献**
+
+異なる観測・行動空間のrobot経験を利用するdecision transformerと、100–1000デモによる課題適応・自己生成データの反復訓練を評価。名称のAgentや自己改善だけからLLM agentと分類せず、visual goal方策の適応に位置づける。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: verified
+- arXiv v1=2023-06-20/v2=2023-12-22とTMLR書誌を確認。出版年は原稿の12/2023表記とOpenReview profileの2024表記が異なるためvenueでは年を省略。https://arxiv.org/html/2306.11706v2 導入、§3、§4.2、§5.3を選読。3実機身体の検査を含むが、未学習KUKA身体のzero-shot成功は0であり、全身体への即時転移を主張しない。言語条件なしの支援的基礎。原著実装/重み/実装licenseは公式blog・論文・公式組織対象code検索では確認できずunknown。外部のRoboCAT名再実装を公式releaseと扱わない。出版側のFoundation Agentという別表題では別rowを作らずarXiv正式題名を維持。PDF未取得。

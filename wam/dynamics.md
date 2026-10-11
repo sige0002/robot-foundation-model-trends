@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-13 records · Published date 降順（同日 ID 降順）
+14 records · Published date 降順（同日 ID 降順）
 
 ### DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training
 
@@ -79,6 +79,31 @@ NAVSIMの3,000clip motion subsetで行動をzero/shuffle/wrongに変える介入
 
 - Checked: 2026-10-10 · Review: verified
 - 初稿2026-10-07/v1、改訂なしをabsで再確認: https://arxiv.org/abs/2610.10515 。前回のHTML §2,§3.1–3.4,§5,Appendix G.7確認による制約は継続: 固定encoder/corpus、image-goalのみ、複数GPUの大規模CEM、VLAと目標仕様/訓練/controllerが異なる。2026-10-10に公式project→repoの公開を再確認、Oct8の404/coming soon状態は解消。READMEの訓練/eval/Franka・RoboCasa deployment構成とworld\_model.py実装を確認: https://github.com/facebookresearch/robo\_jepa/blob/main/app/robo\_jepa/world\_model.py 。実装root LICENSE全文はCC BY-NC-SA 4.0で非商用制限、したがってopen\_source=false: https://github.com/facebookresearch/robo\_jepa/blob/main/LICENSE ; upstream codeは個別license。READMEに22M–8B/8B DROID720p checkpointの公式dl.fbaipublicfiles.com配布リンク一覧、例 https://dl.fbaipublicfiles.com/robojepa/wm/wm-50m/cooldown\_50m\_120k.pth.tar 。独立した重み利用条件は未確認、実装licenseと区別。CHANGELOGの初release2026-08-08はpreprint初稿日でなく実際のpublic化日も特定せず。公開dataset converterはDROID/AgiBotのみ、他datasetは今後。PDF/weights/dataは取得していない。
+
+### DepthWorld: 3D World Model for Robot Manipulation
+
+- ID: `WAM-0109`
+- Published: 2026-10-06
+- Authors: Jai Bardhan; Josef Šivic; Vladimír Petrík
+- Venue: CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2610.08780) · [Code](https://github.com/Jai2500/depthworld) · [Project](https://jaibardhan.com/depthworld/)
+- Tags: DepthWorld, multi-view-rgb-depth, DROID-3D, spatial-latent-tiling, action-conditioned-video, geometric-supervision
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+DROIDの複数視点映像を、ロボットごとに共有する運動学パラメータと場面ごとの外部校正を同時最適化して3D教師信号にする。既存VAEを変えずRGBと深度の潜在表現を空間配置し、行動条件付きで未来の両者を予測する。
+
+**主な貢献**
+
+DROID-3Dの幾何校正と、点地図補助損失を備えた動画世界モデルを接続。256保留軌道・10連続rolloutの予測評価で、RGBのみの同一backboneに対し外部視点PSNRを1.48dB改善。ロボット方策の成功率改善を直接評価した値ではない。
+
+**確認記録**
+
+- Checked: 2026-10-11 · Review: verified
+- arXiv v1日付・書誌、https://arxiv.org/html/2610.08780v1 §3–5と限界を選読。深度評価の参照はDROID-3D推定深度をVAEでencode/decodeしたもので、手首視点の精度低下と自己回帰誤差蓄積を記載。公式repoのtrain/eval実装とLICENSE.txtの完全なMIT本文を別確認: https://github.com/Jai2500/depthworld/blob/main/LICENSE.txt 。重みは https://huggingface.co/jaibrdhn/depthworld/tree/main のhoriz\_90k\_ema.pt/horiz\_dpt\_vggt\_90k\_ema.pt実ファイルを確認。model cardは前者Stability AI Community、後者は追加CC-BY-NC4.0で非商用と区別。root MITは重み・外部backboneへの包括許可ではない。PDF/重み未取得。
 
 ### World Models Dream of Success: Diagnosing and Repairing Failure Insensitivity in Robot World Models
 
