@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
+
+### BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation
+
+- ID: `AGENT-0151`
+- Published: 2026-10-09
+- Authors: Fabio Hübel; Adam Lilja; Yue Yin; Siming He; Claire Tomlin; Shankar Sastry; Jonas Frey; Marco Pavone
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13862) · [PDF](https://arxiv.org/pdf/2610.13862) · [Code](https://github.com/fabiohuebel/bt-agent)
+- Tags: behavior-tree, onboard-inference, structured-failure-feedback, runtime-guards, multi-fidelity-evaluation, real-robot, Spot
+- Model size: Qwen3.5 NVFP4 4B/9B/27B/122B-A10B; onboard 9B
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+LLMが事前定義のbehavior-tree技能を選択し、技能内の局所guardが実行条件と中断を管理するonboard robot agent。161タスクのtext評価、39タスクのHabitat評価、SpotとJetson Thor上の9Bモデルによる実機試験を接続する。
+
+**主な貢献**
+
+モデル判断を待たずに技能を停止させ、構造化した失敗診断で再試行・再計画を支える実行interfaceを設計。共通161タスクで最良Act/ReAct比の成功率差は4Bで10.1、9Bで5.0percentage points、実機は11/15成功。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- abs履歴v1=2026-10-09、改訂なし。Oct12 cs.RO announcementから発見しcanonical arXiv/DOIとnormalized/fuzzy/subtitle title matcherで既存一致なし。HTML §§III,V,VIを選択確認: https://arxiv.org/html/2610.13862v1 。text成功の57.3%のみHabitatでも成功、10.9倍throughputはtimeout除外。固定技能・scene prior・人のmotion承認に依存し、guardの19msはcommanded velocityで物理停止保証ではない。公式repo READMEが論文を明示し実装runtime.pyとApache-2.0全文を確認。public commit f90990ea9e842c07e4844ff59eebe33b1ea2185a=2026-10-12。https://github.com/fabiohuebel/bt-agent/blob/main/docs/RELEASE\_READINESS.md とLICENSE-SCOPE.mdではcompanion benchmarkは再配布許可待ち、weights/assets/recordings未同梱、release自体のlive robot検証未実施。コードlicenseはデータ・重みへ拡張されず、専用重み配布未確認。project URLはREADMEにあるが取得失敗で空欄。PDF未保存。
 
 ### Skill-SLM: Agent Skill-driven Small Language Models for Reliable Robot Operation
 

@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-16 records · Published date 降順（同日 ID 降順）
+17 records · Published date 降順（同日 ID 降順）
+
+### EndoRSI: Physical-Evidence-Driven Recursive Improvement of Endoscopic Robot Policies
+
+- ID: `HYBRID-0134`
+- Published: 2026-10-09
+- Authors: Chi Kit Ng; Yidong Zhang; Tianchun Wu; Siu Hing Lui; Hanlin Zhao; Huxin Gao; Hongliang Ren
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13376)
+- Tags: recursive-self-improvement, research-time-agent, physical-evidence, failure-supervision, endoscopy, human-authorisation, ex-vivo, real-robot
+- Model size: Qwen3-VL-4B policy backbone + flow-matching head; Qwen3.7-Max research agent (parameter count unknown)
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+EndoForge coding agentが実験結果を解析して内視鏡方策を改訂する、人の管理下の研究システム。物理試験で段階的skill合成の危険を検出し、Qwen3-VL-4Bの特徴とflow-matching action headを使う停止可能なVLAへ進み、成功・失敗trajectoryから後続世代を更新する。
+
+**主な貢献**
+
+実機の反証を表現・合成仮説・教師信号の変更へ戻す研究loopを具体化。実行権限を独立runtimeと人に置いたままVLAを改訂し、開発時の挿入成功はGen1の2/21からGen4の17/21へ進んだ。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- abs履歴v1=2026-10-09、改訂なし。Oct12 announcement; canonical arXiv/DOI、normalized/fuzzy/subtitle照合は既存一致なし。HTML Results/Discussion/Methods/Supplementary Notes5–9を選択確認: https://arxiv.org/html/2610.13376v1 。Agentは研究時にcode/教師信号/候補を改訂し、armed robotのcamera/serial/motorへ直接accessしない。VLAのaction head更新が中心なのでHybrid/vla-agent、実行時agent orchestrationとは区別。6独立porcine specimen、単一挿入課題; Gen4 ex-vivo replication16/21、teleoperation21/21。世代間でcheckpoint・instruction・execution profileが変わり、failure supervisionの因果効果を分離しない。生体動物・患者・臨床判断の研究ではない。論文のreview archive記載は公開実装の証拠ではなく、abs/HTMLと題名限定web/GitHub検索で公式実装URL、専用checkpoint、実装licenseを独立確認できずunknown。PDF未保存。
 
 ### ARC: A Reasoning Recipe for Robot Foundation Models
 

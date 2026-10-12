@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+11 records · Published date 降順（同日 ID 降順）
+
+### JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents
+
+- ID: `AGENT-0152`
+- Published: 2026-10-09
+- Authors: Gangyi Li; LuYao Wang; Jingfu Sun; Jingyi Yuan; Hang Liu; Hao Zong; Yujia Hu; Tingting Gao; Jianyong Wang; Xu Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12957) · [PDF](https://arxiv.org/pdf/2610.12957)
+- Tags: product-conditioned, multimodal-ReAct, tool-use, on-policy-distillation, DPER, task-queue, execution-feedback, quadruped
+- Model size: Qwen3.5-35B-A3B student; Qwen3.8-27B training teachers
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+製品の技能・制約に合わせた検証済みmultimodal trajectoryから、SFT、多teacher蒸留、DPER強化学習でReAct agentを訓練する。DPERはprivileged teacherとstudentのtoken単位の証拠を選び、reward由来advantageの符号を保って強さを調整する。
+
+**主な貢献**
+
+製品仕様、変わる要求、実行失敗をtask queueと複数rewardへ結び付ける学習recipe。BFCL v4で77.44を得る一方、他の公開benchmarkはmixed resultsで、四足実機の2例は探索・再計画・失敗報告を質的に示す。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- abs履歴v1=2026-10-09、改訂なし。Oct12 announcementから発見、canonical arXiv/DOIとnormalized/fuzzy/subtitle照合で既存一致なし。HTML §§3–5,7を選択確認: https://arxiv.org/html/2610.12957v1 。約120K訓練例には50K非公開interaction、40Kpublic-agent由来、30Kvideo例を含む。JoyInside-Robotics/Devices評価はSkillOptのdomain-skill改良も含むためpolicy単独の寄与ではない。Plan.EMはstep decision-type一致、Act.EMはtool-name一致で、実機task completion率ではない。非公開2setのtrajectory exact-matchは未報告; 実機は選択2caseで量的一般化を示さない。DPER/data/rewardの寄与分離ablationは未実施。abs/HTMLと題名限定web/GitHub検索で公式実装・専用重み・実装licenseを確認できずunknown。base modelの公開と区別。PDF未保存。
 
 ### SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation
 

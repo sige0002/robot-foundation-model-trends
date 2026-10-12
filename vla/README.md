@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-100 records · 正本: [papers.csv](../papers.csv)
+103 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [perception-representation](perception-representation.md) | 21 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
-| [action-system1](action-system1.md) | 30 |
-| [memory-temporal](memory-temporal.md) | 8 |
-| [adaptation](adaptation.md) | 35 |
+| [action-system1](action-system1.md) | 31 |
+| [memory-temporal](memory-temporal.md) | 9 |
+| [adaptation](adaptation.md) | 36 |
 
 ## 論文
 
+- 2026-10-09 · [Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models](action-system1.md) · `VLA-0203`
+- 2026-10-09 · [Dual-Stream Memory for Vision-Language-Action Policies](memory-temporal.md) · `VLA-0202`
+- 2026-10-09 · [RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation](adaptation.md) · `VLA-0201`
 - 2026-10-08 · [VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation](perception-representation.md) · `VLA-0188`
 - 2026-10-08 · [VioLA: Learning Generalist Humanoid Control Policies from Human Data](action-system1.md) · `VLA-0187`
 - 2026-10-08 · [RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control](adaptation.md) · `VLA-0186`

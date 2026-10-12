@@ -3,19 +3,21 @@
 
 [← データベース](../README.md)
 
-50 records · 正本: [papers.csv](../papers.csv)
+52 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [planning](planning.md) | 13 |
 | [code](code.md) | 14 |
-| [skill](skill.md) | 4 |
-| [tool](tool.md) | 10 |
+| [skill](skill.md) | 5 |
+| [tool](tool.md) | 11 |
 | [memory](memory.md) | 3 |
 | [replanning](replanning.md) | 6 |
 
 ## 論文
 
+- 2026-10-09 · [JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents](tool.md) · `AGENT-0152`
+- 2026-10-09 · [BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation](skill.md) · `AGENT-0151`
 - 2026-10-08 · [Rendering-Free Lookahead for Question-Guided Active Vision](planning.md) · `AGENT-0150`
 - 2026-10-08 · [SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation](tool.md) · `AGENT-0148`
 - 2026-10-08 · [SafeInferCom: Safe Inference-Time Compute via Verifier-Guided Mid-Generation Intervention for Robotic Task Planning](planning.md) · `AGENT-0147`

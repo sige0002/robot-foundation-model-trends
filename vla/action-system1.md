@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-30 records · Published date 降順（同日 ID 降順）
+31 records · Published date 降順（同日 ID 降順）
+
+### Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models
+
+- ID: `VLA-0203`
+- Published: 2026-10-09
+- Authors: Min Lin; Bokai Zhou; Jianqi Lin; Kaiyuan Yang; Yicheng Chang; Junjie Yu; Xiaofan Liu; Jianhua Han; Rui Li; Shen Zhao; Xiaodan Liang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13212) · [PDF](https://arxiv.org/pdf/2610.13212) · [Code](https://github.com/AFCEProject/AFCE) · [Project](https://afceproject.github.io/AFCE-Web/)
+- Tags: AFCE, future-grounded-effect, action-representation, robot-response, world-transition-supervision, flow-matching, bimanual, DexJoCo, pi0.5
+- Model size: PaliGemma 2B + 300M action expert; tokenizer/decoder total not reported
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+実演行動・実際のロボット応答・疎な未来視覚変化を結合したEffectをVLAの予測対象にするAFCE。offline tokenizerが時間順のEffectを作り、現在の画像・指示・stateからflow matchingで予測したEffectをstate条件付きdecoderでaction chunkへ戻す。単腕・双腕のDexJoCo 11 taskで評価した。
+
+**主な貢献**
+
+未来の物理的変化を実行可能な表現の教師信号へ取り込み、推論時は未来画像を使わずEffect予測と行動readoutを共同学習する。原著rand-obj平均成功率50.97%はpi0.5比+11.82 pointsだが、改善は主に双腕taskに由来し単腕平均は62.33%でpi0.5の63.67%を下回る。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- arXiv v1は2026-10-09 08:29:46 UTC、改訂なし。書誌・Sec.3–5とAppendix Dを選読。主貢献はfuture-grounded action targetとreadoutのためvla/action-system1に分類し、future-supervisionをtagsに保持。6単腕/5双腕task、各task/seed 50 episode、3環境seed、各method一つの学習checkpointで1,650 rollout。環境seed間の分散を独立training runの分散と混同せず、embodiment-invariant表現や全task改善を主張しない。原著LICENSE全文MITとafce/prepare.pyをGitHub APIで確認: https://github.com/AFCEProject/AFCE/blob/main/LICENSE 。READMEはcheckpointsを同梱せず外部参照はbaseline policiesのみで、AFCE学習済み重みはunknown。upstream componentの条件は別。README seed-0 51.64%は論文3-seed平均50.97%と区別。公開cleanup後のbit-exact private snapshot照合に注意があり再現未実施。model\_sizeはAppendix Dのbackbone構成のみでtotalではない。
 
 ### VioLA: Learning Generalist Humanoid Control Policies from Human Data
 
@@ -240,7 +265,7 @@ Bernstein多項式距離場による幾何制約を操作空間へ写像。SafeL
 - Tags: ChunkTrust, adaptive-execution-horizon, AHS, QHA, Beta-memory, frozen-policy, RoboTwin-2.0, RoboCasa, reproduction-gap
 - Model size: unknown / 未確認
 - Open-source: true
-- Code / weights / license: available / unknown / open-source
+- Code / weights / license: available / available / open-source
 
 **概要（日本語）**
 
@@ -252,8 +277,8 @@ Bernstein多項式距離場による幾何制約を操作空間へ写像。SafeL
 
 **確認記録**
 
-- Checked: 2026-10-11 · Review: needs-review
-- arXiv v1 2026-09-30書誌、Sec.3–5とAppendix A/D/Gを選読。RoboTwin 50-taskの56.70→63.50% aggregateは公開記録と一致するがfresh rerunではなくpairing fallbackもある。実機4 taskは各method/task 15 rolloutのnormalized process scoreで成功率と区別。生成traceアクセスが必要で選択prefix途中の新たな外乱を検出せず、全task改善やepisode総時間短縮は保証しない。原著MIT LICENSE全文とsrc/chunktrustの公開実装を確認: https://github.com/hf618/ChunkTrust/blob/main/LICENSE 。公式HF https://huggingface.co/Niugan/ChunkTrust のmodel cardと著者catalogが固定revision/SHA256付きQHA-only releaseを宣言することを確認。HF tree・個別immutable file page・公式API metadataを取得できず実ファイルの公開存在は未確認のためweights\_status=unknown。QHA単独はVLAでなく対応base必須、重み条件はMIT実装と別。重み未download/実行。公式audit https://github.com/hf618/ChunkTrust/blob/main/docs/reproducibility.md はRoboCasa pi0.5 Base 42.08（論文40.08）、held-out AHS+QHA 41.25（論文42.75）との未解決差、およびeight-task QHA結果とcheckpoint対応未解決を明記。差のあるheadline数値をsummaryには採用せずneeds-review。
+- Checked: 2026-10-12 · Review: needs-review
+- arXiv v1 2026-09-30書誌、Sec.3–5とAppendix A/D/Gを選読。RoboTwin 50-taskの56.70→63.50% aggregateは公開記録と一致するがfresh rerunではなくpairing fallbackもある。実機4 taskは各method/task 15 rolloutのnormalized process scoreで成功率と区別。生成traceアクセスが必要で選択prefix途中の新たな外乱を検出せず、全task改善やepisode総時間短縮は保証しない。原著MIT LICENSE全文とsrc/chunktrustの公開実装を確認: https://github.com/hf618/ChunkTrust/blob/main/LICENSE 。公式HF https://huggingface.co/Niugan/ChunkTrust のmodel cardと著者catalogが固定revision/SHA256付きQHA-only releaseを宣言することを確認。2026-10-12に固定revision ce2f5cb6a297d960297c0f700eaa6eced283bf2eの公式HF tree APIでQHA-only checkpointを確認し、ocdbt.process\_0/d/d608dfcbedc812fe6033eefa792809e4（7,095,429 bytes、LFS SHA256 01835116edb2402f937f7ac42f4feebf143c82537f784823a497b5d6ae6bc9a7）の公開file metadataを確認したためweights\_status=available。https://huggingface.co/Niugan/ChunkTrust/tree/ce2f5cb6a297d960297c0f700eaa6eced283bf2e/checkpoints/qha\_pi05\_heldout6\_step10000 。QHA単独はVLAでなく対応base必須、重み条件はMIT実装と別。重み未download/実行。公式audit https://github.com/hf618/ChunkTrust/blob/main/docs/reproducibility.md はRoboCasa pi0.5 Base 42.08（論文40.08）、held-out AHS+QHA 41.25（論文42.75）との未解決差、およびeight-task QHA結果とcheckpoint対応未解決を明記。差のあるheadline数値をsummaryには採用せずneeds-review。
 
 ### Spike-driven Vision-Language-Action Model
 

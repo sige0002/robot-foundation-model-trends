@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-108 records · 正本: [papers.csv](../papers.csv)
+111 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 33 |
 | [dynamics](dynamics.md) | 14 |
-| [action-coupling](action-coupling.md) | 30 |
+| [action-coupling](action-coupling.md) | 33 |
 | [planning](planning.md) | 22 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-10-09 · [LeapBot-JAC: Joint Action Chains for World Action Models](action-coupling.md) · `WAM-0113`
+- 2026-10-09 · [Forward Dynamics Models](action-coupling.md) · `WAM-0112`
+- 2026-10-09 · [SmolWAM: A Latent World-Action Model for Robotic Manipulation on Edge Devices](action-coupling.md) · `WAM-0111`
 - 2026-10-08 · [DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training](dynamics.md) · `WAM-0102`
 - 2026-10-08 · [LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC](action-coupling.md) · `WAM-0101`
 - 2026-10-08 · [LiteNWM: Efficient Latent World Models for Onboard Visual Navigation in the Wild](planning.md) · `WAM-0100`

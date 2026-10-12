@@ -3,17 +3,18 @@
 
 [← データベース](../README.md)
 
-35 records · 正本: [papers.csv](../papers.csv)
+36 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 16 |
+| [vla-agent](vla-agent.md) | 17 |
 | [vla-wam](vla-wam.md) | 15 |
 | [wam-agent](wam-agent.md) | 3 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
 
 ## 論文
 
+- 2026-10-09 · [EndoRSI: Physical-Evidence-Driven Recursive Improvement of Endoscopic Robot Policies](vla-agent.md) · `HYBRID-0134`
 - 2026-10-08 · [ARC: A Reasoning Recipe for Robot Foundation Models](vla-agent.md) · `HYBRID-0131`
 - 2026-10-08 · [PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies](vla-wam.md) · `HYBRID-0130`
 - 2026-10-08 · [RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes](vla-agent.md) · `HYBRID-0129`

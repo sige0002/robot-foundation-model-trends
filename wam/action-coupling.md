@@ -3,7 +3,82 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-30 records · Published date 降順（同日 ID 降順）
+33 records · Published date 降順（同日 ID 降順）
+
+### LeapBot-JAC: Joint Action Chains for World Action Models
+
+- ID: `WAM-0113`
+- Published: 2026-10-09
+- Authors: Chenhao Zhu; Baibing Liu; Pei Liu; Rui Yang; Lang Zhang; Mingyue Feng; Yaonong Wang; Jun Ma
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12886) · [Code](https://github.com/LeapWM/leapbot-jac)
+- Tags: LeapBot-JAC, joint-action-chains, fixed-token-budget, physical-time-alignment, directed-attention, FastWAM, LeapBot-WA, LIBERO-Plus
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unspecified
+
+**概要（日本語）**
+
+固定の行動token予算を疎な未来参照chainと密な実行chainへ分け、同じaction expertで物理時間を揃えて共同denoisingする。実行側が参照側を読む有向attentionを加え、実行chainのprefixだけをロボットへ送る。
+
+**主な貢献**
+
+WAMの世界予測処理とparameter/token数を維持し、予測行動に参照・実行の役割を付ける。FastWAMとLeapBot-WAに組み込み、特にzero-shot摂動下の頑健性を検証。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- arXiv初稿v1=2026-10-09 02:21:19 UTC、改訂なし。一次HTMLの公式codeリンクを検証。公開repoの唯一のmain branch/treeは13-byte READMEのみで実装・LICENSEなし: https://github.com/LeapWM/leapbot-jac 。重みの公開を独立確認できずunknown。LIBEROは両host98.3%、LIBERO-PlusはFastWAM53.5→70.4%、LeapBot-WA73.1→77.3%。同一学習seedの比較で、98.3%の再掲は独立再現実験ではない。疎な参照はsemantic subgoalではなく予測control、strideとsupervision等の効果分離に限界。実機2課題各model200試行。PDFリンクはarXiv absで確認したがfetchがcache missのためpdf\_url空欄。https://arxiv.org/html/2610.12886v1
+
+### Forward Dynamics Models
+
+- ID: `WAM-0112`
+- Published: 2026-10-09
+- Authors: Zipei Ma; Junzhe Jiang; Jiahui Zhang; Juntong Zhang; Chun Gu; Bozhou Zhang; Jiankang Deng; Xiatian Zhu; Li Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13117) · [Code](https://github.com/LogosRoboticsGroup/FDM) · [Project](https://logosroboticsgroup.github.io/FDM/)
+- Tags: FDM, action-to-future, asymmetric-attention, future-supervision, action-only-inference, VLM, VGM, LIBERO, RoboTwin
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unavailable / unknown
+
+**概要（日本語）**
+
+行動featureを入力に未来状態を予測し、その損失を行動featureへ逆伝播させるaction-to-future学習。非対称attentionで予測未来から行動への依存を遮断し、π0.5系とWan2.2系の両方で、推論時は未来生成を省く。
+
+**主な貢献**
+
+未来を行動条件にする向きを反転し、観測された結果を方策の訓練信号として活用。future headの誤差伝播を構造的に避けるaction-only推論を、VLM/VGMの双方へ実装。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- arXiv初稿v1=2026-10-09 07:12:16 UTC、改訂なし。一次HTML・公式project・Pi05\_causal.py/WanMoT\_causal.pyの実装を確認。LICENSEはMIT見出しだがupstream commit履歴維持の追加条件があり、標準MIT/OSI扱いを未確定としてunknown: https://github.com/LogosRoboticsGroup/FDM/blob/FDM/LICENSE 。公式READMEはtrained FDM checkpointの公開download link未提供と明記: https://github.com/LogosRoboticsGroup/FDM 。LIBERO平均はVLM版99.4%、VGM版98.1%。実機は双腕ARX-X5の5課題各20試行、平均96%/83%、VGM推論253.45ms/chunk対FastWAM-Joint446.55ms。sim学習seed42、公開configと論文runの差に注意。PDFリンクはarXiv absで確認したがfetchがcache missのためpdf\_url空欄。https://arxiv.org/html/2610.13117v1
+
+### SmolWAM: A Latent World-Action Model for Robotic Manipulation on Edge Devices
+
+- ID: `WAM-0111`
+- Published: 2026-10-09
+- Authors: Timi Owolabi; Hikmah Olawore; Frances Adelakun; Ayotomiwa Oyewumi
+- Venue: NeurIPS 2026 Workshop on Robot Learning with World Models
+- Links: [Paper](https://arxiv.org/abs/2610.13740) · [PDF](https://arxiv.org/pdf/2610.13740v1) · [Code](https://github.com/iitimii/SmolWAM) · [Project](https://smolwam.vercel.app/)
+- Tags: SmolWAM, Cosmos-Policy, distillation, model-compression, single-step-flow, latent-future, LIBERO, edge-inference
+- Model size: 0.88B network; excludes 54M VAE encoder and BERT-base
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+Cosmos Policyの動画拡散trunkを剪定・蒸留し、単画像潜在、attention sinkを保つ言語キャッシュ、状態条件付きqueryから16ステップの行動と両カメラの未来潜在を1回のforwardで予測する軽量WAM。
+
+**主な貢献**
+
+剪定とtoken配置の圧縮を段階的に回復させる蒸留により、未来予測headを残したまま推論を単段化。動画生成用interfaceの削減が計算量を下げることを切り分ける。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- arXiv初稿v1=2026-10-09 15:34:33 UTC、改訂なし。論文HTML/PDF・公式project・実装を確認。実装Apache-2.0: https://github.com/iitimii/SmolWAM/blob/main/LICENSE 。HFのmodel.safetensorsを確認: https://huggingface.co/timiiowolabi/SmolWAM/tree/main 。重みはNVIDIA One-Way Noncommercial Licenseで商用利用不可、コードのライセンスとは別。LIBERO 400 episodes、seed195で95.5%、A100 batch1 bf16・text cachedの16-action chunk=57ms/2.30TFLOP/2.36GiB。教師98.2%は旧evaluation pipeline。LIBEROのみ・実機未評価、Long=89%対教師97%。https://arxiv.org/html/2610.13740v1
 
 ### LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC
 
@@ -265,7 +340,7 @@ backboneと訓練interfaceを揃えたinteraction比較、および局所dynamic
 - Tags: KineWorld, kinematic-transport, action-conditioned-video, flow-matching, RoboTwin-2.0, Wan2.2, reproduction-gap
 - Model size: 5.001B active denoiser; VAE/text encoder/optional action expert excluded (paper A.6)
 - Open-source: true
-- Code / weights / license: available / unknown / open-source
+- Code / weights / license: available / available / open-source
 
 **概要（日本語）**
 
@@ -277,8 +352,8 @@ backboneと訓練interfaceを揃えたinteraction比較、および局所dynamic
 
 **確認記録**
 
-- Checked: 2026-10-11 · Review: needs-review
-- arXiv v1 2026-10-05の書誌とSec.4–5、Appendix A.3/A.5–A.10を選読。EWMScore-PとTWB-Scoreは別プロトコルの動画集約指標で、実機closed-loop成功率ではない。retained profileと50-update matched continuationを区別。transportはロボット支持領域に限定し物体運動・接触を直接表現せず、FPSはoffline transport準備を除く。公式公開READMEはuniform future-RGB学習でTAWD未提供と明記し、論文再現は未確立: https://github.com/modaxiansheng/KineWorld/blob/main/README.md 。LICENSE全文Apache-2.0とNOTICEをGitHub APIで確認: https://github.com/modaxiansheng/KineWorld/blob/main/LICENSE 。公式HF https://huggingface.co/pumpkin601/KineWorld のmodel cardと公開READMEがstep-500 release、固定revision・SHA256とApache-2.0を宣言することを確認。ただしHF tree・個別immutable file page・公式API metadataを取得できず実ファイルの公開存在は未確認のためweights\_status=unknown。論文結果再現なし、外部Wan等は別条件。重み未download/実行。公開実装と論文の差をneeds-reviewとして保持。
+- Checked: 2026-10-12 · Review: needs-review
+- arXiv v1 2026-10-05の書誌とSec.4–5、Appendix A.3/A.5–A.10を選読。EWMScore-PとTWB-Scoreは別プロトコルの動画集約指標で、実機closed-loop成功率ではない。retained profileと50-update matched continuationを区別。transportはロボット支持領域に限定し物体運動・接触を直接表現せず、FPSはoffline transport準備を除く。公式公開READMEはuniform future-RGB学習でTAWD未提供と明記し、論文再現は未確立: https://github.com/modaxiansheng/KineWorld/blob/main/README.md 。LICENSE全文Apache-2.0とNOTICEをGitHub APIで確認: https://github.com/modaxiansheng/KineWorld/blob/main/LICENSE 。公式HF https://huggingface.co/pumpkin601/KineWorld のmodel cardと公開READMEがstep-500 release、固定revision・SHA256とApache-2.0を宣言することを確認。2026-10-12に固定revision 37e8f86c6c3cf45cde743162bf9b6de583cf1b73の公式HF tree APIを再確認し、step-500.safetensors（13,113,498,528 bytes、LFS SHA256 86294739c54073c836a0dcb3f9114c6cf2bf83d1a8698423b71698e5f88460a3）とaction\_norm\_stats.npzの公開file metadataを確認したためweights\_status=available。https://huggingface.co/pumpkin601/KineWorld/tree/37e8f86c6c3cf45cde743162bf9b6de583cf1b73 。論文結果再現なし、外部Wan等は別条件。重み未download/実行。公開実装と論文の差をneeds-reviewとして保持。
 
 ### RealtimeWAM: One-Step Asynchronous World Action Models
 

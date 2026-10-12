@@ -140,7 +140,7 @@ action marginとattention knockoutで視覚shortcutの入り方とモデルご�
 - Tags: VLA-ACL, action-consistency, visual-token-pruning, frozen-VLA, soft-top-k, OpenVLA-OFT
 - Model size: unknown
 - Open-source: true
-- Code / weights / license: available / unknown / open-source
+- Code / weights / license: available / available / open-source
 
 **概要（日本語）**
 
@@ -152,8 +152,8 @@ VLAを凍結したまま、全視覚contextのteacher動作とdemonstration動�
 
 **確認記録**
 
-- Checked: 2026-10-11 · Review: verified
-- abs履歴v1=2026-10-06、v2=2026-10-08。同じ正規ID。https://arxiv.org/html/2610.08133v2 の§III、IV-A–Cを選択確認。速度はA100上のLLM部分、全robot loopの1.5倍とは扱わない。比較baseline成功は各論文から引用、実機4taskは各methodに40/20/20/40試行の計120試行で、73.75%→72.5%はtaskを等重みとした平均でありpooled成功率ではない。公式train\_scorer.pyをGitHub connectorで取得、root LICENSEのApache2.0を確認: https://github.com/du-owen/VLA-ACL/blob/main/LICENSE 。公式https://huggingface.co/owendudu/VLA-ACL のcardは8 scorer checkpointを記載するが、file tree/API/個別fileは読み取り失敗のためweights\_status=unknown。weight license未確認。PDF未取得。
+- Checked: 2026-10-12 · Review: verified
+- abs履歴v1=2026-10-06、v2=2026-10-08。同じ正規ID。https://arxiv.org/html/2610.08133v2 の§III、IV-A–Cを選択確認。速度はA100上のLLM部分、全robot loopの1.5倍とは扱わない。比較baseline成功は各論文から引用、実機4taskは各methodに40/20/20/40試行の計120試行で、73.75%→72.5%はtaskを等重みとした平均でありpooled成功率ではない。公式train\_scorer.pyをGitHub connectorで取得、root LICENSEのApache2.0を確認: https://github.com/du-owen/VLA-ACL/blob/main/LICENSE 。公式https://huggingface.co/owendudu/VLA-ACL のcardは8 scorer checkpointを記載。2026-10-12に固定revision e8d30096b49184d2d4bb259240319a4f1c55919bの公式HF tree APIで8つのscorer .pt（各130,452,786 bytes、LFS metadata）を確認したためweights\_status=available。公開重みはscorerのみでbase VLA全体の重みではない。https://huggingface.co/owendudu/VLA-ACL/tree/e8d30096b49184d2d4bb259240319a4f1c55919b 。weight license未確認。PDF未取得。
 
 ### MIM-VLA: Learning Physical Interaction Representations from Gripper Motor Feedback
 

@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-35 records · Published date 降順（同日 ID 降順）
+36 records · Published date 降順（同日 ID 降順）
+
+### RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation
+
+- ID: `VLA-0201`
+- Published: 2026-10-09
+- Authors: Xuhui Kang; Sung-Wook Lee; Yan Zhuang; Tianle Zhong; Yen-Ling Kuo
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13578) · [PDF](https://arxiv.org/pdf/2610.13578) · [Code](https://github.com/Shua-Kang/RARA) · [Project](https://shua-kang.github.io/RARA_robot/)
+- Tags: RARA, retrieval-anchored-alignment, representation-drift, robust-fine-tuning, OOD-generalization, Diffusion-Policy, GR00T, RoboTwin, RoboCasa
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+少数の実演で事前学習済みロボット方策を適応する際の表現変化とOOD性能低下を扱う二段階手法。言語指示と運動の類似性で事前学習実演を検索し、対象実演の表現を整列してからanchor付き行動学習を行う。Diffusion PolicyとGR00Tをシミュレーション・実機の13 taskで評価した。
+
+**主な貢献**
+
+関連する事前学習実演の表現だけを保持するretrieval anchorを、適応前のcontrastive alignmentと適応中のbehavior cloningへ組み込む。原著は通常fine-tuning比でID平均+9.5、OOD平均+13.6 percentage pointsを報告し、推論時はprojectorを除いて適応方策のみを使う。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- arXiv v1は2026-10-09 13:31:20 UTC、改訂なし。書誌・Sec.4–5と公式projectを選読。公開コードはRoboTwin 2.0のmove pill bottle task向けDiffusion Policy学習・評価pipelineで、論文の全13 taskやGR00T実装一式の公開とは判断しない。LICENSE全文MITとscripts/train.shをGitHub APIで確認: https://github.com/Shua-Kang/RARA/blob/main/LICENSE 。公式HF model card https://huggingface.co/ShuaKang/RARA-robotwin-pill はMITを表示。公開API https://huggingface.co/api/models/ShuaKang/RARA-robotwin-pill?blobs=true でprivate=false、gated=false、revision 4ee290bde7eaefd2c5cfa693bedd987c6780adc3とrara.pt/rara\_stage1.ptを含むsiblings/LFS metadataを確認しweights\_status=available。rara.ptは520,072,995 bytes、SHA256 228ef5e26c941052a640afdf72da43cf09571b102ad8abe3d4e84866c0c66dd4。重みの対象はRoboTwin-pillのDiffusion Policyで、GR00T重み提供は未確認。重み未download/実行、原著成功率は未再現。
 
 ### RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control
 

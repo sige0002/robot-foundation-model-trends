@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
+
+### Dual-Stream Memory for Vision-Language-Action Policies
+
+- ID: `VLA-0202`
+- Published: 2026-10-09
+- Authors: Yang Wang; Ping Liu; Ruiyu Wang; Xuhua Chen; Lingfeng Zhang; Tao Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13262) · [PDF](https://arxiv.org/pdf/2610.13262)
+- Tags: dual-stream-memory, Gated-DeltaNet, execution-context, task-conditioned-retrieval, multi-scale-fusion, pi0.5, RoboMME, Piper
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+記憶依存の操作に必要な実行段階と、現在は見えない視覚証拠を別の記憶経路で扱う。Gated DeltaNetが履歴を一つのtemporal tokenへ圧縮し、task条件付きretrieverが関連frameを保持する。各frameを16個のmulti-scale spatial tokenとしてpi0.5のaction expertへ渡す。
+
+**主な貢献**
+
+固定幅の再帰的実行文脈と選択的な視覚履歴アクセスを統合する二段階学習を提案。原著RoboMME 16 task平均は49.22%（公開FrameSamp+Modul参照44.51%）、Piper実機4 task平均は62.5%（参照37.5%）だが、cup swap時の持続的な物体同一性追跡は未解決。
+
+**確認記録**
+
+- Checked: 2026-10-12 · Review: verified
+- arXiv v1は2026-10-09 09:14:59 UTC、改訂なし。書誌・Sec.III–Vを選読。RoboMMEは各task/seed 50 episode、3 seed、published checkpoint aggregation参照でmatched architectural effectとは区別。実機は4 task各30 rollout、全method同じ400実演だがcheckpoint基準はtraining stepを揃えない。temporal memoryは固定幅でもspatial bankと全履歴scoringは保持frame数・prefix長とともに増える。Shellは40.0%で参照53.3%を下回り、全task改善や持続的identity追跡成功を主張しない。arXiv/HTMLに公式code/project/weights提供先を確認できずunknownを保持。論文のarXiv perpetual non-exclusive licenseを実装ライセンスと混同しない。総parameter数未確認、結果未再現。
 
 ### Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models
 
