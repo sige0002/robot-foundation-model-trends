@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-22 records · Published date 降順（同日 ID 降順）
+23 records · Published date 降順（同日 ID 降順）
+
+### CASTER: Formalizing Zero-Shot Manipulation from Synthetic Videos as Constrained Optimization
+
+- ID: `WAM-0115`
+- Published: 2026-10-08
+- Authors: Yinlong Dai; Homanga Bharadhwaj; Dylan P. Losey
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12567) · [Code](https://github.com/VT-Collab/CASTER) · [Project](https://collab.me.vt.edu/CASTER/)
+- Tags: synthetic-video-guidance, constrained-optimization, digital-twin, task-feature-alignment, frozen-video-generator, zero-shot, multi-video, open-loop, real-robot
+- Model size: Frozen HunyuanVideo-1.5 480P-I2V generator; system total unspecified
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+生成した人間のtask動画から物体軌道を得て、意味整合と物理実行可能性を満たすrobot軌道探索の初期値にする。複数動画に共通するtask重要特徴を合わせ、RGB-Dから作るdigital twin内でcollision・関節制約を課した最適化を行う。
+
+**主な貢献**
+
+動画からrobot動作への変換を制約付き最適化として統一し、初期動画が意味的な局所修正域に入る条件を整理する。12実機taskの平均成功76.6%は最良baseline42.5%から+34.1 pointsで、動画をそのまま再生する方式ではない。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- abs履歴v1=2026-10-08 18:00:55 UTC、改訂なし。HTML §§IV–VIIを選読: https://arxiv.org/html/2610.12567v1 。一般動画generatorを推論時に使うplanning研究で、robot-specific joint WAM学習ではない。各task20動画を生成しsemantic検証後7動画でCEMを初期化、CASTERとMimicは各task21実機軌道試行。open-loop実行で、sim-real物理差がkettle/handle taskの失敗要因。projectが指す公式repoのsrc/caster/pipeline.py (https://github.com/VT-Collab/CASTER/blob/main/src/caster/pipeline.py) とLICENSE全文MITをGitHub APIで確認: https://github.com/VT-Collab/CASTER/blob/main/LICENSE 。依存modelの提供と専用checkpointを区別しweights\_status unknown。PDF公式リンクのfetchはtool errorのためpdf\_url空欄。
 
 ### LiteNWM: Efficient Latent World Models for Onboard Visual Navigation in the Wild
 

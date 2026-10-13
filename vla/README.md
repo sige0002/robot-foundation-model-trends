@@ -3,18 +3,19 @@
 
 [← データベース](../README.md)
 
-103 records · 正本: [papers.csv](../papers.csv)
+109 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 21 |
+| [perception-representation](perception-representation.md) | 22 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
 | [action-system1](action-system1.md) | 31 |
 | [memory-temporal](memory-temporal.md) | 9 |
-| [adaptation](adaptation.md) | 36 |
+| [adaptation](adaptation.md) | 41 |
 
 ## 論文
 
+- 2026-10-09 · [LAPT-Scale: Scaling Embodied Policies with Latent Action Pre-Training on Human Videos](perception-representation.md) · `VLA-0204`
 - 2026-10-09 · [Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models](action-system1.md) · `VLA-0203`
 - 2026-10-09 · [Dual-Stream Memory for Vision-Language-Action Policies](memory-temporal.md) · `VLA-0202`
 - 2026-10-09 · [RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation](adaptation.md) · `VLA-0201`
@@ -51,6 +52,7 @@
 - 2026-10-05 · [VLA-ZO: Fast Zeroth-Order Adaptation for Vision-Language-Action Models](adaptation.md) · `VLA-0154`
 - 2026-10-05 · [When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models](action-system1.md) · `VLA-0153`
 - 2026-10-05 · [How (and How Not) to Use Data Augmentation in VLA Post-Training](adaptation.md) · `VLA-0152`
+- 2026-10-04 · [TUCO: Curating Simulation Demonstrations for Sim-to-Real Robot Policy Co-Training](adaptation.md) · `VLA-0205`
 - 2026-10-04 · [Vela: Scaling Vision-Language-Action Models with Adaptive Action Curve Parametrization](action-system1.md) · `VLA-0151`
 - 2026-10-02 · [ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation](adaptation.md) · `VLA-0150`
 - 2026-10-02 · [Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models](perception-representation.md) · `VLA-0148`
@@ -96,8 +98,12 @@
 - 2026-09-18 · [GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments](perception-representation.md) · `VLA-0131`
 - 2026-09-17 · [SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation](action-system1.md) · `VLA-0129`
 - 2026-09-17 · [Catch Me If You Can: Real-Time Feedback Denoising for Responsive VLAs](action-system1.md) · `VLA-0121`
+- 2026-09-09 · [RoboDrop: Curating VLA Post-Training Data via Local Gradient Compatibility](adaptation.md) · `VLA-0206`
+- 2026-08-08 · [Auditing Instruction-Trajectory Mismatches in Multimodal Robot Demonstrations](adaptation.md) · `VLA-0208`
+- 2026-07-07 · [SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models](adaptation.md) · `VLA-0207`
 - 2025-08-26 · [MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation](memory-temporal.md) · `VLA-0116`
 - 2025-06-02 · [SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics](action-system1.md) · `VLA-0108`
+- 2025-05-28 · [SCIZOR: A Self-Supervised Approach to Data Curation for Large-Scale Imitation Learning](adaptation.md) · `VLA-0209`
 - 2025-05-09 · [UniVLA: Learning to Act Anywhere with Task-centric Latent Actions](perception-representation.md) · `VLA-0117`
 - 2025-04-22 · [π0.5: a Vision-Language-Action Model with Open-World Generalization](reasoning-system2.md) · `VLA-0107`
 - 2025-03-18 · [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](action-system1.md) · `VLA-0109`

@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-21 records · Published date 降順（同日 ID 降順）
+22 records · Published date 降順（同日 ID 降順）
+
+### LAPT-Scale: Scaling Embodied Policies with Latent Action Pre-Training on Human Videos
+
+- ID: `VLA-0204`
+- Published: 2026-10-09
+- Authors: Zhiyuan Xiang; Peidong Liu; Mingyang Li; Jiawei Li; Wenhow Li; Wenbo Ding; Xiang Deng
+- Venue: CoRL 2026 (accepted; arXiv metadata)
+- Links: [Paper](https://arxiv.org/abs/2610.13732) · [PDF](https://arxiv.org/pdf/2610.13732)
+- Tags: latent-action-pretraining, continuous-LAM, human-video, egocentric, embodiment-alignment, optical-flow-supervision, flow-matching, AgiBot-G1, RoboTwin
+- Model size: LAM: 24 encoder + 24 decoder blocks, width 1024, 32-dimensional latent; policy parameter count unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+一人称の人間動画の隣接frame変化を説明する連続latent actionを学び、VLAの事前学習教師へ変換する。知覚・意味・optical flowを合わせてLAMを学習し、人動画のlatent-action事前学習、対象ロボットへの整列、task別post-trainingを同じaction expertで行う。
+
+**主な貢献**
+
+離散codeや画素再構成だけに頼らない人動画の潜在行動教師と、3段階のVLA学習recipeを提示する。ロボットdataを固定した1K→5K時間の人動画scalingで、3実機taskの平均成功63.3→85.0%を報告する。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- abs履歴v1=2026-10-09 15:29:20 UTC、改訂なし。absにCoRL2026 acceptedと記載。HTML §§3–5, Appendix Bを選読: https://arxiv.org/html/2610.13732v1 。PDF24頁のfetchを確認。LAM corpus23.3K時間とpolicy用clean subset5.1K時間を区別。対象ロボット250時間のembodiment alignmentを要し、latentが独立制御可能な自由度へ一致する保証はない。実機評価はAgiBot G1一機種・7task、各条件20試行でdeployment robustnessの一般保証ではない。正式なproject/実装repository/専用重み/実装licenseを論文と題名限定検索で独立確認できずunknown。
 
 ### VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation
 

@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
+
+### What Should Embodied Agents Remember? Benchmarking and Evaluating Memory Modality for Embodied Agents
+
+- ID: `AGENT-0154`
+- Published: 2026-10-08
+- Authors: Junxiang Wang; Yuchen Liu; Yi Wu; Guofei Chen; Nir Pechuk; Tao Chen; Zackory Erickson; Yuzhe Qin; Tianyu Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.12561) · [Code](https://github.com/jimwang418/MeMoREval)
+- Tags: MeMoREval, memory-modality, embodied-benchmark, scene-graph, visual-memory, inference-cost, open-loop-plan
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+ロボットAgentが過去の経験を何の形式で保持すべきかを、観察段階と後続要求段階を分離したMeMoREvalで比較する。4室内環境・53課題で文章、画像説明、カメラframe、scene graphとその組合せの記憶を検査し、成功と書込・読出時の推論費用を別々に測る。要求時には新たな観察を許さず、動作要求は一括planのopen-loop実行として記憶欠落の探索による補償を防ぐ。
+
+**主な貢献**
+
+同一の観察・Agent条件で保持modalityを変える評価protocolと、履歴蓄積・frame選別・writer視覚入力の拡張を提示。frame＋scene graphは試した3モデルすべてで最良の集約成績だが、frame単独の説明文に対する優位はモデル依存。実機は手作業で注釈したmapを用いる2つの実演であり、広範な実機benchmark結果ではない。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- 書誌/v1 2026-10-08: https://arxiv.org/abs/2610.12561 。HTML§3–5.3とAppendix Aの一部を選読: https://arxiv.org/html/2610.12561v1 。主要モデルは5backend×3seed、補助2モデルは3backend×1seed。費用はモデル内の価格重み付token比較で保存容量や全system費用を含めない。simulationの空間情報は観察物体に制限したsimulator stateから生成。公式repo READMEはsimulation/skills/memory/Agent/grading実装をpeer review後に公開予定と明記、現在はtask JSONとrobot assets等のみ: https://github.com/jimwang418/MeMoREval/blob/main/README.md 。root Apache-2.0全文とNOTICEは確認したが、未公開benchmark実装のlicenseを確認した意味ではなくimplementation license/open\_sourceはunknown。専用weight配布未確認、scene datasetリンクをweight公開と扱わない。本文の公式projectは2回取得失敗のためURL欄を空欄にした。PDF未取得、数値再現なし。
 
 ### COOL: Curiosity-Driven Object Ownership Learning for Personalized Robotic Assistance
 

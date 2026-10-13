@@ -139,8 +139,8 @@ Cosmos Policyの動画拡散trunkを剪定・蒸留し、単画像潜在、atten
 - Links: [Paper](https://arxiv.org/abs/2610.12099) · [Code](https://github.com/DexForce/UNITAS)
 - Tags: 3d-native, metric-world-frame, scene-flow, action-flow, cross-embodiment
 - Model size: 1.7B
-- Open-source: unknown
-- Code / weights / license: unavailable / unknown / unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
 
 **概要（日本語）**
 
@@ -152,8 +152,8 @@ world-aligned3D位置埋め込みとphysical-time trajectory tokenで行動/scen
 
 **確認記録**
 
-- Checked: 2026-10-09 · Review: needs-review
-- v1初稿・著者・題名、HTML3節/4.4/5節/6節を確認: https://arxiv.org/html/2610.12099v1 。公式repoはREADME/assetsのみでinference/checkpoint/training release欄が未完了。要旨のcode availableとは区別し、実装は確認時点でunavailable、重み・LICENSE各unknown。READMEのproject http://unitas-wam.github.io/ は取得失敗でproject\_url空欄。scene-flow定量評価はsimulator groundtruthを用い、video baselineの3D化は初期GT depth校正を用いる。長期相互作用/広い実機deploymentは今後の課題。追補は実装とcheckpoint release。
+- Checked: 2026-10-13 · Review: needs-review
+- v1初稿・著者・題名、HTML§3/4.4/5/6を2026-10-09に選読: https://arxiv.org/html/2610.12099v1 。scene-flow定量評価はsimulator groundtruthを用い、video baselineの3D化は初期GT depth校正を用いる。長期相互作用/広い実機deploymentは今後の課題。2026-10-13の公式release commitでinference/evaluation実装、model、scene-flow処理を確認: https://github.com/DexForce/UNITAS/commit/8c480eed6bfa06461313360045512ae7c62a06a8 。src/unitas/inference/policy.pyの実処理とroot Apache-2.0全文を別確認: https://github.com/DexForce/UNITAS/blob/8c480eed6bfa06461313360045512ae7c62a06a8/LICENSE 。2026-10-09のREADME/assetsのみの状態からcode/実装licenseを更新。training code/datasetはREADMEのrelease欄で未公開。公式READMEは https://huggingface.co/RobbinWang123/Unitas のLIBERO/RoboTwin/VLABench scratch・finetuned各checkpointとscene\_flow checkpointを宣言するが、本確認でHF model/tree/API/file-page/cardを取得できず実weightファイルと配布条件を独立確認できないためweights\_status=unknown。追補は各checkpointの公開metadata/重みlicenseと再現scope。READMEは新しい公式projectへリンクするが本確認で本文内容を読めないためproject\_urlは空欄維持。PDF/weight未download、GPU再現なし。
 
 ### Humanoid World Action Model With Joint State--Action Generation
 

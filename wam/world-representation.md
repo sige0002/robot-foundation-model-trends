@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-33 records · Published date 降順（同日 ID 降順）
+34 records · Published date 降順（同日 ID 降順）
+
+### What Visual Representations Do World Action Models Need?
+
+- ID: `WAM-0114`
+- Published: 2026-10-09
+- Authors: Kai Liu; Jiangran Lyu; Tingyu Deng; Yixin Zheng; Jingtian Wan; Wenbo Cui; Mi Yan; Yizhou Zhou; Haoran Li; Dongbin Zhao; Zhizheng Zhang; He Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13024) · [PDF](https://arxiv.org/pdf/2610.13024) · [Project](https://kailiu18.github.io/R-2WAM.github.io/)
+- Tags: R2-WAM, visual-representation, controlled-comparison, channel-wise-concatenation, future-feature-prediction, DINOv3, UniTok, V-JEPA2.1, RoboCasa, RoboTwin
+- Model size: Wan2.2-initialized video expert + action expert; total parameter count unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+動画VAE表現を用いる共通WAMで、13種の視覚encoder、5種の特徴統合方式、特徴の組合せを制御比較する。汎用視覚表現とchannel-wise共同予測を中心に、DINOv3・UniTok・V-JEPA 2.1を合わせたR2-WAM recipeを検証する。
+
+**主な貢献**
+
+表現選択と統合方式の影響を分け、追加特徴は既存表現に対する補完情報で選ぶ設計指針を示す。RoboCasa GR1 Tabletop84.7%、RoboTwin2.0 92.8%で、対応VAE-only基準から各+5.9/+2.2 pointsを報告する。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- abs履歴v1=2026-10-09 05:26:20 UTC、改訂なし。HTML §§3–5, Appendix Cを選読: https://arxiv.org/html/2610.13024v1 。PDF 24頁のfetchと公式projectを確認。主LIBERO比較でdata・観測・action horizon・optimizer/scheduleを固定。追加特徴の利得は組合せに依存し、常に増やせば改善するとは主張しない。Galbot G1の4実機taskは各model各task20試行で、掃除は完遂率でなくdebris collection rate。project/題名限定検索で公式実装・専用重み・実装licenseを確認できずunknown。
 
 ### MiniWAM: Learning Compact Future Targets for Efficient World-Action Modeling
 

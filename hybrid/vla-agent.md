@@ -3,7 +3,7 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-17 records · Published date 降順（同日 ID 降順）
+19 records · Published date 降順（同日 ID 降順）
 
 ### EndoRSI: Physical-Evidence-Driven Recursive Improvement of Endoscopic Robot Policies
 
@@ -29,6 +29,56 @@ EndoForge coding agentが実験結果を解析して内視鏡方策を改訂す�
 
 - Checked: 2026-10-12 · Review: verified
 - abs履歴v1=2026-10-09、改訂なし。Oct12 announcement; canonical arXiv/DOI、normalized/fuzzy/subtitle照合は既存一致なし。HTML Results/Discussion/Methods/Supplementary Notes5–9を選択確認: https://arxiv.org/html/2610.13376v1 。Agentは研究時にcode/教師信号/候補を改訂し、armed robotのcamera/serial/motorへ直接accessしない。VLAのaction head更新が中心なのでHybrid/vla-agent、実行時agent orchestrationとは区別。6独立porcine specimen、単一挿入課題; Gen4 ex-vivo replication16/21、teleoperation21/21。世代間でcheckpoint・instruction・execution profileが変わり、failure supervisionの因果効果を分離しない。生体動物・患者・臨床判断の研究ではない。論文のreview archive記載は公開実装の証拠ではなく、abs/HTMLと題名限定web/GitHub検索で公式実装URL、専用checkpoint、実装licenseを独立確認できずunknown。PDF未保存。
+
+### REMM: Revisable Embodied Memory for Manipulation
+
+- ID: `HYBRID-0136`
+- Published: 2026-10-08
+- Authors: Revanth Krishna Senthilkumaran; Ruwan Wickramarachchi; Alessandro Oltramari; Jonathan Francis
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12710) · [PDF](https://arxiv.org/pdf/2610.12710) · [Project](https://revanthsenthil.github.io/remm/)
+- Tags: revisable-memory, support-dependencies, truth-maintenance, recovery-scheduling, frozen-VLA, G0.5, real-robot, operator-assisted
+- Model size: Qwen3-VL-4B-Instruct supervisory model; frozen G0.5 executor (total unspecified)
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+固定G0.5 VLAの外に、追記のみの証拠履歴と改訂可能な現状・task queueを置く。物体関係と完了条件の依存を明示し、支持事実が変わると関連する結論を撤回して、検証済みskill境界で対象を絞った復旧指示を送る。
+
+**主な貢献**
+
+歴史の保持と現在の支持状態を分け、物理的な変更から記憶の撤回、復旧行動まで追跡可能な監督interfaceを示す。51実機試行で介入復旧の記録済み進捗57→91%、系列想起43→70%を報告するが、完遂成功率とは異なる。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- abs履歴v1=2026-10-08 20:42:35 UTC、改訂なし。HTML §§III–VIと公式projectを選読: https://arxiv.org/html/2610.12710v1 。PDF 12頁をfetch確認。51試行はoperator-assisted runと不完全なlabelを含む。依存graphはtask compilerと固定ontologyから与えられ、因果構造を自動発見しない。進捗の一部はcompletion/decision labelのfallbackで、全試行の独立checkpoint採点ではない。生成動画診断42clipは上位指示のみでmotor実行を評価しない。論文§VI-Bは将来の実装releaseを記し、projectに公開実装リンクを独立確認できずcode/weights/implementation licenseはunknown。PDFのCC BYを実装licenseへ流用しない。
+
+### Gamma: Grounded Multi-Agent Memory with Mechanical Audit for Memory-Intensive Manipulation
+
+- ID: `HYBRID-0135`
+- Published: 2026-10-08
+- Authors: Yudong Liu; Yueqian Lin; Zijia Tang; Yuxi Zheng; Yuan Li; Shuai Zhang; Yi Li; Taotao Jing; Shuangjun Liu; Dashan Gao; Ning Bi; Jingwei Sun; Yiran Chen; Hai Helen Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12793) · [Code](https://github.com/1999Lyd/GAMMA)
+- Tags: GAMMA, grounded-text-memory, multi-agent, mechanical-verification, append-only-memory, subgoal-conditioned, pi0.5, RoboMME, RoboMemArena, simulation-only
+- Model size: Qwen3.5-9B writer/reasoner with LoRA; Qwen3.5-0.8B variant; fixed pi0.5 executor (total unspecified)
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+過去の出来事を要する操作を、記憶から接地したsubgoalを作る上位系と固定pi0.5実行器へ分解する。SAM-3の検出を使うVLM writerが短い事実を追記し、別のreasonerが記憶から次のsubgoalを出す。両者の主張を視覚的証拠で検証する。
+
+**主な貢献**
+
+学習時と実行時に共通のadmit/defer/correct/reject契約を置き、誤った記憶や早すぎる完了判断を抑える。RoboMMEの16課題で平均成功66.0%、特権oracle84.1%の78.5%に相当するが、評価はシミュレーションに限る。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- abs履歴v1=2026-10-08 23:00:01 UTC、改訂なし。一次HTML §§4–6を選読: https://arxiv.org/html/2610.12793v1 。固定subgoal-conditioned pi0.5をoracleと共有し、baseline値はRoboMME報告値。2/16課題の一部記憶主張は決定的readerが供給するため純粋な学習系ではない。公式repositoryのserve実装とLICENSE全文MITをGitHub APIで確認: https://github.com/1999Lyd/GAMMA/blob/main/LICENSE 。CHECKPOINTS.mdは2つのGoogle Drive archiveとSHA-256を示すが、配布先fetchがcache missで実体アクセス未確認のため重みunknown。重み固有のlicenseも未確認。PDFは公式リンクがあるがweb fetch容量上限に達しpdf\_url空欄。実験再現未実施。
 
 ### ARC: A Reasoning Recipe for Robot Foundation Models
 

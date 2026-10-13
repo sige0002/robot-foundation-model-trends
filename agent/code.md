@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-14 records · Published date 降順（同日 ID 降順）
+15 records · Published date 降順（同日 ID 降順）
+
+### Fly-by-Code: Embodied Coding Agents for Aerial Manipulation with Active Visual and Physical Feedback
+
+- ID: `AGENT-0153`
+- Published: 2026-10-08
+- Authors: Jaewoo Lee; Jeongyeon Seo; Sihyun Cho; Gyeongrak Choe; Yutong Wang; Bavin Saravanan; Jia-Bin Huang; Furong Huang; Sebastian Scherer; Guanya Shi; H. Jin Kim; Seungjae Lee; Dongjae Lee
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12549) · [Project](https://fly-by-code.github.io/)
+- Tags: embodied-coding, Active-Feedback, view-and-probe, aerial-manipulation, diagnostic-program, program-refinement, sim-to-real, completion-assessment
+- Model size: Multiple coding-agent backbones; parameter counts unspecified
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+空中操作のcoding agentが、task実行後に不足する証拠を集める診断programを別途生成する。シミュレーションでViewが新しい視点、Probeが接触や搭載量の仮説を試し、得た証拠から完了判定と次のtask programを改訂する。
+
+**主な貢献**
+
+既存feedbackを読むだけの改訂に、実行可能な能動診断を追加する。6模擬課題・各条件60試行で成功31.7→75.0%、誤った完了宣言25→5。共有APIを介して、模擬環境で改訂したtask programの実機移行も示す。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- abs履歴v1=2026-10-08 18:00:00 UTC、改訂なし。HTML §§3–4,6を選読: https://arxiv.org/html/2610.12549v1 。主実験は同じClaude Opus 5設定とAPIを使い、各task10試行、初回実行+最大10改訂。task scoreは診断前に固定し、次のtask実行前に環境をresetする。実機は2課題各5試行、完遂4/5と3/5でtask programのsource変更なし。View/Probeは模擬環境で行われ、実機で無制限なprobeを安全に行う保証ではない。原著projectのCode coming soonを確認しcode unavailable、公式repo URL・重み・実装licenseはunknown。PDF公式リンクのfetchはtool errorのためpdf\_url空欄。
 
 ### RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments
 

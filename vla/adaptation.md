@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-36 records · Published date 降順（同日 ID 降順）
+41 records · Published date 降順（同日 ID 降順）
 
 ### RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation
 
@@ -379,6 +379,31 @@ LIBERO-Plusの5視覚軸の非加重平均で、π0.5はoverlayにより73.9%か
 
 - Checked: 2026-10-06 · Review: verified
 - 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-10-05 08:48:13 UTC、改訂なしをarXivで確認。NeurIPS 2026 RoboPAD workshop採択はarXiv著者commentと公式author projectの記載で確認し、publisher proceedingsは未確認。本文 https://arxiv.org/html/2610.05994v1 の§3–6を選択読解。シミュレーション、LIBERO-Spatial/PPO、各構成1学習seedに限定。公式projectから実装を確認し、augmentation.pyとApache-2.0 LICENSEを別々に確認: https://github.com/bramgrooten/vla-augm/blob/main/LICENSE 。専用重みの配布先は未確認。
+
+### TUCO: Curating Simulation Demonstrations for Sim-to-Real Robot Policy Co-Training
+
+- ID: `VLA-0205`
+- Published: 2026-10-04
+- Authors: Ning Zhu; Mengfei Zhao; Yikai Tang; Zhangyujie Sun; Peihao Li; Dongyue Ni; Jindou Jia; Jianfei Yang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.05407) · [PDF](https://arxiv.org/pdf/2610.05407v1)
+- Tags: supporting-foundation, data-curation, sim-to-real, co-training, influence-functions, diffusion-policy
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+少量の実機データと併用するシミュレーション実演を、対象環境での閉ループ挙動への影響から選ぶデータ選別法。対象ロールアウトに有益な軌道と、既選択集合を補完する軌道を同時に残す。新規VLA基盤モデルではなく、BC・Diffusion Policyのsim-to-real共学習を改善する支援研究。
+
+**主な貢献**
+
+影響関数による軌道ごとのロールアウト影響ベクトルを、報酬方向の効用と直交成分の被覆表現へ分解。正の効用と報酬方向への整合条件の下で、効用品質付きlog-determinantの限界被覆利得を用い貪欲選択する。実機3課題では各1200本から600本を選び、課題ごと10本の成功実機実演と共学習し、平均成功率85.8%を報告（全シミュレーション併用25.8%、各課題40試行）。保持数・混合比は所与で、観測・行動インターフェースが整合する操作課題に評価範囲が限られる。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- Current-window discovery (2026-09-30–2026-10-13). https://arxiv.org/abs/2610.05407 records v1 only, 2026-10-04 (first/latest). https://arxiv.org/html/2610.05407v1 §§4.2–4.4,5.1,C.3,E.3 supports method, real-robot protocol and limits. No official implementation/checkpoint files or code license verified in reviewed primary paper; all three availability/license statuses remain unknown. No standalone parameter count is claimed.
 
 ### ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation
 
@@ -804,6 +829,106 @@ LIBERO Object三課題・60保持試行・三学習seedで全課題成功85.00%�
 
 - Checked: 2026-10-01 · Review: verified
 - arXiv v1 only. Primary HTML https://arxiv.org/html/2609.21246v1 checked for author-owned implementation/license or weight links; none verified. CC Zero shown on arXiv is the paper license, not evidence of released implementation. This is a reliability framework rather than a new generalist action backbone. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### RoboDrop: Curating VLA Post-Training Data via Local Gradient Compatibility
+
+- ID: `VLA-0206`
+- Published: 2026-09-09
+- Authors: Runze Xu; Yuanfan Xu; Cuijie Xu; Shuang Dai; Yining Li; Yu Wang; Jincheng Yu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.10021) · [PDF](https://arxiv.org/pdf/2609.10021v1)
+- Tags: data-curation, post-training, gradient-compatibility, flow-matching, real-robot, historical-gap-fill
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+誤操作・センサずれ・時刻不整合を含むVLA後学習データを、小規模な良質検証集合との局所勾配整合性で監査する。1エポックのウォームアップ中に標本を採点し、エピソード単位で不適切な教師データを除外して、新しい初期モデルを再学習する。
+
+**主な貢献**
+
+T5の指示埋め込みとDINO視覚特徴で検証標本を文脈一致検索し、更新過程に沿った正規化勾配のcosine整合性を集約。BICで1成分・2成分Gaussianを比較する任意の自動除外も提案する。実機4課題、各20試行でπ0.5-Baseの平均成功率は未選別35.0%、固定20%除外63.75%、自動除外67.5%。良質な参照集合を必要とし、勾配方向の整合性は閉ループ成功への直接的な因果寄与量ではなく代理指標である。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- Historical gap-fill, outside current discovery window. https://arxiv.org/abs/2609.10021 records v1 only, 2026-09-09 (first/latest), complete authors and preprint status. https://arxiv.org/html/2609.10021v1 §§4.1–4.5,5.4/Table5 verifies scoring, clean-reference dependence and distinct fixed-budget/automatic results. PDF URL opened successfully. No official implementation, checkpoint files, or implementation license verified in reviewed primary sources; unknown does not mean closed or unavailable. Evaluated backbones are not a new RoboDrop model.
+
+### Auditing Instruction-Trajectory Mismatches in Multimodal Robot Demonstrations
+
+- ID: `VLA-0208`
+- Published: 2026-08-08
+- Authors: Simon Holk; Ryosuke Takanami; Tatsuya Matsushima; Yusuke Iwasawa; Yutaka Matsuo; Yueh-Hua Wu; Kei Ota
+- Venue: IEEE Robotics and Automation Letters (accepted, 2026)
+- Links: [Paper](https://arxiv.org/abs/2608.07895) · [PDF](https://arxiv.org/pdf/2608.07895v1)
+- Tags: data-curation, instruction-grounding, label-noise, multimodal-fusion, proprioception, historical-gap-fill
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+動作自体は妥当でも言語指示が誤っているロボット実演を、視覚・固有感覚の証拠から検出・修正する監査法MMPF。近傍とタスク代表点からラベル分布を作り、モダリティごとの予測エントロピーで信頼度を調整して融合する。言語による課題識別が必要な条件で下流学習を改善する。
+
+**主な貢献**
+
+局所k近傍のラベル一致と大域prototype類似度を組み合わせ、信頼度重み付きproduct-of-expertsで誤指示を推定。監査・融合に分類器学習を要しないが、固有感覚エンコーダは各監査データセットで自己教師学習して凍結する。LIBEROの合成誤指示は監査に用いるCosmos-Embed1空間でも生成されるため、ほぼ完全な検出値の一般化には注意が必要。下流成功はLIBERO-Goalで58.7%→77.5%だが、Objectでは86.2%→83.2%と全条件では向上しない。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- Historical gap-fill. https://arxiv.org/abs/2608.07895 records v1 only, 2026-08-08 (first/latest), authors and RA-L acceptance; https://holken.github.io/research corroborates venue. https://arxiv.org/html/2608.07895v1 §§III,IV-A,IV-D/TableIII and verified PDF p4 establish fusion, transductive state-encoder training, embedding-based noise and non-universal downstream gains. No official implementation/checkpoint files or implementation license verified in reviewed paper/author sources, so statuses remain unknown. External pretrained encoders are not paper-specific released weights.
+
+### SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models
+
+- ID: `VLA-0207`
+- Published: 2026-07-07
+- Authors: Changti Wu; Bin Yu; Zhaolong Shen; Shijie Lian; Xiaopeng Lin; Cong Huang; Zhirui Zhang; Lei Zhang; Kai Chen
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2607.06442) · [PDF](https://arxiv.org/pdf/2607.06442v1) · [Code](https://github.com/ChangtiWu/SIEVE)
+- Tags: data-curation, imitation-learning, primitive-discovery, compositional-structure, medoid-selection, historical-gap-fill
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+VLA模倣学習の実演を再利用可能な動作プリミティブ列と遷移の構成として捉え、構造を保つ小規模部分集合を作る。Bridge-V2・Fractalの実機収集データとGR00T-X-Simを用い、選別後の方策をSimplerEnvおよびRoboCasa-GR1で評価する。
+
+**主な貢献**
+
+把持・解放状態の切替で軌道を分割し、V-JEPA2特徴、PCA、MiniBatch K-Meansでプリミティブを発見。再利用頻度で重み付けしたプリミティブ・遷移露出の対数目的により構成パターン別予算を割り当て、medoidに近い軌道を選ぶ。Bridge-V2の50%実演・50%学習ステップ設定で平均成功率56.3%（全データ51.8%）を報告。分割はend-effector状態の変化に依存し、この結果はシミュレータ評価であって実機展開での性能保証ではない。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- Historical gap-fill. https://arxiv.org/abs/2607.06442 records v1 only, 2026-07-07 (first/latest), complete authors. https://arxiv.org/html/2607.06442v1 method and Experiments/Table1 support construction and evaluation scope. Actual implementation inspected: https://github.com/ChangtiWu/SIEVE/blob/main/scripts/select.py (greedy allocation and medoid selection) and scripts/cluster.py. Root tree/README contains no verified implementation-license evidence; open\_source and license\_status remain unknown. No paper-specific policy/checkpoint files verified; weights\_status unknown. Qwen3-VL-4B is an evaluated backbone, not a claimed standalone SIEVE parameter count.
+
+### SCIZOR: A Self-Supervised Approach to Data Curation for Large-Scale Imitation Learning
+
+- ID: `VLA-0209`
+- Published: 2025-05-28 · Updated: 2025-09-09
+- Authors: Yu Zhang; Yuqi Xie; Huihan Liu; Rutav Shah; Michael Wan; Linxi Fan; Yuke Zhu
+- Venue: ICRA 2026
+- Links: [Paper](https://arxiv.org/abs/2505.22626) · [PDF](https://arxiv.org/pdf/2505.22626v2) · [Code](https://github.com/UT-Austin-RPL/SCIZOR) · [Project](https://ut-austin-rpl.github.io/SCIZOR/)
+- Tags: data-curation, self-supervised-learning, transition-filtering, deduplication, imitation-learning, historical-gap-fill
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+大規模模倣学習の実演を、軌道全体より細かい状態・行動ペア単位で選別する自己教師あり手法。進捗が乏しい低品質遷移と繰り返しの多い冗長遷移を別々に除き、OXEのOcto、RoboMimicのBC、Sirius-FleetのBC-Transformerを評価する。
+
+**主な貢献**
+
+時間差に基づく自己教師ありタスク進捗予測で停滞・逸脱遷移を除外し、状態・行動の結合表現を用いた類似度ベース重複除去を組み合わせる。全データ学習に対しRoboMimicで5.4pp、OXE-Magicで8.1pp、実機Sirius-Fleetで32.9ppの絶対成功率改善を報告。閾値はシミュレーションで探索し実機へ適用する。良質な遷移が多数を占めることと線形タスク進捗を仮定し、待機・反復が本来必要な行動や低品質データ優勢の場合には限界がある。
+
+**確認記録**
+
+- Checked: 2026-10-13 · Review: verified
+- Historical gap-fill. https://arxiv.org/abs/2505.22626 verifies first v1 2025-05-28 and latest v2 2025-09-09. https://ut-austin-rpl.github.io/SCIZOR/ verifies ICRA2026 (author project; oral stated). https://arxiv.org/html/2505.22626v2 §§3,4.2,6,A.1 supports method, absolute gains and limitations. Actual files inspected: https://github.com/UT-Austin-RPL/SCIZOR/blob/main/curation/suboptimal\_classifier/train.py and curation/semdedup/semdedup.py. No verified license for the complete SCIZOR implementation; inherited component headers do not establish project-wide licensing. No paper-specific checkpoint files verified; weights and license remain unknown.
 
 ### OpenVLA: An Open-Source Vision-Language-Action Model
 
