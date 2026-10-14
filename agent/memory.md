@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
+
+### SEAR: Self-Evolving Agentic Robotics
+
+- ID: `AGENT-0158`
+- Published: 2026-10-13
+- Authors: Xinyi Wang; Bangzheng Li; Hanyu Wang; Lin Zhang; Andrea Yaoyun Cui; Zhenggang Tang; Shyamal Buch; Dejia Xu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18792) · [PDF](https://arxiv.org/pdf/2610.18792) · [Project](https://sear.bot/)
+- Tags: self-improvement, benchmark, code-as-policy, agent-as-policy, auto-research, skill-memory
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+ロボットエージェントの経験からの改善を調べる枠組み・ベンチマーク。コード方策、実行時エージェント、VLAを微調整する自動研究の三形態を比較し、反復試行、計算時間、記憶継承などを分離する対照評価を設ける。
+
+**主な貢献**
+
+単なる再試行と持続的なスキル・記憶の効果を切り分けるマッチした対照群と、タスク・シミュレータ・実機をまたぐ一般化段階を提示。330シミュレーション課題と5実機課題で、転移は共有手順に限定され、個別解や誤った記憶は一般化しにくいと報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: needs-review
+- arXiv v1・方法/結果: https://arxiv.org/abs/2610.18792 ; https://arxiv.org/html/2610.18792v1 。公式project: https://sear.bot/ 。論文はコード公開を記すが公式repo https://github.com/Self-Evolving-Agentic-Robotics/SEAR はREADME・assets・MIT LICENSEのみで「code is on its way」と明記。実装未公開なのでcode\_url空欄、MIT表示を未公開実装のライセンス証拠にしない。後日repoに実装/重みが入ったかと適用ライセンスを再確認。
 
 ### What Should Embodied Agents Remember? Benchmarking and Evaluating Memory Modality for Embodied Agents
 

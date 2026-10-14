@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-34 records · Published date 降順（同日 ID 降順）
+36 records · Published date 降順（同日 ID 降順）
+
+### Grid or Nodes? Probing Object Memory in World Models Under Partial Observability
+
+- ID: `WAM-0121`
+- Published: 2026-10-13
+- Authors: Justin McMillen; Yasin Yilmaz
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18637) · [PDF](https://arxiv.org/pdf/2610.18637)
+- Tags: object-memory, partial-observability, grid-memory, node-memory, probing, synthetic-environment, supporting-foundation, not-robot-control
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+視野外の物体を保持する世界モデルの記憶を、FloWMの速度別特徴グリッドと物体ごとに位置・速度を保持するノードで比較する。グリッドからの読み出し器を変えるだけで検出率が変わることと、想定外の移動速度での追跡性能を検証する。
+
+**主な貢献**
+
+合成ブロック世界で、FloWMの視野外検出率は単一セルprobeで66.1%、畳み込みprobeで88.6%。oracle知覚付きKalmanノード追跡器は約14KBで90.8%と報告され、FloWMの状態約5.6MBと比較する。ただしノード側は真のマスク・位置・壁などを受ける非配備可能なoracle系であり、同等の視覚入力条件による実機優劣は示していない。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- https://arxiv.org/abs/2610.18637 v1 only, submitted 2026-10-13 UTC; https://arxiv.org/html/2610.18637v1 §§2-4/Table 1 directly supports setup, probe dependence, memory size, and oracle-input limitation. ArXiv HTML supplies PDF href; PDF web parser errored. No paper-specific code, weights or implementation license verified in paper/abstract and exact-title searches; statuses unknown. FloWM release mentioned is a different prior model, not this paper’s implementation.
+
+### WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions
+
+- ID: `WAM-0118`
+- Published: 2026-10-13
+- Authors: Haoyi Duan; Liliang Chen; Nan Wang; Yang Zhang; Yuhang Lu; Xiaotong Chen; Wei-Cheng Tseng; Shenyuan Gao; Zhaoshuo Li; Jingyi Jin; Pooya Jannaty; Dhruv Shah; Yuke Zhu; Ming-Yu Liu; Maoqing Yao; Guanghui Ren
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18826) · [PDF](https://arxiv.org/pdf/2610.18826)
+- Tags: benchmark, action-conditioned-world-model, real-world-execution, physical-consistency, multi-view, manipulation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+同じ初期観測と低レベル行動列を与えた世界モデルの予測動画を、対応する実世界の実行映像と照合するベンチマーク。物理状態の正しさ、相互作用の位置整合、重要領域の画質、複数視点間の行動整合を別々に測り、成功と失敗を含む長い操作エピソードで評価する。
+
+**主な貢献**
+
+果物把持・タオル掛け・注水・引き出し操作という異なる相互作用を含む対映像データと4軸評価を設計し、著者らが7種類の行動条件付き世界モデルの異なる失敗様式を比較。成功らしい動画でも現実と異なる物理結果を生成し得る点を明示する評価枠組みであり、新しい制御方策の成功率を示す研究ではない。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- https://arxiv.org/abs/2610.18826 v1 only, submitted 2026-10-13 UTC; https://arxiv.org/pdf/2610.18826 p1 abstract and pp26,33-34 verifies benchmark tasks and metrics. Paper promises future data/evaluation-code release and names https://github.com/AgibotTech/WorldOracle, but that URL returned 404 on 2026-10-15 JST; do not store as code\_url. No released dataset/checkpoint or implementation license verified. Recheck named repository/project in a later pass. PDF accessed through web reader, not saved locally.
 
 ### What Visual Representations Do World Action Models Need?
 

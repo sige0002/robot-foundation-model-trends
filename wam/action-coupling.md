@@ -3,7 +3,107 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-33 records · Published date 降順（同日 ID 降順）
+37 records · Published date 降順（同日 ID 降順）
+
+### UniW(A)M: A Unified Mixture-of-Experts Framework for World and World-Action Models
+
+- ID: `WAM-0120`
+- Published: 2026-10-13
+- Authors: Jingbo Xu; Jianjie Fang; Zhuohang Li; Zihao Song; Zhaolu Wang; Xvyuan Liu; Xin Zhang; Haisheng Su; Yinzhou Tang; Chen Gao; Wei Wu; Yong Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18697) · [PDF](https://arxiv.org/pdf/2610.18697)
+- Tags: mixture-of-experts, world-action-model, action-conditioned-world-model, adaptive-routing, diffusion-transformer, real-robot
+- Model size: ~16.2B parameters for MoE (external encoders/VAE excluded)
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+行動条件付き世界モデルと4種類の世界行動モデルを、動画・行動の可視性マスクで区別しながら、共有Transformerと能力別expertで共同学習する。配備時には凍結した基盤モデルの4つの行動生成インターフェースから、課題に応じて各実行チャンクで選ぶ。
+
+**主な貢献**
+
+共有ダイナミクス、能力整合トークンルーティング（CATR）、チャンク単位の選択器PAIRを組み合わせる。著者らの3実機課題では最良のインターフェースで平均成功率88.3%（比較対象の最良76.7%）を報告し、世界予測との共同学習が各行動インターフェースに寄与するアブレーションを示す。インターフェース間の比較はすべて同一計算量条件とは限らない。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- https://arxiv.org/abs/2610.18697 v1 only, submitted 2026-10-13 UTC; “under review at ICLR 2027” is not acceptance. https://arxiv.org/html/2610.18697v1 §§3-5 and App. G.4 verify five interfaces, PAIR, reported real-robot results and approximate 16.2B MoE parameter count excluding external encoders/VAE; not a parameter-matched dense baseline. ArXiv HTML supplies PDF href; PDF web parser errored. No official paper-specific implementation, weights or implementation license verified in arXiv HTML/abstract and exact-title searches; statuses unknown, not unavailable. Recheck release later.
+
+### GreenWAM: A World Foundation Model for Robotics
+
+- ID: `WAM-0119`
+- Published: 2026-10-13
+- Authors: Gennady Sidorov; Valerii Kornilov; Denis Grankin; Polina Fedotova; Aleksey Postnikov
+- Venue: Technical report / arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18774) · [PDF](https://arxiv.org/pdf/2610.18774) · [Code](https://github.com/greenvla/GreenWAM) · [Project](https://greenvla.github.io/GreenWAM/)
+- Tags: world-foundation-model, cross-embodiment, shared-action-space, video-action-model, humanoid, real-robot
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / available / unknown
+
+**概要（日本語）**
+
+20種類のロボット群の関節動作を共通の解剖学的行動空間に写し、視覚予測・行動条件付き世界予測・世界行動生成を共同学習する基盤モデル。Cosmos 3 Edgeを適応し、世界モデルとしての予測と、行動専門家を分離した方策への転用を検証する。
+
+**主な貢献**
+
+ロボットごとに別の行動投影パラメータを持たせない共通表現と、動画生成器から分岐する行動expertを提示。著者らはWorldArena 1.0、RoboTwin 2.0、LIBERO、CALVIN、および実機ヒューマノイドで評価。ただし課題幾何の変化に敏感で、実機検証は1種のヒューマノイドの梱包課題に限られる。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- https://arxiv.org/abs/2610.18774 v1 only, submitted 2026-10-13 UTC; https://arxiv.org/pdf/2610.18774 §§4-8 supports recipe, evaluations and limitations. Official project links https://github.com/greenvla/GreenWAM with public evaluator/source tree; repo README says training recipes/data and robotics-stage base checkpoint are not released. https://huggingface.co/SberRoboticsCenter/GreenWAM/tree/main/robotwin directly lists two .safetensors files; other task folders listed. Code/weights declared OpenMDW-1.1 in repo/HF card. OpenMDW-1.1 was submitted for OSI approval in 2026-08 (https://lists.opensource.org/pipermail/license-review\_lists.opensource.org/2026-August/006125.html), but OSI-approved implementation status not verified; under schema open\_source stays unknown, not true. PDF URL opened. No independent benchmark reproduction.
+
+### ForceWAM: Decoupling Future and Response Learning from Demo and Play Data for Contact-Rich Manipulation
+
+- ID: `WAM-0117`
+- Published: 2026-10-13
+- Authors: Zijun Xu; Wendi Chen; Xinkai Wang; Jiachen Zou; Hongjin Chen; Hairuo Liu; Bokai Lin; Shihao Ma; Ke Ma; Zhiwei Zhang; Zhuohao Yan; Ke Wu; Haoming Song; Xueqi Li; Chuan Wen; Jieru Zhao; Wenchao Ding; Cewu Lu; Lixin Yang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18852) · [PDF](https://arxiv.org/pdf/2610.18852) · [Project](https://force-wam.github.io/)
+- Tags: world-action-model, force-feedback, inverse-dynamics, play-data, contact-rich-manipulation, real-robot
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+成功実演から手首画像と6軸の力・トルクの将来系列を予測する世界モデルと、実演・目的なしのplayデータから行動を学ぶ逆動力学モデルを分ける。実行時には予測した視覚・力の将来を目標に、最新の力覚を使って行動を逐次補正する。
+
+**主な貢献**
+
+課題の望ましい接触結果と局所的な行動―力応答を別のデータ源から学習する構成を提案。著者らの実機4条件（各20試行）で成功率85–95%を報告し、playデータ追加で課題のみのモデルより15–45ポイント上昇。ただしこの結果は特定4条件での比較。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: needs-review
+- https://arxiv.org/abs/2610.18852 v1 only, submitted 2026-10-13 UTC; https://arxiv.org/html/2610.18852v1 §§3-4 and Table 1 verify model factorization, play ablation, four real-robot conditions and 20 trials per condition. Official https://force-wam.github.io/ says “Code coming soon” and contains no code-release link, despite arXiv abstract saying code available; no implementation/checkpoint file or implementation license verified. Recheck project for release. The PDF href is supplied by arXiv; web PDF parser errored, HTML full text was read instead. Paper CC BY is not an implementation license.
+
+### LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts
+
+- ID: `WAM-0116`
+- Published: 2026-10-13
+- Authors: Wenxuan Guo; Yingping Liang; Zhaoguo Wang; Ziyuan Li; Angyuan Ma; Zhenyu Wu; Chengkun Wang; Bingyao Yu; Ze Chen; Borui Zhang; Xiuwei Xu; Meng Zhang; Erjin Zhou; Jiwen Lu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18873) · [PDF](https://arxiv.org/pdf/2610.18873) · [Code](https://github.com/loop-wam/LoopWAM) · [Project](https://loop-wam.github.io/)
+- Tags: world-action-model, closed-loop-learning, deployment-rollouts, mixed-quality-data, video-action-generation, real-robot
+- Model size: Wan2.2-TI2V-5B video backbone; total model size unverified
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+実演と配備後の成功・不十分・失敗ロールアウトを合わせ、動画と行動を並列に生成する世界行動モデル。ロールアウトの質に応じて行動模倣を弱めつつ、結果動画による世界モデルの学習は全品質で維持し、収集・再学習・再配備を繰り返す。
+
+**主な貢献**
+
+動画・行動の双方向注意、データ源別のノイズ付与、品質条件付けと品質加重の行動損失を統合。著者らのRoboChallenge Table30-V2実機評価では3回の配備・再学習で成功率23.67%から43.33%へ上昇。RoboTwin 2.0とRoboCasa365の報告値はそれぞれ94.5%と49.5%で、後者2件はシミュレーション評価。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- https://arxiv.org/abs/2610.18873 v1 only, submitted 2026-10-13 UTC; https://arxiv.org/html/2610.18873v1 §§3-4 verifies method, setup and author-reported results. Official https://loop-wam.github.io/ links public https://github.com/loop-wam/LoopWAM with training/evaluation source files. Repo root has no observed LICENSE; implementation OSI license unverified (paper CC license is separate). Repo README claims checkpoints; https://huggingface.co/datasets/loop-wam/loopwam/tree/main lists checkpoint-named folders but nested checkpoint files could not be opened, so weights\_status remains unknown; recheck exact .pt files. arXiv PDF link was opened. No independent reproduction of benchmark metrics.
 
 ### LeapBot-JAC: Joint Action Chains for World Action Models
 
@@ -136,11 +236,11 @@ Cosmos Policyの動画拡散trunkを剪定・蒸留し、単画像潜在、atten
 - Published: 2026-10-08
 - Authors: Ruixiang Wang; Yongyi Su; Wenlve Zhou; Bo Yue; Hengyan Liu; Dekun Lu; Yuxin Tian; Yihan Fang; Zerui Wu; Xing Hu; Jietao Chen; Yong Guo; Ziyan He; Junbin Yuan; Guiliang Liu; Xiaofen Xing; Kui Jia
 - Venue: arXiv
-- Links: [Paper](https://arxiv.org/abs/2610.12099) · [Code](https://github.com/DexForce/UNITAS)
+- Links: [Paper](https://arxiv.org/abs/2610.12099) · [Code](https://github.com/DexForce/UNITAS) · [Project](https://unitas-wam.github.io/)
 - Tags: 3d-native, metric-world-frame, scene-flow, action-flow, cross-embodiment
 - Model size: 1.7B
 - Open-source: true
-- Code / weights / license: available / unknown / open-source
+- Code / weights / license: available / available / open-source
 
 **概要（日本語）**
 
@@ -152,8 +252,8 @@ world-aligned3D位置埋め込みとphysical-time trajectory tokenで行動/scen
 
 **確認記録**
 
-- Checked: 2026-10-13 · Review: needs-review
-- v1初稿・著者・題名、HTML§3/4.4/5/6を2026-10-09に選読: https://arxiv.org/html/2610.12099v1 。scene-flow定量評価はsimulator groundtruthを用い、video baselineの3D化は初期GT depth校正を用いる。長期相互作用/広い実機deploymentは今後の課題。2026-10-13の公式release commitでinference/evaluation実装、model、scene-flow処理を確認: https://github.com/DexForce/UNITAS/commit/8c480eed6bfa06461313360045512ae7c62a06a8 。src/unitas/inference/policy.pyの実処理とroot Apache-2.0全文を別確認: https://github.com/DexForce/UNITAS/blob/8c480eed6bfa06461313360045512ae7c62a06a8/LICENSE 。2026-10-09のREADME/assetsのみの状態からcode/実装licenseを更新。training code/datasetはREADMEのrelease欄で未公開。公式READMEは https://huggingface.co/RobbinWang123/Unitas のLIBERO/RoboTwin/VLABench scratch・finetuned各checkpointとscene\_flow checkpointを宣言するが、本確認でHF model/tree/API/file-page/cardを取得できず実weightファイルと配布条件を独立確認できないためweights\_status=unknown。追補は各checkpointの公開metadata/重みlicenseと再現scope。READMEは新しい公式projectへリンクするが本確認で本文内容を読めないためproject\_urlは空欄維持。PDF/weight未download、GPU再現なし。
+- Checked: 2026-10-15 · Review: needs-review
+- arXiv v1初稿・著者・題名を維持: https://arxiv.org/abs/2610.12099 (2026-10-08、2026-10-15時点でv2なし)。HTML§3/4.4/5/6は2026-10-09に選読: https://arxiv.org/html/2610.12099v1 。scene-flow定量評価はsimulator groundtruthを用い、video baselineの3D化は初期GT depth校正を用いる。長期相互作用/広い実機deploymentは今後の課題。2026-10-13公式release commit https://github.com/DexForce/UNITAS/commit/8c480eed6bfa06461313360045512ae7c62a06a8 のinference/evaluation実装、model、scene-flow処理、およびroot LICENSE Apache-2.0を確認済み。2026-10-15追補: 公式GitHub README https://github.com/DexForce/UNITAS のcheckpointリンク先HF https://huggingface.co/RobbinWang123/Unitas/tree/main に7個の実ファイル(.pt; RoboTwin/LIBERO/VLABench各scratch/finetunedとscene\_flow、各約6.96GB)を独立確認しweights\_status=availableへ更新。個別ファイル https://huggingface.co/RobbinWang123/Unitas/blob/main/unitas\_robotwin\_scratch.pt と https://huggingface.co/RobbinWang123/Unitas/blob/main/unitas\_scene\_flow.pt にXet pointer size/SHA256とdownload linkがある。model repoのMIT表示はcheckpoint配布情報であり、GitHub実装のApache-2.0とは別。公式project https://unitas-wam.github.io/ の論文identity/公式codeリンクを確認したためproject\_url追加。同projectのCheckpoint Coming soonはHF実ファイルと不整合で更新遅れと思われるが、動作/論文性能再現は未検証。training code/datasetは未公開、Florence-2-largeとsimulator資産は別途必要。needs-review: training code/datasetの正式公開、checkpoint条件の詳細と再現範囲、projectの表記整合を次回確認。PDF/weights/data未download、GPU再現なし。
 
 ### Humanoid World Action Model With Joint State--Action Generation
 

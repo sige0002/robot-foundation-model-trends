@@ -3,18 +3,25 @@
 
 [← データベース](../README.md)
 
-109 records · 正本: [papers.csv](../papers.csv)
+116 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [perception-representation](perception-representation.md) | 22 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
-| [action-system1](action-system1.md) | 31 |
-| [memory-temporal](memory-temporal.md) | 9 |
-| [adaptation](adaptation.md) | 41 |
+| [action-system1](action-system1.md) | 32 |
+| [memory-temporal](memory-temporal.md) | 10 |
+| [adaptation](adaptation.md) | 46 |
 
 ## 論文
 
+- 2026-10-13 · [Interaction Latents as Actions for Contact-Rich Manipulation](action-system1.md) · `VLA-0216`
+- 2026-10-13 · [MemoryVLN: From Ego-Aware Memory Representation to Cross-Context Memory Reuse in Vision-Language Navigation](memory-temporal.md) · `VLA-0214`
+- 2026-10-13 · [Steertuning Policies from a Few Human Videos](adaptation.md) · `VLA-0213`
+- 2026-10-13 · [ACCRUE: Continual Off-Policy Reinforcement Learning for Robot Foundation Models](adaptation.md) · `VLA-0212`
+- 2026-10-13 · [LIBERO-RIG: A Hardware-Setup Robustness Benchmark for Vision-Language-Action Models](adaptation.md) · `VLA-0211`
+- 2026-10-13 · [What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study](adaptation.md) · `VLA-0210`
+- 2026-10-11 · [Recovering Low-Bit Failures in Vision-Language-Action Policies via Quantization-Conditioned Reinforcement Learning](adaptation.md) · `VLA-0215`
 - 2026-10-09 · [LAPT-Scale: Scaling Embodied Policies with Latent Action Pre-Training on Human Videos](perception-representation.md) · `VLA-0204`
 - 2026-10-09 · [Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models](action-system1.md) · `VLA-0203`
 - 2026-10-09 · [Dual-Stream Memory for Vision-Language-Action Policies](memory-temporal.md) · `VLA-0202`

@@ -3,7 +3,132 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-41 records · Published date 降順（同日 ID 降順）
+46 records · Published date 降順（同日 ID 降順）
+
+### Steertuning Policies from a Few Human Videos
+
+- ID: `VLA-0213`
+- Published: 2026-10-13
+- Authors: Billy Yan; Isaac Tu; Kelly Lee; Blake Chang; Kenny Ma; Kanad Patel; Dhawal Kabra; Neer Patel; Kevin Wu; Lerrel Pinto; Irmak Guzey
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18711) · [PDF](https://arxiv.org/pdf/2610.18711) · [Project](https://steertuning.github.io/)
+- Tags: Steertuning, human-video, few-shot-adaptation, diffusion-policy, action-steering, sim-to-real
+- Model size: 400M parameters (diffusion policy)
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+一人称人間動画で事前学習した4億パラメータの言語条件付き拡散方策を、新規タスクの人間実演5本で短時間LoRA微調整する。配備時には現在の観測に近い実演軌跡を使い、拡散の逆サンプリング中に行動を誘導してロボット動作へ転用する。
+
+**主な貢献**
+
+少数実演での微調整と推論時の軌跡ステアリングを組み合わせ、12タスク・12環境の実機評価で平均成功率71%を報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1公開2026-10-13 UTC、改訂なし。arXiv要旨・HTMLの人間動画処理、方策、微調整・評価節と公式project公開欄を確認。71%は論文の12タスク/各10試行の評価で、一般的成功率ではない。論文はコードと重みを将来公開と記し、公式projectのCode/Model表示に有効な配布リンクはない。実装ライセンス未確認。https://arxiv.org/abs/2610.18711 ; https://arxiv.org/html/2610.18711v1 ; https://steertuning.github.io/
+
+### ACCRUE: Continual Off-Policy Reinforcement Learning for Robot Foundation Models
+
+- ID: `VLA-0212`
+- Published: 2026-10-13
+- Authors: Changyeon Kim; Kimin Lee; Yashraj Narang; Yijie Guo
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18596) · [PDF](https://arxiv.org/pdf/2610.18596) · [Project](https://accrue-rl.github.io/)
+- Tags: ACCRUE, continual-learning, off-policy-RL, actor-critic, skill-retention, assembly
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+ロボット基盤モデルの逐次的な新規タスク学習に向け、前段の軽量actor・criticを継承するオフポリシー強化学習。criticは現タスク遷移だけで更新し、保持した少数の過去エピソードに対するactor出力の蒸留で旧タスクの振る舞いを保つ。
+
+**主な貢献**
+
+基盤方策更新後も固定視覚特徴と参照行動条件付けで軽量学習器を引き継ぐ構成を提案し、組立タスクの実機実験では単一タスクRL比でロボット相互作用時間31.0–68.5%減と報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1公開2026-10-13 UTC、改訂なし。arXiv要旨・HTMLの方法・シミュレーション/実機評価節と公式projectのrelease欄を確認。31.0–68.5%はAutoMate実機新規タスクの単一タスクRLとの比較で、他設定へ一般化しない。公式projectはCode coming soon、重み・実装ライセンスは未確認。https://arxiv.org/abs/2610.18596 ; https://arxiv.org/html/2610.18596v1 ; https://accrue-rl.github.io/
+
+### LIBERO-RIG: A Hardware-Setup Robustness Benchmark for Vision-Language-Action Models
+
+- ID: `VLA-0211`
+- Published: 2026-10-13
+- Authors: Andrea Yaoyun Cui; Hanyu Wang; Xinyi Wang; Bangzheng Li; Lin Zhang; Zhenggang Tang; Shyamal Buch; Dejia Xu; Matthew Tancik
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18843) · [PDF](https://arxiv.org/pdf/2610.18843)
+- Tags: LIBERO-RIG, hardware-robustness, evaluation, camera-calibration, control-rate, benchmark
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+LIBEROのタスク条件を固定し、カメラ配置・光学系、手眼較正、制御ゲイン／周期、状態ノイズ、ベース位置、把持パッドなどロボット機材側だけを変える頑健性ベンチマーク。11軸×5段階から成る210条件で9種のVLA系モデルを評価する。
+
+**主な貢献**
+
+機材変更に対する失敗をタスク変更から切り分けて測定し、4スイートで比較可能な8モデルのプール成功率が通常条件0.932から中程度0.767、最大強度0.509に下がると報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: needs-review
+- arXiv v1公開2026-10-13 UTC、改訂なし。arXiv要旨・HTMLの軸定義、評価設計、主要結果、制約節を確認。実験は単一ロボット形態のシミュレーションで各エピソード1軸のみ変更。論文はベンチマークとmanifestを公開すると記すが、論文・検索で著者公式の配布URLは特定できず、code\_url/実装ライセンス/重みは未確認。要再確認: 著者または公式projectが示す配布先を探し、manifest・実装ファイル・ライセンスを実際に開いて照合する。https://arxiv.org/abs/2610.18843 ; https://arxiv.org/html/2610.18843v1
+
+### What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study
+
+- ID: `VLA-0210`
+- Published: 2026-10-13
+- Authors: Mingxuan Yan; Litian Gong; Dihong Huang; Zhixu Li; Tianyu Zhang; Wenqian Zhang; Hefeifei Jiang; Peihao Li; Jian Zhang; Mengfei Zhao; Yikai Tang; Hai Zhai; Zehao Wang; Ruijian Liang; Yanjia Huang; Lin Shao; Changliu Liu; Kaiyu Hang; Zhiwen Fan; Masayoshi Tomizuka; Jianfei Yang; Jiachen Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18869) · [PDF](https://arxiv.org/pdf/2610.18869) · [Project](https://axis-bench.github.io/)
+- Tags: AXIS-Bench, quality-aware-pretraining, demonstration-quality, conditioning, sim-to-real, benchmark
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+品質にばらつく人間のシミュレーション実演を使い、VLA事前学習での品質に応じた重み付け・選別・条件付けを、報酬定義とエピソード／行動チャンク単位のラベルを変えて比較する。3種のVLAを同一データ・学習予算で24タスクに微調整して評価し、再生可能な軌跡を備えたAXIS-Benchを提示する。
+
+**主な貢献**
+
+品質ラベルの粒度と利用法の相互作用を統制比較し、試した3種では接近過程を考慮したエピソード単位の条件付けが通常の行動クローニングより平均成功率を高めたと報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1公開2026-10-13 UTC、改訂なし。arXiv要旨・HTMLのベンチマーク設計、品質ラベル定義、実験節、および公式projectの公開欄を確認。5,000実演・24タスク・3 VLAの比較で、実世界9.6%→31.7%は別の参照実験であり一般化保証ではない。公式projectはCode/Dataset Coming Soonで、実装・重み・実装ライセンスは未確認。https://arxiv.org/abs/2610.18869 ; https://arxiv.org/html/2610.18869v1 ; https://axis-bench.github.io/
+
+### Recovering Low-Bit Failures in Vision-Language-Action Policies via Quantization-Conditioned Reinforcement Learning
+
+- ID: `VLA-0215`
+- Published: 2026-10-11
+- Authors: Seongmin Park; Jaewon Lee; Yujun Heo; Yoonsik Kim; Seheon Choi; Hyoung-rock Kim; Jungwook Choi
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.15675) · [PDF](https://arxiv.org/pdf/2610.15675)
+- Tags: QCRL, quantization, offline-RL, deployment, progress-reward, INT4, NVFP4
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+低ビット量子化したVLAで、模倣ベースの量子化対応学習後にも残る長期タスクや分布シフト下の失敗を検証する。QCRLは全精度方策と量子化方策のロールアウトを併用し、部分達成に応じた終端罰則から優位度を推定して、推論時に有利な参照行動を量子化方策から選べるよう学習する。
+
+**主な貢献**
+
+5種のVLA・実機4,050試行で量子化の残存失敗を調べ、QCRLでπ0.5の3種の視覚シフト下平均タスクスコアをINT4 W4A16では全精度比99.3%、NVFP4 W4A4では100.7%と報告。前者のモデルメモリ42.9%減と、後者のJetson Thor上1.73倍高速化は異なる量子化・計測条件。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: needs-review
+- arXiv v1公開2026-10-11 UTC、改訂なし。arXiv要旨・HTMLの比較設計、実機タスク/フル成功と部分進捗の定義、QCRL方法、実機/LIBERO/TensorRT評価表を選択的に確認。99.3%/100.7%は視覚シフト3条件の平均タスクスコアを各FP基準で正規化した値であり成功率ではない。42.9%はINT4 W4A16でモデル常駐メモリ6.46→3.69 GiB。1.73倍はNVFP4/FP8でJetson ThorのFP16対96.61→55.85msでありW4A16の速度改善ではない。論文のcode/project/重みの著者公式配布先と実装ライセンスは見つからずunknown。要再確認: 著者公式配布先を確認し、実ファイル・重み・ライセンスをそれぞれ開く。https://arxiv.org/abs/2610.15675 ; https://arxiv.org/html/2610.15675v1
 
 ### RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation
 

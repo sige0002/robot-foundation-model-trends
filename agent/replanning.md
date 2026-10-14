@@ -3,7 +3,57 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-6 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
+
+### I2O2I-Nav: A Benchmark with a Modular Agent for Long-Horizon Indoor-to-Outdoor-to-Indoor Navigation
+
+- ID: `AGENT-0159`
+- Published: 2026-10-13
+- Authors: Zhengjie Shu; Wanyu Li; Di Xiao; Lingxin Jiang; Lai Jiang; Kaidi Hu; Xincheng Tang; Wenkang Hu; Haoran Wang; Jinchuan Zhang; Chang Chen; Wei Li; Jia Pan; Ruigang Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18307) · [PDF](https://arxiv.org/pdf/2610.18307) · [Project](https://i2o2i-nav.github.io/)
+- Tags: navigation, benchmark, indoor-outdoor, policy-orchestration, long-horizon
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+屋内から屋外を経て別の屋内へ移る4段階の連続ナビゲーションを測るベンチマーク。MODULAR-Agentは既存の固定ナビゲーション方策を切り替え、段階終了の検証、引き継ぎ、限定的な再計画を行う。
+
+**主な貢献**
+
+20の複合シーンと1,374エピソードで、段階ごとの実到達位置を保った連続評価と失敗箇所を測る条件付き指標を導入。固定方策の単純連結と比べ全行程成功率は1.15%から4.02%へ改善するが、完遂率は低い。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: needs-review
+- arXiv v1・方法/結果: https://arxiv.org/abs/2610.18307 ; https://arxiv.org/html/2610.18307v1 。公式project: https://i2o2i-nav.github.io/ 。公式repo https://github.com/i2o2i-nav/i2o2i\_nav のREADMEは現状paper/project docsのみで、benchmark評価コード・MODULAR-Agentコード・場面資産は後日公開予定と明記。故にcode\_url空欄、重み/ライセンスunknown。シミュレーション評価を実環境の完遂実証と混同しない。後日実装とデータ公開を再確認。
+
+### AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving
+
+- ID: `AGENT-0157`
+- Published: 2026-10-13
+- Authors: Jiageng Liu; Seth Z. Zhao; Zewei Zhou; Alejandro Huerta; Aidan Bayer-Calvert; Yuxin Bao; Haotian Lin; Robert Spataru; Zijun Cui; Yining Hong; Bolei Zhou; Jiaqi Ma
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18866) · [PDF](https://arxiv.org/pdf/2610.18866) · [Code](https://github.com/jiagengliu02/AutoAgent0) · [Project](https://jiagengliu02.github.io/AutoAgent0/)
+- Tags: autonomous-driving, runtime-monitoring, trajectory-verification, recovery, VLM
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+既存の運転軌道生成器を固定したまま、その周囲にシーン再評価、規則に基づく軌道検証、失敗時の回復計画を置く実行時ハーネス。候補軌道を検証し、採用できなければVLM支援で代替操作を探索する。
+
+**主な貢献**
+
+独立した知覚スキルで検証用文脈を補い、名目軌道と回復軌道を共通の規則で検査する実行時オーケストレーション。Fail2DriveとNavSafe-infinityのシミュレーション評価で複数の既存運転器の閉ループ成績改善を報告。形式的な安全保証や実車実証ではない。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1・方法/結果: https://arxiv.org/abs/2610.18866 ; https://arxiv.org/html/2610.18866v1 。公式project: https://jiagengliu02.github.io/AutoAgent0/ 。公式repoでagenticdriving等の実装を確認: https://github.com/jiagengliu02/AutoAgent0 。repoルートにLICENSEを確認できず実装ライセンスはunspecified、open\_source=unknown。checkpointsディレクトリはあるが配布重みの実体/利用条件を確認できずweights=unknown。実験はシミュレーションのみ。後日ライセンスとチェックポイント実体を確認。
 
 ### VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning
 

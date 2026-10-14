@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+10 records · Published date 降順（同日 ID 降順）
+
+### MemoryVLN: From Ego-Aware Memory Representation to Cross-Context Memory Reuse in Vision-Language Navigation
+
+- ID: `VLA-0214`
+- Published: 2026-10-13
+- Authors: Xueyao Wei; Yifei Wang; Delun Li; Shaoan Wang; Junzhi Yu; Wenjie Song; Xingyu Chen
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18478) · [PDF](https://arxiv.org/pdf/2610.18478) · [Code](https://github.com/ZGCA-HMI-Lab/MemVLN) · [Project](https://zgca-hmi-lab.github.io/MemVLN/)
+- Tags: MemoryVLN, vision-language-navigation, hierarchical-memory, cross-context-reuse, spatial-grounding, long-horizon
+- Model size: Qwen2.5-VL-7B + frozen VGGT-1B (reference configuration)
+- Open-source: false
+- Code / weights / license: available / unknown / non-open-source
+
+**概要（日本語）**
+
+長距離の視覚言語ナビゲーションで、観測履歴を新旧に応じて圧縮し、2D意味特徴・3D幾何特徴・6D自己姿勢を含む記憶を構築する。エピソード内と環境文脈ごとの記憶を階層的に維持し、現在状態に関係する記憶を検索して次の離散移動行動の予測に組み込む。
+
+**主な貢献**
+
+履歴圧縮から空間的記憶の構築・更新・再利用まで統合し、R2R-CE/RxR-CEのval-unseenでデータ量を揃えた比較先に対する成功率差を約2.0/6.5ポイントと報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: needs-review
+- arXiv v1公開2026-10-13 UTC、改訂なし。arXiv要旨・HTMLの記憶設計・R2R-CE/RxR-CE val-unseen評価、著者project、公式GitHub README/CODE.md/THIRD\_PARTY\_NOTICES.md/LICENSE\_VGGT.txt、論文からリンクされたHugging Face model indexを確認。GitHubは評価コードのみを公開し学習コードと訓練データ構築を意図的に非公開。自作部分はApache-2.0だが同梱VGGT派生ファイルに用途制限付きVGGT licenseが適用されるため全実装はOSI適合と言えない。HF indexはSafetensors/9Bを表示するがtree取得が失敗しMemoryVLN学習済みcheckpointの実ファイルを確認できないためweights unknown。要再確認: HFのfiles一覧とcheckpoint内容/モデルカードを開き、同梱VGGT派生範囲と配布条件を照合。https://arxiv.org/abs/2610.18478 ; https://arxiv.org/html/2610.18478v1 ; https://github.com/ZGCA-HMI-Lab/MemVLN ; https://github.com/ZGCA-HMI-Lab/MemVLN/blob/main/CODE.md ; https://github.com/ZGCA-HMI-Lab/MemVLN/blob/main/THIRD\_PARTY\_NOTICES.md ; https://github.com/ZGCA-HMI-Lab/MemVLN/blob/main/LICENSE\_VGGT.txt ; https://huggingface.co/xiaoxiaoxiaoyyy/MemVLN
 
 ### Dual-Stream Memory for Vision-Language-Action Policies
 

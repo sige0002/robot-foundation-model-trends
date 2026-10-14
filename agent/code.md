@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-15 records · Published date 降順（同日 ID 降順）
+16 records · Published date 降順（同日 ID 降順）
+
+### EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence
+
+- ID: `AGENT-0156`
+- Published: 2026-10-13
+- Authors: Wenyi Li; Yizhe Chi; Youjie Zheng; Chunyu Liu; Xiaoqiu Wang; Mingju Gao; Zheng Jiang; Deyao Hong; Calvin Xiao; Kaisen Yang; Qinhuai Na
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18867) · [PDF](https://arxiv.org/pdf/2610.18867) · [Code](https://github.com/Einsia/EmbodiedEvo) · [Project](https://lab.einsia.ai/embodiedevo/)
+- Tags: coding-agent, skill-library, lessons, physical-feedback, RoboDojo
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+コーディングエージェントが観測と物理的フィードバックを受けてPython制御コードを修正する。単一Playground場面で獲得した再利用可能なSkillsとLessonsを固定し、別場面の新しいエージェントへ引き継ぐ。
+
+**主な貢献**
+
+探索時のコード実行・修正で獲得した手続きと教訓を、テスト場面へ読み取り専用で転送する枠組み。RoboDojo-Simで平均スコア44.48、成功率37.82%と著者報告。ただし細かな接触制御には課題が残る。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1・本文: https://arxiv.org/abs/2610.18867 ; https://arxiv.org/html/2610.18867v1 。公式project: https://lab.einsia.ai/embodiedevo/ 。公式repoにorchestrator等の実装を確認: https://github.com/Einsia/EmbodiedEvo 。READMEはproject-wide license未選択と明記、同梱第三者レシピのApache-2.0を本実装へ転用不可。重みの公開は未確認。後日licenseと重みを再確認。
 
 ### Fly-by-Code: Embodied Coding Agents for Aerial Manipulation with Active Visual and Physical Feedback
 

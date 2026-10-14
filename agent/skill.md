@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
+
+### ChunkAct: Action Chunking for Agentic Robotics
+
+- ID: `AGENT-0155`
+- Published: 2026-10-13
+- Authors: Bingxin Xu; Wenrui Bao; Xinxin Liu; Jiawei Zhou; Yuzhang Shang; Emilio Ferrara
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18874) · [PDF](https://arxiv.org/pdf/2610.18874)
+- Tags: action-chunking, procedural-memory, LLM-planning, VLA-tools, robot-manipulation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+LLMエージェントが知覚・制御・VLAツールを一手ずつ呼ぶ負荷を減らす。オフラインで手続き記憶を実行可能な動作チャンクに編成し、オンラインでは一回の呼び出しで連鎖実行し、失敗時だけ構造化されたエラーをプランナーへ返す。
+
+**主な貢献**
+
+エージェントの記憶を複数プリミティブの実行手順へ事前コンパイルし、LLM呼び出しを個々の動作から意思決定単位へ移す。LIBERO-Proで既存エージェント系比較より成功率5.0ポイント増、LLM呼び出し2.9分の1と著者報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1・著者・要旨・本文の方法/実験・PDFリンク確認: https://arxiv.org/abs/2610.18874 ; https://arxiv.org/html/2610.18874v1 。本文に公式実装・重みの公開先を確認できず、公開状況はunknown。VLAは呼び出されるツールであり本研究の主貢献はエージェントのスキル実行効率。実機汎用性は未検証。後日著者の公開先を再確認。
 
 ### BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation
 

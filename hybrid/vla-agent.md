@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-19 records · Published date 降順（同日 ID 降順）
+20 records · Published date 降順（同日 ID 降順）
+
+### Let the Mind Conceive, Let the Hand Achieve: Following Multimodal Instructions for Long-Horizon Robotic Manipulation
+
+- ID: `HYBRID-0140`
+- Published: 2026-10-13
+- Authors: Youpeng Wen; Gang Wang; Tianyu Huang; Weiwei Zhang; Zhijian Huang; Wei Chen; Xieyuanli Chen; Yunhui Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18352) · [PDF](https://arxiv.org/pdf/2610.18352) · [Code](https://github.com/youpengwen/Orchestra) · [Project](https://youpengwen.github.io/Orchestra/)
+- Tags: long-horizon, multimodal-instructions, visual-grounding, working-memory, progress-evaluator
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unavailable / unspecified
+
+**概要（日本語）**
+
+Orchestraはマルチモーダル指示を順序付きサブタスクに分解し、対象物の位置と進捗を追跡するエージェント基盤。共有文脈を用いるVLA動作方策と別学習の進捗評価器を組み合わせ、サブタスクを切り替える。
+
+**主な貢献**
+
+計画、空間的グラウンディング、作業記憶、動作生成、進捗判定を分離して連携。RMBench-Composeで平均連続成功サブタスク数7.35と著者報告し、4実機課題でも基盤pi0.5使用時からの改善を報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1・方法/実験: https://arxiv.org/abs/2610.18352 ; https://arxiv.org/html/2610.18352v1 。公式project: https://youpengwen.github.io/Orchestra/ 。公式repoにembodied\_agent・policy/modified\_pi05等の実装を確認: https://github.com/youpengwen/Orchestra 。repoルートにLICENSEなし、実装利用許諾はunspecified。projectのHugging FaceはComing soonで本研究の重み未公開。後日ライセンスと重みを再確認。
 
 ### EndoRSI: Physical-Evidence-Driven Recursive Improvement of Endoscopic Robot Policies
 

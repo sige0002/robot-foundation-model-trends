@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-31 records · Published date 降順（同日 ID 降順）
+32 records · Published date 降順（同日 ID 降順）
+
+### Interaction Latents as Actions for Contact-Rich Manipulation
+
+- ID: `VLA-0216`
+- Published: 2026-10-13
+- Authors: Yuhang Zheng; Yujie Zang; Yuchen Liu; Yupeng Zheng; Zhennan Jiang; Zebin Xing; Shuai Tian; Songen Gu; Jingxiang Guo; Chen Gao; Zhongpu Xia; Shuicheng Yan
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18855) · [PDF](https://arxiv.org/pdf/2610.18855) · [Project](https://mrsecant.github.io/ILA/proj_page/)
+- Tags: interaction-latents, visuo-tactile, action-representation, flow-matching, offline-improvement, WAM-compatible
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+運動と触覚変形を共同再構成する潜在actionを学び、凍結decoderで実行動作へ戻すILA。π0.5、FastWAM、単独flow-matching方策の生成対象を同じinteraction表現へ変更する。
+
+**主な貢献**
+
+行動生成・専門家整合性の評価・オフライン補正を共通latent空間で行う。実機4課題で比較し、成功rolloutの重み付けと失敗予測への観測適合reference補正を検証。触覚を入力するだけの方式との差を調べる。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: needs-review
+- v1初稿2026-10-13・著者・正式題名: https://arxiv.org/abs/2610.18855 。既存canonical arXiv/DOI・正規化/近似題名を本文前に照合し一致なし。HTML https://arxiv.org/html/2610.18855v1 §3、§4.1/Table1、Appendix A.1/B.2を選読。各課題150専門家demo、各方式20rollout。切断SRだけは個々のcutが分母、他3課題はrollout単位なので4課題平均を単純なepisode成功率と扱わない。力指標はsensor-native触覚変形proxyでNへの校正なし。ILAのみS&amp;D視覚tokenも追加するため主要比較は構成全体の評価。128動作を30Hzで全実行後に再計画し、高頻度接触feedback補正とは区別。公式project https://mrsecant.github.io/ILA/proj\_page/ はCode Coming soonを明示、実装未公開、重み/実装LICENSE未確認。needs-review: 同公式projectから正式releaseの実source・checkpoint file・licenseを個別確認する。PDF linkはabs掲載URL、本文HTML利用、PDF/weights/data未download、実機再現なし。
 
 ### Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models
 

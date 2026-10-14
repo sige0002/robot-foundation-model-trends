@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-23 records · Published date 降順（同日 ID 降順）
+24 records · Published date 降順（同日 ID 降順）
+
+### SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation
+
+- ID: `WAM-0122`
+- Published: 2026-10-13
+- Authors: Yifei Yang; Zehua Fan; Zike Yan; Zhongyu Li; Yan Wang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18135) · [PDF](https://arxiv.org/pdf/2610.18135)
+- Tags: visual-navigation, latent-world-model, knowledge-distillation, coarse-to-fine-planning, efficient-inference
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+視覚ナビゲーションで候補行動列の将来状態を潜在空間で予測する。自己予測を次の入力に使う閉ループ学習、長い時間間隔を飛ばす生徒モデルへの蒸留、候補を粗選別して強い自己回帰モデルで再評価する二段階計画を組み合わせる。
+
+**主な貢献**
+
+Latent AutoRollで訓練と推論の履歴ずれを減らし、SkipDistillで教師の将来潜在状態を長いstrideで近似する。著者らのRECON・HuRoN・SCAND・TartanDrive評価では、NWM比で平均ATE 4.2%、RPE 2.7%減、計画時間62.4%減と報告。HuRoNは公開上の制約により低解像度subsetでの条件付き比較。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- https://arxiv.org/abs/2610.18135 v1 only, submitted 2026-10-13 UTC; https://arxiv.org/html/2610.18135v1 §§3-4/Table 1 verifies method, reported comparison, and low-resolution HuRoN protocol. ArXiv HTML supplies PDF href; PDF web parser errored. No official paper-specific code, checkpoints or implementation license verified in paper/abstract and exact-title searches; statuses unknown. Metrics are author-reported, not independently reproduced.
 
 ### CASTER: Formalizing Zero-Shot Manipulation from Synthetic Videos as Constrained Optimization
 

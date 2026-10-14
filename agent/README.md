@@ -3,19 +3,24 @@
 
 [← データベース](../README.md)
 
-54 records · 正本: [papers.csv](../papers.csv)
+59 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [planning](planning.md) | 13 |
-| [code](code.md) | 15 |
-| [skill](skill.md) | 5 |
+| [code](code.md) | 16 |
+| [skill](skill.md) | 6 |
 | [tool](tool.md) | 11 |
-| [memory](memory.md) | 4 |
-| [replanning](replanning.md) | 6 |
+| [memory](memory.md) | 5 |
+| [replanning](replanning.md) | 8 |
 
 ## 論文
 
+- 2026-10-13 · [I2O2I-Nav: A Benchmark with a Modular Agent for Long-Horizon Indoor-to-Outdoor-to-Indoor Navigation](replanning.md) · `AGENT-0159`
+- 2026-10-13 · [SEAR: Self-Evolving Agentic Robotics](memory.md) · `AGENT-0158`
+- 2026-10-13 · [AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving](replanning.md) · `AGENT-0157`
+- 2026-10-13 · [EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence](code.md) · `AGENT-0156`
+- 2026-10-13 · [ChunkAct: Action Chunking for Agentic Robotics](skill.md) · `AGENT-0155`
 - 2026-10-09 · [JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents](tool.md) · `AGENT-0152`
 - 2026-10-09 · [BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation](skill.md) · `AGENT-0151`
 - 2026-10-08 · [What Should Embodied Agents Remember? Benchmarking and Evaluating Memory Modality for Embodied Agents](memory.md) · `AGENT-0154`

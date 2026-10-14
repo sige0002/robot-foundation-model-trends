@@ -3,18 +3,25 @@
 
 [← データベース](../README.md)
 
-113 records · 正本: [papers.csv](../papers.csv)
+120 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 34 |
+| [world-representation](world-representation.md) | 36 |
 | [dynamics](dynamics.md) | 14 |
-| [action-coupling](action-coupling.md) | 33 |
-| [planning](planning.md) | 23 |
+| [action-coupling](action-coupling.md) | 37 |
+| [planning](planning.md) | 24 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-10-13 · [SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation](planning.md) · `WAM-0122`
+- 2026-10-13 · [Grid or Nodes? Probing Object Memory in World Models Under Partial Observability](world-representation.md) · `WAM-0121`
+- 2026-10-13 · [UniW(A)M: A Unified Mixture-of-Experts Framework for World and World-Action Models](action-coupling.md) · `WAM-0120`
+- 2026-10-13 · [GreenWAM: A World Foundation Model for Robotics](action-coupling.md) · `WAM-0119`
+- 2026-10-13 · [WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions](world-representation.md) · `WAM-0118`
+- 2026-10-13 · [ForceWAM: Decoupling Future and Response Learning from Demo and Play Data for Contact-Rich Manipulation](action-coupling.md) · `WAM-0117`
+- 2026-10-13 · [LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts](action-coupling.md) · `WAM-0116`
 - 2026-10-09 · [What Visual Representations Do World Action Models Need?](world-representation.md) · `WAM-0114`
 - 2026-10-09 · [LeapBot-JAC: Joint Action Chains for World Action Models](action-coupling.md) · `WAM-0113`
 - 2026-10-09 · [Forward Dynamics Models](action-coupling.md) · `WAM-0112`

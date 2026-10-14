@@ -3,17 +3,21 @@
 
 [← データベース](../README.md)
 
-38 records · 正本: [papers.csv](../papers.csv)
+42 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 19 |
-| [vla-wam](vla-wam.md) | 15 |
+| [vla-agent](vla-agent.md) | 20 |
+| [vla-wam](vla-wam.md) | 18 |
 | [wam-agent](wam-agent.md) | 3 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
 
 ## 論文
 
+- 2026-10-13 · [Let the Mind Conceive, Let the Hand Achieve: Following Multimodal Instructions for Long-Horizon Robotic Manipulation](vla-agent.md) · `HYBRID-0140`
+- 2026-10-13 · [WAVE-0: Bridging VLA Policies and WAMs with Lightweight Latent Future Prediction](vla-wam.md) · `HYBRID-0139`
+- 2026-10-13 · [ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures](vla-wam.md) · `HYBRID-0138`
+- 2026-10-13 · [DR-VLA: Learning Human-Like Quadruped Navigation from Egocentric Web Videos via Domain-Invariant Scene Representations](vla-wam.md) · `HYBRID-0137`
 - 2026-10-09 · [EndoRSI: Physical-Evidence-Driven Recursive Improvement of Endoscopic Robot Policies](vla-agent.md) · `HYBRID-0134`
 - 2026-10-08 · [REMM: Revisable Embodied Memory for Manipulation](vla-agent.md) · `HYBRID-0136`
 - 2026-10-08 · [Gamma: Grounded Multi-Agent Memory with Mechanical Audit for Memory-Intensive Manipulation](vla-agent.md) · `HYBRID-0135`

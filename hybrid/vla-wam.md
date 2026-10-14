@@ -3,7 +3,82 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-15 records · Published date 降順（同日 ID 降順）
+18 records · Published date 降順（同日 ID 降順）
+
+### WAVE-0: Bridging VLA Policies and WAMs with Lightweight Latent Future Prediction
+
+- ID: `HYBRID-0139`
+- Published: 2026-10-13
+- Authors: Haomin Wang; Anqiong Ji; Ke Wang; Zhongshan Liu; Ru Ying; Ran Zheng; Zhipeng Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18568) · [PDF](https://arxiv.org/pdf/2610.18568) · [Code](https://github.com/AutoLab-SAI-SJTU/WAVE-0)
+- Tags: latent-world-model, future-conditioning, counterfactual-ranking, robot-manipulation, pi0.5
+- Model size: 257M (latent world model)
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+事前学習済みVLAに軽量な潜在世界モデルを追加する。257Mパラメータのモデルが潜在行動計画から将来表現を予測し、その表現で動作エキスパートを条件付ける。画像再構成や大規模動画事前学習に依存しない。
+
+**主な貢献**
+
+実ロボット動作に基づく潜在ダイナミクスを反事実ランキングで学習し、予測された将来表現をVLAの動作生成へ直接入力する二段階学習。RoboTwin 2.0、LIBERO、実機操作の評価結果を著者が報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1・要旨・PDFリンク: https://arxiv.org/abs/2610.18568 。公式repoにsrc/lerobotと学習/評価スクリプトを確認: https://github.com/AutoLab-SAI-SJTU/WAVE-0 。repoのLICENSEはApache-2.0。READMEに本研究の重みの配布先を確認できずweights=unknown。READMEのHugging Faceリンクは基盤pi0.5/データセットでWAVE-0重みではない。projectページ https://hmwang2002.github.io/release/wave0/ は閲覧エラーのためproject\_url空欄。後日重みとproject URLを再確認。
+
+### ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures
+
+- ID: `HYBRID-0138`
+- Published: 2026-10-13
+- Authors: Chenru Wen; Huajian Zeng; Haokai Ding; Jian Kang; Anqing Duan; Dawei Zhou; Dezhen Song; Xingxing Zuo
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.18650) · [PDF](https://arxiv.org/pdf/2610.18650)
+- Tags: counterfactual-futures, world-model, VLA-recovery, latent-prediction, robot-manipulation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+固定したVLA方策の続行、視点変更、軌道再計画の三候補について、候補条件付き世界モデルが共通時点の潜在的な将来状態を予測する。予測されたタスク進捗を比べ、介入の要否と種類を選ぶ。
+
+**主な貢献**
+
+VLA本体を更新せず、通常続行を含む反事実的な将来予測を同一進捗指標で比較する回復機構。物体滑り・遮蔽を注入したRoboTwin 2.0の5課題で、固定pi0.5のプール成功率13.3%から30.0%へ改善と著者報告。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1・本文の方法/実験・PDFリンク: https://arxiv.org/abs/2610.18650 ; https://arxiv.org/html/2610.18650v1 。要旨にcode will be releasedとあるが公式実装URLを確認できず現時点で未公開。重みとライセンスはunknown。評価は限定されたシミュレーション課題と適応後の実機候補ロールアウトで、未学習の一般安全性は主張しない。後日コード公開を再確認。
+
+### DR-VLA: Learning Human-Like Quadruped Navigation from Egocentric Web Videos via Domain-Invariant Scene Representations
+
+- ID: `HYBRID-0137`
+- Published: 2026-10-13
+- Authors: Jun Tian; Yingjie Niu; Ruo Chen; Hongyi Lin; Chao Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18373) · [PDF](https://arxiv.org/pdf/2610.18373)
+- Tags: DR-VLA, quadruped-navigation, EgoLynx, human-video, cross-embodiment, world-model, flow-matching
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+一人称Web動画から四足ロボットへのナビゲーション知識移転を狙い、意味・幾何・関係を表すDISRを介して視覚言語理解、潜在世界予測、flow-matching行動専門家を組み合わせる。EgoLynx-Webで行動ラベルなし事前学習を行い、遠隔操作のEgoLynx-Robotで軌跡予測を学習する。
+
+**主な貢献**
+
+人間動画からの将来シーン表現予測とロボット固有の軌跡生成を分離し、EgoLynx-Robot保留テストではQNS 0.884対比較対象最高0.843を報告。QNSは非反応的リプレイによる擬似閉ループ指標。
+
+**確認記録**
+
+- Checked: 2026-10-15 · Review: verified
+- arXiv v1公開2026-10-13 UTC、改訂なし。arXiv要旨・HTMLのタスク定式化、DISR/専門家構成、EgoLynx評価表、QNS定義を確認。QNS約4.9%改善は保留データの擬似閉ループ比較であり、実世界閉ループ成功率ではない。NAVSIM結果はWeb事前学習なしの別訓練。著者公式code/project/重み/実装ライセンスは特定できずunknown。https://arxiv.org/abs/2610.18373 ; https://arxiv.org/html/2610.18373v1
 
 ### PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies
 
