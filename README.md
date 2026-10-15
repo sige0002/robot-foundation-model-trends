@@ -3,8 +3,8 @@
 
 ロボット基盤モデルとその周辺技術の研究データベース。CSV を唯一の正本として、分類別の Markdown を自動生成します。VLA / WAM / Agent / Hybrid の技術地図を継続的に育てるための公開リサーチ基盤です。
 
-- 正本: [papers.csv](papers.csv) · 337 records
-- Last updated: 2026-10-15（source_checked の最大値。ビルド日時には依存しません）
+- 正本: [papers.csv](papers.csv) · 345 records
+- Last updated: 2026-10-16（source_checked の最大値。ビルド日時には依存しません）
 - スキーマ: [schema.json](schema.json) · [フィールド定義](SCHEMA.md)
 - 更新手順: [AGENTS.md](AGENTS.md)
 - ソフトウェアのライセンスは未選定です。各論文・コード・PDF の権利は各権利者に帰属します
@@ -13,11 +13,11 @@
 
 | 分類 | 論文数 |
 | --- | ---: |
-| [VLA · Vision–Language–Action](vla/README.md) | 116 |
-| [WAM · World / Action Models](wam/README.md) | 120 |
-| [Agent](agent/README.md) | 59 |
-| [Hybrid](hybrid/README.md) | 42 |
-| **合計** | **337** |
+| [VLA · Vision–Language–Action](vla/README.md) | 118 |
+| [WAM · World / Action Models](wam/README.md) | 122 |
+| [Agent](agent/README.md) | 61 |
+| [Hybrid](hybrid/README.md) | 44 |
+| **合計** | **345** |
 
 件数は実際の CSV 行から計算されます。分類は主な研究貢献に基づく整理で、論文の公式分類や能力保証ではありません。複数分類にまたがる性質は tags と説明に残し、重複登録を避けます。
 
@@ -25,25 +25,25 @@
 
 ### [VLA · Vision–Language–Action](vla/README.md)
 
-- [perception-representation](vla/perception-representation.md) (22)
+- [perception-representation](vla/perception-representation.md) (23)
 - [reasoning-system2](vla/reasoning-system2.md) (6)
 - [action-system1](vla/action-system1.md) (32)
-- [memory-temporal](vla/memory-temporal.md) (10)
+- [memory-temporal](vla/memory-temporal.md) (11)
 - [adaptation](vla/adaptation.md) (46)
 
 ### [WAM · World / Action Models](wam/README.md)
 
-- [world-representation](wam/world-representation.md) (36)
+- [world-representation](wam/world-representation.md) (37)
 - [dynamics](wam/dynamics.md) (14)
-- [action-coupling](wam/action-coupling.md) (37)
+- [action-coupling](wam/action-coupling.md) (38)
 - [planning](wam/planning.md) (24)
 - [temporal-modeling](wam/temporal-modeling.md) (9)
 
 ### [Agent](agent/README.md)
 
-- [planning](agent/planning.md) (13)
+- [planning](agent/planning.md) (14)
 - [code](agent/code.md) (16)
-- [skill](agent/skill.md) (6)
+- [skill](agent/skill.md) (7)
 - [tool](agent/tool.md) (11)
 - [memory](agent/memory.md) (5)
 - [replanning](agent/replanning.md) (8)
@@ -51,8 +51,8 @@
 ### [Hybrid](hybrid/README.md)
 
 - [vla-agent](hybrid/vla-agent.md) (20)
-- [vla-wam](hybrid/vla-wam.md) (18)
-- [wam-agent](hybrid/wam-agent.md) (3)
+- [vla-wam](hybrid/vla-wam.md) (19)
+- [wam-agent](hybrid/wam-agent.md) (4)
 - [vla-wam-agent](hybrid/vla-wam-agent.md) (1)
 
 WAM の world-representation には、ロボットで使われる表現学習や動画基盤モデルなどの支援的研究も含められます。その場合は supporting-foundation などのタグと概要で位置づけを明記し、ロボット方策を直接学習した論文と混同しません。

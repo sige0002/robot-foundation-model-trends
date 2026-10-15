@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-13 records · Published date 降順（同日 ID 降順）
+14 records · Published date 降順（同日 ID 降順）
+
+### Towards Agentic Robots: Model, Data, Environment, and Harness
+
+- ID: `AGENT-0160`
+- Published: 2026-10-14
+- Authors: Chonghan Qin; Dongming Wu; Kaituo Feng; Jiaxu Wang; Xinlei Yu; Peiwen Sun; Yijia Fan; Xilin He; Bingao Chen; Weitong Lian; Ryan Ji; Wenqi Ren; Xiaobin Hu; Dahua Lin; Yu-Gang Jiang; Xiangyu Yue
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.20442) · [PDF](https://arxiv.org/pdf/2610.20442) · [Project](https://github.com/chonghanqin/Awesome-Agentic-Robots)
+- Tags: survey, agentic-robotics, taxonomy, harness, data-lifecycle, environment-generation, VLA, world-model
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+目標達成に向けた計画・能力選択・実行監視・失敗回復を備えるagentic robotを整理するサーベイ。Model・Data・Environment・Harnessの4領域17分類で、方策学習からデータ収集、環境構築、実行基盤までを関連付ける。
+
+**主な貢献**
+
+エージェントが何を判断し、どの観測・実行器・フィードバックに依存するかを軸に研究を整理。公平な比較、実機展開、実行コスト、異なるロボットへの汎化を研究課題として提示する。
+
+**確認記録**
+
+- Checked: 2026-10-16 · Review: verified
+- arXiv absの書誌・履歴を確認（v1: 2026-10-14、改訂なし）。HTML §§3,7,8で定義・分類・展望を確認: https://arxiv.org/html/2610.20442v1 。新規制御モデルや実験結果の提案ではなくsurveyとして収録。公式文献集リポジトリをproject\_urlに記録。GitHub上にMIT表示があるが文献集のライセンスであり、ロボット実装の公開・ライセンスや重みを意味しないため各状態はunknown。確認範囲は初稿2026-10-02〜10-15の選定候補、確認日はJST。
 
 ### Rendering-Free Lookahead for Question-Guided Active Vision
 

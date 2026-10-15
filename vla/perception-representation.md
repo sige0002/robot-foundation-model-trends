@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-22 records · Published date 降順（同日 ID 降順）
+23 records · Published date 降順（同日 ID 降順）
+
+### FoveaVLA: Foveation Actions Replace the Wrist Camera in VLAs
+
+- ID: `VLA-0218`
+- Published: 2026-10-14
+- Authors: Bingao Chen; Lihan Zha; C. Karen Liu; Guy Tevet
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.20064) · [PDF](https://arxiv.org/pdf/2610.20064) · [Code](https://github.com/Stanford-TML/FoveaVLA) · [Project](https://tml.stanford.edu/FoveaVLA/)
+- Tags: foveation, active-perception, RGB-D, pi0.5, DROID, real-robot
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+FoveaVLAは手首カメラの代わりに、外部画像のどの領域を次に拡大観測するかを学習するπ0.5ベースの方策。全景と元解像度からの局所crop、整合した深度を入力し、外部ステレオカメラ1台または2台で操作する。
+
+**主な貢献**
+
+動作chunkと次回観測の相互作用領域を別headで予測し、動作実行中にboxを復号して次画像のcropを準備。DROIDのRoboInter注釈から将来boxを教師化し、flow-matching動作損失と共同学習する。
+
+**確認記録**
+
+- Checked: 2026-10-16 · Review: verified
+- v1初出2026-10-14、改訂なし: https://arxiv.org/abs/2610.20064 。canonical arXiv/DOI・正規化/近似題名を本文前に照合し一致なし。HTML https://arxiv.org/html/2610.20064v1 §IV、§V-A、Appendix B/Cを選読。実機4suite計48共通試行。MolmoSpaces公開baselineとはカメラ・深度等が異なり統制比較ではない。公式projectとrepoの相互linkを確認。実装LICENSE本文とREADMEでApache-2.0: https://github.com/Stanford-TML/FoveaVLA/blob/main/LICENSE 。公式model cardはApache-2.0、root/params treeは12.4GB・OCDBT manifest/\_METADATAを表示: https://huggingface.co/bingaochen/FoveaVLA-Single/tree/main ; https://huggingface.co/bingaochen/FoveaVLA-Dual/tree/main 。ただし下位data file・immutable commitの取得はCache missとなり、checkpoint実fileの確認未完のため重みunknown。Gemma等の由来noticeはcodeの許諾と区別。PDF応答を確認、ファイル・重み・data未download、再現実験なし。
 
 ### LAPT-Scale: Scaling Embodied Policies with Latent Action Pre-Training on Human Videos
 

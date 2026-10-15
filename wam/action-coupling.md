@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-37 records · Published date 降順（同日 ID 降順）
+38 records · Published date 降順（同日 ID 降順）
+
+### Complementary Future Token Pruning for World Action Models
+
+- ID: `WAM-0124`
+- Published: 2026-10-14
+- Authors: Baekseung Kim; Junhoo Lee; Sohyeon Hong; Suhyun Jeon; Minkyu Kim; Seungyeon Kim; Donghoon Han; Nojun Kwak
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.19957) · [PDF](https://arxiv.org/pdf/2610.19957)
+- Tags: CF-Prune, future-token-pruning, training-free, attention-entropy, inference-acceleration, joint-video-action, Cosmos3
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+事前学習済みWAMの未来フレームtokenを推論時だけ間引くCF-Prune。動画の見た目をすべて復元する代わりに、行動生成に必要な領域を残して計算量を減らす。
+
+**主な貢献**
+
+最初のdenoising passで指示attentionと行動attentionから相補的なtoken集合を選ぶ。視点間・行動時刻間のattention entropy差で精密操作phaseを検出し、その間はdense計算へ戻す。
+
+**確認記録**
+
+- Checked: 2026-10-16 · Review: verified
+- arXiv absの履歴でv1初稿2026-10-14（後続改訂なし）、全著者、PDFリンクを確認。PDFはweb取得上限を超えたため、一次HTML v1の3–4節とAppendix A.1を読んで手法・設定を検証: https://arxiv.org/html/2610.19957v1 。評価はCosmos3系checkpointを用いたRoboLab、RoboCasa、Franka実機3課題。追加学習不要はpruning処理についてであり、RoboCasa/実機用base policyはfine-tuneされている。精密phase判定の閾値は評価環境別。abs/HTMLに公式project・実装・重みの公開先を確認できず、タイトル/CF-Pruneによる限定検索でも公式配布先未確認のためURL空欄・各statusはunknown。arXiv論文ライセンスを実装ライセンスと混同しない。
 
 ### UniW(A)M: A Unified Mixture-of-Experts Framework for World and World-Action Models
 

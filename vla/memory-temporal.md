@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+11 records · Published date 降順（同日 ID 降順）
+
+### Physical Time as a Missing Dimension of Robot Policy Memory Dynamics
+
+- ID: `VLA-0217`
+- Published: 2026-10-14
+- Authors: Yushen Liang; Yue Peng; Baosheng Jin; Tianluo Zhang; Xinyu Zhang; Shuyi Zhou; Zhuoran Chen; Xinqi Liu; Shenji Wan
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.20524)
+- Tags: physical-time, continuous-time-memory, diffusion-policy, flow-matching, pi0.5, real-robot
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+Temporal Flow Policyは、観測回数では区別できない待機時間や遮蔽前の運動を、実測経過時間で発展する記憶状態に保持する。Diffusion Policyとπ0.5に組み込み、観測周期が変わる制御課題と実機操作で評価する。
+
+**主な貢献**
+
+観測と過去記憶から候補状態・チャネル別時定数を別々に予測し、経過時間を積分区間とする指数更新を導入。更新記憶を動作生成器の適応正規化へ与え、時計入力への介入で行動時刻との関係を検証。
+
+**確認記録**
+
+- Checked: 2026-10-16 · Review: verified
+- v1初出2026-10-14、改訂なし: https://arxiv.org/abs/2610.20524 。canonical arXiv/DOI・正規化/近似題名を本文前に照合し一致なし。HTML https://arxiv.org/html/2610.20524v1 §3、§4.1–4.4を選読。時間aware記憶の比較は制御シミュレーション、Galaxea A1実機は各backboneのreactive方策と比較し各課題・方式20試行。指数更新の区間合成は候補と時定数を固定した局所性質。論文・検索で公式project、実装、重み、実装ライセンスは確認できずunknown。arXiv掲載PDFの取得がツール内部エラーとなりpdf\_urlは空欄、本文はHTMLで確認。PDF・重み・data未download、再現実験なし。
 
 ### MemoryVLN: From Ego-Aware Memory Representation to Cross-Context Memory Reuse in Vision-Language Navigation
 

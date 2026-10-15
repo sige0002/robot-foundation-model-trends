@@ -3,19 +3,21 @@
 
 [← データベース](../README.md)
 
-59 records · 正本: [papers.csv](../papers.csv)
+61 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 13 |
+| [planning](planning.md) | 14 |
 | [code](code.md) | 16 |
-| [skill](skill.md) | 6 |
+| [skill](skill.md) | 7 |
 | [tool](tool.md) | 11 |
 | [memory](memory.md) | 5 |
 | [replanning](replanning.md) | 8 |
 
 ## 論文
 
+- 2026-10-14 · [MUCO: A Mani-Unit-Structured Manipulation Framework for Compositional Long-Horizon Robot Tasks](skill.md) · `AGENT-0161`
+- 2026-10-14 · [Towards Agentic Robots: Model, Data, Environment, and Harness](planning.md) · `AGENT-0160`
 - 2026-10-13 · [I2O2I-Nav: A Benchmark with a Modular Agent for Long-Horizon Indoor-to-Outdoor-to-Indoor Navigation](replanning.md) · `AGENT-0159`
 - 2026-10-13 · [SEAR: Self-Evolving Agentic Robotics](memory.md) · `AGENT-0158`
 - 2026-10-13 · [AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving](replanning.md) · `AGENT-0157`

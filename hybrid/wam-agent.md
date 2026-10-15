@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
+
+### Atomic-WAM: Execution-Grounded Atomic-Motion Reasoning for World Action Models
+
+- ID: `WAM-0123`
+- Published: 2026-10-14
+- Authors: Shijun Shi; Zhe Liu; Zhi Hou; Yinan Chen; Tao Zhang; Kai Hu; Yong Liu; Jiangning Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.20157) · [PDF](https://arxiv.org/pdf/2610.20157) · [Code](https://github.com/ssj9596/Atomic-WAM) · [Project](https://ssj9596.github.io/Atomic-WAM-project/)
+- Tags: Atomic-WAM, atomic-motion-reasoning, execution-grounded-GRPO, joint-video-action, DROID, RoboLab, hierarchical-control
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+視覚言語reasonerが観測履歴と課題指示から次の局所動作を言語化し、WAMが未来動画と行動chunkを生成する。実行後の観測で動作記述を更新し、曖昧な指示の接地を助ける。
+
+**主な貢献**
+
+接触情報を含むDROIDの原子動作教師を作成し、凍結WAMで候補動作を実行した結果をEG-GRPOの報酬へ使ってreasonerだけを適応させる。
+
+**確認記録**
+
+- Checked: 2026-10-16 · Review: verified
+- arXiv absの履歴でv1初稿2026-10-14（後続改訂なし）、全著者、PDFリンクを確認。HTML v1のIII–IV節で手法と限界を確認: https://arxiv.org/html/2610.20157v1 。EG-GRPOの実行成功報酬は現状で人手判定を使用。高levelの動作選択とWAM実行の閉loopに基づきhybrid/wam-agentに分類、安定IDを維持。公式projectがリンクするrepoで推論・RoboLab評価コードを確認（training/data公開とは区別）。repoはWAM/Reasoner LoRA公開を表明するが、各checkpointの実ファイルとimmutable tree/blob metadataを未確認のためweights\_statusはunknown。公式に案内された重み配布先: https://huggingface.co/datasets/MochunniaN1/Atomic-WAM\_Robolab （metadataはApache-2.0、README空、全重みへの適用範囲未確認）。実装はファイル別でCosmos由来OpenMDW-1.1とRoboLab由来Apache-2.0を保持: https://github.com/ssj9596/Atomic-WAM/blob/main/licenses/OpenMDW-1.1.txt 。新規scriptsを含む実装全体の明確なlicense適用を確定できずopen\_source/license\_statusはunknown。
 
 ### Future Anchored Verification and Online Recovery for World Action Models
 

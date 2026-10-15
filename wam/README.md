@@ -3,18 +3,19 @@
 
 [← データベース](../README.md)
 
-120 records · 正本: [papers.csv](../papers.csv)
+122 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 36 |
+| [world-representation](world-representation.md) | 37 |
 | [dynamics](dynamics.md) | 14 |
-| [action-coupling](action-coupling.md) | 37 |
+| [action-coupling](action-coupling.md) | 38 |
 | [planning](planning.md) | 24 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-10-14 · [Complementary Future Token Pruning for World Action Models](action-coupling.md) · `WAM-0124`
 - 2026-10-13 · [SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation](planning.md) · `WAM-0122`
 - 2026-10-13 · [Grid or Nodes? Probing Object Memory in World Models Under Partial Observability](world-representation.md) · `WAM-0121`
 - 2026-10-13 · [UniW(A)M: A Unified Mixture-of-Experts Framework for World and World-Action Models](action-coupling.md) · `WAM-0120`
@@ -117,6 +118,7 @@
 - 2022-09-30 · [VIP: Towards Universal Visual Reward and Representation via Value-Implicit Pre-Training](world-representation.md) · `WAM-0028`
 - 2022-06-30 · [Denoised MDPs: Learning World Models Better Than the World Itself](dynamics.md) · `WAM-0016`
 - 2022-03-23 · [R3M: A Universal Visual Representation for Robot Manipulation](world-representation.md) · `WAM-0024`
+- 2022-03-11 · [Masked Visual Pre-training for Motor Control](world-representation.md) · `WAM-0125`
 - 2021-11-11 · [Masked Autoencoders Are Scalable Vision Learners](world-representation.md) · `WAM-0021`
 - 2021-05-11 · [VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning](world-representation.md) · `WAM-0003`
 - 2021-03-04 · [Barlow Twins: Self-Supervised Learning via Redundancy Reduction](world-representation.md) · `WAM-0004`

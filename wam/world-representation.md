@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-36 records · Published date 降順（同日 ID 降順）
+37 records · Published date 降順（同日 ID 降順）
 
 ### Grid or Nodes? Probing Object Memory in World Models Under Partial Observability
 
@@ -754,6 +754,31 @@ MAEで事前学習した視覚Transformerを固定し、学習可能な制御モ
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Official implementation and MIT license license checked at https://github.com/facebookresearch/r3m.
+
+### Masked Visual Pre-training for Motor Control
+
+- ID: `WAM-0125`
+- Published: 2022-03-11
+- Authors: Tete Xiao; Ilija Radosavovic; Trevor Darrell; Jitendra Malik
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2203.06173) · [PDF](https://arxiv.org/pdf/2203.06173) · [Code](https://github.com/ir413/mvp) · [Project](https://tetexiao.com/projects/mvp)
+- Tags: supporting-foundation, visual-representation, MAE, MVP, PixMC, reinforcement-learning
+- Model size: 22M ViT-S visual encoder
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+自然画像のマスク再構成で学んだ視覚表現を固定し、画像と自己受容情報から運動制御を学ぶ基礎研究。主評価はシミュレーションのPixMCで、未来の状態遷移を学ぶ世界モデルではなく支援的な視覚エンコーダとして位置づける。
+
+**主な貢献**
+
+事前学習したViTと課題別PPO制御器を分離し、8課題のPixMCで事前学習データと表現の効果を比較する。物体形状への拡張では各物体で制御器を再学習し、単眼の大きさ曖昧性も残る。
+
+**確認記録**
+
+- Checked: 2026-10-16 · Review: verified
+- Historical supporting-foundation gap-fill, separately selected outside the recent window. arXiv abs history shows v1 only, first submitted 2022-03-11; selected HTML sections 2-5 and official project checked. Distinct identity from Real-World Robot Learning with Masked Visual Pre-training (WAM-0026, arXiv:2210.03109), although both share https://github.com/ir413/mvp. Official repository at 5746656229c815acb08a41b97064c79e10ffd399 contains actual PPO/BC/encoder code. Root tree and selected code show no verified complete-implementation license; asset licenses do not establish code rights. README/model\_zoo declare ViT-S HOI checkpoint and Box URL, but independent file read failed; weights and their license remain unknown, not unavailable. No weights or PDFs downloaded; no numerical reproduction claim.
 
 ### Masked Autoencoders Are Scalable Vision Learners
 

@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-6 records · Published date 降順（同日 ID 降順）
+7 records · Published date 降順（同日 ID 降順）
+
+### MUCO: A Mani-Unit-Structured Manipulation Framework for Compositional Long-Horizon Robot Tasks
+
+- ID: `AGENT-0161`
+- Published: 2026-10-14
+- Authors: Xiangyi Wei; Hanzhe Yao; Jingwen Shang; Zhenhong Wu; Yang Li; Changbo Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.19913) · [PDF](https://arxiv.org/pdf/2610.19913)
+- Tags: MUCO, Mani-Unit, skill-composition, heterogeneous-policy, visual-verification, local-recovery, long-horizon, VLA-executor, experimental-placeholders
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+長期操作を、局所目標・開始条件・成否判定を持つ再利用可能なMani-Unitへ分解する。凍結した能力レジストリから実行器を選び、視覚検証に応じて次の単位へ進むか、現状態から再試行・別実行器への切替を行う。初稿の提案手法の評価値は未記入。
+
+**主な貢献**
+
+操作単位と実行方策を分離し、共通キー・実行器別アダプタ・事前校正した成功率で異種方策を統合する設計。確認済みの前半を再実行せず局所回復する仕組みを示すが、定量的効果は初稿では検証できない。
+
+**確認記録**
+
+- Checked: 2026-10-16 · Review: needs-review
+- arXiv absの書誌・履歴を確認（v1: 2026-10-14、改訂なし）。HTML Method・ExperimentsとPDF pp.6–7を照合: https://arxiv.org/html/2610.19913v1 。表2のMUCO行、表3〜6の実験値は未記入で、複数表がplaceholdersと明記。RoboTwinのタスク名・実行器詳細等も後続版に記載予定。要旨の優位性主張は採用せず、評価完了の再確認が必要。VLAは登録可能な実行器の一種で、主要貢献は方策非依存の単位再利用・実行調停のためagent/skill。論文内と題名検索で公式project・公開実装・重み・実装ライセンスを確認できずunknown。確認範囲は初稿2026-10-02〜10-15の選定候補、確認日はJST。
 
 ### ChunkAct: Action Chunking for Agentic Robotics
 

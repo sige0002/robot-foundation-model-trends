@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-18 records · Published date 降順（同日 ID 降順）
+19 records · Published date 降順（同日 ID 降順）
+
+### ObjDream: Guiding Vision-Language-Action Models with Object-Level Understanding and Future State Prediction
+
+- ID: `HYBRID-0141`
+- Published: 2026-10-14
+- Authors: Huailiang Ma; Yuxuan Li; Ziyi Zhao; Xinkai Wang; Mingyu Li; Xinyu Guo; Lifeng Zhu; Aiguo Song; Cewu Lu; Jianhua Sun
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.20223) · [PDF](https://arxiv.org/pdf/2610.20223) · [Project](https://huailiangma.github.io/objdream/)
+- Tags: ObjDream, object-centric, object-slots, identity-guided-attention, action-conditioned-dynamics, auxiliary-future-supervision, flow-matching, LIBERO-Plus
+- Model size: Qwen3-VL-4B backbone; total unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+物体の持続的な同一性と時間変化する状態を分離したスロットをVLMへ挿入し、同一性に基づく注意制御で操作対象を捉える。行動条件付きの将来物体状態予測を補助学習に使い、flow-matchingで行動列を生成する。推論時の将来状態予測は不要。
+
+**主な貢献**
+
+物体スロット・物体間関係・将来状態の教師信号をVLAへ接続する。画像全体の再構成を伴わない物体レベルの動力学学習を用い、配置や背景等の変化への頑健性を評価する。
+
+**確認記録**
+
+- Checked: 2026-10-16 · Review: verified
+- arXiv absの書誌・履歴を確認（v1: 2026-10-14、改訂なし）。HTML §§3–4で物体状態予測は学習時のみ、VLM backboneはQwen3-VL-4B、初期の物体句抽出はQwen3-VL-8Bと確認: https://arxiv.org/html/2610.20223v1 。総パラメータ数は未確認。LIBERO/Plus、RoboTwin 2.0の固定8タスク、実機4タスクで評価し、視点・ロボット初期状態の変化には課題が残る。公式projectがリンクする https://github.com/HuailiangMa/ObjDream はCode coming soon、READMEも実装未公開を明記。紹介用repoを公開実装と扱わずcode\_urlは空欄。重み提供と実装ライセンスは未確認。VLAと行動条件付き物体動力学の結合としてhybrid/vla-wam。確認範囲は初稿2026-10-02〜10-15の選定候補、確認日はJST。
 
 ### WAVE-0: Bridging VLA Policies and WAMs with Lightweight Latent Future Prediction
 

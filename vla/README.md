@@ -3,18 +3,20 @@
 
 [← データベース](../README.md)
 
-116 records · 正本: [papers.csv](../papers.csv)
+118 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 22 |
+| [perception-representation](perception-representation.md) | 23 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
 | [action-system1](action-system1.md) | 32 |
-| [memory-temporal](memory-temporal.md) | 10 |
+| [memory-temporal](memory-temporal.md) | 11 |
 | [adaptation](adaptation.md) | 46 |
 
 ## 論文
 
+- 2026-10-14 · [FoveaVLA: Foveation Actions Replace the Wrist Camera in VLAs](perception-representation.md) · `VLA-0218`
+- 2026-10-14 · [Physical Time as a Missing Dimension of Robot Policy Memory Dynamics](memory-temporal.md) · `VLA-0217`
 - 2026-10-13 · [Interaction Latents as Actions for Contact-Rich Manipulation](action-system1.md) · `VLA-0216`
 - 2026-10-13 · [MemoryVLN: From Ego-Aware Memory Representation to Cross-Context Memory Reuse in Vision-Language Navigation](memory-temporal.md) · `VLA-0214`
 - 2026-10-13 · [Steertuning Policies from a Few Human Videos](adaptation.md) · `VLA-0213`
