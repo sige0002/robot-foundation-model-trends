@@ -3,7 +3,7 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
 
 ### Atomic-WAM: Execution-Grounded Atomic-Motion Reasoning for World Action Models
 
@@ -79,6 +79,31 @@ UrbanNav test-unseenの4,634 episodeでQwen reasonerの成功率は78.14%から8
 
 - Checked: 2026-10-06 · Review: verified
 - 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2610.04916 のv1は2026-10-04 03:50:39 UTC、改訂なし。 https://arxiv.org/html/2610.04916v1 §3–5、App.D/F/Gを選択確認。主系はUrbanNav方策＋Qwen3.8-27B＋Cosmos3-Nano、NoMaD/OmniVLAも比較。WAM toolとVLM agentが中心でwam-agent、VLAとの転移はtagで文脈化。UrbanNav seen4,179/unseen4,634はwatermark記述除外後、成功半径3m。定量評価は記録routeベース、outdoor実機は定性例。生成60frame・1,700rolloutの11.37秒はfastest complete run、VLM操作費用は別。予測整合ラベルはQwen判断で独立ground truthではない。正式題名/著者検索で専用実装/重み/ライセンスを未確認、unknown。PDF未取得。
+
+### AR-WAM: A Visual-Conditioned Agent-Ready World Action Model for Robotic Manipulation
+
+- ID: `HYBRID-0142`
+- Published: 2026-09-20 · Updated: 2026-10-02
+- Authors: Yicheng Jiang; Zesen Gan; Xiaobo Wang; Tianlun He; Chenxu Zhao; Minghui Wu; Xinyue Wang; Jiaxu Wang; Junhao He; Jianan Wang; Qiming Shao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.23578) · [PDF](https://arxiv.org/pdf/2609.23578) · [Code](https://github.com/AR-WAM/AR-WAM) · [Project](https://ar-wam.github.io/)
+- Tags: AR-WAM, visual-prompt, agent-policy-interface, latent-foresight
+- Model size: 0.5B
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+上位エージェントが対象bounding boxと原子的操作tokenを指定する視覚条件付きWAM。言語encoderを使わず、教師ありの意図出力と視覚・意味の将来潜在表現を行動生成と共同学習する。detect・execute・query interfaceで外部VLM/LLMと接続し、長期記憶と失敗復旧を上位側に担当させる。
+
+**主な貢献**
+
+空間groundingと操作選択を明示的なagent-policy interfaceにし、共有transformer上で意図推論と二段の未来整合を学習する。方策を小型に保ちながら、上位エージェントによる記憶・再試行と接続する。
+
+**確認記録**
+
+- Checked: 2026-10-17 · Review: needs-review
+- 直近窓より前の欠落補充。arXiv v2の書誌・履歴、本文III-A～III-EとIVの選択確認。初稿2026-09-20、改訂2026-10-02。公式repoのmodels・dataloader・configs・train.py・train\_rla.pyを確認。GitHub APIのLICENSE全文（1076 bytes、標準MIT、copyright AR-WAM contributors、blob f68537c3d3d8606adea65fa388e12232fa62188f）を確認。継承部分と事前学習assetはupstream条件。AR-WAM方策重みの公開file tree未確認（DINOv3の重みと区別）。公式code HEAD:085d435b366755512ea078ea500a97da8ed2e9ed（GitHub API確認）。限定的選択確認で実行再現なし。 本文: https://arxiv.org/html/2609.23578v2 。本文前にcanonical arXivと正規化/近似題名を既存347件と照合し一致なし、version/DOI aliasも同一性なしを再確認。needs-review: 公式方策checkpointの公開fileと適用licenseを個別再確認。
 
 ### Compositional Foundation Models for Hierarchical Planning
 

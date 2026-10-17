@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-23 records · Published date 降順（同日 ID 降順）
+25 records · Published date 降順（同日 ID 降順）
+
+### VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models
+
+- ID: `VLA-0221`
+- Published: 2026-10-15
+- Authors: Qi Lu; Jiarun Li; Ce Zhang; Miao Pan; Yi Pan; Xu Wang; Wenqi Zhang; Xuhong Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.21306) · [PDF](https://arxiv.org/pdf/2610.21306) · [Code](https://github.com/ZJU-OmniAI/VLA-Delta) · [Project](https://zju-omniai.github.io/VLA-Delta/)
+- Tags: VLA-Delta, physical-state-transition, structured-slots, optical-flow, difference-text, flow-matching, LIBERO, RoboTwin, GR00T, Qwen3-VL
+- Model size: Qwen3-VL-2B-Instruct backbone + 9-layer action DiT (total not reported)
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+現在・未来間の物理状態変化を、構造化slot、dense optical flow、差分textの三種の教師信号で学習するVLA。Physical State Difference Queriesで得た遷移表現をflow-matching行動expertへ渡す。補助教師信号は事前学習で使い、下流fine-tuningは行動損失のみ、推論は補助出力を復号しない。
+
+**主な貢献**
+
+物体位置・接触・タスク進行の意味情報と画像内運動をquery表現に統合する事前学習、および約484時間・2,400万frameの遷移annotation pipeline。LIBERO平均98.4%、RoboTwin Clean/Random 90.06/89.74%は原著比較条件での結果。
+
+**確認記録**
+
+- Checked: 2026-10-17 · Review: verified
+- arXiv v1 2026-10-15 05:54:21 UTC、改訂なし。本文前にcanonical arXiv・DOI alias・正規化/近似題名を既存347件と照合し一致なし。一次HTML https://arxiv.org/html/2610.21306v1 Sec.2–3とTable 1–2を選読。主貢献が学習時の遷移表現supervisionであるためvla/perception-representation。公式GitHubにmodel/policies/train\_vla.pyと3-stage pretraining・benchmark評価手順を確認。GitHub APIでLICENSE本文11,357 bytesを取得しApache-2.0を確認: https://github.com/ZJU-OmniAI/VLA-Delta/blob/main/LICENSE 。READMEからリンクされたbase重み https://huggingface.co/t0rn0d0/VLA-Delta-base のimmutable commit c9821c22a2e83f3578732da45a5289a5925dece8でaction\_expert.safetensors・difference\_query.safetensors・3 model shards等の実file名、size、LFS hashをtree APIで確認。model cardはapache-2.0。重みのdownload・実行・数値再現は未実施。上流componentの条件は別、2Bはbackboneの表示で総規模ではない。
 
 ### FoveaVLA: Foveation Actions Replace the Wrist Camera in VLAs
 
@@ -29,6 +54,31 @@ FoveaVLAは手首カメラの代わりに、外部画像のどの領域を次に
 
 - Checked: 2026-10-16 · Review: verified
 - v1初出2026-10-14、改訂なし: https://arxiv.org/abs/2610.20064 。canonical arXiv/DOI・正規化/近似題名を本文前に照合し一致なし。HTML https://arxiv.org/html/2610.20064v1 §IV、§V-A、Appendix B/Cを選読。実機4suite計48共通試行。MolmoSpaces公開baselineとはカメラ・深度等が異なり統制比較ではない。公式projectとrepoの相互linkを確認。実装LICENSE本文とREADMEでApache-2.0: https://github.com/Stanford-TML/FoveaVLA/blob/main/LICENSE 。公式model cardはApache-2.0、root/params treeは12.4GB・OCDBT manifest/\_METADATAを表示: https://huggingface.co/bingaochen/FoveaVLA-Single/tree/main ; https://huggingface.co/bingaochen/FoveaVLA-Dual/tree/main 。ただし下位data file・immutable commitの取得はCache missとなり、checkpoint実fileの確認未完のため重みunknown。Gemma等の由来noticeはcodeの許諾と区別。PDF応答を確認、ファイル・重み・data未download、再現実験なし。
+
+### Evo-World: A Lightweight Vision-Language-Action Model with Future Motion Prediction via Optical-Flow Supervision
+
+- ID: `VLA-0220`
+- Published: 2026-10-09
+- Authors: Zile Zhong; Yuxin Du; Tao Lin; Haoxiao Wang; Wei Dai; Binhua Zuo; Bo Zhao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.12936) · [PDF](https://arxiv.org/pdf/2610.12936) · [Code](https://github.com/MINT-SJTU/Evo-World)
+- Tags: Evo-World, future-motion, optical-flow-supervision, latent-prediction, FiLM, flow-matching, lightweight, Meta-World, RoboTwin, bimanual
+- Model size: 0.87B total (paper-reported, includes predictive branch)
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+現在画像と指示から未来の2D運動潜在表現を予測し、FiLMを通じてflow-matching行動生成を条件付ける軽量VLA。訓練時のみ実演動画のoptical flowを教師信号とし、推論時に未来画像やflow推定器は不要。Meta-World、RoboTwinとAgileX実機3課題で評価した。
+
+**主な貢献**
+
+静的外観を含む未来RGB再構成の代わりに運動表現を学習し、SIGRegと行動勾配の遮断で予測表現を維持する。報告値はMeta-Worldの難易度tier等重み平均91.1%、実機3課題各20試行の平均63.3%であり、全課題等重み平均や広範な汎化保証とは区別する。
+
+**確認記録**
+
+- Checked: 2026-10-17 · Review: verified
+- arXiv v1 2026-10-09 03:38:02 UTC、改訂なし。Sec.3–5、Table 1–2を選読。予測は候補行動に条件付けず画像と指示から運動表現を生成するためvla/perception-representationに分類。公式GitHubにmodel/scripts/launch/evalの実装と訓練・評価手順を確認。READMEはMINT-SJTU/Evo-World-MetaworldとEvo-World-Robotwin重みを案内するが配布先が取得不能でweights unknown。リポジトリroot表示にLICENSEなく、コードlicenseはunspecified。論文CC BY 4.0をコードlicenseへ流用しない。再現未実施。 本文前にcanonical arXiv・DOI alias・正規化/近似題名を既存347件と照合し一致なし。一次本文: https://arxiv.org/html/2610.12936v1 。 公式code HEAD 17191f90990de9cc6d3a15fbfab2b62c31368b74、GitHub license APIは404。
 
 ### LAPT-Scale: Scaling Embodied Policies with Latent Action Pre-Training on Human Videos
 

@@ -3,13 +3,13 @@
 
 [← データベース](../README.md)
 
-44 records · 正本: [papers.csv](../papers.csv)
+45 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [vla-agent](vla-agent.md) | 20 |
 | [vla-wam](vla-wam.md) | 19 |
-| [wam-agent](wam-agent.md) | 4 |
+| [wam-agent](wam-agent.md) | 5 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
 
 ## 論文
@@ -55,6 +55,7 @@
 - 2026-09-23 · [CereVLA: Cerebellum-Inspired Consequence-Aware Residual Governance for Efficient Vision-Language-Action Execution](vla-wam.md) · `HYBRID-0109`
 - 2026-09-22 · [MedVLA: A Hierarchical Vision-Language-Action Framework for Closed-Loop Precision Medical Robot Manipulation](vla-agent.md) · `HYBRID-0108`
 - 2026-09-21 · [Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies](vla-wam.md) · `HYBRID-0103`
+- 2026-09-20 · [AR-WAM: A Visual-Conditioned Agent-Ready World Action Model for Robotic Manipulation](wam-agent.md) · `HYBRID-0142`
 - 2026-09-11 · [Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-Action Model](vla-wam.md) · `HYBRID-0102`
 - 2026-06-14 · [LaWAM: Latent World Action Models for Efficient Dynamics-Aware Robot Policies](vla-wam.md) · `WAM-0035`
 - 2023-09-15 · [Compositional Foundation Models for Hierarchical Planning](wam-agent.md) · `HYBRID-0110`

@@ -3,7 +3,7 @@
 
 ロボット基盤モデルとその周辺技術の研究データベース。CSV を唯一の正本として、分類別の Markdown を自動生成します。VLA / WAM / Agent / Hybrid の技術地図を継続的に育てるための公開リサーチ基盤です。
 
-- 正本: [papers.csv](papers.csv) · 347 records
+- 正本: [papers.csv](papers.csv) · 351 records
 - Last updated: 2026-10-17（source_checked の最大値。ビルド日時には依存しません）
 - スキーマ: [schema.json](schema.json) · [フィールド定義](SCHEMA.md)
 - 更新手順: [AGENTS.md](AGENTS.md)
@@ -13,11 +13,11 @@
 
 | 分類 | 論文数 |
 | --- | ---: |
-| [VLA · Vision–Language–Action](vla/README.md) | 119 |
-| [WAM · World / Action Models](wam/README.md) | 123 |
+| [VLA · Vision–Language–Action](vla/README.md) | 121 |
+| [WAM · World / Action Models](wam/README.md) | 124 |
 | [Agent](agent/README.md) | 61 |
-| [Hybrid](hybrid/README.md) | 44 |
-| **合計** | **347** |
+| [Hybrid](hybrid/README.md) | 45 |
+| **合計** | **351** |
 
 件数は実際の CSV 行から計算されます。分類は主な研究貢献に基づく整理で、論文の公式分類や能力保証ではありません。複数分類にまたがる性質は tags と説明に残し、重複登録を避けます。
 
@@ -25,7 +25,7 @@
 
 ### [VLA · Vision–Language–Action](vla/README.md)
 
-- [perception-representation](vla/perception-representation.md) (23)
+- [perception-representation](vla/perception-representation.md) (25)
 - [reasoning-system2](vla/reasoning-system2.md) (6)
 - [action-system1](vla/action-system1.md) (32)
 - [memory-temporal](vla/memory-temporal.md) (11)
@@ -35,7 +35,7 @@
 
 - [world-representation](wam/world-representation.md) (37)
 - [dynamics](wam/dynamics.md) (14)
-- [action-coupling](wam/action-coupling.md) (39)
+- [action-coupling](wam/action-coupling.md) (40)
 - [planning](wam/planning.md) (24)
 - [temporal-modeling](wam/temporal-modeling.md) (9)
 
@@ -52,7 +52,7 @@
 
 - [vla-agent](hybrid/vla-agent.md) (20)
 - [vla-wam](hybrid/vla-wam.md) (19)
-- [wam-agent](hybrid/wam-agent.md) (4)
+- [wam-agent](hybrid/wam-agent.md) (5)
 - [vla-wam-agent](hybrid/vla-wam-agent.md) (1)
 
 WAM の world-representation には、ロボットで使われる表現学習や動画基盤モデルなどの支援的研究も含められます。その場合は supporting-foundation などのタグと概要で位置づけを明記し、ロボット方策を直接学習した論文と混同しません。

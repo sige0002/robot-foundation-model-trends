@@ -33,7 +33,7 @@
 ### Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models
 
 - ID: `VLA-0203`
-- Published: 2026-10-09
+- Published: 2026-10-09 · Updated: 2026-10-12
 - Authors: Min Lin; Bokai Zhou; Jianqi Lin; Kaiyuan Yang; Yicheng Chang; Junjie Yu; Xiaofan Liu; Jianhua Han; Rui Li; Shen Zhao; Xiaodan Liang
 - Venue: arXiv
 - Links: [Paper](https://arxiv.org/abs/2610.13212) · [PDF](https://arxiv.org/pdf/2610.13212) · [Code](https://github.com/AFCEProject/AFCE) · [Project](https://afceproject.github.io/AFCE-Web/)
@@ -52,8 +52,8 @@
 
 **確認記録**
 
-- Checked: 2026-10-12 · Review: verified
-- arXiv v1は2026-10-09 08:29:46 UTC、改訂なし。書誌・Sec.3–5とAppendix Dを選読。主貢献はfuture-grounded action targetとreadoutのためvla/action-system1に分類し、future-supervisionをtagsに保持。6単腕/5双腕task、各task/seed 50 episode、3環境seed、各method一つの学習checkpointで1,650 rollout。環境seed間の分散を独立training runの分散と混同せず、embodiment-invariant表現や全task改善を主張しない。原著LICENSE全文MITとafce/prepare.pyをGitHub APIで確認: https://github.com/AFCEProject/AFCE/blob/main/LICENSE 。READMEはcheckpointsを同梱せず外部参照はbaseline policiesのみで、AFCE学習済み重みはunknown。upstream componentの条件は別。README seed-0 51.64%は論文3-seed平均50.97%と区別。公開cleanup後のbit-exact private snapshot照合に注意があり再現未実施。model\_sizeはAppendix Dのbackbone構成のみでtotalではない。
+- Checked: 2026-10-17 · Review: verified
+- arXiv履歴 https://arxiv.org/abs/2610.13212 を2026-10-17再確認。v1は2026-10-09 08:29:46 UTC、v2は2026-10-12 06:58:05 UTC。今回の変更は改訂日metadataのみで、以下の本文・評価・実装確認記録は前回の選読に基づく。v2の内容差分は未再読。書誌・Sec.3–5とAppendix Dを選読。主貢献はfuture-grounded action targetとreadoutのためvla/action-system1に分類し、future-supervisionをtagsに保持。6単腕/5双腕task、各task/seed 50 episode、3環境seed、各method一つの学習checkpointで1,650 rollout。環境seed間の分散を独立training runの分散と混同せず、embodiment-invariant表現や全task改善を主張しない。原著LICENSE全文MITとafce/prepare.pyをGitHub APIで確認: https://github.com/AFCEProject/AFCE/blob/main/LICENSE 。READMEはcheckpointsを同梱せず外部参照はbaseline policiesのみで、AFCE学習済み重みはunknown。upstream componentの条件は別。README seed-0 51.64%は論文3-seed平均50.97%と区別。公開cleanup後のbit-exact private snapshot照合に注意があり再現未実施。model\_sizeはAppendix Dのbackbone構成のみでtotalではない。
 
 ### VioLA: Learning Generalist Humanoid Control Policies from Human Data
 

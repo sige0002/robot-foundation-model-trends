@@ -3,11 +3,11 @@
 
 [← データベース](../README.md)
 
-119 records · 正本: [papers.csv](../papers.csv)
+121 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 23 |
+| [perception-representation](perception-representation.md) | 25 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
 | [action-system1](action-system1.md) | 32 |
 | [memory-temporal](memory-temporal.md) | 11 |
@@ -15,6 +15,7 @@
 
 ## 論文
 
+- 2026-10-15 · [VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models](perception-representation.md) · `VLA-0221`
 - 2026-10-14 · [FoveaVLA: Foveation Actions Replace the Wrist Camera in VLAs](perception-representation.md) · `VLA-0218`
 - 2026-10-14 · [Physical Time as a Missing Dimension of Robot Policy Memory Dynamics](memory-temporal.md) · `VLA-0217`
 - 2026-10-13 · [Interaction Latents as Actions for Contact-Rich Manipulation](action-system1.md) · `VLA-0216`
@@ -24,6 +25,7 @@
 - 2026-10-13 · [LIBERO-RIG: A Hardware-Setup Robustness Benchmark for Vision-Language-Action Models](adaptation.md) · `VLA-0211`
 - 2026-10-13 · [What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study](adaptation.md) · `VLA-0210`
 - 2026-10-11 · [Recovering Low-Bit Failures in Vision-Language-Action Policies via Quantization-Conditioned Reinforcement Learning](adaptation.md) · `VLA-0215`
+- 2026-10-09 · [Evo-World: A Lightweight Vision-Language-Action Model with Future Motion Prediction via Optical-Flow Supervision](perception-representation.md) · `VLA-0220`
 - 2026-10-09 · [LAPT-Scale: Scaling Embodied Policies with Latent Action Pre-Training on Human Videos](perception-representation.md) · `VLA-0204`
 - 2026-10-09 · [Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models](action-system1.md) · `VLA-0203`
 - 2026-10-09 · [Dual-Stream Memory for Vision-Language-Action Policies](memory-temporal.md) · `VLA-0202`

@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-39 records · Published date 降順（同日 ID 降順）
+40 records · Published date 降順（同日 ID 降順）
 
 ### Complementary Future Token Pruning for World Action Models
 
@@ -854,6 +854,31 @@ RGB-Dと固有感覚から関節・物体中心・接触点の疎な3D骨格を�
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Official implementation/weights release and license not independently verified.
+
+### WSA₁: a 3D-Centric World-Spatial-Action Model for Generalizable Robot Control
+
+- ID: `WAM-0127`
+- Published: 2026-07-04 · Updated: 2026-10-13
+- Authors: Jiahao Jiang; Jianing Zhang; Xuanhan Wang; Duo Peng; Ruidong Chen; Zhenhan Yin; Sen Wang; Zhaoshu Yu; Pengpeng Zeng; Xiaofeng Cao; Jingkuan Song; Heng Tao Shen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2607.03941) · [PDF](https://arxiv.org/pdf/2607.03941) · [Code](https://github.com/zaleni/WSA)
+- Tags: WSA1, 3D-world-model, bidirectional-dynamics, mixture-of-transformers
+- Model size: 3B / 6B (paper-reported)
+- Open-source: unknown
+- Code / weights / license: available / available / unknown
+
+**概要（日本語）**
+
+行動条件付き3D潜在状態予測、3Dに接地した将来視覚表現、3D逆動力学による行動生成を共同学習するWorld-Spatial-Actionモデル。実機1,000時間を含む計6,000時間のデモで事前学習し、シミュレーション・実機・未学習機体への転移を評価した。
+
+**主な貢献**
+
+共有3D表現と双方向attentionを介し、行動が世界を変える順動力学と、目標世界から行動を得る逆動力学を3専門器のMoTで統合する。
+
+**確認記録**
+
+- Checked: 2026-10-17 · Review: needs-review
+- arXiv v2の書誌・履歴、本文 https://arxiv.org/html/2607.03941v2 3.2–3.4、4.1–4.2を選択確認。初稿2026-07-04、改訂2026-10-13。本文前にcanonical arXivと正規化/近似題名を既存347件と照合し一致なし、version/DOI aliasも同一性なしを再確認。公式repoにsrc/lerobot・launch・evaluationを確認。GitHub APIでcode HEAD 32211e42399bddb48382585639f79ea749f253f2、license APIは404。公式重み https://huggingface.co/zaleni/WSA-Base/tree/8760ce6703076a6ec8f0bdeda808e6fb9797804c のmodel.safetensorsは6,608,313,224 bytes、LFS hash付き実file metadataを確認。モデルcardのlicense欄なし、実装/重みの明示ライセンス未確認で論文CC BY-NC-NDとは区別。needs-review: 許諾範囲とrepo BibTeXの著者相違を再確認、著者はarXiv一覧を採用。重みdownloadや実行再現は未実施。
 
 ### V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning
 

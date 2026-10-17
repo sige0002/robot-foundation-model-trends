@@ -3,13 +3,13 @@
 
 [← データベース](../README.md)
 
-123 records · 正本: [papers.csv](../papers.csv)
+124 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 37 |
 | [dynamics](dynamics.md) | 14 |
-| [action-coupling](action-coupling.md) | 39 |
+| [action-coupling](action-coupling.md) | 40 |
 | [planning](planning.md) | 24 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
@@ -90,6 +90,7 @@
 - 2026-08-01 · [Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors](temporal-modeling.md) · `WAM-0045`
 - 2026-07-27 · [FeelWorld: Visuo-Tactile World Model for Hierarchical Contact Prediction and Planning](dynamics.md) · `WAM-0038`
 - 2026-07-24 · [On the Identifiability of Controlled World Models](action-coupling.md) · `WAM-0010`
+- 2026-07-04 · [WSA₁: a 3D-Centric World-Spatial-Action Model for Generalizable Robot Control](action-coupling.md) · `WAM-0127`
 - 2026-07-02 · [Object-centric LeJEPA](world-representation.md) · `WAM-0031`
 - 2026-06-05 · [Contrast encodes inductive bias: separating slow noise from dynamics in predictive representation learning](temporal-modeling.md) · `WAM-0014`
 - 2026-05-25 · [When Does LeJEPA Learn a World Model?](world-representation.md) · `WAM-0009`
