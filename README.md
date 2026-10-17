@@ -3,8 +3,8 @@
 
 ロボット基盤モデルとその周辺技術の研究データベース。CSV を唯一の正本として、分類別の Markdown を自動生成します。VLA / WAM / Agent / Hybrid の技術地図を継続的に育てるための公開リサーチ基盤です。
 
-- 正本: [papers.csv](papers.csv) · 345 records
-- Last updated: 2026-10-16（source_checked の最大値。ビルド日時には依存しません）
+- 正本: [papers.csv](papers.csv) · 347 records
+- Last updated: 2026-10-17（source_checked の最大値。ビルド日時には依存しません）
 - スキーマ: [schema.json](schema.json) · [フィールド定義](SCHEMA.md)
 - 更新手順: [AGENTS.md](AGENTS.md)
 - ソフトウェアのライセンスは未選定です。各論文・コード・PDF の権利は各権利者に帰属します
@@ -13,11 +13,11 @@
 
 | 分類 | 論文数 |
 | --- | ---: |
-| [VLA · Vision–Language–Action](vla/README.md) | 118 |
-| [WAM · World / Action Models](wam/README.md) | 122 |
+| [VLA · Vision–Language–Action](vla/README.md) | 119 |
+| [WAM · World / Action Models](wam/README.md) | 123 |
 | [Agent](agent/README.md) | 61 |
 | [Hybrid](hybrid/README.md) | 44 |
-| **合計** | **345** |
+| **合計** | **347** |
 
 件数は実際の CSV 行から計算されます。分類は主な研究貢献に基づく整理で、論文の公式分類や能力保証ではありません。複数分類にまたがる性質は tags と説明に残し、重複登録を避けます。
 
@@ -29,13 +29,13 @@
 - [reasoning-system2](vla/reasoning-system2.md) (6)
 - [action-system1](vla/action-system1.md) (32)
 - [memory-temporal](vla/memory-temporal.md) (11)
-- [adaptation](vla/adaptation.md) (46)
+- [adaptation](vla/adaptation.md) (47)
 
 ### [WAM · World / Action Models](wam/README.md)
 
 - [world-representation](wam/world-representation.md) (37)
 - [dynamics](wam/dynamics.md) (14)
-- [action-coupling](wam/action-coupling.md) (38)
+- [action-coupling](wam/action-coupling.md) (39)
 - [planning](wam/planning.md) (24)
 - [temporal-modeling](wam/temporal-modeling.md) (9)
 

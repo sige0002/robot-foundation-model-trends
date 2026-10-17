@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-38 records · Published date 降順（同日 ID 降順）
+39 records · Published date 降順（同日 ID 降順）
 
 ### Complementary Future Token Pruning for World Action Models
 
@@ -29,6 +29,31 @@
 
 - Checked: 2026-10-16 · Review: verified
 - arXiv absの履歴でv1初稿2026-10-14（後続改訂なし）、全著者、PDFリンクを確認。PDFはweb取得上限を超えたため、一次HTML v1の3–4節とAppendix A.1を読んで手法・設定を検証: https://arxiv.org/html/2610.19957v1 。評価はCosmos3系checkpointを用いたRoboLab、RoboCasa、Franka実機3課題。追加学習不要はpruning処理についてであり、RoboCasa/実機用base policyはfine-tuneされている。精密phase判定の閾値は評価環境別。abs/HTMLに公式project・実装・重みの公開先を確認できず、タイトル/CF-Pruneによる限定検索でも公式配布先未確認のためURL空欄・各statusはunknown。arXiv論文ライセンスを実装ライセンスと混同しない。
+
+### Thinker-WM: A Unified World Model with Shared Multimodal Representations for Embodied Intelligence
+
+- ID: `WAM-0126`
+- Published: 2026-10-13 · Updated: 2026-10-14
+- Authors: Thinker Team Ubtech; Peng Gao; Jichao Jiao; Chen Liao; Daqin Luo; Yiming Ma; Baiyu Pan; Hailin Shi; Jiyuan Wang; Xiangming Xu; Xiongwei Zhao
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.18447) · [PDF](https://arxiv.org/pdf/2610.18447) · [Code](https://github.com/UBTECH-Robot/Thinker-WM) · [Project](https://thinkercosmos.ubtrobot.com/thinker-wm/)
+- Tags: world-action-model, depth, flow-matching, multi-embodiment, language-conditioned
+- Model size: unknown
+- Open-source: false
+- Code / weights / license: available / unknown / non-open-source
+
+**概要（日本語）**
+
+RGB・深度・ロボット行動を共通の動的表現で生成する世界行動モデル。言語は凍結VLMによる条件として使い、同じ重みで未来予測と行動推論を切り替える。
+
+**主な貢献**
+
+モダリティ別の入出力と共有Transformerを組み合わせ、深度を補助損失だけでなく生成対象にする。共通の相対手先行動表現で異種ロボットを接続し、選択された生成評価とRoboTwinの単一タスクで幾何情報の効果を検証する。
+
+**確認記録**
+
+- Checked: 2026-10-17 · Review: needs-review
+- arXiv history confirms v1 2026-10-13 and v2 2026-10-14; selected v2 architecture and evaluation sections read, not numerical reproduction. Official inference repository at 44cdb519d73c16bb63738e5dd66f84ede21dae12 contains main.py and model modules; root LICENSE is CC-BY-NC-SA-4.0 (noncommercial), not an open-source implementation license. README links https://huggingface.co/UBTECH-Robotics/Thinker-WM/tree/main but weight-file access failed; weights remain unknown. README retains a placeholder download command and inconsistent BibTeX eprint; paper identity follows arXiv, not that eprint. Total parameter count unverified. Project page rendered poorly; official repository cross-links it. No benchmark-wide superiority or unseen-task guarantee is asserted.
 
 ### UniW(A)M: A Unified Mixture-of-Experts Framework for World and World-Action Models
 

@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-46 records · Published date 降順（同日 ID 降順）
+47 records · Published date 降順（同日 ID 降順）
 
 ### Steertuning Policies from a Few Human Videos
 
@@ -504,6 +504,31 @@ LIBERO-Plusの5視覚軸の非加重平均で、π0.5はoverlayにより73.9%か
 
 - Checked: 2026-10-06 · Review: verified
 - 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-10-05 08:48:13 UTC、改訂なしをarXivで確認。NeurIPS 2026 RoboPAD workshop採択はarXiv著者commentと公式author projectの記載で確認し、publisher proceedingsは未確認。本文 https://arxiv.org/html/2610.05994v1 の§3–6を選択読解。シミュレーション、LIBERO-Spatial/PPO、各構成1学習seedに限定。公式projectから実装を確認し、augmentation.pyとApache-2.0 LICENSEを別々に確認: https://github.com/bramgrooten/vla-augm/blob/main/LICENSE 。専用重みの配布先は未確認。
+
+### Beyond LLM Serving: Characterizing Vision-Language-Action Workloads for Embodied AI System Design
+
+- ID: `VLA-0219`
+- Published: 2026-10-04 · Updated: 2026-10-10
+- Authors: Seonghun Jung; Sieun Moon; Jiyoung Jeong; Jimin Lee; Jaehyuk Huh
+- Venue: ASPLOS 2027 (to appear; arXiv preprint)
+- Links: [Paper](https://arxiv.org/abs/2610.05062) · [PDF](https://arxiv.org/pdf/2610.05062)
+- Tags: supporting-research, inference-efficiency, benchmark, edge-deployment, energy, closed-loop
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+既存の4種のVLAをサーバGPUとロボット搭載向けSoCで測定するシステム研究。推論段階ごとの計算・メモリ律速と、閉ループ実行時の精度・速度・エネルギーの関係を調べる。新しいロボット方策の提案ではない。
+
+**主な貢献**
+
+段階別roofline解析とDVFSの測定を、観測の古さに伴う成功率変化まで接続する。LIBERO上の非同期実行を比較し、運用制約に共通する単一の最適設定はないことを示す。段階別DVFSの利得は切替コストを除く評価で、実機ロボット検証ではない。
+
+**確認記録**
+
+- Checked: 2026-10-17 · Review: verified
+- arXiv v1 2026-10-04, v2 2026-10-10; abs says ASPLOS 2027 to appear and links related DOI https://doi.org/10.1145/3845814.3850089. Selected v2 sections 3-6 methods, results and limitations checked; no numerical reproduction or figure-pixel verification. Profiles GR00T N1.6, pi0.5, OpenVLA-OFT and Cosmos-Policy on RTX 4090, Jetson Thor and AGX Orin; 40 LIBERO tasks and 43,200 simulated closed-loop episodes. No new model is trained; existing official fine-tuned checkpoints are evaluation inputs, not this work's new weight release. Study-specific code/project and implementation license not identified in selected paper or exact-title/arXiv/author searches; unknown is not a closed-source claim. Paper CC-BY-4.0 is not a code license. Energy boundaries differ across platforms; phase-DVFS evaluation excludes switching overhead and no scheduler is implemented.
 
 ### TUCO: Curating Simulation Demonstrations for Sim-to-Real Robot Policy Co-Training
 

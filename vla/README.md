@@ -3,7 +3,7 @@
 
 [← データベース](../README.md)
 
-118 records · 正本: [papers.csv](../papers.csv)
+119 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
@@ -11,7 +11,7 @@
 | [reasoning-system2](reasoning-system2.md) | 6 |
 | [action-system1](action-system1.md) | 32 |
 | [memory-temporal](memory-temporal.md) | 11 |
-| [adaptation](adaptation.md) | 46 |
+| [adaptation](adaptation.md) | 47 |
 
 ## 論文
 
@@ -61,6 +61,7 @@
 - 2026-10-05 · [VLA-ZO: Fast Zeroth-Order Adaptation for Vision-Language-Action Models](adaptation.md) · `VLA-0154`
 - 2026-10-05 · [When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models](action-system1.md) · `VLA-0153`
 - 2026-10-05 · [How (and How Not) to Use Data Augmentation in VLA Post-Training](adaptation.md) · `VLA-0152`
+- 2026-10-04 · [Beyond LLM Serving: Characterizing Vision-Language-Action Workloads for Embodied AI System Design](adaptation.md) · `VLA-0219`
 - 2026-10-04 · [TUCO: Curating Simulation Demonstrations for Sim-to-Real Robot Policy Co-Training](adaptation.md) · `VLA-0205`
 - 2026-10-04 · [Vela: Scaling Vision-Language-Action Models with Adaptive Action Curve Parametrization](action-system1.md) · `VLA-0151`
 - 2026-10-02 · [ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation](adaptation.md) · `VLA-0150`

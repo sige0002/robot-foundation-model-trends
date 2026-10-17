@@ -3,19 +3,20 @@
 
 [← データベース](../README.md)
 
-122 records · 正本: [papers.csv](../papers.csv)
+123 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 37 |
 | [dynamics](dynamics.md) | 14 |
-| [action-coupling](action-coupling.md) | 38 |
+| [action-coupling](action-coupling.md) | 39 |
 | [planning](planning.md) | 24 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
 - 2026-10-14 · [Complementary Future Token Pruning for World Action Models](action-coupling.md) · `WAM-0124`
+- 2026-10-13 · [Thinker-WM: A Unified World Model with Shared Multimodal Representations for Embodied Intelligence](action-coupling.md) · `WAM-0126`
 - 2026-10-13 · [SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation](planning.md) · `WAM-0122`
 - 2026-10-13 · [Grid or Nodes? Probing Object Memory in World Models Under Partial Observability](world-representation.md) · `WAM-0121`
 - 2026-10-13 · [UniW(A)M: A Unified Mixture-of-Experts Framework for World and World-Action Models](action-coupling.md) · `WAM-0120`
