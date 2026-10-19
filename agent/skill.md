@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
+
+### InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration
+
+- ID: `AGENT-0164`
+- Published: 2026-10-16
+- Authors: Haoyang Luo; Junhao Qin; Jingyan Cao; Yi Huang; Guangjie Yang; Xiaoyu Chen; Haotao Lu; Tianxiang Gui; Ye Shi; Jingya Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.23098) · [PDF](https://arxiv.org/pdf/2610.23098) · [Project](https://instagent01.github.io/)
+- Tags: multi-robot, behavior-tree, procedural-memory, recursive-self-improvement, handoff-verification
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+異種ロボットの能力と引継ぎ条件を実行可能な行動木にまとめるROS 2ベースのシステム。実行フィードバックで協調手順を修正し、検証済みの行動木と適用条件の文書を再利用する。共有画像・説明・位置・時刻メモリが計画と診断を支える。
+
+**主な貢献**
+
+G1・Go2・ALOHAの固定チームで20課題、3モデル、4条件の計480実機試行を実施。更新済み経験は経験なしの行動木に比べ成功率を15〜25ポイント改善と著者報告。評価中は経験ライブラリを固定しており、モデル重みの自己更新ではない。新しいロボットチームや長期運用への転移は今後の課題。
+
+**確認記録**
+
+- Checked: 2026-10-19 · Review: verified
+- 2026-10-06〜19の選択増分調査。本文前にcanonical arXiv/version/DOI alias・正規化/近似題名を既存355件と照合し一致なし。arXiv履歴はv1=2026-10-16のみ: https://arxiv.org/abs/2610.23098 。本文III・IVで手法、凍結経験ライブラリ、同一回復予算、実機評価範囲を確認: https://arxiv.org/html/2610.23098v1 。公式projectはHTTP 200で確認。配信UIはCode Coming Soon、公的repo URL未確認と明記: https://instagent01.github.io/assets/site.js 。公開実装は未提供と明示されるためcode\_status=unavailable。実装ライセンスと配布重みは未確認でunknown。論文のarXivライセンスを実装へ転用しない。 実行・数値再現なし。 E0→E2の差は再利用と改訂保持の複合差で、改訂保持を狭く比較するE1→E2は3モデルで10/17.5/15ポイント。
 
 ### MUCO: A Mani-Unit-Structured Manipulation Framework for Compositional Long-Horizon Robot Tasks
 

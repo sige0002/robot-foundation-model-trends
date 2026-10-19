@@ -3,18 +3,19 @@
 
 [← データベース](../README.md)
 
-45 records · 正本: [papers.csv](../papers.csv)
+46 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [vla-agent](vla-agent.md) | 20 |
-| [vla-wam](vla-wam.md) | 19 |
+| [vla-wam](vla-wam.md) | 20 |
 | [wam-agent](wam-agent.md) | 5 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
 
 ## 論文
 
 - 2026-10-14 · [Atomic-WAM: Execution-Grounded Atomic-Motion Reasoning for World Action Models](wam-agent.md) · `WAM-0123`
+- 2026-10-14 · [What Matters for World Modeling in Vision-Language-Action Models?](vla-wam.md) · `HYBRID-0143`
 - 2026-10-14 · [ObjDream: Guiding Vision-Language-Action Models with Object-Level Understanding and Future State Prediction](vla-wam.md) · `HYBRID-0141`
 - 2026-10-13 · [Let the Mind Conceive, Let the Hand Achieve: Following Multimodal Instructions for Long-Horizon Robotic Manipulation](vla-agent.md) · `HYBRID-0140`
 - 2026-10-13 · [WAVE-0: Bridging VLA Policies and WAMs with Lightweight Latent Future Prediction](vla-wam.md) · `HYBRID-0139`

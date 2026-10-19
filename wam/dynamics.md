@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-14 records · Published date 降順（同日 ID 降順）
+15 records · Published date 降順（同日 ID 降順）
 
 ### DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training
 
@@ -229,6 +229,31 @@ DROID-3Dの幾何校正と、点地図補助損失を備えた動画世界モデ
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Implementation license checked: MIT; source: https://github.com/lucas-maes/le-wm.
+
+### Learning Interactive Real-World Simulators
+
+- ID: `WAM-0131`
+- Published: 2023-10-09 · Updated: 2024-09-26
+- Authors: Sherry Yang; Yilun Du; Kamyar Ghasemipour; Jonathan Tompson; Leslie Kaelbling; Dale Schuurmans; Pieter Abbeel
+- Venue: ICLR 2024
+- Links: [Paper](https://arxiv.org/abs/2310.06114) · [PDF](https://arxiv.org/pdf/2310.06114) · [Project](https://universal-simulator.github.io/unisim/)
+- Tags: UniSim, action-conditioned-video, generative-simulator, sim-to-real, supporting-foundation
+- Model size: 5.6B (UniSim simulator; policy sizes are separate)
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+画像・動画・ロボット操作などの異種データを統合し、言語指示や低レベル制御に対する未来の観測動画を生成するUniSim。生成した経験を上位VLM方策の学習や低レベル方策の強化学習に用い、実機への転移を検証する。
+
+**主な貢献**
+
+異なる形式の行動を共通の条件表現へ変換し、有限の観測履歴から動画を予測する拡散モデルを自己回帰的に接続する。生成環境内の方策改善を示す基礎研究であり、物理的正確性や未知機体への一般化を保証しない。
+
+**確認記録**
+
+- Checked: 2026-10-19 · Review: verified
+- 直近窓より前の選択的基礎研究補充。本文前にcanonical arXiv、version/10.48550/arXiv DOI alias、正規化/近似題名を既存355件と照合し一致なし。arXiv履歴v1 2023-10-09、v3 2024-09-26。本文 https://arxiv.org/html/2310.06114v3 の2節・4.1–4.2節・6節を選読。主な限界は不可能な指示への幻覚、有限履歴、未知機体、視覚以外の力等の未表現。Table 3の81%は生成動画を定性的に判定したシミュレーション48課題で実機成功率ではない。公式projectのリンク先を確認。専用実装・checkpoint実file・実装LICENSEは個別に未確認のため各unknown。論文/サイトのlicenseを実装に流用しない。PDF hrefのみ確認、PDF/weights/data未download、実行再現なし。
 
 ### Denoised MDPs: Learning World Models Better Than the World Itself
 

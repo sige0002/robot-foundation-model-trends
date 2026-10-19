@@ -3,7 +3,7 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
 
 ### SEAR: Self-Evolving Agentic Robotics
 
@@ -29,6 +29,31 @@
 
 - Checked: 2026-10-15 · Review: needs-review
 - arXiv v1・方法/結果: https://arxiv.org/abs/2610.18792 ; https://arxiv.org/html/2610.18792v1 。公式project: https://sear.bot/ 。論文はコード公開を記すが公式repo https://github.com/Self-Evolving-Agentic-Robotics/SEAR はREADME・assets・MIT LICENSEのみで「code is on its way」と明記。実装未公開なのでcode\_url空欄、MIT表示を未公開実装のライセンス証拠にしない。後日repoに実装/重みが入ったかと適用ライセンスを再確認。
+
+### Can a Frontier VLM Serve as a Robot Policy for Memory-Dependent Manipulation?
+
+- ID: `AGENT-0163`
+- Published: 2026-10-12 · Updated: 2026-10-16
+- Authors: Jack B. Jedlicki; Amish Sethi; Heng Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.17350) · [PDF](https://arxiv.org/pdf/2610.17350) · [Code](https://github.com/jackbjed/embodied-astra-robomme) · [Project](https://embodied-astra.github.io/)
+- Tags: frozen-VLM, full-context, waypoint-control, RoboMME, memory-evaluation
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+凍結したGPT-6-Astraに観測画像と過去の応答をエピソード全体で保持させ、手先ウェイポイントとグリッパ指令を直接生成する。RoboMMEの時間・空間・物体・手続き記憶を要する16課題で、専用学習なしの制御能力を検証する。
+
+**主な貢献**
+
+全800試行の単一実行で737成功（92.1%）という能力ベースラインと、全63失敗の監査を提示。人間参照値や既存方策とは実行インターフェースが異なり、記憶チャネルの寄与を分離していない。テスト分割を用いた設定調整があり、実機・実時間制御への一般化は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-19 · Review: verified
+- 2026-10-06〜19の選択増分調査。本文前にcanonical arXiv/version/DOI alias・正規化/近似題名を既存355件と照合し一致なし。arXiv履歴でv1=2026-10-12、v2=2026-10-16を確認。本文Setup・Protocol・Limitationsを確認: https://arxiv.org/html/2610.17350v2 。公式実装のharness/astra\_waypoint\_eval\_v3.pyと結果ログを確認。実装LICENSEはMIT: https://raw.githubusercontent.com/jackbjed/embodied-astra-robomme/main/LICENSE 。GPT-6-AstraはAPI利用で新規学習なし、公開チェックポイントは確認できず重みはunknown。APIの固定日付スナップショットはなく、シミュレータは推論中に停止する。 実行・数値再現なし。 確認時code commit 79dcc7f73f536948cb039103d3fc5e722d689207。
 
 ### What Should Embodied Agents Remember? Benchmarking and Evaluating Memory Modality for Embodied Agents
 

@@ -3,19 +3,20 @@
 
 [← データベース](../README.md)
 
-125 records · 正本: [papers.csv](../papers.csv)
+128 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 37 |
-| [dynamics](dynamics.md) | 14 |
-| [action-coupling](action-coupling.md) | 40 |
+| [dynamics](dynamics.md) | 15 |
+| [action-coupling](action-coupling.md) | 42 |
 | [planning](planning.md) | 25 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
 - 2026-10-14 · [Complementary Future Token Pruning for World Action Models](action-coupling.md) · `WAM-0124`
+- 2026-10-13 · [Box-WAM: Box Trajectories as Compact State Representations for World Action Models](action-coupling.md) · `WAM-0129`
 - 2026-10-13 · [Thinker-WM: A Unified World Model with Shared Multimodal Representations for Embodied Intelligence](action-coupling.md) · `WAM-0126`
 - 2026-10-13 · [SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation](planning.md) · `WAM-0122`
 - 2026-10-13 · [Grid or Nodes? Probing Object Memory in World Models Under Partial Observability](world-representation.md) · `WAM-0121`
@@ -24,6 +25,7 @@
 - 2026-10-13 · [WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions](world-representation.md) · `WAM-0118`
 - 2026-10-13 · [ForceWAM: Decoupling Future and Response Learning from Demo and Play Data for Contact-Rich Manipulation](action-coupling.md) · `WAM-0117`
 - 2026-10-13 · [LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts](action-coupling.md) · `WAM-0116`
+- 2026-10-12 · [RAP-WAM: Learning World-Action Models through Predictive Rehearsal and Action Perturbations](action-coupling.md) · `WAM-0130`
 - 2026-10-10 · [CAG-WAM: Causal Action-Gain World Action Models for Robot Manipulation](planning.md) · `WAM-0128`
 - 2026-10-09 · [What Visual Representations Do World Action Models Need?](world-representation.md) · `WAM-0114`
 - 2026-10-09 · [LeapBot-JAC: Joint Action Chains for World Action Models](action-coupling.md) · `WAM-0113`
@@ -109,6 +111,7 @@
 - 2024-03-25 · [Learning Action-based Representations Using Invariance](action-coupling.md) · `WAM-0017`
 - 2024-02-15 · [Revisiting Feature Prediction for Learning Visual Representations from Video](world-representation.md) · `WAM-0007`
 - 2023-10-25 · [TD-MPC2: Scalable, Robust World Models for Continuous Control](planning.md) · `WAM-0039`
+- 2023-10-09 · [Learning Interactive Real-World Simulators](dynamics.md) · `WAM-0131`
 - 2023-06-07 · [Object-Centric Learning for Real-World Videos by Predicting Temporal Feature Similarities](world-representation.md) · `WAM-0030`
 - 2023-06-05 · [LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning](planning.md) · `WAM-0049`
 - 2023-04-14 · [DINOv2: Learning Robust Visual Features without Supervision](world-representation.md) · `WAM-0019`

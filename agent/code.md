@@ -5,10 +5,10 @@
 
 16 records · Published date 降順（同日 ID 降順）
 
-### EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence
+### EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence
 
 - ID: `AGENT-0156`
-- Published: 2026-10-13
+- Published: 2026-10-13 · Updated: 2026-10-14
 - Authors: Wenyi Li; Yizhe Chi; Youjie Zheng; Chunyu Liu; Xiaoqiu Wang; Mingju Gao; Zheng Jiang; Deyao Hong; Calvin Xiao; Kaisen Yang; Qinhuai Na
 - Venue: arXiv
 - Links: [Paper](https://arxiv.org/abs/2610.18867) · [PDF](https://arxiv.org/pdf/2610.18867) · [Code](https://github.com/Einsia/EmbodiedEvo) · [Project](https://lab.einsia.ai/embodiedevo/)
@@ -27,8 +27,8 @@
 
 **確認記録**
 
-- Checked: 2026-10-15 · Review: verified
-- arXiv v1・本文: https://arxiv.org/abs/2610.18867 ; https://arxiv.org/html/2610.18867v1 。公式project: https://lab.einsia.ai/embodiedevo/ 。公式repoにorchestrator等の実装を確認: https://github.com/Einsia/EmbodiedEvo 。READMEはproject-wide license未選択と明記、同梱第三者レシピのApache-2.0を本実装へ転用不可。重みの公開は未確認。後日licenseと重みを再確認。
+- Checked: 2026-10-19 · Review: verified
+- arXiv v1・本文: https://arxiv.org/abs/2610.18867 ; https://arxiv.org/html/2610.18867v1 。公式project: https://lab.einsia.ai/embodiedevo/ 。公式repoにorchestrator等の実装を確認: https://github.com/Einsia/EmbodiedEvo 。READMEはproject-wide license未選択と明記、同梱第三者レシピのApache-2.0を本実装へ転用不可。重みの公開は未確認。後日licenseと重みを再確認。 2026-10-19追記: arXivのv1 absと現行absの正規ID 2610.18867を照合し、旧題EmbodiedEvo: Self-improving Coding Agents for Physical Intelligenceから現題への変更とv2=2026-10-14を確認: https://arxiv.org/abs/2610.18867v1 ; https://arxiv.org/abs/2610.18867 。今回の追記は書誌・改訂履歴の確認のみで、v2本文の変更内容を再レビューしたものではない。既存の概要・貢献、初出日、安定IDは維持。公式READMEでは実装全体のlicense未選択を再確認。
 
 ### Fly-by-Code: Embodied Coding Agents for Aerial Manipulation with Active Visual and Physical Feedback
 

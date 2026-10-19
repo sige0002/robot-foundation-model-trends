@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-26 records · Published date 降順（同日 ID 降順）
+27 records · Published date 降順（同日 ID 降順）
+
+### Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models
+
+- ID: `VLA-0225`
+- Published: 2026-10-15
+- Authors: Sangwu Park; Wonjoong Kim; Yeonjun In; Chanyoung Park
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.21251) · [PDF](https://arxiv.org/pdf/2610.21251) · [Code](https://github.com/sangwu99/how-level-vla-Arxiv)
+- Tags: instruction-grounding, How-level-instructions, SIMPLER-IN, benchmark, offline-correction, online-intervention, segment-level-supervision
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+何をするかを指定するWhat-levelと、経路・把持部位・配置位置など実行方法を指定するHow-levelを分け、5系統のVLAをoffline訂正とonline介入で診断する。BridgeData V2の区間ごとに指示を追加して学習し、視覚だけでは決まらない条件を言語で与えるSIMPLER-INを構築した。
+
+**主な貢献**
+
+通常のタスク成功と実行方法への言語追従を分離して評価する診断とベンチマーク。区間指示は行動の方向応答を改善するが成功率は一貫して上がらず、SIMPLER-INの厳密な経路条件での追従率は0%、学習分布外の把持・配置指示への追従はほぼ偶然水準にとどまると報告した。
+
+**確認記録**
+
+- Checked: 2026-10-19 · Review: verified
+- arXiv v1初稿2026-10-15 04:45:21 UTC、改訂なし。本文前に既存355件とcanonical arXiv/DOI alias・NFKC/casefold/Greek/句読点正規化題名、validate\_csv.py --candidate/--titleを照合し一致なし。https://arxiv.org/html/2610.21251v1 §3–6、Limitationsを選読。5系統はπ0、InternVLA-M1、QwenGR00T、InstructVLA、LangForce。評価はSIMPLER内のWidowX・BridgeData V2・短いpick-and-placeに限定され、一般的な全VLA能力の否定には拡張しない。SIMPLER-INは3課題・各24 episode、成功率と成功episode内の指示追従率を別々に測る。公式repo immutable commit 478fad54689126e4303bdc6bcb3c8e064e5934abでsimpler\_in/envs/simpler\_in\_envs.py等の実装とenriched\_instructions.zipを確認。完全recursive treeにLICENSE/COPYING/NOTICEがなくREADMEにも実装license記載なしのためlicense\_status=unspecified、open\_source=unknown。研究固有のfine-tuned重みの実file配布先は確認できずunknown。論文CC-BY-4.0を実装licenseへ流用しない。実行再現なし。
 
 ### What Should Robot Policies Learn to Predict? Rethinking Supervision Targets in Vision-Language-Action Learning
 

@@ -3,26 +3,28 @@
 
 [← データベース](../README.md)
 
-62 records · 正本: [papers.csv](../papers.csv)
+64 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [planning](planning.md) | 14 |
 | [code](code.md) | 16 |
-| [skill](skill.md) | 7 |
+| [skill](skill.md) | 8 |
 | [tool](tool.md) | 12 |
-| [memory](memory.md) | 5 |
+| [memory](memory.md) | 6 |
 | [replanning](replanning.md) | 8 |
 
 ## 論文
 
+- 2026-10-16 · [InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration](skill.md) · `AGENT-0164`
 - 2026-10-14 · [MUCO: A Mani-Unit-Structured Manipulation Framework for Compositional Long-Horizon Robot Tasks](skill.md) · `AGENT-0161`
 - 2026-10-14 · [Towards Agentic Robots: Model, Data, Environment, and Harness](planning.md) · `AGENT-0160`
 - 2026-10-13 · [I2O2I-Nav: A Benchmark with a Modular Agent for Long-Horizon Indoor-to-Outdoor-to-Indoor Navigation](replanning.md) · `AGENT-0159`
 - 2026-10-13 · [SEAR: Self-Evolving Agentic Robotics](memory.md) · `AGENT-0158`
 - 2026-10-13 · [AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving](replanning.md) · `AGENT-0157`
-- 2026-10-13 · [EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence](code.md) · `AGENT-0156`
+- 2026-10-13 · [EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence](code.md) · `AGENT-0156`
 - 2026-10-13 · [ChunkAct: Action Chunking for Agentic Robotics](skill.md) · `AGENT-0155`
+- 2026-10-12 · [Can a Frontier VLM Serve as a Robot Policy for Memory-Dependent Manipulation?](memory.md) · `AGENT-0163`
 - 2026-10-09 · [JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents](tool.md) · `AGENT-0152`
 - 2026-10-09 · [BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation](skill.md) · `AGENT-0151`
 - 2026-10-08 · [What Should Embodied Agents Remember? Benchmarking and Evaluating Memory Modality for Embodied Agents](memory.md) · `AGENT-0154`

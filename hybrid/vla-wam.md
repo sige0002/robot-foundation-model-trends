@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-19 records · Published date 降順（同日 ID 降順）
+20 records · Published date 降順（同日 ID 降順）
+
+### What Matters for World Modeling in Vision-Language-Action Models?
+
+- ID: `HYBRID-0143`
+- Published: 2026-10-14
+- Authors: Qisen Ma; Yixiang Chen; Yuan Xu; Peiyan Li; Jiabing Yang; Kai Wang; Jianhua Yang; Jianlou Si; Jun Huang; Jing Liu; Nianfeng Liu; Yan Huang; Liang Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.19825) · [PDF](https://arxiv.org/pdf/2610.19825) · [Project](https://dylanmqs.github.io/WM-in-VLAs/)
+- Tags: world-model-integration-study, implicit-future-alignment, explicit-future-query, MoT-future-expert, external-world-predictor, representation-paradigm-interaction, OOD, few-shot
+- Model size: Qwen testbed deployment: 2.608B baseline/Align/Query, 2.952B MoT, 2.994B External; pi0.5 also evaluated
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAへの世界予測の統合法4種と表現6種を共通学習枠組みで比較する実証研究。Qwen3-VL-2B系とπ0.5を使い、ID/OOD・長期・動的・少数実演・実機で、未来教師と方策構造の組合せを調べる。
+
+**主な貢献**
+
+意味的2D表現の横断的有効性と、表現順位が統合法で反転することを示す。実機4課題・各40試行でaction-only平均45.0%に対し各統合法56.3–73.8%。普遍的な最良構造はなく、backbone比較は規模・encoder・action headも交絡するためpretraining単独の因果効果とはしない。
+
+**確認記録**
+
+- Checked: 2026-10-19 · Review: verified
+- 2026-10-06〜19の選択増分調査。本文前にcanonical arXiv/version/DOI alias・正規化/近似題名を既存355件と照合し一致なし。初稿10-14・著者・v1のみの履歴はarXiv absで確認。方法§3、評価§4、計算規模A.6、追加検証B.1/B.5、実機C.6を精読: https://arxiv.org/html/2610.19825v1 。world modelingの範囲は実演軌跡下のtask-conditioned未来表現予測で、一般的な反実仮想simulatorの検証ではない。公式projectはdemoと研究説明のみ、code/weightsリンクは確認できず、実装licenseと重みmetadataはunknown。論文CC BY 4.0から実装licenseを推定しない。 実行・数値再現なし。
 
 ### ObjDream: Guiding Vision-Language-Action Models with Object-Level Understanding and Future State Prediction
 

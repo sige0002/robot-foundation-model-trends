@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-11 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### REKI: Registering Knowledge in VLAs
+
+- ID: `VLA-0224`
+- Published: 2026-10-15
+- Authors: Juliette Marrie; Paul Pacaud; Adrien Ramanana Rahary; Shizhe Chen; Moritz Böhle
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.22178) · [PDF](https://arxiv.org/pdf/2610.22178) · [Code](https://github.com/kyutai-labs/reki) · [Project](https://kyutai.org/reki/)
+- Tags: REKI, register-memory, KV-cache, flow-matching, public-data-pretraining, Qwen3.5, LIBERO-Plus, RoboTwin, RoboCasa365
+- Model size: 2.4B (2.2B VLM + 0.2B action expert)
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+公開のロボット・一人称人間動画・視覚言語データのみで事前学習した2.4B VLA。Qwen3.5-2Bとflow-matching行動expertを組み合わせ、フレームごと32個のregister tokenをexpert内のKV cacheへ残す。通常は1秒間隔の3フレームを使い、過去画像をVLMへ再入力せず短い履歴を行動生成へ渡す。
+
+**主な貢献**
+
+行動ノイズやflow時刻に依存しないregisterをdenoising間・フレーム間で再利用する記憶機構と、データ整備から実機配備までの実装を提示。原著条件でLIBERO-Plus 90.4%、RoboTwin Clean2Rand 65.8%、RoboCasa365 38.4%。同じ重みから履歴を除くとRoboTwinの往復振動episodeが4.1%から14.8%に増えた。
+
+**確認記録**
+
+- Checked: 2026-10-19 · Review: verified
+- arXiv v1初稿2026-10-15 16:34:06 UTC、改訂なし。本文前に既存355件とcanonical arXiv/DOI alias・NFKC/casefold/Greek/句読点正規化題名、およびvalidate\_csv.py --candidate/--titleを照合し一致なし。https://arxiv.org/html/2610.22178v1 §4、6–7、Appendix D.3–4を選読。比較モデルの事前学習data・計算量は一致せず、21.8 ms/chunkはH100・2画像・compiled経路の値。実機はUR5の5課題、各10評価episodeで部分点を含む。公式実装reki/policy/modeling.pyとMIT LICENSE本文、Apache-2.0由来のNOTICEを確認。GitHub確認commit 8823011f76358e4dd4d800e9182251b00c157fc1（2026-10-19）。公式HF https://huggingface.co/kyutai/reki-2b のimmutable revision c6b747e9c8ab046f41917870f966a0c12eb7792eでmodel.safetensors 4814273856 bytes、ema.safetensors 8608097048 bytesとLFS oidをtree APIで確認。重みはCC-BY-NC-SA-4.0で商用自由利用ではなく、上流data/model条件は別。新規state layoutには入力層の学習、推論周期には学習時strideとの整合が必要。download・実行再現は未実施。
 
 ### Physical Time as a Missing Dimension of Robot Policy Memory Dynamics
 

@@ -3,18 +3,20 @@
 
 [← データベース](../README.md)
 
-123 records · 正本: [papers.csv](../papers.csv)
+125 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 26 |
+| [perception-representation](perception-representation.md) | 27 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
 | [action-system1](action-system1.md) | 33 |
-| [memory-temporal](memory-temporal.md) | 11 |
+| [memory-temporal](memory-temporal.md) | 12 |
 | [adaptation](adaptation.md) | 47 |
 
 ## 論文
 
+- 2026-10-15 · [Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models](perception-representation.md) · `VLA-0225`
+- 2026-10-15 · [REKI: Registering Knowledge in VLAs](memory-temporal.md) · `VLA-0224`
 - 2026-10-15 · [What Should Robot Policies Learn to Predict? Rethinking Supervision Targets in Vision-Language-Action Learning](perception-representation.md) · `VLA-0223`
 - 2026-10-15 · [VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models](perception-representation.md) · `VLA-0221`
 - 2026-10-14 · [FoveaVLA: Foveation Actions Replace the Wrist Camera in VLAs](perception-representation.md) · `VLA-0218`

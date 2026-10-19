@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-40 records · Published date 降順（同日 ID 降順）
+42 records · Published date 降順（同日 ID 降順）
 
 ### Complementary Future Token Pruning for World Action Models
 
@@ -29,6 +29,31 @@
 
 - Checked: 2026-10-16 · Review: verified
 - arXiv absの履歴でv1初稿2026-10-14（後続改訂なし）、全著者、PDFリンクを確認。PDFはweb取得上限を超えたため、一次HTML v1の3–4節とAppendix A.1を読んで手法・設定を検証: https://arxiv.org/html/2610.19957v1 。評価はCosmos3系checkpointを用いたRoboLab、RoboCasa、Franka実機3課題。追加学習不要はpruning処理についてであり、RoboCasa/実機用base policyはfine-tuneされている。精密phase判定の閾値は評価環境別。abs/HTMLに公式project・実装・重みの公開先を確認できず、タイトル/CF-Pruneによる限定検索でも公式配布先未確認のためURL空欄・各statusはunknown。arXiv論文ライセンスを実装ライセンスと混同しない。
+
+### Box-WAM: Box Trajectories as Compact State Representations for World Action Models
+
+- ID: `WAM-0129`
+- Published: 2026-10-13
+- Authors: Qinxi Yu; Wenzhou Ding; Gloria X. Wang; Albert J. Zhai; Shenlong Wang
+- Venue: CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2610.17526) · [PDF](https://arxiv.org/pdf/2610.17526) · [Code](https://github.com/quincy-u/box-wam) · [Project](https://box-wam.github.io/)
+- Tags: BoxWAM, object-centric-futures, oriented-bounding-box, rectified-flow, state-guided-attention, pi0.5-integration
+- Model size: 3.35B (pi0.5 + BoxWAM, 27,500-demo setting); standalone unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+未来動画全体の代わりに、操作対象の3D有向boxの8頂点を画像平面へ投影した軌跡と行動を共同生成する。状態から行動への一方向attentionで物体の未来運動を方策へ渡し、単一課題モデルとπ0.5への追加を検証する。
+
+**主な貢献**
+
+2,500実演のRoboTwin多課題比較で、π0.5への追加によりclean成功52.6→61.5%、randomized成功26.9→34.0%、遅延55.3→57.7 msを報告。学習用box注釈は追跡・RGB-D・既知mesh等に依存し、強い遮蔽や変形物体への適用は未確立。
+
+**確認記録**
+
+- Checked: 2026-10-19 · Review: verified
+- 2026-10-06〜19の選択増分調査。本文前にcanonical arXiv/version/DOI alias・正規化/近似題名を既存355件と照合し一致なし。初稿・著者・v1のみの履歴はarXiv abs、方法§3・評価§4・制約§6は https://arxiv.org/html/2610.17526v1 で確認。CoRL 2026はPDF headerと公式projectに明記。実装とMIT LICENSEを確認: https://github.com/quincy-u/box-wam/blob/main/LICENSE 。code release 2026-10-11、最新確認commit 7afa9c62884e7d23851034200628bc69cdd60731 (10-15)。READMEの重み候補 https://huggingface.co/quincyu/pi05\_robotwin\_obb\_eef と https://huggingface.co/quincyu/box-wam-standalone はAPIが双方401で実ファイルmetadataを確認できずweights=unknown。第三者noticeはπ0.5派生重みにGemma条項、別取得DINOv3重みに専用条項を明記し、実装MITと区別する。 実行・数値再現なし。 遅延はRTX Pro 6000 Blackwell・既定10 denoising stepの条件。
 
 ### Thinker-WM: A Unified World Model with Shared Multimodal Representations for Embodied Intelligence
 
@@ -154,6 +179,31 @@ RGB・深度・ロボット行動を共通の動的表現で生成する世界�
 
 - Checked: 2026-10-15 · Review: verified
 - https://arxiv.org/abs/2610.18873 v1 only, submitted 2026-10-13 UTC; https://arxiv.org/html/2610.18873v1 §§3-4 verifies method, setup and author-reported results. Official https://loop-wam.github.io/ links public https://github.com/loop-wam/LoopWAM with training/evaluation source files. Repo root has no observed LICENSE; implementation OSI license unverified (paper CC license is separate). Repo README claims checkpoints; https://huggingface.co/datasets/loop-wam/loopwam/tree/main lists checkpoint-named folders but nested checkpoint files could not be opened, so weights\_status remains unknown; recheck exact .pt files. arXiv PDF link was opened. No independent reproduction of benchmark metrics.
+
+### RAP-WAM: Learning World-Action Models through Predictive Rehearsal and Action Perturbations
+
+- ID: `WAM-0130`
+- Published: 2026-10-12 · Updated: 2026-10-15
+- Authors: Yuanpeng He; Ceyao Zhang; Fangjing Li; Kefei Zhu; Lijian Li; Yueheng Li; Tianjia He; Wenpin Jiao; Zhi Jin; Yaodong Yang; Yuanpei Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.16443) · [PDF](https://arxiv.org/pdf/2610.16443v2) · [Code](https://github.com/heyuanpengpku/RAP-WAM) · [Project](https://rapwam.github.io/)
+- Tags: RAP-WAM, predictive-rehearsal, action-response-credit, future-supervised-queries, coupled-action-projection, agent-guided-post-training, task-policy-selection
+- Model size: Wan2.2-TI2V-5B backbone; total unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+動画事前学習backboneで未来観測と行動を学び、生成観測で次区間を練習しつつ実演の正解を維持する。行動摂動への予測応答・誤差・過去の誤差priorから時空間の教師重みを作り、未来教師queryとCAPで行動へ接続する。
+
+**主な貢献**
+
+42 RoboDojo課題で固定base成功12.85%、agent精緻化と課題別checkpoint選択を含む系15.62%を報告。15実機課題の89.00%は課題macro平均で試行数・不確実性は未提示。応答重みの因果的有効性や独立testでのpolicy選択は未確立。
+
+**確認記録**
+
+- Checked: 2026-10-19 · Review: verified
+- 2026-10-06〜19の選択増分調査。本文前にcanonical arXiv/version/DOI alias・正規化/近似題名を既存355件と照合し一致なし。初稿10-12、v2改訂10-15はarXiv abs。方法§3、評価§4、Appendix A/Hを確認: https://arxiv.org/html/2610.16443v2 。PDF linkはarXivが12,648,248 bytesを返したが取得上限超過、HTMLを精読。公式MIT実装を10-18公開、確認commit cd32fba405b26f8c3e4ee29120ffc7432a126f47: https://github.com/heyuanpengpku/RAP-WAM/blob/main/LICENSE 。公開範囲はbase学習と28D実機training workflowで、robot制御・sim評価・agent介入・課題別policy保持・学習済みtask checkpointを含まない: https://github.com/heyuanpengpku/RAP-WAM/blob/main/docs/REPRODUCIBILITY.md 。公開recipeは論文のbatch/split/cache/選択法と差があり再現実証ではない。task重みの実metadata未確認、外部Wan重みを代用せずunknown。 実行・数値再現なし。 RoboDojoの12.85/15.62%は5能力群の平均を等重み平均した値で、全episodeのpooled成功率ではない。
 
 ### LeapBot-JAC: Joint Action Chains for World Action Models
 
