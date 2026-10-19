@@ -3,8 +3,8 @@
 
 ロボット基盤モデルとその周辺技術の研究データベース。CSV を唯一の正本として、分類別の Markdown を自動生成します。VLA / WAM / Agent / Hybrid の技術地図を継続的に育てるための公開リサーチ基盤です。
 
-- 正本: [papers.csv](papers.csv) · 351 records
-- Last updated: 2026-10-17（source_checked の最大値。ビルド日時には依存しません）
+- 正本: [papers.csv](papers.csv) · 355 records
+- Last updated: 2026-10-18（source_checked の最大値。ビルド日時には依存しません）
 - スキーマ: [schema.json](schema.json) · [フィールド定義](SCHEMA.md)
 - 更新手順: [AGENTS.md](AGENTS.md)
 - ソフトウェアのライセンスは未選定です。各論文・コード・PDF の権利は各権利者に帰属します
@@ -13,11 +13,11 @@
 
 | 分類 | 論文数 |
 | --- | ---: |
-| [VLA · Vision–Language–Action](vla/README.md) | 121 |
-| [WAM · World / Action Models](wam/README.md) | 124 |
-| [Agent](agent/README.md) | 61 |
+| [VLA · Vision–Language–Action](vla/README.md) | 123 |
+| [WAM · World / Action Models](wam/README.md) | 125 |
+| [Agent](agent/README.md) | 62 |
 | [Hybrid](hybrid/README.md) | 45 |
-| **合計** | **351** |
+| **合計** | **355** |
 
 件数は実際の CSV 行から計算されます。分類は主な研究貢献に基づく整理で、論文の公式分類や能力保証ではありません。複数分類にまたがる性質は tags と説明に残し、重複登録を避けます。
 
@@ -25,9 +25,9 @@
 
 ### [VLA · Vision–Language–Action](vla/README.md)
 
-- [perception-representation](vla/perception-representation.md) (25)
+- [perception-representation](vla/perception-representation.md) (26)
 - [reasoning-system2](vla/reasoning-system2.md) (6)
-- [action-system1](vla/action-system1.md) (32)
+- [action-system1](vla/action-system1.md) (33)
 - [memory-temporal](vla/memory-temporal.md) (11)
 - [adaptation](vla/adaptation.md) (47)
 
@@ -36,7 +36,7 @@
 - [world-representation](wam/world-representation.md) (37)
 - [dynamics](wam/dynamics.md) (14)
 - [action-coupling](wam/action-coupling.md) (40)
-- [planning](wam/planning.md) (24)
+- [planning](wam/planning.md) (25)
 - [temporal-modeling](wam/temporal-modeling.md) (9)
 
 ### [Agent](agent/README.md)
@@ -44,7 +44,7 @@
 - [planning](agent/planning.md) (14)
 - [code](agent/code.md) (16)
 - [skill](agent/skill.md) (7)
-- [tool](agent/tool.md) (11)
+- [tool](agent/tool.md) (12)
 - [memory](agent/memory.md) (5)
 - [replanning](agent/replanning.md) (8)
 

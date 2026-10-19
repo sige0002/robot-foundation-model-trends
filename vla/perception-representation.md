@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-25 records · Published date 降順（同日 ID 降順）
+26 records · Published date 降順（同日 ID 降順）
+
+### What Should Robot Policies Learn to Predict? Rethinking Supervision Targets in Vision-Language-Action Learning
+
+- ID: `VLA-0223`
+- Published: 2026-10-15
+- Authors: Haitao Shen; Hanyu Liu; Yihan Lin; Huiping Liu; Junbo Cui; Daoheng Li; Yang Li; Jing Zhang; Wenxin Li; Yuan Yao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.21915) · [PDF](https://arxiv.org/pdf/2610.21915)
+- Tags: supervision-allocation, latent-action, future-vision, sample-level-routing, MMDiT
+- Model size: 約2B（本文Table 1の実験モデル）
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+二流MMDiTとサンプル単位routerを用い、固定した学習サンプル予算を行動予測・潜在行動予測・未来視覚表現予測へ配分して比較する。LIBERO・CALVIN・実機4課題で、適切な補助予測は直接行動予測への配分が半分以下でも行動のみの学習を上回ったと報告する。
+
+**主な貢献**
+
+VLAの予測対象と教師信号の配分を明示的な設計変数として比較する。予算一致は学習サンプルの延べ利用回数であり、FLOPsや実時間の一致ではない。
+
+**確認記録**
+
+- Checked: 2026-10-18 · Review: verified
+- 2026-10-05〜2026-10-18の選択増分調査。本文前にcanonical arXiv・正規化/近似題名を既存351件と照合し一致なし。arXiv DOI/version aliasも別論文として扱わない。arXiv一次資料で書誌・初稿日2026-10-15・v1のみの履歴・PDFリンクを確認。本文 https://arxiv.org/html/2610.21915v1 で予算定義とTable 1の約2B表記を選択確認。公式実装・重み・project・実装ライセンスは未確認のためunknown。未来表現は学習用教師信号で、推論時は行動出力を実行するためvlaに分類。実行再現なし。
 
 ### VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models
 

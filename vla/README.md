@@ -3,18 +3,19 @@
 
 [← データベース](../README.md)
 
-121 records · 正本: [papers.csv](../papers.csv)
+123 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 25 |
+| [perception-representation](perception-representation.md) | 26 |
 | [reasoning-system2](reasoning-system2.md) | 6 |
-| [action-system1](action-system1.md) | 32 |
+| [action-system1](action-system1.md) | 33 |
 | [memory-temporal](memory-temporal.md) | 11 |
 | [adaptation](adaptation.md) | 47 |
 
 ## 論文
 
+- 2026-10-15 · [What Should Robot Policies Learn to Predict? Rethinking Supervision Targets in Vision-Language-Action Learning](perception-representation.md) · `VLA-0223`
 - 2026-10-15 · [VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models](perception-representation.md) · `VLA-0221`
 - 2026-10-14 · [FoveaVLA: Foveation Actions Replace the Wrist Camera in VLAs](perception-representation.md) · `VLA-0218`
 - 2026-10-14 · [Physical Time as a Missing Dimension of Robot Policy Memory Dynamics](memory-temporal.md) · `VLA-0217`
@@ -124,6 +125,7 @@
 - 2024-10-31 · [π0: A Vision-Language-Action Flow Model for General Robot Control](action-system1.md) · `VLA-0106`
 - 2024-10-10 · [RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation](action-system1.md) · `VLA-0114`
 - 2024-06-13 · [OpenVLA: An Open-Source Vision-Language-Action Model](adaptation.md) · `VLA-0104`
+- 2024-06-11 · [BAKU: An Efficient Transformer for Multi-Task Policy Learning](action-system1.md) · `VLA-0222`
 - 2024-05-20 · [Octo: An Open-Source Generalist Robot Policy](adaptation.md) · `VLA-0105`
 - 2024-03-04 · [RT-H: Action Hierarchies Using Language](reasoning-system2.md) · `VLA-0113`
 - 2023-10-13 · [Open X-Embodiment: Robotic Learning Datasets and RT-X Models](adaptation.md) · `VLA-0103`

@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-24 records · Published date 降順（同日 ID 降順）
+25 records · Published date 降順（同日 ID 降順）
 
 ### SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation
 
@@ -29,6 +29,31 @@ Latent AutoRollで訓練と推論の履歴ずれを減らし、SkipDistillで教
 
 - Checked: 2026-10-15 · Review: verified
 - https://arxiv.org/abs/2610.18135 v1 only, submitted 2026-10-13 UTC; https://arxiv.org/html/2610.18135v1 §§3-4/Table 1 verifies method, reported comparison, and low-resolution HuRoN protocol. ArXiv HTML supplies PDF href; PDF web parser errored. No official paper-specific code, checkpoints or implementation license verified in paper/abstract and exact-title searches; statuses unknown. Metrics are author-reported, not independently reproduced.
+
+### CAG-WAM: Causal Action-Gain World Action Models for Robot Manipulation
+
+- ID: `WAM-0128`
+- Published: 2026-10-10
+- Authors: Peizheng Guo; Cheng Zhang; Xingyu Zhang; Changwen Zheng; Wenwen Qiang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.14720) · [PDF](https://arxiv.org/pdf/2610.14720)
+- Tags: CAG-WAM, causal-action-gain, paired-future-prediction, GRPO, action-revision
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+WAMの未来評価に混在する行動由来の変化と環境由来の変化を構造的因果モデルで分析する。同じ観測から行動条件付き未来と環境のみの未来を予測し、評価差をcausal action gainとしてGRPO学習と推論時の行動修正に利用する。
+
+**主な貢献**
+
+予測未来の総合評価だけに頼らず、環境の自然な変化に対して候補行動がもたらす改善量を対になった未来の差分で評価する。
+
+**確認記録**
+
+- Checked: 2026-10-18 · Review: verified
+- 2026-10-05〜2026-10-18の選択増分調査。本文前にcanonical arXiv・正規化/近似題名を既存351件と照合し一致なし。arXiv DOI/version aliasも別論文として扱わない。arXiv一次資料で題名・全著者・初稿日2026-10-10・v1のみの履歴・要旨・PDFリンクを確認。本文 https://arxiv.org/html/2610.14720v1 を選択確認。HTMLと題名検索では公式実装・重み・project・実装ライセンスを確認できずunknown。論文公開ライセンスを実装ライセンスとは扱わない。独立した実行再現なし。
 
 ### CASTER: Formalizing Zero-Shot Manipulation from Synthetic Videos as Constrained Optimization
 

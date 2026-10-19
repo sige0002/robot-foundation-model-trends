@@ -3,14 +3,14 @@
 
 [← データベース](../README.md)
 
-124 records · 正本: [papers.csv](../papers.csv)
+125 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 37 |
 | [dynamics](dynamics.md) | 14 |
 | [action-coupling](action-coupling.md) | 40 |
-| [planning](planning.md) | 24 |
+| [planning](planning.md) | 25 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
@@ -24,6 +24,7 @@
 - 2026-10-13 · [WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions](world-representation.md) · `WAM-0118`
 - 2026-10-13 · [ForceWAM: Decoupling Future and Response Learning from Demo and Play Data for Contact-Rich Manipulation](action-coupling.md) · `WAM-0117`
 - 2026-10-13 · [LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts](action-coupling.md) · `WAM-0116`
+- 2026-10-10 · [CAG-WAM: Causal Action-Gain World Action Models for Robot Manipulation](planning.md) · `WAM-0128`
 - 2026-10-09 · [What Visual Representations Do World Action Models Need?](world-representation.md) · `WAM-0114`
 - 2026-10-09 · [LeapBot-JAC: Joint Action Chains for World Action Models](action-coupling.md) · `WAM-0113`
 - 2026-10-09 · [Forward Dynamics Models](action-coupling.md) · `WAM-0112`

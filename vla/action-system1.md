@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-32 records · Published date 降順（同日 ID 降順）
+33 records · Published date 降順（同日 ID 降順）
 
 ### Interaction Latents as Actions for Contact-Rich Manipulation
 
@@ -679,6 +679,31 @@ Web由来の意味表現を維持するVLMと、高周波の連続行動チャ�
 
 - Checked: 2026-10-01 · Review: verified
 - 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。要旨・公式projectは1.2Bと記載。コード・重みMIT: https://github.com/thu-ml/RoboticsDiffusionTransformer\#license Code license: MIT; https://github.com/thu-ml/RoboticsDiffusionTransformer/blob/main/LICENSE.
+
+### BAKU: An Efficient Transformer for Multi-Task Policy Learning
+
+- ID: `VLA-0222`
+- Published: 2024-06-11 · Updated: 2024-07-16
+- Authors: Siddhant Haldar; Zhuoran Peng; Lerrel Pinto
+- Venue: NeurIPS 2024
+- Links: [Paper](https://arxiv.org/abs/2406.07539) · [PDF](https://arxiv.org/pdf/2406.07539) · [Code](https://github.com/siddhanthaldar/BAKU) · [Project](https://baku-robot.github.io/)
+- Tags: BAKU, multi-task-imitation, action-chunking, supporting-foundation
+- Model size: 約10M（本文3.4の構成）
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+多タスク模倣学習の支援的基盤。視覚・自己受容感覚・タスク指示を観測trunkで統合し、独立した行動headからaction chunkを出力する小型方策を研究する。
+
+**主な貢献**
+
+FiLM条件付き視覚encoder、交換可能な行動head、action chunkingの組合せを比較・分析する。129のシミュレーション課題と30の実機課題で評価し、構成要素の効果を検証する。
+
+**確認記録**
+
+- Checked: 2026-10-18 · Review: needs-review
+- 直近窓より前の基礎研究補充。arXiv履歴v1 2024-06-11、v2 2024-07-16。本文 https://arxiv.org/html/2406.07539v2 の3節と公式projectを選択確認。本文取得前にcanonical arXiv・10.48550/arXiv DOI alias・正規化/近似題名を既存351件と照合し一致なし。公式repoの実装とLICENSE全文（MIT、copyright 2025 Siddhant Haldar）確認。依存物は別条件。方策重みの公開fileと適用条件は未確認のためunknown。needs-review: checkpointの個別確認と実行再現。 確認時code HEAD 47e367059191de30ac4b6353ff5615fdef11d8c5、LICENSE blob 914accafb71fb6ae80a37896f7f8ad31136c3e92。
 
 ### Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware
 

@@ -3,7 +3,7 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-11 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
 
 ### JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents
 
@@ -254,6 +254,31 @@ RoboDojo全42課題でAstraは2,100試行、成功率22.48%。公開方策との
 
 - Checked: 2026-10-04 · Review: needs-review
 - arXiv v1初稿2026-09-21 06:39:47 UTC、改訂なし。HTML §3・5・App.H/I確認: https://arxiv.org/html/2609.24170v1 。公式harnessの公開実装・結果と現行Apache-2.0 LICENSEを確認: https://github.com/RoboProbe/RoboProbe/blob/main/LICENSE 。READMEは最終release licenseをTBDとするためneeds-review。open\_sourceはharnessのみで、閉鎖重みAstra等のモデル公開を意味しない。論文固有の公開重みは未確認。PDF未取得。
+
+### OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics
+
+- ID: `AGENT-0162`
+- Published: 2024-01-22 · Updated: 2024-02-29
+- Authors: Peiqi Liu; Yaswanth Orru; Jay Vakil; Chris Paxton; Nur Muhammad Mahi Shafiullah; Lerrel Pinto
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2401.12202) · [PDF](https://arxiv.org/pdf/2401.12202) · [Code](https://github.com/ok-robot/ok-robot) · [Project](https://ok-robot.github.io/)
+- Tags: OK-Robot, open-vocabulary, mobile-manipulation, modular-system, supporting-foundation
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+事前学習済み視覚言語モデル、物体の意味記憶、移動・把持・配置のprimitiveを状態機械で接続する家庭内pick-and-dropシステム。追加学習なしの統合を扱う支援的研究。
+
+**主な貢献**
+
+物体検索から到達可能な移動目標・言語条件付き把持への接続方法を整理し、10家庭で評価する。静的な事前スキャンと失敗復旧などの限界を明示し、モジュール統合上の失敗要因を分析する。
+
+**確認記録**
+
+- Checked: 2026-10-18 · Review: needs-review
+- 直近窓より前の基礎研究補充。arXiv履歴v1 2024-01-22、v2 2024-02-29。本文 https://arxiv.org/html/2401.12202v2 のI–II節と公式project/repoを選択確認。本文前にcanonical arXiv、arXiv DOI alias、関連DOI 10.15607/RSS.2024.XX.091、正規化/近似題名を既存351件と照合し一致なし。repo LICENSE全文はMIT（copyright 2024 NYU GRAIL）。AnyGraspのlicense/checkpointを別途取得する旨がREADMEにあり、全依存物がMITとは扱わない。統合方策重みの公開fileは未確認。needs-review: 依存モデル重みと各利用条件を個別再確認。 確認時code HEAD 174c742b6a1866a2da8f75a89e2c544bb77ab5f9、LICENSE blob fd6860b6efb979c66c392959e5cffc98012d6abb。
 
 ### ReAct: Synergizing Reasoning and Acting in Language Models
 
