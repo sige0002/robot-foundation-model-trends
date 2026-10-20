@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-25 records · Published date 降順（同日 ID 降順）
+26 records · Published date 降順（同日 ID 降順）
+
+### Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation
+
+- ID: `WAM-0134`
+- Published: 2026-10-19
+- Authors: Xuezhou Xu; Chung-Pang Wang; Zhenzhen Li; Benjamin Riviere
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.25600) · [PDF](https://arxiv.org/pdf/2610.25600)
+- Tags: vector-quantization, latent-planning, feedback-control, controller-reachability, Tower-of-Hanoi, offline-play
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+潜在世界モデル内のcontroller rolloutから初到達時間を推定し、低レベル制御で到達可能な状態を離散codebookへまとめる。離散遷移上の幅優先探索で長期経路を求め、連続視覚feedback controllerで順に実行する。
+
+**主な貢献**
+
+Euclidean距離でなくcontroller依存の到達時間で計画抽象を構成。実機4枚Tower of Hanoiは短いplayから15手解へ合成し、non-expert設定でtask progress100%を報告。実験はepisodeごと1回の計画で、頻繁な再計画の効果は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-20 · Review: verified
+- arXiv v1初稿日・全著者、HTML §IV/§V-B/§VIと公開PDFを確認: https://arxiv.org/html/2610.25600v1 。本文は実機指標をtask progressと記すため、要旨の100% success rateをそのまま完全成功率として拡張しない。実機は6初期目標組×各3試行。公式code/project/weightsへのリンクはarXiv・HTMLで見つからず、タイトル+著者+codeの公開検索でも公式提供先を確認できないため各statusはunknown。未公開と断定しない。
 
 ### SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation
 

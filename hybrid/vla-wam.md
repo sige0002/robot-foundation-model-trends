@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-20 records · Published date 降順（同日 ID 降順）
+21 records · Published date 降順（同日 ID 降順）
+
+### Vision-Language-Delta-Action: Learning Compact Deltas as Actionable Transition Interfaces for Robotic Manipulation
+
+- ID: `HYBRID-0144`
+- Published: 2026-10-19
+- Authors: Lingsen Zhang; Wei Li; Jie He; Henghua Zhang; Kai Mo; Shiyong Li; Yanpeng Wang; Rui Shao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.25874) · [PDF](https://arxiv.org/pdf/2610.25874) · [Code](https://github.com/baidu-baige/LoongForge/tree/master/cookbook/loongforge-vlda) · [Project](https://baidu-baige.github.io/LoongForge/projects/vlda.html)
+- Tags: VLDA, latent-transition, V-JEPA-2, flow-matching, long-horizon-manipulation, robustness
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+未来画像全体ではなく、タスクに必要な状態変化を表す潜在Deltaを予測し、VLAの行動生成へ接続する。局所変化の選別と大域的な未来整合性を併用し、Deltaを行動空間へ整合させてdenoisingを導く。
+
+**主な貢献**
+
+V-JEPA 2由来の遷移表現と行動生成を結ぶ明示的インターフェース。論文報告ではLIBERO 98.5%、zero-shot LIBERO-Plus 84.5%。実機4タスク・各機体各25試行/taskで、最終checkpoint平均成功率はGALAXEA R1 Lite 73%、AgileX Cobot Magic（付録表ではALOHA）72%。
+
+**確認記録**
+
+- Checked: 2026-10-20 · Review: verified
+- arXiv v1初稿2026-10-19を確認。読解深度structured skim、確認範囲: HTML方法§4–5、評価§6、付録A.2–A.3とD.5を構造的に確認。公式projectと公式GitHubでcookbookの学習/evalスクリプトを確認。実装Apache-2.0: https://github.com/baidu-baige/LoongForge/blob/master/LICENSE 。Stage2 LIBERO重み: https://huggingface.co/LoongForge/LoongForge-VLDA-LIBERO （model.safetensors提供をmodel cardで確認、重みの明示的ライセンスは未確認）。HF表示7Bは紙面の部分モデル規模と集計範囲が不明なため総規模はunknown。RoboTwinの62.9%は選定10難タスクであり全50タスク平均ではない。
 
 ### What Matters for World Modeling in Vision-Language-Action Models?
 

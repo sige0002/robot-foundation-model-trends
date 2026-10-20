@@ -3,7 +3,7 @@
 
 [← データベース](../README.md)
 
-64 records · 正本: [papers.csv](../papers.csv)
+65 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
@@ -12,10 +12,11 @@
 | [skill](skill.md) | 8 |
 | [tool](tool.md) | 12 |
 | [memory](memory.md) | 6 |
-| [replanning](replanning.md) | 8 |
+| [replanning](replanning.md) | 9 |
 
 ## 論文
 
+- 2026-10-19 · [GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation](replanning.md) · `AGENT-0165`
 - 2026-10-16 · [InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration](skill.md) · `AGENT-0164`
 - 2026-10-14 · [MUCO: A Mani-Unit-Structured Manipulation Framework for Compositional Long-Horizon Robot Tasks](skill.md) · `AGENT-0161`
 - 2026-10-14 · [Towards Agentic Robots: Model, Data, Environment, and Harness](planning.md) · `AGENT-0160`

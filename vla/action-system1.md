@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-33 records · Published date 降順（同日 ID 降順）
+34 records · Published date 降順（同日 ID 降順）
+
+### PaceVLA: Adaptive Temporal Action Quantization in Vision-Language-Action Models
+
+- ID: `VLA-0226`
+- Published: 2026-10-19
+- Authors: Hojin Jeon; Jimin Lee; Taekwan Kim; Nayoung Oh; Taeyoung Kim; Myungkyu Koo; Jinmo Koo; Joonwoo Ahn; Jinwoo Shin
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.25961) · [PDF](https://arxiv.org/pdf/2610.25961) · [Project](https://pacevla.github.io/)
+- Tags: PaceVLA, temporal-action-quantization, adaptive-horizon, routing, efficient-execution, dexterous-manipulation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+行動の時間粒度と予測horizonを実行局面に応じて選ぶVLA拡張。共通action expert上に複数decoderを置き、粗い動作を許容する局面の判定と文脈依存routerで、自由空間の加速と精密接触時の細粒度制御を切り替える。
+
+**主な貢献**
+
+時間粒度とhorizonを固定設定でなく方策の意思決定対象にする。3シミュレーションbenchmarkと実機6タスクで速度・成功率の両面を評価。ALLEX搬送では3.6→6.3個/分、成功率86→94%を論文報告。
+
+**確認記録**
+
+- Checked: 2026-10-20 · Review: verified
+- arXiv v1初稿2026-10-19、PDFと公式projectを確認。読解深度structured skim、確認範囲: HTML方法§3、評価§4（Tables 1–5）、結論を構造的に確認。GR00T N1.5/RLDX-1-IMGを拡張。公式projectおよび本文で実装・重み公開先は見つからず、非公開とは断定しない。project末尾のCC-BY-SA 4.0はウェブサイトのライセンスで、実装ライセンスではない。実機の一部タスクは部分点0.5を含み、実行時間は完全成功試行上の平均。
 
 ### Interaction Latents as Actions for Contact-Rich Manipulation
 

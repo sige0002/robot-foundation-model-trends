@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-128 records · 正本: [papers.csv](../papers.csv)
+131 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 37 |
-| [dynamics](dynamics.md) | 15 |
+| [world-representation](world-representation.md) | 38 |
+| [dynamics](dynamics.md) | 16 |
 | [action-coupling](action-coupling.md) | 42 |
-| [planning](planning.md) | 25 |
+| [planning](planning.md) | 26 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-10-19 · [Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation](planning.md) · `WAM-0134`
+- 2026-10-19 · [PICA-WAM: Visual Perturbation Invariance via Cross-Appearance Self-Alignment in World Action Models](world-representation.md) · `WAM-0133`
+- 2026-10-19 · [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](dynamics.md) · `WAM-0132`
 - 2026-10-14 · [Complementary Future Token Pruning for World Action Models](action-coupling.md) · `WAM-0124`
 - 2026-10-13 · [Box-WAM: Box Trajectories as Compact State Representations for World Action Models](action-coupling.md) · `WAM-0129`
 - 2026-10-13 · [Thinker-WM: A Unified World Model with Shared Multimodal Representations for Embodied Intelligence](action-coupling.md) · `WAM-0126`
@@ -38,7 +41,7 @@
 - 2026-10-08 · [MiniWAM: Learning Compact Future Targets for Efficient World-Action Modeling](world-representation.md) · `WAM-0099`
 - 2026-10-08 · [Unifying Policy Learning and State Prediction through Spatial Language Modeling](action-coupling.md) · `WAM-0098`
 - 2026-10-08 · [UNITAS: A 3D-Native World Action Model for Embodied Manipulation](action-coupling.md) · `WAM-0097`
-- 2026-10-08 · [Humanoid World Action Model With Joint State--Action Generation](action-coupling.md) · `WAM-0096`
+- 2026-10-08 · [HWAM: Humanoid World Action Model With Joint State--Action Generation](action-coupling.md) · `WAM-0096`
 - 2026-10-08 · [Reliability-Aware Future Conditioning for Temporally Robust Robot Manipulation](planning.md) · `WAM-0095`
 - 2026-10-08 · [WAM-Cache: Staleness-Bounded KV Reuse for Efficient World Action Models](temporal-modeling.md) · `WAM-0094`
 - 2026-10-08 · [PlanWAM: Planning-Shaped Future Representations for End-to-End Autonomous Driving](planning.md) · `WAM-0093`

@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
+
+### GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation
+
+- ID: `AGENT-0165`
+- Published: 2026-10-19
+- Authors: Chen Yang; Linzhe Shi; Hang Zhang; Mu Xu; Jiansheng Fan; Chen Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.26846) · [Code](https://github.com/ccyydd/TacTalent) · [Project](https://tactalent.github.io/)
+- Tags: TacTalent, visuo-tactile, in-context-learning, closed-loop-control, contact-rich-manipulation, simulation-evaluation
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+汎用マルチモーダルモデルへ視覚式触覚センサーのRGB画像を直接与え、少数デモと対話履歴から接触操作を閉ループ制御できるか検証する。接触推定・試行的な探索・補正行動を分析し、視覚だけでも解ける手掛かりと残る制御上の弱点を区別する。
+
+**主な貢献**
+
+UniVTAC/OpenViTac計19タスクのsceneを10%層化抽出し、入力設定ごと210 scene seedで評価。視触覚の平均成功率93.8%/81.8%を報告するが、比較先は既報baselineであり同一試行の再実行比較ではない。
+
+**確認記録**
+
+- Checked: 2026-10-20 · Review: verified
+- arXiv v1初稿は2026-10-19。公式projectのreport表示Oct17とHTML本文のDate Oct20は異なるため、改訂日としては採用しない。読解深度structured skim、確認範囲: HTML方法§3、評価§4–5、制約§6–8、公式repositoryを構造的に確認。全実験はsimulation、多くは各設定10試行/task、Grasp Chipに判定調整あり。adapter/eval実装Apache-2.0: https://github.com/ccyydd/TacTalent/blob/main/LICENSE （公式GitHubで内容確認）。基盤モデルの重み公開・規模は未確認、コード公開と区別。PDFは公式リンクを確認したがarXiv取得失敗、project PDFはサイズ超過で取得できずpdf\_urlは空欄。
 
 ### I2O2I-Nav: A Benchmark with a Modular Agent for Long-Horizon Indoor-to-Outdoor-to-Indoor Navigation
 

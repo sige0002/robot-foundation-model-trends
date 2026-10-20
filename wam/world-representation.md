@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-37 records · Published date 降順（同日 ID 降順）
+38 records · Published date 降順（同日 ID 降順）
+
+### PICA-WAM: Visual Perturbation Invariance via Cross-Appearance Self-Alignment in World Action Models
+
+- ID: `WAM-0133`
+- Published: 2026-10-19
+- Authors: Yude Zou; Yifei Yao; Guanbo Jiao; Jianming Ma; Guanjie Zheng; Xing Gao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.26813) · [Project](https://github.com/YudeZou/PICA-WAM-release)
+- Tags: appearance-invariance, self-alignment, EMA-teacher, robustness, world-action-model, real-robot
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+外観だけを変えた観測から得るWAMの行動表現を、通常観測を読むEMA教師の深い層へ整列する。動画側には外観情報を残し、行動側だけに不変性を課す。教師とprojection headは推論時に除去する。
+
+**主な貢献**
+
+データ拡張だけでは課されない外観間の行動表現一致を自己教師損失にする。4種類のWAMを評価し、ARX-Lift2の8把持課題・各法160試行ではOpenWAM-αの33.1%に対し67.5%成功を報告。
+
+**確認記録**
+
+- Checked: 2026-10-20 · Review: verified
+- arXiv v1初稿日・全著者、HTML §3/§4.1/§4.4/§4.5を確認: https://arxiv.org/html/2610.26813v1 。公式repositoryはREADME・図・CITATIONのみ。Open-source planがコード・checkpointを2026年11月公開予定と明記し、現時点の実装/重みはunavailable。実装ライセンス未提示のためopen\_source/ license\_statusはunknown。GitHubを実装公開と誤認しないようproject\_urlに収録。PDF取得は取得エラー、HTML本文を使用しpdf\_urlは空欄。
 
 ### Grid or Nodes? Probing Object Memory in World Models Under Partial Observability
 

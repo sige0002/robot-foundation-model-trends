@@ -355,10 +355,10 @@ world-aligned3D位置埋め込みとphysical-time trajectory tokenで行動/scen
 - Checked: 2026-10-15 · Review: needs-review
 - arXiv v1初稿・著者・題名を維持: https://arxiv.org/abs/2610.12099 (2026-10-08、2026-10-15時点でv2なし)。HTML§3/4.4/5/6は2026-10-09に選読: https://arxiv.org/html/2610.12099v1 。scene-flow定量評価はsimulator groundtruthを用い、video baselineの3D化は初期GT depth校正を用いる。長期相互作用/広い実機deploymentは今後の課題。2026-10-13公式release commit https://github.com/DexForce/UNITAS/commit/8c480eed6bfa06461313360045512ae7c62a06a8 のinference/evaluation実装、model、scene-flow処理、およびroot LICENSE Apache-2.0を確認済み。2026-10-15追補: 公式GitHub README https://github.com/DexForce/UNITAS のcheckpointリンク先HF https://huggingface.co/RobbinWang123/Unitas/tree/main に7個の実ファイル(.pt; RoboTwin/LIBERO/VLABench各scratch/finetunedとscene\_flow、各約6.96GB)を独立確認しweights\_status=availableへ更新。個別ファイル https://huggingface.co/RobbinWang123/Unitas/blob/main/unitas\_robotwin\_scratch.pt と https://huggingface.co/RobbinWang123/Unitas/blob/main/unitas\_scene\_flow.pt にXet pointer size/SHA256とdownload linkがある。model repoのMIT表示はcheckpoint配布情報であり、GitHub実装のApache-2.0とは別。公式project https://unitas-wam.github.io/ の論文identity/公式codeリンクを確認したためproject\_url追加。同projectのCheckpoint Coming soonはHF実ファイルと不整合で更新遅れと思われるが、動作/論文性能再現は未検証。training code/datasetは未公開、Florence-2-largeとsimulator資産は別途必要。needs-review: training code/datasetの正式公開、checkpoint条件の詳細と再現範囲、projectの表記整合を次回確認。PDF/weights/data未download、GPU再現なし。
 
-### Humanoid World Action Model With Joint State--Action Generation
+### HWAM: Humanoid World Action Model With Joint State--Action Generation
 
 - ID: `WAM-0096`
-- Published: 2026-10-08
+- Published: 2026-10-08 · Updated: 2026-10-12
 - Authors: Yan Yang; Jikun Rong; Minzhao Zhu; Zheyi Zhao; Qirui Hu; Zihan Lan; Weixin Mao; Yinhao Li; Zhen Fu; Hua Chen
 - Venue: arXiv
 - Links: [Paper](https://arxiv.org/abs/2610.12026) · [Project](https://hwam.vercel.app/)
@@ -377,8 +377,8 @@ world-aligned3D位置埋め込みとphysical-time trajectory tokenで行動/scen
 
 **確認記録**
 
-- Checked: 2026-10-09 · Review: needs-review
-- v1初稿・著者・題名、HTML3節/4.2〜4.5を確認: https://arxiv.org/html/2610.12026v1 。HTMLのcode/dataset available記載に対し公式projectはCode/Dataset/Video Coming soonで、実装は確認時点でunavailable、重み・LICENSE各unknown。限界: OLI3課題中心のtask別データ/学習で身体間一般化保証ではない。未来video診断は12held-outepisodeで、predicted trajectory条件ではHWAMのPSNR優位なし。joint state-action単独のrecipeは必ず改善するわけではない。追補はreleaseと各試行分母/不確実性。
+- Checked: 2026-10-20 · Review: needs-review
+- v1初稿・著者・題名、HTML3節/4.2〜4.5を確認: https://arxiv.org/html/2610.12026v1 。HTMLのcode/dataset available記載に対し公式projectはCode/Dataset/Video Coming soonで、実装は確認時点でunavailable、重み・LICENSE各unknown。限界: OLI3課題中心のtask別データ/学習で身体間一般化保証ではない。未来video診断は12held-outepisodeで、predicted trajectory条件ではHWAMのPSNR優位なし。joint state-action単独のrecipeは必ず改善するわけではない。追補はreleaseと各試行分母/不確実性。 2026-10-20追記: arXivの現行タイトルと版履歴のみ再確認（v1 2026-10-08、v2 2026-10-12）。v2本文の変更比較とコード・重み公開の再監査は未実施。概要・技術貢献は従来のv1読解を維持しneeds-reviewを継続。
 
 ### Cross-Embodiment Robot Foundation World Models with Latent Actions
 

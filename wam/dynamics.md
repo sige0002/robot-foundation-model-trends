@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-15 records · Published date 降順（同日 ID 降順）
+16 records · Published date 降順（同日 ID 降順）
+
+### Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience
+
+- ID: `WAM-0132`
+- Published: 2026-10-19
+- Authors: Tianqi Liu; Hanfei Zhao; Qifeng Liang; Hui En Pang; Jiarui Xu; Sayang Mu; Penghao Qiu; YingSheng Zhang; Jun Wang; Ziang Cao; Mingze Sun; Yukang Cao; Fangzhou Hong; Zhaoxi Chen; Ziwei Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.26855) · [Code](https://github.com/Ropedia/ropedia-w0) · [Project](https://ropedia.github.io/ropedia-w0/)
+- Tags: cross-embodiment, egocentric-video, loco-manipulation, kinematic-conditioning, human-video, policy-evaluation
+- Model size: 5B dense; A14B MoE (approximately 27B total / 14B active)
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+カメラ姿勢と投影骨格を共通の運動条件にし、人間と異なるロボット身体の一人称移動・操作映像を予測する。人間10k時間とロボット3k時間を統一注釈し、Xp-Teleop評価と方策評価・候補行動選択・WAM初期化を検証した。
+
+**主な貢献**
+
+身体別の数値行動を共通の幾何条件へ写像。著者実験ではFastWAMの動画backbone初期化を置換するとLIBERO-Plus成功率50.06%→56.82%。世界モデルによる実機候補選択はtask progress55%で、完全成功率とは区別する。
+
+**確認記録**
+
+- Checked: 2026-10-20 · Review: verified
+- arXiv v1初稿日・全著者、HTML §4/§6.4/Appendix Fを確認: https://arxiv.org/html/2610.26855v1 。公式5B推論実装とApache-2.0 LICENSE: https://github.com/Ropedia/ropedia-w0/blob/main/LICENSE 。重み2種の実在とCC BY-NC 4.0を別確認: https://huggingface.co/ropedia-ai/Ropedia-W0/tree/main 。A14B・post-training/evaluation codeは公開予定で、全recipe公開とはしない。運動条件は接触・物体物理を直接記述しない。PDFリンク取得は取得エラー、HTMLで本文確認しpdf\_urlは空欄。
 
 ### DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training
 
