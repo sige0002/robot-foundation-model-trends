@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-21 records · Published date 降順（同日 ID 降順）
+22 records · Published date 降順（同日 ID 降順）
+
+### UniWALM: Unified World Action Language Model for Embodied Robot Control
+
+- ID: `HYBRID-0145`
+- Published: 2026-10-20
+- Authors: Rahul Sajnani; Diego Romeres; Mingyuan Zhang; Kai Gao; Carl Qi; Baichuan Huang; Srinath Sridhar; Dylan Randle; Lillian J. Ratliff; Jose Barreiros; Manikantan Nambi; Jeroen Vanbaar
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.28626) · [Project](https://rahulsajnani.github.io/projects/uniwalm/)
+- Tags: UniWALM, joint-video-action-language, discrete-language-diffusion, textual-memory, flow-matching-correction, no-video-at-inference
+- Model size: Wan2.2 backbone + 1B action DiT + 0.5B language DiT; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+動画・行動・言語を共有attentionの三専門家で共同学習し、次のsubtaskと文章記憶を行動と同期生成するUniWALM。生成文を次stepへ再入力し、外部plannerなしで進捗を保持する。
+
+**主な貢献**
+
+言語を固定条件だけでなく予測対象とし、行動の摂動から復帰するFlow Matching with Correctionを導入。RMBench記憶依存subsetで同backbone FastWAMの13.3%に対し34.5%を報告する。
+
+**確認記録**
+
+- Checked: 2026-10-21 · Review: verified
+- 初稿・題名・著者・版履歴をarXiv absで確認（v1=2026-10-20、改訂なし）。https://arxiv.org/html/2610.28626v1 の§3/4、Appendix Cと公式projectを選読。推論時は未来video生成を停止し、言語・行動のみ生成する。RMBenchのvisual memoryは初期anchor1枚で、実機Find-the-Itemは文章記憶のみ。boundary誤検出・誤subtask・把持精度・言語生成の追加遅延が残る。大規模異種データ共同学習は未検証。projectはICRA2027 under reviewで採択とはしない。公式project/題名検索で専用実装・重み・実装licenseは確認できず各unknown。論文licenseを実装へ転用しない。PDF未取得。 2026-10-08〜21の選択増分調査（基礎文献は分類補完の例外）。独立した実行・数値再現なし。
 
 ### Vision-Language-Delta-Action: Learning Compact Deltas as Actionable Transition Interfaces for Robotic Manipulation
 

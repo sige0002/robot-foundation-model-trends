@@ -3,17 +3,18 @@
 
 [← データベース](../README.md)
 
-47 records · 正本: [papers.csv](../papers.csv)
+48 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [vla-agent](vla-agent.md) | 20 |
-| [vla-wam](vla-wam.md) | 21 |
+| [vla-wam](vla-wam.md) | 22 |
 | [wam-agent](wam-agent.md) | 5 |
 | [vla-wam-agent](vla-wam-agent.md) | 1 |
 
 ## 論文
 
+- 2026-10-20 · [UniWALM: Unified World Action Language Model for Embodied Robot Control](vla-wam.md) · `HYBRID-0145`
 - 2026-10-19 · [Vision-Language-Delta-Action: Learning Compact Deltas as Actionable Transition Interfaces for Robotic Manipulation](vla-wam.md) · `HYBRID-0144`
 - 2026-10-14 · [Atomic-WAM: Execution-Grounded Atomic-Motion Reasoning for World Action Models](wam-agent.md) · `WAM-0123`
 - 2026-10-14 · [What Matters for World Modeling in Vision-Language-Action Models?](vla-wam.md) · `HYBRID-0143`

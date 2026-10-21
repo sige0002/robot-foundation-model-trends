@@ -3,18 +3,20 @@
 
 [← データベース](../README.md)
 
-131 records · 正本: [papers.csv](../papers.csv)
+133 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 38 |
-| [dynamics](dynamics.md) | 16 |
+| [dynamics](dynamics.md) | 17 |
 | [action-coupling](action-coupling.md) | 42 |
-| [planning](planning.md) | 26 |
+| [planning](planning.md) | 27 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-10-20 · [Plausible Future, Wrong Choice: Steering World-Action Models toward Intended Future](planning.md) · `WAM-0136`
+- 2026-10-20 · [Physical Canvas: A Vision Tactile World Model For Robot Policy Evaluation And Learning](dynamics.md) · `WAM-0135`
 - 2026-10-19 · [Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation](planning.md) · `WAM-0134`
 - 2026-10-19 · [PICA-WAM: Visual Perturbation Invariance via Cross-Appearance Self-Alignment in World Action Models](world-representation.md) · `WAM-0133`
 - 2026-10-19 · [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](dynamics.md) · `WAM-0132`

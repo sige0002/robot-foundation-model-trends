@@ -3,18 +3,19 @@
 
 [← データベース](../README.md)
 
-126 records · 正本: [papers.csv](../papers.csv)
+127 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [perception-representation](perception-representation.md) | 27 |
-| [reasoning-system2](reasoning-system2.md) | 6 |
+| [reasoning-system2](reasoning-system2.md) | 7 |
 | [action-system1](action-system1.md) | 34 |
 | [memory-temporal](memory-temporal.md) | 12 |
 | [adaptation](adaptation.md) | 47 |
 
 ## 論文
 
+- 2026-10-20 · [Reasoning as a Distribution: Generative Plan Latents for Vision-Language-Action Models](reasoning-system2.md) · `VLA-0227`
 - 2026-10-19 · [PaceVLA: Adaptive Temporal Action Quantization in Vision-Language-Action Models](action-system1.md) · `VLA-0226`
 - 2026-10-15 · [Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models](perception-representation.md) · `VLA-0225`
 - 2026-10-15 · [REKI: Registering Knowledge in VLAs](memory-temporal.md) · `VLA-0224`

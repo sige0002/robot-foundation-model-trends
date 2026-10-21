@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-16 records · Published date 降順（同日 ID 降順）
+17 records · Published date 降順（同日 ID 降順）
+
+### Physical Canvas: A Vision Tactile World Model For Robot Policy Evaluation And Learning
+
+- ID: `WAM-0135`
+- Published: 2026-10-20
+- Authors: Zebin Xing; Yuhang Zheng; Yupeng Zheng; Yichen Zhang; Zichen Li; Shangqing Zhou; Yujie Zang; Yuchen Liu; Zhongpu Xia; Haoran Li; Qichao Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.28613) · [Project](https://zebinx.github.io/PhysCanvas_HomePage/)
+- Tags: PhysCanvas, visuo-tactile, multimodal-canvas, action-conditioned-simulator, policy-evaluation, imagined-GRPO, contact-rich
+- Model size: Wan2.2-TI2V-5B backbone; total unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unavailable / unknown
+
+**概要（日本語）**
+
+多視点RGB・触覚画像・marker変位・task状態を共通canvasへ描き、同じvideo VAE/生成backboneで予測するPhysCanvas。ロボット関節指令を投影したmotion画像で条件付け、閉ループpolicy評価と想像内学習に使う。
+
+**主な貢献**
+
+scene・modality・stateの凍結reward modelで生成の整合性を追加学習。4実機taskの評価batch間成功率相関と、想像内GRPO後のpolicy成功を別々に検査し、π0.5平均59.1%→70.8%を報告する。
+
+**確認記録**
+
+- Checked: 2026-10-21 · Review: verified
+- 初稿・題名・著者・版履歴をarXiv absで確認（v1=2026-10-20、改訂なし）。https://arxiv.org/html/2610.28613v1 の§3/4、Appendix C/Gと公式projectを選読。ARX AC One双腕・Xense触覚による4taskに限定。相関0.602→0.885はtask別Pearsonの算術平均で、全試行pooled相関ではない。追加整合学習は全低レベル指標や全taskを一律改善せず、FMは2taskで成功0のまま。行動を生成するpolicyと観測を生成するWMは別で、WM/RMを固定してpolicyを更新する。公式projectがCode/Model Coming Soonを明記し各unavailable。実装licenseはunknown、論文licenseとは別。PDF未取得。 2026-10-08〜21の選択増分調査（基礎文献は分類補完の例外）。独立した実行・数値再現なし。
 
 ### Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience
 

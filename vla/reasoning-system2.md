@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-6 records · Published date 降順（同日 ID 降順）
+7 records · Published date 降順（同日 ID 降順）
+
+### Reasoning as a Distribution: Generative Plan Latents for Vision-Language-Action Models
+
+- ID: `VLA-0227`
+- Published: 2026-10-20
+- Authors: Matteo Cercola; Katie Z Luo; Milan Ganai; John Alora; Simone Formentin; Marco Pavone
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.28166) · [PDF](https://arxiv.org/pdf/2610.28166) · [Project](https://matcercola18.github.io/reasoning-as-a-distribution/)
+- Tags: GPL, generative-plan-latent, rectified-flow, plan-steering, outcome-reranking, soft-token-interface, redundancy-principle, pi0, pi0.5
+- Model size: pi0 / pi0.5 backbone; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAの中間計画を単一ベクトルで確定せず、物体・把持・経路などの選択肢を持つ低次元の条件付き分布として学習する。計画をsoft token経由で行動生成へ渡し、推論時の選択指定や実行成否による候補の再重み付けを可能にする。
+
+**主な貢献**
+
+複数の妥当な計画を保持し、行動分布とは別の介入点として公開するGPLを提案。π0を使う比較では要求された選択に従う割合が0.48から0.94へ上がり、観測だけで判断が決まる場合には計画が冗長になるという条件も検証した。
+
+**確認記録**
+
+- Checked: 2026-10-21 · Review: needs-review
+- arXiv absで全著者・初稿2026-10-20・改訂なしを確認。読了範囲は一次HTML v1 §§3–7（https://arxiv.org/html/2610.28166v1 ）とPDF p.9 §7の照合、公式projectページ。GPL head・projector・action expertのLoRAは事前学習し、推論時の再指定・再重み付けではVLAを再学習しない。0.48→0.94はcommanded-mode rateでありタスク成功率ではない。v1本文は実験がすべてsimulationでhardware未検証と明記する一方、確認時の公式projectページは低価格armの実機1課題を記載し整合しないためneeds-review。実機結果は本行へ採用せず、v1本文に限定。大部分は複数の選択肢を作る独自課題で、LIBEROでは計画interfaceによる把持性能の低下も残る。論文とprojectおよび題名による限定検索で公式コード・重み・実装ライセンスの配布先を確認できずunknown。論文のCC BY 4.0を実装ライセンスと扱わない。 2026-10-08〜21の分野別選択増分調査、本文前にcanonical IDと正規化/近似題名を照合。独立した実行・数値再現なし。
 
 ### Fast Plans, Faithful Actions: Closing the Planning-Execution Gap in Hierarchical Vision-Language-Action Models
 

@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-26 records · Published date 降順（同日 ID 降順）
+27 records · Published date 降順（同日 ID 降順）
+
+### Plausible Future, Wrong Choice: Steering World-Action Models toward Intended Future
+
+- ID: `WAM-0136`
+- Published: 2026-10-20
+- Authors: Zhuohao Li; Jiawei He; Yuxuan Yan; Lang Zhou; Yinghao Li; Yanrui Li; Tianyu Zhang; Yi-Yang Song; Xirui Wu; Yi-Lin Wei; Fating Hong; Qing Zhang; Zhilin Zhao; Jingdong Wang; Wei-Shi Zheng
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.28431) · [Project](https://isee-laboratory.github.io/TaskWAM/)
+- Tags: TaskWAM, stage-confusion, structured-task-state, mode-codebook, causal-state-tokens, residual-steering, StageBench
+- Model size: FastWAM/Wan2.2-TI2V-5B or Cosmos Policy backbone; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+局所的に妥当な未来でも別task/段階へ逸れるstage confusionを扱うTaskWAM。指示の順序・時機・反復をMode Tokensに、実行済みactionと観測変化の因果履歴をState Tokensに整理する。
+
+**主な貢献**
+
+構造化task状態をattention/AdaLNと残差予測へ注入し、worldとaction生成を意図した次段階へ誘導。8task familyのStageBenchを整備し、FastWAM平均成功40.9%→69.4%を報告する。
+
+**確認記録**
+
+- Checked: 2026-10-21 · Review: verified
+- 初稿・題名・著者・版履歴をarXiv absで確認（v1=2026-10-20、改訂なし）。https://arxiv.org/html/2610.28431v1 の§3/4/5、Appendix A/Bと公式projectを選読。ModeはT5指示にgroundし、Stateはaction/観測潜在/差分を集約するため、外部agent plannerとの接続ではない。StageBenchは重なる多段階軌道を意図的に構成した評価。4身体の実機評価は各task100–150実演で適応し、各variant10–20試行であり未学習身体へのzero-shot保証ではない。project/題名検索で公式公開実装・重み・LICENSEは確認できず各unknown。補足のimplementation記載だけで公開codeとは判定しない。PDF未取得。 2026-10-08〜21の選択増分調査（基礎文献は分類補完の例外）。独立した実行・数値再現なし。
 
 ### Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation
 

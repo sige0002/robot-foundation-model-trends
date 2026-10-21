@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-14 records · Published date 降順（同日 ID 降順）
+15 records · Published date 降順（同日 ID 降順）
+
+### AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics
+
+- ID: `AGENT-0167`
+- Published: 2026-10-20
+- Authors: Xinxin Liu; Bingxin Xu; Wenrui Bao; Ming Li; Wentao Bao; Chen Chen; Yuzhang Shang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.28589) · [PDF](https://arxiv.org/pdf/2610.28589) · [Code](https://github.com/xinxinliu-ai/AgenticRoboRL)
+- Tags: AgenticRoboRL, planner-post-training, SFT, multi-turn-RL, harness-adapter, frozen-VLA, control-code, LIBERO-PRO, LIBERO-Plus
+- Model size: Qwen3.5-9B planner; total system unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+ロボットの実行基盤や低レベル方策を固定し、高レベルplannerだけを成功軌跡のSFTと複数turnの強化学習で改善する。VLAスキル呼出し型と制御コード生成型を、モデル呼出し記録と最終成否を結ぶadapterで扱う。
+
+**主な貢献**
+
+異なる実行方式を共通のplanner学習単位へ接続し、同じ実行器のまま判断能力を学習する。RPent上の9B plannerはLIBERO-PROで18.1%からSFT後65.1%、RL後71.0%へ改善し、LIBERO-Plusでも追加学習なしで72.2%を報告した。
+
+**確認記録**
+
+- Checked: 2026-10-21 · Review: verified
+- arXiv absで全著者・初稿2026-10-20・改訂なしを確認。手法・評価は一次HTML v1 §§3–4.5を読んで確認し、PDF URLの取得も確認（https://arxiv.org/html/2610.28589v1 ）。評価はLIBERO系simulation。CaP-X側はprivileged stateを使う別学習で、RPentの学習済みplannerを直接転用した実験ではない。記憶付き大規模plannerとの値はsystem比較であり、SFT寄与の分離ではない。論文の公開予定表記とは別に、公式リンク先repoの実ファイルrl/train\_rl.py、LICENSE（Apache-2.0）、NOTICEを確認。旧L-CodingSpaceからxinxinliu-aiへの移動をGitHub repo ID 1422461340で確認。確認commit a4b4115dcc4890561a2f5b10d44a3c0264cb47ba（2026-10-21 22:30:25 UTC）。実装ライセンス: https://github.com/xinxinliu-ai/AgenticRoboRL/blob/a4b4115dcc4890561a2f5b10d44a3c0264cb47ba/LICENSE 。公式READMEが案内する重み https://huggingface.co/ciciciciliu/AgenticRoboRL-Qwen3.5-9B のsft/とrl-v006/に各18.8GBのmodel.safetensorsとXet/SHA256情報を確認（revision 996f98f32483277099e5448bbccc9fdc13677c0f、model card表示Apache-2.0）。重みの取得・実行は未実施。READMEはteacher軌跡未公開と明記。公式projectページは新旧URLともweb取得失敗のためproject\_urlは空欄。 2026-10-08〜21の分野別選択増分調査、本文前にcanonical IDと正規化/近似題名を照合。独立した実行・数値再現なし。
 
 ### Towards Agentic Robots: Model, Data, Environment, and Harness
 

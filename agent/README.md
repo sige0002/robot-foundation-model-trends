@@ -3,19 +3,21 @@
 
 [← データベース](../README.md)
 
-65 records · 正本: [papers.csv](../papers.csv)
+68 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 14 |
+| [planning](planning.md) | 15 |
 | [code](code.md) | 16 |
 | [skill](skill.md) | 8 |
 | [tool](tool.md) | 12 |
-| [memory](memory.md) | 6 |
+| [memory](memory.md) | 8 |
 | [replanning](replanning.md) | 9 |
 
 ## 論文
 
+- 2026-10-20 · [AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](planning.md) · `AGENT-0167`
+- 2026-10-20 · [Industrial ReMEmbR: Scaling Spatiotemporal Memory to Robot Fleets](memory.md) · `AGENT-0166`
 - 2026-10-19 · [GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation](replanning.md) · `AGENT-0165`
 - 2026-10-16 · [InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration](skill.md) · `AGENT-0164`
 - 2026-10-14 · [MUCO: A Mani-Unit-Structured Manipulation Framework for Compositional Long-Horizon Robot Tasks](skill.md) · `AGENT-0161`
@@ -68,6 +70,7 @@
 - 2026-09-24 · [Design and Evaluation of LLM Chaining-Based Task Planning for General Purpose Service Robots](planning.md) · `AGENT-0117`
 - 2026-09-23 · [RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement](replanning.md) · `AGENT-0119`
 - 2026-09-21 · [An Unexpected Robot Policy: Early Evaluations of GPT-6 Astra on RoboDojo and Beyond](tool.md) · `AGENT-0122`
+- 2024-09-20 · [ReMEmbR: Building and Reasoning Over Long-Horizon Spatio-Temporal Memory for Robot Navigation](memory.md) · `AGENT-0168`
 - 2024-01-22 · [OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics](tool.md) · `AGENT-0162`
 - 2023-10-19 · [Eureka: Human-Level Reward Design via Coding Large Language Models](code.md) · `AGENT-0109`
 - 2023-07-12 · [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning](replanning.md) · `AGENT-0112`

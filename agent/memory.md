@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-6 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
+
+### Industrial ReMEmbR: Scaling Spatiotemporal Memory to Robot Fleets
+
+- ID: `AGENT-0166`
+- Published: 2026-10-20
+- Authors: Jad Yammine; Malek Wahidi; Abrar Anwar; Yan Chang; Mihir Acharya; Anthony Rizk
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.28624)
+- Tags: Industrial-ReMEmbR, fleet-memory, spatiotemporal-retrieval, edge-server-split, cached-vision-tokens, on-demand-captioning, semantic-traffic-map
+- Model size: Nemotron-3-Nano-4B agent; total system unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+倉庫ロボット群の観測を、位置・時刻付きの共有記憶へ蓄積する。各機体で検索用埋め込み、説明用の視覚token、再構成用latentを一度作り、質問された場面だけサーバーで言語化する。
+
+**主な貢献**
+
+観測時の一律caption生成を省き、同じ表現を検索・通路状況分類・後日の説明へ再利用する構成。模擬倉庫914フレームの通路分類はbalanced accuracy 71.3%で、比較したcaption方式の最高値を6.0ポイント上回った。
+
+**確認記録**
+
+- Checked: 2026-10-21 · Review: verified
+- arXiv absで全著者・初稿2026-10-20・改訂なしを確認。読了範囲は一次HTML v1 §§3–7（https://arxiv.org/html/2610.28624v1 ）で、手法・評価・運用上の範囲を確認。PDFリンクはabs/HTML双方から取得を試したがwebで失敗したためpdf\_urlは空欄。4Bはagent単体で総規模ではない。450回のcached-token一致は150フレーム×3質問のgreedy decodingでの結果。100台の計算量・通信量は測定値からの外挿で、100台実運用の実証とは区別。新規の制御方策ではなく共有記憶基盤としてagent/memory。一次論文と題名による限定検索で本研究固有の公式実装・重み・実装ライセンスを確認できずunknown。基盤モデルや原版ReMEmbRの公開状況を継承しない。 2026-10-08〜21の分野別選択増分調査、本文前にcanonical IDと正規化/近似題名を照合。独立した実行・数値再現なし。
 
 ### SEAR: Self-Evolving Agentic Robotics
 
@@ -129,6 +154,31 @@ HM3D v0.2の1,000 episodeで成功率81.2%、SPL 42.5%を報告。共有Gemini-2
 
 - Checked: 2026-10-06 · Review: verified
 - 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。https://arxiv.org/abs/2610.06510 のv1は2026-10-05 15:28:25 UTC、改訂なし。 https://arxiv.org/html/2610.06510v1 §4–5、App.A/B/Fを確認。全3benchmarkは5,195 episode、主比較は既報値も含む。効率はruntimeではなく共有backboneで1,000 episodeのquery数。実機Go2は定性的な屋内外runで集計成功率なし。表現付きグラフとVLM route selectionをagent/memoryと分類し、グラフを学習WAMとは扱わない。公式 https://wangjincheng1998.github.io/MarvisNav/ を確認、現在Code Soon／公開予定の表示のみなのでcode\_status=unavailable、実装ライセンス・専用重みはunknown。PDF未取得。
+
+### ReMEmbR: Building and Reasoning Over Long-Horizon Spatio-Temporal Memory for Robot Navigation
+
+- ID: `AGENT-0168`
+- Published: 2024-09-20
+- Authors: Abrar Anwar; John Welsh; Joydeep Biswas; Soha Pouya; Yan Chang
+- Venue: ICRA 2025
+- Links: [Paper](https://arxiv.org/abs/2409.13682) · [PDF](https://arxiv.org/pdf/2409.13682) · [Code](https://github.com/NVIDIA-AI-IOT/remembr) · [Project](https://nvidia-ai-iot.github.io/remembr/)
+- Tags: ReMEmbR, supporting-foundation, spatio-temporal-memory, retrieval-augmented, navigation, NaVQA
+- Model size: VILA1.5-13B captioner; multiple LLM backends; deployment uses quantized VILA-3B
+- Open-source: false
+- Code / weights / license: available / unknown / non-open-source
+
+**概要（日本語）**
+
+移動ロボットの動画説明・位置・時刻を蓄積し、過去の出来事への質問や移動目標の生成に使う記憶システム。LLMが関連する経験を反復検索する構成で、長時間のロボット記憶を扱う基礎文献として補完する。
+
+**主な貢献**
+
+テキスト・空間・時間の検索をLLMの関数呼出しで組み合わせ、構造化された回答と目標座標を生成する。NaVQAの210問とNova Carterの定性的実演を示すが、caption誤認や反復情報の蓄積が限界。
+
+**確認記録**
+
+- Checked: 2026-10-21 · Review: verified
+- agent/memoryの未収録基礎を選択追加。本文前にarXiv ID・正規化/近似題名を既存369件と照合し一致なし。初稿v1=2024-09-20、後続版なしをarXiv履歴で確認。https://arxiv.org/html/2409.13682v1 §IV–IXを選読。NaVQAは7動画由来、成功判定は空間15m/時間2分の閾値を含み、手法3seed対baseline1seed、テキスト回答はLLM判定。一般的な実機成功率や均等計算量比較とは扱わない。公式repoの実装を確認。https://github.com/NVIDIA-AI-IOT/remembr/blob/main/LICENSE.md §3.3は研究・評価の非商用限定（NVIDIA等の例外あり）のため、公開コードだがopen\_source=false。独自重みの配布未確認でunknown、外部VILA/LLMの提供条件を転用しない。実行・数値再現なし。 2026-10-08〜21の選択増分調査（基礎文献は分類補完の例外）。独立した実行・数値再現なし。 公式projectのICRA2025表記をvenueへ採用。
 
 ### TidyBot: Personalized Robot Assistance with Large Language Models
 
