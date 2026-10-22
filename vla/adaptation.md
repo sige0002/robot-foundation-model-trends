@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-47 records · Published date 降順（同日 ID 降順）
+48 records · Published date 降順（同日 ID 降順）
+
+### Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies
+
+- ID: `VLA-0228`
+- Published: 2026-10-21
+- Authors: Johannes Keller; Albrecht M. Bloße; Adrian Lindenmeyer; Thomas Neumuth; Daniel Schneider
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29730) · [PDF](https://arxiv.org/pdf/2610.29730) · [Code](https://github.com/post-hoc-vla-uncertainty/post-hoc-vla-uncertainty)
+- Tags: post-hoc-uncertainty, Gaussian-process, kernel-variance, active-demonstration-acquisition, supervisor-referral, SmolVLA, LIBERO
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+凍結した単一VLAの埋め込みと訓練デモのsupportから、Gaussian processの条件付き分散を計算する後付けheadを提案する。方策の勾配更新や回帰targetを使わず、追加デモの取得と上位方策への委譲に利用する。
+
+**主な貢献**
+
+SmolVLA・LIBERO-10で二方策ensembleと比較し、タスク間のdata coverageとタスク内の順位付けを区別して評価。制御した摂動ではKV-Decのタスク内referral nAUCが0.46、VFDが0.40だった。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absで全著者とv1初稿2026-10-21 13:34:03 UTC、改訂なしを確認。本文前に既存376件とcanonical arXiv/DOI alias・正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。読了範囲は https://arxiv.org/html/2610.29730v1 §§3–5と評価表の選択精読。評価は1architecture・simulation10task・3seedのみ。coverageは失敗確率そのものではなく、referralは同じ初期状態から別実行する自動supervisor proxyで、人間介入や実行中のhandoverを検証しない。摂動referralのsupervisorは同じ摂動familyで訓練済み。最大約50倍は不確実性scoringの条件付き比較で総制御速度ではない。公式repo commit f658266ab68aae58f04ba6d728a118457cfe12c2 のhandoff/q5/kv\_reference.py、README、Apache-2.0 LICENSE全文を確認。公開範囲はhead・実験・結果解析で上流UQ-VLAに依存。固有の方策重み配布は未確認でunknown。PDF/重みdownload・コード実行・結果再現なし。 arXiv absの生HTMLで実在するPDF相対href /pdf/2610.29730 を抽出し絶対URLへ解決。PDF本体は取得しない。
 
 ### Steertuning Policies from a Few Human Videos
 
@@ -161,11 +186,11 @@ LIBEROのタスク条件を固定し、カメラ配置・光学系、手眼較�
 - Published: 2026-10-08
 - Authors: Yuxin Chen; Senqiao Yang; Zixuan Wang; Jinhui Ye; Changsheng Lu; Pengguang Chen; Shu Liu; Zhuotao Tian; Jiaya Jia
 - Venue: arXiv preprint
-- Links: [Paper](https://arxiv.org/abs/2610.12185) · [Code](https://github.com/JIA-Lab-research/RESETTLE)
+- Links: [Paper](https://arxiv.org/abs/2610.12185) · [PDF](https://arxiv.org/pdf/2610.12185) · [Code](https://github.com/JIA-Lab-research/RESETTLE)
 - Tags: frozen-policy-recovery, action-disagreement, demonstration-retrieval, v-jepa, agent-compatible
 - Model size: unknown
-- Open-source: unknown
-- Code / weights / license: unavailable / unknown / unspecified
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
 
 **概要（日本語）**
 
@@ -177,8 +202,8 @@ LIBEROのタスク条件を固定し、カメラ配置・光学系、手眼較�
 
 **確認記録**
 
-- Checked: 2026-10-09 · Review: needs-review
-- 初稿・著者: https://arxiv.org/abs/2610.12185 (v1=2026-10-08、改訂なし)。選択精読: https://arxiv.org/html/2610.12185v1 。§4.3/Table5選読。実機各4task×20trialの平均には3taskのbinary SRとUse Spoonのstage completionが混在し、平均78.75/92.92を純成功率として採用しない。QwenPIのtool-call monitoring/recovery latency比較は全task end-to-end速度と同一ではない。https://github.com/JIA-Lab-research/RESETTLE はpublicだがAPI contentsがThis repository is empty、paperのcode availableとは不一致。code unavailable/weights unknown/license unspecified。needs-review: 次回は同repoの実装fileとLICENSE/正式releaseを確認。 PDF未取得。
+- Checked: 2026-10-22 · Review: verified
+- arXiv absで全著者・初稿v1=2026-10-08 15:49:03 UTC、改訂なしを再確認。前回2026-10-09に選読した https://arxiv.org/html/2610.12185v1 §4.3/Table5の範囲は維持し、今回は公式releaseを選択再確認。実機平均にbinary SRとUse Spoonのstage completionが混在し、78.75/92.92を純成功率にしない。QwenPI latency比較も全task実行速度と区別。前回emptyだった公式repoはcommit 2676190b35df739de8a976682594b5d7eb9d52c7 でREADME、train.sh、build\_bank.py、vjepa\_recovery\_service.py、guarded\_executor.py等を公開済み。LICENSE全文はMIT、上流component用APACHE-LICENSEも存在。公開範囲はLIBEROのV-JEPA2-AC訓練、expert bank、HTTP recoveryと一手guard変換例。base-policyのpersistent disagreement trigger・実機/Simulator接続は呼出側が用意し、二seed recovery-head例を論文のbase-policy triggerと混同しない。公式配布のtrained checkpointはREADMEに取得先なくunknown、初期V-JEPA重みは利用者が用意。10/09のcode unavailableと空repo不一致は解消したが、完全なend-to-end論文再現releaseとはしない。PDF/重みdownload・コード実行・結果再現なし。 arXiv absの生HTMLで実在するPDF相対href /pdf/2610.12185 を抽出し絶対URLへ解決。PDF本体は取得しない。
 
 ### CAPABLE: Capability-Aware Policy Adaptation via Behavioral Latent Encoding
 

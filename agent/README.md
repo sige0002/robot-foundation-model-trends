@@ -3,19 +3,21 @@
 
 [← データベース](../README.md)
 
-68 records · 正本: [papers.csv](../papers.csv)
+71 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 15 |
+| [planning](planning.md) | 16 |
 | [code](code.md) | 16 |
-| [skill](skill.md) | 8 |
+| [skill](skill.md) | 9 |
 | [tool](tool.md) | 12 |
 | [memory](memory.md) | 8 |
-| [replanning](replanning.md) | 9 |
+| [replanning](replanning.md) | 10 |
 
 ## 論文
 
+- 2026-10-21 · [CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](planning.md) · `AGENT-0171`
+- 2026-10-21 · [TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments](replanning.md) · `AGENT-0170`
 - 2026-10-20 · [AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](planning.md) · `AGENT-0167`
 - 2026-10-20 · [Industrial ReMEmbR: Scaling Spatiotemporal Memory to Robot Fleets](memory.md) · `AGENT-0166`
 - 2026-10-19 · [GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation](replanning.md) · `AGENT-0165`
@@ -84,3 +86,4 @@
 - 2022-09-16 · [Code as Policies: Language Model Programs for Embodied Control](code.md) · `AGENT-0102`
 - 2022-07-12 · [Inner Monologue: Embodied Reasoning through Planning with Language Models](replanning.md) · `AGENT-0103`
 - 2022-04-04 · [Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](planning.md) · `AGENT-0101`
+- 2019-03-05 · [Learning Latent Plans from Play](skill.md) · `AGENT-0169`

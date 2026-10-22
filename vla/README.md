@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-127 records · 正本: [papers.csv](../papers.csv)
+130 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [perception-representation](perception-representation.md) | 27 |
 | [reasoning-system2](reasoning-system2.md) | 7 |
 | [action-system1](action-system1.md) | 34 |
-| [memory-temporal](memory-temporal.md) | 12 |
-| [adaptation](adaptation.md) | 47 |
+| [memory-temporal](memory-temporal.md) | 14 |
+| [adaptation](adaptation.md) | 48 |
 
 ## 論文
 
+- 2026-10-21 · [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](memory-temporal.md) · `VLA-0230`
+- 2026-10-21 · [FlowVLA: Learning Flow-Aware Physical Completion for Quantitative Robotic Pouring](memory-temporal.md) · `VLA-0229`
+- 2026-10-21 · [Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies](adaptation.md) · `VLA-0228`
 - 2026-10-20 · [Reasoning as a Distribution: Generative Plan Latents for Vision-Language-Action Models](reasoning-system2.md) · `VLA-0227`
 - 2026-10-19 · [PaceVLA: Adaptive Temporal Action Quantization in Vision-Language-Action Models](action-system1.md) · `VLA-0226`
 - 2026-10-15 · [Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models](perception-representation.md) · `VLA-0225`

@@ -3,7 +3,7 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
 
 ### InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration
 
@@ -204,3 +204,28 @@ Minecraftで探索とスキル獲得を継続するLLMエージェント。自�
 
 - Checked: 2026-10-01 · Review: verified
 - 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。公開実装MIT。仮想embodied agentであり、物理ロボットへの直接評価ではない。 Code license: MIT; https://github.com/MineDojo/Voyager/blob/main/LICENSE.
+
+### Learning Latent Plans from Play
+
+- ID: `AGENT-0169`
+- Published: 2019-03-05 · Updated: 2019-12-20
+- Authors: Corey Lynch; Mohi Khansari; Ted Xiao; Vikash Kumar; Jonathan Tompson; Sergey Levine; Pierre Sermanet
+- Venue: CoRL 2019 (PMLR 100, 2020)
+- Links: [Paper](https://arxiv.org/abs/1903.01973) · [PDF](https://proceedings.mlr.press/v100/lynch20a/lynch20a.pdf) · [Project](https://learning-from-play.github.io/)
+- Tags: supporting-foundation, Play-LMP, latent-plan, goal-conditioned-policy, learning-from-play, self-supervised-control, simulation-only
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+非分節・非ラベルの人間teleoperation遊びデータから再利用可能な潜在計画と目標条件付き制御を同時学習するPlay-LMP。言語モデルを使うAgentではなく、後年のロボットskill・潜在計画学習を支える基礎研究として収録する。
+
+**主な貢献**
+
+系列全体からの計画認識分布と始点・目標からの計画提案分布をKLで整合し、計画条件付き方策が行動を再構成する。単一シミュレーション環境18課題で画像入力69.4%、真値状態入力85.5%の平均成功を報告し、両条件を区別する。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- agent/skillの潜在計画基礎を補う選択的backfill。本文前にarXiv/DOI alias・正規化/近似題名を既存376件と照合し一致なし。arXiv履歴で初稿2019-03-05/v2 2019-12-20、PMLR https://proceedings.mlr.press/v100/lynch20a.html でCoRL書誌を確認。v2 HTML https://arxiv.org/html/1903.01973v2 §§3–4/Appendix A.5を選読。画像入力の69.4±10.8は3訓練seedの区間、対照BC66.5±12.1。85.5%は状態入力で画像性能ではない。学習データ量/収集法は対照と異なり、同一room内の目標一般化であり未知環境や実機への保証なし。単一目標状態で表現できる課題と比較的均衡した遊びデータを仮定。論文はcode/data availableとするが公式projectの配布先と実装license/重みを今回確認できずunknown。第三者再実装を公式扱いせず。PDF URLはPMLR提供先を検証、ファイル保存/独立再現なし。

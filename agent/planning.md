@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-15 records · Published date 降順（同日 ID 降順）
+16 records · Published date 降順（同日 ID 降順）
+
+### CausGround: Causal Interaction Grounding for Adaptive Embodied Planning
+
+- ID: `AGENT-0171`
+- Published: 2026-10-21
+- Authors: Yijun Shen; Diqi He; Jinbang Guo; Wanyue Zhang; Jiaming Mi; Huan Yang; Zhongyuan Wang; Zhiwei Yu; Kai Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29702) · [PDF](https://arxiv.org/pdf/2610.29702) · [Project](https://causground.github.io/)
+- Tags: CausGround, causal-preconditions-effects, factorized-world-state, non-parametric-adaptation, backward-reasoning, high-level-planning
+- Model size: Qwen3.5-9B/27B/35B-A3B planners; additional Gemma4 and InternVL3.5 backbones; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+物体属性と物体間関係を共通schemaに整理し、経験から行動の前提条件と効果を抽出する重み更新を伴わない適応手法。現在の観測と目標に関連する因果知識を接地し、前提からの逆向き推論と効果からの順向き推論で高レベル行動を選ぶ。
+
+**主な貢献**
+
+凍結plannerのまま、適応版VirtualHomeで平均成功率24.9%→53.3%、RoboCasaの閉ループ高レベル計画で43.0%→57.0%を報告。実機は二つの逐次操作例を示すが、統計的な実機成功率の評価ではない。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- 2026-10-09〜22の選択増分調査。本文前にcanonical arXiv/DOI aliasと正規化・近似題名を既存376件へ照合し一致なし。全著者・v1初稿2026-10-21・改訂なしをarXiv absで確認。読解範囲: https://arxiv.org/html/2610.29702v1 §§3–4、Appendix C.1–C.3・Eを選読。VirtualHomeは状態と不整合なRGBを画像編集modelで修復し、成功率は3難度のmacro平均。RoboCasaは既存注釈skill stageをatomic actionとする高レベル計画評価で、低レベル制御のend-to-end成功率ではない。VirtualHomeの条件抽出は介入実験、RoboCasa/SWITCHは反復された公式軌跡の整合性抽出であり、全環境で因果介入を実施したとはしない。実機MLLMは目標解釈のみ、既存controllerが意味行動を実行する。symbolic状態・因果知識であり生成的world predictionモデルと混同せずagent/planning。公式projectのCode表示にはrepoへの実リンクがなく、正式題名の限定検索でも専用code・weights・実装licenseは未確認でunknown。実行・数値再現なし。 PDF URLはabsの実リンクをHEADでHTTP 200/application/pdf確認（本文bytes未取得）。 RoboCasaは公式軌跡のaction境界へのreplay評価で、いずれかの手法に未記録分岐UNKNOWNが生じるcaseを除いた共通subsetで比較する（Appendix A.2.3）。
 
 ### AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics
 

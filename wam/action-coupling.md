@@ -3,7 +3,82 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-42 records · Published date 降順（同日 ID 降順）
+46 records · Published date 降順（同日 ID 降順）
+
+### Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation
+
+- ID: `WAM-0140`
+- Published: 2026-10-21
+- Authors: Chun Gu; Xiaofei Wei; Yiming Chen; Bozhou Zhang; Juntong Zhang; Xiatian Zhu; Li Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29264) · [PDF](https://arxiv.org/pdf/2610.29264) · [Project](https://logosroboticsgroup.github.io/TIDE/)
+- Tags: TIDE, online-post-training, human-in-the-loop, provenance-conditioning, video-action, world-action-policy, bimanual-manipulation
+- Model size: 3B（本文のworld-action policy）
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+人間介入と方策実行の出所を区別するchunkで、動画世界backboneと行動expertを同じ配備session中に教師あり更新するTIDE。criticや報酬modelを学ばず、実行・記録・学習を非同期化しepisode境界で更新checkpointへ切り替える。
+
+**主な貢献**
+
+出所条件を動画・行動両系のflow時刻埋め込みへ加え、両方の実行経験を活用。実機4課題の各20自律rolloutでwarm-startと追加offlineデモを上回り、固定方策で収集後に学ぶ比較系とは同程度の最終性能で、更新を配備中に利用可能にした。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absで全著者とv1初稿2026-10-21 06:15:00 UTC、改訂なしを確認。本文前に既存376件とcanonical arXiv/DOI alias・正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。https://arxiv.org/html/2610.29264v1 §III–VIと公式projectを選択精読。未来動画と行動を共同予測・最適化するworld-action policyなのでwam/action-coupling。1双腕UR5e・4課題・1backboneのみ。人間が成功確認したepisodeだけを学習に保持しselection biasがあり、反復session間変動や長期保持は未評価。milestone部分点とbinary完了率を分離。介入率低下は自律性能や学習の因果効果そのものではない。1時間未満は8 H100による配備rollout開始から最終checkpoint利用可能までで、初期setup・最終評価を含まない。公式GitHub https://github.com/LogosRoboticsGroup/TIDE commit ee65dcc6e2d1b34e07a0c8b60fb3d06f1d161ffc の全recursive tree・READMEはproject用HTML/CSS/JS/画像/動画のみで方策訓練/推論実装なし。従ってcode unavailable、重み/実装license unknown。公式repoはproject-site sourceのみなのでcode\_urlは空欄とし、実装releaseと誤認させない。サイトCC-BY-SAは実装licenseに流用しない。PDF/重みdownload・実行再現なし。 arXiv absの生HTMLで実在するPDF相対href /pdf/2610.29264 を抽出し絶対URLへ解決。PDF本体は取得しない。
+
+### Relational Geometry Forcing for World Action Models
+
+- ID: `WAM-0139`
+- Published: 2026-10-21
+- Authors: Yuan Xu; Yixiang Chen; Qisen Ma; Jiabing Yang; Peiyan Li; Kai Wang; Jianhua Yang; Jianlou Si; Jun Huang; Jing Liu; Nianfeng Liu; Yan Huang; Liang Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29282) · [PDF](https://arxiv.org/pdf/2610.29282)
+- Tags: RGF-WAM, relational-alignment, 3D-geometric-prior, video-action-model, training-time-supervision
+- Model size: Wan2.2-TI2V-5B backbone + 1B Action DiT; frozen VGGT-1B teacher (training only)
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結3D基盤モデルの幾何知識を、特徴そのものの回帰ではなく特徴間の関係としてWAMへ転移する。フレーム内・視点間・行動時間方向の3つの整合損失を学習時だけ加え、推論時の幾何予測branchを追加しない。
+
+**主な貢献**
+
+点ごとの幾何特徴整合が行動学習を妨げる問題を関係整合で緩和。LIBERO、RoboTwin 2.0とFranka実機7設定で評価し、実機平均成功率はFast-WAMの57.14%に対し65.71%（各設定20試行）を報告した。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absのv1履歴・全著者、HTML https://arxiv.org/html/2610.29282v1 §3–5・実験表・実装設定を確認。LIBERO平均98.65%、RoboTwin 2.0平均92.71%は著者報告。実機は各課題50実演でfine-tuneし4基本課題とBowl-to-Rackの3汎化条件を評価。pairwise cosine関係が中心で、絶対的なmetric scaleと接触構造は未検討。abs/HTMLに公式project・実装・重みの公開先を確認できず、それぞれunknown。
+
+### CW-WAM: A Structured Contact-Wrench World Action Model for Force-Sensitive Manipulation
+
+- ID: `WAM-0138`
+- Published: 2026-10-21
+- Authors: Houzhu Ding; Xinda Qi; Luqi Wang; Ming Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.30117) · [PDF](https://arxiv.org/pdf/2610.30117) · [Project](https://cw-wam-project.github.io/)
+- Tags: CW-WAM, contact-wrench, force-sensitive-manipulation, paired-causal-attention, admittance-control, slow-fast-control
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+映像・動作・接触wrenchを共同予測するWAM。動作と力の履歴を対にして扱う注意機構と長期wrench記憶から同期した制御参照を生成し、予測力を20Hzのadmittance制御へ渡してモデル照会間の接触を調整する。
+
+**主な貢献**
+
+450実演・実機4課題で構造化した動作–wrench学習を評価。wrenchなしWAMに対して角柱挿入25%→70%、電源アダプタ挿入40%→95%。admittance追加は成功率を変えず、成功試行の力参照RMSEを角柱で4.8→2.7Nに低減した。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absのv1履歴・全著者、HTML https://arxiv.org/html/2610.30117v1 §III–VIの手法・実験・discussion、公式projectを確認。各接触課題20試行、荷重ごと10試行。評価は実演分布内の4課題で、feedback gainとcompliant方向は手動設定。新物体・新課題への汎化は今後の課題。projectのCodeはリンクのない表示で、公開実装・重み・実装ライセンスは確認できずunknown。論文ライセンスとは区別。
 
 ### Complementary Future Token Pruning for World Action Models
 
@@ -205,6 +280,31 @@ RGB・深度・ロボット行動を共通の動的表現で生成する世界�
 - Checked: 2026-10-19 · Review: verified
 - 2026-10-06〜19の選択増分調査。本文前にcanonical arXiv/version/DOI alias・正規化/近似題名を既存355件と照合し一致なし。初稿10-12、v2改訂10-15はarXiv abs。方法§3、評価§4、Appendix A/Hを確認: https://arxiv.org/html/2610.16443v2 。PDF linkはarXivが12,648,248 bytesを返したが取得上限超過、HTMLを精読。公式MIT実装を10-18公開、確認commit cd32fba405b26f8c3e4ee29120ffc7432a126f47: https://github.com/heyuanpengpku/RAP-WAM/blob/main/LICENSE 。公開範囲はbase学習と28D実機training workflowで、robot制御・sim評価・agent介入・課題別policy保持・学習済みtask checkpointを含まない: https://github.com/heyuanpengpku/RAP-WAM/blob/main/docs/REPRODUCIBILITY.md 。公開recipeは論文のbatch/split/cache/選択法と差があり再現実証ではない。task重みの実metadata未確認、外部Wan重みを代用せずunknown。 実行・数値再現なし。 RoboDojoの12.85/15.62%は5能力群の平均を等重み平均した値で、全episodeのpooled成功率ではない。
 
+### Grounded-Dreamer: Robot Learning from World Model Synthetic Data with Physical Grounding
+
+- ID: `WAM-0142`
+- Published: 2026-10-09
+- Authors: Feng Jiang; Shu Chen; Yuanfei Wang; Yuan Li; Zhenhao Shen; Jiaqi Liang; Yang Chen; Lei Wei; Chen Xie; Ruihai Wu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13164) · [PDF](https://arxiv.org/pdf/2610.13164) · [Project](https://fffstrong.github.io/Grounded-Dreamer/)
+- Tags: Grounded-Dreamer, synthetic-robot-data, inverse-dynamics, simulation-replay, physical-grounding, VLA-training
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+少数の実画像から操作対象・カメラをシミュレーションへ再構成し、物理的に有効な軌跡で動画モデルと逆動力学モデルを調整する。生成動画から復元した行動をシミュレーションで再実行し、成功軌跡だけをロボット方策の合成学習データとして用いる。
+
+**主な貢献**
+
+interaction-aware maskingと物理replay検証で、teleoperation実演なしの合成データを構成。Franka実機7課題でDiffusion Policyとπ0.5を評価し、π0.5のボタン押しは合成50軌跡と実演50軌跡の双方で75%（各20試行）を報告した。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absのv1履歴・全著者、HTML https://arxiv.org/html/2610.13164v1 §3–4、データ条件・mask/replay ablation・scalingを確認。合成のみと少数実演co-trainingは別条件。7課題中ボタン以外では合成のみが実演のみを必ずしも上回らず、2課題のscalingは約150軌跡で飽和傾向。実画像由来の再構成・task記述・物理simulatorを要し、全工程が実データ不要ではない。公式projectにCode Coming soonと明記されるためcode\_status=unavailable。重み・実装ライセンスは未確認。
+
 ### LeapBot-JAC: Joint Action Chains for World Action Models
 
 - ID: `WAM-0113`
@@ -369,16 +469,16 @@ world-aligned3D位置埋め込みとphysical-time trajectory tokenで行動/scen
 
 **概要（日本語）**
 
-人型のpolicy参照行動と、全身制御後に実現する身体状態のずれを、joint state-action生成で明示的に扱う。Policy/FDM/IDMの3条件経路で実現身体動作と視覚未来を結ぶ。
+高水準の運動参照と低水準制御後に実現する身体状態のずれを扱う人型World Action Model。行動と時間整列した実行後の固有受容状態を共同生成し、Policy/FDM/IDMの3経路で身体動作と視覚未来を結ぶ。推論時は未来動画を生成せず、行動だけを制御器へ渡す。
 
 **主な貢献**
 
-未来の固有受容状態をaction学習の教師targetに加える。LimX OLIの3実機課題を評価し、Candy Picking70.6%（Fast-WAM43.3%）など、action-onlyとの差を制御ablationで調べる。
+実行後状態を行動と同じdenoise対象にした設計を検証。OLIのCandy Pickingは84/119成功（70.6%、Fast-WAM52/120）で、共同状態targetの効果が視覚学習recipeに依存することをablationで示す。ALOHA衣服折りも課題別学習で評価する。
 
 **確認記録**
 
-- Checked: 2026-10-20 · Review: needs-review
-- v1初稿・著者・題名、HTML3節/4.2〜4.5を確認: https://arxiv.org/html/2610.12026v1 。HTMLのcode/dataset available記載に対し公式projectはCode/Dataset/Video Coming soonで、実装は確認時点でunavailable、重み・LICENSE各unknown。限界: OLI3課題中心のtask別データ/学習で身体間一般化保証ではない。未来video診断は12held-outepisodeで、predicted trajectory条件ではHWAMのPSNR優位なし。joint state-action単独のrecipeは必ず改善するわけではない。追補はreleaseと各試行分母/不確実性。 2026-10-20追記: arXivの現行タイトルと版履歴のみ再確認（v1 2026-10-08、v2 2026-10-12）。v2本文の変更比較とコード・重み公開の再監査は未実施。概要・技術貢献は従来のv1読解を維持しneeds-reviewを継続。
+- Checked: 2026-10-22 · Review: needs-review
+- arXiv履歴（初稿2026-10-08、v2改訂2026-10-12）、v2 HTML §§3–5/Appendix C–Dを選読: https://arxiv.org/html/2610.12026v2 。取得できたv1/v2 HTML本文の比較では版表示以外のテキスト差を確認できず、原TeX/PDF差分は未監査。Candy PickingのHWAM 95% Wilson区間は61.9–78.0%、訓練seed分散ではない。Plush-Toyの状態共同targetはVGM/Policy下60.0→45.5%、FDM/IDM/Policy下55.0→73.3%で単独効果とは断定しない。未来video診断12episodeの予測軌道条件ではPSNR優位なし。ALOHAは640demoで課題別学習し、86.0は部分点付き0–100 scoreで成功率でもOLIからのzero-shot転移でもない。OLIも3課題のtask別学習で身体間一般化保証ではない。公式 https://hwam.vercel.app/ は依然Code/Dataset Coming soonで、本文のavailable記述と整合せずneeds-review。実装unavailable、重み/実装license unknownを維持。独立再現・PDF保存なし。
 
 ### Cross-Embodiment Robot Foundation World Models with Latent Actions
 

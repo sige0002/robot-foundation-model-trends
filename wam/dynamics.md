@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-17 records · Published date 降順（同日 ID 降順）
+20 records · Published date 降順（同日 ID 降順）
+
+### PhysiCalWorld: In-Context Physics Calibration for World Models
+
+- ID: `WAM-0137`
+- Published: 2026-10-21
+- Authors: Yunhao Luo; Wentao He; Yinpei Dai; Hyelin Nam; Hongze Fu; Joyce Chai; Nima Fazeli; Jeong Joon Park
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.30125) · [PDF](https://arxiv.org/pdf/2610.30125) · [Code](https://github.com/physical-world/physical-world-release) · [Project](https://physical-world.github.io/)
+- Tags: PhysiCalWorld, in-context-physics-calibration, latent-world-model, physics-descriptor, visual-planning
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+テスト環境での短い観測・行動クリップから物理特性を表す単一tokenを抽出し、行動条件付き潜在世界モデルの予測を校正する。物理ラベルやテスト時の重み更新を使わず、同じ環境のrolloutと視覚計画で記述子を再利用する。
+
+**主な貢献**
+
+DINO-WMとLeWMに軽量なcontext encoderを接続。物理条件を変える4つのシミュレーション環境で予測・計画を評価し、DINO-WMのPush-T計画成功率を53.3%から62.7%へ改善した。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absのv1履歴・全著者、HTML https://arxiv.org/html/2610.30125v1 §3–5と実験表、公式projectを確認。評価はPush-T/Reacher/BeerPong/FetchSlideのシミュレーション。物理条件別の軌跡group化、情報を含む探索prompt、episode内で定常な物理条件が必要。公式実装MIT: https://github.com/physical-world/physical-world-release/blob/main/LICENSE （GitHub file APIで本文確認）。重み: https://huggingface.co/physical-world/physical-world-checkpoints-release のmodel cardと14GB file treeを確認、重みライセンスはmodel cardのMIT表示のみ（別のLICENSE本文は未確認）。重み未ダウンロード、コード未実行。
 
 ### Physical Canvas: A Vision Tactile World Model For Robot Policy Evaluation And Learning
 
@@ -54,6 +79,56 @@ scene・modality・stateの凍結reward modelで生成の整合性を追加学�
 
 - Checked: 2026-10-20 · Review: verified
 - arXiv v1初稿日・全著者、HTML §4/§6.4/Appendix Fを確認: https://arxiv.org/html/2610.26855v1 。公式5B推論実装とApache-2.0 LICENSE: https://github.com/Ropedia/ropedia-w0/blob/main/LICENSE 。重み2種の実在とCC BY-NC 4.0を別確認: https://huggingface.co/ropedia-ai/Ropedia-W0/tree/main 。A14B・post-training/evaluation codeは公開予定で、全recipe公開とはしない。運動条件は接触・物体物理を直接記述しない。PDFリンク取得は取得エラー、HTMLで本文確認しpdf\_urlは空欄。
+
+### From Pixels to Executable Physics: Behavior-Grounded World Models for Embodied Action Consequence Prediction
+
+- ID: `WAM-0141`
+- Published: 2026-10-13
+- Authors: Ruo Chen; Jiahua Pang; Yingjie Niu; Hongyi Lin; Jun Tian; Yang Zhu; Chao Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.17630) · [PDF](https://arxiv.org/pdf/2610.17630)
+- Tags: DR-WM, behavior-grounded-physics, quadruped-navigation, terrain-contact, action-consequence-prediction, VLM-action-selection
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+画像から再構成した地形に、実機の行動応答で校正した接触特性を与え、Genesisの物理rolloutで四脚ロボットの動きと将来カメラ軌跡を推定する。その軌跡と幾何情報で動画世界モデルを条件付け、生成画像による地形更新と予測を反復する。
+
+**主な貢献**
+
+地形接触を空間的に変える予測と、行動結果の視覚生成を接続。未見22シーン34clipの物理ablationで、幾何のみのbaselineに対してbase ATEを18.0%低減。90の行動選択シーンではDR-WM付き8B VLMが単独32Bを6指標中5指標で上回った。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absのv1履歴・全著者、HTML https://arxiv.org/html/2610.17630v1 §3–5、Appendix Bと比較・ablation表を確認。初期実画像と行動からの因果rolloutで、校正mappingはtest時固定。生成画像を再構成へ戻すため誤差伝播の可能性があり、行動応答に合う有効接触値は真の物性値を一意に同定するものではない。Appendix Aはdata/code releaseを予定と記すが公式公開実装・重み・ライセンスは未確認。検索で見つかった同名展示用GitHubは著者との対応が未検証のためURL不採用。
+
+### Beyond Successful Robot Demonstrations: Learning from Human Interactions and Modeling Failure Dynamics
+
+- ID: `WAM-0143`
+- Published: 2026-10-09
+- Authors: Peiyan Tu; Cong Wang; Hanxin Zhu; Xin Jin; Zhibo Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.13522) · [PDF](https://arxiv.org/pdf/2610.13522) · [Project](https://peiyantu.github.io/HF-WM/)
+- Tags: HF-WM, failure-dynamics, human-robot-transfer, stabilized-pointflow, GRPO, policy-evaluation, test-time-action-selection
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+人間とロボットの相互作用を、カメラ運動を補正したpointflowの補助予測で結ぶ行動条件付き世界モデルHF-WM。成功実演の行動に摂動を加え、行動整合性と物理妥当性の報酬によるGRPOで、対応する正解動画なしに失敗時のダイナミクスも学習する。
+
+**主な貢献**
+
+100成功・100失敗の実機軌跡で動画生成と行動追従を検証。6方策×90の対応sessionでは予測成功率と実機成績のPearson相関0.983を報告。LIBERO-90のπ0.5候補選択では、HF-WMとRoboMeterにより成功率27.8%→30.0%を報告した。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absのv1履歴・全著者、HTML https://arxiv.org/html/2610.13522v1 §3–5とAppendix B/Cの学習・評価設定、論文からリンクされた公式projectを確認。Cosmos 3 Nanoを約45Kロボット・83K人間軌跡で調整。補助pointflowは学習時のみ、物理妥当性報酬はVLM評価。相関は6方策の集計成功率で、540独立方策の相関ではない。LIBERO候補選択には同domain fine-tuneと別のscorerが必要。公式project/論文で実装・重み・実装ライセンス公開先は確認できずunknown。
 
 ### DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training
 

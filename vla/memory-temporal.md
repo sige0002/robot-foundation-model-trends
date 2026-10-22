@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+14 records · Published date 降順（同日 ID 降順）
+
+### GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models
+
+- ID: `VLA-0230`
+- Published: 2026-10-21
+- Authors: Qinfan Zhang; Yifan Luo; Haoyuan Shi; Guanlin Liu; Han Dong; Haozhe Shan; Yong Dai; Xiangcong Ren; Xiaozhu Ju
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29866) · [PDF](https://arxiv.org/pdf/2610.29866) · [Code](https://github.com/GeoMem-VLA/GeoMem-VLA) · [Project](https://geomem-vla.github.io/)
+- Tags: GeoMem-VLA, GeoPlan, geometric-supervision, causal-episodic-memory, VGGT, Qwen3-VL, flow-matching, LIBERO, RoboTwin
+- Model size: Qwen3-VL-4B backbone + GR00T-style action expert（総規模unknown）
+- Open-source: unknown
+- Code / weights / license: available / unavailable / unknown
+
+**概要（日本語）**
+
+VGGTの点mapと将来手先軌道を補助教師として、専用GeoPlan tokenへ幾何情報を学習させる。観測・幾何のepisode内memoryから因果的に履歴を検索・融合し、推論では3D教師や明示再構成を使わずaction chunkを生成する。
+
+**主な貢献**
+
+幾何教師と有界の時間memoryを結合し、標準設定のLIBERO平均98.9%、RoboTwin Clean/Randomized 91.10/91.24%を報告。実機は2platform・5課題各10rolloutで平均78.0%。公開sourceは短いLIBERO workflowとRoboTwin adapterで、論文全体の再現packageではない。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: needs-review
+- arXiv absでv1初稿2026-10-21 15:23:18 UTC、改訂なしを確認。著者はabsのXiangcong Renを採用したがHTMLはXiancong Ren表記。本文前に既存376件とcanonical arXiv/DOI alias・正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。読了範囲は https://arxiv.org/html/2610.29866v1 §§3–4、Appendix A、再現/倫理声明の選択精読。公開比較値は各原著protocolを保持し統制ランキングではない。公式GitHub commit a71a643770d86d38b93653f47886431be02346bb のREADME/RELEASE\_NOTES、QwenGeoGR00T.py、geoplan実装を確認。READMEは20k-step既定例が論文protocolでなく、実機package未収録と明記。論文§3.2の同座標frameのEEF教師に対し、公開QwenGeoGR00T.py冒頭は正規化action変位でVGGT frameと未共通と記載し、完全一致は未解決。LICENSE全文はMIT表記にupstream2commit保持の追加文を含むため、標準OSI MITとしてopen\_source=trueを確定せずlicense unknown。HF https://huggingface.co/rxc205/GEOMEM-VLA はcoming soonでfilesは.gitattributes/READMEだけ、重みunavailable。HFカードapache-2.0をcodeへ流用しない。projectのcoming soon表示より実際のsourceを優先。PDF/重みdownload・実行再現なし。 arXiv absの生HTMLで実在するPDF相対href /pdf/2610.29866 を抽出し絶対URLへ解決。PDF本体は取得しない。
+
+### FlowVLA: Learning Flow-Aware Physical Completion for Quantitative Robotic Pouring
+
+- ID: `VLA-0229`
+- Published: 2026-10-21
+- Authors: Liwen Yang; Yutian Zhang; Jiaqi Zhai; Li Yang; Tutian Tang; Qiwei Shan; Yancheng Bi; Qiankuan Shangguan; Yangkun Zhu; Ce Hao; Dong Wei; Qiaojun Yu; Dibo Hou
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29692) · [PDF](https://arxiv.org/pdf/2610.29692)
+- Tags: FlowVLA-pouring, quantitative-pouring, physical-completion, force-belief, mass-estimation, residual-outflow, pi0.5
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+見た目や姿勢が変わらない注ぎ中にも進む物理量を、視覚・関節・手首力覚・再帰beliefの履歴から推定する。π0.5の運動生成と物理的な完了判定を分け、移送済み質量と戻し動作中の残流量の合計で復帰を開始する。
+
+**主な貢献**
+
+行動chunkの段階境界をまたぐ教師信号を抑制し、target非依存の質量推定と残流予測を接続。coffee-pot/waterで完了試行の目標均等MacroMAE 13.1g、全試行に対する完了かつ目標±10%は53.7%を報告した。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- arXiv absで全著者とv1初稿2026-10-21 13:07:39 UTC、改訂なしを確認。本文前に既存376件とcanonical arXiv/DOI alias・正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。読了範囲は https://arxiv.org/html/2610.29692v1 §III、IV-A–C、結論、Tables I–IIIの選択精読。物理量の持続状態による観測aliasing解消を主眼としvla/memory-temporal。主実験は123attempt・79完了質量記録。83.5%の±10%率は完了質量記録だけが分母で、全attemptの53.7%と混同しない。150/250gは同一モデルの補間だが、他の容器/液体はdomain別再訓練でzero-shot転移ではない。訓練にoffline電子秤教師を要し、grasp失敗も残る。題名と著者を含む限定検索、abs/HTMLで公式実装・重み・project・実装license取得先を確認できずunknown。別著者の2025年同名FlowVLAと混同しない。PDF/重みdownload・実行再現なし。 arXiv absの生HTMLで実在するPDF相対href /pdf/2610.29692 を抽出し絶対URLへ解決。PDF本体は取得しない。
 
 ### REKI: Registering Knowledge in VLAs
 

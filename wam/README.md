@@ -3,24 +3,29 @@
 
 [← データベース](../README.md)
 
-133 records · 正本: [papers.csv](../papers.csv)
+140 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 38 |
-| [dynamics](dynamics.md) | 17 |
-| [action-coupling](action-coupling.md) | 42 |
+| [dynamics](dynamics.md) | 20 |
+| [action-coupling](action-coupling.md) | 46 |
 | [planning](planning.md) | 27 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-10-21 · [Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation](action-coupling.md) · `WAM-0140`
+- 2026-10-21 · [Relational Geometry Forcing for World Action Models](action-coupling.md) · `WAM-0139`
+- 2026-10-21 · [CW-WAM: A Structured Contact-Wrench World Action Model for Force-Sensitive Manipulation](action-coupling.md) · `WAM-0138`
+- 2026-10-21 · [PhysiCalWorld: In-Context Physics Calibration for World Models](dynamics.md) · `WAM-0137`
 - 2026-10-20 · [Plausible Future, Wrong Choice: Steering World-Action Models toward Intended Future](planning.md) · `WAM-0136`
 - 2026-10-20 · [Physical Canvas: A Vision Tactile World Model For Robot Policy Evaluation And Learning](dynamics.md) · `WAM-0135`
 - 2026-10-19 · [Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation](planning.md) · `WAM-0134`
 - 2026-10-19 · [PICA-WAM: Visual Perturbation Invariance via Cross-Appearance Self-Alignment in World Action Models](world-representation.md) · `WAM-0133`
 - 2026-10-19 · [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](dynamics.md) · `WAM-0132`
 - 2026-10-14 · [Complementary Future Token Pruning for World Action Models](action-coupling.md) · `WAM-0124`
+- 2026-10-13 · [From Pixels to Executable Physics: Behavior-Grounded World Models for Embodied Action Consequence Prediction](dynamics.md) · `WAM-0141`
 - 2026-10-13 · [Box-WAM: Box Trajectories as Compact State Representations for World Action Models](action-coupling.md) · `WAM-0129`
 - 2026-10-13 · [Thinker-WM: A Unified World Model with Shared Multimodal Representations for Embodied Intelligence](action-coupling.md) · `WAM-0126`
 - 2026-10-13 · [SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation](planning.md) · `WAM-0122`
@@ -32,6 +37,8 @@
 - 2026-10-13 · [LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts](action-coupling.md) · `WAM-0116`
 - 2026-10-12 · [RAP-WAM: Learning World-Action Models through Predictive Rehearsal and Action Perturbations](action-coupling.md) · `WAM-0130`
 - 2026-10-10 · [CAG-WAM: Causal Action-Gain World Action Models for Robot Manipulation](planning.md) · `WAM-0128`
+- 2026-10-09 · [Beyond Successful Robot Demonstrations: Learning from Human Interactions and Modeling Failure Dynamics](dynamics.md) · `WAM-0143`
+- 2026-10-09 · [Grounded-Dreamer: Robot Learning from World Model Synthetic Data with Physical Grounding](action-coupling.md) · `WAM-0142`
 - 2026-10-09 · [What Visual Representations Do World Action Models Need?](world-representation.md) · `WAM-0114`
 - 2026-10-09 · [LeapBot-JAC: Joint Action Chains for World Action Models](action-coupling.md) · `WAM-0113`
 - 2026-10-09 · [Forward Dynamics Models](action-coupling.md) · `WAM-0112`

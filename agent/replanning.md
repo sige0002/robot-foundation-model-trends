@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+10 records · Published date 降順（同日 ID 降順）
+
+### TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments
+
+- ID: `AGENT-0170`
+- Published: 2026-10-21
+- Authors: Yicheng Xu; Zhikai Xu; Ziyuan Chen; Yuhang Dong; Tao Zhang; Zhucun Xue; Yong Liu; Jiangning Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.30043) · [PDF](https://arxiv.org/pdf/2610.30043) · [Code](https://github.com/xuyicheng-zju/TARSphere) · [Project](https://xuyicheng-zju.github.io/TARSphere/)
+- Tags: TARSphere, simulation-benchmark, hierarchical-memory, executable-skills, human-robot-interaction, task-update, physical-safety
+- Model size: 8 frozen MLLM backends; total system unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+物理シミュレータ内のG1と人型NPCを結び、実行完了や会話の到達によってタスク状態を更新する基盤。凍結MLLMは階層記憶と実行可能skillを使い、観測・動作誤差・人の情報・要件変更を受けて再計画する。
+
+**主な貢献**
+
+30室内scene・360 episodeのbenchmarkで8モデルを同じharnessと100判断上限で比較。最良モデルでもnavigation/delivery成功率40.6%/47.8%で、衝突発生率84%/98%を報告し、完了と物理安全を別に評価する必要性を示す。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- 2026-10-09〜22の選択増分調査。本文前にcanonical arXiv/DOI aliasと正規化・近似題名を既存376件へ照合し一致なし。全著者・v1初稿2026-10-21・改訂なしをarXiv absで確認。読解範囲: https://arxiv.org/html/2610.30043v1 §3、§4.1–4.3、§5を構造的に選読。評価は単一G1機体と2室内service task familyのsimulationのみ。Base＋5条件の対比較で、モデル重みは固定。進捗は部分点、成功は要件充足と転倒/物体喪失を反映し、一般的な接触だけでは成功を取消さない。実機transferとVLA backendは今後の計画で、現状をhybridとしない。公式repoのharness実装とLICENSE全文（Apache-2.0）を確認: https://github.com/xuyicheng-zju/TARSphere/blob/43e0f801bce9e38bef7858fef40f48014c2f5128/LICENSE 。確認commit 43e0f801bce9e38bef7858fef40f48014c2f5128。公開repoはtask examplesを提供し、論文全360episodeの一式公開とは主張しない。assets/READMEは外部モデル・scene・robot・animationを別配布とし各条件を保持するため、本研究固有の重み状態はunknown。実行・数値再現なし。 PDF URLはabsの実リンクをHEADでHTTP 200/application/pdf確認（本文bytes未取得）。
 
 ### GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation
 

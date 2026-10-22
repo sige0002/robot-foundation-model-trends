@@ -3,7 +3,57 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-20 records · Published date 降順（同日 ID 降順）
+22 records · Published date 降順（同日 ID 降順）
+
+### Plan First, Act Later: Streaming Reasoning for Executable Memory in Robot Control
+
+- ID: `HYBRID-0148`
+- Published: 2026-10-21
+- Authors: Qinghang Liu; Conglin Wang; Zongsheng Li; Boyong He; Han Gao; Pengcheng Wang; Tao Sun; Lige Liu; Chang Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29329) · [PDF](https://arxiv.org/pdf/2610.29329) · [Project](https://qinghangliu.github.io/pal-webpage/)
+- Tags: PAL, streaming-memory, semantic-event-memory, executable-subtask-list, self-labeling, hierarchical-VLM-VLA, RoboMME
+- Model size: Qwen3-VL-4B-Instruct high-level VLM, 33.0M trainable LoRA parameters; pretrained MemER VLA; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+短期画像buffer、意味的event記憶、実行可能なsubtask listの三層で履歴を保持するPAL。VLMは証拠が見えた時点で未来のsubtaskを記録し、実行時にはlistから選んで既存VLAへ渡す。密な更新教師と参照検証付き自己ラベル生成の二段階で記憶更新を学ぶ。
+
+**主な貢献**
+
+RoboMMEで56.05±1.38%を報告し、既報FrameSamp-Modulの44.51%を上回る。Frankaの4記憶依存課題・各30評価で平均60.83%。先回りしたsubtaskの書込みを検証する一方、逐次listは条件分岐を表現できない。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- 2026-10-09〜22の選択増分調査。本文前にcanonical arXiv/DOI aliasと正規化・近似題名を既存376件へ照合し一致なし。全著者・v1初稿2026-10-21・改訂なしをarXiv absで確認。読解範囲: https://arxiv.org/html/2610.29329v1 §4、§5、§6、Appendix B・C.3・D.2–D.3を選読。PALは50episode/task×5policy seed、既報π0.5/MemER/FrameSamp比較値は3checkpoint×3seedで同一再実行ではない。実機は10episode/taskを3反復。Stage2のverifierは参照textとの完全一致と座標誤差閾値によるlabel選別であり、一般的な物理成功の自動証明ではない。公式projectは閲覧できるがCodeリンク https://github.com/QinghangLiu/PAL\_official/tree/main はHTTP 404、GitHub公開repo APIも404（2026-10-22）。論文の再現性statementとは区別し、公開実装・weights・実装licenseを確認できないためunknown、code\_urlは空欄。projectのICLR2027表記だけで採択とはしない。実行・数値再現なし。 PDF URLはabsの実リンクをHEADでHTTP 200/application/pdf確認（本文bytes未取得）。
+
+### From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent Manipulation
+
+- ID: `HYBRID-0147`
+- Published: 2026-10-21
+- Authors: Tingwen Du; Haoyu Guo; Hanxue Zhang; Xuanxu Wang; Junting Dong; Chao Gao; Mingfei Han; Tao Lu; Mulin Yu; Chunhua Shen; Xiaojun Chang; Zhihui Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29560) · [PDF](https://arxiv.org/pdf/2610.29560)
+- Tags: SERA, editable-harness, task-context, self-evolution, frozen-VLA, history-dependent-manipulation, RoboMME
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+固定VLA実行器の周囲に、進捗・実行結果・不確実性を更新するVLM Agentのharnessを置くSERA。開発時rolloutの失敗診断から計画指針、判定基準、復旧規則を改訂し、選んだharnessをheld-out評価前に固定する。
+
+**主な貢献**
+
+RoboMMEの16課題・計800episodeで、自己改訂前44.38%から自動選択後51.38%へ成功率を7.00ポイント改善と報告。モデル重み更新や無制限のオンラインcode修正ではなく、VLA命令interfaceを保つ外部harness改訂の検証である。
+
+**確認記録**
+
+- Checked: 2026-10-22 · Review: verified
+- 2026-10-09〜22の選択増分調査。本文前にcanonical arXiv/DOI aliasと正規化・近似題名を既存376件へ照合し一致なし。全著者・v1初稿2026-10-21・改訂なしをarXiv absで確認。読解範囲: https://arxiv.org/html/2610.29560v1 §§3–5、Appendix B.1–B.3を選読。high-level plannerはgpt-5.6-sol（reasoning high）、総規模は未確認。命令候補は既存executorの学習label catalogに由来し、既知taskやbenchmark仕様の初期priorを使う。offline診断は内部trace/専門家実演を含み得る。自動選択51.38%にはsearch予算終了時のdevelopment fallbackも含み、全改訂がfresh validationに合格した値ではない。main table比較先は既報leaderboard値、MemER局所再現は別表。VLM推論遅延と実行失敗からの復帰が課題で、主評価はsimulation。abs/HTMLと正式題名の限定検索で専用公式code・weights・実装licenseは確認できずunknown。論文licenseを実装へ転用しない。実行・数値再現なし。 PDF URLはabsの実リンクをHEADでHTTP 200/application/pdf確認（本文bytes未取得）。
 
 ### Let the Mind Conceive, Let the Hand Achieve: Following Multimodal Instructions for Long-Horizon Robotic Manipulation
 
