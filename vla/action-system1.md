@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-34 records · Published date 降順（同日 ID 降順）
+36 records · Published date 降順（同日 ID 降順）
+
+### When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies
+
+- ID: `VLA-0236`
+- Published: 2026-10-22
+- Authors: Shivakanth Sujit; Luca Nunziante; Rousslan Fernand Julien Dossa; Kai Arulkumaran
+- Venue: CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2610.30735) · [PDF](https://arxiv.org/pdf/2610.30735) · [Project](https://onestepflow.github.io/)
+- Tags: flow-matching, Euler-integration, single-step-inference, efficiency, paired-evaluation
+- Model size: VLA 450M–4.7B（6種）；DiT対照211M
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+追加の学習や蒸留なしに、既存フローマッチングVLAの行動生成を1回のEuler積分へ減らせるかを調べた実証研究。6種のVLAとDiT対照を用い、同じcheckpoint・初期条件で通常の4–10ステップ推論と比較する。
+
+**主な貢献**
+
+4種のシミュレーションbenchmarkと実機Franka suiteで比較し、十分に訓練された大規模モデルほど1ステップと多段推論の差が小さいと報告する。小型・長期課題や早期checkpointには差が残り、実機は各課題100試行で、モデル/個別課題では最大17ポイント差がある（π0.5では最大13ポイント）。公開checkpointの欠落で評価表は不完全であり、RL更新の有効性は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-22 v1。https://arxiv.org/html/2610.30735v1 のSections 3–5とarXiv採録comment、公式projectを確認。projectはHTTP 200、リンク先 https://github.com/lucanunz/flowsteps\_corl2026 はweb/GitHub APIとも404（2026-10-23）で公開コードとして扱わずcode\_url空欄。実験で利用した他研究の公開checkpointを本研究の重み公開とは区別し、code/weights/licenseはunknown。PDFはabsの実hrefのみ検証し未取得。 実機Table3は4課題計400試行で、FLOWER Close Ovenの92→75%（17ポイント差）も含む。
+
+### Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models
+
+- ID: `VLA-0234`
+- Published: 2026-10-22
+- Authors: Yufeng Liu; Bohao Fan; Juntu Zhao; Xinyi Wang; Hang Yu; Wenzhuan Luo; Yingzhi Wang; Qinghai Li; Yingdong Hu; Junliang Guo; Richard Wang; Dequan Wang; Yang Gao; Cheng Ma
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.31569) · [PDF](https://arxiv.org/pdf/2610.31569) · [Code](https://github.com/lyfeng001/Echo-Sim) · [Project](https://lyfeng001.github.io/Echo/)
+- Tags: task-status, failure-detection, failure-recovery, flow-matching, asynchronous-denoising
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+停止と失敗を表す2信号を行動チャンクに追加し、単一VLAで行動と同時に生成するEcho。成功・失敗・介入前・回復の軌道区分から状態を教師化し、信号を先にノイズ除去して行動生成へ反映する。フレーム単位の進捗ラベルは不要だが、軌道区分や介入データは必要。
+
+**主な貢献**
+
+π0.5を共通基盤に実機5課題各30試行で評価し、Insert Flowerの0–10点完了スコアを5.67から8.33へ改善と報告する。成功・回復の行動教師は対照と共通だが、Echoは追加の失敗データで状態信号を学ぶ。公式公開実装はLIBERO-Recoveryの3種データ版で、実機4種版との相違が文書化されている。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-22 v1。https://arxiv.org/html/2610.31569v1 のSections 3–4とAppendix A、公式project/README/docs/experiments.md/THIRD\_PARTY.mdを確認。公開範囲はsimulation code。実装独自部分に適用される明示ライセンスをroot/README/THIRD\_PARTY/LICENSESで確認できず、上流Apache/MIT等をEcho全体へ外挿しない。公開学習済みEcho重みは未確認（評価設定はローカルcheckpoint path）。PDFはabsの実hrefのみ検証し未取得。
 
 ### PaceVLA: Adaptive Temporal Action Quantization in Vision-Language-Action Models
 

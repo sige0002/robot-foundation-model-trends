@@ -3,7 +3,82 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-38 records · Published date 降順（同日 ID 降順）
+41 records · Published date 降順（同日 ID 降順）
+
+### Inside-JEPA: From Prediction to Relational Grounding in Latent World Models
+
+- ID: `WAM-0146`
+- Published: 2026-10-22
+- Authors: Hossein Resani; Javen Qinfeng Shi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.31194) · [PDF](https://arxiv.org/pdf/2610.31194)
+- Tags: Inside-JEPA, relational-latent, inverse-dynamics, action-supervision, 2D-box-relations, RH20T, representation-diagnostics
+- Model size: 912,632 trainable parameters in five-relation setting with frozen ResNet-18; main 13-relation setting total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+JEPAの状態内に物体対ごとの関係channelを置き、その変化から行動を復元する逆動力学損失で意味を与える。関係labelを使わない表現学習を、予測のみ・別の入力を読む逆動力学・label-free損失と同一構造で比較する。
+
+**主な貢献**
+
+RH20Tの未見課題でmatched関係AUROCを予測のみから0.081改善。人間動画の65行動候補からの1段選択は教師付きreadoutでtop-5 42.5%対24.4%。これは閉ループの実機成功率ではなく、接地対象も2D boxから定義した関係に限られる。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-10〜23の選択増分調査。本文前に既存392件へcanonical arXiv・DOI aliasと正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。arXiv absで全著者・v1初稿10-22 12:43:03 UTC・改訂なしを確認。読解範囲 https://arxiv.org/html/2610.31194v1 §3–6、Appendix A/B/F。RH20Tは112/34 train/held-out taskで98,395/25,104 frame pairs、所与boxに依存する。関係label不要はencoder学習の話で、行動labelは必要、計画readoutは関係教師で校正する。left\_ofは接地せず、単一channelと関係が一対一に対応するとも限らない。abs/HTMLと正式題名・著者の限定検索で専用公式code・weights・実装licenseは未確認のためunknown。論文CC-BYを実装へ流用しない。absの実PDF hrefを抽出・絶対URL化し、本体は取得せず。実行・数値再現なし。
+
+### How Representational Priors Shape Generalization in World Action Models
+
+- ID: `WAM-0148`
+- Published: 2026-10-21
+- Authors: Junha Chun; Youngjoon Jeong; Taesup Kim
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29168) · [PDF](https://arxiv.org/pdf/2610.29168)
+- Tags: nuisance-orthogonality, nuisance-suppression, representational-geometry, backbone-selection, visual-robustness, LIBERO-Plus, diagnostic-study
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+WAM学習前のbackboneが持つ視覚表現の幾何と、学習後の外観変化への頑健性を調べる。行動を変えない視覚摂動の特徴変位が、分布内参照部分空間からどれだけ直交するかをnuisance orthogonalityで測る。
+
+**主な貢献**
+
+LIBERO-Plusの40 clean観測と1,200摂動観測で9つのbackbone条件を診断し、直交性と方策頑健性の関連を報告。ImageWAMとFastWAMの学習前後を比べ、頑健な表現でnuisanceの相対的抑制が強いことも示す。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-10〜23の選択増分調査。本文前に既存392件へcanonical arXiv・DOI aliasと正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。arXiv absで全著者・v1初稿10-21 03:59:35 UTC・改訂なしを確認。読解範囲 https://arxiv.org/html/2610.29168v1 §3–6とAppendix A.1。camera/background/light/sensor noiseを対象にし、方策評価は計5,418軌跡。観察研究であり、直交性や事前学習目的の因果効果は分離していない。言語・行動合成汎化と実機への一般化は範囲外。モデル選択の診断研究なので単一の総model sizeを付与しない。abs/HTMLと正式題名の限定検索で専用公式code・weights・実装licenseは未確認のためunknown。absの実PDF hrefを抽出・絶対URL化し、本体は取得せず。実行・数値再現なし。
+
+### DepState-JEPA: Learning Depth-Grounded State Representation for Visual Perception and Manipulation
+
+- ID: `WAM-0147`
+- Published: 2026-10-21
+- Authors: Xiujian Liang; Liuyuan Na; Zehao Du; Jiacheng Xu; Weixi Song; Mingyang Sun; Xingjun Ma; Cewu Lu; Jianhua Sun
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29246) · [PDF](https://arxiv.org/pdf/2610.29246)
+- Tags: DepState-JEPA, RGB-D, metric-3D-grounding, shared-private-latents, action-conditioned-JEPA, forward-kinematics, sim2real-MPC
+- Model size: Two independently adapted V-JEPA 2.1 ViT-g/16 encoders; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+RGBとdepthをmetric 3Dへ接地し、共有状態DepStateと各modality固有の復号特徴へ分けるJEPA。行動条件付き遷移で共有状態を進め、初期の固有特徴を保ったまま未来特徴を読む。関節・TCP・物体運動の教師と順運動学整合も学ぶ。
+
+**主な貢献**
+
+RGB-D補完、条件付き予測、DMC/Meta-World、sim2real MPCを評価。実機の引出し開閉81.1±5.1%、cup pick-and-place 78.9±3.8%を報告（各課題3訓練seed×各30試行、±はseed間sample SD）。幾何・未来状態matchingのablationで予測と制御への寄与を調べる。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-10〜23の選択増分調査。本文前に既存392件へcanonical arXiv・DOI aliasと正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。arXiv absで全著者・v1初稿10-21 05:51:06 UTC・改訂なしを確認。読解範囲 https://arxiv.org/html/2610.29246v1 §3–4、Appendix B.1–B.2/E.5/E.6.3/F。全体系比較は事前学習・容量を揃えた因果比較ではない。予測表は各stepの記録済みproprioceptionを条件とし、制御候補では予測値を使う。実機は固定外部RGB-D camera・機体別学習・対応する室内2課題。full-task成功はatomic試行の積でなく別に計測。60秒はrobot実行時間で推論/searchを除く。abs/HTMLと正式題名の限定検索で専用公式code・weights・実装licenseは未確認のためunknown。absの実PDF hrefを抽出・絶対URL化し、本体は取得せず。実行・数値再現なし。
 
 ### PICA-WAM: Visual Perturbation Invariance via Cross-Appearance Self-Alignment in World Action Models
 

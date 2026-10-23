@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-7 records · Published date 降順（同日 ID 降順）
+8 records · Published date 降順（同日 ID 降順）
+
+### NavBind: Diagnosing Instruction-Action Binding at Route Forks in Navigation VLAs
+
+- ID: `VLA-0237`
+- Published: 2026-10-21 · Updated: 2026-10-22
+- Authors: Josh Qixuan Sun; Xiaoying Xing; Yurun Chen; Huaiyuan Weng; Wentao Zhu; Mark Crowley
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29203) · [PDF](https://arxiv.org/pdf/2610.29203)
+- Tags: navigation, benchmark, instruction-grounding, counterfactual-evaluation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+ナビゲーション成功率だけでは捉えにくい指示と行動の結びつきを、同じ位置・観測履歴・通過済みの指示を保ったまま、分岐先を指定する残りの指示だけを交換して調べる診断手法。R2R-CEとRxR-CEから、両方の経路が実行可能な3,252文脈を構成する。
+
+**主な貢献**
+
+4つの既存ナビゲーションVLAについて、生成行動列、固定参照行動の尤度、視覚的注意・勾配帰属を組み合わせ、報告済みの到達成功率の順位と指示への局所的応答が一致しないことを示す。評価は4行動の局所窓に限られ、後続の回復や注意領域の因果的妥当性は検証しない。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- arXiv履歴でv1=2026-10-21、v2=2026-10-22を確認。v2 HTMLの方法・Table 1・評価設定・Limitationsを選択確認: https://arxiv.org/html/2610.29203v2 。公式チェックポイントの報告済みSRを引用した診断であり、本研究による全経路SRの再測定ではない。論文内・arXivに公式コード/新規重みの提供先を確認できず、公開状態と実装ライセンスはunknown。PDF URLはabs HTMLのcitation\_pdf\_urlとリンクhrefを照合し、PDFは取得していない。
 
 ### Reasoning as a Distribution: Generative Plan Latents for Vision-Language-Action Models
 

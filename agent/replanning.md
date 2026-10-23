@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+11 records · Published date 降順（同日 ID 降順）
+
+### Know When to Escalate: Critic-Guided Adaptive Execution for Cloud-Local Embodied Agents
+
+- ID: `AGENT-0173`
+- Published: 2026-10-22
+- Authors: Wei Zhang; Lirong Xiang; Charles Fleming
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.30587) · [PDF](https://arxiv.org/pdf/2610.30587)
+- Tags: cloud-local-collaboration, adaptive-execution, critic, handoff-memory, latency
+- Model size: Qwen3.6-35B-A3B (local executor and critic); cloud size undisclosed
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+局所実行器の信頼性をcriticが監視し、必要なときだけ強いクラウドモデルへ制御を移すCAREを提案する。復旧までは制御移譲を維持し、直近の観測・行動・結果と確認済みのタスク進捗を共有メモリで引き継ぐことで、毎ステップの独立ルーティングと区別する。
+
+**主な貢献**
+
+Habitat 120件、EmbodiedBench 80件、VLABench 80件で、最良の比較協調方式に対し成功率+6.3〜18.3ポイント、Cloud-onlyに対し行動間の中央値遅延28.8〜82.6%減を報告。Cloud-onlyの成功率は2ベンチで上回るがEmbodiedBenchでは5ポイント下回る。評価は低レベル制御より上の意思決定層で、実機・ネットワーク変動・ハードウェア障害への効果は未検証。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- arXiv v1=2026-10-22。https://arxiv.org/html/2610.30587v1 のIII、IV-A/Table I、Vを選択確認。クラウドはClaude Sonnet 4.6、局所とcriticは同一のzero-shot Qwen checkpointで、比較手法にも同じ記憶を提供。CRRは投機的クラウド呼出しを含みcritic呼出しを除く。論文内・arXivに公式実装/独自重みの提供先を確認できず、code/weights/licenseはunknown。論文のCC BY-SA 4.0をコードのライセンスとは扱わない。PDF hrefのみ確認、PDF未取得。 局所QwenもH200 serverで動作し、onboard端末の実測遅延とはしない。
 
 ### TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments
 

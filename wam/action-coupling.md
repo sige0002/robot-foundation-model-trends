@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-46 records · Published date 降順（同日 ID 降順）
+48 records · Published date 降順（同日 ID 降順）
+
+### UniFlowWAM: A Unified World-Action Model with Visual Semantics and 4D Geometry
+
+- ID: `WAM-0144`
+- Published: 2026-10-22
+- Authors: Jialin Tian; Zhuofan Li; Xinkai Wang; Bokai Lin; Chenyi Wang; Xinyu Zhan; Cewu Lu; Lixin Yang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.30991) · [PDF](https://arxiv.org/pdf/2610.30991) · [Project](https://kksham111.github.io/UniFlowWAM_ProjectPage/)
+- Tags: scene-flow, 4D-geometry, multimodal-diffusion, role-conditioned-objectives, forward-inverse-dynamics
+- Model size: Qwen3-VL-4B conditioning; LDA-initialized three-expert model, total unknown
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+未来視覚特徴・3D scene flow・行動を対等な3モダリティとして共同学習するWorld-Action Model。各専門家のjoint attentionと10通りのtarget/condition/absent目的で方策と順逆動力学を統合し、直接方策の推論にはflow抽出を要しない。
+
+**主な貢献**
+
+RoboCasa-GR1の24課題を共有11評価seed・各課題/seed50episodeで比較し、平均56.38%対公開LDA52.11%。LIBERO学習からLIBERO-Plusへzero-shot87.7%（評価したcheckpoint中のbest）。実機は4課題を各50demoで別々に学習し各50試行、完遂成功率87.0%対π0.5の68.5%を報告。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- arXiv v1=2026-10-22、改訂なし。本文前のcanonical arXiv/DOI・正規化/近似題名照合は一致なし。https://arxiv.org/html/2610.30991v1 §§3–5選読。3D flowはTrack4Worldの擬似教師と凍結4D VAEで準備し、雑音・表現shift・約1200時間の限定的flow mid-trainingを明記。RoboCasa58.9%は11評価seedのbestで平均56.38%と区別。実機は固定開始条件を同一policy間で共有したtask別学習で、87.0%は完遂率、92.3は別の部分点process score。公式projectはCode coming soon、公開実装unavailable。重みと実装licenseは未確認unknown、基礎LDAの公開状態を転用しない。PDF href検証のみ、PDF/重み保存・独立再現なし。
+
+### Self-Distilling Future Video Representations for World Action Models
+
+- ID: `WAM-0145`
+- Published: 2026-10-21
+- Authors: Huiwon Jang; Suhyeok Jang; Hyeonmo Kang; Seungku Kim; Jinwoo Shin; Sihyun Yu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.30320) · [PDF](https://arxiv.org/pdf/2610.30320) · [Code](https://github.com/suhyeok-jang/FRED) · [Project](https://huiwon-jang.github.io/FRED/)
+- Tags: FRED, future-representation, self-distillation, EMA-teacher, observation-history, single-video-step, human-robot-co-training
+- Model size: Wan2.2-TI2V-5B / Wan2.1-I2V-14B video backbone + 16 / 24-layer action DiT; total unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+動画モデルの1回のforwardから行動decoderへ渡す未来表現を改善するFRED。ノイズから得た表現を、未来観測を見るEMA教師へ自己蒸留し、過去4枚と現在画像で条件付ける。動画側は動画予測と蒸留で学び、行動損失の勾配は渡さない。
+
+**主な貢献**
+
+DROID学習後の未見環境で14B版のOOD平均scoreは52.1%（DreamZero 10.4%）。OpenArmの人間動画だけにある技能では50.0%（DiT4DiT 19.4%）。各課題12試行で部分点を認める評価であり、二値完遂率とは区別する。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-10〜23の選択増分調査。本文前に既存392件へcanonical arXiv・DOI aliasと正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。arXiv absで全著者・v1初稿10-21 18:33:13 UTC・改訂なしを確認（Oct23掲載日と区別）。読解範囲 https://arxiv.org/html/2610.30320v1 §3–4、Appendix A/B/F/G。zero-shotは環境固有fine-tuneなし。人間転移は553 robot実演と1,187 human動画の同環境co-trainingで、対応付けは暗黙的。言語接地の制限が残る。公式repoの実装・学習経路、LICENSE Apache-2.0、NOTICEの外部コード条件をcommit 57ddd3d70c1f6066d65e06eaf81e5c5022b7906dで確認: https://github.com/suhyeok-jang/FRED/blob/57ddd3d70c1f6066d65e06eaf81e5c5022b7906d/LICENSE 。公式重み https://huggingface.co/FRED-AGI-LAB/fred-wan22-5b-droid revision 1d6fd1f363e38819273e6935389e97b993e547d0、5 safetensors shard計22,536,424,208 bytesとmodel card Apache-2.0を独立確認。14B-DROIDと5B-RoboCasaも実shard掲載確認。外部backbone等の条件は別。absの実PDF hrefを抽出・絶対URL化し、本体は取得せず。実行・数値再現なし。
 
 ### Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation
 

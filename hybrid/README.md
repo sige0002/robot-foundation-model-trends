@@ -3,17 +3,20 @@
 
 [← データベース](../README.md)
 
-51 records · 正本: [papers.csv](../papers.csv)
+54 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 22 |
-| [vla-wam](vla-wam.md) | 22 |
+| [vla-agent](vla-agent.md) | 24 |
+| [vla-wam](vla-wam.md) | 23 |
 | [wam-agent](wam-agent.md) | 5 |
 | [vla-wam-agent](vla-wam-agent.md) | 2 |
 
 ## 論文
 
+- 2026-10-22 · [FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies](vla-agent.md) · `HYBRID-0151`
+- 2026-10-22 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](vla-wam.md) · `HYBRID-0149`
+- 2026-10-21 · [SimPT: An Automated Simulation Framework for Intervention-Based VLA Post-Training](vla-agent.md) · `HYBRID-0150`
 - 2026-10-21 · [Plan First, Act Later: Streaming Reasoning for Executable Memory in Robot Control](vla-agent.md) · `HYBRID-0148`
 - 2026-10-21 · [From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent Manipulation](vla-agent.md) · `HYBRID-0147`
 - 2026-10-21 · [Agentic World Action Models](vla-wam-agent.md) · `HYBRID-0146`

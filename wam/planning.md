@@ -33,7 +33,7 @@
 ### Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation
 
 - ID: `WAM-0134`
-- Published: 2026-10-19
+- Published: 2026-10-19 · Updated: 2026-10-20
 - Authors: Xuezhou Xu; Chung-Pang Wang; Zhenzhen Li; Benjamin Riviere
 - Venue: arXiv
 - Links: [Paper](https://arxiv.org/abs/2610.25600) · [PDF](https://arxiv.org/pdf/2610.25600)
@@ -52,8 +52,8 @@ Euclidean距離でなくcontroller依存の到達時間で計画抽象を構成�
 
 **確認記録**
 
-- Checked: 2026-10-20 · Review: verified
-- arXiv v1初稿日・全著者、HTML §IV/§V-B/§VIと公開PDFを確認: https://arxiv.org/html/2610.25600v1 。本文は実機指標をtask progressと記すため、要旨の100% success rateをそのまま完全成功率として拡張しない。実機は6初期目標組×各3試行。公式code/project/weightsへのリンクはarXiv・HTMLで見つからず、タイトル+著者+codeの公開検索でも公式提供先を確認できないため各statusはunknown。未公開と断定しない。
+- Checked: 2026-10-23 · Review: needs-review
+- arXiv v1初稿日・全著者、HTML §IV/§V-B/§VIと公開PDFを確認: https://arxiv.org/html/2610.25600v1 。本文は実機指標をtask progressと記すため、要旨の100% success rateをそのまま完全成功率として拡張しない。実機は6初期目標組×各3試行。公式code/project/weightsへのリンクはarXiv・HTMLで見つからず、タイトル+著者+codeの公開検索でも公式提供先を確認できないため各statusはunknown。未公開と断定しない。 2026-10-23増分確認: 本文前のcanonical arXiv/DOI照合でWAM-0134と一致。canonical absとv1/v2 absで初稿2026-10-19 00:06:44 UTC・v2改訂2026-10-20 20:08:37 UTC、題名・全著者の同一性を確認。https://arxiv.org/html/2610.25600v1 と https://arxiv.org/html/2610.25600v2 のarticleテキスト差分と§IV/§V–VIを選読。v2は要旨のsimulation改善幅の下限を13.3→8.0ポイントへ修正し、V-JEPA 2-AC\*の94±6% task progressがH1の値であることと、各disk移動の6段階subgoalを明確化。新手法・追加実験結果とは確認していない。数式/表のMathML alttext 200要素は両版で一致するが図の変更は未検査。canonical/v2 abs要旨は依然13.3–85.3ポイントでv2 HTMLの8.0–85.3と不一致のためneeds-review。既存の保守的summary/contributionは維持。今回PDF本体未取得、code/weights/licenseの新たな公開を示す専用リンクもabs/HTMLに確認できずunknownを維持（外部release先の網羅的再調査ではない）。
 
 ### SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation
 

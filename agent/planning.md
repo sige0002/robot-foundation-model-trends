@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-16 records · Published date 降順（同日 ID 降順）
+17 records · Published date 降順（同日 ID 降順）
+
+### SCOPE: Scene-graph Construction Optimized by Plan Error-correction for Robot Long-term Planning Datasets
+
+- ID: `AGENT-0174`
+- Published: 2026-10-22
+- Authors: Chaoyue Li; Zeyu Gao; Yanfeng Lu; Fan Luo
+- Venue: IROS 2026 (accepted)
+- Links: [Paper](https://arxiv.org/abs/2610.31518) · [PDF](https://arxiv.org/pdf/2610.31518) · [Project](https://scope-page.github.io/)
+- Tags: task-and-motion-planning, scene-graph, synthetic-data, pddl, error-correction
+- Model size: Qwen2.5-7B-Instruct
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+長期ロボット計画用のシーングラフ・指示・計画データを自動生成する枠組み。出現頻度に基づく多様な場面生成と、PDDLプランナの失敗から不足した前提条件を遡ってシーングラフを修正する閉ループを組み合わせる。
+
+**主な貢献**
+
+各方式で1万組のデータを生成し、同じLoRA設定でQwen2.5-7B-Instructを調整する。AI2-THOR由来の100シーングラフ/300指示の評価では、LLM判定で満点（4/4）となる割合がDELTAデータの50.67%から63.00%へ12.33ポイント向上。実行可能性は記号モデルとシミュレーション上の検証であり、実機での安全性保証ではない。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- arXiv v1=2026-10-22、著者申告のIROS 2026採択を確認。https://arxiv.org/html/2610.31518v1 のIII、IV/Table II、失敗分析を選択確認。公式プロジェクト https://scope-page.github.io/ は200応答、CODE (Coming Soon)と明記するためcode\_status=unavailable。独自チェックポイントの公開と実装ライセンスは未確認。PDDLGym/VALによる実行可能性判定とLLM-as-Judgeの成功評価を区別。PDF URLはabs HTMLのcitation\_pdf\_urlとリンクhrefを照合し、PDF未取得。
 
 ### CausGround: Causal Interaction Grounding for Adaptive Embodied Planning
 
@@ -33,10 +58,10 @@
 ### AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics
 
 - ID: `AGENT-0167`
-- Published: 2026-10-20
+- Published: 2026-10-20 · Updated: 2026-10-21
 - Authors: Xinxin Liu; Bingxin Xu; Wenrui Bao; Ming Li; Wentao Bao; Chen Chen; Yuzhang Shang
 - Venue: arXiv
-- Links: [Paper](https://arxiv.org/abs/2610.28589) · [PDF](https://arxiv.org/pdf/2610.28589) · [Code](https://github.com/xinxinliu-ai/AgenticRoboRL)
+- Links: [Paper](https://arxiv.org/abs/2610.28589) · [PDF](https://arxiv.org/pdf/2610.28589) · [Code](https://github.com/xinxinliu-ai/AgenticRoboRL) · [Project](https://xinxinliu-ai.github.io/AgenticRoboRL/)
 - Tags: AgenticRoboRL, planner-post-training, SFT, multi-turn-RL, harness-adapter, frozen-VLA, control-code, LIBERO-PRO, LIBERO-Plus
 - Model size: Qwen3.5-9B planner; total system unknown
 - Open-source: true
@@ -52,8 +77,8 @@
 
 **確認記録**
 
-- Checked: 2026-10-21 · Review: verified
-- arXiv absで全著者・初稿2026-10-20・改訂なしを確認。手法・評価は一次HTML v1 §§3–4.5を読んで確認し、PDF URLの取得も確認（https://arxiv.org/html/2610.28589v1 ）。評価はLIBERO系simulation。CaP-X側はprivileged stateを使う別学習で、RPentの学習済みplannerを直接転用した実験ではない。記憶付き大規模plannerとの値はsystem比較であり、SFT寄与の分離ではない。論文の公開予定表記とは別に、公式リンク先repoの実ファイルrl/train\_rl.py、LICENSE（Apache-2.0）、NOTICEを確認。旧L-CodingSpaceからxinxinliu-aiへの移動をGitHub repo ID 1422461340で確認。確認commit a4b4115dcc4890561a2f5b10d44a3c0264cb47ba（2026-10-21 22:30:25 UTC）。実装ライセンス: https://github.com/xinxinliu-ai/AgenticRoboRL/blob/a4b4115dcc4890561a2f5b10d44a3c0264cb47ba/LICENSE 。公式READMEが案内する重み https://huggingface.co/ciciciciliu/AgenticRoboRL-Qwen3.5-9B のsft/とrl-v006/に各18.8GBのmodel.safetensorsとXet/SHA256情報を確認（revision 996f98f32483277099e5448bbccc9fdc13677c0f、model card表示Apache-2.0）。重みの取得・実行は未実施。READMEはteacher軌跡未公開と明記。公式projectページは新旧URLともweb取得失敗のためproject\_urlは空欄。 2026-10-08〜21の分野別選択増分調査、本文前にcanonical IDと正規化/近似題名を照合。独立した実行・数値再現なし。
+- Checked: 2026-10-23 · Review: verified
+- arXiv absで全著者・初稿2026-10-20・改訂なしを確認。手法・評価は一次HTML v1 §§3–4.5を読んで確認し、PDF URLの取得も確認（https://arxiv.org/html/2610.28589v1 ）。評価はLIBERO系simulation。CaP-X側はprivileged stateを使う別学習で、RPentの学習済みplannerを直接転用した実験ではない。記憶付き大規模plannerとの値はsystem比較であり、SFT寄与の分離ではない。論文の公開予定表記とは別に、公式リンク先repoの実ファイルrl/train\_rl.py、LICENSE（Apache-2.0）、NOTICEを確認。旧L-CodingSpaceからxinxinliu-aiへの移動をGitHub repo ID 1422461340で確認。確認commit a4b4115dcc4890561a2f5b10d44a3c0264cb47ba（2026-10-21 22:30:25 UTC）。実装ライセンス: https://github.com/xinxinliu-ai/AgenticRoboRL/blob/a4b4115dcc4890561a2f5b10d44a3c0264cb47ba/LICENSE 。公式READMEが案内する重み https://huggingface.co/ciciciciliu/AgenticRoboRL-Qwen3.5-9B のsft/とrl-v006/に各18.8GBのmodel.safetensorsとXet/SHA256情報を確認（revision 996f98f32483277099e5448bbccc9fdc13677c0f、model card表示Apache-2.0）。重みの取得・実行は未実施。READMEはteacher軌跡未公開と明記。公式projectページは新旧URLともweb取得失敗のためproject\_urlは空欄。 2026-10-08〜21の分野別選択増分調査、本文前にcanonical IDと正規化/近似題名を照合。独立した実行・数値再現なし。 2026-10-23追記: arXiv absでv2=2026-10-21 18:28:40 UTCを確認し、上記「改訂なし」を訂正（初稿2026-10-20と安定IDは維持）。https://arxiv.org/html/2610.28589v1 と https://arxiv.org/html/2610.28589v2 の正規化HTML本文を比較した範囲では、追加のProject pageリンクと版表示以外に手法・評価・数値の変更を認めず、技術要約と公開状態は従来の確認結果を維持した。v2の実際のリンク https://l-codingspace.github.io/AgenticRoboRL/ を直接HTTPで確認すると200のMovedページで、canonical/refresh/anchorはいずれも https://xinxinliu-ai.github.io/AgenticRoboRL/ を指す。移転先もHTTP 200・title=AgenticRoboRLを確認できたためproject\_urlを追加した（推測したURLではない）。PDF未取得。
 
 ### Towards Agentic Robots: Model, Data, Environment, and Harness
 

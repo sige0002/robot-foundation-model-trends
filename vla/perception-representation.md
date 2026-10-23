@@ -3,7 +3,82 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-27 records · Published date 降順（同日 ID 降順）
+30 records · Published date 降順（同日 ID 降順）
+
+### Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models
+
+- ID: `VLA-0233`
+- Published: 2026-10-22
+- Authors: Atiksh Bhardwaj; Edward W. Duan; Junwon Seo; Prithwish Dan; Wei-Chiu Ma; Andrea Bajcsy; Preston Culbertson
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.31613) · [PDF](https://arxiv.org/pdf/2610.31613)
+- Tags: runtime-monitoring, failure-detection, linear-probe, interpretability
+- Model size: 線形プローブ約2K学習パラメータ（π0.5のVLM活性を利用）
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+成功実演で得たVLA内部活性から線形プローブで進捗を読み出し、成功軌道から期待される進行との差で実行失敗を検出する手法。外部VLMや失敗例による学習を使わず、既に計算した方策表現を再利用する。
+
+**主な貢献**
+
+π0.5を用いたVLABenchの6課題と実機6課題で監視を評価。シミュレーションの状態単位AUROCは0.788、RTX A6000で追加推論0.026 msと報告する。単一VLA系列の検証であり、失敗回復や安全性保証を実証したものではない。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: needs-review
+- 2026-10-22 v1。https://arxiv.org/html/2610.31613v1 のSections VI–VIII、Table Iを確認。PDFはabsの実hrefのみ検証し未取得。著者表記はHTMLのAndrea Bajcsyを採用（absではBajscy）。Table IVの実機AUROC集約値0.78は6セルの単純平均0.72と一致せず、集約方法を解消できないため採用しない。公式コード・重み・実装ライセンスは確認範囲で不明。 シミュレーションは6課題×100rolloutを成功/失敗50:50へ選択・均衡化した計600評価例で、自然な失敗頻度の推定ではない。
+
+### FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models
+
+- ID: `VLA-0232`
+- Published: 2026-10-22
+- Authors: Huixin Xu; Ziya Yu; Peng Li
+- Venue: CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2610.31423) · [PDF](https://arxiv.org/pdf/2610.31423)
+- Tags: multi-view, future-intent, dynamic-view-routing, task-progress, pi0.5
+- Model size: π0.5 backbone + 70.13M added parameters; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+短期行動履歴などから未来の相互作用intentを予測し、行動chunkの各時点に応じてglobal/wrist viewの寄与を調節する。軌道由来のintent教師とchunk-level tokenで、操作段階が変わっても一視点へ依存し続ける問題を扱う。
+
+**主な貢献**
+
+π0.5へFuture Intent Bridgeとaction-side routingを加え、RoboTwin 2.0全50課題・各100試行で平均+10.10ポイントを報告。Piper実機6課題・各30試行は85.0%対71.7%。単一A100のchunk latencyは79.59→92.78msで、精度改善を無償の高速化としない。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- arXiv履歴v1=2026-10-22、CoRL採録記載を確認。本文前にcanonical ID/DOI・正式題名の正規化/近似照合は一致なし。https://arxiv.org/html/2610.31423v1 §§3–4、§6とoverhead記述を選読。比較は同一demo/step/protocolと著者記載、BFA-style対照は利用可能code不足からの再実装。実機差は13.3 percentage pointsで相対13.3%ではない。多身体・多camera構成への一般化は将来課題。題名検索で見つかるiLearn-Lab/FocusVLAは別著者・別arXiv 2603.28740の別研究なのでURL/licenseを転用しない。本研究の公式実装・重み・実装licenseは未確認unknown。arXivのCC BYをcodeへ流用しない。PDF href検証のみ、PDF保存・独立再現なし。
+
+### Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success
+
+- ID: `VLA-0231`
+- Published: 2026-10-22
+- Authors: Yunfei Xie; Howard H. Qian; Shiyi Lan; Kaiyu Hang; Chen Wei
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.31670) · [PDF](https://arxiv.org/pdf/2610.31670) · [Code](https://github.com/yunfeixie233/sensorimotor-alignment) · [Project](https://yunfeixie233.github.io/s2/)
+- Tags: sensorimotor-alignment, offline-evaluation, CKNNA, DTW, world-action-model, supporting-foundation
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+画像・言語特徴の近傍と手先軌道の近傍の一致度を測る、追加学習不要のオフライン指標S²。軌道のDTW距離と感覚表現のCKNNAから、閉ループ評価前のモデル選定を支援する。
+
+**主な貢献**
+
+DROID等で計算したS²と12 VLAのSimplerEnv成功率にr=0.717の相関を報告。因果効果や安全保証ではなく、少数モデル・限定条件での診断指標。実機5方策の強い相関は探索的h=110で、事前指定h=7ではr=0.429、p=0.236。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- arXiv v1初稿2026-10-22、改訂なし。本文前にcanonical arXiv/DOI alias・正規化/近似タイトルを照合し一致なし。https://arxiv.org/html/2610.31670v1 §§2–3、§6、Appendix B.4–B.5を選読。6 WAM比較はr=.718だが片側p=.054、3 WAMのr=.999を大標本証拠としない。実機成功率はMolmoB0T既報40課題の再利用で、新規ロールアウトではない。公式READMEとcompute/compute\_cknna.pyを確認。LICENSE全文は自作部分MIT、repos/同梱上流コードは各別license。公開再現範囲はVLA/VLMと3 WAM中心で、6 WAM全体・実機bundleは不完全と明記。独自重みreleaseは未確認、外部checkpointと混同しない。PDF hrefのみ検証、PDF保存・実行再現なし。
 
 ### Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models
 

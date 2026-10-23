@@ -3,18 +3,23 @@
 
 [← データベース](../README.md)
 
-140 records · 正本: [papers.csv](../papers.csv)
+145 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 38 |
+| [world-representation](world-representation.md) | 41 |
 | [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 46 |
+| [action-coupling](action-coupling.md) | 48 |
 | [planning](planning.md) | 27 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-10-22 · [Inside-JEPA: From Prediction to Relational Grounding in Latent World Models](world-representation.md) · `WAM-0146`
+- 2026-10-22 · [UniFlowWAM: A Unified World-Action Model with Visual Semantics and 4D Geometry](action-coupling.md) · `WAM-0144`
+- 2026-10-21 · [How Representational Priors Shape Generalization in World Action Models](world-representation.md) · `WAM-0148`
+- 2026-10-21 · [DepState-JEPA: Learning Depth-Grounded State Representation for Visual Perception and Manipulation](world-representation.md) · `WAM-0147`
+- 2026-10-21 · [Self-Distilling Future Video Representations for World Action Models](action-coupling.md) · `WAM-0145`
 - 2026-10-21 · [Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation](action-coupling.md) · `WAM-0140`
 - 2026-10-21 · [Relational Geometry Forcing for World Action Models](action-coupling.md) · `WAM-0139`
 - 2026-10-21 · [CW-WAM: A Structured Contact-Wrench World Action Model for Force-Sensitive Manipulation](action-coupling.md) · `WAM-0138`

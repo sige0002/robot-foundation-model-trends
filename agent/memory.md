@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
+
+### Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent's Experience Should Live
+
+- ID: `AGENT-0172`
+- Published: 2026-10-21
+- Authors: Cheng-Yin Tu
+- Venue: arXiv; CL4FMAgents Workshop at NeurIPS 2026 (non-archival short version)
+- Links: [Paper](https://arxiv.org/abs/2610.30478) · [PDF](https://arxiv.org/pdf/2610.30478) · [Code](https://github.com/TPEmist/AionGenos)
+- Tags: retrieval-memory, pre-registered-study, negative-result, lora, robot-manipulation
+- Model size: Gemma-4-31B-it; LoRA rank 16
+- Open-source: unknown
+- Code / weights / license: available / available / unknown
+
+**概要（日本語）**
+
+ロボットの経験を方策の重みに蒸留する場合と、過去の教訓・画像を外部メモリから推論時に検索する場合を比較する事前登録研究。単腕リーチ課題で同じ教師軌跡からLoRA学生を学習し、重みを固定したまま検索バッファの有無を比較する。
+
+**主な貢献**
+
+各群100試行の主課題で、記憶蒸留と行動のみの対照の差は+1ポイントで有意でなく、検出力不足として主張を撤回するが反証とはしない。固定重みへの検索追加は探索的比較で+34ポイント、事前登録済みのプロトコル比較では+23ポイント。第2課題の+6ポイントは有意でなく、特定課題・LoRA容量への限定と計測上の欠陥を明示する。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- arXiv v1=2026-10-21。https://arxiv.org/html/2610.30478v1 の設計・結果・Limitations・公開範囲を選択確認。公式release https://github.com/TPEmist/AionGenos/releases/tag/paper-v1-artifacts のAPIでpublished\_at=2026-10-23T03:34:46Zと、SFT/KTOの2つのGGUF LoRA・547画像付き固定バッファのuploaded状態を確認（ファイル未取得）。pyproject.tomlはMITを宣言するがルートにLICENSE本文はなく、独立した許諾本文を確認できないため実装のopen\_source/license\_statusはunknown。重みの独立ライセンスも未確認。生リプレイは未公開。PDF hrefのみ確認、PDF未取得。
 
 ### Industrial ReMEmbR: Scaling Spatiotemporal Memory to Robot Fleets
 

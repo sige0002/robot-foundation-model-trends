@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-22 records · Published date 降順（同日 ID 降順）
+23 records · Published date 降順（同日 ID 降順）
+
+### DRILL: Training World Models to Improve Policies, Not Predict Pixels
+
+- ID: `HYBRID-0149`
+- Published: 2026-10-22
+- Authors: Zhaolu Kang; Tailong Luo; Lei Wei; Guangyuan Dong; Sihan Liu; Yingjie He; Siheng Wang; Shuaibo Li; Rongchao Zhang; Zhen Tian; Richeng Xuan; Zhichao Hu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.30814) · [PDF](https://arxiv.org/pdf/2610.30814)
+- Tags: world-model, policy-utility, reinforcement-learning, GRPO, bilevel-optimization, meta-gradient
+- Model size: 方策π0-3B / OpenVLA-7B；既定Ctrl-World 1.2B
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAの想像ロールアウトによる強化学習で、画素予測精度ではなく更新後方策の報酬を高めるよう世界モデルを訓練するDRILL。訪問頻度・優位性・確信度で誤差を重み付けする軽量版VWIと、内部GRPO更新を通じて微分するIMGを比較する。
+
+**主な貢献**
+
+π0-3Bの5シミュレーション環境・5 seedで、IMGはWMPOより平均成功率13.1ポイント、RLVR-Worldより7.9ポイント高い一方、1-step画素MSEは17%悪化と報告する。OpenVLA-7Bでも追加検証。IMGの外側更新には毎回30 simulator rolloutを使い、実機結果はなく、追加計算・メモリ負担がある。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-22 v1。https://arxiv.org/html/2610.30814v1 のSections 5–6およびAppendix Eを確認。見出し比較はπ0-3B・5環境平均で、全数値はsimulation-only。NeurIPS 2026とのarXiv commentのみで採録は独立確認せずvenueはarXiv。Appendix Eのコード/重みはwill be releasedで、現時点の公開実装・適用ライセンス・checkpoint配布URLは未確認。PDFはabsの実hrefのみ検証し未取得。
 
 ### UniWALM: Unified World Action Language Model for Embodied Robot Control
 

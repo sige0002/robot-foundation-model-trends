@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-14 records · Published date 降順（同日 ID 降順）
+15 records · Published date 降順（同日 ID 降順）
+
+### Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation
+
+- ID: `VLA-0235`
+- Published: 2026-10-22
+- Authors: Chenyuan Chen; Ran Ding; Lechen Zhang; Zewen He; Yoshihiko Nakamura
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.31166) · [PDF](https://arxiv.org/pdf/2610.31166) · [Project](https://memory-before-goal.github.io/)
+- Tags: pre-history-memory, object-event, humanoid, loco-manipulation, SAM3, benchmark
+- Model size: 凍結Qwen3-VL-2B backbone；全体パラメータ数未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+WholeBodyMemは、目標に向けて動く前に観測され後から消える手掛かりを全身VLAへ保持する知覚メモリ。SAM3で追跡した物体の出現・消失などから最大7フレームを選び、外観・幾何・時刻を持つ物体トークンとともに行動expertへ渡す。
+
+**主な貢献**
+
+記憶依存のHuMeGo（シミュレーション6課題・Unitree G1実機6課題）を整備。基盤方策Ψ0に対し、シミュレーション成功率29.1%→72.6%、実機では各課題10試行の計60試行で22/60→53/60と報告する。未検出物体の手掛かりは保持できず、追跡計算負荷とsim-to-real gapが残る。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-22 v1。https://arxiv.org/html/2610.31166v1 のSections III–VI（memory budget、凍結2B backbone、real trials、limitations）と公式projectを確認。RA-Lは投稿中との著者記載のみで採録未確認。公式ページは匿名review版だがarXivから直接リンクされる。コード・重み・実装ライセンスの公開先を確認できずunknown。PDFはabsの実hrefのみ検証し未取得。 実機は各課題15demoで別々に学習した評価で、課題横断の単一汎用方策とはしない。
 
 ### GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models
 

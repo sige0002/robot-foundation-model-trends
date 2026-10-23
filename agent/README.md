@@ -3,19 +3,22 @@
 
 [← データベース](../README.md)
 
-71 records · 正本: [papers.csv](../papers.csv)
+74 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 16 |
+| [planning](planning.md) | 17 |
 | [code](code.md) | 16 |
 | [skill](skill.md) | 9 |
 | [tool](tool.md) | 12 |
-| [memory](memory.md) | 8 |
-| [replanning](replanning.md) | 10 |
+| [memory](memory.md) | 9 |
+| [replanning](replanning.md) | 11 |
 
 ## 論文
 
+- 2026-10-22 · [SCOPE: Scene-graph Construction Optimized by Plan Error-correction for Robot Long-term Planning Datasets](planning.md) · `AGENT-0174`
+- 2026-10-22 · [Know When to Escalate: Critic-Guided Adaptive Execution for Cloud-Local Embodied Agents](replanning.md) · `AGENT-0173`
+- 2026-10-21 · [Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent's Experience Should Live](memory.md) · `AGENT-0172`
 - 2026-10-21 · [CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](planning.md) · `AGENT-0171`
 - 2026-10-21 · [TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments](replanning.md) · `AGENT-0170`
 - 2026-10-20 · [AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](planning.md) · `AGENT-0167`

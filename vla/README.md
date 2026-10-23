@@ -3,18 +3,25 @@
 
 [← データベース](../README.md)
 
-130 records · 正本: [papers.csv](../papers.csv)
+137 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 27 |
-| [reasoning-system2](reasoning-system2.md) | 7 |
-| [action-system1](action-system1.md) | 34 |
-| [memory-temporal](memory-temporal.md) | 14 |
+| [perception-representation](perception-representation.md) | 30 |
+| [reasoning-system2](reasoning-system2.md) | 8 |
+| [action-system1](action-system1.md) | 36 |
+| [memory-temporal](memory-temporal.md) | 15 |
 | [adaptation](adaptation.md) | 48 |
 
 ## 論文
 
+- 2026-10-22 · [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](action-system1.md) · `VLA-0236`
+- 2026-10-22 · [Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation](memory-temporal.md) · `VLA-0235`
+- 2026-10-22 · [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](action-system1.md) · `VLA-0234`
+- 2026-10-22 · [Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models](perception-representation.md) · `VLA-0233`
+- 2026-10-22 · [FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models](perception-representation.md) · `VLA-0232`
+- 2026-10-22 · [Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success](perception-representation.md) · `VLA-0231`
+- 2026-10-21 · [NavBind: Diagnosing Instruction-Action Binding at Route Forks in Navigation VLAs](reasoning-system2.md) · `VLA-0237`
 - 2026-10-21 · [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](memory-temporal.md) · `VLA-0230`
 - 2026-10-21 · [FlowVLA: Learning Flow-Aware Physical Completion for Quantitative Robotic Pouring](memory-temporal.md) · `VLA-0229`
 - 2026-10-21 · [Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies](adaptation.md) · `VLA-0228`

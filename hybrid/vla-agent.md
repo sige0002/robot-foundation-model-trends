@@ -3,7 +3,57 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-22 records · Published date 降順（同日 ID 降順）
+24 records · Published date 降順（同日 ID 降順）
+
+### FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies
+
+- ID: `HYBRID-0151`
+- Published: 2026-10-22
+- Authors: Tao Lin; Yuxin Du; Haoxiao Wang; Zile Zhong; Bo Zhao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.31427) · [PDF](https://arxiv.org/pdf/2610.31427) · [Code](https://github.com/FastHarness/fast-harness) · [Project](https://fastharness.github.io/)
+- Tags: execution-harness, adaptive-supervision, memory, failure-recovery, frozen-policy
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+固定したπ0.5方策の行動チャンクに対するLLM監督を、段階別の実行経験と確認済み結果に基づいて間引く実行ハーネス。既知の段階では新しい観測から方策を実行し、失敗時は監督を集中させ、局所修正や検証済みサブゴールを利用して復旧する。
+
+**主な貢献**
+
+RoboDojoの4シミュレーション課題で、初回評価エピソードと最終5回平均の比較によるレビュー用トークン57.2%減、平均所要時間85.5分から52.0分を報告。課題平均成功率97.19%と外部報告のGPT-as-Policy 80%を比較するが、試行数・条件を揃えた同時再評価ではない。追加学習不要だが失敗検出の見逃しも観察される。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- arXiv v1=2026-10-22。https://arxiv.org/html/2610.31427v1 の方法・評価・Appendix B/D/Fを選択確認。公開実装のscheduler.pyとLICENSE全文冒頭のMIT grantを確認: https://github.com/FastHarness/fast-harness/blob/main/LICENSE 。MITの対象はハーネス実装で、RoboDojo/外部方策/レビューAPIは別。READMEは方策サーバと重みを利用者が別途用意すると明記し、独自学習重みの公開は確認していないためweights\_status=unknown。公式プロジェクト200応答。PDF hrefのみ確認、PDF未取得。 97.19%は4課題ごとの16/20/20/9 episodeから求めた非加重課題平均で、記憶を継承するため独立同分布のpooled試行率とはしない。
+
+### SimPT: An Automated Simulation Framework for Intervention-Based VLA Post-Training
+
+- ID: `HYBRID-0150`
+- Published: 2026-10-21
+- Authors: Caicheng Wang; Zipeng Ye; Zhexuan Zhou; Zilong Huang; Xi Zhang; Yuchen Xie
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2610.29161) · [PDF](https://arxiv.org/pdf/2610.29161)
+- Tags: SimPT, agent-compiled-progress-graph, privileged-simulator-state, snapshot-recovery, CuRobo, intervention-post-training, RECAP-CF-LPF
+- Model size: π0.5 policy backbone; total unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+Agentが事前構築・検証したProgress Graphでtask進捗と安定snapshotを追跡し、失敗後にCuRobo expertが先のstageから順に復旧してVLAの修正データを集める。収集・post-training・独立評価をsimulation内で統合する。
+
+**主な貢献**
+
+RoboTwin 7課題で固定間隔snapshotより復旧試行数を75.0%削減。RECAPへcross-fittingとvalue低域通過filterを加え、held-out 1,400試行の成功率を76.50%→79.36%に改善。実機cable挿入も18/25→24/25だが、人間介入収集は残る。
+
+**確認記録**
+
+- Checked: 2026-10-23 · Review: verified
+- 2026-10-10〜23の選択増分調査。本文前に既存392件へcanonical arXiv・DOI aliasと正規化/近似題名をvalidate\_csv.py --candidateで照合し一致なし。arXiv absで全著者・v1初稿10-21 03:53:00 UTC・改訂なしを確認。読解範囲 https://arxiv.org/html/2610.29161v1 §III–Vと全実験表。graphはtask sourceと特権stateからGPT-5.6-Solが事前生成・校正後に固定し、収集時のAgent再queryはない。評価時はVLAのみでgraph・expert・特権stateを使わない。各task 200 held-out seedsはexpertが解けるものを採用。PGはFlowPROでは成績を下げ、全手法に有効ではない。実機2腕PiPERの1課題・25scenarioで、simulation自動介入の実機完全自動化を示さない。abs/HTMLと正式題名・著者の限定検索で専用公式code・weights・実装licenseは未確認のためunknown。absの実PDF hrefを抽出・絶対URL化し、本体は取得せず。実行・数値再現なし。
 
 ### Plan First, Act Later: Streaming Reasoning for Executable Memory in Robot Control
 
