@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-17 records · Published date 降順（同日 ID 降順）
+18 records · Published date 降順（同日 ID 降順）
+
+### TAMPAgent: Agentic Belief-Space Planning for Mobile Manipulation
+
+- ID: `AGENT-0175`
+- Published: 2026-11-02
+- Authors: Utkarsh A. Mishra; Alperen Degirmenci; Yongxin Chen; Danfei Xu; Tucker Hermans; Caelan Garrett
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.03584) · [Project](https://tampagent.github.io/)
+- Tags: TAMPAgent, belief-space, task-and-motion-planning, partial-observability, mobile-manipulation
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+LVLM agentの部分計画をbelief-space task-and-motion planningの制約へ変換し、知覚・計画・制御toolで幾何学的実行可能性を確認する。観測と操作を交互に行いbeliefを更新する。
+
+**主な貢献**
+
+RBY1とUnitree G1のシミュレーション厨房課題で直接tool-calling等と比較。制約証明を実行前に挟む点が中核で、保証はtoolと知覚の正しさに依存し、実機検証の主張とは区別する。
+
+**確認記録**
+
+- Checked: 2026-11-16 · Review: verified
+- 2026-11-02〜2026-11-15の14日間を対象とする選択増分調査。VLA/native policy、WAM/test-time selection、agent/belief-space planning、hybrid/world-model-agentの分野別検索。網羅調査ではなく、前回2026-10-23以降の全期間を補完したものではない。本文取得前に既存410件とrevisionなしarXiv/DOI・NFKC/Greek正規化・類似タイトルを既存checkerで照合し候補一致なし。arXiv初稿11月2日、v1のみ。https://arxiv.org/html/2611.03584v1 の結論・limitationsは二種のrobotでのsimulationと明記。abstractのplatform表現だけから実機評価とは解釈しない。arXiv記載project https://umishra.me/TAMPAgent/ は取得時404。NVIDIA Research掲載の代替公式project https://tampagent.github.io/ は200応答を確認。公式実装・重み・実装ライセンス未確認でunknown。PDF実体は未取得。
 
 ### SCOPE: Scene-graph Construction Optimized by Plan Error-correction for Robot Long-term Planning Datasets
 

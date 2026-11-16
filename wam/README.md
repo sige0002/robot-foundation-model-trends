@@ -3,18 +3,20 @@
 
 [← データベース](../README.md)
 
-145 records · 正本: [papers.csv](../papers.csv)
+147 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 41 |
 | [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 48 |
-| [planning](planning.md) | 27 |
+| [action-coupling](action-coupling.md) | 49 |
+| [planning](planning.md) | 28 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-11-04 · [Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models](action-coupling.md) · `WAM-0150`
+- 2026-11-02 · [Seeing Through the Illusion: Test-Time Scaling for World Action Models](planning.md) · `WAM-0149`
 - 2026-10-22 · [Inside-JEPA: From Prediction to Relational Grounding in Latent World Models](world-representation.md) · `WAM-0146`
 - 2026-10-22 · [UniFlowWAM: A Unified World-Action Model with Visual Semantics and 4D Geometry](action-coupling.md) · `WAM-0144`
 - 2026-10-21 · [How Representational Priors Shape Generalization in World Action Models](world-representation.md) · `WAM-0148`

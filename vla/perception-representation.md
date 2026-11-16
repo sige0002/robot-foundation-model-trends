@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-30 records · Published date 降順（同日 ID 降順）
+31 records · Published date 降順（同日 ID 降順）
+
+### From Pixels to Actions--Towards Native Vision-Language-Action Policies
+
+- ID: `VLA-0238`
+- Published: 2026-11-04 · Updated: 2026-11-09
+- Authors: Weichen Fan; Haiwen Diao; Penghao Wu; Siyuan Hu; Ziqi Huang; Tianqi Liu; Mingze Sun; Ziyi Wang; Zhongang Cai; Hanming Deng; Quan Wang; Lei Yang; Lewei Lu; Fangzhou Hong; Zhaoxi Chen; Dahua Lin; Ziwei Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.06918) · [Code](https://github.com/EvolvingLMMs-Lab/NEO/tree/main/VLAKit)
+- Tags: NEO-VLA, native-vision, encoder-free, flow-matching
+- Model size: unknown
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+NEO-VLAは独立した視覚encoderを設けず、軽量patch embeddingから画像と言語をbackbone全体で共同処理する。flow-matching action expertが複数深度の視覚表現を参照して操作を生成する。
+
+**主な貢献**
+
+固定された最終視覚特徴だけでなく中間層の制御関連情報を使う設計を比較検証。論文の対照実験はencoder方式に対する頑健性向上を報告するが、一般的な性能保証ではない。
+
+**確認記録**
+
+- Checked: 2026-11-16 · Review: verified
+- 2026-11-02〜2026-11-15の14日間を対象とする選択増分調査。VLA/native policy、WAM/test-time selection、agent/belief-space planning、hybrid/world-model-agentの分野別検索。網羅調査ではなく、前回2026-10-23以降の全期間を補完したものではない。本文取得前に既存410件とrevisionなしarXiv/DOI・NFKC/Greek正規化・類似タイトルを既存checkerで照合し候補一致なし。arXiv初稿11月4日、v3改訂11月9日を確認。https://arxiv.org/html/2611.06918v3 の方式・結論を選択確認。公式リンクのVLAKit実装と https://github.com/EvolvingLMMs-Lab/NEO/blob/main/VLAKit/LICENSE のApache-2.0を確認。重みは公式READMEの https://huggingface.co/weepiess2383/NEO-VLA にstate.ptとsafetensorsを確認、model cardはApache-2.0。上流backbone・データ条件は別。PDF実体は未取得。
 
 ### Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models
 

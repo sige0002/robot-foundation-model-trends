@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-48 records · Published date 降順（同日 ID 降順）
+49 records · Published date 降順（同日 ID 降順）
+
+### Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models
+
+- ID: `WAM-0150`
+- Published: 2026-11-04 · Updated: 2026-11-10
+- Authors: Juncheng Ma; et al.
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.06817) · [Code](https://github.com/DAGroup-PKU/HumanNet/tree/Open-HumanWAM) · [Project](https://dagroup-pku.github.io/open-humanwam/)
+- Tags: Open-HumanWAM, HumanWAM, egocentric-pretraining, human-robot-data, visual-goal
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / available / unknown
+
+**概要（日本語）**
+
+50,000時間の人間一人称動画と手の動き・言語を利用してworld-action modelを事前学習し、ロボットへの転移を調べる。HumanWAM-Vanillaと、人間・robot混合学習および画像goal条件を持つHumanWAM-Goalを提示する。
+
+**主な貢献**
+
+人間データ時間だけでなくtask・sceneの多様性を分離して調べ、領域外転移との関係を分析。Goal版の画像条件による転移と、robot post-training後の評価をゼロショット評価から区別する。
+
+**確認記録**
+
+- Checked: 2026-11-16 · Review: verified
+- 2026-11-02〜2026-11-15の14日間を対象とする選択増分調査。VLA/native policy、WAM/test-time selection、agent/belief-space planning、hybrid/world-model-agentの分野別検索。網羅調査ではなく、前回2026-10-23以降の全期間を補完したものではない。本文取得前に既存410件とrevisionなしarXiv/DOI・NFKC/Greek正規化・類似タイトルを既存checkerで照合し候補一致なし。初稿11月4日、v3改訂11月10日。旧題Open-HumanScaleと同一arXiv identityで別登録しない。https://arxiv.org/html/2611.06817v3 の結論と公式projectを確認。公式READMEとルート https://github.com/DAGroup-PKU/HumanNet/blob/Open-HumanWAM/Apache-2.0.txt はApache-2.0を提示する一方、humanwam\_goal/LICENSEはNVIDIA OpenMDW-1.1であり適用範囲・OSI承認状況を解決していないため実装license\_status/open\_sourceはunknown。Goal推論・評価・post-training実装を確認、Vanillaの一部reproductionは作業中と明記。公式 https://huggingface.co/DAGroup-PKU/HumanWAM-Goal-Base に公開safetensorsを確認したが重みのlicense metadataは未指定で実装licenseと別。READMEと論文では評価protocol/数値の差があるためここでは数値を混在させない。PDF実体は未取得。
 
 ### UniFlowWAM: A Unified World-Action Model with Visual Semantics and 4D Geometry
 

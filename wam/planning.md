@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-27 records · Published date 降順（同日 ID 降順）
+28 records · Published date 降順（同日 ID 降順）
+
+### Seeing Through the Illusion: Test-Time Scaling for World Action Models
+
+- ID: `WAM-0149`
+- Published: 2026-11-02
+- Authors: Cheikh Ahmed; Mahdi Mostajabdaveh; Milad Yazdani; Zirui Zhou
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.03585)
+- Tags: WISE, test-time-scaling, rollout-selection, inverse-dynamics
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+WISEは凍結したworld-action modelから複数の行動・未来予測を標本化し、行動の妥当性と時間的一貫性、逆動力学との整合、指示に対する進捗を評価して実行候補を選ぶ。
+
+**主な貢献**
+
+4候補の条件でRoboLabのCosmos 3 Edgeは6.0%から24.0%、LIBEROのDreamZeroは75.1%から78.3%の成功率を報告。追加推論費用が必要で、RoboLabは各方式50episodeのため小差の解釈に限界がある。
+
+**確認記録**
+
+- Checked: 2026-11-16 · Review: verified
+- 2026-11-02〜2026-11-15の14日間を対象とする選択増分調査。VLA/native policy、WAM/test-time selection、agent/belief-space planning、hybrid/world-model-agentの分野別検索。網羅調査ではなく、前回2026-10-23以降の全期間を補完したものではない。本文取得前に既存410件とrevisionなしarXiv/DOI・NFKC/Greek正規化・類似タイトルを既存checkerで照合し候補一致なし。arXiv初稿11月2日、v1のみ。https://arxiv.org/html/2611.03585v1 の方式・結論・limitationsを確認。arXiv commentsはCoRL 2026 G2A workshop採択と記載。公式実装・重み・実装ライセンスの提供根拠を確認できず各unknown。PDF実体は未取得。
 
 ### Plausible Future, Wrong Choice: Steering World-Action Models toward Intended Future
 

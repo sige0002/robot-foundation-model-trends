@@ -3,11 +3,11 @@
 
 [← データベース](../README.md)
 
-137 records · 正本: [papers.csv](../papers.csv)
+138 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 30 |
+| [perception-representation](perception-representation.md) | 31 |
 | [reasoning-system2](reasoning-system2.md) | 8 |
 | [action-system1](action-system1.md) | 36 |
 | [memory-temporal](memory-temporal.md) | 15 |
@@ -15,6 +15,7 @@
 
 ## 論文
 
+- 2026-11-04 · [From Pixels to Actions--Towards Native Vision-Language-Action Policies](perception-representation.md) · `VLA-0238`
 - 2026-10-22 · [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](action-system1.md) · `VLA-0236`
 - 2026-10-22 · [Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation](memory-temporal.md) · `VLA-0235`
 - 2026-10-22 · [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](action-system1.md) · `VLA-0234`

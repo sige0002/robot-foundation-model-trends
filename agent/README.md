@@ -3,11 +3,11 @@
 
 [← データベース](../README.md)
 
-74 records · 正本: [papers.csv](../papers.csv)
+75 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 17 |
+| [planning](planning.md) | 18 |
 | [code](code.md) | 16 |
 | [skill](skill.md) | 9 |
 | [tool](tool.md) | 12 |
@@ -16,6 +16,7 @@
 
 ## 論文
 
+- 2026-11-02 · [TAMPAgent: Agentic Belief-Space Planning for Mobile Manipulation](planning.md) · `AGENT-0175`
 - 2026-10-22 · [SCOPE: Scene-graph Construction Optimized by Plan Error-correction for Robot Long-term Planning Datasets](planning.md) · `AGENT-0174`
 - 2026-10-22 · [Know When to Escalate: Critic-Guided Adaptive Execution for Cloud-Local Embodied Agents](replanning.md) · `AGENT-0173`
 - 2026-10-21 · [Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent's Experience Should Live](memory.md) · `AGENT-0172`
