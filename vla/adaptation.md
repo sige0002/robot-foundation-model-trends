@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-48 records · Published date 降順（同日 ID 降順）
+49 records · Published date 降順（同日 ID 降順）
+
+### Towards Pose-Robust Few-Shot Vision-Language-Action Models
+
+- ID: `VLA-0239`
+- Published: 2026-11-18
+- Authors: Wenhao Li; Zhongyi Han; Yuhao Wei; Liang Han; Yilong Yin; Liqiang Nie
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.24360)
+- Tags: WACO, camera-shift, base-shift, RGB-D, few-shot, canonicalization
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+関節角から得たアーム形状と静的な場面を二つの基準にして、撮影カメラとロボット台座の位置ずれを分離する。画像と状態・行動をそれぞれ校正時の座標に戻し、推定誤差を含むデータで既存VLAを微調整する。
+
+**主な貢献**
+
+カメラ移動と台座移動を単一のカメラ対台座変換として放置せず、入力画像と行動座標に別々の補正を適用する。LIBERO-PoseShiftとUR5eの4タスクで位置ずれへの頑健性を評価した。
+
+**確認記録**
+
+- Checked: 2026-11-19 · Review: verified
+- arXiv v1初稿2026-11-18。論文HTMLの方式と評価設計を確認。校正時の基準情報と実行時のRGB-Dが必要で、任意の単眼視点への一般化ではない。論文記載の公式project https://peacelwh.github.io/WACO/ は閲覧未確認。コード・重み・実装ライセンスはunknown。
 
 ### Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies
 

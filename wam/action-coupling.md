@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-49 records · Published date 降順（同日 ID 降順）
+50 records · Published date 降順（同日 ID 降順）
+
+### JEPA Dots: Dual-Latent World Model for Language-Guided Robot Control
+
+- ID: `WAM-0152`
+- Published: 2026-11-18
+- Authors: Xianhao Pan; Chi Li; Hanchao Li; Yunxin Liu; Jiankai Sun; Luhui Hu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.24062)
+- Tags: JEPA, language-conditioned-control, masked-attention, subspace-Gaussian-regularization, LIBERO
+- Model size: 16.4M; 39.1M with frozen language encoder
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+画像から、言語を受けない運動・環境変化用の表現と、言語で変調するタスク用の表現を分ける。前者と既知の行動で未来潜在を予測し、行動生成にはタスク用の表現も与える。
+
+**主な貢献**
+
+同じ観測と行動に対して指示だけを変えても、世界予測が変わらないよう注意マスクで制約。指示の切替実験で、世界予測を保ちながら方策出力が変わることを検証した。
+
+**確認記録**
+
+- Checked: 2026-11-19 · Review: verified
+- arXiv v1初稿2026-11-18。論文HTMLの方式・実験概要・パラメータ計上を確認。学習対象LIBERO 40タスクで84.9%、著者らのタスクID条件付き参照実験76.0%。他論文の公表値とは評価条件が異なるため直接比較せず、実機・同一ハードの遅延は未確認。コード・重み・実装ライセンスはunknown。
 
 ### Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models
 
@@ -433,10 +458,10 @@ WAMの世界予測処理とparameter/token数を維持し、予測行動に参�
 ### SmolWAM: A Latent World-Action Model for Robotic Manipulation on Edge Devices
 
 - ID: `WAM-0111`
-- Published: 2026-10-09
+- Published: 2026-10-09 · Updated: 2026-11-07
 - Authors: Timi Owolabi; Hikmah Olawore; Frances Adelakun; Ayotomiwa Oyewumi
 - Venue: NeurIPS 2026 Workshop on Robot Learning with World Models
-- Links: [Paper](https://arxiv.org/abs/2610.13740) · [PDF](https://arxiv.org/pdf/2610.13740v1) · [Code](https://github.com/iitimii/SmolWAM) · [Project](https://smolwam.vercel.app/)
+- Links: [Paper](https://arxiv.org/abs/2610.13740) · [PDF](https://arxiv.org/pdf/2610.13740v2) · [Code](https://github.com/iitimii/SmolWAM) · [Project](https://smolwam.vercel.app/)
 - Tags: SmolWAM, Cosmos-Policy, distillation, model-compression, single-step-flow, latent-future, LIBERO, edge-inference
 - Model size: 0.88B network; excludes 54M VAE encoder and BERT-base
 - Open-source: true
@@ -448,12 +473,12 @@ Cosmos Policyの動画拡散trunkを剪定・蒸留し、単画像潜在、atten
 
 **主な貢献**
 
-剪定とtoken配置の圧縮を段階的に回復させる蒸留により、未来予測headを残したまま推論を単段化。動画生成用interfaceの削減が計算量を下げることを切り分ける。
+剪定とトークン圧縮で1回推論を実現。v2で、将来潜在などの世界予測側の教師信号を外した場合の対照実験と、単ステップ教師・複数GPUとの効率比較を追加した。
 
 **確認記録**
 
-- Checked: 2026-10-12 · Review: verified
-- arXiv初稿v1=2026-10-09 15:34:33 UTC、改訂なし。論文HTML/PDF・公式project・実装を確認。実装Apache-2.0: https://github.com/iitimii/SmolWAM/blob/main/LICENSE 。HFのmodel.safetensorsを確認: https://huggingface.co/timiiowolabi/SmolWAM/tree/main 。重みはNVIDIA One-Way Noncommercial Licenseで商用利用不可、コードのライセンスとは別。LIBERO 400 episodes、seed195で95.5%、A100 batch1 bf16・text cachedの16-action chunk=57ms/2.30TFLOP/2.36GiB。教師98.2%は旧evaluation pipeline。LIBEROのみ・実機未評価、Long=89%対教師97%。https://arxiv.org/html/2610.13740v1
+- Checked: 2026-11-19 · Review: verified
+- arXiv v1=2026-10-09、v2=2026-11-07。https://arxiv.org/html/2610.13740v2 の評価・効率分析を確認。LIBERO 400エピソードで95.5%、世界側の教師信号なし89.3%。単一評価シードで、未来画像損失だけの効果を分離した比較ではない。テキストキャッシュ・batch 1の16行動チャンクでA100 57ms、L4 83ms、T4 188ms。単ステップ・単フレーム教師は各126/243/552ms。Jetsonや実機は未評価。実装Apache-2.0 https://github.com/iitimii/SmolWAM/blob/main/LICENSE 。公式重み https://huggingface.co/timiiowolabi/SmolWAM/tree/main はNVIDIA One-Way Noncommercial Licenseで別条件。2026-11-06〜2026-11-19 UTCの選択差分調査。arXiv cs.ROのrecent・月別一覧と分野別検索（VLA適応、WAM/潜在予測、Agent実行監視、Hybrid）、採用候補の公式実装・重みを確認。全件・全改訂を網羅せず。
 
 ### LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC
 

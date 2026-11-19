@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-41 records · Published date 降順（同日 ID 降順）
+42 records · Published date 降順（同日 ID 降順）
+
+### Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models
+
+- ID: `WAM-0151`
+- Published: 2026-11-18
+- Authors: Yupeng Zheng; Chaoyue Li; Linbo Wang; Xiang Li; Yuhang Zheng; Xiaotong Su; Songen Gu; Yichen Zhang; Zebin Xing; Shuai Tian; Jingxiang Guo; Jing Li; Zhiyong Zhao; Zhongpu Xia; Qichao Zhang; Haoran Li; Shuicheng Yan; Dongbin Zhao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.24938) · [Code](https://github.com/Anyverse-Dynamics/Phoenix-MWA) · [Project](https://openphoenix-team.github.io/Phoenix-pages/)
+- Tags: scene-structure, dual-teacher-distillation, causal-VAE, appearance-latents, joint-prediction
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+DINOv3ベースの特徴に幾何と時空間の教師知識を蒸留し、因果的なVAEで空間配置を残しつつ時間・チャネルを圧縮する。場面構造の潜在、補完的な外観潜在、行動を一緒に予測する。
+
+**主な貢献**
+
+外観だけを再現するVAEと異なり、幾何・時空間の情報を別の生成潜在として操作学習に渡す。約3.9万時間は表現学習用の全体で、WAM事前学習はそのうちロボット実演を利用する。
+
+**確認記録**
+
+- Checked: 2026-11-19 · Review: verified
+- arXiv v1初稿2026-11-18。論文HTMLの方式・事前学習データ・評価条件を選択確認。LIBERO-Plus・RoboTwin等の評価はベンチマーク別の事後学習後。公式リポジトリで事前学習実装を確認。独自実装はMIT https://github.com/Anyverse-Dynamics/Phoenix-MWA/blob/main/LICENSE 、同梱コードは個別条件。公式の事前学習重み https://huggingface.co/AnyverseDynamics/Phoenix-Pretrain/blob/main/pretrain\_256013.pt およびEncoder/CS-VAEのファイルページを確認。重みの利用条件は未確認で、コードのMITと別。
 
 ### Inside-JEPA: From Prediction to Relational Grounding in Latent World Models
 

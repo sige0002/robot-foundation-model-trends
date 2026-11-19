@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-24 records · Published date 降順（同日 ID 降順）
+25 records · Published date 降順（同日 ID 降順）
+
+### RePlan-VLA: Progress-Aware Replanning for Long-Horizon Vision-Language-Action Models
+
+- ID: `HYBRID-0153`
+- Published: 2026-11-18
+- Authors: Apoorva Vashisth; Manav Kulshrestha; Damon Conover; Zachary Kingston; Aniket Bera
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.23843)
+- Tags: progress-monitor, replanning, execution-feedback, frozen-VLA, long-horizon
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+長い指示を短い操作に分割するVLMと、操作の進み具合を時系列画像から判断するVLMを、重みを固定したVLAに接続する。停滞や逸脱が起きた場合は、それまでの完了履歴を残して残りの計画を修正する。
+
+**主な貢献**
+
+時間経過ではなく個々の操作プリミティブの実行結果を判定し、失敗の言語診断から再計画する。低層VLAは再学習しないが、進捗推定器は教師あり学習する。
+
+**確認記録**
+
+- Checked: 2026-11-19 · Review: verified
+- arXiv v1初稿2026-11-18。論文HTMLの方式と回復分析を選択確認。RoboCasa365・CALVINの比較とFranka Research 3の実機評価を報告。公式公開実装・重み・実装ライセンスはunknown。
 
 ### FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies
 

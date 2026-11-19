@@ -3,17 +3,19 @@
 
 [← データベース](../README.md)
 
-54 records · 正本: [papers.csv](../papers.csv)
+56 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 24 |
-| [vla-wam](vla-wam.md) | 23 |
+| [vla-agent](vla-agent.md) | 25 |
+| [vla-wam](vla-wam.md) | 24 |
 | [wam-agent](wam-agent.md) | 5 |
 | [vla-wam-agent](vla-wam-agent.md) | 2 |
 
 ## 論文
 
+- 2026-11-18 · [RePlan-VLA: Progress-Aware Replanning for Long-Horizon Vision-Language-Action Models](vla-agent.md) · `HYBRID-0153`
+- 2026-11-18 · [Z-sight: Unifying Vision-Language-Action and Latent World Modeling](vla-wam.md) · `HYBRID-0152`
 - 2026-10-22 · [FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies](vla-agent.md) · `HYBRID-0151`
 - 2026-10-22 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](vla-wam.md) · `HYBRID-0149`
 - 2026-10-21 · [SimPT: An Automated Simulation Framework for Intervention-Based VLA Post-Training](vla-agent.md) · `HYBRID-0150`

@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-23 records · Published date 降順（同日 ID 降順）
+24 records · Published date 降順（同日 ID 降順）
+
+### Z-sight: Unifying Vision-Language-Action and Latent World Modeling
+
+- ID: `HYBRID-0152`
+- Published: 2026-11-18
+- Authors: Junjie Ye; Yiqi Zhao; Muchen Xu; Celina Shiyu Wang; Hao Dong; Ruohai Ge; Rong Xue; Benjamin J Kolligs; Aditya Dutt; Sasanka Nagavalli; Nassim A. Samad; Gaurav S. Sukhatme; Jyotirmoy V. Deshmukh; Yue Wang; Yuliang Guo
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.24940) · [Project](https://junjieye.com/Z-sight/)
+- Tags: latent-foresight, joint-denoising, EMA-teacher, humanoid
+- Model size: 3.18B
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLMが現在の知覚に使う視覚トークン空間で未来を予測する。未来予測器と連続行動予測器が、推論時に空間トークンと行動チャンクを協調してノイズ除去する。
+
+**主な貢献**
+
+視覚エンコーダの指数移動平均を未来教師にし、未来損失のVLMへの勾配を遮断する。重み固定の推論介入で、行動方策が未来予測の内容と宣言された不確実性に依存することを調べた。
+
+**確認記録**
+
+- Checked: 2026-11-19 · Review: verified
+- arXiv v1初稿2026-11-18。論文HTMLの方法・未来介入・推論計測と公式projectを確認。G1は6タスク各10試行で73.3%、109.5msはRTX 4090における30ステップチャンクのプロセス内中央値でありエッジ・総制御遅延ではない。公式projectのコードリンク https://github.com/Jay-Ye/Z-sight は確認時404。コード・重み・実装ライセンスはunknown。
 
 ### DRILL: Training World Models to Improve Policies, Not Predict Pixels
 
