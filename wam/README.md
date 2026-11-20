@@ -3,20 +3,23 @@
 
 [← データベース](../README.md)
 
-149 records · 正本: [papers.csv](../papers.csv)
+152 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 42 |
+| [world-representation](world-representation.md) | 43 |
 | [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 50 |
+| [action-coupling](action-coupling.md) | 52 |
 | [planning](planning.md) | 28 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-11-18 · [WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation](action-coupling.md) · `WAM-0155`
+- 2026-11-18 · [LaST1.0: A Unified Latent World-Action Model with Control-Centric SpatioTemporal Reasoning](action-coupling.md) · `WAM-0153`
 - 2026-11-18 · [JEPA Dots: Dual-Latent World Model for Language-Guided Robot Control](action-coupling.md) · `WAM-0152`
 - 2026-11-18 · [Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models](world-representation.md) · `WAM-0151`
+- 2026-11-10 · [From Video Frames to Robot Meta-Frames: A Unified Latent Interface for World Action Models](world-representation.md) · `WAM-0154`
 - 2026-11-04 · [Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models](action-coupling.md) · `WAM-0150`
 - 2026-11-02 · [Seeing Through the Illusion: Test-Time Scaling for World Action Models](planning.md) · `WAM-0149`
 - 2026-10-22 · [Inside-JEPA: From Prediction to Relational Grounding in Latent World Models](world-representation.md) · `WAM-0146`

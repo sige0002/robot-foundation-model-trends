@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-50 records · Published date 降順（同日 ID 降順）
+52 records · Published date 降順（同日 ID 降順）
+
+### WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation
+
+- ID: `WAM-0155`
+- Published: 2026-11-18 · Updated: 2026-11-18
+- Authors: Junlin Long; Xu Deng; Yiran Wang; Yue Yang; Yang Zhao; Zeyu Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.24011) · [PDF](https://arxiv.org/pdf/2611.24011) · [Code](https://github.com/AIGeeksGroup/WAM-Policy) · [Project](https://aigeeksgroup.github.io/WAM-Policy/)
+- Tags: quadruped, loco-manipulation, on-policy-distillation, multi-teacher
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+操作用のLingBot-VAを四脚の移動操作へ移植し、生徒の生成軌跡上で動画と行動の生成を少ステップ化する。タスク別に強化学習した複数の教師も単一生徒に統合する。
+
+**主な貢献**
+
+QLM-Benchでは転移教師77.0%、少ステップ生徒76.7%でサンプリング14倍高速、専門教師統合後85.0%。実機Go2 Airは統合前の蒸留版を評価し、閉ループで0.66秒/チャンク。
+
+**確認記録**
+
+- Checked: 2026-11-20 · Review: verified
+- arXiv v1書誌・本文の蒸留と評価を確認。コア実装Apache-2.0、deploy/とベンチマークはCC BY-NC 4.0。公開重みと配布条件は https://huggingface.co/AIGeeksGroup/WAM-Policy で別途確認。
+
+### LaST1.0: A Unified Latent World-Action Model with Control-Centric SpatioTemporal Reasoning
+
+- ID: `WAM-0153`
+- Published: 2026-11-18 · Updated: 2026-11-18
+- Authors: Hao Chen; Xuheng Zhang; Zhuangzhe Wu; Jiaming Liu; Shaobo Zhang; Jialin Gao; Zhonghao Yan; Di Wu; Sixiang Chen; Peng Jia; Chi-Wing Fu; Shanghang Zhang; Pheng-Ann Heng
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.23974) · [PDF](https://arxiv.org/pdf/2611.23974)
+- Tags: latent-future, wrist-camera, geometry, spatiotemporal-attention
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+未来の手首カメラから得る幾何特徴を予測目標とし、ロボットと物体の相対運動を重視する。操作方策と潜在未来予測を一つのモデルで学ぶ。
+
+**主な貢献**
+
+現在画像は軽量なパッチ埋め込みで入力し、時空間構造を持つ注意機構で視覚・言語・行動を結合する。描画可能な動画全体の再構成ではなく、操作に関わる未来表現へ監督を絞る。
+
+**確認記録**
+
+- Checked: 2026-11-20 · Review: verified
+- arXiv v1書誌・§3と評価の概要を確認。幾何ターゲット用エンコーダと入力側のパッチ埋め込みを区別。公式実装・重み・実装ライセンス未確認。
 
 ### JEPA Dots: Dual-Latent World Model for Language-Guided Robot Control
 

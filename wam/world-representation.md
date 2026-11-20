@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-42 records · Published date 降順（同日 ID 降順）
+43 records · Published date 降順（同日 ID 降順）
 
 ### Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models
 
@@ -29,6 +29,31 @@ DINOv3ベースの特徴に幾何と時空間の教師知識を蒸留し、因�
 
 - Checked: 2026-11-19 · Review: verified
 - arXiv v1初稿2026-11-18。論文HTMLの方式・事前学習データ・評価条件を選択確認。LIBERO-Plus・RoboTwin等の評価はベンチマーク別の事後学習後。公式リポジトリで事前学習実装を確認。独自実装はMIT https://github.com/Anyverse-Dynamics/Phoenix-MWA/blob/main/LICENSE 、同梱コードは個別条件。公式の事前学習重み https://huggingface.co/AnyverseDynamics/Phoenix-Pretrain/blob/main/pretrain\_256013.pt およびEncoder/CS-VAEのファイルページを確認。重みの利用条件は未確認で、コードのMITと別。
+
+### From Video Frames to Robot Meta-Frames: A Unified Latent Interface for World Action Models
+
+- ID: `WAM-0154`
+- Published: 2026-11-10 · Updated: 2026-11-10
+- Authors: Guoqiang Liang; Yiqi Lin; Yanzhe Chen; Kevin Yuchen Ma; Mike Zheng Shou
+- Venue: CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2611.14365) · [PDF](https://arxiv.org/pdf/2611.14365) · [Code](https://github.com/showlab/MetaWAM)
+- Tags: frequency-packing, inverse-DCT, video-diffusion, value-prediction
+- Model size: 2B (Cosmos-Predict2 backbone)
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+行動・固有受容・価値などを異なる周波数帯に割り当て、逆DCTで一つの潜在フレームにまとめる。既存の動画拡散デノイザで方策・未来状態・価値を扱う。
+
+**主な貢献**
+
+信号ごとのフレームを別々に用意せず、非重複の周波数スロットとマスクで複数のロボット信号を読み分ける。RoboCasaの著者評価で成功率68.9%、フレーム分割型のCosmos Policy系比較に対し推論時間39%短縮。
+
+**確認記録**
+
+- Checked: 2026-11-20 · Review: verified
+- arXiv v1書誌と§§3–4を確認。会議表記・実装Apache-2.0は公式GitHub。RoboCasa・LIBERO・実機用重みは別条件（NVIDIA Base Model License）: https://huggingface.co/Ethanliang99/MetaWAM-RoboCasa-Predict2-2B 。
 
 ### Inside-JEPA: From Prediction to Relational Grounding in Latent World Models
 

@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-8 records · Published date 降順（同日 ID 降順）
+9 records · Published date 降順（同日 ID 降順）
+
+### CoBoVLA: Decoupling Language from Action with Discrete Codes for Robust and Interpretable Robot Manipulation
+
+- ID: `VLA-0240`
+- Published: 2026-11-17 · Updated: 2026-11-17
+- Authors: Mehul Arora; Dhruv Agarwal; Ambuj Agrawal
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.22395) · [PDF](https://arxiv.org/pdf/2611.22395)
+- Tags: discrete-codes, paraphrase-robustness, action-segmentation, failure-diagnosis
+- Model size: 250M
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+自然言語を離散ステップコードに変換し、視覚プランナーが行動コード列を生成する。運動制御器は言語を直接受け取らず行動コードを実行する。
+
+**主な貢献**
+
+意味と運動の中間コードを分け、指示理解と実行の失敗を切り分ける。LIBERO-Paraの条件を揃えたエピソードで78.5%、言い換えでLoRA調整したSmolVLAは36.5%。実機評価なし。
+
+**確認記録**
+
+- Checked: 2026-11-20 · Review: verified
+- arXiv v1書誌・§§3–5を確認。比較はLIBERO-Goal系シミュレーション。標準評価の一部初期状態はDAgger学習と重複し、著者は除外集計も報告。実装・重み・ライセンス未確認。
 
 ### NavBind: Diagnosing Instruction-Action Binding at Route Forks in Navigation VLAs
 

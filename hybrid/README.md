@@ -3,17 +3,19 @@
 
 [← データベース](../README.md)
 
-56 records · 正本: [papers.csv](../papers.csv)
+58 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 25 |
-| [vla-wam](vla-wam.md) | 24 |
+| [vla-agent](vla-agent.md) | 26 |
+| [vla-wam](vla-wam.md) | 25 |
 | [wam-agent](wam-agent.md) | 5 |
 | [vla-wam-agent](vla-wam-agent.md) | 2 |
 
 ## 論文
 
+- 2026-11-19 · [CauSyncVLA: Causal Latent World Modeling for Asynchronous Robot Control](vla-wam.md) · `HYBRID-0155`
+- 2026-11-19 · [A²-VLA: Adapting Vision-Language-Action Policies to New Tools through Agentic Affordance Discovery](vla-agent.md) · `HYBRID-0154`
 - 2026-11-18 · [RePlan-VLA: Progress-Aware Replanning for Long-Horizon Vision-Language-Action Models](vla-agent.md) · `HYBRID-0153`
 - 2026-11-18 · [Z-sight: Unifying Vision-Language-Action and Latent World Modeling](vla-wam.md) · `HYBRID-0152`
 - 2026-10-22 · [FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies](vla-agent.md) · `HYBRID-0151`

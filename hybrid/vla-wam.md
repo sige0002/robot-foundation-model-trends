@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-24 records · Published date 降順（同日 ID 降順）
+25 records · Published date 降順（同日 ID 降順）
+
+### CauSyncVLA: Causal Latent World Modeling for Asynchronous Robot Control
+
+- ID: `HYBRID-0155`
+- Published: 2026-11-19 · Updated: 2026-11-19
+- Authors: Xu Pan; Chubin Zhang; Xingrui Yu; Runmin Lan; Zihao Wang; Wenkai Guo; Bofang Jia; Bo An; Ziwei Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.25667) · [PDF](https://arxiv.org/pdf/2611.25667)
+- Tags: asynchronous-control, KV-cache, action-chunk, latent-dynamics
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+遅れて届く画像と、その間に実行した状態・行動履歴から、現在の視覚KV表現を推定する。推定表現を使い実行途中の行動列を更新する。
+
+**主な貢献**
+
+凍結した行動エキスパートの出力を教師にして制御に有用な潜在予測を学び、未実行部分を1ステップで補正する。LIBERO-10で同期10ステップの91.2%に対し93.8%。5.04倍はモデルの再計画処理量で、物理動作速度ではない。
+
+**確認記録**
+
+- Checked: 2026-11-20 · Review: verified
+- arXiv v1書誌・§§3,4.5–4.6を確認。公式実装・重み・実装ライセンス未確認。
 
 ### Z-sight: Unifying Vision-Language-Action and Latent World Modeling
 

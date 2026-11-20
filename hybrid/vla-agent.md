@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-25 records · Published date 降順（同日 ID 降順）
+26 records · Published date 降順（同日 ID 降順）
+
+### A²-VLA: Adapting Vision-Language-Action Policies to New Tools through Agentic Affordance Discovery
+
+- ID: `HYBRID-0154`
+- Published: 2026-11-19 · Updated: 2026-11-19
+- Authors: Chenyuan Zhou; Chaoyi Huang; Zibo Wang; Zhiyuan Li; Yong-Lu Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.25656) · [PDF](https://arxiv.org/pdf/2611.25656)
+- Tags: affordance, tool-use, skill-library, simulation-validation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+未見の道具に適応するため、エージェントが再構成したシミュレーションで機能部位の抽出スキルを試し、検証できたものを再利用する。
+
+**主な貢献**
+
+検証した機能部位の幾何特徴をπ0.5の学習と推論に与える。軌道転用が可能な未見ツール実機3タスクの平均成功率は35.3%、標準π0.5は4.7%、エージェント単独は25.0%。
+
+**確認記録**
+
+- Checked: 2026-11-20 · Review: verified
+- arXiv v1書誌・本文手法とTable 3を確認。実機評価は少数のタスクに限る。公式実装・重み・実装ライセンス未確認。
 
 ### RePlan-VLA: Progress-Aware Replanning for Long-Horizon Vision-Language-Action Models
 

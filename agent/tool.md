@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+13 records · Published date 降順（同日 ID 降順）
+
+### AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control
+
+- ID: `AGENT-0176`
+- Published: 2026-11-19 · Updated: 2026-11-19
+- Authors: Yiyang Du; Yuxuan Kuang; Qitao Zhao; Yixuan Wang; Zhanqiu Guo; Yi Xu; Xin Li; Wenbin He; Liu Ren; Chenyan Xiong
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.26613) · [PDF](https://arxiv.org/pdf/2611.26613) · [Code](https://github.com/cxcscmu/AgentRoboCritic) · [Project](https://adu2021.github.io/blog/AgentRoboCritic/)
+- Tags: robot-agent, action-critic, failure-taxonomy, evaluation
+- Model size: 30B (released critic)
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+汎用エージェントが数値のロボット指令を直接生成する設定を、12の操作ベンチマークで分析する。エピソード全体の成否だけでなく、各行動が局所目標を満たしたかを判定する。
+
+**主な貢献**
+
+行動の意図と実行後の観測を突き合わせる評価枠組み。人手注釈の行動ベンチマークで調整後の失敗類型分類精度は74.24%、調整前は32.58%。これは制御成功率ではない。
+
+**確認記録**
+
+- Checked: 2026-11-20 · Review: verified
+- arXiv v1書誌・§§3–5を確認。実装MIT。公開critic重み: https://huggingface.co/cx-cmu/AgentRoboCritic-Muse-Glimmer-30B （カードのApache-2.0表示とMuse Glimmer Usage Policy注記を区別）。
 
 ### JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents
 
