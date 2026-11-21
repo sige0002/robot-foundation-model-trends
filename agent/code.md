@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-16 records · Published date 降順（同日 ID 降順）
+17 records · Published date 降順（同日 ID 降順）
+
+### On Agentic Manipulation Policies
+
+- ID: `AGENT-0177`
+- Published: 2026-11-06 · Updated: 2026-11-19
+- Authors: Chen Chen; Omid Bagherieh; Naveen Nikamanth Appiah Balaji; Jesse T. Gonzalez; Negin Heravi; Fahad Islam; Xueting Li; Jean-Baptiste Regli; Kejia Ren; Petr Švec; David J. Yoon; Matthias Müller; Vladlen Koltun
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.09892) · [Code](https://github.com/apple-aiml-research/ml-amp) · [Project](https://apple-aiml-research.github.io/ml-amp/)
+- Tags: agentic-manipulation, code-generation, closed-loop-control, persistent-memory, real-robot, zero-shot
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+汎用モデルが実行中にPythonを生成し、RGB-D・点群・運動指令を扱う共通ハーネス越しにロボットを閉ループで操作する。基本のAMP1は課題専用の把持・配置スキルを備えず、動作を観測して再計画する。
+
+**主な貢献**
+
+RoboLab-120とCaP-Gym、実機で課題固有学習なしの操作を評価し、RoboDojoでは経験をエピソード間で残す記憶を検証。実機12課題で104/108成功はロボット制御器のエラー復旧SDK有効時。無効時は94/108で、復旧機能が成績の一部を説明する。
+
+**確認記録**
+
+- Checked: 2026-11-21 · Review: verified
+- arXiv v1 2026-11-06、v3 2026-11-19。v3 HTML §2・補遺Table S1、公式プロジェクト、公式GitHub README/LICENSEを確認。公開コードはハーネスとシミュレーション評価。Apple独自条項は使用・改変・再配布を許諾するが、OSI承認としては未確認。依存ベンチマーク別条件、モデルAPI必要、固有の配布重み未確認。公式PDFリンクは取得上限超過のためPDF欄空欄。
 
 ### EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence
 

@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-43 records · Published date 降順（同日 ID 降順）
+44 records · Published date 降順（同日 ID 降順）
 
 ### Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models
 
@@ -529,6 +529,31 @@ LeJEPAの表現が、非線形な観測の背後にある状態をいつ回復�
 
 - Checked: 2026-10-01 · Review: verified
 - Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Official implementation/weights release and license not independently verified.
+
+### OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation
+
+- ID: `WAM-0156`
+- Published: 2026-05-07 · Updated: 2026-11-15
+- Authors: Yushan Liu; Peibo Sun; Shoujie Li; Yifan Xie; Lingfeng Zhang; Xintao Chao; Shiyuan Dong; Fang Chen; Xiao-Ping Zhang; Wenbo Ding
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2605.06481) · [PDF](https://arxiv.org/pdf/2605.06481v2)
+- Tags: object-centric, object-identity, re-grounding, LIBERO-Plus
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+視点・配置・ロボット初期状態が変わっても、言語で指示された同じ物体を追跡して操作する世界行動モデル。エピソード内で安定した物体キーと、時刻ごとに更新される物体状態を用いる。
+
+**主な貢献**
+
+物体を識別するキーと状態を分離し、予測と観測がずれた場合の再グラウンディングを導入。LIBERO-Plusの幾何3条件の平均は、対応する二視点設定で89.3%、固定キーを除いた物体スロット版で78.6%と報告。
+
+**確認記録**
+
+- Checked: 2026-11-21 · Review: verified
+- v1 2026-05-07、v2 2026-11-15。https://arxiv.org/html/2605.06481v2 の方法・評価、表4を確認。引用値は二視点の対応比較。実装・重み・ライセンス・モデル規模は未確認。
 
 ### V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning
 

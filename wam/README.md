@@ -3,13 +3,13 @@
 
 [← データベース](../README.md)
 
-152 records · 正本: [papers.csv](../papers.csv)
+154 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 43 |
+| [world-representation](world-representation.md) | 44 |
 | [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 52 |
+| [action-coupling](action-coupling.md) | 53 |
 | [planning](planning.md) | 28 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
@@ -19,6 +19,7 @@
 - 2026-11-18 · [LaST1.0: A Unified Latent World-Action Model with Control-Centric SpatioTemporal Reasoning](action-coupling.md) · `WAM-0153`
 - 2026-11-18 · [JEPA Dots: Dual-Latent World Model for Language-Guided Robot Control](action-coupling.md) · `WAM-0152`
 - 2026-11-18 · [Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models](world-representation.md) · `WAM-0151`
+- 2026-11-14 · [ResWAM: Learning What Changes, Not What Stays, for World-Action Models](action-coupling.md) · `WAM-0157`
 - 2026-11-10 · [From Video Frames to Robot Meta-Frames: A Unified Latent Interface for World Action Models](world-representation.md) · `WAM-0154`
 - 2026-11-04 · [Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models](action-coupling.md) · `WAM-0150`
 - 2026-11-02 · [Seeing Through the Illusion: Test-Time Scaling for World Action Models](planning.md) · `WAM-0149`
@@ -121,6 +122,7 @@
 - 2026-07-02 · [Object-centric LeJEPA](world-representation.md) · `WAM-0031`
 - 2026-06-05 · [Contrast encodes inductive bias: separating slow noise from dynamics in predictive representation learning](temporal-modeling.md) · `WAM-0014`
 - 2026-05-25 · [When Does LeJEPA Learn a World Model?](world-representation.md) · `WAM-0009`
+- 2026-05-07 · [OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation](world-representation.md) · `WAM-0156`
 - 2026-03-25 · [Latent-WAM: Latent World Action Modeling for End-to-End Autonomous Driving](planning.md) · `WAM-0037`
 - 2026-03-15 · [V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning](world-representation.md) · `WAM-0008`
 - 2026-03-13 · [LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels](dynamics.md) · `WAM-0001`

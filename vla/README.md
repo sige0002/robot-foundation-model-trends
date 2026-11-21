@@ -3,20 +3,23 @@
 
 [← データベース](../README.md)
 
-140 records · 正本: [papers.csv](../papers.csv)
+143 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 31 |
+| [perception-representation](perception-representation.md) | 33 |
 | [reasoning-system2](reasoning-system2.md) | 9 |
 | [action-system1](action-system1.md) | 36 |
 | [memory-temporal](memory-temporal.md) | 15 |
-| [adaptation](adaptation.md) | 49 |
+| [adaptation](adaptation.md) | 50 |
 
 ## 論文
 
+- 2026-11-19 · [TacInno: Teaching Vision-Language-Action Models the Contact Dynamics Beyond Vision and Action](perception-representation.md) · `VLA-0243`
 - 2026-11-18 · [Towards Pose-Robust Few-Shot Vision-Language-Action Models](adaptation.md) · `VLA-0239`
+- 2026-11-17 · [Hidden Variables Behind Real-Robot Data Quality: Lessons from Hundreds of Thousands of Hours](adaptation.md) · `VLA-0241`
 - 2026-11-17 · [CoBoVLA: Decoupling Language from Action with Discrete Codes for Robust and Interpretable Robot Manipulation](reasoning-system2.md) · `VLA-0240`
+- 2026-11-16 · [ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters](perception-representation.md) · `VLA-0242`
 - 2026-11-04 · [From Pixels to Actions--Towards Native Vision-Language-Action Policies](perception-representation.md) · `VLA-0238`
 - 2026-10-22 · [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](action-system1.md) · `VLA-0236`
 - 2026-10-22 · [Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation](memory-temporal.md) · `VLA-0235`

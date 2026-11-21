@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-31 records · Published date 降順（同日 ID 降順）
+33 records · Published date 降順（同日 ID 降順）
+
+### TacInno: Teaching Vision-Language-Action Models the Contact Dynamics Beyond Vision and Action
+
+- ID: `VLA-0243`
+- Published: 2026-11-19
+- Authors: Weile Li; Yunfan Lou; Muqing Shi; Zihao Zhang; Zhenbiao Huang; Boxian Yao; Xiyu Zhu; Zhibo Pang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.26405) · [PDF](https://arxiv.org/pdf/2611.26405) · [Code](https://github.com/LisavilaLee/TacInno) · [Project](https://tacinno.github.io/)
+- Tags: TacInno, tactile-innovation, conditional-tokenizer, auxiliary-supervision, pi0.5, contact-rich-manipulation
+- Model size: π0.5-based; total parameter count unverified
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+視覚と実行済み行動を条件に短時間の触覚変化を離散codeへ圧縮し、そのcodeをπ0.5の補助学習目標とする。tokenizerと補助headは推論時に外すが、現在・過去の触覚を読む入力枝は残る。
+
+**主な貢献**
+
+視覚・行動で予測しやすい変化とは別に、接触時の追加情報を表すcodeを学ぶ。UniVTAC 6タスク平均87.5%、実機4タスク70.5%。conditioningやcode lossを外す対照、触覚入力を無効にする評価で設計の寄与を調べる。
+
+**確認記録**
+
+- Checked: 2026-11-21 · Review: verified
+- arXiv v1は2026-11-19 16:53:19 UTC。https://arxiv.org/html/2611.26405v1 の手法・評価と公式projectを確認。実機はFranka FR3、各task45実演・50評価試行。simは各task50実演・100seedsで公式READMEはdefaultの2倍のaction limitを明記。deploymentには60 tactile tokensが残り、触覚自体を学習時のみ使う方式ではない。実装Apache-2.0: https://github.com/LisavilaLee/TacInno/blob/main/LICENSE 、third\_partyは各元license。公式重み https://huggingface.co/Lisavila/TacInno-VLA と https://huggingface.co/Lisavila/TacInno-VLA/tree/main/sim/lift\_can の7.47GB model.safetensorsを確認。model cardはGemma表示、π0.5/PaliGemmaの利用条件を明記。tokenizer個別条件の独立確認は未了。
+
+### ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters
+
+- ID: `VLA-0242`
+- Published: 2026-11-16
+- Authors: Ruixi Yu; Dairu Liu; Xuchuan Chen; Zekun Qi; Zekai Li; Zhuo Cao; Luyang Niu; Yingsheng Zhang; Sikai Liang; Ke Fan; He Wang; Li Yi
+- Venue: arXiv (Tech Report)
+- Links: [Paper](https://arxiv.org/abs/2611.21607) · [PDF](https://arxiv.org/pdf/2611.21607) · [Code](https://github.com/GalaxyGeneralRobotics/ScaleVLA) · [Project](https://galaxygeneralrobotics.github.io/scalevla/)
+- Tags: ScaleVLA, frozen-backbone, mixture-of-experts, model-scaling, flow-matching, feature-cache
+- Model size: 552B MoE backbone; only 20-layer causal encoder executed; action-head parameter count unverified
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+凍結したDeepSeek-V4.1-Flashの20層causal encoderから画像・言語特徴を取り出し、別途学習するflow-matching action DiTで連続行動を生成する。テキスト生成decoderは実行せず、学習時は特徴を事前計算する。
+
+**主な貢献**
+
+共通のaction headと学習手順で2B〜552B backboneを比較。LIBERO-Goalで10実演の87.8%が2Bの50実演85.6%を上回る。216msは4基のH200上でのRoboCasa行動chunk中央値であり、単GPUや実機制御周期の値ではない。
+
+**確認記録**
+
+- Checked: 2026-11-21 · Review: verified
+- arXiv v1は2026-11-16 18:59:37 UTC。https://arxiv.org/html/2611.21607v1 の§3と評価を確認。実機clientのchunk往復中央値は384ms、挿入成功は10試行中9回（π0.5比較は8回）。552Bは元backbone全体の規模で全層実行や全パラメータactiveを意味しない。異なるbackboneの比較で事前学習・token数も異なる。実装Apache-2.0: https://github.com/GalaxyGeneralRobotics/ScaleVLA/blob/main/LICENSE 。公式README・projectには学習済みaction-head checkpointの公開先を確認できずunknown。DeepSeek base weightsの取得手順とは区別。
 
 ### From Pixels to Actions--Towards Native Vision-Language-Action Policies
 

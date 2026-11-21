@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-49 records · Published date 降順（同日 ID 降順）
+50 records · Published date 降順（同日 ID 降順）
 
 ### Towards Pose-Robust Few-Shot Vision-Language-Action Models
 
@@ -29,6 +29,31 @@
 
 - Checked: 2026-11-19 · Review: verified
 - arXiv v1初稿2026-11-18。論文HTMLの方式と評価設計を確認。校正時の基準情報と実行時のRGB-Dが必要で、任意の単眼視点への一般化ではない。論文記載の公式project https://peacelwh.github.io/WACO/ は閲覧未確認。コード・重み・実装ライセンスはunknown。
+
+### Hidden Variables Behind Real-Robot Data Quality: Lessons from Hundreds of Thousands of Hours
+
+- ID: `VLA-0241`
+- Published: 2026-11-17
+- Authors: Maniformer Real-World Manipulation Team; Che Tsang Calvin; Xingyu Chen; Bowen Jiang; Naixiang Gao; Xiongfeng Cai; Enlin Gu; Ruiying Li; Peize Li; Mianrui Zhu; Haomiao Zhang; Xin He; Minhui Yu; Jun Zhao; Zihao Zhu; Yang Chen; Jingmei Jin; Keru Zhou; Chen Wang; Chang Zhou; Zhiwen Hou; Di Yang; Wenjun Sun; Fan Yang; Liyan Zhang; Yi Lu; Haojun Ma; Jun Zhu; Pengxin Zha; Zhaosheng Wang; Xin Zhao; Xindong He; Chiming Liu; Jianheng Song; Jiayao Ma; Maoqing Yao; Guanghui Ren; Qian Wang; Wei Shan; Yang Yang; Li Liu; Wenhao Wang
+- Venue: arXiv technical report
+- Links: [Paper](https://arxiv.org/abs/2611.22388) · [Project](https://teleop.agibot.com/)
+- Tags: supporting-foundation, data-quality, teleoperation, real-robot, imitation-learning, calibration, embodiment, pi0.5
+- Model size: unknown
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+ロボットの形態と可動域、遠隔操作の設計、実演データの観測欠落・校正不整合・迂回動作が、収集効率と模倣方策に与える影響を調べる。双腕ロボットの運動学解析、遠隔操作の比較、π₀.₅の追加学習後の実機検証を組み合わせた技術報告。
+
+**主な貢献**
+
+データ選別アルゴリズムではなく、収集前から対処できる品質要因を実験で特定。学習に必要な視覚手掛かりが記録にない場合、実演が成功していても方策が適切な行動を選べず、実演の余分な迂回も学習後に残ることを代表課題で示す。
+
+**確認記録**
+
+- Checked: 2026-11-21 · Review: verified
+- arXiv v1のみ（2026-11-17）。本文§§2–4/6と公式掲載先を確認。20万時間超は収集の背景規模で、全量を使った比較実験ではない。品質比較は限定課題と単一方策・行動表現で、一部は人工的校正ずれまたは単一学習ラン。公式プロジェクトURLは論文コメントに明記、個別の研究コード・追加学習重み・データ公開・コードライセンスは未確認。公式PDFリンクは取得上限超過のためPDF欄空欄。
 
 ### Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies
 
@@ -586,11 +611,11 @@ LIBERO-Plusの5視覚軸の非加重平均で、π0.5はoverlayにより73.9%か
 - Published: 2026-10-04
 - Authors: Ning Zhu; Mengfei Zhao; Yikai Tang; Zhangyujie Sun; Peihao Li; Dongyue Ni; Jindou Jia; Jianfei Yang
 - Venue: arXiv preprint
-- Links: [Paper](https://arxiv.org/abs/2610.05407) · [PDF](https://arxiv.org/pdf/2610.05407v1)
+- Links: [Paper](https://arxiv.org/abs/2610.05407) · [PDF](https://arxiv.org/pdf/2610.05407v1) · [Code](https://github.com/Z-yiwei/tuco) · [Project](https://tuco-curation.github.io/)
 - Tags: supporting-foundation, data-curation, sim-to-real, co-training, influence-functions, diffusion-policy
 - Model size: unknown / 未確認
 - Open-source: unknown
-- Code / weights / license: unknown / unknown / unknown
+- Code / weights / license: available / unknown / unknown
 
 **概要（日本語）**
 
@@ -598,12 +623,12 @@ LIBERO-Plusの5視覚軸の非加重平均で、π0.5はoverlayにより73.9%か
 
 **主な貢献**
 
-影響関数による軌道ごとのロールアウト影響ベクトルを、報酬方向の効用と直交成分の被覆表現へ分解。正の効用と報酬方向への整合条件の下で、効用品質付きlog-determinantの限界被覆利得を用い貪欲選択する。実機3課題では各1200本から600本を選び、課題ごと10本の成功実機実演と共学習し、平均成功率85.8%を報告（全シミュレーション併用25.8%、各課題40試行）。保持数・混合比は所与で、観測・行動インターフェースが整合する操作課題に評価範囲が限られる。
+影響関数による軌道ごとのロールアウト影響ベクトルを、報酬方向の効用と直交成分の被覆表現へ分解。正の効用と報酬方向への整合条件の下で、効用品質付きlog-determinantの限界被覆利得を用い貪欲選択する。実機3課題では各1200本から600本を選び、課題ごと10本の成功実機軌道と共学習し、平均成功率85.8%を報告（同じ600本の無作為選択25.8%、全1200本の併用も25.8%、各課題・手法40試行）。保持数・混合比は所与で、観測・行動インターフェースが整合する操作課題に評価範囲が限られる。
 
 **確認記録**
 
-- Checked: 2026-10-13 · Review: verified
-- Current-window discovery (2026-09-30–2026-10-13). https://arxiv.org/abs/2610.05407 records v1 only, 2026-10-04 (first/latest). https://arxiv.org/html/2610.05407v1 §§4.2–4.4,5.1,C.3,E.3 supports method, real-robot protocol and limits. No official implementation/checkpoint files or code license verified in reviewed primary paper; all three availability/license statuses remain unknown. No standalone parameter count is claimed.
+- Checked: 2026-11-21 · Review: verified
+- v1のみ (2026-10-04)。https://arxiv.org/html/2610.05407v1 §§4.2–4.4、5.1 表1、付録C.3。実機成功軌道は本文では凍結したシミュレーション事前学習方策の実行（操作者確認）、プロジェクトでは遠隔操作と記載が異なるため、本文に従う。公式実装で選別・学習・評価とRoboMimic手順を確認。対応するFranka専門方策・リセット資産は未配布で、実機軌道は利用者が用意する。重みと実装ライセンスは未確認。
 
 ### ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation
 

@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-52 records · Published date 降順（同日 ID 降順）
+53 records · Published date 降順（同日 ID 降順）
 
 ### WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation
 
@@ -79,6 +79,31 @@ QLM-Benchでは転移教師77.0%、少ステップ生徒76.7%でサンプリン�
 
 - Checked: 2026-11-19 · Review: verified
 - arXiv v1初稿2026-11-18。論文HTMLの方式・実験概要・パラメータ計上を確認。学習対象LIBERO 40タスクで84.9%、著者らのタスクID条件付き参照実験76.0%。他論文の公表値とは評価条件が異なるため直接比較せず、実機・同一ハードの遅延は未確認。コード・重み・実装ライセンスはunknown。
+
+### ResWAM: Learning What Changes, Not What Stays, for World-Action Models
+
+- ID: `WAM-0157`
+- Published: 2026-11-14
+- Authors: Chongyu Fan; Gaowen Liu; Ramana Rao Kompella; Jason Corso; Sijia Liu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.19559) · [PDF](https://arxiv.org/pdf/2611.19559) · [Code](https://github.com/OPTML-Group/ResWAM) · [Project](https://chongyu-fan.netlify.app/posts/reswam/)
+- Tags: visual-residual, DINOv3, flow-matching, RoboTwin, LIBERO-Plus
+- Model size: 2.3B total; 0.5B dual-branch DiT
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+凍結したDINOv3の現在と未来の特徴差分を教師にして、視覚の変化とロボット行動チャンクを同じモデルで学習する。背景など、変化しない特徴の再現に学習が偏ることを抑える狙い。
+
+**主な貢献**
+
+行動と視覚の差分を予測する二枝DiTを条件付きフローマッチングで共同学習。RoboTwin 2.0の50課題で平均成功率93.8%、未来特徴全体の予測に置換すると90.9%、視覚差分枝を除くと89.9%と報告。
+
+**確認記録**
+
+- Checked: 2026-11-21 · Review: verified
+- v1のみ。https://arxiv.org/html/2611.19559v1 §§4,6・図7を確認。数値は著者のシミュレーション比較。実装MIT: https://github.com/OPTML-Group/ResWAM/blob/main/LICENSE 。LIBERO重み model.pt は https://huggingface.co/api/models/OPTML-Group/ResWAM-LIBERO のファイル一覧で確認。配布カードはMIT表記。重み取得や独立再現は未実施。
 
 ### Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models
 

@@ -3,12 +3,12 @@
 
 [← データベース](../README.md)
 
-76 records · 正本: [papers.csv](../papers.csv)
+77 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [planning](planning.md) | 18 |
-| [code](code.md) | 16 |
+| [code](code.md) | 17 |
 | [skill](skill.md) | 9 |
 | [tool](tool.md) | 13 |
 | [memory](memory.md) | 9 |
@@ -17,6 +17,7 @@
 ## 論文
 
 - 2026-11-19 · [AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control](tool.md) · `AGENT-0176`
+- 2026-11-06 · [On Agentic Manipulation Policies](code.md) · `AGENT-0177`
 - 2026-11-02 · [TAMPAgent: Agentic Belief-Space Planning for Mobile Manipulation](planning.md) · `AGENT-0175`
 - 2026-10-22 · [SCOPE: Scene-graph Construction Optimized by Plan Error-correction for Robot Long-term Planning Datasets](planning.md) · `AGENT-0174`
 - 2026-10-22 · [Know When to Escalate: Critic-Guided Adaptive Execution for Cloud-Local Embodied Agents](replanning.md) · `AGENT-0173`
