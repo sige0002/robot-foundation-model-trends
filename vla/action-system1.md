@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-36 records · Published date 降順（同日 ID 降順）
+39 records · Published date 降順（同日 ID 降順）
+
+### NF-VLA: A Normalizing-Flow Baseline for Vision-Language-Action Learning
+
+- ID: `VLA-0247`
+- Published: 2026-11-15
+- Authors: Ruichen Deng; Qinyu Zhao; Yong-Hyun Park; Mutian Tong; Liang Zheng; Jiatao Gu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.20314) · [PDF](https://arxiv.org/pdf/2611.20314)
+- Tags: normalizing-flow, maximum-likelihood, action-density, score-refinement, LIBERO
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+観測と指示に条件付けた自己回帰正規化フローで動作を生成する。動作の条件付き密度を学び、その同じモデルで抽出したスコアで出力を一度補正する。
+
+**主な貢献**
+
+単一の最尤目的で学ぶ動作生成ベースラインを提示。SmolVLM-500M-Instructを初期値とし、ロボット事前学習なしでLIBEROは1,967/2,000成功、同じチェックポイントでLIBERO-Plusは72.6%と報告。
+
+**確認記録**
+
+- Checked: 2026-11-22 · Review: verified
+- v1のみ。https://arxiv.org/html/2611.20314v1 の手法・評価を確認。著者のシミュレーション結果で実機検証なし。500Mはバックボーン名でモデル全体の総数ではない。実装・固有重み・ライセンスは未確認。
+
+### VLALagBench: Understanding When and Why VLA Inference Latency Matters
+
+- ID: `VLA-0246`
+- Published: 2026-11-02 · Updated: 2026-11-16
+- Authors: Qi Wen; Borui Xu; Hussein Amro; Hongshi Tan; Hanmin Lin; Chaoyi Ruan; Shanghao Liu; Gang Yang; Yuejiang Liu; Jiafei Duan; Bingsheng He; Jason Clemons; Christos Kozyrakis; Wenqi Jiang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.03103) · [PDF](https://arxiv.org/pdf/2611.03103) · [Code](https://github.com/codestrongestx/vla-lag-bench) · [Project](https://mast.stanford.edu/pubs/vlalagbench/)
+- Tags: supporting-foundation, inference-latency, closed-loop, latency-injection, dynamic-manipulation
+- Model size: unknown / 未確認
+- Open-source: false
+- Code / weights / license: available / unknown / non-open-source
+
+**概要（日本語）**
+
+対象速度、推論遅延、同期・非同期実行を個別に変え、既存VLAの成功率が遅延でどのように変化するかを測る評価基盤。
+
+**主な貢献**
+
+同じ遅延でも課題により影響が異なる。著者のLIBEROで対象速度0.1 m/s、遅延100 msでは、載置は71.5→40.5%、把持は86.5→74.0%と報告。
+
+**確認記録**
+
+- Checked: 2026-11-22 · Review: verified
+- https://arxiv.org/html/2611.03103v2 の評価節を確認。主評価は制御ステップに遅延を入れたシミュレーション。別途SO-101とMolmoAct2の実機確認あり。独自コードはCC BY-NC 4.0: https://github.com/codestrongestx/vla-lag-bench/blob/main/LICENSE 。既存方策の外部チェックポイントと評価専用の固有重みは区別。
 
 ### When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies
 
@@ -629,6 +679,31 @@ VLAを再学習せず、知覚から生成するPoisson安全関数とCBF-QPで�
 
 - Checked: 2026-10-01 · Review: verified
 - 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。実装Apache-2.0。公開はsimulation checkpoint cp\_sim\_obs/cp\_libero\_obs: https://huggingface.co/jidaxian010/vla-feedback-sim 。実機重み公開とは区別。 Code license: Apache-2.0; https://github.com/jidaxian010/VLA-Feedback-release/blob/main/LICENSE.
+
+### Action Chunk Scheduling for Batched Robot Policy Serving
+
+- ID: `VLA-0244`
+- Published: 2026-07-31
+- Authors: Rohan Bansal; David He; Nadun Ranawaka Arachchige; Zhenyang Chen; Soobum Kim; Kexin Rong; Danfei Xu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2608.00337) · [PDF](https://arxiv.org/pdf/2608.00337) · [Code](https://github.com/GaTech-RL2/armory) · [Project](https://gatech-rl2.github.io/actionchunkscheduling/)
+- Tags: supporting-foundation, Armory, policy-serving, multi-robot, action-chunk-scheduling, latency
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+既存のロボット方策を共有GPUから配信する基盤研究。各機の行動バッファを見ながら推論要求をまとめ、ロボットが次の行動を待つ時間と処理量の配分を調整する。
+
+**主な貢献**
+
+将来の行動バッファを先読みし、消費速度や優先度が異なるロボットの推論をスケジュールする。PiPER 10台・L40S 1枚で動的課題1台と静的課題9台の場合、重み5の先読みは98.67件/分、EDFは83.00件/分。静的側の行動待ち割合は増加し、均質な設定では利益が限定的。
+
+**確認記録**
+
+- Checked: 2026-11-22 · Review: verified
+- v1のみ、差分対象期間外の支援基盤枠。https://arxiv.org/html/2608.00337v1 §5・表5を確認。著者の実機測定、各条件1分×3シード。新規方策ではない。公開コードApache-2.0: https://github.com/GaTech-RL2/armory/blob/main/LICENSE 。公開mockは実機評価系と同一ではなく、実験固有チェックポイントは未確認。
 
 ### SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics
 

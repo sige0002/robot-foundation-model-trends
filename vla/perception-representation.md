@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-33 records · Published date 降順（同日 ID 降順）
+34 records · Published date 降順（同日 ID 降順）
 
 ### TacInno: Teaching Vision-Language-Action Models the Contact Dynamics Beyond Vision and Action
 
@@ -54,6 +54,31 @@
 
 - Checked: 2026-11-21 · Review: verified
 - arXiv v1は2026-11-16 18:59:37 UTC。https://arxiv.org/html/2611.21607v1 の§3と評価を確認。実機clientのchunk往復中央値は384ms、挿入成功は10試行中9回（π0.5比較は8回）。552Bは元backbone全体の規模で全層実行や全パラメータactiveを意味しない。異なるbackboneの比較で事前学習・token数も異なる。実装Apache-2.0: https://github.com/GalaxyGeneralRobotics/ScaleVLA/blob/main/LICENSE 。公式README・projectには学習済みaction-head checkpointの公開先を確認できずunknown。DeepSeek base weightsの取得手順とは区別。
+
+### APS-VLA: Action-Guided and Future-Aware Token Pruning for Efficient Vision-Language-Action Models
+
+- ID: `VLA-0245`
+- Published: 2026-11-09 · Updated: 2026-11-14
+- Authors: Xiaoyang Xing; Chun-Mei Feng; Anthony Cohn; Xiaoliang Gong; Asoke Nandi
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.13030) · [Code](https://github.com/xingxiaoyang-888/APS-VLA)
+- Tags: token-pruning, action-guided, future-features, closed-loop, inference-efficiency
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+実演動作と将来視覚特徴の予測を教師に、凍結VLA向けの視覚トークン選択器を学習する。運用時は現観測・指示・状態から選別し、将来予測器は使わない。
+
+**主な貢献**
+
+方策の下流で必要な情報をトークン選別に反映する。課題調整済みπ₀.₅を用いた実機5課題、各手法・課題40試行で平均方策推論時間137.25→93.25 ms、平均成功率60→61%と報告。
+
+**確認記録**
+
+- Checked: 2026-11-22 · Review: verified
+- https://arxiv.org/html/2611.13030v2 の手法・実機評価を確認。時間は方策推論であり全動作時間ではない。この成功率差を改善の実証とは扱わない。著者リポジトリにはOpenVLA-OFT/LIBEROの手順あり。固有重み未確認、公開実装のライセンス明示なし。PDFは取得検証せずURLを空欄にした。
 
 ### From Pixels to Actions--Towards Native Vision-Language-Action Policies
 

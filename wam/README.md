@@ -3,18 +3,19 @@
 
 [← データベース](../README.md)
 
-154 records · 正本: [papers.csv](../papers.csv)
+155 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 44 |
 | [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 53 |
+| [action-coupling](action-coupling.md) | 54 |
 | [planning](planning.md) | 28 |
 | [temporal-modeling](temporal-modeling.md) | 9 |
 
 ## 論文
 
+- 2026-11-18 · [MAWAM: A Multi-Agent World-Action Model for Coordinated Manipulation](action-coupling.md) · `WAM-0158`
 - 2026-11-18 · [WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation](action-coupling.md) · `WAM-0155`
 - 2026-11-18 · [LaST1.0: A Unified Latent World-Action Model with Control-Centric SpatioTemporal Reasoning](action-coupling.md) · `WAM-0153`
 - 2026-11-18 · [JEPA Dots: Dual-Latent World Model for Language-Guided Robot Control](action-coupling.md) · `WAM-0152`

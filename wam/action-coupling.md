@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-53 records · Published date 降順（同日 ID 降順）
+54 records · Published date 降順（同日 ID 降順）
+
+### MAWAM: A Multi-Agent World-Action Model for Coordinated Manipulation
+
+- ID: `WAM-0158`
+- Published: 2026-11-18
+- Authors: Xianzhe Fan; Chi-Pin Huang; Fu-En Yang; Jing Wang; Yecheng Wu; Yu-Cheng Chou; Johan Bjorck; Linxi "Jim" Fan; Jan Kautz; Yu-Chiang Frank Wang; Zhiding Yu; Hengshuang Zhao; Zhiqi Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.25105) · [PDF](https://arxiv.org/pdf/2611.25105) · [Project](https://research.nvidia.com/labs/lpr/mawam/)
+- Tags: multi-robot, coordinated-manipulation, cross-agent-attention, joint-denoising
+- Model size: 2.76B trainable modules
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+複数ロボットの将来視点と行動チャンクを一度に生成し、ロボットごとに独立した制御インターフェースを通じて同期実行する。
+
+**主な貢献**
+
+単体WAMを初期値とし、ロボット間注意で各機の行動と将来視点を結び付ける。Galaxea R1 Pro 2台の実機3課題・各30試行で平均成功率67.8%、同じ実演と視点を使うMA-VLAは48.9%、ロボット間注意なしは52.2%と報告。
+
+**確認記録**
+
+- Checked: 2026-11-22 · Review: verified
+- v1のみ。https://arxiv.org/html/2611.25105v1 §3・表1を確認。学習対象のDiT 2.06Bと状態・行動モジュール0.70Bの合計を記載。凍結モジュールは含まない。公式プロジェクトで本研究の実装・重み・ライセンスは未確認。同名に近い別研究のコードを除外。
 
 ### WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation
 
@@ -102,8 +127,8 @@ QLM-Benchでは転移教師77.0%、少ステップ生徒76.7%でサンプリン�
 
 **確認記録**
 
-- Checked: 2026-11-21 · Review: verified
-- v1のみ。https://arxiv.org/html/2611.19559v1 §§4,6・図7を確認。数値は著者のシミュレーション比較。実装MIT: https://github.com/OPTML-Group/ResWAM/blob/main/LICENSE 。LIBERO重み model.pt は https://huggingface.co/api/models/OPTML-Group/ResWAM-LIBERO のファイル一覧で確認。配布カードはMIT表記。重み取得や独立再現は未実施。
+- Checked: 2026-11-22 · Review: verified
+- v1のみ。https://arxiv.org/html/2611.19559v1 §4・表2・図7を確認。RoboTwin 2.0は50課題・各条件100試行/課題（clean 93.6%、random 94.0%）。公式評価はp32e16、シミュレータbf44be5。実装MIT: https://github.com/OPTML-Group/ResWAM/blob/main/LICENSE 。LIBEROに加え、RoboTwin 2.0 https://huggingface.co/OPTML-Group/ResWAM-RoboTwin2/tree/1b5f499e0cab45beafba2ac1c43b5fba08451497 とRoboDojo https://huggingface.co/OPTML-Group/ResWAM-RoboDojo/tree/b334326cedd24a43dfeb0765210b77df41640eec のmodel.pt・正規化統計・設定を配布APIで確認。両配布カードはMIT表記。重み取得や独立再現は未実施。
 
 ### Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models
 

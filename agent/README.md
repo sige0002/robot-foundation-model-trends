@@ -3,19 +3,20 @@
 
 [← データベース](../README.md)
 
-77 records · 正本: [papers.csv](../papers.csv)
+78 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [planning](planning.md) | 18 |
 | [code](code.md) | 17 |
-| [skill](skill.md) | 9 |
+| [skill](skill.md) | 10 |
 | [tool](tool.md) | 13 |
 | [memory](memory.md) | 9 |
 | [replanning](replanning.md) | 11 |
 
 ## 論文
 
+- 2026-11-19 · [Alignment Drives Reuse: Learning Generalizable Robot-Use Agents from Heterogeneous Experience](skill.md) · `AGENT-0178`
 - 2026-11-19 · [AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control](tool.md) · `AGENT-0176`
 - 2026-11-06 · [On Agentic Manipulation Policies](code.md) · `AGENT-0177`
 - 2026-11-02 · [TAMPAgent: Agentic Belief-Space Planning for Mobile Manipulation](planning.md) · `AGENT-0175`

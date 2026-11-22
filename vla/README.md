@@ -3,13 +3,13 @@
 
 [← データベース](../README.md)
 
-143 records · 正本: [papers.csv](../papers.csv)
+147 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 33 |
+| [perception-representation](perception-representation.md) | 34 |
 | [reasoning-system2](reasoning-system2.md) | 9 |
-| [action-system1](action-system1.md) | 36 |
+| [action-system1](action-system1.md) | 39 |
 | [memory-temporal](memory-temporal.md) | 15 |
 | [adaptation](adaptation.md) | 50 |
 
@@ -20,7 +20,10 @@
 - 2026-11-17 · [Hidden Variables Behind Real-Robot Data Quality: Lessons from Hundreds of Thousands of Hours](adaptation.md) · `VLA-0241`
 - 2026-11-17 · [CoBoVLA: Decoupling Language from Action with Discrete Codes for Robust and Interpretable Robot Manipulation](reasoning-system2.md) · `VLA-0240`
 - 2026-11-16 · [ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters](perception-representation.md) · `VLA-0242`
+- 2026-11-15 · [NF-VLA: A Normalizing-Flow Baseline for Vision-Language-Action Learning](action-system1.md) · `VLA-0247`
+- 2026-11-09 · [APS-VLA: Action-Guided and Future-Aware Token Pruning for Efficient Vision-Language-Action Models](perception-representation.md) · `VLA-0245`
 - 2026-11-04 · [From Pixels to Actions--Towards Native Vision-Language-Action Policies](perception-representation.md) · `VLA-0238`
+- 2026-11-02 · [VLALagBench: Understanding When and Why VLA Inference Latency Matters](action-system1.md) · `VLA-0246`
 - 2026-10-22 · [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](action-system1.md) · `VLA-0236`
 - 2026-10-22 · [Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation](memory-temporal.md) · `VLA-0235`
 - 2026-10-22 · [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](action-system1.md) · `VLA-0234`
@@ -133,6 +136,7 @@
 - 2026-09-17 · [Catch Me If You Can: Real-Time Feedback Denoising for Responsive VLAs](action-system1.md) · `VLA-0121`
 - 2026-09-09 · [RoboDrop: Curating VLA Post-Training Data via Local Gradient Compatibility](adaptation.md) · `VLA-0206`
 - 2026-08-08 · [Auditing Instruction-Trajectory Mismatches in Multimodal Robot Demonstrations](adaptation.md) · `VLA-0208`
+- 2026-07-31 · [Action Chunk Scheduling for Batched Robot Policy Serving](action-system1.md) · `VLA-0244`
 - 2026-07-07 · [SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models](adaptation.md) · `VLA-0207`
 - 2025-08-26 · [MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation](memory-temporal.md) · `VLA-0116`
 - 2025-06-02 · [SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics](action-system1.md) · `VLA-0108`

@@ -3,7 +3,7 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-26 records · Published date 降順（同日 ID 降順）
+27 records · Published date 降順（同日 ID 降順）
 
 ### A²-VLA: Adapting Vision-Language-Action Policies to New Tools through Agentic Affordance Discovery
 
@@ -54,6 +54,31 @@
 
 - Checked: 2026-11-19 · Review: verified
 - arXiv v1初稿2026-11-18。論文HTMLの方式と回復分析を選択確認。RoboCasa365・CALVINの比較とFranka Research 3の実機評価を報告。公式公開実装・重み・実装ライセンスはunknown。
+
+### InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation
+
+- ID: `HYBRID-0156`
+- Published: 2026-11-17
+- Authors: Chen Zhao; Zipeng Ye; Shifeng Bao; Yihan Lin; Haitao Shen; Yining Luo; Yuchen Xie; Jing Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.22584) · [PDF](https://arxiv.org/pdf/2611.22584) · [Code](https://github.com/LingwuPro/InteractVLA) · [Project](https://lingwupro.github.io/InteractVLA/)
+- Tags: agentic-tool-use, frozen-vla, goal-pose, soft-time-alignment, recursive-self-improvement
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unknown
+
+**概要（日本語）**
+
+エージェントが指定した手先の位置・姿勢・把持状態を凍結VLAの行動候補に反映し、観測や生成動作のフィードバックから次の呼び出しを決める。
+
+**主な貢献**
+
+行動列の終端に固定せず、目標姿勢に達する時点をソフトに選びながら候補を誘導する。LIBERO-Plusでは同一VLA・目標姿勢・再帰的改善予算で、固定終端96.8%に対して99.4%と報告。
+
+**確認記録**
+
+- Checked: 2026-11-22 · Review: verified
+- v1のみ。https://arxiv.org/html/2611.22584v1 §3・表7を確認。数値はシミュレーションで改善手順込み、基盤VLA単体ではない。著者実装は操作インターフェースと設定を提供し、互換の事前学習済み重みは利用者が用意する。配布固有重みとリポジトリ全体の実装ライセンスは未確認。
 
 ### FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies
 

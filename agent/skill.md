@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+10 records · Published date 降順（同日 ID 降順）
+
+### Alignment Drives Reuse: Learning Generalizable Robot-Use Agents from Heterogeneous Experience
+
+- ID: `AGENT-0178`
+- Published: 2026-11-19
+- Authors: Ziyue Wang; Yaopeng Yang; Liyi Zhou
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.26376) · [PDF](https://arxiv.org/pdf/2611.26376)
+- Tags: UniCraft, skill-reuse, embodiment-adapters, execution-feedback, cross-embodiment
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+観測・座標・操作を共通形式にそろえ、異なるシミュレータやロボットで得た実行経験から共有スキルを改善する。
+
+**主な貢献**
+
+実演や基盤モデルの重み更新に頼らず、実行フィードバックを使ってスキルと呼び出し規則を修正する。固定済みスキルを新しいアダプターで再利用するRoboDojoの固定レイアウト評価は42課題各5試行で115/210成功と報告。
+
+**確認記録**
+
+- Checked: 2026-11-22 · Review: verified
+- v1のみ。https://arxiv.org/html/2611.26376v1 §§3–4・表4を確認。数値は固定シード・レイアウトで特定エージェントを用いた著者のシミュレーション結果。実機での改善幅、公式コード、固有重み、実装ライセンスは未確認。
 
 ### InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration
 
