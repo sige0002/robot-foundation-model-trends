@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-34 records · Published date 降順（同日 ID 降順）
+35 records · Published date 降順（同日 ID 降順）
 
 ### TacInno: Teaching Vision-Language-Action Models the Contact Dynamics Beyond Vision and Action
 
@@ -754,6 +754,31 @@ Pi0/RDTのRoboTwin 13選択課題で成功率が31.2–39.9ポイント低下。
 
 - Checked: 2026-10-06 · Review: verified
 - 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-09-30 07:34:24 UTC、改訂なし。ICRA 2026採択はarXiv著者commentで確認し、publisher proceedingsは未確認。本文 https://arxiv.org/html/2609.39178v1 の§III、IV-A/FとTable I/IVを選択読解。simulationは50中13選択課題、各10seed。81.4–82.2%はsimulationの効果に対する保持率で、成功率の絶対低下ではない。2モデルと指定環境への評価で普遍的な安全性結論とは扱わない。公式実装・重み・実装ライセンスは未確認。
+
+### Kinematic Interface for the Wild: Modular Bimanual Loco-Manipulation Capture from 360° Cameras Alone
+
+- ID: `VLA-0248`
+- Published: 2026-09-19
+- Authors: Benjamin Yang; Weiying Wang; Shenggao Li; Keming Yan; Sasha Wilkinson; Zelin Wang; Yip Fun Yeung; Lingfeng Sun
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.22809) · [PDF](https://arxiv.org/pdf/2609.22809) · [Code](https://github.com/TToTMooN/KIWI_software) · [Project](https://lingfeng.moe/KIWI/)
+- Tags: supporting-foundation, KIWI, UMI, demonstration-capture, bimanual, camera-localization
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+市販360度カメラだけを電子機器として使う両手・移動操作の実演記録インターフェース。背面レンズで環境を地図化して両手を共通座標に登録し、前面レンズで操作を記録。オフラインでカメラ内IMUも融合する。
+
+**主な貢献**
+
+前後レンズの役割分離と着脱式マウントにより、手先同士が視野を共有しなくても多様な器具の軌跡を復元。6件の両手収録で局在失敗率0.1%、前面だけの特徴照合では24.8%と報告。VLA方策自体の提案ではない。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1・本文を確認。実演取得の支援基盤としてバックフィル。公式プロジェクトで2026-10-11のハードウェア公開と10-17のソフトウェアv0.1.0公開を確認。参照ソフトウェアApache-2.0: https://github.com/TToTMooN/KIWI\_software/blob/main/LICENSE 。外部依存とハードウェアの条件は別。
 
 ### GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments
 

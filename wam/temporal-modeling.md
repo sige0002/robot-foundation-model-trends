@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+11 records · Published date 降順（同日 ID 降順）
+
+### LoCo-WAM: Test-Time Training as Long Context for World-Action Models
+
+- ID: `WAM-0162`
+- Published: 2026-11-19
+- Authors: Sheng Cheng; Deqian Kong
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.26853) · [PDF](https://arxiv.org/pdf/2611.26853)
+- Tags: LoCo-WAM, test-time-training, LoRA, video-expert, long-context
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+観測された動画を使い、計画時に動画エキスパートのrank-32 LoRAを自己教師あり予測で更新する。行動ラベルを用いず、明示的な入力履歴を長くしないまま過去の観測を反映する。
+
+**主な貢献**
+
+著者のLong-WAM/RoboCasa GR-1シミュレーションでは2.4秒の履歴＋適応で73.6%、9.6秒のベースラインで73.5%、4.8秒＋適応で78.3%。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1と評価節を確認。評価はシミュレーションのみ。表1の同期推論では2.4秒履歴＋適応が0.76秒・14.6GB、9.6秒のベースラインが0.67秒・14.0GBで、この比較で推論負荷は減っていない。公式実装、重み、実装ライセンスは未確認。
 
 ### WAM-Cache: Staleness-Bounded KV Reuse for Efficient World Action Models
 
@@ -129,6 +154,31 @@ SVD空間と特異値の時間構造を利用するcacheを設計し、HunyuanWo
 
 - Checked: 2026-10-03 · Review: verified
 - arXiv v1初稿・著者・arXiv DOIを確認。HTML https://arxiv.org/html/2610.01019v1 の3節、4.1節、5節を確認。公式repoのsrc実装とREADMEを独立確認。READMEは公開checkpoint/data配布と独自コードの最終ライセンスをpendingと明記し、weight manifestのハッシュ一覧を公開重みと扱わない。コードはavailable、重みはunavailable、実装ライセンスunspecified、open\_source=unknown。repoに示されたproject linkは今回取得できずproject\_urlは空欄。PDF未取得、正確なPDF href未抽出のためpdf\_urlは空欄。
+
+### SplineWAM: Adaptive Action Horizons for World Action Models via B-Spline Representations
+
+- ID: `WAM-0160`
+- Published: 2026-09-30
+- Authors: Jun Guo; Xiaoshen Han; Qiwei Li; Nan Sun; Peiyan Li; Heyun Wang; Hang Lai; Weinan Zhang; Xinghang Li; Huaping Liu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.39873) · [PDF](https://arxiv.org/pdf/2609.39873) · [Project](https://splinewam.github.io/)
+- Tags: B-spline, adaptive-horizon, action-chunking, asynchronous-control, policy-serving
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+3次Bスプラインの固定長パラメータで、時間分解能と実行時間が異なる動作チャンクを表すWAM。動画教師の抽出時刻も実演軌道に合わせる。
+
+**主な貢献**
+
+非同期環境では、実際に実行する軌道の先頭が確定済み行動と連続になるよう、デコーダのヤコビアンを介して補正。LIBERO-PlusとRoboCasaで、論文上の比較対象より成功率+8.2/+4.4ポイント、呼び出し回数22%/26%減。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1と公式プロジェクトを確認。可変ホライズンの関連研究としてバックフィル。プロジェクトに実装公開予定の表示があるが、稼働リポジトリと重みは未確認。
 
 ### Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey
 

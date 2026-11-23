@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-147 records · 正本: [papers.csv](../papers.csv)
+151 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 34 |
-| [reasoning-system2](reasoning-system2.md) | 9 |
+| [perception-representation](perception-representation.md) | 35 |
+| [reasoning-system2](reasoning-system2.md) | 10 |
 | [action-system1](action-system1.md) | 39 |
 | [memory-temporal](memory-temporal.md) | 15 |
-| [adaptation](adaptation.md) | 50 |
+| [adaptation](adaptation.md) | 52 |
 
 ## 論文
 
+- 2026-11-20 · [FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models](adaptation.md) · `VLA-0251`
+- 2026-11-19 · [Risk-Controlled Test-Time Adaptation for Vision-Language-Action Models](adaptation.md) · `VLA-0250`
+- 2026-11-19 · [PhyDEX: A Benchmark for Physical Reasoning in Vision-Language-Action Models via Dynamic Extrinsic Dexterity](reasoning-system2.md) · `VLA-0249`
 - 2026-11-19 · [TacInno: Teaching Vision-Language-Action Models the Contact Dynamics Beyond Vision and Action](perception-representation.md) · `VLA-0243`
 - 2026-11-18 · [Towards Pose-Robust Few-Shot Vision-Language-Action Models](adaptation.md) · `VLA-0239`
 - 2026-11-17 · [Hidden Variables Behind Real-Robot Data Quality: Lessons from Hundreds of Thousands of Hours](adaptation.md) · `VLA-0241`
@@ -128,6 +131,7 @@
 - 2026-09-22 · [RouteRLT: Learning When and Which RL Specialist Should Control a Vision-Language-Action Policy](adaptation.md) · `VLA-0142`
 - 2026-09-21 · [Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation](action-system1.md) · `VLA-0120`
 - 2026-09-20 · [Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models](adaptation.md) · `VLA-0122`
+- 2026-09-19 · [Kinematic Interface for the Wild: Modular Bimanual Loco-Manipulation Capture from 360° Cameras Alone](perception-representation.md) · `VLA-0248`
 - 2026-09-19 · [H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space](reasoning-system2.md) · `VLA-0127`
 - 2026-09-18 · [VLA-Scope: Shift-Aware Failure Prediction for Vision-Language-Action Models](adaptation.md) · `VLA-0133`
 - 2026-09-18 · [VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies](action-system1.md) · `VLA-0132`

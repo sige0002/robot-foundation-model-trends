@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+10 records · Published date 降順（同日 ID 降順）
+
+### Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation
+
+- ID: `AGENT-0181`
+- Published: 2026-11-20
+- Authors: Zhenxuan Fan; Zhuoya Wang; Yuqian Yuan; Wenqiao Zhang; Juncheng Li; Jun Xiao; Siliang Tang; Yueting Zhuang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.27689) · [PDF](https://arxiv.org/pdf/2611.27689)
+- Tags: Embodied-Harness, failure-reflection, procedural-memory, execution-memory, manipulation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結VLMの実行役と振り返り役を分け、短期の実行記憶と長期の経験記憶を維持する。実行失敗の観測を根拠に操作手順の助言を改訂し、次のラウンドで評価する。
+
+**主な貢献**
+
+モデル重みでなく蓄積した手順を改善。論文ではRoboTwin 2.0のC2RでRound 0の59.2%からRound 4の82.4%、PiPER実機3タスク計30試行で29成功を報告。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1の手法・評価節を確認。報告値は選択タスク・GPT-6 Astra評価条件で、広い実機一般化の主張とは区別。公式実装、重み、実装ライセンスは未確認。
 
 ### Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent's Experience Should Live
 

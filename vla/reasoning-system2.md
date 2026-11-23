@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-9 records · Published date 降順（同日 ID 降順）
+10 records · Published date 降順（同日 ID 降順）
+
+### PhyDEX: A Benchmark for Physical Reasoning in Vision-Language-Action Models via Dynamic Extrinsic Dexterity
+
+- ID: `VLA-0249`
+- Published: 2026-11-19
+- Authors: Hao Vo; Taisei Hanyu; Yuki Ikebe; Pham Tri Quang; Sreevenkata Anjani Tishita Godavarthi; Nghi D. Q. Bui; Daniel Sonntag; Chase Rainwater; Duy Minh Ho Nguyen; Anh Nguyen; Ngan Le
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.26565) · [PDF](https://arxiv.org/pdf/2611.26565)
+- Tags: benchmark, physical-reasoning, dynamic-manipulation, extrinsic-dexterity, throwing
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+ロボットの投擲を通じ、質量、重心、摩擦の異なる物体をVLAが扱えるかを調べる評価基盤。9タスク・100シーン、約3.5万軌跡を自動生成する。
+
+**主な貢献**
+
+投擲前の操作失敗と物理特性への対応不足を分析。評価した3種類の既存VLAはいずれも全体成功率3%未満で、真の物理特性を与える介入で成功率がおよそ倍になったと報告。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1・HTMLのベンチマークと実験を確認。公式実装、重み、実装ライセンスは未確認。
 
 ### CoBoVLA: Decoupling Language from Action with Discrete Codes for Robust and Interpretable Robot Manipulation
 

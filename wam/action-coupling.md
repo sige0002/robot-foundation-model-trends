@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-54 records · Published date 降順（同日 ID 降順）
+55 records · Published date 降順（同日 ID 降順）
+
+### LoopedWAM: Looped World Action Models for Elastic Inference
+
+- ID: `WAM-0159`
+- Published: 2026-11-19
+- Authors: Anh Dao; Xinxin Liu; Hang Yu; Jeffrey A Chan Santiago; Yuzhang Shang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.25595) · [PDF](https://arxiv.org/pdf/2611.25595) · [Code](https://github.com/anhdao69/LoopedWAM) · [Project](https://anhdao69.github.io/LoopedWAM/)
+- Tags: weight-sharing, elastic-inference, distillation, inference-efficiency
+- Model size: 0.58B policy parameters
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+動画と行動の各エキスパートでコアブロックを反復利用する小型WAM。動画特徴はクエリごとに一度、行動計算はサンプリングステップごとに実行されるため、深さを別々に調整する。
+
+**主な貢献**
+
+行動側の反復深さとサンプリング回数を変えられる単一チェックポイントを自己蒸留で学習。LIBEROではH100で96.0%・27.6 msまたは95.2%・24.7 msを論文で報告。実機ではAgileX PiPERの4タスク80試行で通常版71.3%。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1・公式実装を確認。実装MIT: https://github.com/anhdao69/LoopedWAM/blob/main/LICENSE 。https://huggingface.co/anhdao69/LoopedWAM のApache-2.0表記と、3ベンチマークの通常版・可変版計6個のpolicy.ptの公開を別に確認。
 
 ### MAWAM: A Multi-Agent World-Action Model for Coordinated Manipulation
 

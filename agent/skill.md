@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+11 records · Published date 降順（同日 ID 降順）
+
+### EvoTER: Evolving Embodied Agents via Tool-Use Experience and Reflection
+
+- ID: `AGENT-0180`
+- Published: 2026-11-20
+- Authors: Yingting Zhou; Yuyin Zhou; Yongliang Wang; Haoran Li; Dongbin Zhao
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.27797) · [PDF](https://arxiv.org/pdf/2611.27797) · [Project](https://evoter-project.github.io/)
+- Tags: EvoTER, tool-use, reflection, recovery, skill-reuse, validation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+探索時の操作ログから、診断役が再利用可能なツール利用規則・完了条件・復旧手順を提案し、別の検証役が新しい全タスク試行で採否を決める。各段階でモデル、ツール、ハーネスは固定。
+
+**主な貢献**
+
+探索、規則改訂、再試行での検証を分離。RoboCasa365 Target50の空ライブラリからの比較で53.6%から80.4%と報告。一部の未見評価はVLA側の未見性を指し、エージェント開発試行まで完全に分離した主張ではない。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1と公式プロジェクトを確認。シミュレータの特権情報は探索停滞時の診断に限定され、検証・実行には使わない。実装、重み、実装ライセンスは未確認。
 
 ### Alignment Drives Reuse: Learning Generalizable Robot-Use Agents from Heterogeneous Experience
 

@@ -3,19 +3,22 @@
 
 [← データベース](../README.md)
 
-78 records · 正本: [papers.csv](../papers.csv)
+81 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 18 |
+| [planning](planning.md) | 19 |
 | [code](code.md) | 17 |
-| [skill](skill.md) | 10 |
+| [skill](skill.md) | 11 |
 | [tool](tool.md) | 13 |
-| [memory](memory.md) | 9 |
+| [memory](memory.md) | 10 |
 | [replanning](replanning.md) | 11 |
 
 ## 論文
 
+- 2026-11-20 · [Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation](memory.md) · `AGENT-0181`
+- 2026-11-20 · [EvoTER: Evolving Embodied Agents via Tool-Use Experience and Reflection](skill.md) · `AGENT-0180`
+- 2026-11-19 · [ACE-Brain-0.7: Learning Execution-Grounded Reasoning for Embodied Agents](planning.md) · `AGENT-0179`
 - 2026-11-19 · [Alignment Drives Reuse: Learning Generalizable Robot-Use Agents from Heterogeneous Experience](skill.md) · `AGENT-0178`
 - 2026-11-19 · [AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control](tool.md) · `AGENT-0176`
 - 2026-11-06 · [On Agentic Manipulation Policies](code.md) · `AGENT-0177`

@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-50 records · Published date 降順（同日 ID 降順）
+52 records · Published date 降順（同日 ID 降順）
+
+### FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models
+
+- ID: `VLA-0251`
+- Published: 2026-11-20
+- Authors: Shuai Peng; Yongkai Liao; Yuxin Cheng; Haoyuan Wang; Jian Huang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.27011) · [PDF](https://arxiv.org/pdf/2611.27011)
+- Tags: FoRe, force-sensing, grasp-recovery, retry-policy, suction
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+力の信号で実演を接近・把持と搬送・配置に区切り、把持失敗から局所的に再試行する方策を学習。力とグリッパ指令で通常操作と再試行の切り替えを判定する。
+
+**主な貢献**
+
+吸着把持のLIBERO-SUCTIONを追加し、DOBOT実機の評価ではVLA-Adapterの成功率26.7%→51.7%、π0.5は48.3%→70.0%と報告。初回接触を要する把持復旧で、任意の実行失敗が対象ではない。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1の評価節を確認。ベンチマーク公開は予定とされ、公式実装、重み、実装ライセンスは未確認。
+
+### Risk-Controlled Test-Time Adaptation for Vision-Language-Action Models
+
+- ID: `VLA-0250`
+- Published: 2026-11-19
+- Authors: Zixuan Liu; Hashem Haghbayan; Zizhan Zheng; Siavash Khajavi
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.26438) · [PDF](https://arxiv.org/pdf/2611.26438)
+- Tags: R2-VLA, test-time-adaptation, retrieval, uncertainty, human-in-the-loop
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+検索した実演を参照するVLAに、行動の不確実性に応じて人の支援を求める仕組みを加える。エキスパートの修正を検索用メモリに追加し、VLA本体の重みは更新しない。
+
+**主な貢献**
+
+タスク単位の失敗リスク目標に合わせて不確実性の閾値を較正。LIBEROの4スイート、3バックボーンで平均成功率9.2〜11.2ポイント改善を報告。現場全般に無条件で成立する安全保証ではない。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1・HTMLで確認。公式実装、重み、実装ライセンスは未確認。
 
 ### Towards Pose-Robust Few-Shot Vision-Language-Action Models
 

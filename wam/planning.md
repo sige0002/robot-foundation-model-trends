@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-28 records · Published date 降順（同日 ID 降順）
+29 records · Published date 降順（同日 ID 降順）
+
+### SOAR: Training-Free Rank-Consistent Rollout Compression for Latent World Model Planning
+
+- ID: `WAM-0161`
+- Published: 2026-11-20
+- Authors: Anqi Li; Kai Liu; Linghe Kong; Yulun Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.27639) · [PDF](https://arxiv.org/pdf/2611.27639) · [Code](https://github.com/starrywiki/SOAR)
+- Tags: SOAR, latent-world-model, rollout-compression, candidate-ranking, training-free
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+サンプリング型計画の候補順位をほぼ維持する最小トークン予算を、決定ごとに少数候補から選ぶ。観測を読む最初のステップは圧縮せず、コンテキストをキャッシュする。
+
+**主な貢献**
+
+追加学習なしで凍結済み世界モデルのロールアウトを短縮。ナビゲーション・操作の7タスクで、著者は非圧縮並みの成功率で2.3倍、成功率の98%を保って2.5倍の高速化を報告。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1と論文リンクの実装を確認。実装MIT: https://github.com/starrywiki/SOAR/blob/main/LICENSE 。利用する第三者チェックポイントの配布・ライセンスとは別。
 
 ### Seeing Through the Illusion: Test-Time Scaling for World Action Models
 

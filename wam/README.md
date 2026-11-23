@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-155 records · 正本: [papers.csv](../papers.csv)
+159 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 44 |
 | [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 54 |
-| [planning](planning.md) | 28 |
-| [temporal-modeling](temporal-modeling.md) | 9 |
+| [action-coupling](action-coupling.md) | 55 |
+| [planning](planning.md) | 29 |
+| [temporal-modeling](temporal-modeling.md) | 11 |
 
 ## 論文
 
+- 2026-11-20 · [SOAR: Training-Free Rank-Consistent Rollout Compression for Latent World Model Planning](planning.md) · `WAM-0161`
+- 2026-11-19 · [LoCo-WAM: Test-Time Training as Long Context for World-Action Models](temporal-modeling.md) · `WAM-0162`
+- 2026-11-19 · [LoopedWAM: Looped World Action Models for Elastic Inference](action-coupling.md) · `WAM-0159`
 - 2026-11-18 · [MAWAM: A Multi-Agent World-Action Model for Coordinated Manipulation](action-coupling.md) · `WAM-0158`
 - 2026-11-18 · [WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation](action-coupling.md) · `WAM-0155`
 - 2026-11-18 · [LaST1.0: A Unified Latent World-Action Model with Control-Centric SpatioTemporal Reasoning](action-coupling.md) · `WAM-0153`
@@ -98,6 +101,7 @@
 - 2026-10-01 · [FutureWorlds: Learning Robotic World Models from Alternative Futures](temporal-modeling.md) · `WAM-0059`
 - 2026-10-01 · [Completion Aware Guidance for World Action Models](action-coupling.md) · `WAM-0058`
 - 2026-10-01 · [CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight](action-coupling.md) · `WAM-0057`
+- 2026-09-30 · [SplineWAM: Adaptive Action Horizons for World Action Models via B-Spline Representations](temporal-modeling.md) · `WAM-0160`
 - 2026-09-30 · [Magic-W0: A Structured World-Action Foundation Model for Physical Intelligence](action-coupling.md) · `WAM-0070`
 - 2026-09-30 · [Token-World: World Modeling in Vision-Language Model Token Space for Robot Manipulation](world-representation.md) · `WAM-0068`
 - 2026-09-30 · [Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey](temporal-modeling.md) · `WAM-0067`

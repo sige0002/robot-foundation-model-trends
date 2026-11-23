@@ -3,17 +3,19 @@
 
 [← データベース](../README.md)
 
-59 records · 正本: [papers.csv](../papers.csv)
+61 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 27 |
+| [vla-agent](vla-agent.md) | 28 |
 | [vla-wam](vla-wam.md) | 25 |
 | [wam-agent](wam-agent.md) | 5 |
-| [vla-wam-agent](vla-wam-agent.md) | 2 |
+| [vla-wam-agent](vla-wam-agent.md) | 3 |
 
 ## 論文
 
+- 2026-11-19 · [Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation](vla-wam-agent.md) · `HYBRID-0158`
+- 2026-11-19 · [PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation](vla-agent.md) · `HYBRID-0157`
 - 2026-11-19 · [CauSyncVLA: Causal Latent World Modeling for Asynchronous Robot Control](vla-wam.md) · `HYBRID-0155`
 - 2026-11-19 · [A²-VLA: Adapting Vision-Language-Action Policies to New Tools through Agentic Affordance Discovery](vla-agent.md) · `HYBRID-0154`
 - 2026-11-18 · [RePlan-VLA: Progress-Aware Replanning for Long-Horizon Vision-Language-Action Models](vla-agent.md) · `HYBRID-0153`

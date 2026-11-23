@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-27 records · Published date 降順（同日 ID 降順）
+28 records · Published date 降順（同日 ID 降順）
+
+### PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation
+
+- ID: `HYBRID-0157`
+- Published: 2026-11-19
+- Authors: Kai Lu; Chenyang Ma; Ioannis Havoutis
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.26596) · [PDF](https://arxiv.org/pdf/2611.26596) · [Project](https://kl-research.github.io/pgx/)
+- Tags: PGX, physical-predicates, state-machine, loco-manipulation, humanoid, recovery
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+物理的な述語を判定する状態機械、操作区間で働くVLA、世界座標で姿勢や接触目標を固定する制御を組み合わせ、移動を伴う長期ヒューマノイド操作を分担する。
+
+**主な貢献**
+
+同じ述語の定義で実演の区間分割、オンラインの段階遷移・復旧、段階別の評価を接続。Unitree G1のシミュレーション3タスクと実機1タスクで評価。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1と著者リンクのプロジェクトを確認。公式実装、重み、実装ライセンスは未確認。
 
 ### A²-VLA: Adapting Vision-Language-Action Policies to New Tools through Agentic Affordance Discovery
 

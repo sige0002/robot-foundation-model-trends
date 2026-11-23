@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-18 records · Published date 降順（同日 ID 降順）
+19 records · Published date 降順（同日 ID 降順）
+
+### ACE-Brain-0.7: Learning Execution-Grounded Reasoning for Embodied Agents
+
+- ID: `AGENT-0179`
+- Published: 2026-11-19
+- Authors: Yinhe Wang; Shijun Shi; Feng Pan; Tao Tao; Wei Mao; Jiangning Zhang; Zhiyao Ren; Yihang Jiao; Haoming Gu; Yunpeng Qing; Jiyu Guo; Zhi Hou; Dacheng Tao; Xiaogang Wang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.26519) · [PDF](https://arxiv.org/pdf/2611.26519)
+- Tags: supporting-foundation, vision-language-model, execution-grounding, progress-estimation, failure-diagnosis
+- Model size: 9B
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+人の一人称動画、ロボットのエピソード、シミュレーションから得た約370万の質問応答でQwen3.5-9Bを追加学習。空間理解、タスク推論、進捗推定に対応するVLM。
+
+**主な貢献**
+
+計画上の手順だけでなく、観測時点で何が完了・失敗しているかを学習対象にする。6種の公開タスク推論ベンチマークで平均76.5と報告。低レベルの行動出力モデルとは区別。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1・本文で確認。過去のACE-Brain版の重みは本バージョンの公開根拠にしていない。
 
 ### TAMPAgent: Agentic Belief-Space Planning for Mobile Manipulation
 

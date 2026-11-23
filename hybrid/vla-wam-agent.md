@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-2 records · Published date 降順（同日 ID 降順）
+3 records · Published date 降順（同日 ID 降順）
+
+### Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation
+
+- ID: `HYBRID-0158`
+- Published: 2026-11-19
+- Authors: Yuzhi Huang; Jie Wu; Fanding Huang; Junchao Lin; Weichen Zhang; Ziyi Xiong; Yang Li; Zhengwei Xie; Zhimin Wang; Zhen Liu; Jiazhen Huang; Yuzheng Zhang; Yuche Liu; Hongyi Yang; Chen Tang; Shixiang Tang; Hakan Aktas; Adam Wu; Duo Wu; Kangye Ji; Shuzhao Xie; Huanan Liu; Weijue Bu; Chenxin Li; Xinyuan Wang; Tianyi Bai; Yinan Mao; Jiawei Wang; Minglei Li; Heng Yu; Ehsan Adeli; Minchen Li; Yong-Lu Li; Cengiz Öztireli; Huazhe Xu; Chao Yu; Jing Zhang; Shanghang Zhang; Weitao Zhou; Wenwu Zhu; Cheng Chi; Jingyan Jiang; Zhi Wang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.26444) · [PDF](https://arxiv.org/pdf/2611.26444) · [Code](https://github.com/Mind2Act/Mind2Act_World) · [Project](https://mind2act-world.com/)
+- Tags: benchmark, closed-loop, failure-diagnosis, task-state, physical-execution
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+30種のシミュレーション操作を180の設定に展開し、履歴を用いる推論(Mind)、精密な動作(Act)、行動結果を次の判断に使う統合(Mind2Act)を切り分ける。マルチモーダルエージェント、VLA、WAMを評価する診断基盤であり、三者を統合した方策の提案ではない。
+
+**主な貢献**
+
+三つの設定と実行診断を組み合わせ、推論・動作・両者の接続のどこで失敗するかを分析。最も成績の良いエージェントでも論文報告の成功率はMind 52.7%、Act 39.0%、統合12.0%。
+
+**確認記録**
+
+- Checked: 2026-11-23 · Review: verified
+- arXiv v1・公式ベンチマーク実装を確認。原著コードMIT: https://github.com/Mind2Act/Mind2Act\_World/blob/main/LICENSE 。配布デモや評価アセットは方策重みではなく、第三者のコード・アセットにも別条件がある。
 
 ### Agentic World Action Models
 
