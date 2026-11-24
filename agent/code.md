@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-17 records · Published date 降順（同日 ID 降順）
+18 records · Published date 降順（同日 ID 降順）
+
+### Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness
+
+- ID: `AGENT-0183`
+- Published: 2026-11-23
+- Authors: Xiao-Ming Wu; Kang Liao; Yuexiao Ma; Taolin Zhang; Mingqian Zhou; Nuo Chen; Ziming Li; Yihang Luo; Rui Li; Zhonghua Wu; Tianyu Xie; Xiawu Zheng; Zhongang Cai; Zhi Hou; Chen Change Loy
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.31201) · [PDF](https://arxiv.org/pdf/2611.31201) · [Code](https://github.com/DravenALG/Embo-Harness) · [Project](https://dravenalg.github.io/projects/Embo-Harness/)
+- Tags: Embo-Harness, frontier-model, harness, action-chunk, ablation
+- Model size: unknown / 未確認
+- Open-source: false
+- Code / weights / license: available / unknown / non-open-source
+
+**概要（日本語）**
+
+汎用エージェントをロボット方策として使う際の行動チャンク、計画、視覚入力、ツール構成を整理し、シミュレーションと実機で検討する。
+
+**主な貢献**
+
+同一ハーネスで実行構成を対照比較。20タスク各3試行の条件で非同期化は成功51.7%・12.5分、同期は58.3%・10.5分で、単純な先行推論の効果は限定的。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v1 手法・アブレーション。公式srcとライセンス確認。S-Lab License 1.0は非商用限定: https://github.com/DravenALG/Embo-Harness/blob/main/LICENSE 。学習済み重みの公開は未確認。
 
 ### On Agentic Manipulation Policies
 

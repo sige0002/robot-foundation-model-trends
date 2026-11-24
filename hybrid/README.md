@@ -3,17 +3,18 @@
 
 [← データベース](../README.md)
 
-61 records · 正本: [papers.csv](../papers.csv)
+64 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 28 |
+| [vla-agent](vla-agent.md) | 29 |
 | [vla-wam](vla-wam.md) | 25 |
-| [wam-agent](wam-agent.md) | 5 |
-| [vla-wam-agent](vla-wam-agent.md) | 3 |
+| [wam-agent](wam-agent.md) | 6 |
+| [vla-wam-agent](vla-wam-agent.md) | 4 |
 
 ## 論文
 
+- 2026-11-23 · [Real2Worlds2Real: Scaling Self-Improving Agentic Real2Sim2Real for Robot Manipulation](wam-agent.md) · `HYBRID-0159`
 - 2026-11-19 · [Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation](vla-wam-agent.md) · `HYBRID-0158`
 - 2026-11-19 · [PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation](vla-agent.md) · `HYBRID-0157`
 - 2026-11-19 · [CauSyncVLA: Causal Latent World Modeling for Asynchronous Robot Control](vla-wam.md) · `HYBRID-0155`
@@ -21,6 +22,7 @@
 - 2026-11-18 · [RePlan-VLA: Progress-Aware Replanning for Long-Horizon Vision-Language-Action Models](vla-agent.md) · `HYBRID-0153`
 - 2026-11-18 · [Z-sight: Unifying Vision-Language-Action and Latent World Modeling](vla-wam.md) · `HYBRID-0152`
 - 2026-11-17 · [InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation](vla-agent.md) · `HYBRID-0156`
+- 2026-10-23 · [RynnUnify: Towards Unified Embodied Brain](vla-wam-agent.md) · `HYBRID-0161`
 - 2026-10-22 · [FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies](vla-agent.md) · `HYBRID-0151`
 - 2026-10-22 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](vla-wam.md) · `HYBRID-0149`
 - 2026-10-21 · [SimPT: An Automated Simulation Framework for Intervention-Based VLA Post-Training](vla-agent.md) · `HYBRID-0150`
@@ -62,6 +64,7 @@
 - 2026-09-30 · [RoboAssist: Interactive Human-Humanoid Planning for Long-Horizon Surgical Assistance](vla-agent.md) · `HYBRID-0116`
 - 2026-09-30 · [RoboCoach: World Models as Active Coaches for Compositional Robot Skills](vla-wam-agent.md) · `HYBRID-0104`
 - 2026-09-29 · [V-JEPA Policy: Building Effective World-Action Models on Predictive Visual Latents](vla-wam.md) · `WAM-0034`
+- 2026-09-29 · [LexiconVLA: Learning Reusable Atomic Action Codebooks for Manipulation](vla-agent.md) · `HYBRID-0160`
 - 2026-09-28 · [WorldGuide: Learning Success-Failure Boundaries in Latent World Models for Vision-Language-Action Policies](vla-wam.md) · `HYBRID-0121`
 - 2026-09-28 · [Where Memory Belongs: Ledger, an Object Ledger for Memory-Augmented VLAs](vla-agent.md) · `HYBRID-0101`
 - 2026-09-27 · [SLIP-VLA: Single-Step Latent Imagination for Policy Learning in Vision-Language-Action Models](vla-wam.md) · `HYBRID-0105`

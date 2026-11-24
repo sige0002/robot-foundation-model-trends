@@ -3,7 +3,7 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-28 records · Published date 降順（同日 ID 降順）
+29 records · Published date 降順（同日 ID 降順）
 
 ### PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation
 
@@ -604,6 +604,31 @@ LIBERO-Pro六条件とMolmoSpaces四分類で平均成功78.8%・64.9%。実機�
 
 - Checked: 2026-10-05 · Review: verified
 - 本文取得前にrevisionなしarXiv ID/DOIと正規化/類似タイトルをローカル比較し一致なし。https://arxiv.org/abs/2609.39384 で正式著者、v1 2026-09-30 09:34:17 UTC、改訂なしを確認。HTML https://arxiv.org/html/2609.39384v1 の§III、§IV-A/B/C、§Vを読解。shared GR00T N1.7 backboneと物体別grasp/shared placement-handover action expertsをLLM task agentが実行するためhybrid/vla-agentとした。G1ハードウェアを使う模擬手術補助場面であり臨床試験ではない。FullReplan比較のlatency/tokenはspeech recognitionとphysical execution、初期planning/perceptionを除いた計画コスト。効率別実験は各methodで成功5runのみ。force-feedback 20.11msとVLM 4.833sは異なるhazard triggerに対する応答で厳密に揃えたend-to-end比較ではない。最終subtaskでの失敗原因はplanningかphysical executionか分離されていない。公式projectはPaper/Code/TODO表示の雛形で、公開実装・専用重み・実装ライセンスは未確認のためunknown。PDF未取得。
+
+### LexiconVLA: Learning Reusable Atomic Action Codebooks for Manipulation
+
+- ID: `HYBRID-0160`
+- Published: 2026-09-29 · Updated: 2026-11-20
+- Authors: Zeming Wei; Jianheng Ye; Xinshuai Song; Sirui Chen; Yang Liu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2609.36774) · [PDF](https://arxiv.org/pdf/2609.36774)
+- Tags: LexiconVLA, action-codebook, subtask, VLM-planner, retry
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+操作を成す基本動作を離散符号にまとめ、視覚言語モデルが分けた指示ごとに符号を検索して低水準方策を条件付けする。
+
+**主な貢献**
+
+基本動作の再利用と、進捗判定に基づく再試行・再計画を接続する。再試行は更新した観測を使うが既存の符号を再利用し、同一サブタスクの再計画でも再検索は保証しない。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v2の現行題・著者、本文と付録。公開実装・重み・ライセンスは未確認。
 
 ### Where Memory Belongs: Ledger, an Object Ledger for Memory-Augmented VLAs
 

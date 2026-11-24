@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-13 records · Published date 降順（同日 ID 降順）
+14 records · Published date 降順（同日 ID 降順）
+
+### RUIBench: What Makes a Good Robot-Use Interface?
+
+- ID: `AGENT-0184`
+- Published: 2026-11-23
+- Authors: Yanzhe Chen; Zhijun Cao; Zechen Bai; Wenzheng Zeng; Kevin Yuchen Ma; Yiqi Lin; Guoqiang Liang; Xiaokang Liu; Ke Sun; Kevin Qinghong Lin; Mike Zheng Shou
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.31115) · [PDF](https://arxiv.org/pdf/2611.31115) · [Code](https://github.com/showlab/RUIBench) · [Project](https://showlab.github.io/RUIBench/)
+- Tags: RUIBench, robot-interface, benchmark, verification, LoRA
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+ロボットを使うエージェントに関節・姿勢・差分・スキルなどの指示やコード実行を提供し、インターフェースによる成績と完了判断の違いを測る。
+
+**主な貢献**
+
+動作インターフェースと操作の粒度を分けて比較。完了を主張しても実際には失敗している例を定量化し、タスク遂行と完了検証を区別した。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v1 §4・表6。公式コードApache-2.0、取得する外部素材は別条件。公式HFに公開LoRA safetensorsとApache-2.0のモデルカード: https://huggingface.co/showlab/RUIBench-Qwen 。基盤モデルと別。
 
 ### AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control
 

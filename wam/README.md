@@ -3,18 +3,19 @@
 
 [← データベース](../README.md)
 
-159 records · 正本: [papers.csv](../papers.csv)
+160 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 44 |
 | [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 55 |
+| [action-coupling](action-coupling.md) | 56 |
 | [planning](planning.md) | 29 |
 | [temporal-modeling](temporal-modeling.md) | 11 |
 
 ## 論文
 
+- 2026-11-23 · [VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control](action-coupling.md) · `WAM-0163`
 - 2026-11-20 · [SOAR: Training-Free Rank-Consistent Rollout Compression for Latent World Model Planning](planning.md) · `WAM-0161`
 - 2026-11-19 · [LoCo-WAM: Test-Time Training as Long Context for World-Action Models](temporal-modeling.md) · `WAM-0162`
 - 2026-11-19 · [LoopedWAM: Looped World Action Models for Elastic Inference](action-coupling.md) · `WAM-0159`

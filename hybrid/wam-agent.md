@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-5 records · Published date 降順（同日 ID 降順）
+6 records · Published date 降順（同日 ID 降順）
+
+### Real2Worlds2Real: Scaling Self-Improving Agentic Real2Sim2Real for Robot Manipulation
+
+- ID: `HYBRID-0159`
+- Published: 2026-11-23
+- Authors: Jinzhong Gu; Jiakai Chen; Xinyi Cao; Yan Shen; Hangke Sui; Shutian Zheng; Xiang Xiao; Haoran Lu; Fan Xu; Lu Shi; Daochen Shi; Ruihua Zhang; Wei Zhan; Masayoshi Tomizuka; Ruihai Wu
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.31098) · [PDF](https://arxiv.org/pdf/2611.31098) · [Project](https://real2worlds2real.github.io/)
+- Tags: Real2Worlds2Real, real-to-sim-to-real, coding-agent, skill-library, simulation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+実世界画像から複数のシミュレーション環境を作り、エージェントが制御プログラムを改良して再利用できるスキルを蓄積する。
+
+**主な貢献**
+
+異なるタスクから得た136スキルを使う条件ではLIBERO-Pro Longの20タスク各50初期状態で成功率82.2%、ライブラリなし52.9%。別の実機評価も報告。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v1 §4。82.2%はシミュレーションで実機への外挿不可。公式プロジェクトはCode soon。実装・重み・ライセンスは未確認（コードは公開予定表示）。
 
 ### Atomic-WAM: Execution-Grounded Atomic-Motion Reasoning for World Action Models
 

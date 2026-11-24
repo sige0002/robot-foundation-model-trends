@@ -11,11 +11,11 @@
 - Published: 2026-11-20
 - Authors: Anqi Li; Kai Liu; Linghe Kong; Yulun Zhang
 - Venue: arXiv preprint
-- Links: [Paper](https://arxiv.org/abs/2611.27639) · [PDF](https://arxiv.org/pdf/2611.27639) · [Code](https://github.com/starrywiki/SOAR)
+- Links: [Paper](https://arxiv.org/abs/2611.27639) · [PDF](https://arxiv.org/pdf/2611.27639) · [Project](https://github.com/starrywiki/SOAR)
 - Tags: SOAR, latent-world-model, rollout-compression, candidate-ranking, training-free
 - Model size: unknown / 未確認
-- Open-source: true
-- Code / weights / license: available / unknown / open-source
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
 
 **概要（日本語）**
 
@@ -27,8 +27,8 @@
 
 **確認記録**
 
-- Checked: 2026-11-23 · Review: verified
-- arXiv v1と論文リンクの実装を確認。実装MIT: https://github.com/starrywiki/SOAR/blob/main/LICENSE 。利用する第三者チェックポイントの配布・ライセンスとは別。
+- Checked: 2026-11-24 · Review: verified
+- arXiv v1、公式GitHubのルート一覧・README確認。説明と画像のみでコードは公開予定。現リポジトリのMIT表記は未公開実装のライセンスを確認する証拠ではない。第三者の基盤重みとは別。
 
 ### Seeing Through the Illusion: Test-Time Scaling for World Action Models
 

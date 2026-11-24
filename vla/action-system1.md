@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-39 records · Published date 降順（同日 ID 降順）
+41 records · Published date 降順（同日 ID 降順）
+
+### NoveltyGate: Novelty, Not Error, Decides Which VLA Prefix Tokens to Compute Exactly
+
+- ID: `VLA-0253`
+- Published: 2026-11-23
+- Authors: Lemeng Qi
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.31099) · [PDF](https://arxiv.org/pdf/2611.31099)
+- Tags: NoveltyGate, low-rank, token-selection, prefix, inference-efficiency
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLAの視覚・言語プレフィクスを低ランクで下書きし、文脈内で新規性の高いトークンのみ元の計算で更新する。
+
+**主な貢献**
+
+下書き後に厳密計算を割り当てる方式をπ0.5で比較。厳密計算率30%でプレフィクス1.56倍、LIBEROの5タスク計10試行で元モデルと同じ10/10成功。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v1 結果節・図1。速度はプレフィクスのみで全方策ではない。最大1.61倍は別の20%設定。公開実装・重み・ライセンスは未確認。
+
+### FlowPAC: Flow-Guided Visual Pruning and Action Caching for Efficient VLA Inference
+
+- ID: `VLA-0252`
+- Published: 2026-11-20
+- Authors: Jintao Cheng; Yipu Zhang; Haozhe Wang; Lin Jiang; Jiang Xu; Wei Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.28256) · [PDF](https://arxiv.org/pdf/2611.28256)
+- Tags: FlowPAC, token-pruning, optical-flow, action-cache, inference-efficiency
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+前後フレームの動きから将来重要になりそうな視覚トークンを残し、トークンを詰めて配置する。同時に行動生成器の中間計算を再利用する。
+
+**主な貢献**
+
+視覚と行動の両経路を学習なしで最適化。π0.5のLIBERO全4スイートで30%保持時の中央値143.45 ms・成功95.80%、密計算は306.19 ms・96.15%。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v1 表I–II。A100、BF16、バッチ1、2視点・10ステップ、全40タスク各50試行。実機・独立再現なし。公開実装・重み・ライセンスは未確認。
 
 ### NF-VLA: A Normalizing-Flow Baseline for Vision-Language-Action Learning
 

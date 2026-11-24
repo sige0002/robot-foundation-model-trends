@@ -3,19 +3,22 @@
 
 [← データベース](../README.md)
 
-81 records · 正本: [papers.csv](../papers.csv)
+84 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 19 |
-| [code](code.md) | 17 |
+| [planning](planning.md) | 20 |
+| [code](code.md) | 18 |
 | [skill](skill.md) | 11 |
-| [tool](tool.md) | 13 |
+| [tool](tool.md) | 14 |
 | [memory](memory.md) | 10 |
 | [replanning](replanning.md) | 11 |
 
 ## 論文
 
+- 2026-11-23 · [RUIBench: What Makes a Good Robot-Use Interface?](tool.md) · `AGENT-0184`
+- 2026-11-23 · [Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness](code.md) · `AGENT-0183`
+- 2026-11-23 · [ACAP: Asynchronous Coding Agents for Efficient Robot Control](planning.md) · `AGENT-0182`
 - 2026-11-20 · [Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation](memory.md) · `AGENT-0181`
 - 2026-11-20 · [EvoTER: Evolving Embodied Agents via Tool-Use Experience and Reflection](skill.md) · `AGENT-0180`
 - 2026-11-19 · [ACE-Brain-0.7: Learning Execution-Grounded Reasoning for Embodied Agents](planning.md) · `AGENT-0179`

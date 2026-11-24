@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-19 records · Published date 降順（同日 ID 降順）
+20 records · Published date 降順（同日 ID 降順）
+
+### ACAP: Asynchronous Coding Agents for Efficient Robot Control
+
+- ID: `AGENT-0182`
+- Published: 2026-11-23
+- Authors: Zexin He; Rui Li; Yushi Lan; Chengkai Jin; Zhi Hou; Xingang Pan
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.31205) · [PDF](https://arxiv.org/pdf/2611.31205) · [Project](https://projects.zxhezexin.com/acap)
+- Tags: ACAP, coding-agent, asynchronous, coordination, bimanual
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+同じロボットの腕や胴体を複数の持続的なエージェントに割り当て、観測・推論・制御を並行させる。部位間の依存を上位エージェントが管理する。
+
+**主な貢献**
+
+独立な操作は分業し、両腕が同時に動く工程などはリード側へ制御を戻す。直接制御や固定分業との比較で推論重複、実行および待機を分けて分析。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v1 §3–5。公式プロジェクトがリンクするロールアウト資料: https://huggingface.co/datasets/zxhezexin/acap-rollout-dataset （CC BY 4.0の表示、アクセス審査付き）。データは実装・重みの公開と別。
 
 ### ACE-Brain-0.7: Learning Execution-Grounded Reasoning for Embodied Agents
 

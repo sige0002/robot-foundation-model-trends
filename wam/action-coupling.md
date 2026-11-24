@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-55 records · Published date 降順（同日 ID 降順）
+56 records · Published date 降順（同日 ID 降順）
+
+### VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control
+
+- ID: `WAM-0163`
+- Published: 2026-11-23
+- Authors: Boqi Zhao; Dechen Gao; Hanchu Zhou; Hang Wang; Junshan Zhang
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2611.31195) · [PDF](https://arxiv.org/pdf/2611.31195)
+- Tags: VITA-WAM, flow-matching, one-step, latency, action-chunk
+- Model size: 6.06B
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+世界・行動を予測する操作方策で、フローの始点と終点の表現を行動生成と同時に学習し、観測条件の取り込みを軽くする。
+
+**主な貢献**
+
+Flow Latent Alignmentにより蒸留なしの1 ODEステップを評価。著者の実機設定でRTX 4090・コンパイル後のチャンク推論中央値は55.67 msで、Fast-WAMの1ステップ62.32 ms、10ステップ116.65 msと比較。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v1 §3–5と表4。DoTは同表で55.28 ms。推論計測は機上動作や制御周期を示さない。公開実装・重み・ライセンスは未確認。
 
 ### LoopedWAM: Looped World Action Models for Elastic Inference
 

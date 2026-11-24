@@ -3,7 +3,7 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-3 records · Published date 降順（同日 ID 降順）
+4 records · Published date 降順（同日 ID 降順）
 
 ### Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation
 
@@ -29,6 +29,31 @@
 
 - Checked: 2026-11-23 · Review: verified
 - arXiv v1・公式ベンチマーク実装を確認。原著コードMIT: https://github.com/Mind2Act/Mind2Act\_World/blob/main/LICENSE 。配布デモや評価アセットは方策重みではなく、第三者のコード・アセットにも別条件がある。
+
+### RynnUnify: Towards Unified Embodied Brain
+
+- ID: `HYBRID-0161`
+- Published: 2026-10-23 · Updated: 2026-11-20
+- Authors: Minghao Zhu; Bohan Hou; Kun Xiang; Zixuan Wang; Yinzhou Tang; Yifei Yang; Zhikai Wang; Tianyi Zhang; Kehan Li; Haoyu Zhao; Siteng Huang; Leigang Qu; Sicong Leng; Dongchi Huang; Xiao Lin; Ronghao Dang; Mingxiu Chen; Shijian Lu; Yue Wang; Xiaodan Liang; Zhenyu Zeng; Deli Zhao; Chengju Liu; Jianfei Yang; Xin Li
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2610.32965) · [PDF](https://arxiv.org/pdf/2610.32965) · [Code](https://github.com/alibaba-damo-academy/RynnUnify) · [Project](https://alibaba-damo-academy.github.io/RynnUnify.github.io/)
+- Tags: RynnUnify, embodied-reasoning, world-generation, action, interleaved-thinking
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+視覚言語による身体化推論、世界の生成、動作生成を共有基盤で扱い、用途別に推論器や操作用のチェックポイントへ展開する。
+
+**主な貢献**
+
+推論と将来視覚の生成を交互に使うための統合モデルを構成し、RoboCasaで世界・行動モデルとして評価する。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v2・公式実装を確認。プロジェクト独自コードとBCPOはApache-2.0、VisualPlanはOpenMDW-1.1の別条件。公式HFにRoboCasa用7シャード・独自の重み条件: https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-WAM-RoboCasa 。外部依存や実機は未検証。
 
 ### Agentic World Action Models
 

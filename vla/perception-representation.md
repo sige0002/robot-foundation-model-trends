@@ -3,7 +3,7 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-35 records · Published date 降順（同日 ID 降順）
+36 records · Published date 降順（同日 ID 降順）
 
 ### TacInno: Teaching Vision-Language-Action Models the Contact Dynamics Beyond Vision and Action
 
@@ -804,6 +804,31 @@ RGBの場面変化と3D末端形状の動きを同時に符号化し、機体を
 
 - Checked: 2026-10-01 · Review: verified
 - arXiv v1 only. Official project directly links official implementation and checkpoint. https://github.com/PuzhenYuan/GALA/blob/main/LICENSE verified Apache 2.0. https://huggingface.co/ypz21/GALA\_robocasa\_gr1 and /tree/main expose a 5B F32 model and four safetensors shards (19.3GB total); only listing read, no model downloaded. README still describes repository as private, conflicting with public file listing; public listing supports available status but access not download-tested. Weight license is unspecified in checked model card and is not inferred from code Apache license. Paper URL and arXiv-issued DOI verified on abstract page. PDF linked by arXiv but exact href not extracted and PDF not fetched; pdf\_url left blank. Unknown means unverified, not a closed-source claim.
+
+### YUBI: Yielding Universal Bidigital Interface for Bimanual Dexterous Manipulation at Scale
+
+- ID: `VLA-0254`
+- Published: 2026-06-08 · Updated: 2026-11-23
+- Authors: Takehiko Ohkawa; Jumpei Arima; Yuki Noguchi; Masatoshi Tateno; Makoto Sugiura; Takuya Okubo; Kengo Ikeuchi; Yuma Shin; Hiroki Nishizawa; Naoaki Kanazawa; Yuki Wakayama; Daiki Fukunaga; Koshi Makihara; Tomohiro Motoda; Floris Erich; Yukiyasu Domae; Tatsuya Matsushima; Yohishiro Okumatsu; Kei Ota
+- Venue: arXiv preprint
+- Links: [Paper](https://arxiv.org/abs/2606.10244) · [PDF](https://arxiv.org/pdf/2606.10244) · [Code](https://github.com/airoa-org/yubi-sw) · [Project](https://yubi.airoa.io/)
+- Tags: YUBI, UMI, bimanual, demonstration, data-collection, pretraining
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+指に沿う小型の双腕データ収集器と、視覚・手先姿勢などを記録する収集系を設計。収集した人の実演を実機方策の事前学習に用いる。
+
+**主な貢献**
+
+π0.5を8,434時間のサブセットで事前学習したうえでFranka向けに後学習。部品仕分けの全工程成功は13/20対2/20、靴下の配置は19/20対16/20（事前学習なしとの比較）。
+
+**確認記録**
+
+- Checked: 2026-11-24 · Review: verified
+- arXiv v2 表4と付録D–E。54,560時間は本文記載の総収集量で、学習量や公開量ではない。収集ソフトApache-2.0、ハードウェアCERN-OHL-W-2.0: https://github.com/Toyota/yubi-hw 。全データや表4の重みは公開未確認。
 
 ### UniVLA: Learning to Act Anywhere with Task-centric Latent Actions
 

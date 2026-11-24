@@ -3,18 +3,20 @@
 
 [← データベース](../README.md)
 
-151 records · 正本: [papers.csv](../papers.csv)
+154 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 35 |
+| [perception-representation](perception-representation.md) | 36 |
 | [reasoning-system2](reasoning-system2.md) | 10 |
-| [action-system1](action-system1.md) | 39 |
+| [action-system1](action-system1.md) | 41 |
 | [memory-temporal](memory-temporal.md) | 15 |
 | [adaptation](adaptation.md) | 52 |
 
 ## 論文
 
+- 2026-11-23 · [NoveltyGate: Novelty, Not Error, Decides Which VLA Prefix Tokens to Compute Exactly](action-system1.md) · `VLA-0253`
+- 2026-11-20 · [FlowPAC: Flow-Guided Visual Pruning and Action Caching for Efficient VLA Inference](action-system1.md) · `VLA-0252`
 - 2026-11-20 · [FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models](adaptation.md) · `VLA-0251`
 - 2026-11-19 · [Risk-Controlled Test-Time Adaptation for Vision-Language-Action Models](adaptation.md) · `VLA-0250`
 - 2026-11-19 · [PhyDEX: A Benchmark for Physical Reasoning in Vision-Language-Action Models via Dynamic Extrinsic Dexterity](reasoning-system2.md) · `VLA-0249`
@@ -142,6 +144,7 @@
 - 2026-08-08 · [Auditing Instruction-Trajectory Mismatches in Multimodal Robot Demonstrations](adaptation.md) · `VLA-0208`
 - 2026-07-31 · [Action Chunk Scheduling for Batched Robot Policy Serving](action-system1.md) · `VLA-0244`
 - 2026-07-07 · [SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models](adaptation.md) · `VLA-0207`
+- 2026-06-08 · [YUBI: Yielding Universal Bidigital Interface for Bimanual Dexterous Manipulation at Scale](perception-representation.md) · `VLA-0254`
 - 2025-08-26 · [MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation](memory-temporal.md) · `VLA-0116`
 - 2025-06-02 · [SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics](action-system1.md) · `VLA-0108`
 - 2025-05-28 · [SCIZOR: A Self-Supervised Approach to Data Curation for Large-Scale Imitation Learning](adaptation.md) · `VLA-0209`
