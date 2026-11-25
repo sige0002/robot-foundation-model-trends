@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-44 records · Published date 降順（同日 ID 降順）
+45 records · Published date 降順（同日 ID 降順）
+
+### Foresight Forcing: Learning Spatial Foresight for Robotic Manipulation
+
+- ID: `WAM-0168`
+- Published: 2026-11-23
+- Authors: Mishuo Han; Zhixuan Liang; Zhaoyuan Wan; Wendi Chen; Jiarui Chen; Xinkai Wang; Yue Ma; Yu Zhou; Junting Chen; Yao Mu; Jun Lv; Chuan Wen; Cewu Lu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.30963) · [PDF](https://arxiv.org/pdf/2611.30963) · [Code](https://github.com/anson2333/ForesightForcing) · [Project](https://anson2333.github.io/foresight-forcing/)
+- Tags: Foresight-Forcing, 3D-features, latent-foresight, VGGT, manipulation
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+事前学習済みの3D特徴の時刻差を教師に、操作に関係する空間遷移の表現を学ぶWAM。
+
+**主な貢献**
+
+将来変化を表すクエリを動作予測に結びつけ、実行時に未来観測も3D教師も不要とする。RoboTwin2.0 Fullと実機6タスクは異なる評価設定。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌・HTML §§3–4と公式コード・カードを確認。コードMIT、第三者ファイル例外: https://github.com/anson2333/ForesightForcing/blob/main/LICENSE 。公式カードがLIBERO、RoboTwin Full/C2Rの配布を明記: https://huggingface.co/anson233/foresight-forcing 。重み未取得、上流モデルと重み再配布条件は別確認。
 
 ### Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models
 

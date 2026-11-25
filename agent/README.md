@@ -3,7 +3,7 @@
 
 [← データベース](../README.md)
 
-84 records · 正本: [papers.csv](../papers.csv)
+85 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
@@ -12,10 +12,11 @@
 | [skill](skill.md) | 11 |
 | [tool](tool.md) | 14 |
 | [memory](memory.md) | 10 |
-| [replanning](replanning.md) | 11 |
+| [replanning](replanning.md) | 12 |
 
 ## 論文
 
+- 2026-11-23 · [ReWeave: Emergent Physical Task Topologies for Embodied Harness Optimization and Cross-Task Meta-Distillation](replanning.md) · `AGENT-0185`
 - 2026-11-23 · [RUIBench: What Makes a Good Robot-Use Interface?](tool.md) · `AGENT-0184`
 - 2026-11-23 · [Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness](code.md) · `AGENT-0183`
 - 2026-11-23 · [ACAP: Asynchronous Coding Agents for Efficient Robot Control](planning.md) · `AGENT-0182`

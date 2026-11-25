@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-52 records · Published date 降順（同日 ID 降順）
+53 records · Published date 降順（同日 ID 降順）
+
+### OmniAct: One Policy, One Million Embodiments
+
+- ID: `VLA-0255`
+- Published: 2026-11-24
+- Authors: Xiang Fan; Yuheng Wang; Jiayuan Yan; Bohan Fang; Wisdom Oluchi Ikezogwo; Ainaz Eftekhar; Max Argus; Jason Ren; Jiafei Duan; Ranjay Krishna
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33158) · [PDF](https://arxiv.org/pdf/2611.33158)
+- Tags: OmniAct, cross-embodiment, kinematic-graph, variable-DoF
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+カメラ座標系で表した関節構造と画像・言語を条件に、未知のロボット形態に適応する操作方策。手続き的に生成した100万の形態のシミュレーション軌跡で学習した。
+
+**主な貢献**
+
+関節グラフのノードに対応づけて関節変位と手先姿勢を共同予測する。形態とシーンを分離したシミュレーション2000試行で成功率63.0%、最良比較法57.9%。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌とHTML §§2–3を確認。HTML表題は One Policy, One Million Manipulators、書誌と同一arXiv ID。著者記載の https://omniact.github.io/ は到達未確認。実装・重み未確認。
 
 ### FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models
 

@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-29 records · Published date 降順（同日 ID 降順）
+30 records · Published date 降順（同日 ID 降順）
+
+### Body and Soul: Decoupling Robotic Brain and Policy with RoboHarness-Zero
+
+- ID: `HYBRID-0162`
+- Published: 2026-11-23
+- Authors: Yihao Shen; Yuxuan Chen; Xuantong Liu; Jun Gao; Weijian Luo; Tianyang Hu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.30550) · [PDF](https://arxiv.org/pdf/2611.30550) · [Code](https://github.com/polyadic-research/roboharness0)
+- Tags: RoboHarness-Zero, VLM-harness, frozen-VLA, fallback, RoboCasa365
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+VLMが目標選択と進捗確認を担い、凍結VLAが連続運動を実行する。停滞時だけ指示の言い換えや短い復旧コードを用いる。
+
+**主な貢献**
+
+ハーネスの監督ルールを共通化し、方策別には薄い接続とスキル設定を用いる。RoboCasa365の200シーンで論文のVLM併用構成は57.5→70.5%、元の115成功中104を保持。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌・HTMLと著者のハーネス実装を確認。実装Apache-2.0: https://github.com/polyadic-research/roboharness0/blob/main/LICENSE 。依存VLA・VLMの利用条件とは別、当該ハーネス固有の重み未確認。
 
 ### PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation
 

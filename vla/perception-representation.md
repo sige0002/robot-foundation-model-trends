@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-36 records · Published date 降順（同日 ID 降順）
+39 records · Published date 降順（同日 ID 降順）
+
+### Perception Is Enough, at the Right Scale: Scale-Adaptive Token Pruning for Vision-Language-Action Models
+
+- ID: `VLA-0256`
+- Published: 2026-11-24
+- Authors: Yifeng Lin; Liuxiang Qiu; Yunfeng Chen; Tiesong Zhao
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.31954) · [PDF](https://arxiv.org/pdf/2611.31954) · [Project](https://lin0e0.github.io/TauPrune-VLA/)
+- Tags: TauPrune-VLA, token-pruning, asynchronous-inference, fixed-budget
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+ロボット状態・行動と視覚特徴の統計から選択尺度を変え、固定予算で視覚トークンを間引く再学習なしのVLA高速化。
+
+**主な貢献**
+
+前回の観測で求めた位置を次回の特徴に適用して選択処理を重ねる。OpenVLA-OFT・LIBEROの同期／非同期比較で81.55→65.82 ms、平均成功率97.30→97.10%。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌・HTML §§3–4と表5確認。実機ケーブル把持の26/30対24/30は別の有無比較であり、遅延インデックス単独の効果ではない。実装・重み未確認。
+
+### WeaveVLA: 3D Relational Grounding for Vision-Language-Action Models
+
+- ID: `VLA-0257`
+- Published: 2026-11-23 · Updated: 2026-11-24
+- Authors: Zien Wang; Yuhao Pan; Yunfeng Fan; Nan Cheng; Xin Xia; Wenchao Xu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.31126) · [PDF](https://arxiv.org/pdf/2611.31126)
+- Tags: WeaveVLA, relational-grounding, 3D, edge-memory
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+操作対象同士や手先との相対3D関係を明示的に学習し、画像が更新されても関係の履歴を行動生成に利用する。
+
+**主な貢献**
+
+関係エッジの特徴に幾何教師信号と再帰的な記憶を加えた。StarVLA-GR00Tを基にした実機3タスクで通常55.6→70.0%、設定内の分布外摂動で33.3→53.3%。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv v1とv2の日付、v2本文の手法と評価を確認。成功率は著者の実験。公式実装・重み未確認。
 
 ### TacInno: Teaching Vision-Language-Action Models the Contact Dynamics Beyond Vision and Action
 
@@ -754,6 +804,31 @@ Pi0/RDTのRoboTwin 13選択課題で成功率が31.2–39.9ポイント低下。
 
 - Checked: 2026-10-06 · Review: verified
 - 2026-09-23〜2026-10-06の選択増分調査。本文取得前に既存165件とのrevisionなしarXiv/DOI・正規化/類似タイトル照合で一致なし。初稿 2026-09-30 07:34:24 UTC、改訂なし。ICRA 2026採択はarXiv著者commentで確認し、publisher proceedingsは未確認。本文 https://arxiv.org/html/2609.39178v1 の§III、IV-A/FとTable I/IVを選択読解。simulationは50中13選択課題、各10seed。81.4–82.2%はsimulationの効果に対する保持率で、成功率の絶対低下ではない。2モデルと指定環境への評価で普遍的な安全性結論とは扱わない。公式実装・重み・実装ライセンスは未確認。
+
+### Beyond Token Importance: Preserving Spatial Scaffolds for Efficient Vision-Language-Action Inference
+
+- ID: `VLA-0258`
+- Published: 2026-09-29
+- Authors: Jiayu Chen; Shuyong Gao; Jingkai Jia; Xiaosheng Bu; Jiyuan Fu; Lingyi Hong; Kaixun Jiang; Yipan Xu; Wenqiang Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.36967) · [PDF](https://arxiv.org/pdf/2609.36967)
+- Tags: GeoScaffold, spatial-coverage, token-pruning, farthest-point-sampling
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+意味的重要度だけでトークンを選ぶと操作に必要な空間の手がかりが抜けると考え、残した位置の空白の広さを測る。
+
+**主な貢献**
+
+領域別の予算配分と最遠点サンプリングを組み合わせる。π0.5のLIBEROで51/256トークン保持時の平均成功率93.2%、prefillのみ1.78倍。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌・HTMLのカバレッジ分析とLIBERO比較を確認。意味尺度駆動の剪定を補う空間被覆の基礎比較として遡及採録。公式実装・重み未確認。
 
 ### Kinematic Interface for the Wild: Modular Bimanual Loco-Manipulation Capture from 360° Cameras Alone
 

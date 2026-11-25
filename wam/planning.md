@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-29 records · Published date 降順（同日 ID 降順）
+30 records · Published date 降順（同日 ID 降順）
+
+### Quantization for Action, Execution for Deployment: Joint Precision and Execution Selection for World Action Models
+
+- ID: `WAM-0167`
+- Published: 2026-11-23
+- Authors: Tianqi Li; Xin He; Xue Geng; Le Zhang; Ming-Ming Cheng; Yun Liu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.30195) · [PDF](https://arxiv.org/pdf/2611.30195)
+- Tags: PTQ4WAM, mixed-precision, post-training-quantization, deployment, LeWM
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+計画や行動生成を担うWAMに対し、タスク性能を維持しながらメモリと実行予算に合わせて学習後に展開構成を選ぶ。
+
+**主な貢献**
+
+精度配置と実行経路を共同選択する。4モデル系統・15負荷でタスク得点中央値はFP32比99.2%、固定GPUリプレイの中央値で2.36倍、ピーク割当メモリ71.5%減。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌・HTML §§3–4と比較条件を確認。FP32とのリプレイ比較で、実ロボットのエンドツーエンド速度ではない。論文時点ではコード公開予定、現物未確認。
 
 ### SOAR: Training-Free Rank-Consistent Rollout Compression for Latent World Model Planning
 

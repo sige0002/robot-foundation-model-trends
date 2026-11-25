@@ -3,7 +3,7 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-56 records · Published date 降順（同日 ID 降順）
+58 records · Published date 降順（同日 ID 降順）
 
 ### VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control
 
@@ -29,6 +29,56 @@ Flow Latent Alignmentにより蒸留なしの1 ODEステップを評価。著者
 
 - Checked: 2026-11-24 · Review: verified
 - arXiv v1 §3–5と表4。DoTは同表で55.28 ms。推論計測は機上動作や制御周期を示さない。公開実装・重み・ライセンスは未確認。
+
+### EgoLAM: Learning Latent Actions from Hand and Head Motion
+
+- ID: `WAM-0166`
+- Published: 2026-11-20
+- Authors: Ziyi Ding; Yiwei Wang; Zhongxing Wei; Xianxin Lai; Yechi Liu; Xiaodi Huang; Jinghua Hou; Xiaoquan Sun; Haijier Chen; Zhe Liu; Yinan Chen; Junqiao Zhao; Xiao-Ping Zhang; Jiayu Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.27290) · [PDF](https://arxiv.org/pdf/2611.27290) · [Code](https://github.com/Dzyy123/EgoLAM) · [Project](https://dzyy123.github.io/EgoLAM-Pages/)
+- Tags: EgoLAM, latent-action, egocentric-video, inverse-dynamics, camera-motion
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / unknown / unspecified
+
+**概要（日本語）**
+
+一人称動画の画像対から潜在行動を抽出し、手を動かした効果と頭部移動による見かけの変化を学習時に分けて扱う。
+
+**主な貢献**
+
+左右手の周辺特徴を集約して潜在行動を作り、共通座標の手首運動で監督。順モデル側に頭部運動を別入力し、抽出時はRGB画像対のみを用いる。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌・HTML方法・公式コードを確認。実装に第三者ライセンス通知あり、リポジトリ全体の明示ライセンスは確認できず。論文リンクの https://huggingface.co/dzyy123/EgoLAM は匿名401のため重み配布確認は保留。
+
+### ReActWAM: Action-Consistent Caching for Efficient World-Action Models
+
+- ID: `WAM-0165`
+- Published: 2026-11-20
+- Authors: Zhaochen Guo; Yunke Wang; Siyu Xu; Zijian Wang; Chenghao Xia; Chengbin Du; Shinan Liu; Chang Xu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.27372) · [PDF](https://arxiv.org/pdf/2611.27372)
+- Tags: ReActWAM, inference-caching, action-consistency, diffusion
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+閉ループWAMで隣り合う行動チャンクの冗長性を利用し、現在の行動意図と整合する範囲で拡散計算を再利用する。
+
+**主な貢献**
+
+低コストの行動見積もりで再利用を判断し、キャッシュ補正と先頭ステップ省略を組み合わせる。FR3の平均実行時間は標準244.8秒から167.9秒、平均成功率はいずれも50.0%。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌・HTML方法と表4。実機値はタスク完了までの平均で単一推論時間ではない。有限試行で同じ観測成功率、同等性の証明ではない。公開実装・重み未確認。
 
 ### LoopedWAM: Looped World Action Models for Elastic Inference
 

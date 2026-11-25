@@ -3,17 +3,18 @@
 
 [← データベース](../README.md)
 
-64 records · 正本: [papers.csv](../papers.csv)
+65 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [vla-agent](vla-agent.md) | 29 |
+| [vla-agent](vla-agent.md) | 30 |
 | [vla-wam](vla-wam.md) | 25 |
 | [wam-agent](wam-agent.md) | 6 |
 | [vla-wam-agent](vla-wam-agent.md) | 4 |
 
 ## 論文
 
+- 2026-11-23 · [Body and Soul: Decoupling Robotic Brain and Policy with RoboHarness-Zero](vla-agent.md) · `HYBRID-0162`
 - 2026-11-23 · [Real2Worlds2Real: Scaling Self-Improving Agentic Real2Sim2Real for Robot Manipulation](wam-agent.md) · `HYBRID-0159`
 - 2026-11-19 · [Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation](vla-wam-agent.md) · `HYBRID-0158`
 - 2026-11-19 · [PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation](vla-agent.md) · `HYBRID-0157`

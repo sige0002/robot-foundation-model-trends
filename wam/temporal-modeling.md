@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-11 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### SANA-Robot: Efficient World Action Model with Hybrid Memory
+
+- ID: `WAM-0164`
+- Published: 2026-11-21
+- Authors: Yuyang Zhao; Zekai Li; Yicheng Pan; Jiaming Tang; Zhuoyang Zhang; Jiaxu Xing; Moritz Reuss; Quanquan Peng; Junsong Chen; Enze Xie; Zhijian Liu; Song Han
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.28943) · [PDF](https://arxiv.org/pdf/2611.28943) · [Code](https://github.com/NVlabs/Sana/tree/robot) · [Project](https://nvlabs.github.io/Sana/Robot/)
+- Tags: SANA-Robot, hybrid-memory, edge-inference, async-control, quantization
+- Model size: 4.5B
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+将来映像と行動を統合する4.5B WAM。短期の明示キャッシュと長期の圧縮状態を組み合わせ、非同期実行により長い操作履歴を利用する。
+
+**主な貢献**
+
+線形注意の履歴と局所注意を併用し、制御中の待機を短縮。30 Hz非同期制御と、RTX 5090のチャンク推論115 ms（NVFP4）は別の指標。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- 論文・公式プロジェクトとrobotブランチの推論・微調整コードを確認。コードApache-2.0: https://github.com/NVlabs/Sana/blob/robot/LICENSE 。公式PretrainとRoboTwin2.0重みカードはApache-2.0、VAE・テキストエンコーダは別取得・別条件: https://huggingface.co/Efficient-Large-Model/SANA-Robot-AR-Pretrain ; https://huggingface.co/Efficient-Large-Model/SANA-Robot-AR-RoboTwin2.0 。重み未取得。
 
 ### LoCo-WAM: Test-Time Training as Long Context for World-Action Models
 

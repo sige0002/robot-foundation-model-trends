@@ -3,19 +3,24 @@
 
 [← データベース](../README.md)
 
-160 records · 正本: [papers.csv](../papers.csv)
+165 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [world-representation](world-representation.md) | 44 |
+| [world-representation](world-representation.md) | 45 |
 | [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 56 |
-| [planning](planning.md) | 29 |
-| [temporal-modeling](temporal-modeling.md) | 11 |
+| [action-coupling](action-coupling.md) | 58 |
+| [planning](planning.md) | 30 |
+| [temporal-modeling](temporal-modeling.md) | 12 |
 
 ## 論文
 
+- 2026-11-23 · [Foresight Forcing: Learning Spatial Foresight for Robotic Manipulation](world-representation.md) · `WAM-0168`
+- 2026-11-23 · [Quantization for Action, Execution for Deployment: Joint Precision and Execution Selection for World Action Models](planning.md) · `WAM-0167`
 - 2026-11-23 · [VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control](action-coupling.md) · `WAM-0163`
+- 2026-11-21 · [SANA-Robot: Efficient World Action Model with Hybrid Memory](temporal-modeling.md) · `WAM-0164`
+- 2026-11-20 · [EgoLAM: Learning Latent Actions from Hand and Head Motion](action-coupling.md) · `WAM-0166`
+- 2026-11-20 · [ReActWAM: Action-Consistent Caching for Efficient World-Action Models](action-coupling.md) · `WAM-0165`
 - 2026-11-20 · [SOAR: Training-Free Rank-Consistent Rollout Compression for Latent World Model Planning](planning.md) · `WAM-0161`
 - 2026-11-19 · [LoCo-WAM: Test-Time Training as Long Context for World-Action Models](temporal-modeling.md) · `WAM-0162`
 - 2026-11-19 · [LoopedWAM: Looped World Action Models for Elastic Inference](action-coupling.md) · `WAM-0159`

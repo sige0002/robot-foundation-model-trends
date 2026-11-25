@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-154 records · 正本: [papers.csv](../papers.csv)
+158 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 36 |
+| [perception-representation](perception-representation.md) | 39 |
 | [reasoning-system2](reasoning-system2.md) | 10 |
 | [action-system1](action-system1.md) | 41 |
 | [memory-temporal](memory-temporal.md) | 15 |
-| [adaptation](adaptation.md) | 52 |
+| [adaptation](adaptation.md) | 53 |
 
 ## 論文
 
+- 2026-11-24 · [Perception Is Enough, at the Right Scale: Scale-Adaptive Token Pruning for Vision-Language-Action Models](perception-representation.md) · `VLA-0256`
+- 2026-11-24 · [OmniAct: One Policy, One Million Embodiments](adaptation.md) · `VLA-0255`
+- 2026-11-23 · [WeaveVLA: 3D Relational Grounding for Vision-Language-Action Models](perception-representation.md) · `VLA-0257`
 - 2026-11-23 · [NoveltyGate: Novelty, Not Error, Decides Which VLA Prefix Tokens to Compute Exactly](action-system1.md) · `VLA-0253`
 - 2026-11-20 · [FlowPAC: Flow-Guided Visual Pruning and Action Caching for Efficient VLA Inference](action-system1.md) · `VLA-0252`
 - 2026-11-20 · [FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models](adaptation.md) · `VLA-0251`
@@ -115,6 +118,7 @@
 - 2026-09-30 · [Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models](adaptation.md) · `VLA-0138`
 - 2026-09-30 · [Spike-driven Vision-Language-Action Model](action-system1.md) · `VLA-0126`
 - 2026-09-30 · [Toward Real-Time VLAs: Stage-Aware Two-Step Flow Denoising and System-Level Evaluation](action-system1.md) · `VLA-0125`
+- 2026-09-29 · [Beyond Token Importance: Preserving Spatial Scaffolds for Efficient Vision-Language-Action Inference](perception-representation.md) · `VLA-0258`
 - 2026-09-29 · [Cooperative Multi-Agent Vision-Language-Action Models via Reinforced Fine Tuning](adaptation.md) · `VLA-0162`
 - 2026-09-29 · [Remember What You Did: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies](memory-temporal.md) · `VLA-0141`
 - 2026-09-29 · [Vision-Language-Action Autonomous Driving Agent with Language-based Memory](memory-temporal.md) · `VLA-0140`

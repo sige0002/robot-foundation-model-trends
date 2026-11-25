@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-11 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### ReWeave: Emergent Physical Task Topologies for Embodied Harness Optimization and Cross-Task Meta-Distillation
+
+- ID: `AGENT-0185`
+- Published: 2026-11-23
+- Authors: Yicheng Xu; Wencan Jiang; Zihao Zhu; Keru Zhou; Chang Zhou; Li Liu; Maoqing Yao; Yong Liu; Jiangning Zhang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.31053) · [PDF](https://arxiv.org/pdf/2611.31053) · [Code](https://github.com/xuyicheng-zju/ReWeave) · [Project](https://xuyicheng-zju.github.io/ReWeave/)
+- Tags: ReWeave, embodied-harness, task-topology, meta-distillation, LIBERO-PRO
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+実行方策と認識モデルは固定したまま、ロボットの試行からタスク構造と指示・手順・制御ループを改善する。
+
+**主な貢献**
+
+更新されたタスク構造で過去試行を再評価して探索先を選び、タスク別ハーネスから共通の改善則を抽出する。未見LIBERO-PRO 8タスクで直接蒸留41.3%に対し共有ハーネス51.3%。
+
+**確認記録**
+
+- Checked: 2026-11-25 · Review: verified
+- arXiv書誌・要旨、著者プロジェクト、CPUデモとGPU評価手順を持つ公式リポジトリを確認。実装Apache-2.0: https://github.com/xuyicheng-zju/ReWeave/blob/main/LICENSE 。依存するπ0.5とSAM3は別であり、この手法の公開重みは未確認。
 
 ### Know When to Escalate: Critic-Guided Adaptive Execution for Cloud-Local Embodied Agents
 
