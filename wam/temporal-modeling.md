@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+13 records · Published date 降順（同日 ID 降順）
+
+### M²-WAM: Efficient Hierarchical Memory Across Modalities and Timescales for World-Action Models
+
+- ID: `WAM-0174`
+- Published: 2026-11-25
+- Authors: Zhang, Xiaopeng; Yuan, Weiqi; Zhu, Xin; Huang, Jiaxi; Hu, Yueqi; Zhang, Yin; Yao, Jian; Li, Yanjie
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33710) · [PDF](https://arxiv.org/pdf/2611.33710)
+- Tags: hierarchical-memory, action-history, long-horizon, MIKASA-Robo
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+長期操作に必要な視覚・行動履歴を別々に整理し、短期の詳細を残しながら長期記憶のサイズを抑える。
+
+**主な貢献**
+
+最近の視覚観測を密に保持し、追い出した項目を固定サイズ連想メモリへ反映する。実行済み行動の時系列記憶も層ごとに読ませる。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 要旨・手法。記憶容量の記述はオンライン記憶部分に関するもの。MIKASA-Robo・RMBenchと実機3タスクは著者評価。コード・重み未確認。
 
 ### SANA-Robot: Efficient World Action Model with Hybrid Memory
 

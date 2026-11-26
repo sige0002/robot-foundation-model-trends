@@ -3,18 +3,24 @@
 
 [← データベース](../README.md)
 
-165 records · 正本: [papers.csv](../papers.csv)
+171 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [world-representation](world-representation.md) | 45 |
-| [dynamics](dynamics.md) | 20 |
-| [action-coupling](action-coupling.md) | 58 |
-| [planning](planning.md) | 30 |
-| [temporal-modeling](temporal-modeling.md) | 12 |
+| [dynamics](dynamics.md) | 21 |
+| [action-coupling](action-coupling.md) | 60 |
+| [planning](planning.md) | 32 |
+| [temporal-modeling](temporal-modeling.md) | 13 |
 
 ## 論文
 
+- 2026-11-25 · [M²-WAM: Efficient Hierarchical Memory Across Modalities and Timescales for World-Action Models](temporal-modeling.md) · `WAM-0174`
+- 2026-11-25 · [WAtcher: Watching Ahead for Safe Robotic Manipulation with Efficient World-Action Models](action-coupling.md) · `WAM-0173`
+- 2026-11-25 · [Beyond the Happy Path: Generalizing Robot World Models from Simulated Failures](dynamics.md) · `WAM-0172`
+- 2026-11-25 · [μMPC: Microsecond-Scale Nonlinear and World Model Control from Edge to GPU via Koopman-Linearized Precompilation](planning.md) · `WAM-0171`
+- 2026-11-25 · [Long-Horizon Planning with Latent World Models via Graph Anchors](planning.md) · `WAM-0170`
+- 2026-11-24 · [LeanWAM: Learning Latent World Action Models from Frozen Video Models](action-coupling.md) · `WAM-0169`
 - 2026-11-23 · [Foresight Forcing: Learning Spatial Foresight for Robotic Manipulation](world-representation.md) · `WAM-0168`
 - 2026-11-23 · [Quantization for Action, Execution for Deployment: Joint Precision and Execution Selection for World Action Models](planning.md) · `WAM-0167`
 - 2026-11-23 · [VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control](action-coupling.md) · `WAM-0163`

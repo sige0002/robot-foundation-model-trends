@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-41 records · Published date 降順（同日 ID 降順）
+43 records · Published date 降順（同日 ID 降順）
+
+### RePace: Reasoning about Demonstration Speedup for Faster Vision-Language-Action Policies
+
+- ID: `VLA-0262`
+- Published: 2026-11-25
+- Authors: Lee, Insup; Jeon, Hojin; Shin, Sunguk; Bae, Seoungbin; Kim, Taekwan; Shin, Jinwoo; Han, Dongsu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34864) · [PDF](https://arxiv.org/pdf/2611.34864)
+- Tags: RePace, retiming, demonstration-speed, offline-reasoning
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+位置合わせの精度が必要な場面を過度に加速しないよう、実演動画と操作系列の再タイミングを学習前に選ぶ。
+
+**主な貢献**
+
+複数の加速候補で変化する観測と行動の組を比較し、指示に沿って言語モデルが部分ごとの速度をオフラインで選択する。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 要旨・手法。LIBERO、RoboCasa-KitchenおよびFranka 3タスクの著者評価。成功試行の所要時間と全試行の成功率は別指標。公開実装・重み未確認。
 
 ### NoveltyGate: Novelty, Not Error, Decides Which VLA Prefix Tokens to Compute Exactly
 
@@ -654,6 +679,31 @@ flow-matching VLAのVLM深さ、action expert深さ、denoising回数を独立�
 
 - Checked: 2026-10-01 · Review: verified
 - 書誌・初稿日・最終改訂日・要旨をarXiv一次資料で確認。公式projectのCodeボタンは同ページ内placeholderで公開実装先なし。実装の公開・ライセンスは未確認、重みはunknown。
+
+### A Sim-to-Real Integration Pipeline for Training and Deployment of Chunk-Based VLA Manipulation Policies
+
+- ID: `VLA-0263`
+- Published: 2026-09-18
+- Authors: Kappel, Mathilde; Grislain, Clémence; Chetouani, Mohamed; Sigaud, Olivier; Annabi, Louis; Amar, Fa\\"ız Ben; Doncieux, Stéphane; Khoramshahi, Mahdi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2609.21817) · [PDF](https://arxiv.org/pdf/2609.21817)
+- Tags: sim-to-real, action-chunk, paired-replay, ROS2
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+シミュレータのチャンク化された操作を実機に再生し、同じスタックで収録と学習済み方策の閉ループ評価を行う。
+
+**主な貢献**
+
+ペアになった計画軌跡と実測を使い、再生可能性と学習方策の性能を別々に評価できるようにする。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 §III–IV。Frankaの立方体押しの開ループ再生200/200、収録から学習した方策の別条件の閉ループ評価6/20。幾何誤差は時刻ずれを評価しない。論文が示す https://gitlab.isir.upmc.fr/kappel/sim2real\_public\_chunk\_control とデータ配布の取得・ライセンスは未確認。
 
 ### VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies
 

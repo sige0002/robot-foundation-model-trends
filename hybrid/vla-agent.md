@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-30 records · Published date 降順（同日 ID 降順）
+31 records · Published date 降順（同日 ID 降順）
+
+### RoboEvo²: Recursive Robot Self-Improvement via Harness-Policy Co-Evolution
+
+- ID: `HYBRID-0164`
+- Published: 2026-11-25
+- Authors: Liu, Chenzhi; Lin, Jiehong; Huang, Wei; Huang, Xuzhao; Li, Haoyuan; Zhang, Yang; Huang, Junchao; Cai, Chenyeyang; Wang, Bo; Kosuge, Kazuhiro; Wang, Zhongrui; Qi, Xiaojuan
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34675) · [PDF](https://arxiv.org/pdf/2611.34675) · [Code](https://github.com/kaiknower/RoboEvo2) · [Project](https://kaiknower.github.io/RoboEvo2/)
+- Tags: RoboEvo2, policy-harness, self-improvement, counterfactual-distillation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: available / available / unknown
+
+**概要（日本語）**
+
+方策の失敗からエージェントが補完スキルを探索し、検証済みの実行軌跡を使って方策側も改善する。
+
+**主な貢献**
+
+同じ初期状態からの成功した修正と失敗を対にする選好蒸留を、ハーネスと方策の相互更新に組み込む。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・評価。GitHubで実装のソースを確認、コードライセンス未確認。 https://huggingface.co/Liukaikai/RoboEvo2 にゲート付き重みファイルの掲載を確認。全評価用ランタイムは未確認。
 
 ### Body and Soul: Decoupling Robotic Brain and Policy with RoboHarness-Zero
 

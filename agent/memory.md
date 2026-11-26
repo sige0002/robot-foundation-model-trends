@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-10 records · Published date 降順（同日 ID 降順）
+11 records · Published date 降順（同日 ID 降順）
+
+### SEEK: Self-Evolution through Execution Knowledge for Agentic Robot Manipulation
+
+- ID: `AGENT-0187`
+- Published: 2026-11-25
+- Authors: Guan, Zeyang; Zhao, Qihao; Gong, Rui; Haitian, Zhang; Dai, Yalun; Huang, Yangyu; Xiao, Lingao; Du, Haozhe; Yu, Xuehui; Lu, Ye; Gao, Jianjun; Wang, Ruoyu; Bai, Haowen; Li, Hao; Li, Scarlett; Yap, Kim-Hui
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33915) · [PDF](https://arxiv.org/pdf/2611.33915) · [Code](https://github.com/ZeyangGuan/SEEK-Agentic-Robot-Manipulation) · [Project](https://zeyangguan.github.io/SEEK-Agentic-Robot-Manipulation/)
+- Tags: SEEK, execution-knowledge, programmatic-policy, failure-memory
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+凍結した基盤モデルを使う操作エージェントが、試行をまたいで実行手順と操作結果を保持する。
+
+**主な貢献**
+
+再利用可能な手順と、失敗例を含む実測の行動効果を別々に保存し、適用できない条件での手順改訂に使う。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・RoboDojo評価。著者リポジトリのruntime・evaluation・MIT LICENSEを確認。特定の新規学習重みは未確認。 実装ライセンス: MIT (https://github.com/ZeyangGuan/SEEK-Agentic-Robot-Manipulation/blob/HEAD/LICENSE)。
 
 ### Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation
 

@@ -608,10 +608,10 @@ VLAの視覚埋め込み空間で行動条件付き世界モデルを学習し�
 ### LaWAM: Latent World Action Models for Efficient Dynamics-Aware Robot Policies
 
 - ID: `WAM-0035`
-- Published: 2026-06-14 · Updated: 2026-06-14
+- Published: 2026-06-14 · Updated: 2026-10-25
 - Authors: Jialei Chen; Kai Wang; Kang Chen; Shuaihang Chen; Feng Gao; Wenhao Tang; Zhiyuan Li; Weilin Liu; Zhuyu Yao; Boxun Li; Yuanbo Xu; Chao Yu
-- Venue: unknown / 未確認
-- Links: [Paper](https://arxiv.org/abs/2606.15768v1) · [PDF](https://arxiv.org/pdf/2606.15768v1) · [Code](https://github.com/RLinf/LaWAM)
+- Venue: CoRL 2026
+- Links: [Paper](https://arxiv.org/abs/2606.15768v2) · [PDF](https://arxiv.org/pdf/2606.15768v2) · [Code](https://github.com/RLinf/LaWAM) · [Project](https://rlinf.github.io/LaWAM/)
 - Tags: Language-conditioned, Latent Subgoal, Latent Action, Robot Policy, LaWAM
 - Model size: unknown / 未確認
 - Open-source: true
@@ -627,5 +627,5 @@ VLAの視覚埋め込み空間で行動条件付き世界モデルを学習し�
 
 **確認記録**
 
-- Checked: 2026-10-01 · Review: verified
-- Primary metadata and abstract checked via arXiv Atom API; first submission and latest revision are separate. Implementation license checked: MIT implementation; DINOv3 component has separate terms; source: https://github.com/RLinf/LaWAM.
+- Checked: 2026-11-26 · Review: verified
+- arXiv履歴で初稿2026-06-14とv2 2026-10-25、v2コメントと公式サイトでCoRL採択を確認。公式コードはMIT、DINOv3には別条件。著者チェックポイント一覧: https://huggingface.co/collections/jialei02/lawam-checkpoints 。

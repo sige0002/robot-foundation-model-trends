@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-58 records · Published date 降順（同日 ID 降順）
+60 records · Published date 降順（同日 ID 降順）
+
+### WAtcher: Watching Ahead for Safe Robotic Manipulation with Efficient World-Action Models
+
+- ID: `WAM-0173`
+- Published: 2026-11-25
+- Authors: Shan, Ziyu; Ma, Xiao; Yu, Kangrui; Wang, Changjie; Wu, Gaoyuan; Yang, Zaijia; Zhang, Chuanrui; Li, Qirui; Zhang, Yanbo; Wang, Duomin; Wang, Ziwei
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34124) · [PDF](https://arxiv.org/pdf/2611.34124) · [Code](https://github.com/maxiaovivi/WAtcher) · [Project](https://zyshan0929.github.io/WAtcher/)
+- Tags: WAtcher, risk-gate, failure-data, future-preview
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+候補行動の結果を素早く予測し、危険度が高いときに実行前に介入する世界行動モデルを提案する。
+
+**主な貢献**
+
+画像予測を2回のノイズ除去に抑え、候補チャンクを評価する分離可能なSafe-Guardを付ける。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・評価、公式READMEとLICENSE。公開版はRoboTwinの開発ヘッドで、未来画像を入力せず停止する。論文の完全版の訓練コード・退避・危険データと区別。完全版重み未確認。 実装ライセンス: Apache-2.0 (https://github.com/maxiaovivi/WAtcher/blob/HEAD/LICENSE)。
+
+### LeanWAM: Learning Latent World Action Models from Frozen Video Models
+
+- ID: `WAM-0169`
+- Published: 2026-11-24
+- Authors: Li, Shaolong; Fu, Hongze; Chai, Joyce; Dai, Yinpei
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.31740) · [PDF](https://arxiv.org/pdf/2611.31740) · [Project](https://shaolonl-16.github.io/leanwam/)
+- Tags: video-distillation, latent-futures, compact-inference, RoboTwin
+- Model size: 1.431B
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+凍結した動画生成モデルから、未来遷移と世界状態のコンパクトな表現を二段階でロボット方策へ移す。
+
+**主な貢献**
+
+教師の動画生成器は運用時に外し、未来クエリを介して現在特徴を更新する。画像生成の出力ヘッドを省いて行動チャンクを出力。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・評価表。A100の単一入力・JAXでモデル応答25.1 ms、同重みPyTorch 63.1 ms。センサーから駆動までの遅延やエッジ実測ではない。著者GitHubはプロジェクトページで実装・重み未確認。
 
 ### VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control
 

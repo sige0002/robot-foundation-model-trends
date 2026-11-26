@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-4 records · Published date 降順（同日 ID 降順）
+5 records · Published date 降順（同日 ID 降順）
+
+### Toward Agentic Robotics: A Large-Scale Study of Harness Design for Robot-Use Agents
+
+- ID: `HYBRID-0163`
+- Published: 2026-11-25
+- Authors: Lai, Yuxiang; Zhong, Jike; Li, Yu-Jhe; Wang, Lan; Liu, Chengzhi; Tang, Youbao; Li, Ming; Xiao, Xi; Yang, Xiaofeng; Zhao, Liang; Mai, Zheda; Fan, Ruixi
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34778) · [PDF](https://arxiv.org/pdf/2611.34778)
+- Tags: X-Harness, robot-use-agent, policy-harness, evaluation
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+VLMによるロボット操作ハーネスと凍結VLA/WAMの組み合わせを、8つのシミュレーションベンチマークで系統的に調べる。
+
+**主な貢献**
+
+知覚の接地、閉ループコード、能力に応じた役割分担、条件付きの実行時救済をX-Harnessにまとめる。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・結論。47万超は著者の総ロールアウト数。結論が評価コード・ログの配布先に挙げる https://github.com/google-research/x-as-policies は確認時に公開ファイル取得不可。実装・重み未確認。
 
 ### Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation
 

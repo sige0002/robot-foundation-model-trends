@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-11 records · Published date 降順（同日 ID 降順）
+12 records · Published date 降順（同日 ID 降順）
+
+### Contact Harness: Enabling VLM Agents to Perform Contact-Rich Manipulation
+
+- ID: `AGENT-0186`
+- Published: 2026-11-22
+- Authors: Shan, Shilin; Hu, Yuxuan; Zhou, Chuhao; Dong, Yimeng; Hou, Bohan; Bai, Jiaqi; Ma, Boyu; Dong, Jiahua; Yang, Jianfei
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.29377) · [PDF](https://arxiv.org/pdf/2611.29377) · [Code](https://github.com/NTUMARS/Contact-Harness) · [Project](https://github.com/NTUMARS/ContactHarness)
+- Tags: contact, force-feedback, VLM-agent, compliance
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+視覚と言語だけでは判断しにくい接触状態を、力の信号・作業段階・再利用可能なスキルからVLMで判断する。
+
+**主な貢献**
+
+上位の状態判断と、局所的な力計測に基づくコンプライアント動作を分ける。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1要旨と著者結果・公開実装。ROKAEで事前把持済み15種類のコネクタ136/150挿入。Franka・Contact-4実装確認、ROKAE実験全体の再現は未確認。 実装ライセンス: MIT (https://github.com/NTUMARS/Contact-Harness/blob/HEAD/LICENSE)。
 
 ### EvoTER: Evolving Embodied Agents via Tool-Use Experience and Reflection
 

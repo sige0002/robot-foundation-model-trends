@@ -3,7 +3,82 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-53 records · Published date 降順（同日 ID 降順）
+56 records · Published date 降順（同日 ID 降順）
+
+### DemoFoundry: Toward Scalable Photorealistic Robot Data with Coding Agents and Generative Rendering
+
+- ID: `VLA-0261`
+- Published: 2026-11-25
+- Authors: Wang, Ruixiang; Yao, Xinyue; Zhou, Xuanning; Deng, Yueci; Su, Yongyi; Jia, Kui
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34671) · [PDF](https://arxiv.org/pdf/2611.34671) · [Code](https://github.com/RobbinW/DemoFoundry) · [Project](https://robbinw.github.io/DemoFoundry-Web)
+- Tags: DemoFoundry, synthetic-demonstrations, coding-agents, generative-rendering
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+コード生成で物理シミュレータの操作を作り、行動ラベルを保ちながら生成レンダラで映像の見た目を実写に近づける。
+
+**主な貢献**
+
+実映像と代理映像の対応でレンダラを学習し、実行検査を通じて合成デモを選別する。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・評価。MITの公開推論コード、 https://huggingface.co/RobbinWang123/demofoundry-h3 のレンダラ重み（別のLICENSE.model）、 https://huggingface.co/datasets/RobbinWang123/DemoFoundry の実映像・代理映像のペアを確認。全生成パイプラインやVLA重みとは別。 実装ライセンス: MIT (https://github.com/RobbinW/DemoFoundry/blob/HEAD/LICENSE)。
+
+### CamAct: Learning Robotic Manipulation from In-the-Wild Videos via Camera Motion
+
+- ID: `VLA-0260`
+- Published: 2026-11-25
+- Authors: Gu, Haoming; Qing, Yunpeng; Hou, Zhi; Zhang, Weinan
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34257) · [PDF](https://arxiv.org/pdf/2611.34257)
+- Tags: CamAct, egocentric-video, camera-motion, motion-supervision
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+人の物体操作を含まない一般動画でも、カメラ運動を推定してロボット実演を補助する学習信号に使う。
+
+**主な貢献**
+
+カメラ運動から得た監督を実演データと併用し、物体操作動画に限定しない事前収集データの利用を検証。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 要旨・手法。LIBERO 96.40→98.10%、RoboCasa 365 22.96→29.32%は著者の対照設定。視点運動を教師として用いる結果で、任意の人動画から実行軌道を復元したわけではない。公開実装・重み未確認。
+
+### Cairn: Object-Centric 3D Trajectory Priors for Steering Frozen VLAs
+
+- ID: `VLA-0259`
+- Published: 2026-11-25
+- Authors: Kratimenos, Agelos; Daniilidis, Kostas; Chatzipantazis, Evangelos
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34914) · [PDF](https://arxiv.org/pdf/2611.34914)
+- Tags: Cairn, object-centric, SE3-trajectory, test-time-steering
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+学習時と異なる物体配置や障害物に対して、凍結VLAの行動を保持物体の3次元経路で誘導する。
+
+**主な貢献**
+
+点群から生成した物体のSE(3)経路を、VLAの候補動作に合わせて選び直し、次のウェイポイントでノイズ除去を誘導する。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・要旨。24.5%→95.1%は配置変更・障害物を含む著者のLIBEROシーン設定。通常LIBERO、LIBERO-PROおよび実機検証とは別。公開実装・重み未確認。
 
 ### OmniAct: One Policy, One Million Embodiments
 

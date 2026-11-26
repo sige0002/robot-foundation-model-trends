@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-30 records · Published date 降順（同日 ID 降順）
+32 records · Published date 降順（同日 ID 降順）
+
+### μMPC: Microsecond-Scale Nonlinear and World Model Control from Edge to GPU via Koopman-Linearized Precompilation
+
+- ID: `WAM-0171`
+- Published: 2026-11-25
+- Authors: Nath, Devesh; Chou, Glen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34597) · [PDF](https://arxiv.org/pdf/2611.34597) · [Code](https://github.com/trustworthyrobotics/microMPC) · [Project](https://www.deveshnath.com/projects/micrompc/)
+- Tags: Koopman, MPC, edge-control, quadratic-programming
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+学習したKoopman近似を使い、モデル予測制御のオンライン計算を小さな二次計画へ変換する。
+
+**主な貢献**
+
+持ち上げ状態の軌跡を事前計算した入力出力写像で消去し、最適化の変数を行動列だけにする。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 要旨・手法。デスクトップCPUの最短23 μs、Crazyflie上24 msは条件が異なるソルバー計測で、一般タスクの制御ループ遅延ではない。公式solver・LICENSE確認。 実装ライセンス: MIT (https://github.com/trustworthyrobotics/microMPC/blob/HEAD/LICENSE)。
+
+### Long-Horizon Planning with Latent World Models via Graph Anchors
+
+- ID: `WAM-0170`
+- Published: 2026-11-25
+- Authors: Sakib, Syed Nazmus; Chowdhury, Abdul Monaf; Li, Peizhen; Haque, Nafiul; Chakma, Chandak; Hasan, Md Mehedi; Cao, Zehong; Arman, Shifat E.
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34509) · [PDF](https://arxiv.org/pdf/2611.34509) · [Code](https://github.com/syed-nazmus-sakib/graph-anchors) · [Project](https://syed-nazmus-sakib.github.io/graph-anchors/)
+- Tags: Graph-Anchors, latent-planning, LeWM, subgoals
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / unknown / open-source
+
+**概要（日本語）**
+
+潜在空間のゴール距離が長距離で進展方向を示さない場合や、接触時に物体の移動を適切に評価しない場合を調べる。
+
+**主な貢献**
+
+学習軌跡から疎なグラフを作り、記録された経路上の近い節点を順に目標とする。凍結世界モデルは再学習しない。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 要旨・実験。PointMazeとPush-Tは著者の遠距離目標設定。公式リポジトリのplannerとLICENSEを確認。既存LeWMチェックポイントを用いる方式で本手法固有の重みは未確認。 実装ライセンス: MIT (https://github.com/syed-nazmus-sakib/graph-anchors/blob/HEAD/LICENSE)。
 
 ### Quantization for Action, Execution for Deployment: Joint Precision and Execution Selection for World Action Models
 

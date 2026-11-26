@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-18 records · Published date 降順（同日 ID 降順）
+19 records · Published date 降順（同日 ID 降順）
+
+### RegHarness: Regulating What Code-as-Policy Agents Keep from Steps to Skills
+
+- ID: `AGENT-0188`
+- Published: 2026-11-25
+- Authors: Liu, Shengming; Gao, Yunyi; Wang, Xinyi; Sun, Jianyong; Wang, Shuai; Deng, Yi; Chenye, Li; Zhou, Mingcai; Goh, Sim Kuan
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33739) · [PDF](https://arxiv.org/pdf/2611.33739)
+- Tags: RegHarness, code-as-policy, offline-skill-refinement, verification
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+Code-as-Policyで実行中に採用する手順と、別試行へ持ち越すコード更新を別々に管理する。
+
+**主な貢献**
+
+試行内はリセット・再生を使い、検証器と監査役が承認した手順のみ確定する。試行間は失敗から作ったスキル修正を検証し明示的に有効化する。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・要旨。158/180は著者のペア付きLIBERO-PRO条件で、実機成績ではない。公開実装・重み未確認。
 
 ### Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness
 

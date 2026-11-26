@@ -3,18 +3,22 @@
 
 [← データベース](../README.md)
 
-158 records · 正本: [papers.csv](../papers.csv)
+163 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [perception-representation](perception-representation.md) | 39 |
 | [reasoning-system2](reasoning-system2.md) | 10 |
-| [action-system1](action-system1.md) | 41 |
+| [action-system1](action-system1.md) | 43 |
 | [memory-temporal](memory-temporal.md) | 15 |
-| [adaptation](adaptation.md) | 53 |
+| [adaptation](adaptation.md) | 56 |
 
 ## 論文
 
+- 2026-11-25 · [RePace: Reasoning about Demonstration Speedup for Faster Vision-Language-Action Policies](action-system1.md) · `VLA-0262`
+- 2026-11-25 · [DemoFoundry: Toward Scalable Photorealistic Robot Data with Coding Agents and Generative Rendering](adaptation.md) · `VLA-0261`
+- 2026-11-25 · [CamAct: Learning Robotic Manipulation from In-the-Wild Videos via Camera Motion](adaptation.md) · `VLA-0260`
+- 2026-11-25 · [Cairn: Object-Centric 3D Trajectory Priors for Steering Frozen VLAs](adaptation.md) · `VLA-0259`
 - 2026-11-24 · [Perception Is Enough, at the Right Scale: Scale-Adaptive Token Pruning for Vision-Language-Action Models](perception-representation.md) · `VLA-0256`
 - 2026-11-24 · [OmniAct: One Policy, One Million Embodiments](adaptation.md) · `VLA-0255`
 - 2026-11-23 · [WeaveVLA: 3D Relational Grounding for Vision-Language-Action Models](perception-representation.md) · `VLA-0257`
@@ -139,6 +143,7 @@
 - 2026-09-20 · [Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models](adaptation.md) · `VLA-0122`
 - 2026-09-19 · [Kinematic Interface for the Wild: Modular Bimanual Loco-Manipulation Capture from 360° Cameras Alone](perception-representation.md) · `VLA-0248`
 - 2026-09-19 · [H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space](reasoning-system2.md) · `VLA-0127`
+- 2026-09-18 · [A Sim-to-Real Integration Pipeline for Training and Deployment of Chunk-Based VLA Manipulation Policies](action-system1.md) · `VLA-0263`
 - 2026-09-18 · [VLA-Scope: Shift-Aware Failure Prediction for Vision-Language-Action Models](adaptation.md) · `VLA-0133`
 - 2026-09-18 · [VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies](action-system1.md) · `VLA-0132`
 - 2026-09-18 · [GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments](perception-representation.md) · `VLA-0131`

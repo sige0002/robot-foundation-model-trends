@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-20 records · Published date 降順（同日 ID 降順）
+21 records · Published date 降順（同日 ID 降順）
+
+### Beyond the Happy Path: Generalizing Robot World Models from Simulated Failures
+
+- ID: `WAM-0172`
+- Published: 2026-11-25
+- Authors: Zhao, Zhiyue; Liu, Mingyu; Zhang, Bolin; Li, Liyang; Huang, Guangyu; Zhao, Canyu; Shi, Jinchuan; Zhang, Haokai; Chen, Hao; Shen, Chunhua
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33925) · [PDF](https://arxiv.org/pdf/2611.33925) · [Code](https://github.com/aim-uofa/WorldReforge) · [Project](https://aim-uofa.github.io/WorldReforge/)
+- Tags: WorldReforge, failure-trajectories, contact, surface-correspondence
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+成功中心の訓練では外れや滑りなどの失敗接触を予測しにくいとして、摂動付き把持のシミュレーション動作を使う。
+
+**主な貢献**
+
+接触・対象物領域の再構成損失と、同じ物理表面点を時系列で対応付ける学習信号を加える。
+
+**確認記録**
+
+- Checked: 2026-11-26 · Review: verified
+- arXiv v1 手法・評価。Cosmos3 Nanoでの物体軌跡誤差の改善は著者設定。公式コードと https://huggingface.co/WorldReforge/Cosmos3-Nano-WorldReforge の重み7シャードを確認。重みの利用条件はコードと別、未確認。 実装ライセンス: Apache-2.0 (https://github.com/aim-uofa/WorldReforge/blob/HEAD/LICENSE)。
 
 ### PhysiCalWorld: In-Context Physics Calibration for World Models
 
