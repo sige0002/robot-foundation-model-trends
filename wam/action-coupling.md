@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-60 records · Published date 降順（同日 ID 降順）
+62 records · Published date 降順（同日 ID 降順）
+
+### CoTacWAM: Joint Modeling of Vision and Touch for Robotic Manipulation
+
+- ID: `WAM-0177`
+- Published: 2026-11-25
+- Authors: Lei Jin; Yiding Ma; Zhuohang Li; Jiachen Liu; Zibo Zhu; Kairui Liu; Chen Gao; Wei Wu; Yong Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34117) · [PDF](https://arxiv.org/pdf/2611.34117)
+- Tags: CoTacWAM, vision-touch, contact-rich, recovery
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+手首画像と触覚に共通する接触情報とそれぞれ固有の情報を表現し、頭部画像と組み合わせて操作する。
+
+**主な貢献**
+
+視触覚の対応学習と入力欠損を想定した予測方策を用いる。独立の検出器が失敗を確認した後に訂正動作を条件付ける。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4。4実機タスクで通常・入力欠損・再試行を区別。実装と重み未確認。
 
 ### WAtcher: Watching Ahead for Safe Robotic Manipulation with Efficient World-Action Models
 
@@ -29,6 +54,31 @@
 
 - Checked: 2026-11-26 · Review: verified
 - arXiv v1 手法・評価、公式READMEとLICENSE。公開版はRoboTwinの開発ヘッドで、未来画像を入力せず停止する。論文の完全版の訓練コード・退避・危険データと区別。完全版重み未確認。 実装ライセンス: Apache-2.0 (https://github.com/maxiaovivi/WAtcher/blob/HEAD/LICENSE)。
+
+### Relation Before Action: Explicit Relation Modeling for Latent Action Pretraining
+
+- ID: `WAM-0175`
+- Published: 2026-11-24
+- Authors: Boning Zhang; Junyu Gao; Changsheng Xu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.32226) · [PDF](https://arxiv.org/pdf/2611.32226)
+- Tags: RELACT, latent-action, relation-modeling
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+動画の観測対から要素間の時間変化を表す関係特徴を作り、そこから確率的な潜在行動を求める。
+
+**主な貢献**
+
+関係の記述と行動の圧縮を分け、潜在順モデルによる予測を通じて計画や下流方策に再利用できる表現を学ぶ。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4。ナビゲーションと操作の実機評価を含む。
 
 ### LeanWAM: Learning Latent World Action Models from Frozen Video Models
 

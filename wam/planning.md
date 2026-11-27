@@ -3,7 +3,32 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-32 records · Published date 降順（同日 ID 降順）
+33 records · Published date 降順（同日 ID 降順）
+
+### Co-World Model for Human-Video-to-Robot Transfer via Co-Constructed Shared Latent Dynamics
+
+- ID: `WAM-0179`
+- Published: 2026-11-25
+- Authors: Xuetao Li; Xuan Jiang; Chen Liu; Zhongrui Rao; Yu Ling; Hui Wang; Sheng Liu; Miao Li
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34302) · [PDF](https://arxiv.org/pdf/2611.34302)
+- Tags: CoWM, human-video, shared-dynamics, effect-alignment
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+同期していない人・ロボットの対応デモから共通の物体関係と身体固有の特徴を学び、人のデモをロボットに移す。
+
+**主な貢献**
+
+身体の軌道でなく物体に対する予測効果で潜在行動を対応付け、デモの進行と実行可能な行動の範囲を逐次計画に組み込む。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4。学習時は対応デモを使用。シミュレーションと実機2種類で評価。
 
 ### μMPC: Microsecond-Scale Nonlinear and World Model Control from Edge to GPU via Koopman-Linearized Precompilation
 

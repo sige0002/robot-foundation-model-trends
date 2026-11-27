@@ -3,7 +3,32 @@
 
 [← hybrid](README.md) · [CSV master](../papers.csv)
 
-25 records · Published date 降順（同日 ID 降順）
+26 records · Published date 降順（同日 ID 降順）
+
+### Aegis-VLA: Reliability-Gated Action Refinement via a Trajectory World Model for Dynamic Object Manipulation
+
+- ID: `HYBRID-0165`
+- Published: 2026-11-25
+- Authors: Lennox Wei; Jiaqi Yao; Shixin Sun; Yuanzheng Zhang; Jianhua Han; Meng Tian; Shaohui Liu; Wangmeng Zuo
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33993) · [PDF](https://arxiv.org/pdf/2611.33993)
+- Tags: Aegis-VLA, trajectory-world-model, reliability-gate, dynamic-manipulation
+- Model size: 2.45M additional trainable parameters
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+対象が動き続ける操作で、未来の軌道からVLA行動の補正を提案し、必要な箇所だけ適用する。
+
+**主な貢献**
+
+履歴のみと元行動条件付きの手先予測の差から補正を作り、不確実性や接近度を使うゲートが棄却した場合は元行動を保持する。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §III–IV。DOMシミュレーションで著者再現DynamicVLAと比較。約2.45Mは追加学習パラメータ。
 
 ### CauSyncVLA: Causal Latent World Modeling for Asynchronous Robot Control
 

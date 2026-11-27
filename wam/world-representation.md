@@ -3,7 +3,57 @@
 
 [← wam](README.md) · [CSV master](../papers.csv)
 
-45 records · Published date 降順（同日 ID 降順）
+47 records · Published date 降順（同日 ID 降順）
+
+### WorldPhy: Benchmarking Fine-Grained Physical Plausibility of World Models in Robotics
+
+- ID: `WAM-0178`
+- Published: 2026-11-25
+- Authors: Ziyuan Chu; Mingzhi Zheng; Kaiyue Zhang; Jinan Zhang; Linchao Zhu
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34130) · [PDF](https://arxiv.org/pdf/2611.34130) · [Code](https://github.com/chuziyuan139/WorldPhy)
+- Tags: WorldPhy, evaluation, physical-plausibility, supporting-foundation
+- Model size: unknown / 未確認
+- Open-source: true
+- Code / weights / license: available / available / open-source
+
+**概要（日本語）**
+
+初期画像と指示を受け取る生成動画型の世界モデルを、ロボット操作特有の物理的制約から評価する。
+
+**主な貢献**
+
+300タスクと人手評価を基に物理面6項目と指示追従を採点するWorldPhyRewardを学び、13モデルを比較した。方策学習手法ではない。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4と公式GitHubの評価スクリプト。実装Apache-2.0: https://github.com/chuziyuan139/WorldPhy/blob/main/LICENSE 。著者リンク先 https://huggingface.co/pandabear139/WorldPhyReward の非ゲート重み4分割と別のApache-2.0 LICENSEを確認、重み未取得。
+
+### Learning World Models through Contrastive Identification of Actions
+
+- ID: `WAM-0176`
+- Published: 2026-11-24 · Updated: 2026-11-25
+- Authors: Hayeong Lee; Youngjun Suh; Byung-Jun Lee
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.32776) · [PDF](https://arxiv.org/pdf/2611.32776)
+- Tags: CIA, JEPA, inverse-dynamics, contrastive-learning
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+視覚世界モデルに、過去の履歴から起こり得る複数の行動の中で、実際の行動を識別する補助学習を加える。
+
+**主な貢献**
+
+履歴条件付きの負例を使い、条件付き平均だけを学ぶ二乗回帰では区別できない行動情報も学習信号にする。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML v1・v2提出履歴、v2 §4–5。コードと一部データは公開予定。
 
 ### Foresight Forcing: Learning Spatial Foresight for Robotic Manipulation
 

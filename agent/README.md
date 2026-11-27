@@ -3,19 +3,22 @@
 
 [← データベース](../README.md)
 
-88 records · 正本: [papers.csv](../papers.csv)
+91 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [planning](planning.md) | 20 |
+| [planning](planning.md) | 21 |
 | [code](code.md) | 19 |
-| [skill](skill.md) | 12 |
+| [skill](skill.md) | 14 |
 | [tool](tool.md) | 14 |
 | [memory](memory.md) | 11 |
 | [replanning](replanning.md) | 12 |
 
 ## 論文
 
+- 2026-11-25 · [SOLVE: Sparse, Ordered Keyposes Make LLM Agents Versatile and Efficient Robot Manipulator](planning.md) · `AGENT-0191`
+- 2026-11-25 · [CHASE: Curiosity-Guided Skill Acquisition for Embodied Task Execution](skill.md) · `AGENT-0190`
+- 2026-11-25 · [Skeptic: Grounding Failure Diagnosis for Robot Skill Discovery](skill.md) · `AGENT-0189`
 - 2026-11-25 · [RegHarness: Regulating What Code-as-Policy Agents Keep from Steps to Skills](code.md) · `AGENT-0188`
 - 2026-11-25 · [SEEK: Self-Evolution through Execution Knowledge for Agentic Robot Manipulation](memory.md) · `AGENT-0187`
 - 2026-11-23 · [ReWeave: Emergent Physical Task Topologies for Embodied Harness Optimization and Cross-Task Meta-Distillation](replanning.md) · `AGENT-0185`

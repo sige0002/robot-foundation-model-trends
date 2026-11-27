@@ -3,18 +3,21 @@
 
 [← データベース](../README.md)
 
-163 records · 正本: [papers.csv](../papers.csv)
+166 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
-| [perception-representation](perception-representation.md) | 39 |
+| [perception-representation](perception-representation.md) | 40 |
 | [reasoning-system2](reasoning-system2.md) | 10 |
 | [action-system1](action-system1.md) | 43 |
 | [memory-temporal](memory-temporal.md) | 15 |
-| [adaptation](adaptation.md) | 56 |
+| [adaptation](adaptation.md) | 58 |
 
 ## 論文
 
+- 2026-11-25 · [M²AdaptVLA: Multimodal Memory-Augmented Vision-Language-Action Model with Predictive Test-Time Adaptation](adaptation.md) · `VLA-0266`
+- 2026-11-25 · [FailPoint-X: A Policy-Matched, Failure-Anchored Benchmark for Offline VLA Post-Training from Human Takeovers](adaptation.md) · `VLA-0265`
+- 2026-11-25 · [FreshVLA: Frequency-Regularized Time Scale Hierarchical Latent Actions for Vision-Language-Action Models](perception-representation.md) · `VLA-0264`
 - 2026-11-25 · [RePace: Reasoning about Demonstration Speedup for Faster Vision-Language-Action Policies](action-system1.md) · `VLA-0262`
 - 2026-11-25 · [DemoFoundry: Toward Scalable Photorealistic Robot Data with Coding Agents and Generative Rendering](adaptation.md) · `VLA-0261`
 - 2026-11-25 · [CamAct: Learning Robotic Manipulation from In-the-Wild Videos via Camera Motion](adaptation.md) · `VLA-0260`

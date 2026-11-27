@@ -3,7 +3,57 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-12 records · Published date 降順（同日 ID 降順）
+14 records · Published date 降順（同日 ID 降順）
+
+### CHASE: Curiosity-Guided Skill Acquisition for Embodied Task Execution
+
+- ID: `AGENT-0190`
+- Published: 2026-11-25
+- Authors: Zixuan Wang; Wei Zhang; Chenlei Zhu; Naiyu Chen; Xihua Wang; Jie Chen
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34416) · [PDF](https://arxiv.org/pdf/2611.34416)
+- Tags: CHASE, active-perception, skill-acquisition, verified-execution
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+情報や技能が不足する部分観測下で、仮説を立てて調査し、必要な技能を実行時に獲得する。
+
+**主な貢献**
+
+情報価値と調査・獲得コストを比較し、探索で得た技能を未使用例で検証する。物理効果と取得証拠を別々に確認する。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4。シミュレーションと実機で評価。
+
+### Skeptic: Grounding Failure Diagnosis for Robot Skill Discovery
+
+- ID: `AGENT-0189`
+- Published: 2026-11-25
+- Authors: Wenfang Sun; Jianghao Deng; Wenzhe Yin; Yingjun Du; Cees G. M. Snoek
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33560) · [PDF](https://arxiv.org/pdf/2611.33560)
+- Tags: Skeptic, failure-diagnosis, skill-library
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+実行失敗を物理的な不可能と誤認して技能探索を終える問題を、実測ログと技能採用条件で扱う。
+
+**主な貢献**
+
+深度と自己状態の観測を診断と分け、技能採用には独立再現に加えて元プログラムの開発時成功を求める。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4。固定モデル・同じプログラム改訂予算で評価。基盤LLMの重みは本手法の配布物と区別。
 
 ### Contact Harness: Enabling VLM Agents to Perform Contact-Rich Manipulation
 

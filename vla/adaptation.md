@@ -3,7 +3,57 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-56 records · Published date 降順（同日 ID 降順）
+58 records · Published date 降順（同日 ID 降順）
+
+### M²AdaptVLA: Multimodal Memory-Augmented Vision-Language-Action Model with Predictive Test-Time Adaptation
+
+- ID: `VLA-0266`
+- Published: 2026-11-25
+- Authors: Liufan Tan; Tong Wang; Yuehao Yin; Jian Chen; Yihang Yin; Ying Qu; Wenyu Li; Ruyi Gan; Hao Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34560) · [PDF](https://arxiv.org/pdf/2611.34560) · [Project](https://tlf-tlf.github.io/M2AdaptVLAPage/)
+- Tags: M2AdaptVLA, multimodal-memory, wrench, test-time-training
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+視覚記憶と手首の力・トルク履歴を併用し、接触条件の変化に実行中に適応するVLA。
+
+**主な貢献**
+
+高速重みで視覚の過去を保持し、接触履歴をゲートで選ぶ。測定した力・トルクの予測誤差を使い、最終デノイズ段だけを通して低ランクアダプタを更新する。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4・付録C/Dと著者ページ。論文の更新時間は制御全体の遅延ではない。コード・重み未確認。
+
+### FailPoint-X: A Policy-Matched, Failure-Anchored Benchmark for Offline VLA Post-Training from Human Takeovers
+
+- ID: `VLA-0265`
+- Published: 2026-11-25
+- Authors: Zirui Li; Yujie Yan; Jingxuan Qian; Yangang Ren; Haizhou Yin; Haoran Xu; Chen Lv
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33769) · [PDF](https://arxiv.org/pdf/2611.33769) · [Project](https://lzrbit.github.io/FailPoint_X/)
+- Tags: FailPoint-X, human-takeover, failure-recovery, benchmark
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+同じπ0.5の自然失敗から人の復旧実演を集め、同じ状態に復元できる事後学習ベンチマークを作る。
+
+**主な貢献**
+
+失敗開始を区間で記録し、更新回数を揃えて復旧実演の効果を比較。難度L1–L3の復旧改善と通常開始での性能低下を分けて報告。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–5と著者ページ。論文記載のMIT実装 https://github.com/yujieyan81/failpoint-x は匿名で404、実装・ライセンス未確認。データ・重みは公開予定。
 
 ### DemoFoundry: Toward Scalable Photorealistic Robot Data with Coding Agents and Generative Rendering
 

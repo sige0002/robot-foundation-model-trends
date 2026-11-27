@@ -3,17 +3,18 @@
 
 [← データベース](../README.md)
 
-67 records · 正本: [papers.csv](../papers.csv)
+68 records · 正本: [papers.csv](../papers.csv)
 
 | Subcategory | Papers |
 | --- | ---: |
 | [vla-agent](vla-agent.md) | 31 |
-| [vla-wam](vla-wam.md) | 25 |
+| [vla-wam](vla-wam.md) | 26 |
 | [wam-agent](wam-agent.md) | 6 |
 | [vla-wam-agent](vla-wam-agent.md) | 5 |
 
 ## 論文
 
+- 2026-11-25 · [Aegis-VLA: Reliability-Gated Action Refinement via a Trajectory World Model for Dynamic Object Manipulation](vla-wam.md) · `HYBRID-0165`
 - 2026-11-25 · [RoboEvo²: Recursive Robot Self-Improvement via Harness-Policy Co-Evolution](vla-agent.md) · `HYBRID-0164`
 - 2026-11-25 · [Toward Agentic Robotics: A Large-Scale Study of Harness Design for Robot-Use Agents](vla-wam-agent.md) · `HYBRID-0163`
 - 2026-11-23 · [Body and Soul: Decoupling Robotic Brain and Policy with RoboHarness-Zero](vla-agent.md) · `HYBRID-0162`

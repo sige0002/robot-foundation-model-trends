@@ -3,7 +3,32 @@
 
 [← vla](README.md) · [CSV master](../papers.csv)
 
-39 records · Published date 降順（同日 ID 降順）
+40 records · Published date 降順（同日 ID 降順）
+
+### FreshVLA: Frequency-Regularized Time Scale Hierarchical Latent Actions for Vision-Language-Action Models
+
+- ID: `VLA-0264`
+- Published: 2026-11-25
+- Authors: Jiaming Liang; Yifeng Zhan; Rongyi He; Mu Li; Jiaqi Fan; Zhiyuan Zhang; Qiwei Liang; Zhengjie Zhang; Boyang Cai; Ningyuan Zhang; Xingjian Jing; Qiang Nie
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.33635) · [PDF](https://arxiv.org/pdf/2611.33635) · [Project](https://freshvla.github.io/)
+- Tags: FreshVLA, latent-action, frequency-regularization, flow-matching
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unavailable / unknown / unknown
+
+**概要（日本語）**
+
+行動ラベルのない動画から、粗い進行と細かな実行動作を区別した連続潜在行動を学び、VLAへ移す。
+
+**主な貢献**
+
+高周波に基づく領域教師信号と時間尺度別の潜在正則化を使い、制御時の潜在行動・実行動を共同フローマッチングで学ぶ。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4と著者ページ。公式GitHub https://github.com/FreshVLA/FreshVLA は公開予告・README・アセットのみ。重みと実装ライセンス未確認。
 
 ### Perception Is Enough, at the Right Scale: Scale-Adaptive Token Pruning for Vision-Language-Action Models
 

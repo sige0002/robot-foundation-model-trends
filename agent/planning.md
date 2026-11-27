@@ -3,7 +3,32 @@
 
 [← agent](README.md) · [CSV master](../papers.csv)
 
-20 records · Published date 降順（同日 ID 降順）
+21 records · Published date 降順（同日 ID 降順）
+
+### SOLVE: Sparse, Ordered Keyposes Make LLM Agents Versatile and Efficient Robot Manipulator
+
+- ID: `AGENT-0191`
+- Published: 2026-11-25
+- Authors: Xiang Li; Hongyu Zhou; Ya-Li Li; Tao Li; Rui Zhang; Junjie Lai; Weihua Zhang; Shengjin Wang
+- Venue: arXiv
+- Links: [Paper](https://arxiv.org/abs/2611.34750) · [PDF](https://arxiv.org/pdf/2611.34750) · [Project](https://serenos.github.io/solve-website/)
+- Tags: SOLVE, keypose, motion-planning, depth-query
+- Model size: unknown / 未確認
+- Open-source: unknown
+- Code / weights / license: unknown / unknown / unknown
+
+**概要（日本語）**
+
+マルチモーダルLLMが疎な6自由度手先キーポーズの列を作り、途中の動作を運動計画器に任せる操作エージェント。
+
+**主な貢献**
+
+列の数と間隔を場面ごとに選び、必要箇所だけ深度を問い合わせ、実行結果から次の列を作る。
+
+**確認記録**
+
+- Checked: 2026-11-27 · Review: verified
+- arXiv書誌・公式PDFリンク・HTML §3–4と著者ページ。書誌はManipulator、HTML表題はManipulatorsで同一ID。著者ページのCodeは公開予告。
 
 ### ACAP: Asynchronous Coding Agents for Efficient Robot Control
 
